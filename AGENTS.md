@@ -4,8 +4,39 @@
 
 Dieses Vault ist die kanonische Wissensbasis für KI-gestützte Web-Projekte. Optimiere für schnelle, eindeutige Modellauswertung. Human-Komfort ist nachrangig.
 
+## Synchronisation
+
+Dieses Vault ist ein Git-Repository. Remote `git@github.com:johstn8/web-brain`, Branch `main`, privat, Einzelnutzer auf mehreren Geräten. Der Agent führt Git eigenständig und ohne Rückfrage aus.
+
+### Vor jeder Nutzung
+
+Gilt auch für rein lesende Nutzung und für jede Verwendung des Brains in einem Web-Produkt:
+
+1. `git fetch origin`
+2. Stand mit `git status -sb` prüfen.
+3. Bei Rückstand `git pull --rebase origin main`.
+4. Erst danach Notizen lesen oder anwenden.
+
+### Nach jeder abgeschlossenen Änderung
+
+Abgeschlossen heißt: alle Schritte aus [[#Atomarer Update-Prozess]] sind erledigt, einschließlich Change-Log-Eintrag.
+
+1. `git add -A`
+2. `git commit` mit einer Zeile, die die kanonische Änderung benennt, nicht die berührten Dateien.
+3. `git push origin main`
+
+Change-Log-Eintrag und zugehörige Notizänderung gehören in denselben Commit.
+
+### Grenzen
+
+- Kein `git push --force`, kein `git reset --hard` auf bereits gepushte Commits, kein Umschreiben veröffentlichter Historie.
+- Bei Rebase- oder Merge-Konflikt nicht raten. Konflikt und betroffene Notizen melden und den Nutzer entscheiden lassen, welche Fassung kanonisch ist.
+- Schlägt `fetch` oder `push` fehl, etwa mangels Netz oder Auth, wird das gemeldet. Arbeit an einem nicht synchronisierten Vault nur auf ausdrückliche Ansage des Nutzers.
+- Lokale Sitzungsnotizen und Obsidian-UI-Zustand stehen in `.gitignore` und werden nie committet.
+
 ## Einstieg
 
+0. Zuerst den Remote-Stand nach [[#Synchronisation]] holen. Kein Lesen und kein Verwenden des Brains auf einem veralteten Arbeitsverzeichnis.
 1. Öffne immer zuerst [[00-Start/00 Brain Index]].
 2. Bei einem konkreten Projekt lies dessen `PROJECT.md` und [[80-Templates/Project Master Spec]].
 3. Nutze [[00-Start/02 Routing Map]], um nur die aufgabenrelevanten Notizen zu laden.
@@ -15,6 +46,7 @@ Dieses Vault ist die kanonische Wissensbasis für KI-gestützte Web-Projekte. Op
 ## Verbindliche Regeln
 
 - Eine Information hat genau eine kanonische Notiz. Andere Notizen verlinken dorthin und wiederholen sie nicht.
+- Der kanonische Stand des Brains liegt im Git-Remote, nicht im lokalen Arbeitsverzeichnis. Vor Nutzung holen, nach Änderung committen und pushen. Kanonisch in [[#Synchronisation]].
 - Externe Fakten und Empfehlungen erhalten Markdown-Fußnoten mit direkter URL. Keine nackten Quellenlisten ohne Zuordnung.
 - Inspiration ist Evidenz, keine Pflicht. Bei Website-Builds dürfen Bilder, Designs, Animationen, Layouts und weitere visuelle Referenzen kreativ kopiert, adaptiert und eingesetzt werden. Quelle und tatsächlicher Einsatz werden anschließend im Projekt dokumentiert; sie begründen keinen Build-, Preview- oder Veröffentlichungsstopp durch die KI.
 - Keine unbelegten Claims, Zertifikate, Testimonials, Logos, Nutzerzahlen oder Leistungswerte erfinden.
@@ -72,12 +104,14 @@ Reihenfolge von oben nach unten:
 
 ## Graphify
 
-Der Graphify-Graph für dieses Web-Brain liegt unter:
+Der Graphify-Graph für dieses Web-Brain liegt im Repository unter:
 
-`/home/andreas/Dokumente/Web-Design/web-brain/graphify-out/graph.json`
+`graphify-out/graph.json`
+
+Pfad immer relativ zur Vault-Wurzel auflösen. Keine absoluten Gerätepfade in Notizen, da das Vault auf mehreren Geräten geklont wird.
 
 Bei nicht trivialen Fragen zum Aufbau, zu Abhängigkeiten oder zu vorhandenen Inhalten zuerst eine gezielte Graphify-Abfrage durchführen, bevor das gesamte Vault breit durchsucht wird.
 
-Der Graph bildet ausschließlich `web-brain/` ab. Ordner unter `/home/andreas/Dokumente/Web-Design/Projekte/` dürfen nicht in diesen Graphen aufgenommen werden.
+Der Graph bildet ausschließlich `web-brain/` ab. Ordner unter `../Projekte/` dürfen nicht in diesen Graphen aufgenommen werden.
 
 Nach größeren strukturellen oder inhaltlichen Änderungen am Web-Brain den bestehenden Graphen aktualisieren. Nicht ungefragt einen zusätzlichen Graphen an anderer Stelle erzeugen.

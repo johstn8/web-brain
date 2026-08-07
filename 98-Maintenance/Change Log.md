@@ -1,13 +1,29 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-07
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
+
+## 2026-08-07 — Web-Brain als Git-Repository mit agentengesteuerter Synchronisation
+
+Auslöser war die Anforderung des Nutzers, das Vault geräteübergreifend zu nutzen. Das Vault liegt jetzt als privates Git-Repository unter `git@github.com:johstn8/web-brain` auf Branch `main`, Einzelnutzer. Kein Projekt unter `../Projekte/` wurde verändert.
+
+- **Neuer kanonischer Abschnitt `AGENTS.md` → Synchronisation.** Der kanonische Stand des Brains liegt im Remote, nicht im lokalen Arbeitsverzeichnis. Vor jeder Nutzung, auch rein lesend und auch bei Verwendung für ein Web-Produkt, wird `git fetch` ausgeführt und bei Rückstand per `git pull --rebase` nachgezogen. Nach jeder abgeschlossenen Änderung folgt Commit und Push ohne Rückfrage. Grenzen sind benannt: kein Force-Push, kein Umschreiben veröffentlichter Historie, bei Konflikt keine eigenmächtige Auflösung, bei Fehlschlag von `fetch` oder `push` Meldung statt stiller Weiterarbeit.
+- **Verbindliche Regel ergänzt.** Die Regelliste in `AGENTS.md` verweist auf den Synchronisationsabschnitt als kanonischen Besitzer.
+- **[[00-Start/03 Update Protocol]] erweitert.** Der Ablauf beginnt mit dem Holen des Remote-Stands und endet mit Commit und Push. Notizänderung und Change-Log-Eintrag gehören in denselben Commit; ohne diesen Schritt gilt ein Update nicht als abgeschlossen.
+- **Absolute Gerätepfade entfernt.** Der Graphify-Abschnitt nannte den Graphen bisher unter einem absoluten Pfad des bisherigen Rechners und hätte auf jedem weiteren Gerät ins Leere gezeigt. Der Graph wird jetzt repository-relativ als `graphify-out/graph.json` geführt, der Projektausschluss als `../Projekte/`. Pfade in Notizen werden generell relativ zur Vault-Wurzel aufgelöst.
+- **Obsidian-UI-Zustand aus der Versionierung genommen.** `.obsidian/workspace.json` speichert geöffnete Fenster und Cursorpositionen des jeweiligen Geräts und hätte bei jedem Gerätewechsel unnötige Konflikte erzeugt. Die Datei ist untracked und steht zusammen mit `workspace-mobile.json` und `.obsidian/cache` in `.gitignore`. Geteilte Vault-Einstellungen wie Erscheinungsbild und Plugin-Auswahl bleiben versioniert. `TasksForAgent.md` bleibt wie vom Nutzer eingerichtet ausgeschlossen.
+
+### Geprüfte Auswirkungen
+
+Geprüft und synchronisiert wurden: `AGENTS.md`, [[00-Start/03 Update Protocol]] und `.gitignore`. Inhaltliche Fachnotizen sind unverändert; die Änderung betrifft ausschließlich Ablage und Arbeitsablauf.
+
+Offen: Der Graph unter `graphify-out/` bleibt mitversioniert, damit ein frisch geklontes Gerät ohne Neuberechnung abfragen kann. Wächst er stark, ist zu entscheiden, ob er stattdessen je Gerät erzeugt wird.
 
 ## 2026-08-06 — Benchmarks, Bildbearbeitung, Informationsdosierung, Retro-Verbot und UI UX Pro Max als Pflicht
 

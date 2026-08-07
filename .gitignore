@@ -1,1 +1,7 @@
+# Lokale Sitzungsnotizen, nicht kanonisch
 TasksForAgent.md
+
+# Obsidian-UI-Zustand, geraetespezifisch
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache

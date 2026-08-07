@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-07
 ---
 
 # Coverage and Impact Map
@@ -22,6 +22,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Landing-Page-Anspruch | [[20-Design/Design Direction|Design Direction]] | Derived Design Patterns, Inspiration Catalog, Master Spec, QA |
 | KI-Fähigkeiten und Pflichtskills | [[00-Start/04 Plugins and Skills|Plugins and Skills]] | Design Direction, Master Spec, Quality Gates, Review Queue |
 | Aktualisierung | [[00-Start/03 Update Protocol|Update Protocol]] | Change Log, Review Queue, diese Karte |
+| Synchronisation und Versionierung des Vaults | `AGENTS.md`, Abschnitt Synchronisation | Update Protocol, Change Log, `.gitignore` |
 | Projektumfang | [[10-Strategy/Discovery and Scope|Discovery and Scope]] | Intake, Master Spec, Sitemap |
 | Relaunch und Quellenwiederherstellung | [[10-Strategy/Existing Website Rebuild|Existing Website Rebuild]] | Project Workflow, Content, Legal, Privacy, Assets, Source and Rights Review, Master Spec, QA |
 | Sitemap | [[10-Strategy/Information Architecture and Sitemap|Information Architecture and Sitemap]] | Master Spec, SEO, Accessibility, Tests |

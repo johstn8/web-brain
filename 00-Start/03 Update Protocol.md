@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-07
 ---
 
 # Update Protocol
@@ -12,6 +12,7 @@ Kein partielles Update darf widersprüchliche oder veraltete Projektinformatione
 
 ## Ablauf
 
+0. Remote-Stand holen. Kein Update auf einem veralteten Arbeitsverzeichnis. Kanonisch in `AGENTS.md`, Abschnitt Synchronisation.
 1. Änderung als Satz formulieren: `Was ändert sich, warum, ab wann?`
 2. Kanonischen Besitzer über [[98-Maintenance/Coverage and Impact Map]] finden.
 3. Direkte Auswirkungen und transitive Folgen markieren.
@@ -20,6 +21,7 @@ Kein partielles Update darf widersprüchliche oder veraltete Projektinformatione
 6. Links, Fußnoten, Status, Datum und Review-Frist prüfen.
 7. Betroffene Quality Gates ausführen.
 8. [[98-Maintenance/Change Log]] ergänzen.
+9. Änderung und Change-Log-Eintrag in einem Commit sichern und pushen. Erst danach gilt das Update als abgeschlossen.
 
 ## Pflicht-Propagation
 
