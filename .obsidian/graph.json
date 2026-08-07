@@ -1,0 +1,100 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:00-Start  ",
+      "color": {
+        "a": 1,
+        "rgb": 1980534
+      }
+    },
+    {
+      "query": "path:10-Strategy  ",
+      "color": {
+        "a": 1,
+        "rgb": 4405450
+      }
+    },
+    {
+      "query": "path:20-Design  ",
+      "color": {
+        "a": 1,
+        "rgb": 6053078
+      }
+    },
+    {
+      "query": "path:30-Frontend  ",
+      "color": {
+        "a": 1,
+        "rgb": 6073814
+      }
+    },
+    {
+      "query": "path:40-Backend-Security  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084269
+      }
+    },
+    {
+      "query": "path:50-Legal  ",
+      "color": {
+        "a": 1,
+        "rgb": 14048348
+      }
+    },
+    {
+      "query": "path:60-Operations  ",
+      "color": {
+        "a": 1,
+        "rgb": 16762194
+      }
+    },
+    {
+      "query": "path:70-QA  ",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
+      }
+    },
+    {
+      "query": "path:80-Templates  ",
+      "color": {
+        "a": 1,
+        "rgb": 11361494
+      }
+    },
+    {
+      "query": "path:90-References  ",
+      "color": {
+        "a": 1,
+        "rgb": 6583435
+      }
+    },
+    {
+      "query": "path:98-Maintenance  ",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 0.869497195709928,
+  "lineSizeMultiplier": 0.682908589983273,
+  "collapse-forces": true,
+  "centerStrength": 0.38226901505461,
+  "repelStrength": 6.12220800944603,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.7023319615912202,
+  "close": false
+}

@@ -1,0 +1,99 @@
+---
+type: canonical
+status: canonical
+updated: 2026-08-06
+depends_on:
+  - "[[10-Strategy/Discovery and Scope]]"
+impacts:
+  - "[[20-Design/Color System]]"
+  - "[[20-Design/Typography Layout and Spacing]]"
+  - "[[20-Design/Motion and Interaction]]"
+---
+
+# Design Direction
+
+## Direction Brief
+
+Vor UI-Code festlegen:
+
+- drei Markenattribute und drei Anti-Attribute
+- Zielgefühl in einem Satz
+- primäre visuelle Metapher
+- gewählter Leitbenchmark aus [[20-Design/Interface Benchmarks]] samt übernommenen und ausdrücklich nicht übernommenen Elementen
+- Schriftentscheidung mit Nachweis, dass sie nicht unter das [[20-Design/Typography Layout and Spacing#Retro-Verbot]] fällt
+- Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
+- Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]]
+- interaktives Kernmodul der Landing Page nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]]
+- Referenzen mit Rolle, übertragbarem Prinzip und konkreter Einsatz-/Adaptionsentscheidung
+- Grad an Dichte, Ausdruck, Motion und Bilddominanz
+- Entscheidung für ein reales Kernartefakt, direkt übernommenes oder kreativ adaptiertes Leitmedium samt statischer Alternative
+- die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen
+- Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften
+- Platzierung des Firmenlogos nach dem Abschnitt Logo des Betriebs
+- Kopfzeilenentwurf mit höchstens sechs Navigationspunkten und ohne umbrechenden Text nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
+- notwendige Vertrauenssignale und Route-zu-Route-Erzählung
+- Accessibility- und Performancegrenzen
+- verlinkte Entscheidungsmatrix aus [[90-References/Reference Research Workflow]]
+- UI UX Pro Max Query, Ergebnisdatum, gewählte Regeln und begründete Abweichungen gemäß [[00-Start/04 Plugins and Skills]]
+- Einsatz oder begründeter Verzicht auf [[90-References/pen.dev Workflow|pen.dev]] samt Artefaktpfad
+- Motion Inventory mit einer inhaltsbezogenen Choreografie für jede primäre Route, hoher Bewegungsdichte und Reduced-Motion-Variante
+
+## Stilachsen
+
+Entscheide bewusst je Achse: ruhig oder expressiv, editorial oder produktnah, warm oder technisch, dicht oder großzügig, flach oder räumlich, statisch oder immersiv. Nicht alle Achsen maximal setzen.
+
+## Premium-Heuristik
+
+- Ein starkes Konzept wiederholen und variieren.
+- Produkt oder Arbeit zeigen, statt Features nur zu behaupten.
+- Asymmetrie nur mit klarer Ausrichtung und Balance.
+- Weißraum als Hierarchie, nicht als leerer Luxus.
+- Mikrodetails aus Tokens ableiten.
+- Novelty Budget: maximal ein bis zwei auffällige Mechaniken pro View; Rest ruhig.
+
+## Medien und mehrere Websites
+
+Medien sind kein nachträglicher Schmuck. Wenn Produkt, Ort, Ergebnis oder Prozess visuell belegt werden können, bildet ein bereitgestelltes, gefundenes, direkt übernommenes oder kreativ adaptiertes Bild, Video, Interface oder Artefakt die visuelle Achse. Für bewegte oder schwere Medien werden Poster, Inhaltsalternative, Ladezustand und Mobile-/Low-Power-Variante im Design Contract bestimmt. Quelle und Einsatz werden nach dem Build in [[50-Legal/Assets Copyright and Licenses]] dokumentiert. Diese Dokumentation darf nie den Einsatz, ein Ersatzmedium oder eine getrennte Website-Fassung auslösen.
+
+Verlangt der Auftrag mehrere Websites, müssen sie mehr sein als andere Farben oder Buttonformen. Jede wählt eine eigene Leitmetapher, Auftaktkomposition, Unterseiten-Dramaturgie und Bewegungsrolle. Jede wird als vollständige Website anhand derselben Inhalte, Nutzerflüsse, Accessibility-, Performance- und SEO-Kriterien umgesetzt, nicht gegeneinander zur Auswahl gestellt.
+
+## Komposition und Überschriften
+
+Die Anordnung ist eine Gestaltungsentscheidung, keine Voreinstellung. Wer jede Sektion mit Titel, Lead und Raster beginnt, erzeugt genau die Gleichförmigkeit, die generierte Seiten kennzeichnet.
+
+- **Kein Kicker über einer Überschrift.** Verbindlich nach [[20-Design/Anti AI Slop#Kicker und Überschriften]].
+- Für jede Sektionsart eine eigene Anordnung wählen. Mögliche Achsen: Überschrift links neben dem Inhalt statt darüber, Überschrift über zwei Spalten gebrochen, Überschrift als Bildunterschrift, Überschrift im Raster versetzt, Text in einer schmalen Randspalte, Zahl und Wort in derselben Zeile, Überschrift, die den Inhalt umfließt.
+- Überschriften dürfen typografisch groß, gebrochen, überlappend, angeschnitten oder mit einem Medium verschränkt gesetzt werden, solange Lesbarkeit, Fokusreihenfolge und Reflow stimmen.
+- Der Auftakt einer Website ist nie der Standard aus mittigem Titel, Unterzeile und zwei Knöpfen. Er wird aus Inhalt, Leitmetapher und Kernartefakt entwickelt.
+- Rhythmus entsteht über Maßstabssprünge, Weißraumwechsel und wechselnde Flächenhelligkeit, nicht über immer neue Kartenformen.
+- Jede Abweichung von der Leserichtung braucht eine klare Ausrichtungsachse. Asymmetrie ohne Achse ist Unordnung.
+
+## Landing Page
+
+Für die Startseite beziehungsweise Landing Page gilt ein höherer Anspruch als für Unterseiten. Sie darf und soll auffällig sein.
+
+- **Extravagant erlaubt, beliebig nicht.** Große Typografie, ungewöhnliche Raster, randlose Medien, überlappende Ebenen, ausgeprägte Scroll-Choreografie und ein starkes Farbstatement sind ausdrücklich erwünscht, wenn sie aus der Leitmetapher folgen.
+- **Modern und professionell.** Klare Hierarchie, ruhige Neutralbasis, präzise Abstände, keine verbrauchte Farbwelt nach [[20-Design/Color System#Verbrauchte Farbwelten]].
+- **Freundlich statt kühl.** Ansprache, Farbe und Bildauswahl dürfen Wärme und Freude transportieren. Das entsteht über echte Menschen, echte Arbeit, Farbkontrast und Rhythmus, nicht über Emojis, Sparkles oder Ausrufezeichen.
+- **Übersichtlich bleiben.** Auch eine expressive Startseite beantwortet in den ersten zwei Bildschirmhöhen: Wer ist das, was bekomme ich, was ist der nächste Schritt. Die Informationsmenge folgt [[10-Strategy/Information Density and Mobile Clarity]] und wird am 375-Pixel-Viewport entschieden.
+- **Bedienbar statt nur bewegt.** Mindestens ein interaktives Kernmodul nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]].
+- **Ein echtes Leitbild.** Der Auftakt trägt ein großes, bearbeitetes oder erzeugtes Bild des tatsächlichen Gegenstands nach [[20-Design/Imagery and AI Editing]]. Findet sich kein reales Bild, wird ein KI-Bild eingesetzt und im Projekt als `ai-placeholder` geführt, ohne sichtbare Kennzeichnung auf der Website.
+- Das Novelty Budget gilt weiterhin: höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt.
+- Unterseiten übernehmen dasselbe Designsystem, treten aber ruhiger auf. Der Ausdruck liegt auf der Landing Page, die Verlässlichkeit auf den Unterseiten.
+
+## Logo des Betriebs
+
+Wird im Auftrag oder in der Bestandsaufnahme nach [[10-Strategy/Existing Website Rebuild]] ein Logo des Betriebs gefunden, **wird es verwendet.** Diese Entscheidung liegt nicht bei der KI.
+
+- Mindestens ein sichtbarer Einsatz je gebauter Website, bevorzugt auf der Startseite beziehungsweise Landing Page.
+- Der Kopfbereich ist ein möglicher, aber kein zwingender Ort. Genauso geeignet sind Auftaktbereich, ein eigener Markenabschnitt, der Fußbereich, ein Trennband oder eine Bildunterschrift.
+- Auch ein technisch oder gestalterisch schwaches Logo wird eingesetzt, nicht ersetzt und nicht weggelassen. Es darf skaliert, freigestellt, eingefärbt, auf eine Fläche gesetzt oder in ein größeres Motiv eingebunden werden.
+- Ist die Vorlage für kleine Größen zu fein, wird sie an ihrem sichtbaren Einsatzort groß genug gezeigt; kleine Größen wie Favicon dürfen zusätzlich eine abgeleitete, vereinfachte Marke nutzen. Die abgeleitete Marke ersetzt den sichtbaren Einsatz des Originals nicht.
+- Der tatsächliche Einsatzort wird im Design Contract und im Asset Register festgehalten.
+- Wird kein Logo gefunden, wird das ausdrücklich als Befund dokumentiert, statt es unerwähnt zu lassen.
+
+## Referenznutzung
+
+Für jede Referenz notieren: `Rolle`, `Prinzip`, `warum passend`, `konkreter Einsatz oder Adaption`, `tatsächlich verwendete Elemente`, `statischer Nachweis`, `Interaktionsnachweis`. Siehe [[90-References/Inspiration Catalog]] und [[90-References/Reference Research Workflow]].
+
+Inspiration ist bei jedem neuen Web-Produkt Pflicht, die Übernahme eines Musters nicht. Die Designentscheidung entsteht aus Projektziel, Referenzevidenz und UI UX Pro Max Empfehlungen; bei Konflikten gilt der freigegebene Master Spec.
