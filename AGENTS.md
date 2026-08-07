@@ -114,4 +114,14 @@ Bei nicht trivialen Fragen zum Aufbau, zu Abhängigkeiten oder zu vorhandenen In
 
 Der Graph bildet ausschließlich `web-brain/` ab. Ordner unter `../Projekte/` dürfen nicht in diesen Graphen aufgenommen werden.
 
-Nach größeren strukturellen oder inhaltlichen Änderungen am Web-Brain den bestehenden Graphen aktualisieren. Nicht ungefragt einen zusätzlichen Graphen an anderer Stelle erzeugen.
+### Pflicht zum Neubau
+
+Der Graph wird bei **jeder** Aktualisierung des Brains neu gebaut, nicht nur bei großen Änderungen. Ein Graph, der den aktuellen Notizenstand nicht abbildet, führt zu falschen Antworten und ist schlechter als kein Graph.
+
+1. Notizänderung nach [[#Atomarer Update-Prozess]] abschließen.
+2. Graphen über den Graphify-Skill am bestehenden Ort `graphify-out/` neu bauen. Keinen zusätzlichen Graphen an anderer Stelle erzeugen.
+3. Graph-Artefakte zusammen mit der Notizänderung committen und pushen.
+
+Versioniert werden `graph.json`, `graph.html`, `GRAPH_REPORT.md`, `manifest.json`, `cost.json` und die Community-Labels, damit ein frisch geklontes Gerät ohne Neuberechnung abfragen kann. Nicht versioniert werden der Extraktions-Cache und die Marker mit absoluten Gerätepfaden; beide entstehen beim nächsten Lauf neu.
+
+Weicht die Knotenzahl beim Neubau deutlich nach unten ab, greift der Shrink-Schutz von Graphify. Das ist kein Fehler, sondern eine Rückfrage: Ursache prüfen und die Abweichung im [[98-Maintenance/Change Log]] festhalten, statt sie stillschweigend zu überschreiben.
