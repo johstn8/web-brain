@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 ---
 
 # AI Build Prompt
@@ -26,6 +26,10 @@ Gestaltung:
 - Halte Informationen knapp und logisch gestaffelt. Entscheide die Menge am 375-Pixel-Viewport und halte die Textbudgets aus [[10-Strategy/Information Density and Mobile Clarity]] ein.
 - Überarbeite jedes Bestandsbild vor dem Einsatz: Winkel, Ausschnitt, Hintergrund, Farbe, Auflösung. Stelle Objekte frei und gleiche alle Bilder einer Website zu einer Serie an. Fehlt ein reales Leitbild, erzeuge ein KI-Bild und setze es ein, ohne es auf der Website zu kennzeichnen; führe es im Asset Register als `ai-placeholder` mit Prompt und Ersetzungshinweis. Kanonisch in [[20-Design/Imagery and AI Editing]].
 - Baue in jede Landing Page mindestens ein interaktives Kernmodul mit realen Daten nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]].
+- Setze **vor der ersten Komponente** den vollständigen Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] in genau einer Tokenquelle, einschließlich `border-hover` und `accent-subtle`. Ohne diese Rollen wirken alle Zustände flach.
+- Halte die Detailebene B5 aus [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] ein. Sie gilt immer, zusätzlich zum gewählten Leitbenchmark: drei nahe Flächenstufen, ein Pixel Hairline in zwei Rahmenstufen, im Ruhezustand kein Schatten, vier Radiusstufen, negatives Tracking nur groß, Mono für Werte und Tags.
+- Baue Karten nach [[30-Frontend/Components and UI States#Kartenrezept]] und die Kopfzeile nach [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]].
+- Verwende die Bewegungsrezepte mit den Werten aus [[20-Design/Motion and Interaction#Standardrezepte mit Werten]] als Grundeinheit: Reveal über zwölf Pixel in 500 Millisekunden mit gehaltenem Endzustand, Stagger 30 bis 80 Millisekunden, Karten-Hover ein bis zwei Pixel mit Rahmenwechsel, Press 100 bis 160 Millisekunden, genau ein Zeichenauftakt je Website, dekorative Hintergründe weich ausmaskiert. Darauf baust du die geforderte Route-Choreografie auf; die Rezepte allein erfüllen das Motion-Niveau nicht.
 
 Verbindlich:
 - keine Fakten, Testimonials, Logos, Zertifikate oder Metriken erfinden
@@ -33,6 +37,10 @@ Verbindlich:
 - **bei jedem Website-Build UI UX Pro Max ausführen, ausnahmslos und bei mehreren Websites je Website getrennt**
 - keine Retro-Anmutung: kein `Iowan Old Style` oder typgleiche alte Buchserife als Markenschrift, keine kantige Epochen-Displayschrift, keine Kombination aus Serife, gedecktem Erdton und Ornament
 - keine graue oder leere Platzhalterfläche dort, wo ein Bild vorgesehen ist, und keine sichtbare Kennzeichnung eines KI-Bildes
+- kein Schatten im Ruhezustand, keine zweite Schattenstufe, kein Radius außerhalb der vier Stufen, keine zweite Rahmenstärke
+- kein Hover-Lift, Zeigerwechsel oder Schatten auf einer Fläche, die nichts auslöst; kein Lift über zwei Pixel und kein Hover-Maßstab über `1.02`
+- kein Glas-Header ohne gemessenen Kontrast und ohne deckenden Fallback
+- kein Verlaufstext und keine Verlaufsfläche ohne dargestellte Bedeutung
 - Kopfzeile mit höchstens sechs Navigationspunkten; kein Text und kein Knopf in der Kopfzeile bricht um, geprüft bei 1280, 1440 und 1920 Pixel mit der längsten realen Beschriftung. Logos dürfen mehrzeilig sein
 - kein Beige, Creme oder Sand als dominante Grundfläche und keine andere verbrauchte Farbwelt; jede Farbrolle hat eine benannte Herleitung
 - gefundenes Firmenlogo sichtbar einsetzen, unabhängig von seiner Qualität

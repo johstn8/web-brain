@@ -62,6 +62,11 @@ Change-Log-Eintrag und zugehörige Notizänderung gehören in denselben Commit.
 - Ein gefundenes Firmenlogo wird in jeder gebauten Website sichtbar eingesetzt, unabhängig von seiner Qualität. Kanonisch in [[20-Design/Design Direction]].
 - Bei **jedem** Website-Build wird der UI UX Pro Max Skill verwendet, ohne Ausnahme. Kanonisch in [[00-Start/04 Plugins and Skills#Auslösebedingung]].
 - Der Leitbenchmark für Aussehen und Bedienung stammt aus [[20-Design/Interface Benchmarks]]. Diese Notiz steht bei visuellen Entscheidungen über den allgemeinen Referenzmustern.
+- Die Detailebene **B5 Modern Neutral Craft Web** gilt bei jedem Build zusätzlich zum gewählten Leitbenchmark und wird nicht gewählt. Kanonisch in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]].
+- Der Tokenvertrag ist vor der ersten Komponente vollständig gesetzt, einschließlich `border-hover` und `accent-subtle`. Kanonisch in [[20-Design/Color System#Tokenvertrag]].
+- Vier Radiusstufen, eine Rahmenstärke, eine Schattenstufe, im Ruhezustand kein Schatten. Kanonisch in [[20-Design/Typography Layout and Spacing#Radiusskala]].
+- Karten und Kopfzeile folgen den kanonischen Rezepten in [[30-Frontend/Components and UI States#Kartenrezept]] und [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]].
+- Bewegung folgt dem kanonischen Wertesatz aus [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]. Diese Rezepte sind die Grundeinheit, nicht der Ersatz für die Route-Choreografie.
 - Keine Retro-Anmutung. Kein `Iowan Old Style` und keine typgleiche alte Buchserife als Markenschrift, keine Kombination aus Serife, gedecktem Erdton und Ornament. Kanonisch in [[20-Design/Typography Layout and Spacing#Retro-Verbot]].
 - Bilder werden vor dem Einsatz überarbeitet: Winkel, Ausschnitt, Hintergrund, Farbe, Auflösung. Freistellen und KI-Bearbeitung sind der Normalfall. Fehlt ein reales Bild, wird ein KI-Bild eingesetzt und nur im Projekt als `ai-placeholder` geführt, niemals sichtbar auf der Website gekennzeichnet. Kanonisch in [[20-Design/Imagery and AI Editing]].
 - Informationen bleiben knapp, logisch gestaffelt und am Mobilgerät dosiert. Kanonisch in [[10-Strategy/Information Density and Mobile Clarity]].

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -25,6 +25,12 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 ## G1 Design
 
 - [ ] Design Direction und Tokens für Farbe, Typo, Spacing, Grid, Radius, Shadow, Motion
+- [ ] **Tokenvertrag vollständig** nach [[20-Design/Color System#Tokenvertrag]]: jede Pflichtrolle hat einen gesetzten Wert in genau einer Tokenquelle, einschließlich `bg`, `surface`, `surface-alt`, drei Textstufen, `border`, `border-hover`, `accent`, `accent-subtle`, `accent-contrast`, `focus` und der semantischen Rollen; Light und Dark getrennt kuratiert
+- [ ] **Formsprache kalibriert**: alle Radien auf den vier Stufen aus [[20-Design/Typography Layout and Spacing#Radiusskala]], genau eine Rahmenstärke, genau eine Schattenstufe und diese nur bei Hover, Fokus oder echten Ebenen; im Ruhezustand keine Fläche mit Schatten
+- [ ] **Kartenrezept angewandt** nach [[30-Frontend/Components and UI States#Kartenrezept]]: Hover wechselt Rahmen und Position, nicht nur Farbe; kein Hover-Lift auf nicht klickbaren Flächen; alle Kartenzustände einschließlich Laden und Leerzustand gestaltet
+- [ ] **Kopfzeilenrezept angewandt** nach [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]]: Kontrast gegen den ungünstigsten darunterliegenden Inhalt gemessen, deckender `@supports`-Fallback vorhanden
+- [ ] **Bewegungswerte gesetzt** nach [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]: Zeit- und Kurvensatz als Tokens, Reveal hält seinen Endzustand, Startversatz höchstens 24 Pixel, Zeichenauftakt höchstens einmal je Website, jede Abweichung mit Grund im Motion Inventory
+- [ ] negatives Tracking nur auf den großen Typostufen; Werte, Tags und Zahlen in der Mono-Familie mit tabellarischen Ziffern
 - [ ] **UI UX Pro Max wurde für diese Website ausgeführt**, je gebauter Website getrennt und mit Datum belegt; ohne diesen Nachweis ist die Website nicht abgenommen, siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]]
 - [ ] Leitbenchmark aus [[20-Design/Interface Benchmarks]] benannt; übernommene und ausdrücklich nicht übernommene Elemente dokumentiert
 - [ ] keine Retro-Anmutung nach [[20-Design/Typography Layout and Spacing#Retro-Verbot]]; Schriftwahl mit Herleitung dokumentiert

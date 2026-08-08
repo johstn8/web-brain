@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -24,12 +24,15 @@ impacts:
 - Beige, Creme oder Sand als dominante Grundfläche einer Website, siehe [[20-Design/Color System#Verbrauchte Farbwelten]]
 - Em-Dash in Website-Copy
 - Emojis als Icons oder Aufzählungszeichen
-- Glas-Header mit schlechtem Kontrast
+- Glas-Header ohne gemessenen Kontrast gegen den tatsächlich darunterliegenden Inhalt oder ohne deckenden Fallback. Die durchscheinende Kopfzeile selbst ist erlaubt und Standard; Rezept in [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]]
+- Schatten im Ruhezustand, mehr als eine Schattenstufe im Projekt, Verlauf als Flächenfüllung ohne Bedeutung. Kanonisch in [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]]
 - Kopfzeile mit mehr als sechs Navigationspunkten oder mit umbrechendem Text, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
 - jede Sektion als gleichförmiges abgerundetes Card-Grid
 - riesige Icons mit winzigem Text
-- unterschiedliche Radien, Schatten, Container und Buttonhöhen
-- aggressive Card-Lifts, Cursor-Glows, Bounce oder Scroll-Jacking
+- Radien außerhalb der vier Stufen aus [[20-Design/Typography Layout and Spacing#Radiusskala]], mehrere Rahmenstärken, uneinheitliche Container- und Buttonhöhen
+- aggressive Card-Lifts, also Verschiebung über zwei Pixel, Maßstab über `1.02`, Rotation oder Schattensprung. Der kleine Ein- bis Zwei-Pixel-Lift auf tatsächlich klickbaren Karten ist ausdrücklich erlaubt und erwünscht; Rezept in [[30-Frontend/Components and UI States#Kartenrezept]]
+- Hover-Lift, Zeigerwechsel oder Schatten auf einer Fläche, die nichts auslöst
+- Cursor-Glows, Bounce oder Scroll-Jacking
 - generische KI-/SaaS-Copy, Fake-Testimonials, erfundene Logos und Metriken
 - Pricing, FAQ, Logo-Marquee oder Bento-Grid nur weil Landingpages sie oft besitzen
 - Hero nach dem Schema Badge, Überschrift, Unterzeile, zwei Buttons
@@ -66,6 +69,10 @@ Der Kicker über der Überschrift ist das deutlichste Erkennungszeichen generier
 - Sieht die Bildersammlung aus wie eine Sammlung statt wie eine Serie?
 - Bleibt auf einem 375 Pixel breiten Display eine Bildschirmhöhe übrig, die nichts Neues sagt?
 - Funktioniert jedes sichtbare Control real?
+- Gibt es für jede Rolle aus [[20-Design/Color System#Tokenvertrag]] einen gesetzten Wert, insbesondere für `border-hover` und `accent-subtle`?
+- Verändert sich beim Überfahren einer klickbaren Karte tatsächlich etwas, und zwar Rahmen und Position statt nur Farbe?
+- Stehen alle Radien auf einer der vier Stufen, und trägt im Ruhezustand wirklich keine Fläche einen Schatten?
+- Ist negatives Tracking auf den großen Stufen gesetzt und im Fließtext nicht?
 - Würde diese Startseite mit ausgetauschtem Logo für jede beliebige Branche funktionieren?
 
 ## Impeccable KI-Detail-Review

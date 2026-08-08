@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 depends_on:
   - "[[90-References/Inspiration Catalog]]"
 ---
@@ -140,7 +140,8 @@ Bewegung darf weder Inhalte verzögern noch die Reihenfolge für Tastatur oder S
 | Karten für jeden Satz | semantisch passende Formen wie Liste, Vergleich, Demo oder Fließtext nutzen |
 | erfundene Kennzahlen und Logos | verifizierte Belege oder ehrliche qualitative Aussagen |
 | Sparkles, Emojis und Glows als Innovationssignal | konkrete Arbeitsweise oder Output zeigen |
-| identische schwebende Hoverbewegung überall | pro Route eine inhaltsspezifische Choreografie statt eines kopierten Einzeleffekts |
+| der einheitliche Karten-Hover als einzige Bewegung der Website | Der einheitliche kleine Lift ist die richtige System-Affordanz und bleibt; er ersetzt aber keine Erzählung. Zusätzlich pro Route eine inhaltsspezifische Choreografie nach [[20-Design/Motion and Interaction]] |
+| Hoverbewegung auf Flächen, die nichts auslösen | Bewegung nur dort, wo sie eine Handlung ankündigt |
 | große Icons mit sehr kleinem Text | Inhaltshierarchie über Typografie und Raum lösen |
 | transparente Navigation über jedem Medium | Lesbarkeit und Zustand der Navigation explizit gestalten |
 | viel Animation beim Laden | sofortiger Inhaltszugang, dann volle Scroll- und Interaktionschoreografie |

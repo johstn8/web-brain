@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 impacts:
   - "[[80-Templates/Project Master Spec]]"
   - "[[70-QA/Quality Gates]]"
@@ -28,6 +28,10 @@ impacts:
 - Die Landing Page darf extravagant sein und bleibt dabei modern, übersichtlich und professionell. Siehe [[20-Design/Design Direction#Landing Page]].
 - **Bei jedem Website-Build wird der UI UX Pro Max Skill verwendet, ausnahmslos.** Siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]].
 - Der Leitbenchmark stammt aus [[20-Design/Interface Benchmarks]] und wird im Design Contract benannt.
+- **Die Detailebene B5 gilt bei jedem Build zusätzlich zum Leitbenchmark.** Sie legt Tokens, Radien, Rahmen, Tiefe, Hover und Bewegungswerte fest. Siehe [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]].
+- Der Tokenvertrag ist vor der ersten Komponente vollständig gesetzt, einschließlich `border-hover` und `accent-subtle`. Siehe [[20-Design/Color System#Tokenvertrag]].
+- Vier Radiusstufen, eine Rahmenstärke, eine Schattenstufe und im Ruhezustand kein Schatten. Siehe [[20-Design/Typography Layout and Spacing#Radiusskala]].
+- Bewegung folgt dem kanonischen Wertesatz. Siehe [[20-Design/Motion and Interaction#Standardrezepte mit Werten]].
 - Keine Retro-Anmutung: keine Epochen-Displayschrift, keine alte Buchserife als Markenschrift, keine Serife plus Erdton plus Ornament. Siehe [[20-Design/Typography Layout and Spacing#Retro-Verbot]].
 - Bilder werden vor dem Einsatz auf Winkel, Ausschnitt, Hintergrund, Farbe und Auflösung geprüft und bei Bedarf mit KI überarbeitet oder freigestellt. Fehlt ein reales Bild, wird ein KI-Bild eingesetzt und nur im Projekt als `ai-placeholder` geführt, nie sichtbar auf der Website gekennzeichnet. Siehe [[20-Design/Imagery and AI Editing]].
 - Informationen werden logisch gestaffelt und knapp gehalten. Textbudgets und die Dosierung am 375-Pixel-Viewport stehen in [[10-Strategy/Information Density and Mobile Clarity]].

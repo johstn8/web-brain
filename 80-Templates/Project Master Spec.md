@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 ---
 
 # Project Master Spec
@@ -60,6 +60,21 @@ updated: 2026-08-06
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
 - pen.dev: `use | skip`, Begründung, `.pen`-Pfade und Freigabestatus:
 - Farbrollen mit benannter Herleitung, Typografie, Spacing, Grid, Radius, Shadow, Motion; keine verbrauchte Farbwelt als dominante Fläche:
+- Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark, Quelle der Werte im Code:
+
+| Rolle | Wert hell | Wert dunkel | Herleitung |
+|---|---|---|---|
+| `bg` | | | |
+| `surface` | | | |
+| `surface-alt` | | | |
+| `text` / `text-secondary` / `text-tertiary` | | | |
+| `border` / `border-hover` | | | |
+| `accent` / `accent-subtle` / `accent-contrast` | | | |
+| `focus` | | | |
+| `success` / `warning` / `danger` je mit `-subtle` | | | |
+
+- Formsprache: die vier Radiusstufen nach [[20-Design/Typography Layout and Spacing#Radiusskala]] mit gesetzten Werten, die eine Rahmenstärke, die eine Schattenstufe und ihre Einsatzorte:
+- Bewegungstokens nach [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]: Kurvensatz, vier Dauerstufen, gewählte Rezepte je Komponente, begründete Abweichungen:
 - Kernartefakt/Leitmedium, direkter Einsatz/Adaption, Quelle für spätere Owner-Einschätzung, Poster und Fallback:
 - Responsive, Zustände und Reduced-Motion-Verhalten:
 - Motion Inventory je primärer Route: globale Bewegung, Einstieg, kontinuierliche Scrollsequenz, zwei weitere Scroll-/In-View-Bewegungen, Interaktionsdetails, Messung und Trace/Video:

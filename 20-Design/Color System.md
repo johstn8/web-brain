@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 impacts:
   - design-tokens
   - components
@@ -19,6 +19,38 @@ impacts:
 4. Rollen statt Hex-Werte benennen: `surface`, `text`, `muted`, `border`, `accent`, `focus`, `success`, `warning`, `danger`.
 5. Für jede Rolle Default, Hover, Active, Disabled und kontrastierende Inhaltsfarbe definieren.
 6. Light und Dark Mode getrennt kuratieren, nicht invertieren.
+
+## Tokenvertrag
+
+Verbindlicher Mindestsatz an Farbrollen für jede gebaute Website. Er ist der Grund, weshalb die Referenzoberflächen aus [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] fertig wirken: Sie besitzen für Grund, Fläche, Sekundärfläche, drei Textstufen, zwei Rahmenstufen und drei Akzentstufen je einen benannten Wert. Ein Build mit nur `surface`, `text`, `border` und `accent` kann die Zustände nicht sauber gestalten und wirkt flach.
+
+| Rolle | Aufgabe | Belegter Referenzwert hell | Pflicht |
+|---|---|---|---|
+| `bg` | Seitengrund, minimal gegen die Fläche abgesetzt | `#fafafa` | ja |
+| `surface` | Karten, Panels, Kopfzeile | `#ffffff` | ja |
+| `surface-alt` | eingebettete Bereiche, Codeblöcke, Leerzustände, Tabellenkopf | `#f5f5f5` | ja |
+| `text` | Überschriften und primärer Text | `#0a0a0a` | ja |
+| `text-secondary` | Lead, Erklärzeile, Fließtext zweiter Ordnung | `#525252` | ja |
+| `text-tertiary` | Metazeile, Beschriftung, deaktivierter Text | `#a3a3a3` | ja |
+| `border` | ruhender Hairline-Rahmen und Trennlinie | `#e5e5e5` | ja |
+| `border-hover` | Rahmen bei Hover, Fokus und ausgewähltem Zustand | `#d4d4d4` | ja |
+| `accent` | Marke, primäre Aktion, aktiver Zustand | eine Farbe mit belegter Herkunft | ja |
+| `accent-subtle` | getönte Fläche für Tags, Icon-Träger, ausgewählte Zeile | derselbe Ton bei etwa 8 Prozent Deckung | ja |
+| `accent-contrast` | Schrift und Icon auf gefüllter Akzentfläche | geprüft gegen `accent` | ja |
+| `focus` | Fokusring, deutlich von `accent` unterscheidbar wenn nötig | | ja |
+| `success` `warning` `danger` | semantische Zustände samt zugehöriger `-subtle`-Tönung | | ja |
+| Kategorietöne | feste Zuordnung je Kategorie, nur als Tönung und Icon-Tint | | nur wenn Kategorien existieren |
+
+Regeln zum Vertrag:
+
+- **`border-hover` und `accent-subtle` sind nicht optional.** Ohne sie entsteht der tote Hoverzustand und die fehlende getönte Tag-Pille, die eigenen Builds bisher gefehlt haben.
+- Die drei Flächenstufen liegen absichtlich sehr nah beieinander. Der Unterschied zwischen Grund und Karte ist eine Andeutung; die Abgrenzung leistet der Rahmen.
+- Die drei Textstufen sind eine Hierarchie, kein Vorrat. Jede Stufe hat eine feste Aufgabe. Vier oder mehr Graustufen für Text sind ein Befund.
+- `accent-subtle` entsteht aus `accent` über Deckkraft, nicht über eine frei gewählte Pastellfarbe. So bleibt die Tönung bei jedem Markenwechsel korrekt.
+- Für jede Rolle sind Default, Hover, Active, Disabled und die kontrastierende Inhaltsfarbe definiert.
+- Light und Dark werden getrennt kuratiert. Im Dunkelmodus wird nicht invertiert: Der Grund bleibt eine sehr dunkle, entsättigte Fläche, Rahmen werden heller statt dunkler, getönte Kategorieflächen laufen über denselben Ton bei etwa 25 bis 30 Prozent Deckung mit einer aufgehellten Schriftfarbe.
+- Die belegten Referenzwerte sind Kalibrierung, keine Vorlage. Sie werden übernommen, wenn kein Markenwert dagegen steht, und sonst mit demselben Helligkeits- und Kontrastverhältnis nachgebildet.
+- Die tatsächlich gesetzten Werte stehen im Design Contract und in genau einer Tokenquelle im Code nach [[30-Frontend/Architecture and Code Consistency]].
 
 ## Harmonie
 

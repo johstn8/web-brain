@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 review_by: 2027-02-04
 ---
 
@@ -32,7 +32,7 @@ MotionSites veröffentlicht detaillierte Prompts für Landingpages und Hero-Sekt
 ## Vom Nutzer bewertete Benchmarks
 
 > [!important] Vorrang
-> Diese vier Referenzen hat der Nutzer am 6. August 2026 ausdrücklich als gut oder als perfekte Messlatte benannt. Sie haben bei visuellen Entscheidungen Vorrang vor allen übrigen Einträgen dieses Katalogs. Die daraus abgeleiteten Regeln stehen kanonisch in [[20-Design/Interface Benchmarks]].
+> Diese Referenzen hat der Nutzer ausdrücklich als gut oder als perfekte Messlatte benannt: vier am 6. August 2026, sieben weitere am 8. August 2026. Sie haben bei visuellen Entscheidungen Vorrang vor allen übrigen Einträgen dieses Katalogs. Die daraus abgeleiteten Regeln stehen kanonisch in [[20-Design/Interface Benchmarks]].
 
 ### Data Console Dashboard — analysiert, Bildvorlage
 
@@ -49,6 +49,38 @@ Vom Nutzer wegen des Leitbilds benannt. Eine Solaranbieterseite auf mattschwarze
 ### ATS Resume Analyzer Dashboard — analysiert
 
 Vom Nutzer als gefallendes Dashboard benannt. Eine Auswertungsoberfläche für Bewerbungen mit Kennzahlen wie `Total Applications`, `Average Score`, `Avg. Processing Time` und `Excellent Candidates`, einem Vergleich aus `Current Performance` und `Industry Benchmark`, festen Kategoriefarben für Fähigkeitsgruppen, ausgearbeiteten Leerzuständen wie `No Job Profiles Found` mit `Create your first job profile to get started.` sowie echten Einstellungen für Benachrichtigungen, Datenaufbewahrung, Export und Löschung. Übertragbar sind die Einordnung jeder Zahl über eine Vergleichsgröße, feste Kategoriefarben mit Beschriftung und die Ernsthaftigkeit der Leer- und Verwaltungszustände. Zu prüfen bleibt, dass jede angezeigte Funktion serverseitig real durchgesetzt wird.[^benchats]
+
+### Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026
+
+Der Nutzer hat am 8. August 2026 sieben live erreichbare Websites als gut in Design und Bedienung benannt, ausdrücklich für **Oberfläche, Bedienung, Animation und Kastengestaltung**, ausdrücklich **nicht** als Maßstab für Rechtstexte, Belege oder Inhaltswahrheit. Die daraus kanonisch abgeleitete Regel steht in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]].
+
+**Prüfstatus:** Ausgeliefertes Markup und die vollständigen CSS-Bündel wurden am 8. August 2026 abgerufen und ausgewertet. Belegt sind damit Tokenwerte, Radien, Rahmen- und Hoverrezepte, Keyframes, Easings, Blur- und Maskenwerte sowie die eingesetzten Bibliotheken. **Nicht** belegt sind Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten dieser sieben Seiten; sie werden vor einer Übernahme dieser Aspekte nach [[90-References/Reference Research Workflow]] erneut geprüft.
+
+| Seite | Rolle | Belegte Eigenschaften |
+|---|---|---|
+| Consile | Produkt-Landing mit Demo | Vollständiger eigener Keyframe-Satz: `hero-letter` mit `translateY(.4em)` und `blur(6px)` gegen null, `fade-in` mit 12 Pixel Versatz, `scale-in` von `.96`, `shimmer` als Flächenwanderung, `accordion-down`/`-up` für FAQ, `fin-panel-in` mit gleichzeitigem Maßstab und Versatz. Dekorative Hintergründe werden per `mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent 80%)` ausgeblendet statt hart beschnitten. Fluide Sektionspolster über `clamp()`. Drawer über Vaul.[^bm5consile] |
+| CanDevsDoSomething | Community-Index | Tokenisierter `--radius` mit abgeleiteter Controlstufe `calc(var(--radius) - 2px)`, durchgehend Hairline `border-zinc-200` mit Dark-Gegenstück `zinc-800`, Kategorietöne ausschließlich als getönte Pille aus Farbe bei 100 hell und 900 bei 30 Prozent Deckung im Dunkelmodus. Linienicons aus Lucide in einer Strichstärke. Horizontal gewischte Reihen mit sichtbarem Bedienhinweis.[^bm5candevs] |
+| Phillip Ohren | Beratungs-Portfolio | Leitmedium je Leistungskarte, Text direkt auf dem Bild, keine Rahmenkaskade, sehr große Sektionsabstände. Bestätigt die Wirkung von Weißraum als einziges Trennmittel.[^bm5ohren] |
+| EVE BCN | Erlebnis-Buchung | Karten mit Bildfläche ohne Rahmen, linksbündige Detailhierarchie aus Dauer, Personenzahl und Preis, Aktion als `View →` in kleiner Stufe. Bestätigt die knappe, gestaffelte Metazeile statt Fließtext.[^bm5eve] |
+| ClaudeFolio | Kuratiertes Verzeichnis | Das dichteste Hover-Vokabular des Sets: `hover:-translate-y-0.5` und `hover:-translate-y-px` auf klickbaren Karten, `transition-[transform,background-color,border-color,color]`, zwei Rahmenstufen `--color-border` und `--color-border-strong`, Hover hebt den Rahmen bis auf die Vordergrundfarbe. Kartenradius `10px`, Pillen `rounded-full`. Warme, sehr dunkle Grundfläche `#1d1a14`.[^bm5claudefolio] |
+| Saad Salman | Fachprofil | Weicher, sehr flacher Hover-Schatten `0 8px 30px rgba(0,0,0,.06)` als einzige Tiefe, `rounded-2xl` für große Flächen, Kopfzeile `bg-background/70` mit `backdrop-blur-sm`, Hover setzt die Rahmenfarbe auf den Akzent.[^bm5saad] |
+| Thomas Stockham | Entwickler-Portfolio | Vollständig ausgelesener Tokensatz: `bg #fafafa`, `surface #fff`, `surface-alt #f5f5f5`, `text #0a0a0a`, `text-secondary #525252`, `text-tertiary #a3a3a3`, `border #e5e5e5`, `border-hover #d4d4d4`, `accent #6366f1`, `accent-subtle #6366f114`. Radien `.25/.375/.5/.75/1/1.5rem`, Tracking `-.025em`, Standarddauer `.15s` mit `cubic-bezier(.4,0,.2,1)`, Ease-out `cubic-bezier(0,0,.2,1)`. `fade-in-up` als `opacity 0 + translateY(12px)` über `.5s ease-out both`. Statuspunkt `pulse-dot` als atmender Ring von 3 auf 6 Pixel bei sehr niedriger Deckung. Mono `JetBrains Mono` für Werte und Tags.[^bm5stockham] |
+
+**Übertragbar und kanonisch übernommen**
+
+- Der benannte Tokensatz einschließlich `border-hover` und `accent-subtle`. Diese zwei Rollen fehlten bisher und sind der Grund, weshalb Hoverzustände im eigenen Build flach wirkten. Kanonisch in [[20-Design/Color System#Tokenvertrag]].
+- Das Kartenrezept aus Hairline im Ruhezustand und Rahmenaufhellung plus Ein- bis Zwei-Pixel-Lift beim Hover. Kanonisch in [[30-Frontend/Components and UI States#Kartenrezept]].
+- Die durchscheinende Kopfzeile mit Blur und deckendem Fallback. Kanonisch in [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]].
+- Die vierstufige Radiusskala und das negative Tracking großer Stufen. Kanonisch in [[20-Design/Typography Layout and Spacing#Radiusskala]].
+- Die Bewegungsrezepte mit konkreten Werten, insbesondere Reveal, Zeichenauftakt mit Blur, Maskenausblendung und Statuspunkt. Kanonisch in [[20-Design/Motion and Interaction#Standardrezepte mit Werten]].
+
+**Ausdrücklich nicht übernommen**
+
+- Der Verlaufstext aus Indigo, Violett und Pink bei Thomas Stockham. Das ist genau der Blau-Lila-Verlauf aus [[20-Design/Color System#Verbrauchte Farbwelten]] und bleibt verboten.
+- Emojis als Sektionszeichen bei CanDevsDoSomething. Verboten nach [[20-Design/Anti AI Slop]].
+- Die Verlaufsflächen als Ersatz für fehlende Vorschaubilder bei ClaudeFolio. Ein Platzhalter bleibt ein Befund nach [[20-Design/Imagery and AI Editing]], kein Gestaltungsmittel.
+- Alles Rechtliche, alle Kennzahlen, Kundenlisten und Referenzangaben dieser sieben Seiten. Der Nutzer hat sie ausdrücklich vom Benchmarkstatus ausgenommen.
+- Die Kartenraster als Standardantwort für jede Sektion. Das Verbot aus [[20-Design/Anti AI Slop]] bleibt unberührt; das Set liefert die Detailqualität der Kästen, nicht die Erlaubnis, alles in Kästen zu legen.
 
 ## Generierte und experimentelle Websites
 
@@ -256,6 +288,14 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 [^benchrotate]: https://tutor-timer-28553736.figma.site/
 [^benchsolar]: https://sixth-powder-95605714.figma.site/
 [^benchats]: https://pookie-blinders-777.figma.site/
+
+[^bm5consile]: https://consile.app/
+[^bm5candevs]: https://candevsdosomething.com/
+[^bm5ohren]: https://phillipohren.com/
+[^bm5eve]: https://evebcn.com/
+[^bm5claudefolio]: https://claudefolio.com/
+[^bm5saad]: https://saadsalman.org/
+[^bm5stockham]: https://www.tstockham.com/
 
 [^compute]: https://v0-compute-11.vercel.app/
 [^dataflow]: https://v0-playful-engineering-landing-page.vercel.app/

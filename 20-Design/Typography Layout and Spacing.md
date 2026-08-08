@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 impacts:
   - design-tokens
   - components
@@ -48,19 +48,61 @@ Die Ausnahme ist ein tatsächlicher, belegter historischer Bezug des Betriebs, e
 - Fallback-Stack metrisch ähnlich wählen, um Layout Shift zu reduzieren.
 - Schriften lokal und nur in benötigten Schnitten/Formaten ausliefern; Lizenz im Asset Register.
 
+### Kalibrierte Type Ramp
+
+Ausgangswerte, belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]]. Sie werden übernommen, wenn keine Markenentscheidung dagegen steht.
+
+| Stufe | Größe | Zeilenhöhe | Gewicht | Tracking |
+|---|---|---|---|---|
+| Display | `clamp(2.5rem, 6vw, 4.5rem)` | `1` | 600 bis 700 | `-0.03em` |
+| H1 | `clamp(2rem, 4vw, 3rem)` | `1.05` bis `1.1` | 600 | `-0.025em` |
+| H2 | `1.875rem` | `1.2` | 600 | `-0.025em` |
+| H3 | `1.25rem` | `1.4` | 600 | `-0.015em` |
+| Lead | `1.125rem` | `1.6` | 400 | `0` |
+| Body | `1rem` | `1.6` bis `1.625` | 400 | `0` |
+| Small | `0.875rem` | `1.45` | 400 bis 500 | `0` |
+| Label, Metazeile | `0.75rem` | `1.35` | 500 | `0` bis `0.01em` |
+
+- **Negatives Tracking gehört zu großen Stufen und nur dorthin.** Ab etwa `1.25rem` aufwärts wird enger gesetzt, Fließtext und Beschriftung nie. Das ist der Unterschied zwischen einer gesetzten und einer voreingestellten Überschrift.
+- Große Überschriften erhalten `text-wrap: balance`, Lead und Fließtext `text-wrap: pretty`, damit keine Einzelwortzeile entsteht.
+- Die Mono-Familie trägt Werte, Zahlenreihen, Tags, Codeausschnitte, Tastenkürzel und technische Metazeilen. Belegt eingesetzt wird `JetBrains Mono`. Sie ist nie Überschriften- oder Fließtextschrift, siehe [[20-Design/Typography Layout and Spacing#Retro-Verbot]].
+- Ziffern in tabellarischer Form für jede Zahl, die sich ändert oder untereinander steht.
+- Eine Serifen-Zweitfamilie ist erlaubt und wird dann für genau eine Rolle eingesetzt, etwa den Auftaktsatz oder redaktionelle Lesestrecken. Bei Consile belegt für die Auftaktzeile.
+
 ## Spacing
 
-- 4- oder 8-Punkt-Basis; semantische Tokens wie `space-1` bis `space-12`.
+- 4-Punkt-Basis; semantische Tokens wie `space-1` bis `space-12`.
 - Optische Korrekturen sind erlaubt, aber als Token oder dokumentierte Ausnahme.
 - Vertikaler Rhythmus: enger innerhalb einer Gruppe, deutlich größer zwischen Gruppen.
-- Radiusfamilie auf wenige Stufen begrenzen; Pill nur für echte Chips, Tags oder kompakte Controls.
-- Standard ist eine weich abgerundete, aber nicht verspielte Formsprache: eine Containerstufe um `12px` bis `14px`, eine kleinere Stufe für Controls, eine Pillstufe für Status. Diese drei Stufen gelten projektweit, siehe [[20-Design/Interface Benchmarks#Gemeinsamer Nenner]].
-- Eine kontrollierte Schattenfamilie; Grenzen bevorzugen, wenn Tiefe keine Bedeutung trägt.
+
+## Radiusskala
+
+Verbindlich für jede gebaute Website. Genau diese vier Stufen, keine Zwischenwerte, projektweit identisch. Abgeleitet aus [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] und dort belegt.
+
+| Stufe | Wert | Gilt für |
+|---|---|---|
+| `radius-control` | `6px` bis `8px` | Knöpfe, Eingabefelder, Auswahlfelder, Menüeinträge, kleine Icon-Träger |
+| `radius-card` | `10px` bis `12px` | Karten, Listeneinträge, Kennzahlenfelder, Popover, Tooltip |
+| `radius-panel` | `16px` bis `20px` | große Flächen, Bildcontainer, Drawer, Modal, Sektionsflächen, Medienrahmen |
+| `radius-pill` | `9999px` | Statuspillen, Tags, Chips, Avatare, Zähler, Umschalter |
+
+- Verschachtelte Flächen halten den Abstand ein: eine Fläche in einer Fläche nimmt die nächstkleinere Stufe. Der belegte Weg dafür ist eine Ableitung wie `calc(var(--radius-card) - 2px)`, nicht ein frei gewählter Wert.
+- Bildflächen an der Oberkante einer Karte werden nur oben gerundet und übernehmen dort den Kartenradius.
+- Eine Pille wird nie für einen mehrzeiligen Inhalt oder für eine primäre Aktion mit langer Beschriftung verwendet.
+- Abweichungen sind möglich, wenn Marke oder Gegenstand sie vorgeben, etwa eine bewusst kantige Systemanmutung mit Radius null. Die Entscheidung gilt dann für alle vier Stufen gemeinsam und steht im Design Contract.
+
+## Tiefe und Rahmen
+
+- Eine Rahmenstärke projektweit: ein Pixel. Zwei Rahmenfarben nach [[20-Design/Color System#Tokenvertrag]], die ruhende und die für Hover, Fokus und Auswahl.
+- **Genau eine Schattenstufe pro Projekt**, sehr flach und sehr transparent, Richtwert `0 8px 30px rgba(0,0,0,.06)`. Sie erscheint ausschließlich bei Hover oder Fokus auf tatsächlich klickbaren Flächen sowie an echten Ebenen über dem Inhalt, also Modal, Drawer, Popover und Menü.
+- Im Ruhezustand trägt keine Inhaltsfläche einen Schatten. Abgrenzung leisten Rahmen und Weißraum.
+- Für Produkt-UI nach [[20-Design/Interface Benchmarks#B1 Soft Neutral Product Console]] bleibt die Oberfläche vollständig schattenfrei.
 
 ## Layout
 
-- Containerbreiten und Seiten-Gutters als fluides Token, etwa mit `clamp()`.
-- Grid explizit: Spalten, Gutter, Maximalbreite und Ausnahmen.
+- Containerbreiten und Seiten-Gutters als fluides Token, etwa mit `clamp()`. Belegte Ausgangswerte: Inhaltsbreite `64rem` bis `80rem`, Lesestrecke `42rem` bis `48rem`, Seitenpolster `clamp(1rem, 5vw, 2rem)`.
+- Sektionspolster fluide und großzügig, Richtwert `clamp(4rem, 10vw, 8rem)` oben und unten. Der Abstand zwischen zwei Sektionen ist deutlich größer als jeder Abstand innerhalb einer Sektion. Bei Phillip Ohren und EVE BCN ist dieser Weißraum das einzige Trennmittel zwischen den Abschnitten; er ersetzt Trennlinien und Flächenwechsel.
+- Grid explizit: Spalten, Gutter, Maximalbreite und Ausnahmen. Kartenraster halten einen Gutter aus derselben Spacing-Skala, Richtwert `1rem` bis `1.5rem`.
 - Visuelle Ausrichtung an Textkanten, Baselines und gemeinsamen Achsen.
 - Zentrierte Textblöcke nur kurz; lange Inhalte linksbündig.
 - Content bestimmt Breakpoints, nicht Geräte-Namen.

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-08
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
@@ -20,6 +20,9 @@ Vor UI-Code festlegen:
 - Zielgefühl in einem Satz
 - primäre visuelle Metapher
 - gewählter Leitbenchmark aus [[20-Design/Interface Benchmarks]] samt übernommenen und ausdrücklich nicht übernommenen Elementen
+- vollständiger Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark
+- die vier Radiusstufen nach [[20-Design/Typography Layout and Spacing#Radiusskala]], die eine Rahmenstärke und die eine Schattenstufe mit ihren Einsatzorten
+- Bewegungstokens und gewählte Rezepte nach [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]
 - Schriftentscheidung mit Nachweis, dass sie nicht unter das [[20-Design/Typography Layout and Spacing#Retro-Verbot]] fällt
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]]

@@ -1,13 +1,41 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-07
+updated: 2026-08-08
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
+
+## 2026-08-08 — Handwerksebene B5: Tokenvertrag, Formsprache und Bewegungswerte
+
+Auslöser war der Befund des Nutzers, dass beauftragte Websites noch nicht wie sieben von ihm benannte Referenzseiten aussehen, ausdrücklich bezogen auf Oberfläche, Bedienung, Animation und Kastengestaltung, ausdrücklich nicht auf Rechtliches oder Belege.
+
+**Diagnose:** Das Brain war stark im Prozess und in der Haltung, aber ohne konkrete Werte. Es forderte „definierte Tokens", „eine Radiusfamilie" und „hohe Motion-Dichte", nannte aber weder die Pflichtrollen der Tokens noch Radius-, Rahmen-, Tiefen- oder Bewegungswerte. Damit war jeder Build in genau den Details frei, die den Unterschied zwischen konzipiert und fertig ausmachen. Belegt wurde das durch Auswertung des ausgelieferten Markups und der vollständigen CSS-Bündel aller sieben Seiten am 8. August 2026.
+
+**Kanonisch neu**
+
+- [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] als fünfter Benchmark und als Detailebene, die bei jedem Build zusätzlich zum gewählten Leitbenchmark gilt und nicht gewählt wird.
+- [[20-Design/Color System#Tokenvertrag]] mit Pflichtrollen samt belegten Referenzwerten. Die zwei bisher fehlenden Rollen `border-hover` und `accent-subtle` sind die konkrete Ursache für flach wirkende Zustände und getönte Flächen, die im eigenen Build nicht entstanden.
+- [[20-Design/Typography Layout and Spacing#Radiusskala]] mit vier Stufen, [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]] mit einer Rahmenstärke und genau einer Schattenstufe, kalibrierte Type Ramp mit negativem Tracking nur auf großen Stufen, fluide Container- und Sektionswerte.
+- [[30-Frontend/Components and UI States#Kartenrezept]] und [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]] samt Statuspille, Tag und Chip.
+- [[20-Design/Motion and Interaction#Standardrezepte mit Werten]] mit Kurven- und Dauersatz und zwölf benannten Rezepten von Reveal über Zeichenauftakt bis Maskenausblendung.
+
+**Bewusste Lockerungen, vom Nutzer am 8. August 2026 ausdrücklich genehmigt**
+
+1. Die durchscheinende Kopfzeile mit Blur und ein einziger flacher Hover-Schatten auf klickbaren Flächen sind jetzt erlaubt. Vorher schloss [[20-Design/Interface Benchmarks#B1 Soft Neutral Product Console]] Glas und Schatten pauschal aus. Bedingungen: kein Schatten im Ruhezustand, genau eine Stufe, Kontrastmessung gegen den ungünstigsten darunterliegenden Inhalt, deckender Fallback. Hairline bleibt das tragende Abgrenzungsmittel, und B1 selbst bleibt vollständig schattenfrei.
+2. Der kleine Karten-Hover-Lift von einem bis zwei Pixeln ist als System-Affordanz ausdrücklich erlaubt und erwünscht. „Aggressive Card-Lifts" in [[20-Design/Anti AI Slop]] ist auf über zwei Pixel, Maßstab über `1.02`, Rotation und Schattensprung präzisiert, und neu verboten ist der Lift auf Flächen, die nichts auslösen. Klargestellt: der Lift ersetzt keine Route-Choreografie.
+3. Die Radiusvorgabe ist von einer Containerstufe auf vier feste Stufen umgestellt: `6–8px`, `10–12px`, `16–20px`, Pille.
+
+**Nicht übernommen** aus den Referenzen: der Blau-Lila-Verlaufstext, Emojis als Sektionszeichen, Verlaufsflächen als Bildersatz sowie alles Rechtliche, alle Kennzahlen und Referenzangaben dieser sieben Seiten.
+
+### Geprüfte Auswirkungen
+
+Aktualisiert wurden Core Rules, `AGENTS.md`, Interface Benchmarks, Color System, Typography Layout and Spacing, Motion and Interaction, Anti AI Slop, Design Direction, Components and UI States, Derived Design Patterns, Inspiration Catalog, Quality Gates, Project Master Spec, AI Build Prompt und die Coverage and Impact Map. Sitemap, Datenflüsse, Rechtstexte, Sicherheitsregeln und Betriebsdoku änderten sich nicht. Kein Projekt unter `../Projekte/` wurde verändert; bestehende Projekte werden nur auf ausdrückliche Ansage nachgezogen.
+
+Offen und in der [[98-Maintenance/Review Queue|Review Queue]]: Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten der sieben Referenzseiten sind nicht belegt, weil die Auswertung statisch über Markup und CSS erfolgte. Vor einer Übernahme genau dieser Aspekte ist eine interaktive Prüfung nach [[90-References/Reference Research Workflow]] nötig.
 
 ## 2026-08-07 — Web-Brain als Git-Repository mit agentengesteuerter Synchronisation
 

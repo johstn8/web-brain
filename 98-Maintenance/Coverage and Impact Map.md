@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-07
+updated: 2026-08-08
 ---
 
 # Coverage and Impact Map
@@ -33,6 +33,10 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Retro-Verbot und Schriftwahl | [[20-Design/Typography Layout and Spacing|Typography Layout and Spacing]] | Anti AI Slop, Color System, Design Direction, Asset Register, Quality Gates |
 | interaktives Kernmodul | [[20-Design/Motion and Interaction|Motion and Interaction]] | Design Direction, Components and UI States, Accessibility, Performance, Quality Gates |
 | visuelle Richtung | [[20-Design/Design Direction|Design Direction]] | Farbe, Typografie, Motion, Master Spec |
+| Tokenvertrag mit Pflichtrollen | [[20-Design/Color System#Tokenvertrag|Color System]] | Interface Benchmarks, Design Direction, Components and UI States, Architecture and Code Consistency, Master Spec, AI Build Prompt, Quality Gates |
+| Radiusskala, Rahmenstärke, Tiefe | [[20-Design/Typography Layout and Spacing#Radiusskala|Typography Layout and Spacing]] | Interface Benchmarks, Anti AI Slop, Components and UI States, Design Direction, Master Spec, Quality Gates |
+| Kartenrezept und Kopfzeilenrezept | [[30-Frontend/Components and UI States|Components and UI States]] | Interface Benchmarks, Anti AI Slop, Motion and Interaction, Accessibility, Quality Gates |
+| Bewegungswerte und Standardrezepte | [[20-Design/Motion and Interaction#Standardrezepte mit Werten|Motion and Interaction]] | Interface Benchmarks, Components and UI States, Design Direction, Accessibility, Performance, Master Spec, AI Build Prompt, Quality Gates |
 | Farbe | [[20-Design/Color System|Color System]] | Accessibility, Tokens, QA |
 | Typografie und Layout | [[20-Design/Typography Layout and Spacing|Typography Layout and Spacing]] | Responsive Design, Assets, QA |
 | responsive Verhalten | [[20-Design/Responsive Design|Responsive Design]] | Components, Accessibility, Test Matrix |
