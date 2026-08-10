@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-09
 ---
 
 # Routing Map
@@ -25,6 +25,7 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Komponente | [[30-Frontend/Components and UI States]], [[30-Frontend/Accessibility]] | Zustandsmatrix und Tests |
 | Formular | Accessibility, Security Baseline, Privacy | Feldschema, Servervalidierung, Datenzweck |
 | Login oder Signup | [[40-Backend-Security/Authentication and Accounts]] | Auth-Flow und Abuse-Tests |
+| Nicht öffentliche Vorschau | [[40-Backend-Security/Preview Access Gate]] | Proxy-Gate, `noindex`, Ablage unter `vorschau/` |
 | Datenbank oder API | [[40-Backend-Security/Data APIs and Billing]] | Datenmodell, RLS/AuthZ, Limits |
 | Bezahlung oder Abo | Data APIs and Billing, Legal Decision Tree | Lifecycle und Webhook-Tests |
 | Tracking oder Embed | [[50-Legal/Privacy and Consent]] | Consent-Kategorie und Dateninventar |

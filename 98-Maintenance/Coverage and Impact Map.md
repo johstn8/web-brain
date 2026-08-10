@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-09
 ---
 
 # Coverage and Impact Map
@@ -48,6 +48,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | SEO | [[30-Frontend/SEO and Discoverability|SEO and Discoverability]] | Sitemap, Content, Launch Checklist |
 | Sicherheit | [[40-Backend-Security/Security Baseline|Security Baseline]] | Auth, APIs, Dependencies, QA |
 | Konten | [[40-Backend-Security/Authentication and Accounts|Authentication and Accounts]] | Data APIs, Privacy, Test Matrix |
+| Vorschau-Sperre | [[40-Backend-Security/Preview Access Gate|Preview Access Gate]] | Security Baseline, Delivery, SEO, QA |
 | Daten, API, Billing | [[40-Backend-Security/Data APIs and Billing|Data APIs and Billing]] | Security, Privacy, Operations, Tests |
 | Rechtliche Einordnung | [[50-Legal/Legal Decision Tree|Legal Decision Tree]] | Privacy, Assets, Accessibility, Launch |
 | Datenschutz und Consent | [[50-Legal/Privacy and Consent|Privacy and Consent]] | Data Inventory, Analytics, Tests |

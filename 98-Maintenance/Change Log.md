@@ -1,13 +1,27 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-09
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
+
+## 2026-08-09 — Preview Access Gate und Ablage für Vorschauprojekte
+
+Auslöser war der Auftrag, künftige Projekte unter `johannstein.de` zeigen zu können, ohne dass sie öffentlich erreichbar sind, während `johannstein.com` und `bildungsbruecke-verbindet.de` unverändert öffentlich bleiben.
+
+**Diagnose:** Das Brain kannte nur vollwertige Konten und Rollen aus [[40-Backend-Security/Authentication and Accounts]], aber kein Muster für „noch nicht öffentlich". Damit gab es für einen wiederkehrenden Fall keine kanonische Antwort, und die naheliegende Abkürzung wäre ein Client-Check gewesen, den [[40-Backend-Security/Security Baseline]] ausdrücklich verbietet.
+
+**Kanonisch neu**
+
+- [[40-Backend-Security/Preview Access Gate]] als Muster: Durchsetzung am Reverse Proxy statt in der Anwendung, Hash statt Klartext, `noindex` zusätzlich zum Gate, eigene Domain statt Unterpfad der Produktionsdomain, ACME-Ausnahme für die Zertifikatserneuerung, plus Prüfpunkte und Betriebsablauf für Codewechsel und Veröffentlichung.
+- Ablagekonvention `Web-Design/vorschau/<Projektname>/` parallel zu `projekte/` für Live-Websites, mit gemeinsamer Gate-Konfiguration unter `vorschau/_gate/`. Jedes weitere Vorschauprojekt erbt das Gate und belegt einen Port nach [[60-Operations/Delivery and Local Start]].
+- Registrierung in [[00-Start/02 Routing Map]] und [[98-Maintenance/Coverage and Impact Map]].
+
+**Abgrenzung:** Das Gate ist eine Sichtbarkeitssperre, kein Zugriffsschutz. Ein kurzer Zugangscode hält gezielte Angreifer nicht auf, deshalb ist in der Notiz festgehalten, dass hinter dem Gate keine echten Kundendaten, Produktionsschlüssel oder Zahlungsvorgänge liegen dürfen.
 
 ## 2026-08-08 — Handwerksebene B5: Tokenvertrag, Formsprache und Bewegungswerte
 
