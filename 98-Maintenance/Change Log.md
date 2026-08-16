@@ -9,6 +9,27 @@ updated: 2026-08-16
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
 
+## 2026-08-16 — Drei Motion-Skills installiert, Apple-Referenz aufgenommen
+
+Auslöser war die Durchsicht des Skillsets [emilkowalski/skills](https://github.com/emilkowalski/skills) auf Wunsch des Nutzers. Von zehn Skills wurden drei installiert, einer als Referenznotiz übernommen und die übrigen begründet abgelehnt.
+
+**Diagnose:** Das Brain forderte je Bewegung Zweck, Häufigkeit, Easing, Dauer und Unterbrechbarkeit, hatte aber keine Instanz, die das prüft, und keinen Skill, der eine Einzelbewegung mit diesen Werten baut. Für gestengeführte Bewegung, Federn und Momentum fehlte jede Regel.
+
+**Neu installiert**, real unter `/srv/Web-Design/shared-agent-skills/`, verlinkt nach `~/.claude/skills/` und `~/.agents/skills/`, damit Claude und Codex dieselbe Fassung lesen:
+
+- `animate` für den Bau einer Einzelbewegung.
+- `review-animations` als Pflichtprüfung vor der Abnahme, verankert in [[70-QA/Quality Gates]] `G1` und in [[20-Design/Motion and Interaction#Nachweis und Abnahme]].
+- `prototype` für Divergenz in der Entwurfsphase, ausdrücklich nur für einzelne Bauteile und nie für ganze Websites, damit die Regel aus [[00-Start/05 Web Product Workflow#Anzahl der Websites]] unberührt bleibt.
+
+**Kanonisch neu**
+
+- [[90-References/Apple Fluid Interface]] als Referenz für gestengeführte und federbasierte Bewegung mit Federwerten, Geschwindigkeitsübergabe, Momentumprojektion, Rubberbanding und Materialtiefe. Der zugehörige Skill `apple-design` ist bewusst nicht installiert, sein Inhalt steht in der Notiz.
+- [[20-Design/Motion and Interaction#Gestengeführte Bewegung]] verweist von der kanonischen Motion-Notiz dorthin und behält bei Widerspruch den Vorrang.
+
+**Abgelehnt:** `find-animation-opportunities` widerspricht dem verbindlichen Motion-Niveau, weil es Bewegung nach dem Grundsatz filtert, die meisten Kandidaten abzulehnen. `pick-ui-library` würde eine zweite Bibliotheksliste neben [[90-References/Tools and Libraries]] eröffnen. `ask-sonner` ist ohne React und Sonner ohne Anwendung, `animation-vocabulary` ohne Entscheidungsgewinn, `improve-animations` überschneidet sich mit `review-animations` und wird erst bei einem echten Bestandsaudit nachgezogen. `emil-design-eng` war bereits installiert und ist mit der Repo-Fassung identisch.
+
+**Offen:** Die Signale `prefers-reduced-transparency` und `prefers-contrast` sind im Brain noch nicht kanonisch geregelt. Vermerkt in der Apple-Notiz und in [[98-Maintenance/Review Queue]].
+
 ## 2026-08-16 — Website Copy als kanonische Notiz und Stilabstand bei mehreren Websites
 
 Auslöser war die Durchsicht der beiden Websites aus `Old-Projects/Fahrschule-Kladow_v4` durch den Nutzer. Beide Websites wurden ausdrücklich als gut bewertet. Die Kritik betraf die Texte und den Abstand zwischen den Fassungen, nicht Gestaltung oder Umfang.

@@ -78,6 +78,8 @@ Vor dem ersten UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit e
 | interaktives Kernmodul | anderes Modul oder deutlich andere Bedienlogik desselben Inhalts |
 | Tonfall der Copy | Anrede, Satzlänge und Nähe unterscheiden sich, die Fakten nicht |
 
+Bleibt eine Achse unklar, hilft `prototype` nach [[00-Start/04 Plugins and Skills#Prototype]]: mehrere echte Fassungen eines einzelnen Bauteils oder Auftakts, jede auf einer benannten Achse verschieden, zum Durchklicken. Der Skill wird nur auf Bauteile angewandt, nie auf ganze Websites, und seine Prototypen liegen außerhalb des Produktionscodes.
+
 Der Tonfall darf sich unterscheiden, die Regeln aus [[10-Strategy/Website Copy]] gelten in jeder Fassung gleich. Fakten, Preise, Zeiten, Funktionen, Unterseiten, Accessibility, Sicherheit und SEO bleiben identisch nach [[00-Start/05 Web Product Workflow#Was unabhängig von der Anzahl gilt]]. Der Leitbenchmark darf derselbe sein, die Detailebene B5 gilt ohnehin für alle. Unterschiedlich ist, was daraus gemacht wird.
 
 ## Komposition und Überschriften

@@ -53,6 +53,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] alle UI-Zustände gestaltet
 - [ ] Motion-Referenzen interaktiv geprüft; Reduced-Motion- und Medienfallback belegt
 - [ ] jede Website erfüllt das hohe Motion-Niveau aus [[20-Design/Motion and Interaction]]: eigene Route-zu-Route-Choreografie, Motion Inventory, mindestens zwölf sichtbare Bewegungsentscheidungen und pro primärer Inhaltsroute eine Scrollsequenz plus zwei weitere differenzierte Scroll-/In-View-Bewegungen
+- [ ] **`review-animations` je gebauter Website ausgeführt** und mit Datum, Befundliste und Umsetzungsstand dokumentiert, siehe [[00-Start/04 Plugins and Skills#Review Animations]]; offene Befunde sind im Decision Log begründet
 - [ ] Bewegungsentscheidungen enthalten Zweck, Häufigkeit, Easing/Dauer oder Scroll-Range, Eingabemethode, Unterbrechbarkeit und Reduced-Motion-Fallback; keine Animation verzögert häufige Tastaturbedienung
 
 ## G2 Funktion

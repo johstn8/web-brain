@@ -24,6 +24,8 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Schriftwahl | [[20-Design/Typography Layout and Spacing]], [[20-Design/Interface Benchmarks]] | Type Ramp und Nachweis, dass kein Retro-Verstoß vorliegt |
 | Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States]], [[10-Strategy/Information Architecture and Sitemap]] | höchstens sechs Punkte, einzeilig bei 1280, 1440 und 1920 Pixel |
 | Website fertig, vor Abnahme | [[20-Design/Anti AI Slop]], [[00-Start/04 Plugins and Skills]], [[70-QA/Quality Gates]] | Impeccable KI-Detail-Review je Website mit Befundliste |
+| Einzelne Bewegung bauen oder prüfen | [[20-Design/Motion and Interaction]], [[00-Start/04 Plugins and Skills#Animate]], [[00-Start/04 Plugins and Skills#Review Animations]] | Bewegung mit Zweck, Kurve, Dauer und Reduced-Motion-Fallback, vor der Abnahme durch `review-animations` geprüft |
+| Geste, Feder, Sheet oder Drag | [[90-References/Apple Fluid Interface]], [[20-Design/Motion and Interaction#Gestengeführte Bewegung]] | unterbrechbare Bewegung mit Geschwindigkeitsübergabe und projizierter Ruhelage |
 | Komponente | [[30-Frontend/Components and UI States]], [[30-Frontend/Accessibility]] | Zustandsmatrix und Tests |
 | Formular | Accessibility, Security Baseline, Privacy | Feldschema, Servervalidierung, Datenzweck |
 | Login oder Signup | [[40-Backend-Security/Authentication and Accounts]] | Auth-Flow und Abuse-Tests |

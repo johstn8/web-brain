@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 review_by: 2027-02-05
 impacts:
   - accessibility
@@ -142,7 +142,13 @@ Der projektweite Standardwert für Farb-, Rahmen- und Hoverübergänge ist `150 
 
 Bei `prefers-reduced-motion: reduce` bleibt die Informations- und Seitenstruktur erhalten: Scroll-gekoppelte Positions-, Parallax-, Zoom-, Kamerafahrt- und Pin-Effekte werden zu einer unmittelbaren statischen Reihenfolge oder kurzen Opacity-/Farbwechseln. Interaktionsfeedback bleibt vorhanden, wenn es Funktion erklärt. Die Präferenz signalisiert einen Wunsch nach weniger nicht essenzieller Bewegung.[^mdn-reduced]
 
+## Gestengeführte Bewegung
+
+Führt der Nutzer eine Bewegung selbst, also beim Ziehen, Wischen, bei Sheets, Slidern, Karussells und beim Momentum nach dem Loslassen, gelten zusätzlich die Muster aus [[90-References/Apple Fluid Interface]]: Rückmeldung ab dem Drücken, Eins-zu-eins-Führung mit Griffversatz, Start jeder neuen Bewegung beim aktuell dargestellten Wert, Übergabe der Loslassgeschwindigkeit, projizierte Ruhelage statt nächstgelegener Kante und weicher Widerstand an Grenzen. Für gestengeführte Bewegung sind Keyframes ungeeignet, weil sie nicht mitten im Lauf gegriffen werden können. Die Werte dieser Notiz bleiben bei einem Widerspruch maßgeblich.
+
 ## Nachweis und Abnahme
+
+Vor der Abnahme wird `review-animations` nach [[00-Start/04 Plugins and Skills#Review Animations]] je gebauter Website ausdrücklich aufgerufen. Jeder Befund wird behoben oder mit Grund im Decision Log festgehalten.
 
 Für jede gebaute Website belegen: Desktop und Mobil, Vorwärts- und Rückwärts-Scroll, schneller Scroll, Reload/Deep Link innerhalb einer Sequenz, Navigation während der Sequenz, Touch, Tastatur, Fehler-/Ladefallback, Reduced Motion und Performanceprofil. Ein Screenshot belegt nur einen Zustand; jede relevante Sequenz benötigt Trace oder Video sowie die Motion-Inventory-Zeile.
 

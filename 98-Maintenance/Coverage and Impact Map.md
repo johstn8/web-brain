@@ -43,6 +43,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Typografie und Layout | [[20-Design/Typography Layout and Spacing|Typography Layout and Spacing]] | Responsive Design, Assets, QA |
 | responsive Verhalten | [[20-Design/Responsive Design|Responsive Design]] | Components, Accessibility, Test Matrix |
 | Interaktion und Motion | [[20-Design/Motion and Interaction|Motion and Interaction]] | Performance, Accessibility, Tests |
+| gestengeführte und federbasierte Bewegung | [[90-References/Apple Fluid Interface|Apple Fluid Interface]] | Motion and Interaction, Components and UI States, Accessibility |
 | Architektur | [[30-Frontend/Architecture and Code Consistency|Architecture and Code Consistency]] | Dependencies, Delivery, Security |
 | Komponenten und Zustände | [[30-Frontend/Components and UI States|Components and UI States]] | Accessibility, Test Matrix, Master Spec |
 | Barrierefreiheit | [[30-Frontend/Accessibility|Accessibility]] | Design, Components, Legal, Tests |

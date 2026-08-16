@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 next_review: 2026-11-03
 ---
 # Review Queue
@@ -56,6 +56,8 @@ Für jedes neue Projekt zusätzlich prüfen:
 - Steht die im Auftrag genannte Anzahl der Websites in `PROJECT.md` mit wörtlicher Belegstelle?
 - Ist das Firmenlogo gefunden und in jeder gebauten Website sichtbar eingesetzt, oder ist sein Fehlen dokumentiert?
 - Liegt für jede gebaute Website ein datierter Impeccable KI-Detail-Review mit Befundliste vor?
+- Liegt für jede gebaute Website ein datierter `review-animations`-Durchlauf mit Befundliste vor?
+- Sind die Copy-Prüffragen aus [[10-Strategy/Website Copy#Prüffragen vor der Abnahme]] auf jeden sichtbaren Text angewandt?
 - Ist UI UX Pro Max für jede gebaute Website ausgeführt und mit Datum belegt?
 - Ist der Leitbenchmark aus [[20-Design/Interface Benchmarks]] benannt, samt nicht übernommener Elemente?
 - Sind alle Bilder überarbeitet, zu einer Serie angeglichen und alle `ai-placeholder`-Bilder mit Ersetzungshinweis übergeben?
@@ -65,3 +67,8 @@ Für jedes neue Projekt zusätzlich prüfen:
 - Haben sich eingesetzte Frameworks, Browserziele oder Anbieter geändert?
 - Sind Datenschutzverträge, Löschfristen und Datenflüsse aktuell?
 - Stimmen Sitemap, Rollenmodell, Billing und Deployment noch mit dem Master Spec überein?
+
+## Offene Brain-Themen
+
+- `prefers-reduced-transparency` und `prefers-contrast` sind noch nicht kanonisch geregelt. Aufgenommen am 2026-08-16 aus [[90-References/Apple Fluid Interface#Barrierefreiheit über Reduced Motion hinaus]]. Kanonischer Besitzer wäre [[30-Frontend/Accessibility]] zusammen mit [[20-Design/Color System]].
+- `improve-animations` aus dem Skillset von Emil Kowalski ist bewusst nicht installiert. Bei einem echten Bestandsaudit erneut bewerten.

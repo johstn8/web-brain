@@ -25,9 +25,9 @@
     "semantic_hash": "55de0f561a64f58eb2dabe2368e0d9c1"
   },
   "00-Start/00 Brain Index.md": {
-    "mtime": 1786876621.4664063,
-    "ast_hash": "42ffe2e15352d593fdd975ba2dfc8098",
-    "semantic_hash": "42ffe2e15352d593fdd975ba2dfc8098"
+    "mtime": 1786901295.3044033,
+    "ast_hash": "027d9f7449244b80951ff9a79753fae1",
+    "semantic_hash": "027d9f7449244b80951ff9a79753fae1"
   },
   "00-Start/01 Core Rules.md": {
     "mtime": 1786876621.4614065,
@@ -35,9 +35,9 @@
     "semantic_hash": "455f072b804bde1aec53b81e8172c9fe"
   },
   "00-Start/02 Routing Map.md": {
-    "mtime": 1786876621.4634066,
-    "ast_hash": "ecc6dbcf54cb2172bb629d1d856d9164",
-    "semantic_hash": "ecc6dbcf54cb2172bb629d1d856d9164"
+    "mtime": 1786901286.2385325,
+    "ast_hash": "10d744101c298f4386d1689c9dbf9c91",
+    "semantic_hash": "10d744101c298f4386d1689c9dbf9c91"
   },
   "00-Start/03 Update Protocol.md": {
     "mtime": 1786110516.5745194,
@@ -45,9 +45,9 @@
     "semantic_hash": "8d57aa6c72cf1b274308c34fd15548cc"
   },
   "00-Start/04 Plugins and Skills.md": {
-    "mtime": 1786876662.6699543,
-    "ast_hash": "b24351eb9a2c32f681a1db1537159d00",
-    "semantic_hash": "b24351eb9a2c32f681a1db1537159d00"
+    "mtime": 1786901327.4949446,
+    "ast_hash": "0a2920df4fb7ee4f956c6f3c419ca775",
+    "semantic_hash": "0a2920df4fb7ee4f956c6f3c419ca775"
   },
   "00-Start/05 Web Product Workflow.md": {
     "mtime": 1786876621.4594066,
@@ -85,14 +85,14 @@
     "semantic_hash": "65164a57d382e76f4c64bcddc2e9a598"
   },
   "20-Design/Design Direction.md": {
-    "mtime": 1786876621.4564066,
-    "ast_hash": "19c9fd8538ab57ebbfca41688617884d",
-    "semantic_hash": "19c9fd8538ab57ebbfca41688617884d"
+    "mtime": 1786901279.0156355,
+    "ast_hash": "62d5aeaceb31490336ec0e407ffc557d",
+    "semantic_hash": "62d5aeaceb31490336ec0e407ffc557d"
   },
   "20-Design/Motion and Interaction.md": {
-    "mtime": 1786353171.5988634,
-    "ast_hash": "6b3ef1e3e789ec38f1eb3808ade098b8",
-    "semantic_hash": "6b3ef1e3e789ec38f1eb3808ade098b8"
+    "mtime": 1786901327.4949446,
+    "ast_hash": "52d30823b9a9ec7c38fef7a62f23f268",
+    "semantic_hash": "52d30823b9a9ec7c38fef7a62f23f268"
   },
   "20-Design/Responsive Design.md": {
     "mtime": 1786110516.5755193,
@@ -175,9 +175,9 @@
     "semantic_hash": "f4ca12035384522c87082afecce10771"
   },
   "70-QA/Quality Gates.md": {
-    "mtime": 1786876621.4684064,
-    "ast_hash": "f881a9e53a96e17154e6a9fcd8e82315",
-    "semantic_hash": "f881a9e53a96e17154e6a9fcd8e82315"
+    "mtime": 1786901272.5527277,
+    "ast_hash": "2b29b4de7699cea20e0881b662a7e5bd",
+    "semantic_hash": "2b29b4de7699cea20e0881b662a7e5bd"
   },
   "70-QA/Test Matrix.md": {
     "mtime": 1786110516.5785193,
@@ -255,19 +255,19 @@
     "semantic_hash": "749b49f1cbbaa5ffe1fbe35d37908f7b"
   },
   "98-Maintenance/Change Log.md": {
-    "mtime": 1786876681.812744,
-    "ast_hash": "067e0d51ad5a71710158536b922e4f10",
-    "semantic_hash": "067e0d51ad5a71710158536b922e4f10"
+    "mtime": 1786901313.5011442,
+    "ast_hash": "310b0f8ebad6397b9914dadf1ae91c1d",
+    "semantic_hash": "310b0f8ebad6397b9914dadf1ae91c1d"
   },
   "98-Maintenance/Coverage and Impact Map.md": {
-    "mtime": 1786876621.4714065,
-    "ast_hash": "8ed8b5bef9cf46784c7ba26216b6f6a7",
-    "semantic_hash": "8ed8b5bef9cf46784c7ba26216b6f6a7"
+    "mtime": 1786901295.3044033,
+    "ast_hash": "72bd70357ff04d7bc9222cf55585ca29",
+    "semantic_hash": "72bd70357ff04d7bc9222cf55585ca29"
   },
   "98-Maintenance/Review Queue.md": {
-    "mtime": 1786353171.6018634,
-    "ast_hash": "6bf7810248a1494a2bd6f3602d4bd1e4",
-    "semantic_hash": "6bf7810248a1494a2bd6f3602d4bd1e4"
+    "mtime": 1786901327.4949446,
+    "ast_hash": "fea1e22ce001f6c3f29284886c77f20a",
+    "semantic_hash": "fea1e22ce001f6c3f29284886c77f20a"
   },
   "AGENTS.md": {
     "mtime": 1786876582.80783,
@@ -323,5 +323,10 @@
     "mtime": 1786353218.5794957,
     "ast_hash": "f4943f588d1943c93af8ac5ebb776238",
     "semantic_hash": "f4943f588d1943c93af8ac5ebb776238"
+  },
+  "90-References/Apple Fluid Interface.md": {
+    "mtime": 1786901216.8045225,
+    "ast_hash": "9e0082142bcff6c8ce84bf97a216726a",
+    "semantic_hash": "9e0082142bcff6c8ce84bf97a216726a"
   }
 }
