@@ -21,7 +21,7 @@ Auslöser war die Feststellung des Nutzers, dass die neun Zeilen der Review Queu
 - Sicherheits-, Auth- und Billing-Quellen laufen über eine geplante Cloud-Routine, viermal im Jahr, mit Ergebnis direkt nach `main`. Ohne Befund aktualisiert sie nur Datum und Status, damit der Lauf sichtbar ist.
 - Die übrigen sieben Prüfungen hängen an einem Arbeitsschritt, der ohnehin stattfindet, etwa dem Setzen eines Grenzwerts, der Aufnahme einer Bibliothek oder dem Einbinden einer Karte. Registriert in [[98-Maintenance/Coverage and Impact Map#Zeitabhängige Quelle wird verwendet]].
 
-**Offen:** Die Routine ist inhaltlich fertig, aber noch nicht angelegt. Das Claude-Konto ist nicht mit GitHub verknüpft, deshalb lehnt die API eine Routine mit privatem Repository ab. Bis zur Verknüpfung findet die Prüfung der beiden Zeilen nicht statt; das ist in der Review Queue so vermerkt.
+**Auf Eis:** Die Routine ist inhaltlich fertig, aber nicht angelegt. Zuerst fehlte die GitHub-Verknüpfung des Claude-Kontos, danach der Zugriff der GitHub-App auf das private Repository. Der Nutzer hat das Thema am selben Tag zurückgestellt. Die beiden automatisch geprüften Zeilen werden deshalb bis auf Weiteres nicht geprüft; das steht so in der Review Queue. Die anlassgebundenen Prüfungen sind davon nicht betroffen und wirken sofort.
 
 **Nicht geändert**, ausdrücklich auf Entscheidung des Nutzers vom 2026-08-16: `prefers-reduced-transparency` und `prefers-contrast` bleiben ungeregelt, die Lizenzfrage bei UI UX Pro Max wird nicht vorgezogen, die eingeschränkt geprüften Referenzen werden nicht nachgearbeitet, die drei neuen Motion-Skills werden nicht in eine Kalenderzeile aufgenommen. Sie stehen stattdessen anlassgebunden in der neuen Tabelle.
 
