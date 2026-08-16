@@ -94,6 +94,10 @@ Aktualisiere Sitemap, Navigation, interne Links, Metadaten, strukturierte Daten,
 
 Aktualisiere Komponentenvertrag, Zustände, Tastaturverhalten, Screenreader-Name, responsive Regeln, Motion-Fallback, Tests und gegebenenfalls das Designsystem.
 
+### Zeitabhängige Quelle wird verwendet
+
+Wird eine externe Quelle für eine Projektentscheidung herangezogen, etwa ein Grenzwert aus WCAG oder Core Web Vitals, eine Rechtsquelle, eine Bibliothek, die Maps-Nutzungsbedingungen oder ein Skill, wird sie in diesem Moment auf Aktualität geprüft und das Prüfdatum in der kanonischen Notiz vermerkt. Die Zuordnung von Auslöser zu Gegenstand steht in [[98-Maintenance/Review Queue#Anlassgebunden geprüft]]. Sicherheits-, Auth- und Billing-Quellen laufen stattdessen über die geplante Routine in [[98-Maintenance/Review Queue#Automatisch geprüft]] und werden nicht zusätzlich von Hand geprüft.
+
 ### Neue externe Abhängigkeit
 
 Aktualisiere Abhängigkeitsinventar, Lizenz, Versionierung, Datenflüsse, CSP-/Netzwerkbedarf, Sicherheitsprüfung, Startskripte und Updateplan.

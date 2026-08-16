@@ -2,25 +2,41 @@
 type: maintenance
 status: canonical
 updated: 2026-08-16
-next_review: 2026-11-03
+next_review: 2026-11-01
 ---
 # Review Queue
 
 Diese Liste enthält bewusst zeitabhängige oder noch nicht vollständig verifizierbare Punkte. Ein leerer Eintrag ist kein Qualitätsziel; eine nachvollziehbare Warteschlange ist besser als versteckte Unsicherheit.
 
-## Regelmäßige Prüfungen
+> [!important] Grundsatz seit 2026-08-16
+> Eine Prüfung steht hier nur, wenn sie einen echten Auslöser hat. Entweder läuft sie automatisch, oder sie hängt an einem Arbeitsschritt, der ohnehin stattfindet. Ein Datum allein ist kein Auslöser, weil niemand am Stichtag nachsieht. Die frühere Tabelle mit Fälligkeitsdaten und durchgehendem Status `offen` war eine Absichtserklärung ohne Wirkung und wurde ersetzt.
 
-| Fälligkeit | Gegenstand | Umfang | Status |
-|---|---|---|---|
-| quartalsweise, zuerst 2026-11-03 | Sicherheits- und Authentifizierungsquellen | OWASP, NIST, eingesetzte Auth-Anbieter und Abuse-Schutz | offen |
-| quartalsweise, zuerst 2026-11-03 | Plattform- und Billing-Dokumentation | APIs, Webhooks, Kündigungs- und Löschabläufe | offen |
-| halbjährlich, zuerst 2027-02-03 | Webstandards und Metriken | WCAG/WAI, Core Web Vitals, Browserunterstützung | offen |
-| halbjährlich, zuerst 2027-02-03 | deutsche und europäische Rechtsquellen | DDG, TDDDG, BFSG, DSGVO und Aufsichtsbehörden | offen; fachliche Rechtsprüfung je Projekt |
-| halbjährlich, zuerst 2027-02-03 | Tools und Bibliotheken | Lizenz, Wartungszustand, Integrationsweise | offen |
-| halbjährlich, zuerst 2027-02-03 | Google Maps/Places | EWR-Bedingungen, erlaubte Speicherung, Attribution, Maps URLs, Embed/API und Datenschutz | offen |
-| halbjährlich, zuerst 2027-02-03 | UI UX Pro Max und pen.dev | Version/Lizenz, CLI-Verfügbarkeit, Authentifizierung, Projektpfade, Codex-Konfiguration, Skill-Workflow und offizielle Dokumentation | offen |
-| halbjährlich, zuerst 2027-02-04 | Emil Design Engineering, Impeccable und MotionSites AI | Skill-Versionen, Lizenz, lokale Integration, Quellen, Zugriffs-/Datenverhalten sowie die Übertragbarkeit der Promptmuster | offen |
-| jährlich, zuerst 2027-08-03 | Inspirationskatalog | Erreichbarkeit, neue Fassung, fortbestehende Relevanz | offen |
+## Automatisch geprüft
+
+Diese Quellen ändern sich real und sind teuer, wenn das Brain sie falsch wiedergibt. Sie laufen deshalb über eine geplante Cloud-Routine, nicht über Handarbeit.
+
+| Gegenstand | Betroffene Notizen | Umfang | Mechanismus | Status |
+|---|---|---|---|---|
+| Sicherheits- und Authentifizierungsquellen | [[40-Backend-Security/Security Baseline]], [[40-Backend-Security/Authentication and Accounts]] | OWASP, NIST, eingesetzte Auth-Anbieter und Abuse-Schutz | Routine `Web-Brain Quartalsprüfung Sicherheit und Billing`, 1. Februar, Mai, August und November, 7 Uhr UTC | vorbereitet am 2026-08-16, noch nicht scharf; siehe Hinweis unter der Tabelle |
+| Plattform- und Billing-Dokumentation | [[40-Backend-Security/Data APIs and Billing]] | APIs, Webhooks, Kündigungs- und Löschabläufe | dieselbe Routine | vorbereitet am 2026-08-16, noch nicht scharf; siehe Hinweis unter der Tabelle |
+
+**Offen:** Die Routine ist inhaltlich fertig, konnte am 2026-08-16 aber nicht angelegt werden, weil das Claude-Konto noch nicht mit GitHub verknüpft ist und ein privates Repository ohne diese Verknüpfung nicht geklont werden darf. Nach der Verknüpfung unter https://claude.ai/settings wird sie in einem Schritt erstellt; bis dahin findet die Prüfung dieser beiden Zeilen nicht statt.
+
+Die Routine liest die Fußnoten-URLs der drei Notizen, vergleicht sie mit der abgeleiteten Aussage und schreibt ihr Ergebnis direkt nach `main`. Ohne Befund aktualisiert sie nur Datum und Status dieser beiden Zeilen, damit sichtbar bleibt, dass sie gelaufen ist. Mit Befund legt sie einen Abschnitt `Befunde der Quartalsprüfung` in dieser Notiz an. Eindeutige Änderungen übernimmt sie selbst, alles Abwägungsbedürftige markiert sie als offene Entscheidung. Den Graphen baut sie nicht neu; das holt die nächste lokale Sitzung nach.
+
+## Anlassgebunden geprüft
+
+Diese Quellen werden geprüft, wenn sie gebraucht werden, nicht nach Kalender. Der Auslöser ist jeweils ein Schritt, der im Projekt ohnehin stattfindet. Ergebnis und Datum werden in der jeweiligen kanonischen Notiz vermerkt.
+
+| Gegenstand | Auslöser | Umfang |
+|---|---|---|
+| Webstandards und Metriken | bevor ein Grenzwert aus diesen Quellen in einem Projekt gesetzt wird, spätestens bei den Gates `G3` und `G4` in [[70-QA/Quality Gates]] | WCAG/WAI, Core Web Vitals, Browserunterstützung |
+| deutsche und europäische Rechtsquellen | sobald ein Projekt Rechtstexte, Consent oder Datenerhebung erhält, über [[50-Legal/Legal Decision Tree]] | DDG, TDDDG, BFSG, DSGVO und Aufsichtsbehörden; die fachliche Rechtsprüfung je Projekt ersetzt das nicht |
+| Tools und Bibliotheken | bevor eine Bibliothek neu in ein Projekt aufgenommen wird, nach [[60-Operations/Dependencies and Environments]] | Lizenz, Wartungszustand, Integrationsweise |
+| Google Maps/Places | sobald eine Website Karte, Ortsdaten oder ein Unternehmensprofil einbindet | EWR-Bedingungen, erlaubte Speicherung, Attribution, Maps URLs, Embed/API und Datenschutz |
+| UI UX Pro Max und pen.dev | vor dem ersten Einsatz in einem neuen Projekt und nach jedem Update des Skills | Version/Lizenz, CLI-Verfügbarkeit, Authentifizierung, Projektpfade, Codex-Konfiguration, Skill-Workflow und offizielle Dokumentation |
+| installierte Design- und Motion-Skills | nach einem Skill-Update und immer dann, wenn ein Skill-Vorschlag einer kanonischen Regel widerspricht, siehe [[00-Start/04 Plugins and Skills#Vorrang der Brain-Regeln vor Skill-Vorschlägen]] | Version, Lizenz, lokale Einbindung, Zugriffs- und Datenverhalten |
+| Inspirationskatalog | wenn eine Referenz für ein Projekt tatsächlich herangezogen wird; [[90-References/Reference Research Workflow]] verlangt die erneute Prüfung ohnehin vor jeder Übernahme | Erreichbarkeit, neue Fassung, fortbestehende Relevanz |
 
 ## Eingeschränkt geprüfte Referenzen
 

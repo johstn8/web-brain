@@ -9,6 +9,22 @@ updated: 2026-08-16
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
 
+## 2026-08-16 — Prüfliste an Auslöser gebunden statt an Kalenderdaten
+
+Auslöser war die Feststellung des Nutzers, dass die neun Zeilen der Review Queue Fälligkeitsdaten trugen, aber nirgends ein Mechanismus existierte, der sie auslöst. Weder Cronjob noch Hook noch geplante Routine waren vorhanden. Die Liste war eine Absichtserklärung, deren Termine mit der Zeit alle in die Vergangenheit gerutscht wären.
+
+**Diagnose:** Eine Wartungsliste ohne Auslöser wird nicht abgearbeitet und entwertet mit jedem verstrichenen Datum auch die Zeilen, die wirklich zählen.
+
+**Kanonisch neu**
+
+- [[98-Maintenance/Review Queue]] trennt jetzt zwischen automatisch und anlassgebunden geprüften Quellen. Ein Datum allein gilt ausdrücklich nicht mehr als Auslöser.
+- Sicherheits-, Auth- und Billing-Quellen laufen über eine geplante Cloud-Routine, viermal im Jahr, mit Ergebnis direkt nach `main`. Ohne Befund aktualisiert sie nur Datum und Status, damit der Lauf sichtbar ist.
+- Die übrigen sieben Prüfungen hängen an einem Arbeitsschritt, der ohnehin stattfindet, etwa dem Setzen eines Grenzwerts, der Aufnahme einer Bibliothek oder dem Einbinden einer Karte. Registriert in [[98-Maintenance/Coverage and Impact Map#Zeitabhängige Quelle wird verwendet]].
+
+**Offen:** Die Routine ist inhaltlich fertig, aber noch nicht angelegt. Das Claude-Konto ist nicht mit GitHub verknüpft, deshalb lehnt die API eine Routine mit privatem Repository ab. Bis zur Verknüpfung findet die Prüfung der beiden Zeilen nicht statt; das ist in der Review Queue so vermerkt.
+
+**Nicht geändert**, ausdrücklich auf Entscheidung des Nutzers vom 2026-08-16: `prefers-reduced-transparency` und `prefers-contrast` bleiben ungeregelt, die Lizenzfrage bei UI UX Pro Max wird nicht vorgezogen, die eingeschränkt geprüften Referenzen werden nicht nachgearbeitet, die drei neuen Motion-Skills werden nicht in eine Kalenderzeile aufgenommen. Sie stehen stattdessen anlassgebunden in der neuen Tabelle.
+
 ## 2026-08-16 — Drei Motion-Skills installiert, Apple-Referenz aufgenommen
 
 Auslöser war die Durchsicht des Skillsets [emilkowalski/skills](https://github.com/emilkowalski/skills) auf Wunsch des Nutzers. Von zehn Skills wurden drei installiert, einer als Referenznotiz übernommen und die übrigen begründet abgelehnt.
