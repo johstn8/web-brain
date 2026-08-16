@@ -56,6 +56,8 @@ Change-Log-Eintrag und zugehörige Notizänderung gehören in denselben Commit.
 - Die Anzahl der zu bauenden Websites steht ausschließlich im Auftrag des Nutzers. Keine Angabe bedeutet genau eine Website. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]].
 - Website-Titel kurz und ohne `|`. Immer Favicon-Set festlegen.
 - In Website-Copy keine Em-Dashes. Keine unbegründeten Blau-Lila-Verläufe, Sparkles, Emojis als UI oder generischen Testimonials.
+- Website-Copy kommentiert nie sich selbst: keine Meta-Sätze, keine sichtbaren „Stand“-Daten, keine Negativabgrenzung, keine Selbstverständlichkeiten, kein verbloses Statement unter einer Überschrift, keine erfundene Dreierfigur, kein Semikolon und kein Gedankenstrich als Einschub. Kanonisch in [[10-Strategy/Website Copy]].
+- Mehrere Websites im selben Auftrag unterscheiden sich in mindestens vier Merkmalen der Unterscheidungsmatrix. Kanonisch in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
 - Kein Kicker über einer Überschrift, weder als Pille noch als Versalzeile noch als Marker. Kanonisch in [[20-Design/Anti AI Slop]].
 - Kopfzeile mit höchstens sechs Navigationspunkten; nichts in der Kopfzeile bricht um, ausgenommen Logos. Kanonisch in [[30-Frontend/Components and UI States]].
 - Beige, Creme und Sand sind als dominante Grundfläche ausgeschlossen. Kanonisch in [[20-Design/Color System]].

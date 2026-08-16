@@ -50,6 +50,8 @@ Verbindlich:
 - mobile-first, WCAG 2.2 AA, Reduced Motion und alle UI-Zustände
 - kurzes Seitentitel-System ohne Pipe, vollständiges Favicon- und Social-Metadata-Set
 - keine Em-Dashes in Website-Copy, keine Sparkles, Emoji-Icons oder unbegründeten Blau-Lila-Gradienten
+- Copy nach [[10-Strategy/Website Copy]]: keine Meta-Sätze über die Seite, keine sichtbaren „Stand“-Daten, keine Negativabgrenzung, keine Selbstverständlichkeiten, kein verbloses Statement unter einer Überschrift, keine erfundene Dreierfigur, kein Semikolon und kein Gedankenstrich als Einschub, dafür ganze Sätze an den tragenden Stellen
+- bei mehreren Websites die Unterscheidungsmatrix nach [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] vor dem ersten UI-Code ausfüllen und in mindestens vier Merkmalen umsetzen
 - serverseitige AuthZ/Validierung, sichere Sessions, Rate- und Kostenlimits
 - Sitemap, Dateninventar, prüfpflichtige Rechtstexte, Dependencies, Tests und Betrieb atomar aktuell halten
 - Abweichungen und Trade-offs im Decision Log dokumentieren

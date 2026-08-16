@@ -1,13 +1,33 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-09
+updated: 2026-08-16
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
+
+## 2026-08-16 — Website Copy als kanonische Notiz und Stilabstand bei mehreren Websites
+
+Auslöser war die Durchsicht der beiden Websites aus `Old-Projects/Fahrschule-Kladow_v4` durch den Nutzer. Beide Websites wurden ausdrücklich als gut bewertet. Die Kritik betraf die Texte und den Abstand zwischen den Fassungen, nicht Gestaltung oder Umfang.
+
+**Diagnose:** Das Brain regelte Textmenge, Tonalität und Beweisführung, aber nicht die Formulierung selbst. Damit entstanden wiederkehrende Muster, die eine Seite generiert wirken lassen, obwohl jede Einzelregel eingehalten war: Meta-Sätze über die eigene Seite wie „Gerechnet mit unseren echten Preisen. Stand 8. August 2026.", Negativabgrenzungen wie „Keine Bewertungsdurchschnitte, keine Bestehensquoten.", Selbstverständlichkeiten wie „Jede Seite nennt Voraussetzungen, Umfang und Prüfung.", verblose Statementzeilen unter Überschriften und die durchgehende Dreiergliederung.
+
+**Kanonisch neu**
+
+- [[10-Strategy/Website Copy]] als Besitzer für Formulierung, Satzform, Interpunktion und Textmuster. Enthält Streichregeln, die erwünschten Muster einschließlich Hakenliste, eine Umformungstabelle aus der Durchsicht und Prüffragen vor der Abnahme.
+- [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] mit einer Unterscheidungsmatrix aus acht Merkmalen, von denen sich mindestens vier klar unterscheiden müssen. Vorlage dafür in [[80-Templates/Project Master Spec]].
+- [[00-Start/04 Plugins and Skills#Vorrang der Brain-Regeln vor Skill-Vorschlägen]] mit den bekannten Konfliktstellen, weil die eingesetzten Skills genau die verbotenen Copy-Muster vorschlagen.
+- [[90-References/Inspiration Catalog]] führt StepSafer als vom Nutzer benannten Copy-Benchmark, belegt am 16. August 2026.
+
+**Geändert**
+
+- Textbudget in [[10-Strategy/Information Density and Mobile Clarity#Textbudget]]: Der erklärende Text unter einer Überschrift darf jetzt ein bis drei ganze Sätze umfassen, ein Fragment ist keine zulässige Fassung. Aufzählungen beginnen bei zwei Punkten, damit die Dreierfigur nicht mehr die kleinste erlaubte Antwort ist. Die frühere Fassung mit genau einem Satz und mindestens drei Punkten hat die kritisierten Muster begünstigt.
+- [[70-QA/Quality Gates]] `G1` prüft die Copy-Regeln und die Unterscheidungsmatrix getrennt.
+
+**Abgrenzung:** Die Beispiele stammen aus einem abgeschlossenen Projekt und lösen dort keine Nacharbeit aus. Sie stehen im Brain als Muster für kommende Builds.
 
 ## 2026-08-09 — Preview Access Gate und Ablage für Vorschauprojekte
 

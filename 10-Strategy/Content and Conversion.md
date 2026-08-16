@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-05
+updated: 2026-08-16
 ---
 
 # Content and Conversion
@@ -33,6 +33,7 @@ Keine erfundenen Namen, Avatare, Marken, Zertifizierungen, Nutzerzahlen oder Liv
 
 ## Copy-Regeln
 
+- Formulierung, Satzform, Interpunktion und verbotene Textmuster sind kanonisch in [[10-Strategy/Website Copy]] geregelt. Diese Notiz bleibt zuständig für Kernbotschaft, Beweisführung und Benennung der Aktionen.
 - Menge, Textbudget und mobile Dosierung sind kanonisch in [[10-Strategy/Information Density and Mobile Clarity]] geregelt und gelten für jede Copy-Entscheidung.
 - Konkrete Verben und kurze Sätze; ein Gedanke pro Absatz.
 - Fachbegriffe nur für die Zielgruppe und beim ersten Auftreten erklären.

@@ -88,6 +88,22 @@ Genau so viele Zeilen wie im Auftrag verlangte Websites. Bei einer Website liegt
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
+### Unterscheidungsmatrix
+
+Pflicht bei mehr als einer Website, auszufüllen vor dem ersten UI-Code. Mindestens vier Merkmale unterscheiden sich klar, siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
+
+| Website | Grundhelligkeit und Farbwelt | Schriftpaar | Auftaktkomposition | Rasterlogik | Leitbewegung | Sektionsreihenfolge | interaktives Kernmodul | Tonfall der Copy |
+|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | |
+
+### Copy-Entscheidung
+
+Nach [[10-Strategy/Website Copy]] festhalten:
+
+- Anrede und Tonfall je Website:
+- Stellen mit zusammenhängenden ganzen Sätzen je Route:
+- geprüfte Verbotsliste durchlaufen am (Datum):
+
 ## 5 Engineering Contract
 
 - Stack und Begründung:

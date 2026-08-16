@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -34,6 +34,10 @@ impacts:
 - Hover-Lift, Zeigerwechsel oder Schatten auf einer Fläche, die nichts auslöst
 - Cursor-Glows, Bounce oder Scroll-Jacking
 - generische KI-/SaaS-Copy, Fake-Testimonials, erfundene Logos und Metriken
+- verbloses Kurzstatement direkt unter einer Überschrift, etwa `Online in wenigen Minuten`, sowie Ketten freistehender Behauptungen ohne Verb. Kanonisch in [[10-Strategy/Website Copy#Die Statementzeile unter der Überschrift]]
+- Meta-Sätze über die eigene Seite, Quellenversicherungen wie `Gerechnet mit unseren echten Preisen`, sichtbare Pflegedaten wie `Stand 8. August 2026` und Negativabgrenzungen wie `Keine Bewertungsdurchschnitte, keine Bestehensquoten`. Kanonisch in [[10-Strategy/Website Copy#Was gestrichen wird]]
+- die erfundene Dreierfigur, also Aufzählungen und Satzreihen aus genau drei Aspekten ohne sachlichen Grund. Kanonisch in [[10-Strategy/Website Copy#Die Dreierfigur]]
+- Semikolon, Gedankenstrich als Einschub und Doppelpunkt als Spannungszeichen in Website-Copy. Kanonisch in [[10-Strategy/Website Copy#Interpunktion]]
 - Pricing, FAQ, Logo-Marquee oder Bento-Grid nur weil Landingpages sie oft besitzen
 - Hero nach dem Schema Badge, Überschrift, Unterzeile, zwei Buttons
 - jede Sektion in derselben Anordnung aus Titel, Lead und Raster
@@ -64,6 +68,9 @@ Der Kicker über der Überschrift ist das deutlichste Erkennungszeichen generier
 - Gibt es mehr visuelle Effekte als belastbare Beweise?
 - Wiederholt sich dieselbe Kartenform ohne Informationsgrund?
 - Beginnt jede Sektion mit derselben Anordnung?
+- Steht ein Satz über die Seite selbst statt über den Betrieb, sein Angebot oder den nächsten Schritt?
+- Wie oft wiederholt sich auf der Website eine Dreiergliederung, und ist jede davon sachlich begründet?
+- Gibt es auf jeder primären Route mindestens eine Stelle mit zusammenhängenden ganzen Sätzen statt nur Fragmenten?
 - Sind Mobile, Loading, Error und Focus sichtbar weniger ausgereift als der Hero?
 - Soll die Seite älter wirken, als sie ist?
 - Sieht die Bildersammlung aus wie eine Sammlung statt wie eine Serie?
@@ -82,8 +89,9 @@ Verbindlich für **jede** gebaute Website, unabhängig davon, wie viele Websites
 1. Website vollständig bauen und lokal starten.
 2. Impeccable nach [[00-Start/04 Plugins and Skills]] im Review-Modus auf die reale, laufende Website anwenden, nicht auf Entwürfe oder Beschreibungen.
 3. Gezielt nach Details suchen, die nach KI-Generat aussehen: Kicker über Überschriften, immer gleiche Sektionsanordnung, austauschbare Copy, dekorative Karten, Standardfarben ohne Markenbezug, Verläufe ohne Grund, gleichförmige Hover-Effekte, erfundene Belege, Füllsätze, Symmetrie ohne Absicht, generische Icons.
-4. Jeden Befund entweder korrigieren oder mit inhaltlicher Begründung im Decision Log festhalten. „Gefällt mir so“ ist keine Begründung.
-5. Ergebnis mit Datum, geprüfter Website, Befundliste und Umsetzungsstand im Projekt dokumentieren. Ohne diesen Nachweis ist Gate `G1` in [[70-QA/Quality Gates]] nicht erfüllt.
+4. Die Prüffragen aus [[10-Strategy/Website Copy#Prüffragen vor der Abnahme]] auf jeden sichtbaren Text der Website anwenden, einschließlich Karten, Formularhilfen und Fußzeile.
+5. Jeden Befund entweder korrigieren oder mit inhaltlicher Begründung im Decision Log festhalten. „Gefällt mir so“ ist keine Begründung.
+6. Ergebnis mit Datum, geprüfter Website, Befundliste und Umsetzungsstand im Projekt dokumentieren. Ohne diesen Nachweis ist Gate `G1` in [[70-QA/Quality Gates]] nicht erfüllt.
 
 Bei mehreren Websites wird der Review je Website getrennt geführt. Ein gemeinsamer Sammelbefund genügt nicht, weil die Websites unterschiedliche Art Directions haben.
 

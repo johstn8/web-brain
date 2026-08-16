@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-05
+updated: 2026-08-16
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
   - "[[90-References/Reference Research Workflow]]"
@@ -49,7 +49,7 @@ Details zu Struktur, Portvergabe und Startskripten in [[60-Operations/Delivery a
 
 ### Was unabhängig von der Anzahl gilt
 
-Jede gebaute Website ist ein fertiges Ergebnis, kein Entwurf und keine Auswahlvariante. Fakten, Funktionen, Datenflüsse, Unterseiten, Accessibility, Sicherheit und SEO sind in allen gebauten Websites identisch. Werden mehrere Websites verlangt, unterscheiden sie sich sichtbar in Art Direction, Komposition und Motion, niemals im Umfang.
+Jede gebaute Website ist ein fertiges Ergebnis, kein Entwurf und keine Auswahlvariante. Fakten, Funktionen, Datenflüsse, Unterseiten, Accessibility, Sicherheit und SEO sind in allen gebauten Websites identisch. Werden mehrere Websites verlangt, unterscheiden sie sich sichtbar in Art Direction, Komposition und Motion, niemals im Umfang. Der geforderte Abstand ist als Unterscheidungsmatrix kanonisch in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] geregelt und wird vor dem ersten UI-Code in `PROJECT.md` festgehalten.
 
 ## Verbindliche Reihenfolge
 

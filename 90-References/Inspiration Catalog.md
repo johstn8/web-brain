@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 review_by: 2027-02-04
 ---
 
@@ -32,7 +32,7 @@ MotionSites veröffentlicht detaillierte Prompts für Landingpages und Hero-Sekt
 ## Vom Nutzer bewertete Benchmarks
 
 > [!important] Vorrang
-> Diese Referenzen hat der Nutzer ausdrücklich als gut oder als perfekte Messlatte benannt: vier am 6. August 2026, sieben weitere am 8. August 2026. Sie haben bei visuellen Entscheidungen Vorrang vor allen übrigen Einträgen dieses Katalogs. Die daraus abgeleiteten Regeln stehen kanonisch in [[20-Design/Interface Benchmarks]].
+> Diese Referenzen hat der Nutzer ausdrücklich als gut oder als perfekte Messlatte benannt: vier am 6. August 2026, sieben weitere am 8. August 2026, StepSafer am 16. August 2026. Sie haben bei visuellen Entscheidungen Vorrang vor allen übrigen Einträgen dieses Katalogs. Die daraus abgeleiteten Regeln stehen kanonisch in [[20-Design/Interface Benchmarks]].
 
 ### Data Console Dashboard — analysiert, Bildvorlage
 
@@ -81,6 +81,14 @@ Der Nutzer hat am 8. August 2026 sieben live erreichbare Websites als gut in Des
 - Die Verlaufsflächen als Ersatz für fehlende Vorschaubilder bei ClaudeFolio. Ein Platzhalter bleibt ein Befund nach [[20-Design/Imagery and AI Editing]], kein Gestaltungsmittel.
 - Alles Rechtliche, alle Kennzahlen, Kundenlisten und Referenzangaben dieser sieben Seiten. Der Nutzer hat sie ausdrücklich vom Benchmarkstatus ausgenommen.
 - Die Kartenraster als Standardantwort für jede Sektion. Das Verbot aus [[20-Design/Anti AI Slop]] bleibt unberührt; das Set liefert die Detailqualität der Kästen, nicht die Erlaubnis, alles in Kästen zu legen.
+
+### StepSafer — analysiert am 16. August 2026, Copy-Benchmark
+
+Vom Nutzer am 16. August 2026 als sehr gut benannt. Eine deutschsprachige Produktseite für eine Sprachassistenz in der Pflegedokumentation. Für dieses Brain ist sie vor allem ein **Text**-Benchmark, nicht in erster Linie ein visueller.
+
+Belegt und übertragbar ist die Copy-Führung. Die Überschriften sind vollständige Aussagen mit Verb, etwa „Mehr Pflege. Weniger alles andere." oder „Wenn Pflege zur Verwaltung wird, verliert jeder.". Unter jeder Überschrift steht ein erklärender Fließtext von zwei bis vier Sätzen, nicht ein Kurzetikett. Die Satzlängen wechseln bewusst, ein sehr kurzer Satz wie „Ein Satz reicht." steht neben einem beschreibenden Satz aus dem Arbeitsalltag der Zielgruppe. Die Seite beschreibt das Problem in der Sprache der Nutzer, statt Eigenschaften zu behaupten, und sie kommentiert an keiner Stelle ihre eigene Machart. Die Aktionen sind über die ganze Seite hinweg gleich benannt.
+
+Diese Eigenschaften sind in [[10-Strategy/Website Copy]] kanonisch verarbeitet. Nicht übertragbar sind die dortigen Zahlenangaben und Nutzenaussagen; für sie liegt kein Beleg vor, und die Beweisregeln aus [[10-Strategy/Content and Conversion#Beweis-Hierarchie]] gelten unverändert.[^stepsafer]
 
 ## Generierte und experimentelle Websites
 
@@ -296,6 +304,7 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 [^bm5claudefolio]: https://claudefolio.com/
 [^bm5saad]: https://saadsalman.org/
 [^bm5stockham]: https://www.tstockham.com/
+[^stepsafer]: https://www.stepsafer.de/
 
 [^compute]: https://v0-compute-11.vercel.app/
 [^dataflow]: https://v0-playful-engineering-landing-page.vercel.app/

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-09
+updated: 2026-08-16
 ---
 
 # Coverage and Impact Map
@@ -27,6 +27,8 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Relaunch und Quellenwiederherstellung | [[10-Strategy/Existing Website Rebuild|Existing Website Rebuild]] | Project Workflow, Content, Legal, Privacy, Assets, Source and Rights Review, Master Spec, QA |
 | Sitemap | [[10-Strategy/Information Architecture and Sitemap|Information Architecture and Sitemap]] | Master Spec, SEO, Accessibility, Tests |
 | Inhalte und Conversion | [[10-Strategy/Content and Conversion|Content and Conversion]] | Design Direction, SEO, Legal |
+| Formulierung, Satzform und Textmuster der Copy | [[10-Strategy/Website Copy|Website Copy]] | Content and Conversion, Information Density, Anti AI Slop, Design Direction, Components and UI States, Quality Gates |
+| Stilabstand zwischen mehreren Websites | [[20-Design/Design Direction#Stilabstand bei mehreren Websites|Design Direction]] | Web Product Workflow, Master Spec, Interface Benchmarks, Motion and Interaction, Quality Gates |
 | bewertete Benchmarks und Leitbenchmark | [[20-Design/Interface Benchmarks|Interface Benchmarks]] | Inspiration Catalog, Design Direction, Color System, Typography, Components, Derived Design Patterns, Quality Gates |
 | Bilder, Bildbearbeitung und KI-Platzhalter | [[20-Design/Imagery and AI Editing|Imagery and AI Editing]] | Design Direction, Asset Register, Source and Rights Review, Performance, Accessibility, Quality Gates |
 | Informationsmenge, Textbudget, mobile Dosierung | [[10-Strategy/Information Density and Mobile Clarity|Information Density and Mobile Clarity]] | Content and Conversion, Information Architecture, Design Direction, Responsive Design, Quality Gates |

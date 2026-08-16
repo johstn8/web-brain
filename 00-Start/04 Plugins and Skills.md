@@ -98,6 +98,16 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 - **Nach der Implementierung ist der KI-Detail-Review mit Impeccable Pflicht**, je gebauter Website getrennt. Ablauf, Prüfliste und Nachweispflicht stehen in [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]]. Ohne diesen Nachweis ist Gate `G1` nicht erfüllt.
 - Bei jeder neuen Website und jeder geänderten Motion Emil Design Engineering vor der Implementierung anwenden. Das Motion Inventory dokumentiert die hohe Route-zu-Route-Choreografie, Bewegungszweck, Häufigkeit, Timing/Scroll-Range, Easing, Unterbrechbarkeit und Reduced-Motion-Fallback.
 
+## Vorrang der Brain-Regeln vor Skill-Vorschlägen
+
+Skills liefern Vorschläge, keine Freigaben. Widerspricht ein Skill-Vorschlag einer kanonischen Notiz, gilt die Notiz, und der Konflikt wird im Decision Log des Projekts vermerkt, statt ihn stillschweigend zugunsten des Skills zu entscheiden.
+
+Bekannte, wiederkehrende Konfliktstellen:
+
+- Copy-Vorschläge mit Kurzstatements unter Überschriften, Dreierrastern aus Vorteilen oder Vertrauenszeilen mit Datums- und Quellenangabe. Es gilt [[10-Strategy/Website Copy]].
+- Sektionsvorschläge mit Eyebrow- oder Kickerzeile. Es gilt [[20-Design/Anti AI Slop#Kicker und Überschriften]].
+- Vorschläge, mehrere Varianten als Auswahlkandidaten zu behandeln. Es gilt [[00-Start/05 Web Product Workflow#Anzahl der Websites]] zusammen mit [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
+
 ## Vorgemerkt
 
 - kickbacks.ai - genauer Zweck, Version und Quelle eintragen

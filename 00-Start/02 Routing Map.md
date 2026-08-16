@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-09
+updated: 2026-08-16
 ---
 
 # Routing Map
@@ -18,7 +18,9 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Landing Page gestalten | [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]] | Auftaktkomposition, Leitbild, interaktives Kernmodul, Überschriftenanordnung, Logo-Platzierung, Negativreferenzen |
 | Dashboard, Datenansicht oder Verwaltungsoberfläche | [[20-Design/Interface Benchmarks]], [[30-Frontend/Components and UI States]], [[20-Design/Color System]] | Benchmark B1 und B4 angewendet, Kennzahlen mit Bezugsgröße, Leerzustände |
 | Bilder beschaffen oder überarbeiten | [[20-Design/Imagery and AI Editing]], [[80-Templates/Asset Register]] | Bildinventar mit Rolle, Bearbeitungsschritten und `ai-placeholder`-Liste |
-| Texte und Informationsmenge festlegen | [[10-Strategy/Information Density and Mobile Clarity]], [[10-Strategy/Content and Conversion]] | Sektions- und Textbudget je Route, Prüffragen durchlaufen |
+| Texte und Informationsmenge festlegen | [[10-Strategy/Information Density and Mobile Clarity]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Website Copy]] | Sektions- und Textbudget je Route, Copy-Prüffragen durchlaufen |
+| Copy schreiben oder überarbeiten | [[10-Strategy/Website Copy]], [[20-Design/Anti AI Slop]] | Text ohne Meta-Sätze, Statementzeilen und unbegründete Dreierfiguren, mit ganzen Sätzen an den tragenden Stellen |
+| Mehrere Websites im selben Auftrag | [[20-Design/Design Direction#Stilabstand bei mehreren Websites]], [[00-Start/05 Web Product Workflow#Anzahl der Websites]] | Unterscheidungsmatrix in `PROJECT.md` mit mindestens vier klar verschiedenen Merkmalen |
 | Schriftwahl | [[20-Design/Typography Layout and Spacing]], [[20-Design/Interface Benchmarks]] | Type Ramp und Nachweis, dass kein Retro-Verstoß vorliegt |
 | Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States]], [[10-Strategy/Information Architecture and Sitemap]] | höchstens sechs Punkte, einzeilig bei 1280, 1440 und 1920 Pixel |
 | Website fertig, vor Abnahme | [[20-Design/Anti AI Slop]], [[00-Start/04 Plugins and Skills]], [[70-QA/Quality Gates]] | Impeccable KI-Detail-Review je Website mit Befundliste |

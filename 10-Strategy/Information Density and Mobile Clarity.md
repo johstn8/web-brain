@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-16
 depends_on:
   - "[[10-Strategy/Information Architecture and Sitemap]]"
 impacts:
@@ -17,7 +17,7 @@ impacts:
 > [!important] Grundsatz
 > Eine Website ist erst gut, wenn sie ohne Anstrengung verstanden wird. Sie zeigt genug, um die Frage des Nutzers zu beantworten, und nicht mehr. Der Maßstab dafür ist immer das Mobilgerät: Dieselbe Informationsmenge wirkt auf einem schmalen Display deutlich größer als im Entwurf am Desktop.
 
-Diese Notiz ist der kanonische Besitzer für Informationsmenge, Textlänge und Verständlichkeit. Tonalität und Beweisführung bleiben bei [[10-Strategy/Content and Conversion]], die Seitenaufteilung bei [[10-Strategy/Information Architecture and Sitemap]].
+Diese Notiz ist der kanonische Besitzer für Informationsmenge, Textlänge und Verständlichkeit. Tonalität und Beweisführung bleiben bei [[10-Strategy/Content and Conversion]], Formulierung, Satzform und verbotene Textmuster bei [[10-Strategy/Website Copy]], die Seitenaufteilung bei [[10-Strategy/Information Architecture and Sitemap]].
 
 ## Eine Frage pro Abschnitt
 
@@ -40,10 +40,10 @@ Richtwerte, die im Design Contract für das jeweilige Projekt bestätigt oder be
 | Element | Budget |
 |---|---|
 | Seitentitel und Sektionsüberschrift | höchstens 8 Wörter, auf Mobil höchstens 2 Zeilen |
-| erklärender Satz unter einer Überschrift | genau ein Satz, höchstens 20 Wörter |
+| erklärender Text unter einer Überschrift | ein bis drei ganze Sätze, zusammen höchstens 45 Wörter. Ein verbloses Fragment ist keine zulässige Fassung, siehe [[10-Strategy/Website Copy#Die Statementzeile unter der Überschrift]] |
 | Fließtextabsatz | höchstens 3 Sätze, ein Gedanke |
 | Karten- oder Listeneintrag | Titel bis 4 Wörter, Beschreibung eine Zeile |
-| Aufzählung | 3 bis 6 Punkte, je höchstens eine Zeile |
+| Aufzählung | 2 bis 6 Punkte, je höchstens eine Zeile. Die Anzahl folgt der Sache; drei Punkte nur, wenn es sachlich drei sind, siehe [[10-Strategy/Website Copy#Die Dreierfigur]] |
 | Beschriftung eines Bedienelements | 1 bis 3 Wörter, Ergebnis benennend |
 | primäre Inhaltsroute gesamt | so viel Inhalt, dass ein Nutzer die Route in unter 90 Sekunden überfliegen kann |
 

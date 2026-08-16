@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -37,6 +37,8 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Bildplan nach [[20-Design/Imagery and AI Editing]] erfüllt: jedes Bild mit Rolle, geprüftem Winkel, Ausschnitt, Hintergrund und Auflösung; Serienkonsistenz belegt; Bearbeitungsschritte im Asset Register
 - [ ] alle `ai-placeholder`-Bilder gelistet, mit Prompt und Ersetzungshinweis übergeben, ohne sichtbare Kennzeichnung auf der Website; keine leere oder graue Bildstelle im Layout
 - [ ] Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]] eingehalten; Prüffragen dieser Notiz durchlaufen
+- [ ] **Copy-Prüfung nach [[10-Strategy/Website Copy]]** je gebauter Website bestanden: keine Meta-Sätze über die eigene Seite, keine sichtbaren Pflegedaten, keine Negativabgrenzung, keine Selbstverständlichkeit, kein verbloses Statement unter einer Überschrift, keine unbegründete Dreierfigur, kein Semikolon und kein Gedankenstrich als Einschub; auf jeder primären Route mindestens eine Stelle mit zusammenhängenden ganzen Sätzen
+- [ ] bei mehreren Websites: Unterscheidungsmatrix nach [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] in `PROJECT.md` ausgefüllt und in mindestens vier Merkmalen tatsächlich umgesetzt
 - [ ] mindestens ein interaktives Kernmodul je Landing Page nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]], mit realen Daten, Tastaturbedienung, Zuständen und statischer Alternative
 - [ ] UI UX Pro Max Abfrage und Auswahl dokumentiert; die Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack liegen mit Datum vor; projektspezifische Abweichungen begründet
 - [ ] Referenzrecherche im Pflichtumfang: mindestens acht erneut angesehene Referenzen, mindestens zwei benannte Negativreferenzen, bei mehreren Websites je Website eine eigene Referenzkombination

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 impacts:
   - "[[80-Templates/Project Master Spec]]"
   - "[[70-QA/Quality Gates]]"
@@ -39,7 +39,7 @@ impacts:
 - Mobile-first prüfen; Desktop darf komplexer, aber nicht funktional vollständiger sein.
 - Motion ist ein tragendes Gestaltungsmittel: Jede Website erhält eine bewusst hohe, inhaltsgeleitete Dichte aus Scroll-, Eintritts-, Übergangs- und Interaktionsbewegung nach [[20-Design/Motion and Interaction]]. `prefers-reduced-motion` respektieren.
 - Konsistenz schlägt Neuheit. Abweichungen brauchen eine dokumentierte Funktion.
-- Die Anzahl der Websites steht im Auftrag: keine Angabe bedeutet genau eine Website, eine genannte Zahl bedeutet genau diese Anzahl. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]]. Jede gebaute Website ist eigenständig und vollständig, hat Art Direction, Motion-Choreografie, vollständige Unterseiten und einen eigenen lokalen Port. Es gibt weder Auswahlkandidaten noch eine getrennte "öffentliche" oder "noch nicht freigegebene" Ausgabe.
+- Die Anzahl der Websites steht im Auftrag: keine Angabe bedeutet genau eine Website, eine genannte Zahl bedeutet genau diese Anzahl. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]]. Jede gebaute Website ist eigenständig und vollständig, hat Art Direction, Motion-Choreografie, vollständige Unterseiten und einen eigenen lokalen Port. Es gibt weder Auswahlkandidaten noch eine getrennte "öffentliche" oder "noch nicht freigegebene" Ausgabe. Mehrere Websites unterscheiden sich sichtbar im Stil und belegen das über die Unterscheidungsmatrix in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
 
 ## Engineering
 
@@ -48,6 +48,14 @@ impacts:
 - Server validiert Eingaben, Autorisierung und Geschäftsregeln. Secrets bleiben serverseitig.
 - Performancebudgets, Accessibility, Security, SEO und Monitoring gehören zur Definition of Done.
 - Eine Styling- und Komponentenstrategie pro Projekt.
+
+## Copy
+
+- Die Seite spricht mit dem Nutzer und kommentiert nie sich selbst. Keine Meta-Sätze, keine sichtbaren Pflegedaten wie „Stand …“, keine Quellenversicherungen, keine Negativabgrenzung und keine Selbstverständlichkeiten. Kanonisch in [[10-Strategy/Website Copy]].
+- Unter einer Überschrift steht entweder nichts oder ein echter Satz, nie ein verbloses Kurzstatement.
+- Die Dreierfigur wird nur verwendet, wenn es sachlich drei Dinge sind. Sonst bestimmt die Sache die Anzahl.
+- Kein Em-Dash, kein Semikolon, kein Gedankenstrich als Einschub, kein Doppelpunkt als Spannungszeichen.
+- Ganze Sätze sind erwünscht. Eine Hakenliste über reale Leistungen ergänzt sie, ersetzt sie aber nicht.
 
 ## Marke und Anti-Slop
 

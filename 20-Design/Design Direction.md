@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-16
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
@@ -30,7 +30,8 @@ Vor UI-Code festlegen:
 - Referenzen mit Rolle, übertragbarem Prinzip und konkreter Einsatz-/Adaptionsentscheidung
 - Grad an Dichte, Ausdruck, Motion und Bilddominanz
 - Entscheidung für ein reales Kernartefakt, direkt übernommenes oder kreativ adaptiertes Leitmedium samt statischer Alternative
-- die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen
+- die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen, belegt durch die Unterscheidungsmatrix aus dem Abschnitt Stilabstand bei mehreren Websites
+- Copy-Entscheidung nach [[10-Strategy/Website Copy]]: Anrede, Tonfall und die Stellen, an denen zusammenhängende ganze Sätze stehen
 - Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften
 - Platzierung des Firmenlogos nach dem Abschnitt Logo des Betriebs
 - Kopfzeilenentwurf mit höchstens sechs Navigationspunkten und ohne umbrechenden Text nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
@@ -59,6 +60,25 @@ Entscheide bewusst je Achse: ruhig oder expressiv, editorial oder produktnah, wa
 Medien sind kein nachträglicher Schmuck. Wenn Produkt, Ort, Ergebnis oder Prozess visuell belegt werden können, bildet ein bereitgestelltes, gefundenes, direkt übernommenes oder kreativ adaptiertes Bild, Video, Interface oder Artefakt die visuelle Achse. Für bewegte oder schwere Medien werden Poster, Inhaltsalternative, Ladezustand und Mobile-/Low-Power-Variante im Design Contract bestimmt. Quelle und Einsatz werden nach dem Build in [[50-Legal/Assets Copyright and Licenses]] dokumentiert. Diese Dokumentation darf nie den Einsatz, ein Ersatzmedium oder eine getrennte Website-Fassung auslösen.
 
 Verlangt der Auftrag mehrere Websites, müssen sie mehr sein als andere Farben oder Buttonformen. Jede wählt eine eigene Leitmetapher, Auftaktkomposition, Unterseiten-Dramaturgie und Bewegungsrolle. Jede wird als vollständige Website anhand derselben Inhalte, Nutzerflüsse, Accessibility-, Performance- und SEO-Kriterien umgesetzt, nicht gegeneinander zur Auswahl gestellt.
+
+## Stilabstand bei mehreren Websites
+
+Kanonische Regel für den sichtbaren Unterschied zwischen mehreren gebauten Websites desselben Auftrags. Zwei Websites, die sich beim Überfliegen für dasselbe Angebot halten lassen, verfehlen den Auftrag, auch wenn beide für sich gut sind.
+
+Vor dem ersten UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit einer Zeile je Website. Sie muss sich in **mindestens vier** dieser Merkmale klar unterscheiden:
+
+| Merkmal | Was sich unterscheiden muss |
+|---|---|
+| Grundhelligkeit und Farbwelt | helle gegen dunkle Grundfläche, andere Signalfarbe mit eigener Herleitung |
+| Schriftpaar | andere Familien, nicht nur andere Gewichte derselben Familie |
+| Auftaktkomposition | Ort und Rolle von Leitmedium, Überschrift und Aktion |
+| Rasterlogik | Spaltenzahl, Ausrichtung, Randbehandlung, Umgang mit angeschnittenen Flächen |
+| Leitbewegung | die eine Bewegung, die die Website prägt, etwa Scrollsequenz gegen ortsfeste Bühne gegen Maskenwechsel |
+| Sektionsreihenfolge und Dramaturgie | andere Reihenfolge der Nutzerfragen aus [[10-Strategy/Information Density and Mobile Clarity#Eine Frage pro Abschnitt]] bei gleichem Inhalt |
+| interaktives Kernmodul | anderes Modul oder deutlich andere Bedienlogik desselben Inhalts |
+| Tonfall der Copy | Anrede, Satzlänge und Nähe unterscheiden sich, die Fakten nicht |
+
+Der Tonfall darf sich unterscheiden, die Regeln aus [[10-Strategy/Website Copy]] gelten in jeder Fassung gleich. Fakten, Preise, Zeiten, Funktionen, Unterseiten, Accessibility, Sicherheit und SEO bleiben identisch nach [[00-Start/05 Web Product Workflow#Was unabhängig von der Anzahl gilt]]. Der Leitbenchmark darf derselbe sein, die Detailebene B5 gilt ohnehin für alle. Unterschiedlich ist, was daraus gemacht wird.
 
 ## Komposition und Überschriften
 

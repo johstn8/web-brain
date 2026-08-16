@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-16
 ---
 
 # Brain Index
@@ -19,7 +19,7 @@ updated: 2026-08-06
 
 ## Kanonische Bereiche
 
-- Strategie: [[10-Strategy/Discovery and Scope]], [[10-Strategy/Existing Website Rebuild]], [[10-Strategy/Information Architecture and Sitemap]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Information Density and Mobile Clarity]]
+- Strategie: [[10-Strategy/Discovery and Scope]], [[10-Strategy/Existing Website Rebuild]], [[10-Strategy/Information Architecture and Sitemap]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Website Copy]], [[10-Strategy/Information Density and Mobile Clarity]]
 - Design: [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[20-Design/Color System]], [[20-Design/Typography Layout and Spacing]], [[20-Design/Imagery and AI Editing]], [[20-Design/Responsive Design]], [[20-Design/Motion and Interaction]], [[20-Design/Anti AI Slop]]
 - Frontend: [[30-Frontend/Architecture and Code Consistency]], [[30-Frontend/Components and UI States]], [[30-Frontend/Accessibility]], [[30-Frontend/Performance]], [[30-Frontend/SEO and Discoverability]]
 - Backend und Sicherheit: [[40-Backend-Security/Security Baseline]], [[40-Backend-Security/Authentication and Accounts]], [[40-Backend-Security/Data APIs and Billing]]
