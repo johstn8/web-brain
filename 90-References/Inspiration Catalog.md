@@ -69,10 +69,10 @@ Der Nutzer hat am 8. August 2026 sieben live erreichbare Websites als gut in Des
 **Übertragbar und kanonisch übernommen**
 
 - Der benannte Tokensatz einschließlich `border-hover` und `accent-subtle`. Diese zwei Rollen fehlten bisher und sind der Grund, weshalb Hoverzustände im eigenen Build flach wirkten. Kanonisch in [[20-Design/Color System#Tokenvertrag]].
-- Das Kartenrezept aus Hairline im Ruhezustand und Rahmenaufhellung plus Ein- bis Zwei-Pixel-Lift beim Hover. Kanonisch in [[30-Frontend/Components and UI States#Kartenrezept]].
+- Das Kartenrezept aus Hairline im Ruhezustand und Rahmenaufhellung plus Ein- bis Zwei-Pixel-Lift beim Hover. Kanonisch in [[30-Frontend/Components and UI States#Kartenentscheidung]].
 - Die durchscheinende Kopfzeile mit Blur und deckendem Fallback. Kanonisch in [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]].
-- Die vierstufige Radiusskala und das negative Tracking großer Stufen. Kanonisch in [[20-Design/Typography Layout and Spacing#Radiusskala]].
-- Die Bewegungsrezepte mit konkreten Werten, insbesondere Reveal, Zeichenauftakt mit Blur, Maskenausblendung und Statuspunkt. Kanonisch in [[20-Design/Motion and Interaction#Standardrezepte mit Werten]].
+- Die vierstufige Radiusskala und das negative Tracking großer Stufen. Kanonisch in [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung]].
+- Die Bewegungsrezepte mit konkreten Werten, insbesondere Reveal, Zeichenauftakt mit Blur, Maskenausblendung und Statuspunkt. Kanonisch in [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]].
 
 **Ausdrücklich nicht übernommen**
 

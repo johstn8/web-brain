@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 review_by: 2027-02-05
 impacts:
   - accessibility
@@ -87,9 +87,9 @@ Vor jeder Motion-Entscheidung dokumentieren: `Häufigkeit -> Zweck -> Trigger ->
 - Dynamische UI verwendet unterbrechbare CSS-Transitions oder WAAPI. Keyframes eignen sich für vorbestimmte Abläufe. Springs sind für direkt manipulierbare Gesten mit echter Unterbrechbarkeit reserviert.
 - UI-Motion ist meist unter 300 ms: Press 100–160 ms, Tooltip/Popover 125–200 ms, Select/Dropdown 150–250 ms, Modal/Drawer 200–500 ms. Scrollgebundene Sequenzen folgen der gewählten Scroll-Range und nicht einer künstlichen Wartezeit.[^emil]
 
-## Standardrezepte mit Werten
+## Kalibrierte Bewegungsbeispiele
 
-Kanonische Basiswerte für jede gebaute Website. Sie sind aus den sieben Referenzen in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] ausgelesen und belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]]. Sie ersetzen nicht die geforderte Choreografie, sondern sind ihre Grundeinheit. Eine Website, die nur diese Rezepte verwendet, erfüllt die Bewegungsdichte aus [[#Verbindliches Motion-Niveau]] nicht.
+Diese Werte beschreiben die Bewegungsgrammatik des wählbaren B5-Stilprofils. Sie sind aus den sieben Referenzen in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] ausgelesen und in [[90-References/Inspiration Catalog#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]] belegt. Sie sind **keine** kanonischen Basiswerte für jede Website. Jeder Website-Contract setzt seinen eigenen Zeit- und Kurvensatz; die Beispiele dürfen vollständig, teilweise oder gar nicht übernommen werden.
 
 ### Zeit- und Kurvensatz
 
@@ -103,18 +103,18 @@ Kanonische Basiswerte für jede gebaute Website. Sie sind aus den sieben Referen
 | `dur-normal` | `250` bis `300 ms` | Dropdown, Tab, Accordion |
 | `dur-slow` | `400` bis `500 ms` | Reveal im Sichtbereich, Modal, Drawer |
 
-Der projektweite Standardwert für Farb-, Rahmen- und Hoverübergänge ist `150 ms` mit `ease-in-out`. Wer keinen Grund für einen anderen Wert hat, nimmt diesen.
+Für eine Website, die diese Grammatik übernimmt, kann `150 ms` mit `ease-in-out` der Standard für Farb-, Rahmen- und Hoverübergänge sein.
 
 ### Die Rezepte
 
 | Rezept | Werte | Einsatz |
 |---|---|---|
-| **Reveal** | `opacity: 0` und `translateY(12px)` gegen den Endzustand, `500 ms`, `ease-out`, Endzustand gehalten | Standard-Eintritt jedes Inhaltsblocks im Sichtbereich |
+| **Reveal** | `opacity: 0` und `translateY(12px)` gegen den Endzustand, `500 ms`, `ease-out`, Endzustand gehalten | möglicher B5-Eintritt eines Inhaltsblocks |
 | **Stagger** | `30` bis `80 ms` Versatz je Element, höchstens sechs Elemente in einer Gruppe | Listen, Kartenreihen, Kennzahlenreihen |
-| **Zeichen- oder Wortauftakt** | je Einheit `opacity: 0`, `translateY(0.4em)`, `blur(6px)` gegen null, `500` bis `700 ms`, `ease-out`, Versatz `20` bis `40 ms` | genau eine Auftaktzeile je Website. Der Text ist im Markup vollständig vorhanden und bleibt für Screenreader eine Zeile |
+| **Zeichen- oder Wortauftakt** | je Einheit `opacity: 0`, `translateY(0.4em)`, `blur(6px)` gegen null, `500` bis `700 ms`, `ease-out`, Versatz `20` bis `40 ms` | optionale B5-Auftaktzeile; der Text bleibt im Markup vollständig und für Screenreader eine Zeile |
 | **Maßstabseintritt** | `scale(.96)` und `opacity: 0` gegen den Endzustand, `200` bis `300 ms`, `ease-out` | Popover, Menü, eingeblendetes Panel; startet am auslösenden Element |
 | **Panel-Eintritt** | `scale(.9)` mit `translateY(12px)` gegen den Endzustand, `300 ms` | Modal, Drawer, überlagerndes Panel |
-| **Karten-Hover** | `translateY(-1px)` bis `-2px` plus Rahmenwechsel auf `border-hover`, `150 ms`, `ease-out`, nur bei `hover: hover` und `pointer: fine` | jede klickbare Karte |
+| **Karten-Hover** | `translateY(-1px)` bis `-2px` plus Rahmenwechsel auf `border-hover`, `150 ms`, `ease-out`, nur bei `hover: hover` und `pointer: fine` | optionale B5-Kartenvariante |
 | **Press** | `scale(0.95)` bis `0.98`, `100` bis `160 ms` | jeder pressbare Control |
 | **Accordion** | Höhe von null auf die Inhaltshöhe, `200` bis `300 ms`, `ease-in-out`, Gegenrichtung symmetrisch | FAQ, aufklappbare Abschnitte |
 | **Atmender Statusring** | `box-shadow` von `0 0 0 3px` bei 25 Prozent Deckung auf `0 0 0 6px` bei 10 Prozent und zurück, `2 s`, unendlich | ausschließlich echte Live-Zustände |
@@ -122,14 +122,14 @@ Der projektweite Standardwert für Farb-, Rahmen- und Hoverübergänge ist `150 
 | **Weiche Maskenausblendung** | `mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent 80%)` | dekorative Hintergründe, Raster, Leuchtflächen. Sie enden weich statt an einer harten Kante |
 | **Zähler** | einmal beim ersten Sichtbarwerden auf den Zielwert, `800` bis `1200 ms`, tabellarische Ziffern, Endwert steht im Markup | belegte Kennzahlen |
 
-### Bindende Nebenbedingungen
+### Handwerklich bindende Nebenbedingungen
 
 - Für die Mehrzahl der Frames nur `transform`, `opacity` und `filter`. `will-change: transform` nur auf tatsächlich dauerhaft bewegten Elementen und dort begrenzt.
-- Jedes Reveal hält seinen Endzustand. Ein Element, das nach dem Scrollen zurück wieder verschwindet, ist ein Befund.
-- Reveal-Versatz ist immer klein. Über 24 Pixel Startversatz erzeugt sichtbares Springen und ist verboten.
-- Der Zeichenauftakt darf die primäre Aktion nicht verzögern und erscheint genau einmal je Website.
+- Ein Reveal lässt den Inhalt nach dem Eintritt zugänglich und stabil. Wiederholtes Verbergen braucht einen dokumentierten Informationszweck.
+- Startversatz, Unschärfe und Dauer werden je Website so kalibriert, dass nichts sichtbar springt oder die Lesereihenfolge verzögert.
+- Ein Zeichenauftakt darf die primäre Aktion nicht verzögern und wird nur verwendet, wenn er zur gewählten Bewegungsgrammatik gehört.
 - Bei `prefers-reduced-motion: reduce` fallen Versatz, Maßstab, Unschärfe, atmender Ring, wandernde Aufhellung und Zähler weg. Reveal wird zu einem Opazitätswechsel unter `200 ms` oder zum sofortigen Endzustand. Press- und Fokusfeedback bleiben, weil sie Funktion erklären.
-- Diese Werte sind Kalibrierung. Eine begründete Abweichung gehört mit Grund in das Motion Inventory; ein abweichender Wert ohne Grund ist ein Befund im Impeccable-Review nach [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]].
+- Wird dieses B5-Beispielset übernommen, stehen Auswahl und Abweichungen im Motion Inventory. Eine andere konsistente Bewegungsgrammatik ist kein Befund.
 
 ## Medien, Eintritt und Belastung
 

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-17
 impacts:
   - accessibility-tests
   - visual-regression
@@ -30,67 +30,75 @@ Jede Komponente dokumentiert:
 
 Prüfe, soweit relevant: default, hover, focus-visible, active, selected, disabled, read-only, loading, optimistic, success, warning, error, empty, partial data, offline, permission denied, expired session.
 
-## Kartenrezept
+## Kartenentscheidung
 
-Kanonisch für jede abgegrenzte Inhaltsfläche. Werte belegt in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]]. Tokens nach [[20-Design/Color System#Tokenvertrag]], Radien nach [[20-Design/Typography Layout and Spacing#Radiusskala]].
+Vor UI-Code wird je Website entschieden, welches Komponentenrepertoire ihre Inhalte trägt. Eine Karte ist eine Möglichkeit, kein Standardcontainer.
 
-**Wann eine Karte entsteht**
+| Inhalt oder Aufgabe | mögliche Grundform |
+|---|---|
+| eigenständig verlinktes Projekt oder Angebot | Karte, Zeile, Cover, Eintrag im Index |
+| vergleichbare Werte | Tabelle, ausgerichtete Liste, Diagramm mit Textalternative |
+| kurze Leistungsgruppe | typografische Liste, Definition List, Prozessstrecke |
+| Status oder Ereignisfolge | Zeile, Timeline, Log, gruppierte Liste |
+| ein dominantes Objekt | Bühne, Viewer oder randlose Medienfläche statt Kartenraster |
 
-Eine Karte ist berechtigt, wenn ihr Inhalt eine eigenständig lesbare oder anklickbare Einheit ist: ein Projekt, ein Beitrag, ein Angebot, eine Kennzahl, ein Listeneintrag. Ein Absatz, eine Leistungsaufzählung oder ein Zitat wird nicht eingerahmt, sondern typografisch gesetzt. Das Verbot des gleichförmigen Kartenrasters aus [[20-Design/Anti AI Slop]] bleibt bindend: Das Rezept beschreibt, wie eine Karte aussieht, nicht wie viele es geben darf.
+Der Design Contract benennt für jede wichtige Inhaltsart die gewählte Grundform. Bei mehreren Websites muss das Komponentenrepertoire eine Pflichtachse der [[20-Design/Design Direction#Stilabstand bei mehreren Websites|Unterscheidungsmatrix]] sein.
 
-**Ruhezustand**
+### Option B5-Karte
 
-- Fläche `surface`, ein Pixel Rahmen in `border`, Radius `radius-card`, kein Schatten.
-- Innenabstand projektweit identisch, Richtwert `1.25rem` bis `1.5rem`. Bildflächen sitzen randlos an der Oberkante, nur oben gerundet, mit festem Seitenverhältnis.
-- Inhaltsreihenfolge: Medium oder Icon, Titel in `text`, genau eine Erklärzeile in `text-secondary`, Metazeile in `text-tertiary` im Muster `Wert · Wert`, höchstens eine Aktion.
-- Tags als Pillen in `accent-subtle` oder im Kategorieton bei niedriger Deckung, Schrift im selben Ton, Mono, Stufe Label.
+Nur wenn die Website B5 oder diese Kartenvariante bewusst wählt:
 
-**Zustände**
+- Fläche `surface`, ein Pixel `border`, dokumentierter Kartenradius, kein Schatten im Ruhezustand;
+- großzügiger, einheitlicher Innenabstand; Bildflächen dürfen randlos an der Oberkante sitzen;
+- klare Inhaltsreihenfolge aus Medium oder Icon, Titel, kurzer Erklärung, optionaler Metazeile und höchstens einer Aktion;
+- eine technische Mono-Metazeile oder `·` als Trenner nur, wenn die Schriftentscheidung der Website genau diese Rolle begründet;
+- klickbare Karten dürfen bei geeigneter Zeigereingabe Rahmen, Position und optional den einen dokumentierten Hover-Schatten ändern.
+
+### Zustände abgegrenzter Inhaltsflächen
 
 | Zustand | Verhalten |
 |---|---|
-| `hover` bei `hover: hover` und `pointer: fine` | Rahmen wechselt auf `border-hover`, Verschiebung `translateY(-1px)` bis `-2px`, optional die einzige Schattenstufe. Übergang `transition: border-color, box-shadow, transform 150ms cubic-bezier(0,0,.2,1)`. Nur auf klickbaren Karten. |
-| `focus-visible` | sichtbarer Fokusring in `focus` mit Offset. Der Ring ist unabhängig vom Hover und wird nie durch ihn ersetzt. |
-| `active` | `scale(0.98)` oder Rücknahme der Verschiebung auf null, unter 160 Millisekunden. |
-| `selected` oder `aria-current` | Rahmen `border-hover` oder `accent`, Fläche `accent-subtle`, zusätzlich ein Merkmal ohne Farbe, etwa Gewicht oder Häkchen. |
-| `loading` | Platzhalterflächen in `surface-alt` in der realen Textgeometrie, optional eine wandernde Aufhellung. Kein Spinner in der Kartenmitte. |
-| `empty` | benennt was fehlt, warum, und die eine Aktion, die es behebt. |
-| nicht klickbar | kein Hover-Lift, kein Schatten, kein Zeigerwechsel. |
+| `hover` bei `hover: hover` und `pointer: fine` | nur auf klickbaren Flächen; das Feedback folgt der gewählten Website-Grammatik |
+| `focus-visible` | sichtbarer Fokusring oder gleichwertige Kontur in `focus` mit Abstand; unabhängig vom Hover |
+| `active` | unmittelbare, unterbrechbare Rückmeldung ohne Layoutsprung |
+| `selected` oder `aria-current` | zusätzlich zur Farbe durch Gewicht, Kontur, Position oder Symbol erkennbar |
+| `loading` | Platzhalter in realer Inhaltsgeometrie; kein Spinner als Ersatz für die gesamte Fläche |
+| `empty` | benennt was fehlt, warum und die eine Aktion, die es behebt |
+| nicht klickbar | kein Hover-Lift, kein Aktionszeiger und kein interaktiver Schatten |
 
-**Verboten**
+Verboten sind dekorative Schwebezustände ohne Aktion, Cursor-Glow als generischer Ersatz für Hierarchie, Maßstabssprünge, die Nachbarlayout verschieben, und ein Kartenraster, das nur durch Einrahmen gewöhnlicher Absätze entsteht.
 
-Mehr als eine Schattenstufe, Maßstabssprünge über `1.02`, Rotation, Cursor-Glow, farbiger Rand als Dauerzustand, Verlauf als Kartenfüllung ohne Bedeutung, sowie ein Hover-Lift auf einer Fläche, die nichts auslöst.
+## Status, Tag und Chip
 
-## Statuspille, Tag und Chip
-
-- Statuspille: Radius `radius-pill`, Fläche in der semantischen `-subtle`-Tönung, sechs bis acht Pixel Punkt in der Vollfarbe, danach das Wort. Farbe ist nie das einzige Signal; das Wort steht immer da.
-- Ein **echter** Live-Zustand darf einen atmenden Ring tragen: `box-shadow` wächst von drei auf sechs Pixel bei sehr niedriger Deckung und zurück, Dauer zwei Sekunden, unendlich. Ein statischer Zustand bekommt diesen Ring nicht. Werte in [[20-Design/Motion and Interaction#Standardrezepte mit Werten]].
-- Tags und Kategorien tragen eine feste Ton-Zuordnung über alle Ansichten hinweg, in Mono, Stufe Label, mit Beschriftung. Der Ton färbt nie eine Sektionsfläche.
-- Zähler und Werte in tabellarischen Ziffern. Ein Zähler ohne Bezugsgröße ist nach [[20-Design/Interface Benchmarks#B4 Data Product Depth]] keine Aussage.
+- Status enthält immer ein Wort oder anderes nicht-farbiges Merkmal. Punkt, Pille, Zeile oder Inline-Text sind Stilentscheidungen je Website.
+- Ein **echter** Live-Zustand darf eine zurückhaltende, dokumentierte Bewegung tragen; ein statischer Zustand nie.
+- Tags und Kategorien besitzen eine feste Ton-Zuordnung über alle Ansichten. Sie werden nicht automatisch als Pille oder in Mono gesetzt.
+- Zähler und vergleichbare Werte nutzen tabellarische Ziffern. Eine Zahl ohne Bezugsgröße ist nach [[20-Design/Interface Benchmarks#B4 Data Product Depth]] keine Aussage.
 
 ## Kopfzeile und Hauptnavigation
 
-Kanonische Regel für die Kopfzeile jeder Website. Sie gilt für alle Breakpoints, in denen die Navigation ausgeschrieben sichtbar ist.
+Kanonische Funktions- und Geometrieregel für die Kopfzeile jeder Website. Inventar und Anordnung sind Teil der Art Direction und bei mehreren Websites eine Pflichtachse der Unterscheidungsmatrix.
 
-- **Höchstens sechs Navigationselemente** in der sichtbaren Hauptnavigation. Logo, Handlungsknopf, Telefonnummer, Sprach- oder Themenumschalter zählen nicht zu diesen sechs, dürfen aber die Zeile nicht sprengen.
-- **Nichts in der Kopfzeile ist zweizeilig.** Kein Navigationslink, kein Knopf, kein Label bricht um. Einzige Ausnahme ist eine Wortmarke oder ein Logo, das gestalterisch bewusst zweizeilig gesetzt ist.
-- Die Kopfzeile wird bei **1280, 1440 und 1920 Pixel** sowie mit der längsten realen Beschriftung geprüft. Wer das nicht ohne Umbruch schafft, kürzt die Beschriftungen oder reduziert die Zahl der Punkte, statt Abstände immer weiter zu verkleinern.
-- Reichen sechs Punkte nicht aus, wird die Informationsarchitektur nach [[10-Strategy/Information Architecture and Sitemap]] verdichtet: verwandte Seiten unter einem Oberbegriff bündeln, seltene Ziele in den Fußbereich, Rechtsseiten immer in den Fußbereich.
-- Kurzformen sind erlaubt, wenn sie eindeutig bleiben und der vollständige Seitenname in Schublade, Fußbereich und Brotkrumen erscheint.
-- Auf schmalen Flächen ersetzt eine Schublade die Zeile. Sie hält den Fokus, schließt mit Escape, gibt den Fokus an den Auslöser zurück und sperrt den Hintergrundscroll.
-- Der aktive Punkt ist ohne Farbe allein erkennbar, etwa über Unterstrich, Gewicht oder Position, und trägt `aria-current="page"`.
-- Die Kopfzeile hat einen definierten Zustand über jedem Untergrund. Eine durchscheinende Leiste über wechselndem Medium braucht eine geprüfte Kontrastlösung, sonst wird sie deckend.
+- Vor UI-Code dokumentieren: sichtbare Elemente, Reihenfolge, Gruppierung, Positionierungsmodell, Höhe, Verhalten über den vorkommenden Untergründen, Mobile-Übergang und Navigationsbeschriftungen.
+- **Höchstens sechs Navigationselemente** in der sichtbaren Hauptnavigation. Weitere Bedienelemente dürfen die Zeile nicht sprengen.
+- **Nichts in der Kopfzeile ist zweizeilig.** Einzige Ausnahme ist eine bewusst mehrzeilige Wortmarke oder ein Logo.
+- Die Kopfzeile wird bei **1280, 1440 und 1920 Pixel** sowie mit der längsten realen Beschriftung geprüft. Bei Platzmangel werden Inventar, Begriffe oder Informationsarchitektur überarbeitet.
+- Kein Element darf höher sein als die nutzbare Innenhöhe der Kopfzeile. Oben und unten bleibt je mindestens `4px` echte Luft; eine projektbezogen größere Mindestluft steht im Design Contract.
+- Ist ein Kindmaß über die Breite definiert, während die Kopfzeile über die Höhe begrenzt wird, muss das gerenderte Seitenverhältnis an jedem Prüfbreakpoint gemessen werden. Das gilt besonders für Wortmarken, Logos und quadratische Controls.
+- Auf schmalen Flächen ersetzt eine zur jeweiligen Website passende Schublade, ein Sheet oder eine andere dokumentierte Lösung die Desktopanordnung. Fokusmanagement, Escape, Rückfokus und Scrollsperre bleiben Pflicht.
+- Der aktive Punkt ist ohne Farbe allein erkennbar und trägt `aria-current="page"`.
+- Jede Kopfzeile besitzt einen kontrastgeprüften Zustand über jedem Untergrund. Deckend, im Dokumentfluss, seitlich, aufgeteilt oder durchscheinend sind gleichwertige Art-Direction-Optionen.
 
-### Rezept der durchscheinenden Kopfzeile
+### Option durchscheinende Kopfzeile
 
-Alle sieben Referenzen aus [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] setzen die Kopfzeile so um. Sie ist damit der Standard, nicht die Ausnahme.
+Nur wenn diese Form bewusst gewählt wurde:
 
-- `position: sticky` am oberen Rand, Fläche `surface` bei 70 bis 80 Prozent Deckung, `backdrop-filter: blur(8px)` bis `blur(24px)`, unten ein Pixel `border`.
-- **Der Kontrast wird gegen den ungünstigsten tatsächlich darunterliegenden Inhalt gemessen**, nicht gegen die Fläche allein. Jeder Text und jedes Icon in der Leiste erreicht mindestens 4,5:1, Controls mindestens 3:1.
-- Ohne Unterstützung für `backdrop-filter` wird die Leiste deckend. Das ist der Pflicht-Fallback über `@supports`, keine Kür.
-- Über einem großen Leitmedium wird die Leiste entweder deckend oder erhält eine geprüfte Abdunkelung. Eine transparente Navigation über wechselndem Medium ohne solche Lösung ist ein Befund nach [[20-Design/Anti AI Slop]].
-- Der Wechsel von transparent nach deckend beim Scrollen ist erlaubt, dauert 150 bis 200 Millisekunden und ändert dabei die Höhe der Leiste nicht.
-- Auf schmalen Flächen sperrt die Schublade den Hintergrundscroll, hält den Fokus und schließt mit Escape. Sie ist deckend, nicht durchscheinend.
+- `position: sticky` oder eine begründete Alternative, teiltransparente Fläche, dokumentierter Blur und die in der Website gewählte Rahmenbehandlung;
+- Kontrast gegen den ungünstigsten **tatsächlich darunterliegenden** Inhalt messen, nicht gegen eine angenommene Tokenfläche;
+- deckender `@supports`-Fallback ohne `backdrop-filter`;
+- über wechselndem Leitmedium deckend werden oder eine geprüfte Abdunkelung erhalten;
+- Zustandswechsel dürfen die Höhe nicht ändern;
+- die Mobile-Navigation ist deckend.
 
 ## Interaktionsregeln
 

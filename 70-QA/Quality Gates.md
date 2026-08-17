@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -18,7 +18,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Sitemap, Seitenverträge und primäre Nutzerflüsse aktuell; jede gebaute Website enthält eine verlinkte Startseite und die vollständigen erforderlichen Unterseiten. One-Page/Anker allein ist nicht zulässig.
 - [ ] echte Inhalte oder klar markierte Drafts, keine Produktions-Platzhalter
 - [ ] Inspirationsmatrix mit Auswahl oder begründeter Ablehnung; statische und interaktive Evidenz getrennt
-- [ ] die beauftragte Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/`, bei mehreren mit klaren UI-, Unterseiten- und Motion-Unterschieden, gleichem Scope und eigener SEO-Auslieferung; jede startet mit allen Routen auf ihrem eigenen geprüften Port
+- [ ] die beauftragte Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/`, bei mehreren mit Unterschieden auf jeder Pflichtachse und gleichem Scope; auf `217.154.218.30` über `johannstein.com/dev` ohne Projektport erreichbar, sonst auf eigenem geprüftem lokalen Port
 - [ ] bei Relaunch: alte Website, externe Fundstellen, Maps-/Unternehmensprofil, Social Profiles und Dokumente inventarisiert; Konflikte markiert
 - [ ] gefundenes Firmenlogo in jeder gebauten Website sichtbar eingesetzt und der Einsatzort dokumentiert, oder ausdrücklich festgehalten, dass kein Logo gefunden wurde
 
@@ -26,19 +26,21 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 
 - [ ] Design Direction und Tokens für Farbe, Typo, Spacing, Grid, Radius, Shadow, Motion
 - [ ] **Tokenvertrag vollständig** nach [[20-Design/Color System#Tokenvertrag]]: jede Pflichtrolle hat einen gesetzten Wert in genau einer Tokenquelle, einschließlich `bg`, `surface`, `surface-alt`, drei Textstufen, `border`, `border-hover`, `accent`, `accent-subtle`, `accent-contrast`, `focus` und der semantischen Rollen; Light und Dark getrennt kuratiert
-- [ ] **Formsprache kalibriert**: alle Radien auf den vier Stufen aus [[20-Design/Typography Layout and Spacing#Radiusskala]], genau eine Rahmenstärke, genau eine Schattenstufe und diese nur bei Hover, Fokus oder echten Ebenen; im Ruhezustand keine Fläche mit Schatten
-- [ ] **Kartenrezept angewandt** nach [[30-Frontend/Components and UI States#Kartenrezept]]: Hover wechselt Rahmen und Position, nicht nur Farbe; kein Hover-Lift auf nicht klickbaren Flächen; alle Kartenzustände einschließlich Laden und Leerzustand gestaltet
-- [ ] **Kopfzeilenrezept angewandt** nach [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]]: Kontrast gegen den ungünstigsten darunterliegenden Inhalt gemessen, deckender `@supports`-Fallback vorhanden
-- [ ] **Bewegungswerte gesetzt** nach [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]: Zeit- und Kurvensatz als Tokens, Reveal hält seinen Endzustand, Startversatz höchstens 24 Pixel, Zeichenauftakt höchstens einmal je Website, jede Abweichung mit Grund im Motion Inventory
-- [ ] negatives Tracking nur auf den großen Typostufen; Werte, Tags und Zahlen in der Mono-Familie mit tabellarischen Ziffern
-- [ ] **UI UX Pro Max wurde für diese Website ausgeführt**, je gebauter Website getrennt und mit Datum belegt; ohne diesen Nachweis ist die Website nicht abgenommen, siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]]
+- [ ] **H0-Handwerksuntergrenze erfüllt** nach [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]]: vollständige Zustände, sichtbarer Fokus, Kontextkontrast, kein dekorativer Schatten auf ruhenden Inhaltsflächen, Hairline als bewusstes Mittel und ein konsistentes System innerhalb der Website
+- [ ] **variable Formsprache dokumentiert**: Radiusskala, Rahmenbehandlung, Flächenlogik, Tiefe, Karten-/Zeilen-/Tabellen-/Listenrepertoire, Kopf- und Fußbereich, Chrome, Zweitschrift und Motion sind je Website entschieden; B5-Muster nur bei bewusster Wahl
+- [ ] abgegrenzte Inhaltsflächen erfüllen [[30-Frontend/Components and UI States#Kartenentscheidung]]: interaktive und nicht interaktive Flächen verhalten sich unterscheidbar; Laden und Leerzustand sind gestaltet
+- [ ] Kopfzeileninventar und -anordnung sind website-spezifisch; eine durchscheinende Kopfzeile erfüllt nur bei Wahl die Fallback-Regeln aus [[30-Frontend/Components and UI States#Option durchscheinende Kopfzeile]]
+- [ ] eigener Zeit- und Kurvensatz als Tokens; die Beispiele aus [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] sind nur bei dokumentierter Übernahme Prüfmaß
+- [ ] negatives Tracking nur auf großen Typostufen; tabellarische Ziffern für vergleichbare Zahlen; Mono nur in den begründeten technischen Rollen der Website, nie automatisch für Anschriften, Fließtext, Sektionstitel, Zeiten, Tags oder Abschnittsnummern
+- [ ] **UI UX Pro Max wurde für diese Website ausgeführt** und unter `design-system/<website-slug>/MASTER.md` getrennt persistiert; keine projektweiten Global Rules ziehen Fassungen gleich
 - [ ] Leitbenchmark aus [[20-Design/Interface Benchmarks]] benannt; übernommene und ausdrücklich nicht übernommene Elemente dokumentiert
 - [ ] keine Retro-Anmutung nach [[20-Design/Typography Layout and Spacing#Retro-Verbot]]; Schriftwahl mit Herleitung dokumentiert
 - [ ] Bildplan nach [[20-Design/Imagery and AI Editing]] erfüllt: jedes Bild mit Rolle, geprüftem Winkel, Ausschnitt, Hintergrund und Auflösung; Serienkonsistenz belegt; Bearbeitungsschritte im Asset Register
 - [ ] alle `ai-placeholder`-Bilder gelistet, mit Prompt und Ersetzungshinweis übergeben, ohne sichtbare Kennzeichnung auf der Website; keine leere oder graue Bildstelle im Layout
 - [ ] Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]] eingehalten; Prüffragen dieser Notiz durchlaufen
 - [ ] **Copy-Prüfung nach [[10-Strategy/Website Copy]]** je gebauter Website bestanden: keine Meta-Sätze über die eigene Seite, keine sichtbaren Pflegedaten, keine Negativabgrenzung, keine Selbstverständlichkeit, kein verbloses Statement unter einer Überschrift, keine unbegründete Dreierfigur, kein Semikolon und kein Gedankenstrich als Einschub; auf jeder primären Route mindestens eine Stelle mit zusammenhängenden ganzen Sätzen
-- [ ] bei mehreren Websites: Unterscheidungsmatrix nach [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] in `PROJECT.md` ausgefüllt und in mindestens vier Merkmalen tatsächlich umgesetzt
+- [ ] bei mehreren Websites: Unterscheidungsmatrix vor UI-Code ausgefüllt und **jede Pflichtachse** paarweise tatsächlich verschieden; Kopf-/Fußbereich, Navigation, Chrome, Zweitschriftrollen und Komponentenrepertoire sind eingeschlossen
+- [ ] bei vorhandenen Vorgängerfassungen: Übernahmeregister ausgefüllt; Leitmotiv, Fassungsname, Signalfarbe und Kernmodul wiederholen sich nur mit dokumentierter sachlicher Begründung
 - [ ] mindestens ein interaktives Kernmodul je Landing Page nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]], mit realen Daten, Tastaturbedienung, Zuständen und statischer Alternative
 - [ ] UI UX Pro Max Abfrage und Auswahl dokumentiert; die Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack liegen mit Datum vor; projektspezifische Abweichungen begründet
 - [ ] Referenzrecherche im Pflichtumfang: mindestens acht erneut angesehene Referenzen, mindestens zwei benannte Negativreferenzen, bei mehreren Websites je Website eine eigene Referenzkombination
@@ -46,10 +48,12 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Anti-Slop-Review bestanden; keine unbegründeten Standardsektionen
 - [ ] **Impeccable KI-Detail-Review je gebauter Website** durchgeführt, mit Datum, Befundliste und Umsetzungsstand dokumentiert, siehe [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]]
 - [ ] kein Kicker über einer Überschrift auf keiner Seite
-- [ ] Kopfzeile mit höchstens sechs Navigationspunkten, bei 1280, 1440 und 1920 Pixel einzeilig, mit der längsten realen Beschriftung geprüft
+- [ ] Kopfzeile mit höchstens sechs Navigationspunkten, bei 1280, 1440 und 1920 Pixel einzeilig; jedes Element bleibt innerhalb der nutzbaren Innenhöhe und hat oben/unten mindestens `4px` Luft
+- [ ] alle width-basierten Kinder in height-basierten Containern sind über ihr gerendertes Seitenverhältnis an jedem Prüfbreakpoint vermessen; kein Logo, Wortzeichen oder Control ragt heraus
 - [ ] keine verbrauchte Farbwelt als dominante Fläche; jede Farbrolle hat eine benannte Herleitung
 - [ ] Auftaktkomposition und Überschriftenanordnung sind bewusst gewählt und im Design Contract begründet; die Landing Page folgt [[20-Design/Design Direction#Landing Page]]
-- [ ] Mobile, Tablet, Desktop, Zoom und lange Inhalte geprüft
+- [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; Screenshots oder gleichwertige Rendernachweise liegen für die vorgeschriebenen Prüfbreiten vor
+- [ ] kann in der Abnahmeumgebung keine echte Darstellung erzeugt werden, ist dies **vor der Lieferung ein Blocker**. Textanalyse, bestandene Tokenpaare oder ein nachträglicher Hinweis ersetzen den Render nicht
 - [ ] alle UI-Zustände gestaltet
 - [ ] Motion-Referenzen interaktiv geprüft; Reduced-Motion- und Medienfallback belegt
 - [ ] jede Website erfüllt das hohe Motion-Niveau aus [[20-Design/Motion and Interaction]]: eigene Route-zu-Route-Choreografie, Motion Inventory, mindestens zwölf sichtbare Bewegungsentscheidungen und pro primärer Inhaltsroute eine Scrollsequenz plus zwei weitere differenzierte Scroll-/In-View-Bewegungen
@@ -67,7 +71,8 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 
 - [ ] WCAG 2.2 AA Ziel geprüft; automatischer Scan ohne kritische Funde
 - [ ] Tastatur, Fokus, Screenreader, Reflow 320px, Zoom 200/400 Prozent
-- [ ] Kontrast, Alt-Texte, Labels, Fehlermeldungen, Reduced Motion
+- [ ] **Kontrast im Kontext**: jede tatsächlich im Markup vorkommende Komponentenvariante wird gegen jede ihrer realen Untergrundflächen geprüft, einschließlich invertierter/dunkler Bänder, Bildüberlagerungen, Hover, Fokus, Disabled und Fehlervarianten; keine handverlesene Liste isolierter Tokenpaare
+- [ ] Alt-Texte, Labels, Fehlermeldungen und Reduced Motion
 - [ ] Accessibility-Information/Erklärung korrekt, falls erforderlich
 
 ## G4 Performance
@@ -105,7 +110,11 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 
 ## G8 Betrieb
 
-- [ ] Ein-Klick-Start für geforderte OS, Healthchecks und verständliche Logs
+- [ ] auf `217.154.218.30`: Eintrag und alle Routen über `johannstein.com/dev` geprüft, kein fester Projektport und kein neues `start-local.sh`; auf anderen Rechnern Ein-Klick-Start für geforderte OS, Healthchecks und verständliche Logs
+- [ ] bei Owner-Hosting: `tenant.json` und `_hosting` bestehen [[80-Templates/Owner Hosting Website Contract]]; unbekannte oder gesperrte JSON-Pointer werden serverseitig abgewiesen
+- [ ] bei Owner-Hosting: Contract-Plan belegt Erhalt oder explizite Migration aller vorhandenen Owner-Werte; offene Entwürfe alter Vertragsversionen sind behandelt
+- [ ] bei Owner-Hosting: Hostname löst serverseitig genau einen Mandanten auf; negative Cross-Tenant-Tests für Inhalte, Assets, Builds, Releases, Nachrichten und Integrationen bestehen
+- [ ] bei Owner-Hosting: statische öffentliche Website bleibt bei Dashboard-/API-Ausfall erreichbar; Worker baut isoliert, Buildfehler verändert weder aktive Inhaltsrevision noch Release; atomarer Publish, vollständiger Rollback und 503-Wartungsmodus nach [[60-Operations/Owner Hosting and Dashboard]] geprüft
 - [ ] Dependency-/Serverliste, `.env.example`, Deploy, Migration und Rollback
 - [ ] Monitoring, Alerts, Backups und Restore-Test
 - [ ] Subscription-Löschfluss, Datenlöschung und Supportpfad getestet

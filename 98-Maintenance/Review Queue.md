@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 next_review: 2026-11-01
 ---
 # Review Queue
@@ -42,7 +42,7 @@ Diese Quellen werden geprüft, wenn sie gebraucht werden, nicht nach Kalender. D
 
 Diese Seiten benötigen eine erneute manuelle Prüfung in einem vollständigen Browser:
 
-- Die sieben Benchmarkseiten des Sets „Modern Neutral Craft" vom 8. August 2026: Consile, CanDevsDoSomething, Phillip Ohren, EVE BCN, ClaudeFolio, Saad Salman, Thomas Stockham. Belegt sind ausschließlich Markup und CSS. **Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten sind nicht belegt** und werden vor einer Übernahme genau dieser Aspekte nach [[90-References/Reference Research Workflow]] interaktiv geprüft. Die daraus abgeleiteten Werte in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] gelten unabhängig davon, weil sie statisch belegt sind.
+- Die sieben Benchmarkseiten des Sets „Modern Neutral Craft" vom 8. August 2026: Consile, CanDevsDoSomething, Phillip Ohren, EVE BCN, ClaudeFolio, Saad Salman, Thomas Stockham. Belegt sind ausschließlich Markup und CSS. **Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten sind nicht belegt** und werden vor einer Übernahme genau dieser Aspekte nach [[90-References/Reference Research Workflow]] interaktiv geprüft. Die statisch belegten Werte bleiben als wählbares Stilprofil in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] erhalten; sie sind keine websiteübergreifende Vorgabe.
 
 - Perplexity
 - Locomotive

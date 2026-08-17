@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: user-maintained
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Plugins and Skills
@@ -38,7 +38,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 ```
 
    Ist Python 3 nicht verfügbar, nichts installieren; Blocker melden und bis zur Klärung nur die Quick Reference des Skills verwenden.
-3. Ergebnis im Projekt unter `design-system/MASTER.md` persistieren oder als datierten Nachweis verlinken. Seitenabweichungen liegen unter `design-system/pages/` und überschreiben nur explizit benannte Regeln.
+3. Das Ergebnis **je gebauter Website** unter `design-system/<website-slug>/MASTER.md` persistieren oder dort als datierten Nachweis verlinken. Bei einer einzelnen Website ist der Slug `site`, bei mehreren entspricht er `01-<richtung>`, `02-<richtung>` und so fort. Seitenabweichungen liegen innerhalb dieses Website-Ordners unter `pages/`. Es gibt keine projektweite Datei `design-system/MASTER.md` mit globalen Stilregeln, die alle Fassungen gleichzieht.
 4. **Pflicht-Detailabfragen.** Die eine `--design-system`-Abfrage genügt nicht. Vor der Umsetzung werden mindestens diese Domänen zusätzlich abgefragt und ihr Ergebnis dokumentiert:
 
    | Domäne | Wofür | Beispielaufruf |
@@ -52,7 +52,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
    | Stackdomäne | reale Umsetzung | `--stack <stack> --max-results 6` |
 
    Bei mehreren Websites im Auftrag wird `style` und `landing` je Art Direction erneut mit anderen Suchbegriffen abgefragt, damit die Richtungen nicht aus derselben Empfehlung entstehen.
-5. Ergebnisse gegeneinander lesen, nicht einzeln übernehmen. Jede übernommene Regel und jede Abweichung wird im Design Contract mit einer Begründung festgehalten. Eine Empfehlung, die dem Anti-Slop-Katalog widerspricht, wird abgelehnt und die Ablehnung dokumentiert.
+5. Ergebnisse gegeneinander lesen, nicht einzeln übernehmen. Jede übernommene Regel und jede Abweichung wird im Design Contract der betreffenden Website begründet. Bei mehreren Websites werden auch Struktur, Komponentenrepertoire, Kopf-/Fußbereich, Chrome und Zweitschrift je Website getrennt abgefragt und persistiert. Eine Empfehlung, die dem Anti-Slop-Katalog widerspricht, wird abgelehnt und die Ablehnung dokumentiert.
 6. Vorschläge mit [[90-References/Reference Research Workflow]], [[20-Design/Design Direction]], [[20-Design/Anti AI Slop]], [[30-Frontend/Accessibility]] und [[30-Frontend/Performance]] abgleichen.
 7. Vor Abgabe UX-Prüfung für Animation, Accessibility, Z-Index und Ladezustände durchführen.
 
@@ -99,7 +99,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 - Auslösung: `disable-model-invocation` ist gesetzt, der Skill startet nie von selbst und wird ausdrücklich aufgerufen
 - Quelle und Lizenz: [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT; Installation unter `/srv/Web-Design/shared-agent-skills/review-animations/`, verlinkt nach `~/.claude/skills/` und `~/.agents/skills/`
 - Fähigkeiten: zehn Prüfstandards mit Werten für Begründung, Häufigkeit, Easing, Dauer unter 300 ms, Ursprungspunkt, Unterbrechbarkeit, GPU-Eigenschaften, Reduced Motion, asymmetrischen Ein- und Austritt und Kohärenz
-- Grenzen und Risiken: prüft nur Bewegung, kein anderer Code; die Standards sind Prüfmaß, nicht Ersatz für den Wertesatz aus [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]. Bei Widerspruch gilt der Wertesatz, und der Konflikt kommt in das Decision Log
+- Grenzen und Risiken: prüft nur Bewegung, kein anderer Code; die Standards sind Prüfmaß, nicht Ersatz für den je Website dokumentierten Wertesatz. Die [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele|B5-Beispiele]] sind nur bei bewusster Übernahme Prüfmaß; Konflikte kommen in das Decision Log
 - Datenzugriff: die Motion-Dateien des Projekts
 - In welchen Projekten erlaubt: alle UI-Projekte
 - Letzte Prüfung: 2026-08-16
@@ -135,7 +135,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 ### Ergänzung zum verbindlichen Ablauf
 
-- Vor einer neuen visuellen Richtung oder einem umfassenden UI-Refinement Impeccable mit dem passenden Arbeitsmodus nutzen und die Entscheidung im Design Contract festhalten.
+- Vor einer neuen visuellen Richtung oder einem umfassenden UI-Refinement Impeccable mit dem passenden Arbeitsmodus nutzen und die Entscheidung im Design Contract der betreffenden Website festhalten.
 - **Nach der Implementierung ist der KI-Detail-Review mit Impeccable Pflicht**, je gebauter Website getrennt. Ablauf, Prüfliste und Nachweispflicht stehen in [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]]. Ohne diesen Nachweis ist Gate `G1` nicht erfüllt.
 - Bei jeder neuen Website und jeder geänderten Motion Emil Design Engineering vor der Implementierung anwenden. Das Motion Inventory dokumentiert die hohe Route-zu-Route-Choreografie, Bewegungszweck, Häufigkeit, Timing/Scroll-Range, Easing, Unterbrechbarkeit und Reduced-Motion-Fallback.
 - Beim Schreiben einer einzelnen Bewegung `animate` verwenden. Emil Design Engineering liefert die Haltung, `animate` die Entscheidungsreihenfolge und die Umsetzung.

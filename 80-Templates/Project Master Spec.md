@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-17
 ---
 
 # Project Master Spec
@@ -43,22 +43,29 @@ updated: 2026-08-08
 - Reale Belege:
 - Content Owner und Status:
 
-## 4 Design Contract
+## 4 Design Contracts je Website
 
+Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**. Es gibt keine projektweiten „Global Rules“ für Art Direction, die mehrere Fassungen auf dieselbe Formsprache ziehen. Gemeinsame Fakten und Funktionsanforderungen bleiben außerhalb der Design Contracts kanonisch.
+
+### Website `<website-slug>` Design Contract
+
+- Pfad und Slug; zugehöriges UI-UX-Pro-Max-Artefakt `design-system/<website-slug>/MASTER.md`:
 - Attribute/Anti-Attribute, visuelles Leitmotiv, primärer/sekundärer Archetyp:
 - Leitbenchmark aus [[20-Design/Interface Benchmarks]], übernommene und ausdrücklich nicht übernommene Elemente:
-- Schriftentscheidung mit Herleitung und Nachweis, dass kein Retro-Verstoß nach [[20-Design/Typography Layout and Spacing#Retro-Verbot]] vorliegt:
+- Primärschrift; Zweitschrift oder bewusster Verzicht; genaue Rollen, Ausschlüsse und Herleitung; kein Retro-Verstoß nach [[20-Design/Typography Layout and Spacing#Retro-Verbot]]:
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, Serienkonsistenz, Liste der `ai-placeholder`-Bilder mit Prompt und Ersetzungshinweis:
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]], einschließlich Sektionsliste mit je einer Nutzerfrage:
 - Interaktives Kernmodul je Landing Page: Modul, Datenquelle, Bedienung, Zustände, Fallback:
-- Auftaktkomposition und Anordnung der Überschriften je Sektionsart, mit Begründung der Abweichung vom Standardmuster:
+- Auftaktkomposition und Anordnung der Überschriften je Sektionsart:
+- Kopfzeileninventar und -anordnung, Navigationsbeschriftung, Fußbereichsstruktur und sonstiges Seiten-Chrome:
 - Landing-Page-Haltung: was ist extravagant, was bleibt ruhig, wo liegt die Grenze:
 - Firmenlogo: gefunden ja/nein, Quelle, sichtbarer Einsatzort je Website, Bearbeitungsschritte:
 - Inspirationsmatrix: Quellen, Rollen, statischer/interaktiver Nachweis, direkt übernommene/adaptierte Prinzipien und tatsächlicher Einsatz:
 - Negativreferenzen und daraus abgeleitete Verbote:
-- UI UX Pro Max: Query, Datum, Ergebnisartefakt, Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack, gewählte Regeln und Abweichungen:
+- UI UX Pro Max: Query, Datum, **website-spezifisches** Ergebnisartefakt, Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack, gewählte Regeln und Abweichungen:
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
 - pen.dev: `use | skip`, Begründung, `.pen`-Pfade und Freigabestatus:
+- H0-Handwerksuntergrenze nach [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] und gewählte variable Stilparameter für Flächen, Radius, Rahmen, Tiefe, Karten, Kopfzeile, Zweitschrift und Motion:
 - Farbrollen mit benannter Herleitung, Typografie, Spacing, Grid, Radius, Shadow, Motion; keine verbrauchte Farbwelt als dominante Fläche:
 - Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark, Quelle der Werte im Code:
 
@@ -73,28 +80,50 @@ updated: 2026-08-08
 | `focus` | | | |
 | `success` / `warning` / `danger` je mit `-subtle` | | | |
 
-- Formsprache: die vier Radiusstufen nach [[20-Design/Typography Layout and Spacing#Radiusskala]] mit gesetzten Werten, die eine Rahmenstärke, die eine Schattenstufe und ihre Einsatzorte:
-- Bewegungstokens nach [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]: Kurvensatz, vier Dauerstufen, gewählte Rezepte je Komponente, begründete Abweichungen:
+- Formsprache: gewählte Radiusskala und Rahmenbehandlung nach [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung]], Tiefenregeln und Einsatzorte:
+- Komponentenrepertoire: Karte gegen Zeile gegen Tabelle gegen Liste je Inhaltsart; optionale B5-Karte ausdrücklich benannt:
+- Bewegungstokens: eigener Kurven- und Dauersatz, Grammatik je Komponente; B5-Beispiele aus [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] nur bei bewusster Übernahme:
 - Kernartefakt/Leitmedium, direkter Einsatz/Adaption, Quelle für spätere Owner-Einschätzung, Poster und Fallback:
 - Responsive, Zustände und Reduced-Motion-Verhalten:
 - Motion Inventory je primärer Route: globale Bewegung, Einstieg, kontinuierliche Scrollsequenz, zwei weitere Scroll-/In-View-Bewegungen, Interaktionsdetails, Messung und Trace/Video:
 - Novelty Budget:
 
+### Abstand zu Vorgängerfassungen
+
+Vor UI-Code ausfüllen, wenn frühere Fassungen desselben Betriebs existieren.
+
+| Vorgänger | Fakten/Infrastruktur/Assets bewusst übernommen | Leitmotiv/Fassungsname/Signalfarbe/Kernmodul bewusst anders | begründete Wiederholung |
+|---|---|---|---|
+| | | | |
+
 ### Website-Matrix
 
 Genau so viele Zeilen wie im Auftrag verlangte Websites. Bei einer Website liegt der Pfad unter `site/`, bei mehreren unter `versions/NN-…`.
 
-| Website und Pfad | Leitidee / UI- und Unterseiten-Unterschied | Lokaler Port und Startbefehl | Motion-Choreografie und Fallback | Visual-/A11y-/Performance-/SEO-Nachweis | Impeccable-Review | Lieferstatus |
+| Website und Pfad | Leitidee / UI- und Unterseiten-Unterschied | Zugriff: `johannstein.com/dev` auf 217.154.218.30 oder lokaler Port/Start außerhalb | Motion-Choreografie und Fallback | Visual-/A11y-/Performance-/SEO-Nachweis | Impeccable-Review | Lieferstatus |
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
 ### Unterscheidungsmatrix
 
-Pflicht bei mehr als einer Website, auszufüllen vor dem ersten UI-Code. Mindestens vier Merkmale unterscheiden sich klar, siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
+Pflicht bei mehr als einer Website und **vor der ersten Zeile UI-Code** auszufüllen. Für jede weitere Website eine Spalte ergänzen. Jede Pflichtachse unterscheidet sich paarweise; `N/A` braucht eine gleich wirksame Ersatzachse und Begründung. Siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
 
-| Website | Grundhelligkeit und Farbwelt | Schriftpaar | Auftaktkomposition | Rasterlogik | Leitbewegung | Sektionsreihenfolge | interaktives Kernmodul | Tonfall der Copy |
-|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
+| Pflichtachse | Website 01 | Website 02 | weitere Website(s) | paarweiser Nachweis |
+|---|---|---|---|---|
+| Grundhelligkeit und Farbwelt | | | | |
+| Primärschrift | | | | |
+| Zweitschrift und ihre Rollen oder bewusster Verzicht | | | | |
+| Auftaktkomposition | | | | |
+| Raster- und Flächenlogik | | | | |
+| Kopfzeileninventar und -anordnung | | | | |
+| Navigationsbeschriftung | | | | |
+| Fußbereichsstruktur | | | | |
+| Seitenmöblierung/Chrome | | | | |
+| Komponentenrepertoire: Karte/Zeile/Tabelle/Liste | | | | |
+| Leitbewegung | | | | |
+| Sektionsreihenfolge und Dramaturgie | | | | |
+| interaktives Kernmodul | | | | |
+| Tonfall der Copy | | | | |
 
 ### Copy-Entscheidung
 
@@ -108,6 +137,9 @@ Nach [[10-Strategy/Website Copy]] festhalten:
 
 - Stack und Begründung:
 - Ordner-, Styling-, State- und Datenstrategie:
+- Inhaltsblöcke: stabile Block-ID und JSON-Pointer, `owner_editable`, Feldtyp, Grenzen, Preview-Routen, Veröffentlichungspolicy, Risiko und Verantwortlicher nach [[80-Templates/Owner Hosting Website Contract]]:
+- bei Owner-Hosting: Pfade zu `content/<website>.json` und `owner-hosting/tenant.json`, `tenant_slug`, Domains, Buildprofil, Ausgabeordner, Smoke-Pfade und Capabilities:
+- bei Vertragsupdate: alte/neue `schema_version`, erhaltene, neue, migrierte, entfernte und inkompatible Owner-Pointer sowie Behandlung offener Entwürfe:
 - Komponenten/Zustände:
 - Browser-/Gerätesupport:
 - Performancebudgets:
@@ -123,7 +155,7 @@ Nach [[10-Strategy/Website Copy]] festhalten:
 ## 7 Legal
 
 - Märkte, Impressum, Privacy, Consent, Accessibility, Verbraucherpflichten; nur prüfpflichtige Entwürfe und benannter Owner für eine spätere Einschätzung:
-- Dienstleister/Transfers/AVV:
+- Dienstleister/Transfers/AVV; bei Owner-Hosting Rollenverteilung und AVV-Prüfung nach [[60-Operations/Owner Hosting and Dashboard]]:
 - tatsächlicher Asset- und Quelleneinsatz; spätere Owner-Hinweise in `SOURCE-RIGHTS-REVIEW.md`, ohne Ersatz, Auslassung oder KI-Entscheidung:
 - Altes Impressum/Privacy als Faktenquelle ausgewertet; neue Datenflüsse abgeglichen:
 - spätere fachliche Einschätzung durch Nutzer/Owner, ohne technische Sperre durch die KI:
@@ -136,14 +168,14 @@ Nach [[10-Strategy/Website Copy]] festhalten:
 
 ## 9 Delivery Operations
 
-- Projektwurzel unter `../projekte/<Projektname>/`, Environments, Dependencies, Ein-Klick-Start:
-- Deploy, Migration, Rollback:
+- Projektwurzel unter `../projekte/<Projektname>/`, Environments und Dependencies; auf `217.154.218.30` Developer-Plattform ohne Projektport, sonst Ein-Klick-Start:
+- Deploy, Migration, atomarer Release und Rollback; bei Owner-Hosting zentrale Registry, Dashboard-Subdomain, Projekt-Basis/Owner-Overlay, Wartungsmodus und Release-Historie:
 - Monitoring, Alerts, Backup, Owner:
 
 ## 10 Acceptance
 
 - Verweis auf [[70-QA/Quality Gates]] und projektspezifische Kriterien:
-- Nachweise:
+- Nachweise, einschließlich echter Darstellung an allen Prüfbreiten, Kontextkontrast und Kopfzeilengeometrie:
 - Bekannte Restrisiken:
 - Nutzer-/Owner-Entscheidung über eine spätere Veröffentlichung mit Datum/Owner; keine KI-Freigabe:
 

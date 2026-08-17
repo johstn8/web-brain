@@ -53,27 +53,28 @@ Change-Log-Eintrag und zugehörige Notizänderung gehören in denselben Commit.
 - Rechtliche Texte nie als universelle Vorlage ausgeben. Datenflüsse, Zielmarkt, Betreiber und Dienstleister im Build erfassen; rechtliche Texte dürfen nur als prüfpflichtige Entwürfe markiert werden. Was veröffentlicht wird, entscheidet ausschließlich der Nutzer beziehungsweise benannte Owner, nie die KI.
 - Sicherheit und Berechtigungen immer serverseitig erzwingen. Client-Code ist nicht vertrauenswürdig.
 - Mobile, Tastatur, Screenreader, reduzierte Bewegung, Fehler-, Leer-, Lade- und Offline-Zustände sind Teil des Features.
-- Die Anzahl der zu bauenden Websites steht ausschließlich im Auftrag des Nutzers. Keine Angabe bedeutet genau eine Website. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]].
+- Die Anzahl der zu bauenden Websites steht ausschließlich im Auftrag des Nutzers. Keine Angabe bedeutet genau eine Website. Auf `217.154.218.30` erfolgt der Zugriff ohne festen Projektport über `johannstein.com`, auf anderen Rechnern gilt die Portregel. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]].
 - Website-Titel kurz und ohne `|`. Immer Favicon-Set festlegen.
 - In Website-Copy keine Em-Dashes. Keine unbegründeten Blau-Lila-Verläufe, Sparkles, Emojis als UI oder generischen Testimonials.
 - Website-Copy kommentiert nie sich selbst: keine Meta-Sätze, keine sichtbaren „Stand“-Daten, keine Negativabgrenzung, keine Selbstverständlichkeiten, kein verbloses Statement unter einer Überschrift, keine erfundene Dreierfigur, kein Semikolon und kein Gedankenstrich als Einschub. Kanonisch in [[10-Strategy/Website Copy]].
-- Mehrere Websites im selben Auftrag unterscheiden sich in mindestens vier Merkmalen der Unterscheidungsmatrix. Kanonisch in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
+- Mehrere Websites im selben Auftrag unterscheiden sich paarweise auf jeder Pflichtachse der vor UI-Code ausgefüllten Unterscheidungsmatrix. Kanonisch in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
 - Kein Kicker über einer Überschrift, weder als Pille noch als Versalzeile noch als Marker. Kanonisch in [[20-Design/Anti AI Slop]].
 - Kopfzeile mit höchstens sechs Navigationspunkten; nichts in der Kopfzeile bricht um, ausgenommen Logos. Kanonisch in [[30-Frontend/Components and UI States]].
 - Beige, Creme und Sand sind als dominante Grundfläche ausgeschlossen. Kanonisch in [[20-Design/Color System]].
 - Ein gefundenes Firmenlogo wird in jeder gebauten Website sichtbar eingesetzt, unabhängig von seiner Qualität. Kanonisch in [[20-Design/Design Direction]].
 - Bei **jedem** Website-Build wird der UI UX Pro Max Skill verwendet, ohne Ausnahme. Kanonisch in [[00-Start/04 Plugins and Skills#Auslösebedingung]].
 - Der Leitbenchmark für Aussehen und Bedienung stammt aus [[20-Design/Interface Benchmarks]]. Diese Notiz steht bei visuellen Entscheidungen über den allgemeinen Referenzmustern.
-- Die Detailebene **B5 Modern Neutral Craft Web** gilt bei jedem Build zusätzlich zum gewählten Leitbenchmark und wird nicht gewählt. Kanonisch in [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]].
+- Die stilneutrale **H0-Handwerksuntergrenze** gilt bei jedem Build. B5 Modern Neutral Craft Web ist ein wählbares Stilprofil, kein Pflichtaussehen. Kanonisch in [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]].
 - Der Tokenvertrag ist vor der ersten Komponente vollständig gesetzt, einschließlich `border-hover` und `accent-subtle`. Kanonisch in [[20-Design/Color System#Tokenvertrag]].
-- Vier Radiusstufen, eine Rahmenstärke, eine Schattenstufe, im Ruhezustand kein Schatten. Kanonisch in [[20-Design/Typography Layout and Spacing#Radiusskala]].
-- Karten und Kopfzeile folgen den kanonischen Rezepten in [[30-Frontend/Components and UI States#Kartenrezept]] und [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]].
-- Bewegung folgt dem kanonischen Wertesatz aus [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]. Diese Rezepte sind die Grundeinheit, nicht der Ersatz für die Route-Choreografie.
+- Radius, Rahmenbehandlung, Flächenlogik, Tiefe, Komponentenrepertoire, Kopf- und Fußbereich, Zweitschrift und Motion werden je Website begründet und intern konsistent umgesetzt; im Ruhezustand kein dekorativer Schatten. Kanonisch in [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]].
+- Karten, Zeilen, Tabellen und Listen sowie das Kopfzeileninventar sind Art-Direction-Entscheidungen nach [[30-Frontend/Components and UI States#Kartenentscheidung]] und [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]].
+- Jede Website setzt ihren eigenen Bewegungswertesatz. B5-Werte aus [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] sind optionale Kalibrierung.
 - Keine Retro-Anmutung. Kein `Iowan Old Style` und keine typgleiche alte Buchserife als Markenschrift, keine Kombination aus Serife, gedecktem Erdton und Ornament. Kanonisch in [[20-Design/Typography Layout and Spacing#Retro-Verbot]].
 - Bilder werden vor dem Einsatz überarbeitet: Winkel, Ausschnitt, Hintergrund, Farbe, Auflösung. Freistellen und KI-Bearbeitung sind der Normalfall. Fehlt ein reales Bild, wird ein KI-Bild eingesetzt und nur im Projekt als `ai-placeholder` geführt, niemals sichtbar auf der Website gekennzeichnet. Kanonisch in [[20-Design/Imagery and AI Editing]].
 - Informationen bleiben knapp, logisch gestaffelt und am Mobilgerät dosiert. Kanonisch in [[10-Strategy/Information Density and Mobile Clarity]].
 - Jede Landing Page besitzt mindestens ein interaktives Kernmodul. Kanonisch in [[20-Design/Motion and Interaction#Interaktives Kernmodul]].
-- Nach dem Bau ist der Impeccable KI-Detail-Review je Website Pflicht.
+- Nach dem Bau ist der Impeccable KI-Detail-Review je Website Pflicht. Die Abnahme verlangt echte Darstellung; fehlende Renderfähigkeit wird vor Lieferung als Blocker gemeldet.
+- Bei Erstellung und jedem Update wird je Inhaltsblock `owner_editable`, stabiler JSON-Pointer, Feldtyp, Grenze, Preview-Routen und Veröffentlichungspolicy nach [[60-Operations/Owner Hosting and Dashboard]] entschieden. Bei zentralem Hosting sind `content/<website>.json` und `owner-hosting/tenant.json` nach [[80-Templates/Owner Hosting Website Contract]] Pflicht.
 - Projektweit einheitliche Architektur. Keine willkürliche Mischung aus Inline-Stilen, CSS-Modulen, Utility-Klassen und globalem CSS.
 
 ## Atomarer Update-Prozess
@@ -107,7 +108,7 @@ Reihenfolge von oben nach unten:
 5. Vorlage
 6. Referenz
 
-[[TasksForAgent]] ist ein leerer Herkunftsnachweis und hat keine Steuerungswirkung mehr. Konflikt dokumentieren, nicht still entscheiden.
+`TasksForAgent.md` ist ein leerer, nicht versionierter Herkunftsnachweis und hat keine Steuerungswirkung mehr. Konflikt dokumentieren, nicht still entscheiden.
 
 ## Graphify
 

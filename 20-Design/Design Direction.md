@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
@@ -14,16 +14,16 @@ impacts:
 
 ## Direction Brief
 
-Vor UI-Code festlegen:
+Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 
 - drei Markenattribute und drei Anti-Attribute
 - Zielgefühl in einem Satz
 - primäre visuelle Metapher
 - gewählter Leitbenchmark aus [[20-Design/Interface Benchmarks]] samt übernommenen und ausdrücklich nicht übernommenen Elementen
 - vollständiger Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark
-- die vier Radiusstufen nach [[20-Design/Typography Layout and Spacing#Radiusskala]], die eine Rahmenstärke und die eine Schattenstufe mit ihren Einsatzorten
-- Bewegungstokens und gewählte Rezepte nach [[20-Design/Motion and Interaction#Standardrezepte mit Werten]]
-- Schriftentscheidung mit Nachweis, dass sie nicht unter das [[20-Design/Typography Layout and Spacing#Retro-Verbot]] fällt
+- gewählte Radiusskala, Rahmenbehandlung, Flächenlogik und Tiefe; innerhalb der Website konsistent, aber nicht aus einer anderen Fassung übernommen
+- Bewegungstokens und eine eigene Bewegungsgrammatik; kalibrierte Beispiele in [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] sind Optionen, keine Defaults
+- Primär- und Zweitschriftentscheidung samt Rollen und Nachweis, dass sie nicht unter das [[20-Design/Typography Layout and Spacing#Retro-Verbot]] fällt; auch die bewusste Entscheidung gegen eine Zweitschrift wird begründet
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]]
 - interaktives Kernmodul der Landing Page nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]]
@@ -34,7 +34,7 @@ Vor UI-Code festlegen:
 - Copy-Entscheidung nach [[10-Strategy/Website Copy]]: Anrede, Tonfall und die Stellen, an denen zusammenhängende ganze Sätze stehen
 - Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften
 - Platzierung des Firmenlogos nach dem Abschnitt Logo des Betriebs
-- Kopfzeilenentwurf mit höchstens sechs Navigationspunkten und ohne umbrechenden Text nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
+- Kopfzeileninventar, Anordnung, Höhe, Navigationsbeschriftung und Mobile-Übergang sowie Fußbereichsstruktur und sonstiges Seiten-Chrome nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
 - notwendige Vertrauenssignale und Route-zu-Route-Erzählung
 - Accessibility- und Performancegrenzen
 - verlinkte Entscheidungsmatrix aus [[90-References/Reference Research Workflow]]
@@ -59,28 +59,44 @@ Entscheide bewusst je Achse: ruhig oder expressiv, editorial oder produktnah, wa
 
 Medien sind kein nachträglicher Schmuck. Wenn Produkt, Ort, Ergebnis oder Prozess visuell belegt werden können, bildet ein bereitgestelltes, gefundenes, direkt übernommenes oder kreativ adaptiertes Bild, Video, Interface oder Artefakt die visuelle Achse. Für bewegte oder schwere Medien werden Poster, Inhaltsalternative, Ladezustand und Mobile-/Low-Power-Variante im Design Contract bestimmt. Quelle und Einsatz werden nach dem Build in [[50-Legal/Assets Copyright and Licenses]] dokumentiert. Diese Dokumentation darf nie den Einsatz, ein Ersatzmedium oder eine getrennte Website-Fassung auslösen.
 
-Verlangt der Auftrag mehrere Websites, müssen sie mehr sein als andere Farben oder Buttonformen. Jede wählt eine eigene Leitmetapher, Auftaktkomposition, Unterseiten-Dramaturgie und Bewegungsrolle. Jede wird als vollständige Website anhand derselben Inhalte, Nutzerflüsse, Accessibility-, Performance- und SEO-Kriterien umgesetzt, nicht gegeneinander zur Auswahl gestellt.
+Verlangt der Auftrag mehrere Websites, müssen sie mehr sein als andere Farben oder Buttonformen. Jede wählt eine eigene Leitmetapher, Auftaktkomposition, Unterseiten-Dramaturgie, Bewegungsrolle und sichtbare Interface-Grammatik. Jede wird als vollständige Website anhand derselben Inhalte, Nutzerflüsse, Accessibility-, Performance- und SEO-Kriterien umgesetzt, nicht gegeneinander zur Auswahl gestellt.
+
+## Abstand zu Vorgängerfassungen
+
+Existieren frühere Projekte oder Durchläufe desselben Betriebs, entsteht vor dem Design ein Übernahmeregister im `PROJECT.md`:
+
+| Bewusst übernehmen | Bewusst neu entscheiden |
+|---|---|
+| verifizierte Fakten, gemeinsame Inhaltsquelle, freigegebene Assets, funktionierende Build- und Deployment-Infrastruktur | Art Direction, Leitmotiv, Fassungsname, Signalfarbe, Typografie, Kopf- und Fußbereich, Seiten-Chrome, Komponentenrepertoire, Motion-Grammatik und interaktives Kernmodul |
+
+Leitmotiv, Fassungsname, Signalfarbe und interaktives Kernmodul dürfen sich nur wiederholen, wenn der jeweilige Design Contract eine konkrete, sachliche Begründung dokumentiert. Gleicher Betrieb, gleicher Builder oder funktionierende Vorgängerversion sind keine Begründung. Gemeinsame Klassen, Komponenten oder Tokens werden nur übernommen, wenn sie Infrastruktur statt Art Direction verkörpern; der Grenzfall wird im Übernahmeregister benannt.
 
 ## Stilabstand bei mehreren Websites
 
 Kanonische Regel für den sichtbaren Unterschied zwischen mehreren gebauten Websites desselben Auftrags. Zwei Websites, die sich beim Überfliegen für dasselbe Angebot halten lassen, verfehlen den Auftrag, auch wenn beide für sich gut sind.
 
-Vor dem ersten UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit einer Zeile je Website. Sie muss sich in **mindestens vier** dieser Merkmale klar unterscheiden:
+Vor der ersten Zeile UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit einer Spalte je Website. **Jede Achse muss sich zwischen allen Websites klar und nachprüfbar unterscheiden.** Ein leeres Feld, ein bloßes Synonym oder dieselbe Struktur mit anderer Farbe erfüllt die Achse nicht. Ist eine Achse sachlich nicht anwendbar, wird sie durch eine gleich wirksame, im Design Contract begründete Achse ersetzt; sie entfällt nicht ersatzlos.
 
-| Merkmal | Was sich unterscheiden muss |
+| Pflichtachse | Was sich unterscheiden muss |
 |---|---|
-| Grundhelligkeit und Farbwelt | helle gegen dunkle Grundfläche, andere Signalfarbe mit eigener Herleitung |
-| Schriftpaar | andere Familien, nicht nur andere Gewichte derselben Familie |
-| Auftaktkomposition | Ort und Rolle von Leitmedium, Überschrift und Aktion |
-| Rasterlogik | Spaltenzahl, Ausrichtung, Randbehandlung, Umgang mit angeschnittenen Flächen |
-| Leitbewegung | die eine Bewegung, die die Website prägt, etwa Scrollsequenz gegen ortsfeste Bühne gegen Maskenwechsel |
-| Sektionsreihenfolge und Dramaturgie | andere Reihenfolge der Nutzerfragen aus [[10-Strategy/Information Density and Mobile Clarity#Eine Frage pro Abschnitt]] bei gleichem Inhalt |
-| interaktives Kernmodul | anderes Modul oder deutlich andere Bedienlogik desselben Inhalts |
+| Grundhelligkeit und Farbwelt | Flächengewicht, Kontrastverteilung und Signalfarbe mit eigener Herleitung |
+| Primärschrift | andere Familie oder grundlegend andere typografische Systemlogik, nicht nur anderes Gewicht |
+| Zweitschrift und Rollen | andere Familie **und** andere begründete Rollen oder bewusster Verzicht; Anschriften, Fließtext und Sektionstitel sind keine sachlichen Mono-Rollen |
+| Auftaktkomposition | Ort, Maßstab und Rolle von Leitmedium, Überschrift und primärer Aktion |
+| Raster- und Flächenlogik | Spalten, Ausrichtung, Randbehandlung, Containerprinzip und Flächenwechsel |
+| Kopfzeileninventar und -anordnung | welche Elemente vorkommen, ihre Reihenfolge, Positionierung und der Mobile-Übergang |
+| Navigationsbeschriftung | unterschiedliche, dennoch eindeutige Begriffe bei identischer Sitemap |
+| Fußbereichsstruktur | Informationsgruppen, Reihenfolge, Dichte und Abschlussgeste |
+| Seitenmöblierung | Fortschrittsanzeige, Themenumschalter, Sprungmarken, Breadcrumbs, Floating Actions und sonstiges Chrome: andere Auswahl und Platzierung |
+| Komponentenrepertoire | derselbe Inhalt erscheint mit anderer Grundform, etwa Karte gegen Zeile gegen Tabelle gegen Liste, nicht nur mit anderer Kartenfarbe |
+| Leitbewegung | prägende Bewegungsgrammatik, etwa Scrollsequenz gegen ortsfeste Bühne gegen Maskenwechsel |
+| Sektionsreihenfolge und Dramaturgie | andere Reihenfolge der Nutzerfragen aus [[10-Strategy/Information Density and Mobile Clarity#Eine Frage pro Abschnitt]] |
+| interaktives Kernmodul | anderes Modul oder deutlich andere Bedienlogik desselben realen Inhalts |
 | Tonfall der Copy | Anrede, Satzlänge und Nähe unterscheiden sich, die Fakten nicht |
 
-Bleibt eine Achse unklar, hilft `prototype` nach [[00-Start/04 Plugins and Skills#Prototype]]: mehrere echte Fassungen eines einzelnen Bauteils oder Auftakts, jede auf einer benannten Achse verschieden, zum Durchklicken. Der Skill wird nur auf Bauteile angewandt, nie auf ganze Websites, und seine Prototypen liegen außerhalb des Produktionscodes.
+Zusätzlich wird je Website der Vergleich mit älteren Fassungen nach [[#Abstand zu Vorgängerfassungen]] dokumentiert. `prototype` nach [[00-Start/04 Plugins and Skills#Prototype]] kann unklare Einzelachsen sichtbar machen, wird aber nur auf Bauteile angewandt, nie auf ganze Websites.
 
-Der Tonfall darf sich unterscheiden, die Regeln aus [[10-Strategy/Website Copy]] gelten in jeder Fassung gleich. Fakten, Preise, Zeiten, Funktionen, Unterseiten, Accessibility, Sicherheit und SEO bleiben identisch nach [[00-Start/05 Web Product Workflow#Was unabhängig von der Anzahl gilt]]. Der Leitbenchmark darf derselbe sein, die Detailebene B5 gilt ohnehin für alle. Unterschiedlich ist, was daraus gemacht wird.
+Fakten, Preise, Zeiten, Funktionen, Unterseiten, Accessibility, Sicherheit und SEO bleiben identisch nach [[00-Start/05 Web Product Workflow#Was unabhängig von der Anzahl gilt]]. Die H0-Handwerksuntergrenze aus [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] gilt für alle. B5 oder ein anderes Stilprofil wird dagegen je Website bewusst gewählt und darf die Fassungen nicht wieder auf dieselbe Grammatik ziehen.
 
 ## Komposition und Überschriften
 

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-17
 impacts:
   - design-tokens
   - components
@@ -33,7 +33,8 @@ Die Ausnahme ist ein tatsächlicher, belegter historischer Bezug des Betriebs, e
 ## Schriftwahl
 
 - **Primär: eine variable Grotesk mit großem Gewichtsumfang.** Bewährt sind Inter, Geist, Satoshi, General Sans, Manrope, Söhne-nahe Familien sowie die Systemstacks. Sie tragen Auftakt, Oberfläche und Fließtext gleichermaßen.
-- **Optional eine zweite Familie mit klarem Auftrag**, etwa eine zeitgenössische Serife für redaktionelle Lesestrecken oder eine Mono für Code, Werte und Tabellen. Nie mehr als zwei Familien plus eine Mono.
+- **Die Zweitschrift ist eine begründete Entscheidung je Website**, kein globaler Reflex. Ihr Contract benennt Familie, Rollen, Ausschlüsse und den Grund, warum die Primärschrift diese Aufgabe nicht übernimmt. Auch `keine Zweitschrift` ist eine gültige, zu dokumentierende Entscheidung.
+- Eine Monospace ist nur sachlich, wenn Zeichenbreite oder technischer Kontext Bedeutung tragen, etwa Code, Terminalausgabe, Tastenkürzel, IDs oder spaltenweise vergleichbare Zahlen. Sie ist sachlich falsch für Anschriften, Fließtext, Sektionstitel, Öffnungszeiten in Prosa und dekorative Abschnittsnummern. Reine Zahlen werden mit tabellarischen Ziffern der Primärschrift gesetzt, sofern kein technischer Grund für Mono besteht.
 - Displayschriften mit starkem Eigencharakter sind erlaubt, wenn sie ausschließlich in der größten Stufe erscheinen und die Leseschrift neutral bleibt.
 - Die gewählte Familie muss mindestens Regular, Medium und Semibold sowie Ziffern in Tabellenform anbieten. Fehlt das, ist sie für Produkt-UI ungeeignet.
 - Herkunft, Version, Lizenz und Downloaddatum jeder Schrift gehören in das [[80-Templates/Asset Register]].
@@ -65,8 +66,8 @@ Ausgangswerte, belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set �
 
 - **Negatives Tracking gehört zu großen Stufen und nur dorthin.** Ab etwa `1.25rem` aufwärts wird enger gesetzt, Fließtext und Beschriftung nie. Das ist der Unterschied zwischen einer gesetzten und einer voreingestellten Überschrift.
 - Große Überschriften erhalten `text-wrap: balance`, Lead und Fließtext `text-wrap: pretty`, damit keine Einzelwortzeile entsteht.
-- Die Mono-Familie trägt Werte, Zahlenreihen, Tags, Codeausschnitte, Tastenkürzel und technische Metazeilen. Belegt eingesetzt wird `JetBrains Mono`. Sie ist nie Überschriften- oder Fließtextschrift, siehe [[20-Design/Typography Layout and Spacing#Retro-Verbot]].
-- Ziffern in tabellarischer Form für jede Zahl, die sich ändert oder untereinander steht.
+- Eine gewählte Mono-Familie trägt ausschließlich die im Website-Contract benannten technischen Rollen. `JetBrains Mono` ist ein belegtes Beispiel aus B5, kein Standard. Tags, Adressen, Uhrzeiten, Sektionsnummern und Metazeilen wechseln nicht automatisch in Mono.
+- Ziffern in tabellarischer Form für jede Zahl, die sich ändert oder untereinander steht; dafür genügen meist die OpenType-Ziffern der Primärschrift.
 - Eine Serifen-Zweitfamilie ist erlaubt und wird dann für genau eine Rolle eingesetzt, etwa den Auftaktsatz oder redaktionelle Lesestrecken. Bei Consile belegt für die Auftaktzeile.
 
 ## Spacing
@@ -75,28 +76,29 @@ Ausgangswerte, belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set �
 - Optische Korrekturen sind erlaubt, aber als Token oder dokumentierte Ausnahme.
 - Vertikaler Rhythmus: enger innerhalb einer Gruppe, deutlich größer zwischen Gruppen.
 
-## Radiusskala
+## Radiusskala und Rahmenbehandlung
 
-Verbindlich für jede gebaute Website. Genau diese vier Stufen, keine Zwischenwerte, projektweit identisch. Abgeleitet aus [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] und dort belegt.
+Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente legt jede Website ihr eigenes System fest und verwendet es danach konsistent. Zulässig sind etwa:
 
-| Stufe | Wert | Gilt für |
+| System | Beispiel | Einsatz |
 |---|---|---|
-| `radius-control` | `6px` bis `8px` | Knöpfe, Eingabefelder, Auswahlfelder, Menüeinträge, kleine Icon-Träger |
-| `radius-card` | `10px` bis `12px` | Karten, Listeneinträge, Kennzahlenfelder, Popover, Tooltip |
-| `radius-panel` | `16px` bis `20px` | große Flächen, Bildcontainer, Drawer, Modal, Sektionsflächen, Medienrahmen |
-| `radius-pill` | `9999px` | Statuspillen, Tags, Chips, Avatare, Zähler, Umschalter |
+| kantig | `0` oder eine minimale Stufe | technische, editoriale oder konstruktive Richtung |
+| kompakt | zwei Stufen für Controls und Container | ruhige, zeilenbasierte Oberflächen |
+| abgestuft | drei bis vier benannte Stufen | weiche Produkt- oder B5-Richtung |
+| objektbezogen | Radien aus Logo, Produkt oder realem Material | markengebundene Formsprache |
 
-- Verschachtelte Flächen halten den Abstand ein: eine Fläche in einer Fläche nimmt die nächstkleinere Stufe. Der belegte Weg dafür ist eine Ableitung wie `calc(var(--radius-card) - 2px)`, nicht ein frei gewählter Wert.
-- Bildflächen an der Oberkante einer Karte werden nur oben gerundet und übernehmen dort den Kartenradius.
-- Eine Pille wird nie für einen mehrzeiligen Inhalt oder für eine primäre Aktion mit langer Beschriftung verwendet.
-- Abweichungen sind möglich, wenn Marke oder Gegenstand sie vorgeben, etwa eine bewusst kantige Systemanmutung mit Radius null. Die Entscheidung gilt dann für alle vier Stufen gemeinsam und steht im Design Contract.
+- Keine frei driftenden Einzelwerte: Jede verwendete Rundung gehört zu einer benannten Stufe oder ist eine dokumentierte optische Korrektur.
+- Verschachtelte Flächen leiten ihre Innenform aus der Außenform und dem Innenabstand ab.
+- Pillen sind nur eine Option für Status, Tags oder kompakte Umschalter. Sie sind kein Standard für primäre Aktionen.
+- Die B5-Kalibrierung `6–8px / 10–12px / 16–20px / 9999px` darf übernommen werden, wenn B5 für diese Website gewählt wurde. Sie gilt nicht projektübergreifend.
 
 ## Tiefe und Rahmen
 
-- Eine Rahmenstärke projektweit: ein Pixel. Zwei Rahmenfarben nach [[20-Design/Color System#Tokenvertrag]], die ruhende und die für Hover, Fokus und Auswahl.
-- **Genau eine Schattenstufe pro Projekt**, sehr flach und sehr transparent, Richtwert `0 8px 30px rgba(0,0,0,.06)`. Sie erscheint ausschließlich bei Hover oder Fokus auf tatsächlich klickbaren Flächen sowie an echten Ebenen über dem Inhalt, also Modal, Drawer, Popover und Menü.
-- Im Ruhezustand trägt keine Inhaltsfläche einen Schatten. Abgrenzung leisten Rahmen und Weißraum.
-- Für Produkt-UI nach [[20-Design/Interface Benchmarks#B1 Soft Neutral Product Console]] bleibt die Oberfläche vollständig schattenfrei.
+- Ruhende Inhaltsflächen tragen nach [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] keinen dekorativen Schatten. Abgrenzung entsteht zuerst durch Hierarchie, Weißraum und bei Bedarf Hairlines.
+- Jede Website entscheidet Rahmenstärke, Ton, Vollständigkeit und Rhythmus als eigenes System. Ein Vollrahmen, nur horizontale Hairlines, geteilte Tabellenlinien oder bewusst rahmenlose Flächen sind unterschiedliche gültige Grammatiken.
+- Hover-, Fokus- und Ebenenschatten werden sparsam, konsistent und nur an interaktiven oder tatsächlich überlagernden Elementen eingesetzt. Anzahl und Werte stehen im Website-Contract.
+- Für B1 bleibt die Oberfläche vollständig schattenfrei. Wer B5 wählt, kann dessen einen flachen Hover-Schatten und Ein-Pixel-Rahmen übernehmen.
+- Fokus bleibt unabhängig von der gewählten Rahmenbehandlung eindeutig sichtbar und kontrastiert gegen jede tatsächlich vorkommende Fläche.
 
 ## Layout
 

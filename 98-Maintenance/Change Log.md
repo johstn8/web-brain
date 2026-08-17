@@ -1,13 +1,47 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
+
+## 2026-08-17 — Variationszwang, Owner Hosting und serverbasierte Developer-Plattform
+
+Auslöser war die Durchsicht von `Old-Projects/Fahrschule-Kladow_v5`: Die drei Fassungen waren formal verschieden, wirkten aber wegen derselben Karten-, Radius-, Header-, Typografie- und Motion-Sprache wie Varianten desselben Systems. Gleichzeitig fehlten ein kanonisches Owner-Hosting-Modell und eine belastbare Einordnung der Server-Vorschauen.
+
+**Diagnose:** B5 „Modern Neutral Craft Web“ war als websiteübergreifende Detailebene formuliert. Zusammen mit einer Unterscheidungsmatrix, die nur vier abweichende Merkmale verlangte, erzeugte das einen gemeinsamen Stilzwang. Design Contract und UI-UX-Pro-Max-Ergebnis wurden außerdem nicht dauerhaft je Website geführt. Im Betrieb waren statische Kundenseite, Owner-Dashboard, editierbare Inhalte und die drei Zustände der Developer-Plattform nicht als zusammenhängendes Modell beschrieben.
+
+**Kanonisch neu und geändert**
+
+- [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] ist die immer geltende, stilneutrale Qualitätsuntergrenze. B5 bleibt als wählbares Stilprofil erhalten; seine Radius-, Karten-, Header-, Mono- und Motion-Sprache ist kein globaler Standard mehr.
+- [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] verlangt jetzt paarweisen Abstand auf jeder Achse der vollständigen Unterscheidungsmatrix. Jede Website führt einen eigenen Design Contract, ein eigenes UI-UX-Pro-Max-Artefakt und bei Vorgängerfassungen ein Vererbungsregister. Motiv, Name, Signalfarbe und Kernmodul dürfen ohne begründete Entscheidung nicht wiederholt werden.
+- Typografie, Radius, Rahmen, Tiefe, Komponentenrepertoire, Headerinventar, Footer, Page Chrome und Bewegung werden je Website entschieden. Mono bleibt technischen Rollen vorbehalten und wird nicht für Adressen, Fließtext oder Abschnittstitel verwendet.
+- [[70-QA/Quality Gates]] und [[70-QA/Test Matrix]] prüfen Kontrast im tatsächlichen Komponenten- und Flächenkontext, die Geometrie aller Header-Kinder bei den Zielbreiten sowie echte Browser-Renderings. Eine fehlende Render-Möglichkeit ist ein Vorabnahme-Blocker.
+- [[60-Operations/Owner Hosting and Dashboard]] ist der kanonische Owner-Hosting-Vertrag: öffentliche statische Website hinter Nginx, getrennte Dashboard-App unter `hosting.<domain>`, ein mandantenfähiger Codebestand, `owner_editable` pro Inhaltsblock, atomare Veröffentlichungen mit Rollback, Wartungsmodus mit `503`, Datenschutz-/Vertragsgrenzen und die vier offenen Produktentscheidungen.
+- Auf dem Server `217.154.218.30` sind feste Projektports und lokale Startskripte kein Übergabeweg; Zugriff und Status laufen über `johannstein.com/dev`. Außerhalb dieses Servers bleibt die Portregel bestehen.
+- [[60-Operations/Delivery and Local Start#Developer-Plattform]] definiert Archiv, aktuelle Projekte und zur Veröffentlichung vorgesehene Fassungen. `vorschau/` bleibt eine geschützte Legacy-Quelle mit Startstatus „vorgesehen“, aber keine vierte Übersicht; Login, Einzelfreigaben und `noindex` bleiben unverändert.
+
+**Owner-Hosting am 17. August weiter präzisiert**
+
+- Das Dashboard wird einmal als eigener Git-Bestand unter `/srv/Web-Design/projekte/owner-hosting/` gebaut. Eine zentrale Webanwendung bedient alle `hosting.<domain>`-Hosts über einen Unix-Socket; ein getrennter Worker baut und veröffentlicht. Kundenprojekte erhalten keine Dashboard-Kopie.
+- Code, Secrets, PostgreSQL-Zustände, Content-Revisionen, Assets, Build-Arbeit und statische Releases haben getrennte kanonische Pfade und Dienstberechtigungen. Projekt-Basis und zentrales Owner-Overlay bilden beim Build eine aufgelöste statische Inhaltsdatei.
+- [[80-Templates/Owner Hosting Website Contract]] definiert die zwei Website-Artefakte `content/<website>.json` und `owner-hosting/tenant.json`, den reservierten `_hosting`-Vertrag mit stabilen JSON-Pointern, Typen, Grenzen, Preview-Routen und Veröffentlichungspolicies sowie die Synchronisierung bei späteren Website-Updates.
+- Der Website-Build liest lokal die eingecheckte Basis und im zentralen Worker `OWNER_HOSTING_CONTENT_FILE`; Preview und Release verwenden damit dieselbe aufgelöste, validierte Inhaltsquelle, ohne Browser-SDK, Dashboard-API oder Datenbankzugriff aus der Kundenseite.
+- Registrieren und Aktualisieren laufen über die Zielbefehle `tenant lint`, `tenant plan`, `tenant register` und den Contract-Diff. Owner-Werte werden bei Updates erhalten, explizit migriert oder dokumentiert archiviert; ein Projektordner allein aktiviert kein Hosting.
+- Zentrales Datenmodell, Host-zu-Tenant-Auflösung, automatisch generierte Formulare, Draft-/Preview-/Publish-Ablauf, isolierte Buildprofile und eine sechsstufige Baufolge vom Fundament bis zu Integrationen sind jetzt verbindlich beschrieben.
+- Der beschlossene Pfad ist ausdrücklich Zielarchitektur: Owner-Hosting-Repository, Dienste, CLI, Datenbank und Tenant Registry sind noch nicht implementiert und werden erst nach den dokumentierten Mindestnachweisen als produktiv behandelt.
+
+**Propagation und Prüfung:** Core Rules, Routing Map, Update Protocol, Workflow, Skillrouting, Design-, Komponenten-, Motion- und Typografienotizen, beide QA-Dokumente, Project Master Spec, Owner Hosting Website Contract, Templates Index, AI Build Prompt, Dateninventar, Betriebsdokumentation, Index, README, Coverage Map, Review Queue und `AGENTS.md` wurden gemeinsam aktualisiert. Widersprüchliche Altformulierungen und veraltete Anker wurden gesucht und korrigiert.
+
+**Graphify ausdrücklich vertagt:** Der Nutzer hat am 17. August 2026 entschieden, Graphify später zu klären. `graphify-out/` bleibt deshalb in diesem Commit bewusst auf dem Vorgängerstand von 541 Knoten und bildet diese Änderung noch nicht ab. Vor der nächsten graphgestützten Strukturabfrage muss der Graph mit einem verfügbaren LLM-Backend neu gebaut und der Shrink-Schutz geprüft werden.
+
+**Begleitende Implementierung:** Im separaten Repository `projekte/johannstein.com` wurde `/dev` in die drei Bereiche gegliedert und als Commit `e4b1ff2` nach `origin/main` gepusht. Die Zuordnung zwischen „aktuell“ und „zur Veröffentlichung vorgesehen“ wird atomar unter `.runtime/previews/catalog.json` gespeichert und ist per Drag-and-drop sowie sichtbarer Tastatur-/Button-Aktion bedienbar. Produktionsbuild, Auth-Negativtest, Archiv-Sperre, Persistenz, Drag-and-drop, Tastaturbedienung und echte Desktop-/Mobil-Renderings wurden geprüft.
+
+**Offen:** Vor dem ersten Owner-Hosting-Rollout sind die vier Entscheidungen aus [[60-Operations/Owner Hosting and Dashboard#Offene Produktentscheidungen]] zu Search-Console-Konto/Property, E-Mail-Anbieter, Kalender- oder Vorschlagsfluss und Zugangszustellung projektspezifisch zu treffen.
 
 ## 2026-08-16 — Prüfliste an Auslöser gebunden statt an Kalenderdaten
 
@@ -90,9 +124,9 @@ Auslöser war der Befund des Nutzers, dass beauftragte Websites noch nicht wie s
 
 - [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] als fünfter Benchmark und als Detailebene, die bei jedem Build zusätzlich zum gewählten Leitbenchmark gilt und nicht gewählt wird.
 - [[20-Design/Color System#Tokenvertrag]] mit Pflichtrollen samt belegten Referenzwerten. Die zwei bisher fehlenden Rollen `border-hover` und `accent-subtle` sind die konkrete Ursache für flach wirkende Zustände und getönte Flächen, die im eigenen Build nicht entstanden.
-- [[20-Design/Typography Layout and Spacing#Radiusskala]] mit vier Stufen, [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]] mit einer Rahmenstärke und genau einer Schattenstufe, kalibrierte Type Ramp mit negativem Tracking nur auf großen Stufen, fluide Container- und Sektionswerte.
-- [[30-Frontend/Components and UI States#Kartenrezept]] und [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]] samt Statuspille, Tag und Chip.
-- [[20-Design/Motion and Interaction#Standardrezepte mit Werten]] mit Kurven- und Dauersatz und zwölf benannten Rezepten von Reveal über Zeichenauftakt bis Maskenausblendung.
+- [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung|frühere vierstufige Radiusskala]] mit vier Stufen, [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]] mit einer Rahmenstärke und genau einer Schattenstufe, kalibrierte Type Ramp mit negativem Tracking nur auf großen Stufen, fluide Container- und Sektionswerte.
+- [[30-Frontend/Components and UI States#Kartenentscheidung|früheres Kartenrezept]] und [[30-Frontend/Components and UI States#Option durchscheinende Kopfzeile|früheres Kopfzeilenrezept]] samt Statuspille, Tag und Chip.
+- [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele|frühere Standardrezepte]] mit Kurven- und Dauersatz und zwölf benannten Rezepten von Reveal über Zeichenauftakt bis Maskenausblendung.
 
 **Bewusste Lockerungen, vom Nutzer am 8. August 2026 ausdrücklich genehmigt**
 
@@ -165,13 +199,13 @@ Auslöser waren acht Anforderungen des Nutzers an das Brain. Kein Projekt unter 
 
 Geprüft und synchronisiert wurden: `AGENTS.md`, `README.md`, Brain Index, Core Rules, Routing Map, Update Protocol, Plugins and Skills, Web Product Workflow, Discovery and Scope, Existing Website Rebuild, Information Architecture and Sitemap, Design Direction, Color System, Anti AI Slop, Motion and Interaction, Components and UI States, SEO and Discoverability, Assets Copyright and Licenses, Delivery and Local Start, Quality Gates, Test Matrix, Project Intake, Project Master Spec, AI Build Prompt, Launch Checklist, Source and Rights Review, Templates Index, Inspiration Catalog, Reference Research Workflow, Derived Design Patterns sowie Coverage and Impact Map.
 
-Zwei Altregeln wurden dabei bereinigt: die Priorität von [[TasksForAgent]] entfällt, weil die Datei leer ist und der aktuelle Auftragstext des Nutzers oberste Priorität hat; und die Auswahlregel des Inspirationskatalogs enthielt noch ein Kopierverbot für fremde Assets, das der seit 2026-08-05 geltenden Build-first-Regel widersprach.
+Zwei Altregeln wurden dabei bereinigt: die Priorität von `TasksForAgent.md` entfällt, weil die Datei leer ist und der aktuelle Auftragstext des Nutzers oberste Priorität hat; und die Auswahlregel des Inspirationskatalogs enthielt noch ein Kopierverbot für fremde Assets, das der seit 2026-08-05 geltenden Build-first-Regel widersprach.
 
 Nicht geändert wurden Projektartefakte unter `../projekte/`, insbesondere `Fahrschule-Kladow`. Dieses Projekt bleibt auf dem Stand vom 2026-08-05 und ist damit ein dokumentierter Altstand gegenüber den neuen Regeln. Offen bleibt die Aktualisierung des Graphify-Graphen nach diesem Update.
 
 ## 2026-08-05 — Aufgabenpriorität: drei vollständige Motion-Websites, Unterseiten, SEO und Build-first-Assets
 
-- [[TasksForAgent]] als innerhalb des Vaults übergeordnete Anforderung in `AGENTS.md` verankert. Widersprechende Regeln zu Asset-Sperren, Ersatz, Auswahlvarianten, Preview-/Produktionssplit und KI-Launchentscheidungen aufgehoben.
+- `TasksForAgent.md` als innerhalb des Vaults übergeordnete Anforderung in `AGENTS.md` verankert. Widersprechende Regeln zu Asset-Sperren, Ersatz, Auswahlvarianten, Preview-/Produktionssplit und KI-Launchentscheidungen aufgehoben.
 - Jeder Website-Auftrag endet jetzt zwingend mit genau drei vollständigen, gleichwertigen Websites auf getrennten lokalen Ports. Jede enthält dieselbe echte Unterseitenarchitektur, vollständige Navigation, eigene Sitemap-/Robots-/Metadata-Artefakte und SEO für jede Route. One-Page- oder Anker-only-Ausgaben sind ausgeschlossen.
 - Das kanonische Motion-Niveau umfangreich erhöht: drei verschiedene Route-zu-Route-Choreografien, globaler Seitenwechsel, Einstieg je Route, je primärer Inhaltsroute eine kontinuierliche Scrollsequenz und zwei weitere Scroll-/In-View-Bewegungen sowie mindestens zwölf sichtbare, dokumentierte Motion-Entscheidungen je Website. Die Recherche zu CSS Scroll-/View-Timelines, Motion, GSAP ScrollTrigger, responsiven Setups, Compositor-Performance und Reduced Motion ist in [[20-Design/Motion and Interaction]] mit direkten Primärquellen dokumentiert.
 - Asset-Prozess auf die gewünschte Zwei-Schritt-Regel umgestellt: erst alle gewünschten Bilder, Designs, Animationen und sonstigen Assets einsetzen oder kreativ adaptieren, danach Quelle und tatsächlichen Einsatz nur als spätere Owner-Einschätzung dokumentieren. Die KI baut keine rechtlich motivierten Ersätze, keine eingeschränkten Fassungen und keine Asset- oder Veröffentlichungsblocker.
@@ -230,7 +264,7 @@ Auslöser waren neue verbindliche Varianten-, Medien- und Motion-Anforderungen s
 
 ### Geprüfte Auswirkungen
 
-Auslöser waren ein geändertes Designwerkzeug sowie die Behandlung zeitkritischer Drittanbieterfakten. Geprüft und aktualisiert wurden Tool-Workflow, Codex-/Skill-Kontext, Routing, lokale Ablage, Relaunch, Projektvorlagen, Quellen-/Freigabeliste, Launch und QA. Eine Textsuche bestätigt, dass alte pen.dev-Anweisungen außerhalb des archivierten Auftrags [[TasksForAgent]] entfernt sind. Offen bleibt die reguläre Halbjahresprüfung der pen.dev-CLI und Google-Maps-/Places-Bedingungen in der [[98-Maintenance/Review Queue|Review Queue]].
+Auslöser waren ein geändertes Designwerkzeug sowie die Behandlung zeitkritischer Drittanbieterfakten. Geprüft und aktualisiert wurden Tool-Workflow, Codex-/Skill-Kontext, Routing, lokale Ablage, Relaunch, Projektvorlagen, Quellen-/Freigabeliste, Launch und QA. Eine Textsuche bestätigt, dass alte pen.dev-Anweisungen außerhalb des archivierten Auftrags `TasksForAgent.md` entfernt sind. Offen bleibt die reguläre Halbjahresprüfung der pen.dev-CLI und Google-Maps-/Places-Bedingungen in der [[98-Maintenance/Review Queue|Review Queue]].
 
 
 Nur inhaltlich relevante Änderungen werden eingetragen. Reine Tippfehler ohne Bedeutungsänderung benötigen keinen eigenen Eintrag.

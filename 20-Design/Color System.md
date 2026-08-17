@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-17
 impacts:
   - design-tokens
   - components
@@ -22,13 +22,13 @@ impacts:
 
 ## Tokenvertrag
 
-Verbindlicher Mindestsatz an Farbrollen für jede gebaute Website. Er ist der Grund, weshalb die Referenzoberflächen aus [[20-Design/Interface Benchmarks#B5 Modern Neutral Craft Web]] fertig wirken: Sie besitzen für Grund, Fläche, Sekundärfläche, drei Textstufen, zwei Rahmenstufen und drei Akzentstufen je einen benannten Wert. Ein Build mit nur `surface`, `text`, `border` und `accent` kann die Zustände nicht sauber gestalten und wirkt flach.
+Verbindlicher Mindestsatz an Farbrollen für jede gebaute Website. Der Vertrag sichert vollständige Zustände, schreibt aber keine B5-Flächenlogik vor. Grund, Flächen, Textstufen, Rahmen- und Akzentzustände erhalten benannte Werte; wie nah, kontrastreich, häufig oder flächig diese Rollen erscheinen, entscheidet der Design Contract der einzelnen Website.
 
 | Rolle | Aufgabe | Belegter Referenzwert hell | Pflicht |
 |---|---|---|---|
-| `bg` | Seitengrund, minimal gegen die Fläche abgesetzt | `#fafafa` | ja |
-| `surface` | Karten, Panels, Kopfzeile | `#ffffff` | ja |
-| `surface-alt` | eingebettete Bereiche, Codeblöcke, Leerzustände, Tabellenkopf | `#f5f5f5` | ja |
+| `bg` | Seitengrund | `#fafafa` | ja |
+| `surface` | primäre Inhalts- oder Bedienfläche | `#ffffff` | ja |
+| `surface-alt` | kontrastierende oder eingebettete Fläche, sofern benötigt | `#f5f5f5` | ja |
 | `text` | Überschriften und primärer Text | `#0a0a0a` | ja |
 | `text-secondary` | Lead, Erklärzeile, Fließtext zweiter Ordnung | `#525252` | ja |
 | `text-tertiary` | Metazeile, Beschriftung, deaktivierter Text | `#a3a3a3` | ja |
@@ -44,13 +44,13 @@ Verbindlicher Mindestsatz an Farbrollen für jede gebaute Website. Er ist der Gr
 Regeln zum Vertrag:
 
 - **`border-hover` und `accent-subtle` sind nicht optional.** Ohne sie entsteht der tote Hoverzustand und die fehlende getönte Tag-Pille, die eigenen Builds bisher gefehlt haben.
-- Die drei Flächenstufen liegen absichtlich sehr nah beieinander. Der Unterschied zwischen Grund und Karte ist eine Andeutung; die Abgrenzung leistet der Rahmen.
+- Abstand, Reihenfolge und Einsatz der Flächenrollen gehören zur Art Direction. Drei nahe Stufen sind die B5-Variante; eine andere Website darf stärkere Flächenwechsel, eine dunkle Bühne, rahmenlose Abschnitte oder eine reduzierte Flächenzahl wählen.
 - Die drei Textstufen sind eine Hierarchie, kein Vorrat. Jede Stufe hat eine feste Aufgabe. Vier oder mehr Graustufen für Text sind ein Befund.
-- `accent-subtle` entsteht aus `accent` über Deckkraft, nicht über eine frei gewählte Pastellfarbe. So bleibt die Tönung bei jedem Markenwechsel korrekt.
+- `accent-subtle` bleibt erkennbar mit `accent` verwandt; ob dies über Deckkraft oder einen separat kuratierten Ton geschieht, entscheidet das Farbmodell der Website.
 - Für jede Rolle sind Default, Hover, Active, Disabled und die kontrastierende Inhaltsfarbe definiert.
 - Light und Dark werden getrennt kuratiert. Im Dunkelmodus wird nicht invertiert: Der Grund bleibt eine sehr dunkle, entsättigte Fläche, Rahmen werden heller statt dunkler, getönte Kategorieflächen laufen über denselben Ton bei etwa 25 bis 30 Prozent Deckung mit einer aufgehellten Schriftfarbe.
-- Die belegten Referenzwerte sind Kalibrierung, keine Vorlage. Sie werden übernommen, wenn kein Markenwert dagegen steht, und sonst mit demselben Helligkeits- und Kontrastverhältnis nachgebildet.
-- Die tatsächlich gesetzten Werte stehen im Design Contract und in genau einer Tokenquelle im Code nach [[30-Frontend/Architecture and Code Consistency]].
+- Die belegten Referenzwerte sind B5-Kalibrierung, keine Vorlage und kein stiller Fallback.
+- Die tatsächlich gesetzten Werte stehen im Design Contract jeder Website und in genau einer Tokenquelle ihres Codes nach [[30-Frontend/Architecture and Code Consistency]].
 
 ## Harmonie
 

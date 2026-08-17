@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-07
+updated: 2026-08-17
 ---
 
 # Update Protocol
@@ -30,8 +30,9 @@ Kein partielles Update darf widersprüchliche oder veraltete Projektinformatione
 - Neuer Drittanbieter: Dependencies, Datenfluss, Vertrag/AVV, Consent, CSP, Ausfallverhalten, Kostenlimit, Privacy Policy.
 - Neues Asset oder Font: Asset Register, Quelle, tatsächlicher Einsatz, Hosting, Performancebudget und gegebenenfalls `SOURCE-RIGHTS-REVIEW.md` nach dem Build aktualisieren. Der Eintrag darf Verwendung, Preview, Deployment oder eine gebaute Website nicht sperren und erzeugt keinen Ersatz.
 - Motion-Änderung: Motion Inventory, Implementierung, Reduced-Motion-Variante, Messung und Tests aller betroffenen Routen in jeder Website aktualisieren.
-- Geänderte Anzahl der Websites: Ablagestruktur, Ports, Startskripte, Website-Matrix im Master Spec, Motion Inventory, QA-Nachweise und Impeccable-Reviews an die neue Anzahl anpassen. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]].
-- Visuelle Änderung an Auftakt, Überschriftenanordnung, Kopfzeile oder Logo-Platzierung: Design Contract, betroffene Komponenten, Screenshots und der Impeccable KI-Detail-Review sind erneut zu führen.
+- Geänderte Anzahl der Websites: Ablagestruktur, Website-Matrix im Master Spec, Design Contracts, UI-UX-Pro-Max-Artefakte, Motion Inventory, QA-Nachweise und Impeccable-Reviews an die neue Anzahl anpassen. Außerhalb des Servers `217.154.218.30` zusätzlich Ports und Startskripte anpassen; auf diesem Server den Zugriff über `johannstein.com/dev` prüfen. Kanonisch in [[00-Start/05 Web Product Workflow#Anzahl der Websites]].
+- Visuelle Änderung an Auftakt, Überschriftenanordnung, Kopfzeile oder Logo-Platzierung: Den Design Contract und das UI-UX-Pro-Max-Artefakt der betroffenen Website, betroffene Komponenten, Screenshots und den Impeccable KI-Detail-Review erneut führen.
+- Owner-editierbarer Inhaltsblock: stabilen JSON-Pointer, `owner_editable`, Typ, Grenzen, Preview-Routen, Veröffentlichungspolicy, Dashboardformular, Servervalidierung, Inhaltsrevisionen und Datenschutzinventar gemeinsam aktualisieren. Bei bestehendem Hosting den Contract-Plan aus [[80-Templates/Owner Hosting Website Contract]] ausführen; Owner-Werte erhalten, explizit migrieren oder dokumentiert archivieren.
 - Neue Rolle oder Berechtigung: Rollenmatrix, Server-AuthZ/RLS, UI, Auditlog, negative Tests.
 - Neues Abo-Verhalten: Produktcopy, Billing-State-Machine, Webhooks, Kündigung/Löschung, E-Mails, Rechtstexte, Tests.
 - Design-Token-Änderung: Komponenten, Storybook/Preview, Kontrasttests, Screenshots, Dark Mode.

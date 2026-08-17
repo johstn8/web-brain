@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -24,13 +24,13 @@ impacts:
 - Beige, Creme oder Sand als dominante Grundfläche einer Website, siehe [[20-Design/Color System#Verbrauchte Farbwelten]]
 - Em-Dash in Website-Copy
 - Emojis als Icons oder Aufzählungszeichen
-- Glas-Header ohne gemessenen Kontrast gegen den tatsächlich darunterliegenden Inhalt oder ohne deckenden Fallback. Die durchscheinende Kopfzeile selbst ist erlaubt und Standard; Rezept in [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]]
-- Schatten im Ruhezustand, mehr als eine Schattenstufe im Projekt, Verlauf als Flächenfüllung ohne Bedeutung. Kanonisch in [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]]
+- Glas-Header ohne gemessenen Kontrast gegen den tatsächlich darunterliegenden Inhalt oder ohne deckenden Fallback. Eine durchscheinende Kopfzeile ist eine optionale Stilentscheidung, kein Standard; Bedingungen in [[30-Frontend/Components and UI States#Option durchscheinende Kopfzeile]]
+- dekorativer Schatten auf ruhenden Inhaltsflächen, inkonsistente Tiefenlogik und Verlauf als Flächenfüllung ohne Bedeutung. Kanonisch in [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]]
 - Kopfzeile mit mehr als sechs Navigationspunkten oder mit umbrechendem Text, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
 - jede Sektion als gleichförmiges abgerundetes Card-Grid
 - riesige Icons mit winzigem Text
-- Radien außerhalb der vier Stufen aus [[20-Design/Typography Layout and Spacing#Radiusskala]], mehrere Rahmenstärken, uneinheitliche Container- und Buttonhöhen
-- aggressive Card-Lifts, also Verschiebung über zwei Pixel, Maßstab über `1.02`, Rotation oder Schattensprung. Der kleine Ein- bis Zwei-Pixel-Lift auf tatsächlich klickbaren Karten ist ausdrücklich erlaubt und erwünscht; Rezept in [[30-Frontend/Components and UI States#Kartenrezept]]
+- frei driftende Radius-, Rahmen- oder Containerwerte außerhalb des im Website-Contract gewählten Systems; uneinheitliche Buttonhöhen ohne funktionalen Grund
+- aggressive oder überraschende Card-Lifts, Rotation oder Schattensprünge ohne Aufgabe. Interaktionsfeedback folgt der dokumentierten Grammatik aus [[30-Frontend/Components and UI States#Kartenentscheidung]] und erscheint nur auf tatsächlich klickbaren Flächen
 - Hover-Lift, Zeigerwechsel oder Schatten auf einer Fläche, die nichts auslöst
 - Cursor-Glows, Bounce oder Scroll-Jacking
 - generische KI-/SaaS-Copy, Fake-Testimonials, erfundene Logos und Metriken

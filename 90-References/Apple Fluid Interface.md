@@ -10,7 +10,7 @@ depends_on:
 # Apple Fluid Interface
 
 > [!summary] Rolle
-> Referenz für gestengeführte und federbasierte Bewegung. Sie ergänzt [[20-Design/Motion and Interaction]] dort, wo eine Bewegung vom Finger oder Zeiger geführt wird, und ersetzt keine kanonische Regel. Verbindlich bleibt der Wertesatz aus [[20-Design/Motion and Interaction#Standardrezepte mit Werten]].
+> Referenz für gestengeführte und federbasierte Bewegung. Sie ergänzt [[20-Design/Motion and Interaction]] dort, wo eine Bewegung vom Finger oder Zeiger geführt wird, und ersetzt keine kanonische Regel. Verbindlich bleibt der je Website dokumentierte Wertesatz; B5-Werte in [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] sind optional.
 
 Herkunft ist Apples Vortragsreihe zu flüssigen Oberflächen, vor allem *Designing Fluid Interfaces*, übersetzt auf das Web.[^wwdc-fluid] Der Skill `apple-design` aus dem Repository von Emil Kowalski war die Vorlage für diese Zusammenfassung und ist bewusst **nicht** installiert; sein Inhalt steht hier.[^emilskills] Die Typografieaussagen stammen aus *The Details of UI Typography*, die Prinzipien aus *Principles of Great Design*.[^wwdc-type][^wwdc-principles]
 
@@ -69,7 +69,7 @@ Erst wird der projizierte Endpunkt bestimmt, dann der nächstgelegene Rastpunkt 
 
 - An einer Kante wird progressiv gebremst statt hart gestoppt. Ein harter Stopp liest sich als eingefroren, ein weicher Widerstand als bedienbar und zu Ende.
 - Zwischenbilder zeigen in die Richtung des Ergebnisses. Der Nutzer liest den Ausgang aus der Bahn, nicht erst aus dem Endzustand.
-- Ein- und Austritt laufen denselben Weg. Was von rechts kommt, verschwindet nach rechts. Das deckt sich mit der Ursprungsregel für Popover und Menüs aus [[30-Frontend/Components and UI States#Kartenrezept]] und mit der Kompositionsregel in [[20-Design/Design Direction#Komposition und Überschriften]].
+- Ein- und Austritt laufen denselben Weg. Was von rechts kommt, verschwindet nach rechts. Das deckt sich mit der Ursprungsregel für Popover und Menüs aus [[30-Frontend/Components and UI States#Kartenentscheidung]] und mit der Kompositionsregel in [[20-Design/Design Direction#Komposition und Überschriften]].
 
 ## Gestendetails
 
@@ -79,7 +79,7 @@ Erst wird der projizierte Endpunkt bestimmt, dann der nächstgelegene Rastpunkt 
 
 ## Material und Tiefe
 
-- Durchscheinende Leisten und Sheets als schwebende Ebene mit darunter laufendem Inhalt. Das Kontrast- und Fallbackrezept bleibt kanonisch in [[30-Frontend/Components and UI States#Rezept der durchscheinenden Kopfzeile]].
+- Durchscheinende Leisten und Sheets als schwebende Ebene mit darunter laufendem Inhalt. Das Kontrast- und Fallbackrezept bleibt kanonisch in [[30-Frontend/Components and UI States#Option durchscheinende Kopfzeile]].
 - Materialgewicht trägt Hierarchie. Schwerere Flächen trennen Regionen, leichtere heben Bedienelemente hervor. Zwei leichte durchscheinende Flächen übereinander zerstören die Lesbarkeit.
 - Große Flächen wirken dicker als kleine, also stärkere Unschärfe und tieferer Schatten. Die eine erlaubte Schattenstufe aus [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]] bleibt davon unberührt.
 - Ein modaler Vorgang bekommt Abdunklung, eine parallele Nebenfläche nicht, damit der Fluss nicht bricht.

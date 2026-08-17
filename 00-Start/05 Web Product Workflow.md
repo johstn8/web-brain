@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-17
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
   - "[[90-References/Reference Research Workflow]]"
@@ -40,29 +40,31 @@ Kanonische Regel. Die Anzahl der zu bauenden Websites steht immer im Auftrag des
 - Ist die Angabe mehrdeutig, wird **eine** Website gebaut und die Auslegung als Annahme in `PROJECT.md` vermerkt. Der Auftrag wird dadurch nicht blockiert.
 - Nachträgliche Änderung der Anzahl ist eine Auftragsänderung und läuft über [[00-Start/03 Update Protocol]].
 
-### Folgen für Ablage und Ports
+### Folgen für Ablage und Zugriff
 
-- **Eine Website:** Ablage unter `site/`, ein fester lokaler Port.
-- **Mehrere Websites:** Ablage unter `versions/01-<richtung>/`, `versions/02-<richtung>/` und so fort, je Website ein eigener fester Port.
+- **Eine Website:** Ablage unter `site/`.
+- **Mehrere Websites:** Ablage unter `versions/01-<richtung>/`, `versions/02-<richtung>/` und so fort.
+- **Build auf `217.154.218.30`:** kein fester lokaler Projektport und kein neues `start-local.sh`; Zugriff über die Developer-Plattform auf `johannstein.com`.
+- **Build auf anderen Rechnern:** je Website ein eigener fester Port und die lokalen Startskripte.
 
-Details zu Struktur, Portvergabe und Startskripten in [[60-Operations/Delivery and Local Start]].
+Details in [[60-Operations/Delivery and Local Start]].
 
 ### Was unabhängig von der Anzahl gilt
 
-Jede gebaute Website ist ein fertiges Ergebnis, kein Entwurf und keine Auswahlvariante. Fakten, Funktionen, Datenflüsse, Unterseiten, Accessibility, Sicherheit und SEO sind in allen gebauten Websites identisch. Werden mehrere Websites verlangt, unterscheiden sie sich sichtbar in Art Direction, Komposition und Motion, niemals im Umfang. Der geforderte Abstand ist als Unterscheidungsmatrix kanonisch in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] geregelt und wird vor dem ersten UI-Code in `PROJECT.md` festgehalten.
+Jede gebaute Website ist ein fertiges Ergebnis, kein Entwurf und keine Auswahlvariante. Fakten, Funktionen, Datenflüsse, Unterseiten, Accessibility, Sicherheit und SEO sind in allen gebauten Websites identisch. Werden mehrere Websites verlangt, unterscheiden sie sich sichtbar auf jeder Pflichtachse der Unterscheidungsmatrix, niemals im Umfang. Der geforderte Abstand ist als Unterscheidungsmatrix kanonisch in [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] geregelt und wird vor dem ersten UI-Code in `PROJECT.md` festgehalten.
 
 ## Verbindliche Reihenfolge
 
 1. **Kontext laden:** [[00-Start/00 Brain Index]], neu angelegtes Projekt-`PROJECT.md` und nur die über [[00-Start/02 Routing Map]] bestimmten Notizen lesen.
-2. **Intake schließen:** Muss-Entscheidungen mit [[80-Templates/Project Intake]] erheben. Fehlende Geschäfts-, Daten-, Zahlungs- oder Identitätsentscheidung als offene Annahme in `PROJECT.md` markieren. Gewünschte Bilder, Designs, Animationen und Quellen direkt für die Umsetzung einplanen; Quelle und tatsächlichen Einsatz anschließend im `SOURCE-RIGHTS-REVIEW.md` erfassen. Dieser zweite Schritt hält die kreative oder technische Umsetzung nicht auf.
+2. **Intake schließen:** Muss-Entscheidungen mit [[80-Templates/Project Intake]] erheben. Fehlende Geschäfts-, Daten-, Zahlungs- oder Identitätsentscheidung als offene Annahme in `PROJECT.md` markieren. Für jeden Inhaltsblock bei Erstellung und bei jedem Update `owner_editable`, stabilen JSON-Pointer, Feldtyp, Grenzen, Preview-Routen und Veröffentlichungspolicy nach [[60-Operations/Owner Hosting and Dashboard]] entscheiden. Ist zentrales Owner-Hosting Teil des Scopes, `content/<website>.json` und `owner-hosting/tenant.json` nach [[80-Templates/Owner Hosting Website Contract]] anlegen. Gewünschte Bilder, Designs, Animationen und Quellen direkt für die Umsetzung einplanen; Quelle und tatsächlichen Einsatz anschließend im `SOURCE-RIGHTS-REVIEW.md` erfassen.
 3. **Bestand sichern:** Bei vollständigem Neubau einer vorhandenen Website den [[10-Strategy/Existing Website Rebuild]] ausführen, bevor Inhalte oder Assets neu geschrieben werden.
 4. **Inspiration untersuchen:** Für jedes Web-Produkt den [[90-References/Reference Research Workflow]] ausführen. Struktur, visuelle Sprache und Interaktion getrennt bewerten. Referenzen, Bilder, Designs und Animationen dürfen kreativ direkt übernommen oder adaptiert werden. Das Ergebnis dokumentiert den konkreten Einsatz, ohne daraus eine Build- oder Asset-Sperre abzuleiten.
-5. **Design Contract erzeugen:** [[20-Design/Design Direction]] festlegen und den Leitbenchmark aus [[20-Design/Interface Benchmarks]] wählen. Bildplan nach [[20-Design/Imagery and AI Editing]] und Informationsbudget nach [[10-Strategy/Information Density and Mobile Clarity]] festlegen. **Der UI UX Pro Max Skill wird bei jedem Website-Build ausgeführt, ausnahmslos und je Website getrennt**, siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]]; zusätzlich Impeccable verwenden; bei Motion zusätzlich Emil Design Engineering. Einsatz oder begründeter Verzicht auf [[90-References/pen.dev Workflow|pen.dev]] protokollieren.
-6. **Websites spezifizieren:** Die im Auftrag verlangte Anzahl vollständiger Websites nach dem Abschnitt [[00-Start/05 Web Product Workflow#Anzahl der Websites|Anzahl der Websites]] anlegen. Jede erhält Art Direction, vollständige verlinkte Unterseiten, eine eigene Motion-Choreografie, einen eindeutigen lokalen Port, eine Startanweisung sowie Visual-/Motion-/SEO-Nachweise. Fakten, Funktionen, Datenflüsse, Accessibility und Sicherheit bleiben identisch; jede Website ist ein fertiges Ergebnis, keine Auswahlvariante.
+5. **Design Contract je Website erzeugen:** Für jede gebaute Website [[20-Design/Design Direction]] getrennt festlegen und einen Leitbenchmark aus [[20-Design/Interface Benchmarks]] wählen. H0 gilt immer, Stilprofil, Radius, Rahmen, Flächen, Karten, Kopf-/Fußbereich, Chrome, Zweitschrift und Motion werden je Website entschieden. Existieren ältere Fassungen desselben Betriebs, wird das Übernahmeregister aus [[20-Design/Design Direction#Abstand zu Vorgängerfassungen]] vorher ausgefüllt. **UI UX Pro Max wird je Website getrennt ausgeführt und unter `design-system/<website-slug>/MASTER.md` persistiert**, siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]].
+6. **Websites spezifizieren:** Die im Auftrag verlangte Anzahl vollständiger Websites anlegen. Jede erhält Art Direction, vollständige verlinkte Unterseiten, eigene Motion-Choreografie sowie Visual-/Motion-/SEO-Nachweise. Port und Startanweisung folgen dem tatsächlichen Build-Rechner: auf `217.154.218.30` Developer-Plattform statt Projektport, sonst fester lokaler Port. Fakten, Funktionen, Datenflüsse, Accessibility und Sicherheit bleiben identisch.
 7. **Master Spec freigeben:** [[80-Templates/Project Master Spec]] samt Sitemap, Website-Matrix, Designsystem, Zuständen, Budgets, Risiken und Akzeptanzkriterien auf `approved` setzen. Vorher kein produktiver UI-Code.
 8. **Vertikal implementieren:** Einen realen kritischen Nutzerfluss einschließlich Serverregeln, Fehlern, Accessibility, responsivem Verhalten und Tests vollständig bauen. Danach weitere Flows im selben Architektur- und Designsystem ergänzen.
 9. **Kritikschleife mit Impeccable:** Jede gebaute Website gegen Master Spec, Referenzentscheidungen und [[70-QA/Quality Gates]] prüfen. Zusätzlich verbindlich der KI-Detail-Review nach [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review|Anti AI Slop]]: Impeccable wird auf jede gebaute Website angewendet, um Details zu finden, die nach KI-Generat aussehen. Befunde werden korrigiert oder begründet im Decision Log dokumentiert. Keine Website wird als Auswahl-, Ersatz-, Preview- oder Produktionskandidatin abgewertet.
-10. **Liefern und erhalten:** Alle gebauten Websites samt Unterseiten, SEO, Motion, Startanweisung und Ports vollständig liefern. `SOURCE-RIGHTS-REVIEW.md` hält danach nur die Einschätzung für den Nutzer/Owner fest. Was veröffentlicht wird, entscheidet ausschließlich dieser Nutzer/Owner; die KI sperrt, ersetzt oder entfernt keine Assets und erklärt keine Website zu einer bloßen Preview. Danach Deployment, Monitoring, Rollback und Wartungsowner abschließen. Relevante Erkenntnisse atomar in das Brain zurückführen.
+10. **Liefern und erhalten:** Alle gebauten Websites samt Unterseiten, SEO, Motion und dem für die Umgebung passenden Zugriff vollständig liefern. Bei Owner-Hosting zuerst Contract-Lint und Tenant-Plan durchführen; eine Website wird nie nur durch Ordnererkennung registriert. Projekt-Basis, Owner-Overlay, Vertragsversion und Release-ID bleiben getrennt nachvollziehbar. `SOURCE-RIGHTS-REVIEW.md` hält danach nur die Einschätzung für den Nutzer/Owner fest. Was veröffentlicht wird, entscheidet ausschließlich dieser Nutzer/Owner; die KI sperrt, ersetzt oder entfernt keine Assets und erklärt keine Website zu einer bloßen Preview. Danach Deployment, Monitoring, Rollback und Wartungsowner abschließen. Relevante Erkenntnisse atomar in das Brain zurückführen.
 
 ## Kontext- und Gedächtnisebenen
 
@@ -76,7 +78,7 @@ Eine untere Ebene darf eine höhere konkretisieren, aber nicht still überschrei
 
 ## Mehrere Websites und Parallelität
 
-Verlangt der Auftrag mehr als eine Website, sind alle gebauten Websites getrennt, vollständig, fertig, startbar und gleichwertig auslieferbar. Sie teilen Fakten, Funktionen, Accessibility, Sicherheit, Unterseiten und SEO, unterscheiden sich aber sichtbar in Komposition und Motion. Es gibt keine Wahl-/Verwerfungsentscheidung und keine künstliche Aufteilung in Preview und Produktion. Gleichzeitige Schreibzugriffe auf dieselbe Datei sind untersagt.
+Verlangt der Auftrag mehr als eine Website, sind alle gebauten Websites getrennt, vollständig, fertig, startbar und gleichwertig auslieferbar. Sie teilen Fakten, Funktionen, Accessibility, Sicherheit, Unterseiten und SEO, unterscheiden sich aber sichtbar auf jeder Pflichtachse der Unterscheidungsmatrix. Es gibt keine Wahl-/Verwerfungsentscheidung und keine künstliche Aufteilung in Preview und Produktion. Gleichzeitige Schreibzugriffe auf dieselbe Datei sind untersagt.
 
 Gemeinsame Fakten liegen kanonisch außerhalb der Websites, etwa unter `content/`, und werden nie in eine Website hineinkopiert. So bleibt eine Faktenänderung eine einzige Änderung, unabhängig davon, wie viele Websites gebaut wurden.
 
