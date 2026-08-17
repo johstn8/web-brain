@@ -115,6 +115,12 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] bei Owner-Hosting: Contract-Plan belegt Erhalt oder explizite Migration aller vorhandenen Owner-Werte; offene Entwürfe alter Vertragsversionen sind behandelt
 - [ ] bei Owner-Hosting: Hostname löst serverseitig genau einen Mandanten auf; negative Cross-Tenant-Tests für Inhalte, Assets, Builds, Releases, Nachrichten und Integrationen bestehen
 - [ ] bei Owner-Hosting: statische öffentliche Website bleibt bei Dashboard-/API-Ausfall erreichbar; Worker baut isoliert, Buildfehler verändert weder aktive Inhaltsrevision noch Release; atomarer Publish, vollständiger Rollback und 503-Wartungsmodus nach [[60-Operations/Owner Hosting and Dashboard]] geprüft
+- [ ] bei Deployment-Slots: ein Drop merkt nur vor; erst die ausdrückliche zweite Bestätigung baut und schaltet um; öffentlicher Release und Dashboard-Tenant wechseln atomar gemeinsam
+- [ ] bei Deployment-Slots: Slotwechsel verändert weder Quellprojekt noch Katalogstatus der abgelegten Fassung; Archivfassungen bleiben im Archiv
+- [ ] bei Deployment-Slots: Sitzungen sind an den Tenant gebunden und nach einem Wechsel wertlos; Suffix-Hosts und gefälschte `Host`-Header werden vor jeder Tenant-Abfrage abgewiesen
+- [ ] bei Legacy-Adaptern: Quellhash ohne Buildausgaben vor und nach mehreren Builds identisch, vorhandenes `dist/` der Quelle unverändert; fest im Quelltext hinterlegte Kontaktdaten sind als Warnung gemeldet statt stillschweigend hingenommen
+- [ ] bei Staging-Domains: Basic Auth aktiv, `X-Robots-Tag: noindex, nofollow, noarchive` und sperrende `robots.txt` ausgeliefert, ACME-Challenge auf Port 80 unverändert erreichbar
+- [ ] bei Websites ohne Editorvertrag: Dashboard läuft schreibgeschützt; bearbeitbare Felder werden nicht aus Text oder HTML erraten
 - [ ] Dependency-/Serverliste, `.env.example`, Deploy, Migration und Rollback
 - [ ] Monitoring, Alerts, Backups und Restore-Test
 - [ ] Subscription-Löschfluss, Datenlöschung und Supportpfad getestet

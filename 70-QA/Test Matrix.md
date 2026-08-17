@@ -30,6 +30,21 @@ updated: 2026-08-17
 
 Immer aufnehmen: Navigation und vollständige Unterseiten jeder gebauten Website, primäre Conversion, Formularfehler, Signup/Login/Recovery, Rollenwechsel, Zahlung/Kündigung, Account-Löschung, Consent/Widerruf, 404/500/Offline, Sitemap/Meta/Canonical/Robots je Route und Motion Inventory. Auf `217.154.218.30` alle Fassungen über `johannstein.com/dev` prüfen, außerhalb alle reservierten Ports.
 
+## Deployment-Slots und Owner Hosting
+
+Wo ein Deployment-Slot nach [[60-Operations/Owner Hosting and Dashboard#Deployment-Slots]] betrieben wird, sind zusätzlich zu prüfen:
+
+- **Slotwechsel:** Ein Drop merkt nur vor und verändert weder Website noch Katalogstatus. Erst die zweite Bestätigung baut. Nach Erfolg zeigen öffentliche Website und Dashboard dieselbe Website.
+- **Atomarer Doppelwechsel:** Zu keinem Zeitpunkt gehört der öffentliche Release zu einer anderen Website als der Dashboard-Tenant.
+- **Cross-Tenant-Hostbindung:** Ein unbekannter Host, ein gefälschter `Host`-Header und ein Suffix-Host wie `hosting.<domain>.fremd.example` werden abgewiesen, bevor ein Tenant geladen wird. Eine Sitzung des vorherigen Tenants ist nach einem Slotwechsel wertlos.
+- **Quellimmutabilität:** Der Hash der Website-Quelle ohne Buildausgaben ist vor und nach mehreren Builds identisch. Ein vorhandenes `dist/` der Quelle wird nicht überschrieben.
+- **Fehlerfall:** Ein fehlgeschlagener oder parallel gestarteter Build lässt den aktiven Release unverändert; der gescheiterte Kandidat hinterlässt kein Releaseverzeichnis.
+- **Passwortgate und noindex:** Die Staging-Domain verlangt Basic Auth, liefert `X-Robots-Tag: noindex, nofollow, noarchive` und eine sperrende `robots.txt`. Die ACME-Challenge auf Port 80 bleibt unverändert erreichbar.
+- **Rollback:** Ein früherer Inhaltsstand wird neu gebaut, besteht die Prüfungen und ersetzt den aktiven Release vollständig; ebenso ist der Rollback der nginx-Konfiguration praktisch getestet.
+- **Unabhängigkeit:** Bei gestopptem Dashboard und gestoppter Datenbank bleibt die öffentliche Website statisch erreichbar.
+- **Vertragsgrenzen:** Nicht registrierte Pointer, Rechtstexte, Pfadtraversal, aus dem Baum zeigende Symlinks und freie Shellbefehle werden abgewiesen. Der Release enthält weder `_hosting` noch Secrets, interne Pfade oder Server-Logs.
+- **Rechtsbezug:** Ändert ein Entwurf ein Feld mit `legalImpact`, verlangt das Dashboard vor dem Veröffentlichen eine sichtbare, ausdrücklich bestätigte Prüfung.
+
 ## Nachweis
 
 Jeder Gate-Check verweist auf Test, Screenshot, Report oder dokumentierte manuelle Prüfung mit Datum, Environment und Prüfer. „Sieht gut aus“ ist kein Nachweis. Für sichtbare UI-Fehler ist ein echter Rendernachweis zwingend; kann er nicht erzeugt werden, wird dies vor Lieferung als Blocker gemeldet.

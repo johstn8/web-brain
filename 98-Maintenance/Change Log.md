@@ -9,6 +9,33 @@ updated: 2026-08-17
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
 
+## 2026-08-17 — Deployment-Slots, Staging-Domain und erste gebaute Fassung des Owner-Hostings
+
+Auslöser war der Auftrag, `johannstein.de` von der Weiterleitung auf `johannstein.com` zu lösen und als Testumgebung für jeweils eine ausgewählte Website zu betreiben, mit Dashboard unter `hosting.johannstein.de` und Steuerung über eine rote Kachel auf `/dev`. Bis dahin beschrieb das Brain das Owner-Hosting nur als Zielarchitektur; ein Modell für „ein Host, wechselnde Website“ fehlte.
+
+**Diagnose:** Ohne eigene Entität hätte die Zieladresse entweder als weiterer Katalogstatus geführt werden müssen, womit jede Website Anspruch auf sie gehabt hätte, oder als Pseudo-Tenant, womit Historien, Verträge und Zugänge verschiedener Websites vermischt worden wären. Zusätzlich fehlte eine Regel für Altprojekte, die das Hosting nicht kennen und laut Auftrag nicht geändert werden dürfen.
+
+**Kanonisch neu**
+
+- [[60-Operations/Owner Hosting and Dashboard#Deployment-Slots]] führt den Deployment-Slot als getrennte Entität zwischen Host und Tenant ein: zwei Hosts, genau ein Tenant, genau ein Release, ein vorgemerkter Kandidat. Öffentlicher Release und Dashboard-Tenant wechseln atomar gemeinsam; Sitzungen sind an den Tenant gebunden und nach einem Wechsel wertlos. Ein Wechsel läuft immer in zwei Schritten.
+- Passwortgeschützte Staging-Domains sind beschrieben: eigenes Basic Auth außerhalb der Repositories, `noindex` an zwei Stellen, ACME-Challenge ausgenommen. `noindex` fällt erst nach ausdrücklicher Entscheidung, unabhängig vom Passwortschutz.
+- Der Legacy-Adapter ist als eng begrenzte Ausnahme für unveränderliche Altprojekte kanonisiert: isolierte Kopie, gepinnter Quellhash, kein Schreiben in die Quelle, zusätzlich erzwungen über `ProtectSystem=strict`. Fest im Quelltext hinterlegte Kontaktdaten werden als Warnung gemeldet statt durch Änderung der Quelle „behoben“.
+- Websites ohne Editorvertrag bekommen ein ehrlich schreibgeschütztes Dashboard. Bearbeitbare Felder werden nie aus Text oder HTML erraten.
+- [[60-Operations/Delivery and Local Start#Test-Slot johannstein.de]] beschreibt die rote Zielfläche als einzelnes Deployment-Ziel, ausdrücklich keine vierte Lane. Eine abgelegte Archivfassung bleibt im Archiv; `catalog.json` wird nicht umgedeutet. Der Browser überträgt nur den Katalogschlüssel `group/project/variant`.
+- [[60-Operations/Delivery and Local Start#Keine Hosting-Subdomain für Unterseiten-Vorschauen]] entscheidet die offene Frage: Unterseiten-Vorschauen auf `.com` erhalten kein simuliertes Dashboard und keine nachgebildete Subdomain. Nur die im Slot aktive Fassung hat ein Dashboard.
+- [[80-Templates/Owner Hosting Website Contract#Legacy-Bridge-Vertrag als Ausnahme]] dokumentiert den von außen beschriebenen Vertrag samt `legalImpact`-Pflichtbestätigung. Neue Websites verwenden weiterhin den regulären Content-Loader.
+- [[70-QA/Quality Gates]] und [[70-QA/Test Matrix]] prüfen Slotwechsel, atomaren Doppelwechsel, Cross-Tenant-Hostbindung, Quellimmutabilität, Passwortgate, `noindex`, Rollback und die Unabhängigkeit der öffentlichen Website.
+
+**Erste gebaute Fassung**
+
+`/srv/Web-Design/projekte/owner-hosting/` existiert jetzt und ist nicht mehr nur Zielarchitektur. Zwei begründete Abweichungen sind in [[60-Operations/Owner Hosting and Dashboard#Verbindliche Architekturentscheidung]] als Umsetzungsstand vermerkt: ein Dienst statt zweier getrennter Units, mit der Trennung stattdessen an zwei Sockets mit eigenen Gruppen, und SQLite über `node:sqlite` statt PostgreSQL, da auf dem Server keines installiert ist. Schema, Hostauflösung, Vertragsgrenzen und Buildisolation bleiben unverändert. Der Dienst hat keine Laufzeitabhängigkeiten außerhalb der Node-Standardbibliothek und läuft ohne Netzwerkzugang.
+
+Pilot ist `Old-Projects/Fahrschule-Kladow_v4/versions/01-uferlinie` mit einem Legacy-Vertrag über Telefon, Mobil, E-Mail, Bürozeiten und den Schalter der Stellenanzeige. Der Quellhash ohne Buildausgaben ist `5ddc5924ea92a8fb343706efaf9cc519ebe290f2a2898146451b342a62bf0464`, der Hash des vorhandenen `dist/` `385d38a19363c1296420069105f8e64cbad85d6d3a814ad0f83cfa14af781032`; beide blieben über mehrere Builds und einen Rollback unverändert. Die im vorherigen Handoff genannten Vergleichswerte waren mit keiner reproduzierbaren Berechnung nachvollziehbar und wurden durch die hier dokumentierte ersetzt.
+
+**Propagation und Prüfung:** Owner Hosting and Dashboard, Delivery and Local Start, Quality Gates, Test Matrix, Owner Hosting Website Contract, Coverage and Impact Map und dieser Change Log wurden gemeinsam aktualisiert.
+
+**Graphify weiterhin vertagt:** Die Vertagung vom 17. August 2026 gilt unverändert fort. `graphify-out/` bleibt auf dem Stand von 541 Knoten und bildet auch diese Änderung nicht ab. Vor der nächsten graphgestützten Strukturabfrage muss der Graph mit einem verfügbaren LLM-Backend neu gebaut und der Shrink-Schutz geprüft werden.
+
 ## 2026-08-17 — Variationszwang, Owner Hosting und serverbasierte Developer-Plattform
 
 Auslöser war die Durchsicht von `Old-Projects/Fahrschule-Kladow_v5`: Die drei Fassungen waren formal verschieden, wirkten aber wegen derselben Karten-, Radius-, Header-, Typografie- und Motion-Sprache wie Varianten desselben Systems. Gleichzeitig fehlten ein kanonisches Owner-Hosting-Modell und eine belastbare Einordnung der Server-Vorschauen.

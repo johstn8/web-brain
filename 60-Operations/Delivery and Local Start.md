@@ -106,6 +106,26 @@ Der Veröffentlichungsstatus ist Metadatenstatus, kein Datei-Move. Er wird atoma
 
 `/srv/Web-Design/vorschau` bleibt vorerst als Legacy-Quelle eingebunden. Seine vorhandenen Einträge starten im Bereich „Zur Veröffentlichung vorgesehen“, bilden aber keine vierte Übersicht. Der bestehende Basic-Auth-Schutz für direkte Legacy-Zugriffe bleibt erhalten, bis die Inhalte bewusst in `projekte/` migriert sind. Die Anmeldung von `/dev`, einzelne passwortgeschützte Freigabeadressen und `noindex` bleiben unabhängig davon unverändert.
 
+### Test-Slot johannstein.de
+
+Oberhalb der drei Übersichten steht eine rote Zielfläche. Sie ist **keine vierte Lane**, sondern ein einzelnes Deployment-Ziel nach [[60-Operations/Owner Hosting and Dashboard#Deployment-Slots]]:
+
+- Genau eine Website ist gleichzeitig unter `johannstein.de` aktiv, mit Dashboard unter `hosting.johannstein.de`.
+- Jede erkannte Fassung darf hierher gezogen werden, auch eine unveränderliche Archivfassung. Sie bleibt dabei in ihrem Bereich; der Veröffentlichungsstatus in `catalog.json` wird nicht angefasst und nicht umgedeutet.
+- Ein Drop legt nur einen Kandidaten fest und zeigt Quelle, Fassung, betroffene Adressen und den bisherigen Release. Erst ein zweiter, klar beschrifteter Klick startet Build und Umschaltung.
+- Drag and Drop hat wie bei den Übersichten eine sichtbare, gleichwertige Tastatur- und Buttonbedienung. Auch Archivkacheln tragen diese Schaltfläche.
+- Während eines Jobs sind Doppelstarts blockiert; ein zwischenzeitlich geänderter Kandidat wird als Konflikt gemeldet statt still ersetzt.
+- Der Browser überträgt ausschließlich den stabilen Katalogschlüssel `group/project/variant`. Absolute Pfade aus dem Browser sind verboten; der Server entdeckt die Website neu und prüft sie gegen die erlaubten Wurzeln.
+- Fällt der Hosting-Dienst aus, bleibt `/dev` vollständig benutzbar. Die rote Fläche meldet dann verständlich, dass sie den Dienst nicht erreicht.
+
+Der Test-Slot ist ausdrücklich getrennt von „Zur Veröffentlichung vorgesehen“. Der eine ist ein Deployment-Ziel, der andere ein Metadatenstatus im Katalog.
+
+### Keine Hosting-Subdomain für Unterseiten-Vorschauen
+
+Fassungen, die unter `johannstein.com/dev/site/…` betrachtet werden, erhalten **kein** simuliertes Hosting-Dashboard und keine nachgebildete Subdomain. Hostbindung, Cookies, relative Pfade und Tenant-Sicherheit würden dort gegeneinander arbeiten, und ein Dashboard ohne echten Tenant wäre eine Attrappe.
+
+Die Website-Vorschau bleibt wie bisher erreichbar. Ein Dashboard-Link fehlt dort oder ist deaktiviert, mit dem Hinweis, dass das Hosting-Dashboard nur für die aktuell im Test-Slot bereitgestellte Fassung verfügbar ist.
+
 Die öffentliche Freigabefunktion referenziert weiterhin die konkrete Quellgruppe, das Projekt und die Fassung. Eine Statusverschiebung ändert weder Freigabeadresse noch Dateipfad.
 
 ## Owner-Hosting

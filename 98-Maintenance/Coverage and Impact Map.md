@@ -107,6 +107,10 @@ Aktualisiere [[60-Operations/Owner Hosting and Dashboard]], [[80-Templates/Owner
 
 Aktualisiere [[60-Operations/Delivery and Local Start]], Source-Roots, Statusspeicher unter `.runtime/previews/`, AuthZ, noindex, Freigaberouten, Tastaturbedienung und Build-/Smoke-Tests. `Old-Projects` bleibt Archiv; `vorschau` ist Legacy-Quelle im Veröffentlichungsbereich und keine vierte Übersicht.
 
+### Deployment-Slot, Staging-Domain oder Legacy-Adapter
+
+Aktualisiere [[60-Operations/Owner Hosting and Dashboard#Deployment-Slots]], [[60-Operations/Delivery and Local Start#Test-Slot johannstein.de]], [[70-QA/Quality Gates]], [[70-QA/Test Matrix]] und [[80-Templates/Owner Hosting Website Contract#Legacy-Bridge-Vertrag als Ausnahme]]. Prüfe dabei DNS, Zertifikatsabdeckung aller Hosts, nginx-Rollback, Basic Auth gegen ACME-Erreichbarkeit, `noindex` an beiden Stellen (nginx-Header und Release-`robots.txt`), Socketrechte je Gruppe sowie `ReadWritePaths` beider betroffener Units. Der Quellhash jedes über einen Legacy-Adapter gebauten Projekts wird vor und nach der Änderung verglichen und im Change Log festgehalten.
+
 ### Neue externe Abhängigkeit
 
 Aktualisiere Abhängigkeitsinventar, Lizenz, Versionierung, Datenflüsse, CSP-/Netzwerkbedarf, Sicherheitsprüfung, Startskripte und Updateplan.

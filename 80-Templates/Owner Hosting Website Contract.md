@@ -216,6 +216,22 @@ Der Typkatalog umfasst mindestens `short_text`, `long_text`, `email`, `tel`, `ur
 - [ ] Capabilities stimmen mit Code, Dateninventar und aktivierten Adaptern überein.
 - [ ] `PROJECT.md` dokumentiert Verantwortlichkeiten, Aufbewahrung, Rollback und offene Produktentscheidungen.
 
+## Legacy-Bridge-Vertrag als Ausnahme
+
+Der reguläre Weg oben gilt für alle neuen Websites: Sie bringen `content/<website>.json` und `owner-hosting/tenant.json` selbst mit, und ihr Content-Loader akzeptiert `OWNER_HOSTING_CONTENT_FILE`.
+
+Für **unveränderliche Altprojekte** gibt es eine eng begrenzte Ausnahme. Ein Altprojekt kennt das Owner-Hosting nicht, liest seine Inhaltsdatei über einen festen Pfad und darf nicht geändert werden. Der Vertrag wird dann **von außen** beschrieben und liegt zentral im Owner-Hosting-Bestand statt im Projekt:
+
+- Der Vertrag ist Code in `packages/contracts/`, keine Daten in der Datenbank. Er kann deshalb nicht über das Dashboard erweitert werden.
+- Er listet jeden bearbeitbaren Pointer mit Typ, Grenzen, Hilfetext und den betroffenen Stellen der Website auf. Was nicht aufgeführt ist, existiert für den Eigentümer nicht.
+- Jeder Pointer muss in der Quelldatei bereits existieren. Overlays legen keine neuen Ebenen an; ein Vertrag kann keine Felder erfinden, die die Website gar nicht rendert.
+- Pointer mit `legalImpact` erscheinen auch in Impressum oder Datenschutzerklärung. Für sie verlangt das Dashboard vor dem Veröffentlichen eine sichtbare, ausdrücklich bestätigte Rechtsprüfung. Alternativ bleibt das Feld im ersten Pilot gesperrt.
+- Gebaut wird über einen Legacy-Buildadapter nach [[60-Operations/Owner Hosting and Dashboard#Legacy-Adapter für unveränderliche Altprojekte]]: isolierte Kopie, gepinnter Quellhash, kein Schreiben in die Quelle.
+
+Ein Legacy-Vertrag beginnt bewusst klein. Für den ersten vertikalen Schnitt genügen Kontaktwege, strukturierte Öffnungszeiten und ein Schalter. Rechtstexte, Navigation, Routen, Preise, Tracking und Buildkonfiguration bleiben gesperrt.
+
+Die Ausnahme wird nicht ausgeweitet. Sobald ein Altprojekt ohnehin überarbeitet wird, erhält es den regulären Vertrag.
+
 ## Vertragssynchronisierung bei Website-Updates
 
 Im `PROJECT.md` wird je Synchronisierung protokolliert:

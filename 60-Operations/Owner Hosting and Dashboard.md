@@ -55,6 +55,15 @@ Die Webanwendung und der Build-Worker laufen als getrennte Dienste und Benutzer:
 - `owner-hosting-worker`: nimmt unveränderliche, einem Mandanten zugeordnete Jobs an; darf nur in temporäre Buildverzeichnisse und die Laufzeitpfade des betroffenen Mandanten schreiben.
 - `www-data`: liest ausschließlich den aktiven öffentlichen Release; kein Zugriff auf Entwürfe, Konten, Tokens oder Quellcode.
 
+> [!note] Stand der Umsetzung, 17. August 2026
+> Die erste gebaute Fassung weicht in zwei Punkten begründet ab. Die Sicherheitsgrenzen bleiben dabei unverändert.
+>
+> **Ein Dienst statt zwei.** Dashboard, Control Plane und Worker laufen als ein Prozess unter dem Benutzer `owner-hosting`. Zwei Dienste bräuchten eine zweite Unit, einen zweiten Benutzer und einen Kanal dazwischen; für einen Slot mit einer aktiven Website ist das mehr Betriebsfläche als Nutzen. Die Trennung, auf die es ankommt, wurde stattdessen an den Sockets gezogen: `dashboard.sock` gehört der Gruppe `owner-hosting-web` und ist nur für `www-data` erreichbar, `control.sock` der Gruppe `owner-hosting-ctl` und nur für `web-johannstein`. Der Control-Socket ist in keiner nginx-Konfiguration eingebunden. Der Schutz der Quellen liegt bei `ProtectSystem=strict` mit drei `ReadWritePaths`, nicht bei der Benutzertrennung. Eine spätere Aufteilung in zwei Units bleibt möglich.
+>
+> **SQLite statt PostgreSQL.** Auf `217.154.218.30` ist kein PostgreSQL installiert. Für einen Slot mit einer aktiven Website liefert `node:sqlite` Transaktionen und WAL-Modus ohne zweiten Serverprozess und ohne Netzwerkgrenze. Alle Zugriffe laufen über ein Modul; ein Wechsel auf PostgreSQL betrifft nur dieses. Das Schema ist unverändert das hier beschriebene.
+>
+> Der Dienst hat keine Laufzeitabhängigkeiten außerhalb der Node-Standardbibliothek und läuft mit `PrivateNetwork=yes` ohne jeden Netzwerkzugang.
+
 Ein fester Projektport je Kundenwebsite entsteht dadurch nicht. Das Dashboard ist ein zentraler Infrastrukturdienst am Unix-Socket, der Worker besitzt keinen öffentlichen Listener.
 
 ## Ablage von Code, Geheimnissen und Mandantendaten
@@ -108,6 +117,59 @@ Registrar
 - Öffentliche Website und Wartungsseite funktionieren auch dann, wenn Dashboard, Datenbank oder externe APIs ausfallen.
 
 Damit bleibt die Core Rule „statische Auslieferung ohne Laufzeitabhängigkeit“ erhalten: Dynamik existiert im getrennten Verwaltungs- und Veröffentlichungsweg, nicht beim Seitenaufruf.
+
+## Deployment-Slots
+
+Ein **Deployment-Slot** ist eine eigene Entität zwischen Host und Tenant. Er bindet einen öffentlichen Host und einen Dashboard-Host an genau einen Tenant und genau einen Release:
+
+```text
+deployment_slot
+  public_host        eine öffentliche Domain
+  dashboard_host     die zugehörige hosting.<domain>
+  active_tenant_id   serverseitig, genau einer
+  active_release_id  serverseitig, genau einer
+  candidate_tenant_id  vorgemerkt, noch nicht veröffentlicht
+  gate_policy        protected | public
+  robots_policy      noindex bei Testumgebungen
+```
+
+Ohne diese Entität gäbe es nur zwei schlechte Möglichkeiten: die Zieladresse als weiteren Katalogstatus zu führen, womit jede Website Anspruch auf sie hätte, oder einen Pseudo-Tenant für wechselnde Websites, womit Historien, Verträge und Zugänge verschiedener Websites vermischt würden. Beides ist ausgeschlossen.
+
+Verbindlich:
+
+- Ein Host bleibt serverseitig eindeutig einem Slot zugeordnet. Über einen ausdrücklich bestätigten Slotwechsel darf derselbe Host einem anderen Tenant zugeordnet werden.
+- Jede Website behält ihre eigene `tenant_id` mit eigener Vertrags-, Draft- und Releasehistorie. Ein Slotwechsel führt Historien nicht zusammen.
+- Öffentlicher Release und Dashboard-Tenant werden **atomar gemeinsam** umgeschaltet. Es darf keinen Zeitpunkt geben, an dem die öffentliche Website zu einer anderen Website gehört als das Dashboard.
+- Sitzungen sind an den Tenant gebunden. Nach einem Slotwechsel sind bestehende Dashboard-Sitzungen wertlos, ohne dass sie einzeln gelöscht werden müssten.
+- Ein Wechsel läuft immer in zwei Schritten: Vormerken zeigt nur an, was passieren würde; erst eine ausdrückliche zweite Bestätigung startet Build und Umschaltung.
+- Ein fehlgeschlagener oder parallel gestarteter Kandidat lässt den aktiven Release vollständig unverändert.
+
+### Passwortgeschützte Staging-Domain
+
+Ein Slot, der als Testumgebung dient, wird zusätzlich abgesichert:
+
+- Zugriffsschutz über ein eigenes nginx-Basic-Auth, ausdrücklich **nicht** das Passwort der Developer-Plattform. Die htpasswd-Datei liegt außerhalb aller Repositories.
+- `X-Robots-Tag: noindex, nofollow, noarchive` bei jeder Auslieferung, zusätzlich eine `robots.txt` im Release, die den gesamten Auftritt sperrt. Der Worker schreibt sie unabhängig davon, was das Projekt selbst erzeugt hat, und entfernt eine vorhandene `sitemap.xml`.
+- Die ACME-Challenge auf Port 80 bleibt vom Passwortschutz ausgenommen, sonst bricht die Zertifikatserneuerung.
+- `noindex` wird erst nach einer ausdrücklichen Entscheidung entfernt, unabhängig davon, ob der Passwortschutz fällt.
+
+### Legacy-Adapter für unveränderliche Altprojekte
+
+Eng begrenzte Ausnahme für Projekte, die das Owner-Hosting nicht kennen und nicht geändert werden dürfen:
+
+- Der Quellpfad wird ausschließlich serverseitig aus einer Registry aufgelöst, nie aus einer Anfrage übernommen.
+- Der Quellhash wird gegen die registrierte Fassung geprüft und im Joblog geführt.
+- Gebaut wird in einer isolierten Kopie ohne die vorhandenen `dist/`-Ordner. Die aufgelöste Inhaltsdatei entsteht nur dort.
+- In die Quelle wird nie geschrieben. Das wird zusätzlich durch `ProtectSystem=strict` mit ausdrücklich aufgezählten `ReadWritePaths` erzwungen, nicht allein durch Wohlverhalten des Adapters.
+- Trägt ein Altprojekt dieselben Angaben zusätzlich fest im Quelltext, ändern sie sich beim Bearbeiten nicht mit. Solche Stellen werden als Warnung im Joblog gemeldet, nicht stillschweigend hingenommen und nicht durch Änderung der Quelle „behoben“.
+
+Der Adapter ist kein Muster für neue Websites. Neue Websites verwenden weiterhin den regulären Content-Loader mit `OWNER_HOSTING_CONTENT_FILE`.
+
+### Dashboard ohne Vertrag
+
+Wird eine Website ohne registrierten Editorvertrag in einen Slot gelegt, läuft ihr Dashboard in einem ehrlich schreibgeschützten Betriebsmodus: Zustand, Release, Erreichbarkeit und Verlauf sind sichtbar, Formulare gibt es nicht.
+
+Bearbeitbare Felder werden **niemals** aus vorhandenem Text oder HTML erraten. Welche Felder editierbar sind, wird serverseitig festgelegt oder es gibt keine.
 
 ## Pflichtfrage bei Erstellung und Update
 
