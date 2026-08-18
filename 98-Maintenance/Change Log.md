@@ -1,13 +1,38 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-18
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
+
+## 2026-08-18 — Eine Eingabe je Angabe, Kontaktweg vor Versandweg, Search Console ehrlich benannt
+
+Auslöser war die Beobachtung im laufenden Dashboard, dass Telefonnummern zwei Felder brauchten — eines für die Anzeige, eines zum Anwählen — und dass der Owner die Lücken selbst setzen musste. Dazu kamen springende Seitenränder zwischen den Unterseiten, ein fehlender Kontaktweg zum Betreiber und die Frage, wie ein Search-Console-Zugang überhaupt hinterlegt werden kann.
+
+**Diagnose:** Zwei Felder für dieselbe Angabe sind kein Komfortproblem, sondern eine Fehlerquelle mit stillem Ausgang. Wer die sichtbare Nummer ändert und die Wählform vergisst, hat eine Website, auf der der Anruf-Link zum alten Anschluss führt; beide Werte sehen für sich gültig aus, und auf der Seite ist nichts zu sehen. Beim Prüfen fiel zusätzlich auf, dass die Konsistenzprüfung des Releases bis dahin nur E-Mail-Adressen abglich und eine fest im Quelltext stehende Rufnummer deshalb nicht meldete.
+
+**Kanonisch neu**
+
+- [[60-Operations/Owner Hosting and Dashboard#Eine Angabe ist ein Feld]]: Ein Feldtyp darf mehrere registrierte Pointer schreiben und leitet sie aus einer Eingabe ab. Der Owner gibt die fachliche Angabe ein, nicht ihre Darstellungsform. Browser- und Serverformatierung sind dieselbe Implementierung, nicht zwei gleichlautende. Deutsche Rufnummern folgen DIN 5008; willkürliche Blockgrenzen innerhalb der Teilnehmernummer werden nicht erfunden.
+- Der Typkatalog kennt `phone` mit `pointers` statt `pointer`; ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Kanonisch in [[80-Templates/Owner Hosting Website Contract#Der Typ phone schreibt zwei Pointer]].
+- [[60-Operations/Owner Hosting and Dashboard#Vertragsänderungen und bereits veröffentlichte Werte]]: Gespeicherte Wertesätze werden beim Laden auf die aktuelle Vertragsfassung gehoben, nicht in der Datenbank überschrieben. Eine Revision ist ein Beleg und wird nicht nachträglich verändert. Ein Rollback über eine Formänderung hinweg ist ein eigener Testfall.
+- [[60-Operations/Owner Hosting and Dashboard#Formular vor Versandweg]]: Ein Formular darf vor der Entscheidung über den Versandweg gebaut werden, wenn die Anfrage serverseitig ankommt, ihr Zustellzustand ein eigenes Feld ist und im UI steht, und der Betreiber einen belegten Weg hat, sie zu lesen. Ein Formular, das nur eine Erfolgsmeldung zeigt, ist schlechter als keines.
+- [[60-Operations/Owner Hosting and Dashboard#Ein API-Schlüssel genügt nicht]]: Die Search Console API verlangt ein autorisiertes Konto, kein API-Schlüssel-Projekt. Verwendet wird ein Dienstkonto; seine Schlüsseldatei liegt mit Rechten `0600` neben der Datenbank statt darin, damit ein Datenbank-Backup keine fremden Zugangsdaten enthält, und wird nie zurückgezeigt.
+- [[60-Operations/Owner Hosting and Dashboard#Drei Zustände, nicht zwei]]: `aus`, `hinterlegt`, `aktiv`. Zugangsdaten hinterlegen und Daten abrufen sind verschiedene Dinge. Die Netzwerkisolierung des Dienstes wird für eine Statistik nicht aufgehoben; ein Abruf braucht einen eigenen, ausschließlich für Google freigegebenen Weg. Ohne Abruf zeigt das Dashboard Striche mit Begründung, keine Beispielzahlen.
+- [[60-Operations/Owner Hosting and Dashboard#Dashboard-Bereiche]]: Der Seitenrahmen ist auf allen Unterseiten identisch. Der Platz der Bildlaufleiste bleibt reserviert, die Kopfzeile steht in festen Spalten. Ein springender Rahmen entzieht einer Verwaltungsoberfläche das Vertrauen, bevor jemand ihn benennen kann.
+- Die Konsistenzprüfung des Legacy-Adapters umfasst alle Kontaktangaben des Vertrags, nicht nur E-Mail-Adressen; Rufnummern werden ziffernreduziert verglichen. Warnungen erscheinen sichtbar im Protokoll der Fassung, nicht nur als Zeile im Joblog.
+
+**In der gebauten Fassung**
+
+Der Pilot Uferlinie v4 hat statt vier Telefonfeldern zwei: Land und Nummer für Festnetz und Mobil. Ein Build mit geänderter Nummer belegt, dass `betrieb.telefon.anzeige` und `betrieb.telefon.tel` gemeinsam geschrieben werden. Dabei trat die erwartete Legacy-Grenze zutage: `src/pages/contact.mjs` trägt die Rufnummer zusätzlich fest in `kontaktDescription`. Die Quelle wurde nicht angefasst; die Prüfung meldet die Stelle jetzt namentlich als Warnung. Neu sind außerdem die Dashboard-Bereiche „Kontakt“ und „Suchmaschine“ sowie die CLI-Befehle `support:list`, `support:show`, `support:status` und `integrations`.
+
+**Propagation und Prüfung:** Owner Hosting and Dashboard, Owner Hosting Website Contract, Coverage and Impact Map und dieser Change Log wurden gemeinsam aktualisiert. Selbsttest 29 von 29, dazu ein Durchlauf über HTTP von Anmeldung bis Veröffentlichungsvergleich und ein echter Legacy-Build. Alle internen Verweise des Vaults lösen auf.
+
+**Graphify weiterhin offen, jetzt mit benannter Ursache.** `graphify-out/` steht unverändert auf dem Stand vom 16. August 2026 mit 541 Knoten und bildet weder die Änderung vom 17. noch diese ab. Der Grund ist keine Entscheidung, sondern eine fehlende Voraussetzung: Die semantische Extraktion braucht entweder einen gesetzten `GEMINI_API_KEY` beziehungsweise `GOOGLE_API_KEY` oder Subagenten des Hosts; beides stand in dieser Sitzung nicht zur Verfügung. Der Cache deckt 35 der 64 Inhaltsdateien ab, 29 sind neu zu lesen — darunter Core Rules, Routing Map, Owner Hosting and Dashboard, Quality Gates und dieser Change Log. Vor der nächsten graphgestützten Strukturabfrage ist der Graph neu zu bauen und der Shrink-Schutz zu prüfen. Bis dahin sind Antworten aus dem Graphen zu diesen Notizen veraltet, und es ist breit zu suchen statt abzufragen.
 
 ## 2026-08-17 — Deployment-Slots, Staging-Domain und erste gebaute Fassung des Owner-Hostings
 

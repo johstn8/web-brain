@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-18
 depends_on:
   - "[[60-Operations/Owner Hosting and Dashboard]]"
 impacts:
@@ -86,13 +86,15 @@ Preview und Veröffentlichung müssen denselben Content-Loader und dieselbe Komp
         "preview_routes": ["/", "/kontakt"],
         "fields": {
           "phone": {
-            "pointer": "/business/phone",
+            "pointers": {
+              "anzeige": "/business/phone/display",
+              "tel": "/business/phone/dial"
+            },
             "label": "Telefonnummer",
-            "type": "tel",
+            "type": "phone",
             "required": true,
-            "max_length": 40,
-            "help": "Mit Vorwahl, wie sie öffentlich erscheinen soll.",
-            "example": "+49 30 123456",
+            "help": "Nur die Ziffern ohne führende Null.",
+            "example": "30 123456",
             "publish_policy": "owner_confirm",
             "responsible": "owner",
             "risk": "medium",
@@ -157,7 +159,7 @@ Preview und Veröffentlichung müssen denselben Content-Loader und dieselbe Komp
     }
   },
   "business": {
-    "phone": "+49 30 123456",
+    "phone": { "display": "030 123456", "dial": "+4930123456" },
     "email": "kontakt@example.de"
   },
   "opening_hours": {
@@ -189,7 +191,7 @@ Preview und Veröffentlichung müssen denselben Content-Loader und dieselbe Komp
 
 | Attribut | Regel |
 |---|---|
-| stabiler Feldschlüssel und `pointer` | Berechtigung, Historie und Migration hängen daran |
+| stabiler Feldschlüssel und `pointer` beziehungsweise `pointers` | Berechtigung, Historie und Migration hängen daran |
 | `label`, `help`, optional `example` | keine Builder-Fachsprache |
 | `type` | aus dem zentral unterstützten Typkatalog |
 | Validierungsgrenzen | passend zum Typ; keine nur clientseitige Grenze |
@@ -198,7 +200,28 @@ Preview und Veröffentlichung müssen denselben Content-Loader und dieselbe Komp
 | `risk` | `low`, `medium` oder `high` |
 | `privacy_ref` | ID im Dateninventar oder `null` |
 
-Der Typkatalog umfasst mindestens `short_text`, `long_text`, `email`, `tel`, `url`, `integer`, `decimal`, `money`, `date`, `time`, `weekly-hours`, `select`, `multi_select`, `boolean`, `image`, `image_list` und validierte strukturierte Listen. Ein unbekannter Typ ist ein Registrierungsfehler, kein generisches Textfeld.
+Der Typkatalog umfasst mindestens `short_text`, `long_text`, `email`, `phone`, `url`, `integer`, `decimal`, `money`, `date`, `time`, `weekly-hours`, `select`, `multi_select`, `boolean`, `image`, `image_list` und validierte strukturierte Listen. Ein unbekannter Typ ist ein Registrierungsfehler, kein generisches Textfeld.
+
+### Der Typ phone schreibt zwei Pointer
+
+Eine Telefonnummer steht in der Inhaltsdatei zweimal: als Text für die Anzeige und in E.164-Form für den `tel:`-Link. Sie bleibt trotzdem **ein** Feld. Der Typ `phone` deklariert deshalb `pointers` statt `pointer`:
+
+```json
+"phone": {
+  "type": "phone",
+  "pointers": { "anzeige": "/business/phone/display", "tel": "/business/phone/dial" },
+  "label": "Telefonnummer",
+  "help": "Nur die Ziffern ohne führende Null.",
+  "required": true,
+  "publish_policy": "owner_confirm",
+  "responsible": "owner",
+  "risk": "medium"
+}
+```
+
+Der Owner wählt links das Land und tippt rechts die nationale Nummer ohne führende Null; Trennzeichen setzt das Feld. Beide Pointer werden daraus gemeinsam geschrieben. Beide Zielpointer müssen in den Basiswerten existieren.
+
+Ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Begründung und Regeln in [[60-Operations/Owner Hosting and Dashboard#Eine Angabe ist ein Feld]].
 
 ## Builder-Checkliste vor Registrierung
 
@@ -206,6 +229,7 @@ Der Typkatalog umfasst mindestens `short_text`, `long_text`, `email`, `tel`, `ur
 - [ ] Für jeden Block ist `owner_editable` bewusst entschieden.
 - [ ] Kein Rechtstext, Tracking-, Consent-, Rollen-, Navigations- oder Buildfeld ist frei editierbar.
 - [ ] Jeder editierbare Pointer existiert in den Basiswerten und liegt innerhalb seines Blocks.
+- [ ] Angaben, die in mehreren Formen in der Datei stehen, bilden ein Feld mit mehreren Pointern, nicht mehrere Felder.
 - [ ] Labels, Hilfen, Beispiele und Fehlergrenzen sind für einen Owner verständlich.
 - [ ] Preview-Routen decken Desktop und Mobil ab.
 - [ ] Lange Texte und Bilder wurden gegen reale Layoutgrenzen geprüft.

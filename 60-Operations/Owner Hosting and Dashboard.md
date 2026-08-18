@@ -1,8 +1,8 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
-review_by: 2027-02-17
+updated: 2026-08-18
+review_by: 2027-02-18
 depends_on:
   - "[[60-Operations/Delivery and Local Start]]"
   - "[[40-Backend-Security/Authentication and Accounts]]"
@@ -162,6 +162,8 @@ Eng begrenzte Ausnahme für Projekte, die das Owner-Hosting nicht kennen und nic
 - Gebaut wird in einer isolierten Kopie ohne die vorhandenen `dist/`-Ordner. Die aufgelöste Inhaltsdatei entsteht nur dort.
 - In die Quelle wird nie geschrieben. Das wird zusätzlich durch `ProtectSystem=strict` mit ausdrücklich aufgezählten `ReadWritePaths` erzwungen, nicht allein durch Wohlverhalten des Adapters.
 - Trägt ein Altprojekt dieselben Angaben zusätzlich fest im Quelltext, ändern sie sich beim Bearbeiten nicht mit. Solche Stellen werden als Warnung im Joblog gemeldet, nicht stillschweigend hingenommen und nicht durch Änderung der Quelle „behoben“.
+- Die Prüfung umfasst **alle** Kontaktangaben des Vertrags, nicht nur E-Mail-Adressen. Rufnummern werden auf reine Ziffern reduziert verglichen, sonst gälte jede andere Schreibweise derselben Nummer als Abweichung.
+- Warnungen erscheinen zusätzlich sichtbar im Protokoll der Fassung, nicht nur als Zeile im Joblog. Ein Protokoll liest niemand Zeile für Zeile; eine dort begrabene Warnung wirkt wie keine.
 
 Der Adapter ist kein Muster für neue Websites. Neue Websites verwenden weiterhin den regulären Content-Loader mit `OWNER_HOSTING_CONTENT_FILE`.
 
@@ -196,6 +198,25 @@ Für jedes Feld beziehungsweise jeden Block sind mindestens zu erfassen:
 | Datenschutz-/Rechtsbezug | Verweis ins Dateninventar und auf prüfpflichtige Texte |
 
 Das Dashboard vertraut dem Schema nicht clientseitig. Erlaubte Pfade, Typen und Grenzen werden beim Speichern und Veröffentlichen serverseitig erneut geprüft.
+
+### Eine Angabe ist ein Feld
+
+Manche Angaben stehen in der Inhaltsdatei mehrfach, weil die Website sie in verschiedenen Formen braucht. Eine Telefonnummer ist der Regelfall: als Text für die Anzeige und in E.164-Form für den `tel:`-Link.
+
+**Solche Formen werden niemals zu zwei Owner-Feldern.** Zwei Felder für dieselbe Angabe erzeugen einen Zustand, den niemand bemerkt: Der Owner ändert die sichtbare Nummer, vergisst die Wählform, und der Anruf-Link führt weiter zum alten Anschluss. Der Fehler ist auf der Website unsichtbar, weil beide Werte für sich gültig aussehen.
+
+Verbindlich:
+
+- Ein Feldtyp darf mehrere registrierte Pointer schreiben. Sie werden gemeinsam aus **einer** Eingabe abgeleitet und gemeinsam geschrieben.
+- Der Owner gibt die fachliche Angabe ein, nicht ihre Darstellungsform. Bei Telefonnummern heißt das: Land aus einer Liste, nationale Nummer ohne führende Null. Trennzeichen setzt das Feld.
+- Die Formatierung im Browser und die auf dem Server sind **dieselbe** Implementierung, nicht zwei gleichlautende. Andernfalls zeigt das Formular beim Tippen etwas anderes an, als am Ende veröffentlicht wird.
+- Deutsche Rufnummern folgen DIN 5008: Ortsnetzkennzahl mit führender Null, ein Leerzeichen, Teilnehmernummer ungetrennt. Blockgrenzen innerhalb der Teilnehmernummer sind willkürlich und werden nicht erfunden.
+- Eine Nummer aus dem Land der Website erscheint national, jede andere international mit Pluszeichen.
+- Der Typkatalog wird um `phone` erweitert. `tel` als einfaches Textfeld ist für neue Verträge nicht mehr zulässig.
+
+### Vertragsänderungen und bereits veröffentlichte Werte
+
+Ändert sich die Form eines Feldes, werden gespeicherte Wertesätze **beim Laden** auf die aktuelle Vertragsfassung gehoben, nicht in der Datenbank überschrieben. Eine Revision ist der Beleg dafür, was tatsächlich veröffentlicht wurde; sie wird nicht nachträglich verändert. Ein Rollback auf einen alten Stand muss die Migration durchlaufen und die heutige Prüfung bestehen — das ist ein eigener Testfall, kein Nebeneffekt.
 
 ## Vertrag, den jede Website mitbringt
 
@@ -423,6 +444,13 @@ Paralleländerungen werden vor Veröffentlichung erkannt. Der Owner sieht einen 
 
 ## Dashboard-Bereiche
 
+Der Seitenrahmen ist auf allen Unterseiten identisch. Seitenränder, Kopfzeile und die Position der Navigation dürfen sich beim Wechsel nicht verschieben. Zwei Ursachen sind dafür verantwortlich und beide werden gesetzt statt in Kauf genommen:
+
+- Der Platz der Bildlaufleiste bleibt reserviert (`scrollbar-gutter: stable`). Sonst springt die ganze Seite um deren Breite, sobald eine Unterseite kürzer ist als die vorige.
+- Die Kopfzeile steht in festen Spalten, nicht in umbrechender Flexbox. Sonst bestimmt die Länge des Websitenamens, wo die Navigation beginnt, und bei knappem Platz rutscht sie in eine zweite Zeile.
+
+Ein springender Rahmen liest sich als Unruhe, noch bevor jemand ihn benennen kann. Er ist kein Schönheitsfehler, sondern das erste, was einer Verwaltungsoberfläche das Vertrauen entzieht.
+
 ### Übersicht
 
 - Erreichbarkeit der öffentlichen Website und des Dashboards
@@ -465,12 +493,37 @@ Das Dashboard kann Impressionen, Klicks, durchschnittliche Position, häufige Su
 - API-Fehler, fehlende Berechtigung und noch nicht verfügbare Daten besitzen eigene Zustände.
 - OAuth-Tokens bleiben serverseitig, verschlüsselt und auf die kleinste erforderliche Berechtigung begrenzt.
 
+#### Ein API-Schlüssel genügt nicht
+
+Die Search Console API arbeitet ausschließlich mit einem autorisierten Konto: Die Daten gehören einer Property, nicht der API. Ein einfacher API-Schlüssel identifiziert nur ein Projekt und reicht deshalb nicht.[^gsc-auth] Verwendet wird ein **Dienstkonto**, dessen E-Mail-Adresse in der Search Console für die Property freigegeben wird.
+
+Die Schlüsseldatei wird beim Einfügen geprüft und **nicht in der Datenbank** abgelegt, sondern als Datei mit Rechten `0600` daneben. Ein Datenbank-Backup enthält damit keine fremden Zugangsdaten. Zurückgezeigt wird sie nie; sichtbar bleiben Dienstkonto, Property und eine Prüfsumme.
+
+#### Drei Zustände, nicht zwei
+
+Zugangsdaten hinterlegen und Daten abrufen sind verschiedene Dinge und bekommen verschiedene Zustände: `aus`, `hinterlegt`, `aktiv`. „Hinterlegt“ heißt: Der Schlüssel liegt vor, abgerufen wird noch nichts.
+
+Der Grund ist eine bewusst gesetzte Grenze: Der Hostingdienst läuft ohne Netzwerkzugang, weil er fremde Websites baut. Diese Grenze wird für eine Statistik nicht aufgehoben. Ein Abruf braucht einen getrennten, ausschließlich für Google freigegebenen Weg — eine eigene Entscheidung mit eigenem Datenfluss, nicht ein Nebeneffekt der Search-Console-Anzeige.
+
+Solange kein Abruf möglich ist, zeigt das Dashboard Striche mit Begründung. **Keine Beispielzahlen.** Eine erfundene Kennzahl fällt erst auf, wenn jemand eine Entscheidung darauf gestützt hat.
+
+Unabhängig davon liefert eine Property ohne Indexierung keine Zahlen. Eine Testfassung mit `noindex` ist kein Fehlerfall der Integration, sondern deren Voraussetzung, die noch fehlt.
+
 ### Nachrichten und Builder-Kontakt
 
 - Kontaktformular-Nachrichten erscheinen nur, wenn die öffentliche Website dieses Feature tatsächlich besitzt und sein Datenfluss im Inventar steht.
 - „Anfrage an den Builder“ sendet an `webdesign@johannstein.com` und klassifiziert Kleinigkeit, größeres Update oder Fehler.
 - „Gesprächstermin anfragen“ sammelt mehrere Terminvorschläge; eine Kalenderintegration wird erst nach der offenen Produktentscheidung aktiviert.
 - Versand zeigt Zustellung, Fehler und erneuten Versuch. Keine Anfrage gilt nur wegen eines optimistischen UI-Zustands als gesendet.
+
+#### Formular vor Versandweg
+
+Das Kontaktformular darf vor der Entscheidung über den E-Mail-Versand gebaut und freigeschaltet werden. Bedingung ist, dass die Anfrage tatsächlich ankommt und ihr Zustand benannt wird:
+
+- Die Anfrage wird serverseitig gespeichert, nicht nur im Browser bestätigt.
+- Der Zustellzustand ist ein eigenes Feld. `gespeichert` heißt: liegt beim Betreiber vor, es ging keine Benachrichtigung hinaus. Das steht im UI, nicht nur im Datenmodell.
+- Der Betreiber hat einen belegten Weg, die Anfragen zu lesen und ihren Bearbeitungsstand zu setzen, auch ohne E-Mail.
+- Ein Formular, das nur eine Erfolgsmeldung zeigt und nirgends ankommt, ist schlechter als kein Formular: Der Owner hält sein Anliegen für übermittelt und wartet.
 
 ### Zugang
 
@@ -514,12 +567,14 @@ Ob Builder und Owner im konkreten Modell Verantwortlicher, Auftragsverarbeiter o
 
 Diese Punkte werden dem Nutzer vor Implementierung des Dashboard-Produkts vorgelegt und nicht geraten:
 
-1. **Search Console:** Läuft jede Property im Google-Konto des Owners mit delegiertem Zugriff für den Builder, oder zentral im Builder-Konto mit Owner-Zugriff? Wird als Domain-Property per DNS oder als URL-Prefix verifiziert? Die Site Verification API arbeitet im Kontext des authentifizierten Kontos und kann Ownership-Verifikation automatisieren.[^site-verification]
+1. **Search Console:** Läuft jede Property im Google-Konto des Owners mit delegiertem Zugriff für den Builder, oder zentral im Builder-Konto mit Owner-Zugriff? Wird als Domain-Property per DNS oder als URL-Prefix verifiziert? Die Site Verification API arbeitet im Kontext des authentifizierten Kontos und kann Ownership-Verifikation automatisieren.[^site-verification] Zusätzlich offen: über welchen Weg der Dienst Google erreichen darf, ohne seine Netzwerkisolierung insgesamt aufzugeben.
 2. **E-Mail-Versand:** Welcher Dienst versendet transaktionale Nachrichten an `webdesign@johannstein.com`, und wer hält Vertrag, Domainauthentifizierung, Logs und Löschfristen?
 3. **Termine:** Wird ein echter Kalender mit Verfügbarkeiten und Konfliktprüfung angebunden, oder sendet das Formular nur mehrere Vorschläge?
 4. **Erstzugang:** Erhält der Owner einen zeitlich begrenzten Einladungslink über einen verifizierten Kanal, oder werden Zugangsdaten persönlich beziehungsweise getrennt übermittelt?
 
 Bis zur Entscheidung bleiben Integrationsadapter deaktiviert. Das Konzept und die statische Website werden dadurch nicht blockiert.
+
+Die **Oberfläche** einer offenen Entscheidung darf trotzdem gebaut werden — Kontaktformular, Search-Console-Einrichtung, Terminvorschläge. Sie muss dann ihren tatsächlichen Zustand benennen und darf keinen Erfolg behaupten, den es nicht gibt. Was der Owner eingibt, wird gespeichert und geht nicht verloren.
 
 ## Reihenfolge für den Bau des zentralen Produkts
 
@@ -541,6 +596,10 @@ Das zentrale Produkt wird also vor der ersten Kundenanbindung gebaut. Eine neue 
 - Schema-Manipulation und nicht freigegebene Feldpfade serverseitig abgewiesen
 - absolute Pfade, `..`, Root-verlassende Symlinks, unbekannte Buildprofile und Manifest-Shellbefehle werden abgewiesen
 - unveränderte Owner-Werte bleiben bei Basis- und Vertragsupdates erhalten; Umbenennung, Typwechsel und alte Entwürfe sind als Migration oder Konflikt getestet
+- ein Rollback auf eine Revision der vorigen Vertragsfassung läuft durch die Migration und besteht die heutige Prüfung
+- ein Feld mit mehreren Pointern schreibt alle gemeinsam; Anzeige- und Wählform einer Rufnummer können nicht auseinanderlaufen
+- fest im Quelltext hinterlegte Kontaktangaben werden als Warnung gemeldet und sind im Protokoll der Fassung sichtbar
+- hinterlegte Integrations-Credentials erscheinen in keiner HTML-Antwort, keinem Protokoll und keinem Datenbank-Backup
 - Buildfehler lässt aktive Website unverändert
 - Preview und Release lesen dieselbe aufgelöste Build-Schnittstelle; der statische Release enthält weder `_hosting` noch Secrets oder interne Pfade
 - atomarer Publish und vollständiger Rollback getestet
