@@ -1,8 +1,8 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-18
-review_by: 2027-02-18
+updated: 2026-08-19
+review_by: 2027-02-19
 depends_on:
   - "[[60-Operations/Delivery and Local Start]]"
   - "[[40-Backend-Security/Authentication and Accounts]]"
@@ -460,6 +460,7 @@ Eine Vormerkung ist deshalb dasselbe wie eine Veröffentlichung — geprüfter E
 - **Höchstens eine offene Vormerkung je Website.** Wer währenddessen etwas anderes veröffentlicht, entscheidet ausdrücklich über sie. Bliebe sie stillschweigend bestehen, fiele die Zwischenkorrektur am Termin wieder heraus, und der Zusammenhang wäre für niemanden erkennbar.
 - **Verspätet ja, vergessen nein.** War der Dienst zum Termin nicht verfügbar, wird innerhalb eines begrenzten Fensters nachgeholt und als verspätet protokolliert. Ältere Vormerkungen verfallen sichtbar, statt Werte nachzuschieben, deren Inhalt niemand mehr präsent hat.
 - **Ein Neustart mitten in der Ausführung öffnet die Vormerkung wieder.** Genau das erzeugt ein Systemupdate: Der Termin war richtig, der Inhalt geprüft, nur der Bau kam nicht durch. Sie als „ausgeführt“ stehen zu lassen wäre die schlechteste aller Möglichkeiten — die Website bliebe alt, und niemand erführe davon. Das Nachholfenster bleibt dabei in Kraft, damit daraus kein endloses Wiederholen wird.
+- **Gehört der Host inzwischen einer anderen Website, verfällt die Vormerkung.** Eine Veröffentlichung schaltet den Slot auf ihren Tenant um; eine alte Vormerkung würde eine zwischenzeitlich bereitgestellte Website nachts verdrängen, ohne Klick und ohne dass jemand die beiden Vorgänge in Verbindung brächte. Das ist der einzige Weg, auf dem dieser Dienst eine fremde Website vom Netz nehmen könnte, und er wird geschlossen.
 - **Ein inhaltlich fehlgeschlagener Bau wird nicht wiederholt, sondern gemeldet.** Ein automatischer zweiter Versuch würde denselben Fehler erzeugen. Der Zustand wird nicht doppelt geführt, sondern am Job abgelesen; er ist die einzige Wahrheit über den Bau. Der Hinweis verschwindet von selbst, sobald danach etwas erfolgreich veröffentlicht wurde.
 - **Datum und Uhrzeit, keine Tageszeit.** Eine gröbere Angabe verlagert die Entscheidung nur auf den Server und macht die Prüfung „ist das schon passiert?“ unbeantwortbar.
 - **Zeitzone an genau einer Stelle.** Gespeichert in UTC, eingegeben und angezeigt in der Ortszeit der Website. An zwei Stellen gerechnet, weicht eine davon einmal im Jahr um eine Stunde ab — nachts, wenn niemand hinsieht.
@@ -469,6 +470,29 @@ Eine Vormerkung ist deshalb dasselbe wie eine Veröffentlichung — geprüfter E
 Der Vergleich vor der Entscheidung und die Auskunft danach sind zwei verschiedene Fragen. Vorher: „was werde ich ändern?“ Nachher: „was ist jetzt anders als vorher, und wer hat das wann entschieden?“
 
 Jede veröffentlichte Fassung bekommt deshalb eine Ansicht in ganzen Sätzen, verglichen gegen die **vorherige** Revision und nicht gegen den heutigen Stand — sonst zeigt die Ansicht eines alten Standes etwas anderes, sobald danach etwas veröffentlicht wurde. Die Übersicht führt eine Zusammenfassung davon. Eine Zeile im Verlauf mit einer Uhrzeit ist keine Auskunft.
+
+## Wie viel Text eine Oberfläche verträgt
+
+Ein Dashboard bedient jemand, der eigentlich etwas anderes zu tun hat. Jeder Satz, den er lesen muss, um einen Knopf zu finden, ist ein Satz zu viel — und beim zweiten Besuch liest er ihn ohnehin nicht mehr.
+
+Verbindlich:
+
+- **Auf der Seite steht, was zu tun ist. Warum es so ist, steht dahinter.** Begründungen, Randfälle und Zusicherungen gehören hinter ein Erklärzeichen, das bei Zeigen oder Tippen aufgeht.
+- Das Erklärzeichen funktioniert **ohne JavaScript**: ein fokussierbarer Knopf, `:hover` und `:focus-within`. Ein Fingertipp erzeugt Fokus, also gilt dieselbe Regel am Handy.
+- **`aria-describedby` bleibt.** Text in eine Blase zu verschieben, die ein Screenreader nicht mehr findet, ist keine Reduktion, sondern Verlust.
+- Ersatzlos verschwinden: Sätze, die nur beruhigen; Wiederholungen über gleichartige Felder hinweg; Erklärungen zu dem, was der Knopf selbst sagt.
+- Eine Aktion, die man oft braucht, ist ein **Knopf mit Beschriftung**, keine Karte mit Erklärtext. „Website ansehen“ mit Pfeil nach rechts oben braucht keinen Satz darüber.
+- Symbole werden **gezeichnet, nicht als Unicode gesetzt**. Ein Glyph wie ⓘ sieht je nach Schrift und System verschieden aus, mal zu groß, mal zu blass.
+
+## Einführung beim ersten Besuch
+
+Beim ersten Aufruf führt ein kurzer Rundgang durch die Stellen, die man kennen muss: Die Seite dunkelt ab, der jeweilige Bereich bleibt als ausgeschnittener Scheinwerfer frei.
+
+- **Gemerkt wird im Browser, nicht an der IP-Adresse.** Eine IP wechselt im Mobilfunk mehrmals täglich und ist in einem Büro für alle dieselbe; die Einführung käme mal ständig wieder und bliebe mal jemandem vorenthalten, der sie nie gesehen hat. Ein Eintrag im lokalen Speicher trifft genau, was gemeint ist, und ist keine personenbezogene Angabe, die gespeichert werden müsste.
+- Der Scheinwerfer ist ein **echtes Loch**, kein halbdurchsichtiger Kasten über dem Element. Sonst wird ausgerechnet das unlesbar, worauf gezeigt wird.
+- Der Rundgang läuft **nur auf der Einstiegsseite**. Einer, der auf jeder Unterseite anspringt, ist eine Belästigung.
+- Er ist jederzeit abbrechbar, mit Escape und mit einem Klick daneben, und über die Einstellungen wiederholbar.
+- Ein Schritt ohne vorhandenes Ziel wird übersprungen, nicht auf einen leeren Bereich gezeigt.
 
 ## Dashboard-Bereiche
 
@@ -631,6 +655,18 @@ Backups trennen Datenbank, Content-Revisionen, Assets, Releases und Schlüssel; 
 - **Zugangsdaten fremder Dienste nur auf ausdrücklichen Wunsch** und nur auf ein Ziel mit denselben Rechten. Eine Sicherung, die unbemerkt fremde Schlüssel enthält, wandert sonst irgendwann auf ein Laufwerk mit schwächeren.
 - Eine **halb geschriebene Sicherung wird gelöscht**, nicht liegengelassen. Sie sähe sonst aus wie eine.
 - Eine Sicherung, die nie geöffnet wurde, ist eine Vermutung. Zur Sicherung gehört ein Prüflauf, der die Integrität bestätigt, die Zeilen der tragenden Tabellen zählt und die Zahl gesicherter Assetdateien gegen die Assets in der Datenbank hält.
+- Der regelmäßige Lauf **prüft sich selbst und räumt erst danach auf**. Eine unbrauchbare neue Sicherung darf nicht dazu führen, dass die letzte brauchbare gelöscht wird.
+- Ein verpasster Lauf wird beim nächsten Start **nachgeholt**. Sonst hätte ausgerechnet ein Ausfalltag keine Sicherung — der Tag, an dem man sie am ehesten braucht.
+
+## Zustände, die auseinanderlaufen können
+
+Wo zwei Stellen dasselbe wissen müssen, entsteht die unangenehmste Sorte Fehler: Beide sehen für sich richtig aus, nur zusammen ergeben sie eine Lüge. Verbindlich:
+
+- **Zuerst die Stelle schreiben, die wirkt, dann die, die anzeigt.** Der Wartungsmodus etwa wird von nginx über eine Datei gelesen und im Dashboard aus der Datenbank angezeigt. In der falschen Reihenfolge meldet das Dashboard nach einem Schreibfehler einen Zustand, den die Website nicht hat.
+- **Einen Zustand nicht doppelt führen.** Ob ein Bau gelang, steht im Job. Eine zweite Kopie davon in einer anderen Tabelle wird irgendwann falsch.
+- **Formularfelder, die zusammengehören, über einen Index verbinden, nicht über die Reihenfolge.** Ohne JavaScript sendet ein Formular andere Felder als mit; eine Zuordnung über die Reihenfolge verschiebt dann Werte, ohne dass etwas nach einem Fehler aussieht.
+- **Eine Sitzung verlängert sich beim Arbeiten.** Läuft sie mitten im Bearbeiten ab, meldet das Autosave nur noch Fehler und der Speichern-Knopf führt auf eine Fehlerseite — die Eingaben sind weg.
+- **Keinen Verweis anbieten, dessen Ziel gelöscht sein kann.** Eine Vorschau, deren Release die Aufbewahrung entfernt hat, gehört nicht mehr angezeigt.
 
 ## Rechtstexte, Verantwortung und Haftungszuordnung
 
@@ -696,7 +732,11 @@ Das zentrale Produkt wird also vor der ersten Kundenanbindung gebaut. Eine neue 
 - der Export enthält keine Zugangsdaten, Sitzungen oder fremden Schlüssel
 - aus einer hochgeladenen Datei entstehen alle geforderten Fassungen, mit unveränderten Maßen und innerhalb ihrer Grenzen
 - ein Neustart während der Ausführung einer Vormerkung führt zur Wiederholung, ein inhaltlicher Fehlschlag zu einer sichtbaren Meldung
-- eine Sicherung lässt sich öffnen, ihre Integrität bestätigen und ihre Vollständigkeit gegen die Assets prüfen
+- eine Sicherung lässt sich öffnen, ihre Integrität bestätigen und ihre Vollständigkeit gegen die Assets prüfen; ein verpasster Lauf wird nachgeholt
+- eine Vormerkung, deren Host inzwischen einer anderen Website gehört, wird nicht ausgeführt
+- jedes Formular liefert dieselben Werte mit und ohne JavaScript
+- jede Erklärung hinter einem Erklärzeichen bleibt über `aria-describedby` mit ihrem Feld verbunden
+- die Einführung beim ersten Besuch lässt sich abbrechen, wiederholen und übersteht fehlenden lokalen Speicher
 - Session-, Rate-Limit-, CSRF-, Recovery- und Audit-Log-Tests
 - Wartungsseite liefert auf jeder öffentlichen Route `503`, `Retry-After` und die vorgesehenen Kontaktdaten
 - öffentliche Website bleibt ohne Dashboard, Datenbank und externe APIs erreichbar

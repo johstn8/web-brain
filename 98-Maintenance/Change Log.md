@@ -9,6 +9,32 @@ updated: 2026-08-18
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
 
+## 2026-08-19 — Weniger Text, Erklärzeichen statt Absätze, und fünf Zustände, die auseinanderliefen
+
+Auslöser waren drei Aufträge: den Sicherungslauf zu Ende bringen, die Oberfläche des Dashboards von Text entlasten, und eine Einführung für den ersten Besuch. Dazu die Bitte, gezielt nach weiteren Fehlern derselben Art zu suchen.
+
+**Diagnose:** Die Textmenge war kein Schönheitsproblem. Auf der Übersicht standen 1100 sichtbare Zeichen, davon der größte Teil Begründungen, die beim zweiten Besuch niemand mehr liest — und die trotzdem jedes Mal zwischen dem Nutzer und dem Knopf stehen. Die Suche nach weiteren Fehlern förderte fünf Stellen zutage, an denen zwei Orte dasselbe wissen mussten und auseinanderlaufen konnten.
+
+**Kanonisch neu**
+
+- [[60-Operations/Owner Hosting and Dashboard#Wie viel Text eine Oberfläche verträgt]]: Auf der Seite steht, was zu tun ist; warum es so ist, steht dahinter. Erklärzeichen ohne JavaScript, `aria-describedby` bleibt, Symbole werden gezeichnet statt als Unicode gesetzt. Eine häufige Aktion ist ein Knopf, keine Karte mit Erklärtext.
+- [[60-Operations/Owner Hosting and Dashboard#Einführung beim ersten Besuch]]: gemerkt im Browser statt an der IP — eine IP wechselt im Mobilfunk und ist im Büro für alle dieselbe. Echtes Loch statt halbdurchsichtigem Kasten, nur auf der Einstiegsseite, abbrechbar und wiederholbar.
+- [[60-Operations/Owner Hosting and Dashboard#Zustände, die auseinanderlaufen können]] fasst die fünf gefundenen Fehler zu Regeln zusammen: zuerst die wirkende Stelle schreiben, dann die anzeigende; einen Zustand nicht doppelt führen; zusammengehörige Formularfelder über einen Index verbinden statt über die Reihenfolge; Sitzungen beim Arbeiten verlängern; keinen Verweis anbieten, dessen Ziel gelöscht sein kann.
+- Ergänzung zur [[60-Operations/Owner Hosting and Dashboard#Datensicherung]]: Der regelmäßige Lauf prüft sich selbst und räumt erst danach auf; ein verpasster Lauf wird nachgeholt.
+- Ergänzung zum [[60-Operations/Owner Hosting and Dashboard#Der Zeitpunkt gehört an die Veröffentlichung]]: Gehört der Host inzwischen einer anderen Website, verfällt die Vormerkung.
+
+**Die fünf Befunde im Einzelnen**
+
+Der gravierendste: Eine vorgemerkte Veröffentlichung hätte nach einem Slotwechsel nachts eine fremde Website verdrängen können — der einzige Weg, auf dem dieser Dienst eine fremde Website vom Netz genommen hätte. Der folgenreichste im Alltag: Ohne JavaScript verrutschten die Bürozeiten um einen Tag, sobald ein Tag geschlossen war, und der Eigentümer hätte falsche Öffnungszeiten veröffentlicht, ohne dass etwas nach einem Fehler aussah. Dazu der Wartungsmodus in falscher Schreibreihenfolge, Sitzungen ohne gleitende Verlängerung und ein Vorschaulink auf einen längst entfernten Release.
+
+**In der gebauten Fassung**
+
+**Graphify vollständig neu gebaut.** Erstmals ohne Cache: alle 64 Dateien in sechs Teilen. **651 Knoten, 1430 Kanten, 46 Gemeinschaften**, gegenüber 603/940/47.
+
+Die Kantenzahl wuchs um gut die Hälfte, weil die Querverweise zwischen den Teilen jetzt tatsächlich ankommen. Das war zuvor die Schwachstelle: Die Teile bildeten die Kennung einer verlinkten Notiz unterschiedlich — mal `70_qa_quality_gates`, mal `70_qa_quality_gates_quality_gates` —, und 192 der 1443 Kanten liefen ins Leere. Beide Schreibweisen wurden mechanisch auf den tatsächlichen Dokumentknoten zurückgeführt: 38 der 39 unbekannten Kennungen ließen sich eindeutig auflösen, eine einzelne Kante ohne Ziel wurde entfernt. **Der Graph hat jetzt null lose Kanten** (vorher 13). Für künftige Teilextraktionen ist das die Stelle, an der nachzusehen ist.
+
+Sichtbarer Text: Übersicht von rund 1100 auf 430 Zeichen, `/inhalte` um 44 Prozent kürzer. Die Einführung läuft in fünf Schritten. `operations/systemd/owner-hosting-backup.{service,timer}` sichert täglich um 03:20 mit `Persistent=true`, behält 14 Stände und prüft jeden neuen, bevor ältere entfernt werden. Selbsttest 43 von 43, dazu fünf Durchläufe über HTTP; eine Prüfung über alle Seiten belegt, dass kein Formular verschachtelt ist und jede `aria-describedby`-Kennung auflöst.
+
 ## 2026-08-19 — Umwandler als Betriebsvoraussetzung, Vormerkung übersteht einen Neustart, Sicherung
 
 Auslöser waren drei Rückfragen: `libwebp` wurde auf dem Server eingerichtet, damit ein Bild nur einmal hochgeladen werden muss; der Dienst sollte sich selbst neu starten lassen; und die Frage, was mit einer vorgemerkten Veröffentlichung geschieht, wenn sie auf eine Ausfallzeit oder ein Systemupdate fällt.

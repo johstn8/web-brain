@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-18
+updated: 2026-08-19
 ---
 
 # Coverage and Impact Map
@@ -101,7 +101,7 @@ Wird eine externe Quelle für eine Projektentscheidung herangezogen, etwa ein Gr
 
 ### Owner-Hosting, Dashboard oder neue owner-bearbeitbare Inhalte
 
-Aktualisiere [[60-Operations/Owner Hosting and Dashboard]], [[80-Templates/Owner Hosting Website Contract]], Core Rules, Routing Map, Workflow, Content-Schema, Tenant-Manifest, Project Master Spec, Data Processing Inventory, Rollen/AuthZ, Uploads, Buildprofil, Publish/Rollback, Monitoring, Hostingvertrag/AVV-Prüfung, Rechtstext-Workflow und Quality Gates. Bei jedem Inhaltsupdate `owner_editable`, stabilen Pointer, Typ, Grenzen, Preview-Routen und Veröffentlichungspolicy erneut beantworten. Bei Vertragsänderung Owner-Overlays und offene Entwürfe planen und migrieren; ein Rollback über die Formänderung hinweg wird geprüft, nicht angenommen. Steht eine Angabe mehrfach in der Inhaltsdatei, wird sie ein Feld mit mehreren Pointern und nicht mehrere Felder. Neue externe Integrationen bleiben deaktiviert, bis Capability, Konto, Anbieter, Datenfluss und Zugangsweg übereinstimmen; ihre Oberfläche darf vorher entstehen, muss dann aber ihren tatsächlichen Zustand benennen und Eingaben verlustfrei speichern. Bei Uploads gehören Inhaltsprüfung, Metadatenentfernung und Unveränderlichkeit der Fassungen zum Feature, nicht zur Nacharbeit. Zeitgesteuertes Veröffentlichen wird je Veröffentlichung entschieden, nie je Feld und nie über einen Modus.
+Aktualisiere [[60-Operations/Owner Hosting and Dashboard]], [[80-Templates/Owner Hosting Website Contract]], Core Rules, Routing Map, Workflow, Content-Schema, Tenant-Manifest, Project Master Spec, Data Processing Inventory, Rollen/AuthZ, Uploads, Buildprofil, Publish/Rollback, Monitoring, Hostingvertrag/AVV-Prüfung, Rechtstext-Workflow und Quality Gates. Bei jedem Inhaltsupdate `owner_editable`, stabilen Pointer, Typ, Grenzen, Preview-Routen und Veröffentlichungspolicy erneut beantworten. Bei Vertragsänderung Owner-Overlays und offene Entwürfe planen und migrieren; ein Rollback über die Formänderung hinweg wird geprüft, nicht angenommen. Steht eine Angabe mehrfach in der Inhaltsdatei, wird sie ein Feld mit mehreren Pointern und nicht mehrere Felder. Neue externe Integrationen bleiben deaktiviert, bis Capability, Konto, Anbieter, Datenfluss und Zugangsweg übereinstimmen; ihre Oberfläche darf vorher entstehen, muss dann aber ihren tatsächlichen Zustand benennen und Eingaben verlustfrei speichern. Bei Uploads gehören Inhaltsprüfung, Metadatenentfernung und Unveränderlichkeit der Fassungen zum Feature, nicht zur Nacharbeit. Vor jeder Oberflächenänderung wird geprüft, ob ein Satz gestrichen oder hinter ein Erklärzeichen verschoben werden kann, ohne dass eine Zusicherung verlorengeht. Zeitgesteuertes Veröffentlichen wird je Veröffentlichung entschieden, nie je Feld und nie über einen Modus.
 
 ### Developer-Plattform oder Veröffentlichungsstatus
 
