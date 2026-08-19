@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-09
+updated: 2026-08-19
 review_by: 2027-02-09
 impacts:
   - auth
@@ -34,7 +34,7 @@ Vorschauprojekte liegen in `Web-Design/vorschau/<Projektname>/`, parallel zu `pr
 ## Betrieb
 
 - Codewechsel: neuen Hash erzeugen, `htpasswd` ersetzen, `nginx -t` und Reload. Kein Anwendungsdeploy nötig.
-- Beim Übergang in den öffentlichen Betrieb wird das Gate entfernt und das Projekt nach `projekte/` verschoben. Dabei sind Domain, Zertifikat, `noindex`, Analytics und Sitemap neu zu entscheiden, nicht zu übernehmen.
+- Beim Übergang in den öffentlichen Betrieb wird das Gate auf dem Produktionshost entfernt und das Projekt nach `projekte/` verschoben. Dabei sind Domain, Zertifikat, `noindex`, Analytics und Sitemap neu zu entscheiden, nicht zu übernehmen. Die Entfernung von `auth_basic`, Headern, Robots-Regeln und anderen Sperren wird im `release-readiness/<website-slug>.md` nach [[60-Operations/Release Readiness Register]] mit Produktionsnachweis geschlossen; die Vorschau bleibt geschützt.
 - Der Code gehört nicht in Tickets, Repositories oder Chatverläufe mit Dritten.
 
 ## Prüfpunkte

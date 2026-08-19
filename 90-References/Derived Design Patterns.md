@@ -124,8 +124,8 @@ Negativabgleich: DataFlow und Animated SaaS im Katalog zeigen, wie eine Startsei
 |---|---|---|
 | Mikro | Rückmeldung auf Eingabe | kurz, lokal, unterbrechbar |
 | Komponenten | Zustandswechsel erklären | einmalig und zielgerichtet |
-| Sektion | Aufmerksamkeit und Narrativ über Scroll führen | auf jeder primären Inhaltsroute bewusst choreografiert |
-| Immersiv | Kern des Erlebnisses | hohe Dichte mit eigenem Fallback, Qualitätswahl und Abbruchmöglichkeit |
+| Sektion | Aufmerksamkeit und Narrativ über Scroll führen | nur wenn die Route von einer Choreografie wirklich profitiert |
+| Immersiv | Kern des Erlebnisses | nur bei zentralem Produkt- oder Markennutzen, mit eigenem Fallback, Qualitätswahl und Abbruchmöglichkeit |
 
 Bewegung darf weder Inhalte verzögern noch die Reihenfolge für Tastatur oder Screenreader verändern. Die reduzierte Variante bewahrt Information und Bedienbarkeit, nicht zwingend jeden visuellen Effekt.
 
@@ -135,16 +135,16 @@ Bewegung darf weder Inhalte verzögern noch die Reihenfolge für Tastatur oder S
 |---|---|
 | Kicker oder Eyebrow-Zeile über jeder Überschrift | Einordnung in die Überschrift selbst legen, Zusatzinformation in den Lead |
 | beige oder cremefarbene Grundfläche als Signal für Hochwertigkeit | Neutralskala aus realem Material, Ort oder Produkt ableiten |
-| Kopfzeile mit acht bis zwölf Menüpunkten | höchstens sechs Punkte, Rest in Fußbereich oder Unterseite |
+| Kopfzeile mit ungeprüft übernommenem Seiteninventar | Nutzerziele priorisieren; bei vielen gleichrangigen Zielen darf eine strukturierte, auch umfangreichere Navigation die ehrlichere Lösung sein |
 | abstrakter Farbverlauf ohne Markenbezug | Farbidee aus Produkt, Material oder Inhalt ableiten |
 | Karten für jeden Satz | semantisch passende Formen wie Liste, Vergleich, Demo oder Fließtext nutzen |
 | erfundene Kennzahlen und Logos | verifizierte Belege oder ehrliche qualitative Aussagen |
 | Sparkles, Emojis und Glows als Innovationssignal | konkrete Arbeitsweise oder Output zeigen |
-| der einheitliche Karten-Hover als einzige Bewegung der Website | Der einheitliche kleine Lift ist die richtige System-Affordanz und bleibt; er ersetzt aber keine Erzählung. Zusätzlich pro Route eine inhaltsspezifische Choreografie nach [[20-Design/Motion and Interaction]] |
+| der einheitliche Karten-Hover als einzige Begründung für Bewegung | Hover nur als klare Affordanz. Eine zusätzliche Choreografie ist optional und braucht einen inhaltlichen Zweck nach [[20-Design/Motion and Interaction]] |
 | Hoverbewegung auf Flächen, die nichts auslösen | Bewegung nur dort, wo sie eine Handlung ankündigt |
 | große Icons mit sehr kleinem Text | Inhaltshierarchie über Typografie und Raum lösen |
 | transparente Navigation über jedem Medium | Lesbarkeit und Zustand der Navigation explizit gestalten |
-| viel Animation beim Laden | sofortiger Inhaltszugang, dann volle Scroll- und Interaktionschoreografie |
+| viel Animation beim Laden | sofortiger Inhaltszugang; weitere Bewegung nur im gewählten Motion-Budget und mit erkennbarer Aufgabe |
 
 ## Fallback für intensive Erlebnisse
 

@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-19
 review_by: 2027-02-04
 ---
 
@@ -27,7 +27,7 @@ Die Curriculum-Seite strukturiert KI-gestützte Webproduktion als Research, stru
 
 ### MotionSites AI — eingeschränkt analysiert
 
-MotionSites veröffentlicht detaillierte Prompts für Landingpages und Hero-Sektionen in vielen Kategorien. Die frei sichtbaren Beschreibungen nennen Layout, Stil, Schrift, Animation, Responsive-Verhalten, Abhängigkeiten und Inhalte als Promptbausteine.[^motionsites] Für dieses Brain übernommen sind hohe Motion-Dichte, klare visuelle Leitmedien, choreografierte Scroll-Hierarchie und konkret ausformulierte Responsive-/Fallback-Regeln. Marken, Texte, Assets, Quellcode, externe Videos und Kompositionen können bei einem Projekt direkt eingesetzt oder kreativ adaptiert werden; ihr tatsächlicher Einsatz ist anschließend nach [[50-Legal/Assets Copyright and Licenses]] zu dokumentieren. Die dynamische Auslieferung erlaubte keine belastbare Vollprüfung jedes Prompts; konkrete Referenzen müssen projektbezogen erneut nach [[90-References/Reference Research Workflow]] geprüft werden.
+MotionSites veröffentlicht detaillierte Prompts für Landingpages und Hero-Sektionen in vielen Kategorien. Die frei sichtbaren Beschreibungen nennen Layout, Stil, Schrift, Animation, Responsive-Verhalten, Abhängigkeiten und Inhalte als Promptbausteine.[^motionsites] Für dieses Brain übernommen sind klare visuelle Leitmedien, zweckbezogene Scroll-Hierarchie und konkret ausformulierte Responsive-/Fallback-Regeln. Hohe Motion-Dichte bleibt eine mögliche Richtung, aber keine allgemeine Qualitätsbedingung. Marken, Texte, Assets, Quellcode, externe Videos und Kompositionen können bei einem Projekt direkt eingesetzt oder kreativ adaptiert werden; ihr tatsächlicher Einsatz ist anschließend nach [[50-Legal/Assets Copyright and Licenses]] zu dokumentieren. Die dynamische Auslieferung erlaubte keine belastbare Vollprüfung jedes Prompts; konkrete Referenzen müssen projektbezogen erneut nach [[90-References/Reference Research Workflow]] geprüft werden.
 
 ## Vom Nutzer bewertete Benchmarks
 
@@ -76,7 +76,7 @@ Der Nutzer hat am 8. August 2026 sieben live erreichbare Websites als gut in Des
 
 **Ausdrücklich nicht übernommen**
 
-- Der Verlaufstext aus Indigo, Violett und Pink bei Thomas Stockham. Das ist genau der Blau-Lila-Verlauf aus [[20-Design/Color System#Verbrauchte Farbwelten]] und bleibt verboten.
+- Der Verlaufstext aus Indigo, Violett und Pink bei Thomas Stockham wird nicht als generischer Premium-Default übernommen. Eine ähnliche Farbidee bleibt möglich, wenn Marke oder Inhalt sie konkret tragen; siehe [[20-Design/Color System#Häufige Defaults bewusst entscheiden]].
 - Emojis als Sektionszeichen bei CanDevsDoSomething. Verboten nach [[20-Design/Anti AI Slop]].
 - Die Verlaufsflächen als Ersatz für fehlende Vorschaubilder bei ClaudeFolio. Ein Platzhalter bleibt ein Befund nach [[20-Design/Imagery and AI Editing]], kein Gestaltungsmittel.
 - Alles Rechtliche, alle Kennzahlen, Kundenlisten und Referenzangaben dieser sieben Seiten. Der Nutzer hat sie ausdrücklich vom Benchmarkstatus ausgenommen.
@@ -89,6 +89,30 @@ Vom Nutzer am 16. August 2026 als sehr gut benannt. Eine deutschsprachige Produk
 Belegt und übertragbar ist die Copy-Führung. Die Überschriften sind vollständige Aussagen mit Verb, etwa „Mehr Pflege. Weniger alles andere." oder „Wenn Pflege zur Verwaltung wird, verliert jeder.". Unter jeder Überschrift steht ein erklärender Fließtext von zwei bis vier Sätzen, nicht ein Kurzetikett. Die Satzlängen wechseln bewusst, ein sehr kurzer Satz wie „Ein Satz reicht." steht neben einem beschreibenden Satz aus dem Arbeitsalltag der Zielgruppe. Die Seite beschreibt das Problem in der Sprache der Nutzer, statt Eigenschaften zu behaupten, und sie kommentiert an keiner Stelle ihre eigene Machart. Die Aktionen sind über die ganze Seite hinweg gleich benannt.
 
 Diese Eigenschaften sind in [[10-Strategy/Website Copy]] kanonisch verarbeitet. Nicht übertragbar sind die dortigen Zahlenangaben und Nutzenaussagen; für sie liegt kein Beleg vor, und die Beweisregeln aus [[10-Strategy/Content and Conversion#Beweis-Hierarchie]] gelten unverändert.[^stepsafer]
+
+### Rocket-Sites-Referenzgruppe — strukturell analysiert am 19. August 2026
+
+Vom Nutzer als professionell und ausdrücklich wegen ihrer stilistischen Bandbreite benannt. Geprüft wurden alle 37 angegebenen Domains. 35 ließen sich über die öffentliche Seitenauslieferung strukturell auswerten; `pinkelephantcoach.de` und `martinahalek.de` wurden wegen eines Crawlerfehlers direkt auf Erreichbarkeit, Titel und Überschriftenstruktur geprüft. Die Analyse belegt Informationsarchitektur, Inhaltstypen, Navigation, Beweisformen und Conversion-Wege. Sie belegt ohne echten Browser-Render keine pixelgenaue visuelle Qualität, Motion, Tastatur- oder Mobilinteraktion.[^rocket-a][^rocket-b][^rocket-c][^rocket-d]
+
+**Beobachtete Bandbreite**
+
+- Umfangreiche B2B- und IT-Auftritte wie comito, jovoco, Pexon, eProc und SocialNatives führen viele Leistungen, Unterseiten, Cases, Partner, Wissensinhalte und Kontaktwege. Ihre Professionalität hängt nicht an einer kleinen festen Zahl von Headerlinks, sondern an klarer Gruppierung und progressiver Vertiefung.
+- Fokussierte Seiten wie Pflegequeen, optiMICE, Immobilien Einkauf, Zahnarztpraxis Uhlenhorst und Fokus reduzieren Navigation und lenken auf eine dominante Aktion oder einen sehr schmalen Zweck.
+- Praxis- und lokale Dienstleistungsseiten gewichten Team, Öffnungszeiten, Telefon, Anfahrt, Räume und Leistungen. Agentur- und Beratungsseiten gewichten Cases, Ergebnisse, Arbeitsweise, Medien und wiederholte Gesprächsaktionen. Eventseiten priorisieren Termin, Programm, Ort und Anmeldung.
+- Die Seitentiefe reicht von sehr kurzen Auftritten bis zu langen Conversion-Seiten mit Prozess, FAQ, Testimonials, Videos, Kennzahlen und wiederkehrenden Aktionen. Keine dieser Formen ist allein professioneller.
+- Interaktive Produktmodule und hohe Motion sind kein gemeinsamer Nenner. Reale Bilder, klarer Prozess, konkrete Angebote, sichtbare Ansprechpartner, Referenzen und robuste Kontaktwege können dieselbe Beweisrolle tragen.
+
+**Für das Brain übernommen**
+
+- Purpose-fit statt Einheitsstil: Inhalt, Geschäft, Zielgruppe und Beweisform bestimmen Struktur und visuelle Sprache.
+- Keine globale Navigationszahl. Direkte Ziele, Gruppen, Utility-Ebene, Untermenü und Footer werden projektbezogen entschieden und mit realen Beschriftungen geprüft.
+- Keine Pflichtmenge an Motion und kein obligatorisches interaktives Kernmodul. Motion und Interaktion brauchen eine konkrete Aufgabe.
+- Häufige Muster wie Kicker, Karten, lange Seiten, wiederholte CTAs, Serifenschrift, warme Farben oder starke Schatten werden nach Ausführung und Funktion bewertet, nicht pauschal verboten.
+- Professionalität bleibt bindend: klare Hierarchie, konsistentes System, echte Belege, funktionierende Endpunkte, belastbare Responsive- und Accessibility-Zustände.
+
+**Nicht übernommen**
+
+Die Gruppe ist Inspiration, kein Wahrheitsbeleg für ihre Zahlen, Garantien, Testimonials, Events, rechtlichen Texte oder Drittanbieterflüsse. Sichtbare Dopplungen, veraltete Termine, Rechtschreibfehler und unbelegte Aussagen einzelner Seiten werden nicht zum Muster. Vor einer konkreten visuellen Übernahme wird die aktuelle Referenz nach [[90-References/Reference Research Workflow]] im Browser erneut geprüft.
 
 ## Generierte und experimentelle Websites
 
@@ -305,6 +329,10 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 [^bm5saad]: https://saadsalman.org/
 [^bm5stockham]: https://www.tstockham.com/
 [^stepsafer]: https://www.stepsafer.de/
+[^rocket-a]: [comito](https://www.comito.de/), [Zahnarzt Wels](https://zahnarzt-wels.at/), [car-tex](https://www.car-tex.de/), [ko:mon](https://www.ko-mon.de/), [Dr. Quidenus](https://drquidenus.at/), [jovoco](https://jovoco.io/), [DEDIQ](https://www.dediq.com/), [Fortiscloud](https://www.fortiscloud.de/), [metagram Solutions](https://metagram-solutions.com/)
+[^rocket-b]: [Dentalize](https://dentalize.de/), [arcana Solutions](https://arcana-solutions.com/), [ESP Media](https://espmedia.de/), [Pexon](https://pexon-consulting.de/), [Scaly](https://scaly.com/), [tunymedia](https://tunymedia.at/), [Julius Schaefer](https://julius-schaefer.de/), [Sales Culture](https://sales-culture.de/), [eProc](https://www.eproc.de/)
+[^rocket-c]: [SocialNatives](https://socialnatives.de/), [Agency Invest](https://agencyinvest.de/), [Modulo Consulting](https://www.modulo-consulting.de/), [Einstellungserfolg](https://einstellungserfolg.de/), [KMC](https://kmc2.de/), [Sacherer Partner](https://sacherer-partner.de/), [Hofmann Immobilienverwaltung](https://www.hofmann-immobilienverwaltung.de/), [Logokunst](https://logokunst.com/), [Lieblingslead](https://lieblingslead.eu/)
+[^rocket-d]: [Pflegequeen](https://pflegequeen.de/), [optiMICE](https://opti-mice.de/), [Pink Elephant Coach](https://pinkelephantcoach.de/), [Zahnarztpraxis Uhlenhorst](https://zahnarztpraxis-uhlenhorst.de/), [Immobilien Einkauf](https://immobilien-einkauf.de/), [Martina Halek](https://martinahalek.de/), [Spedition Stuckmann](https://spedition-stuckmann.de/), [Inno One](https://inno-one.de/), [Matthias Niggehoff](https://matthiasniggehoff.de/), [Fokus](https://fokus.so/)
 
 [^compute]: https://v0-compute-11.vercel.app/
 [^dataflow]: https://v0-playful-engineering-landing-page.vercel.app/

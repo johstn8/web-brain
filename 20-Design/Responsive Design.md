@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-05
+updated: 2026-08-19
 ---
 
 # Responsive Design
@@ -26,6 +26,6 @@ Responsive bedeutet gleichwertige Aufgabe auf kleinem, großem, gezoomtem und un
 
 Mindestens 320, 375, 768, 1024, 1440 CSS-Pixel sowie eine reale Touch-Prüfung. Breakpoints werden dort gesetzt, wo Inhalt bricht.
 
-Für die hohe Motion-Dichte jede Scrollsequenz pro Breakpoint separat choreografieren und testen. Desktop-Pinning, Parallax oder horizontale Strecken werden auf schmalen Displays in eine ebenso inhaltsreiche vertikale oder statische Reihenfolge übersetzt; die Desktopsequenz wird nicht blind verkleinert.
+Jede tatsächlich eingesetzte Scrollsequenz wird pro relevantem Breakpoint separat choreografiert und getestet. Desktop-Pinning, Parallax oder horizontale Strecken werden auf schmalen Displays in eine ebenso inhaltsreiche vertikale oder statische Reihenfolge übersetzt; die Desktopsequenz wird nicht blind verkleinert. Bei Motion-Budget `none` genügt ein stabiler, sofort verständlicher statischer Aufbau.
 
 [^wcag]: [W3C WCAG 2.2, Reflow und vollständige Seitenvarianten](https://www.w3.org/TR/WCAG22/)

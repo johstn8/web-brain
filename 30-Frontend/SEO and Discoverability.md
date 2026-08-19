@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-19
 review_by: 2027-02-03
 impacts:
   - sitemap
@@ -28,6 +28,12 @@ Jede gebaute Website wird unabhängig vollständig SEO-optimiert. Sie enthält d
 - Semantisches HTML, serverseitig sichtbarer Hauptinhalt und stabile URLs.
 - Jede Inhaltsseite hat eine eindeutige Suchintention, genau ein H1, schlüssige H2-Struktur, hilfreiche interne Links und für relevante Bilder passende Alt-Texte. Scroll- und JavaScript-Motion darf den Hauptinhalt nicht erst erzeugen oder vor Crawlern verstecken.
 
+## Von Vorschau zu Produktion
+
+Vorschau-Sperren und produktive Auffindbarkeit sind verschiedene Zustände. Für jede Website führt `release-readiness/<website-slug>.md` nach [[60-Operations/Release Readiness Register]] den Ist- und Zielzustand von nginx `auth_basic`, `X-Robots-Tag`, Robots-Meta, `robots.txt`, Canonicals, Sitemap, Redirects, DNS und Zertifikaten. Eine Seite gilt nicht als indexierbar, nur weil ein einzelnes `noindex` entfernt wurde.
+
+Vor der Veröffentlichung werden Produktionsantworten und die tatsächlich ausgelieferte `robots.txt` geprüft, danach die Produktions-Property in Google Search Console verifiziert und die Sitemap eingereicht. API-Nutzung benötigt OAuth-Berechtigung und Property-Zugriff; ein API-Schlüssel allein genügt nicht.[^gsc-auth] Indexierungsanfragen ersetzen weder crawlbare interne Links noch eine korrekte Sitemap.[^recrawl]
+
 ## Social und Marke
 
 - Favicon als `.ico` plus moderne SVG/PNG- und Apple-Varianten.
@@ -50,3 +56,5 @@ Klare Entitäten, Autoren, Daten, Quellen, Definitionen und crawlbare Inhalte ve
 [^snippet]: [Google Search Central: Meta descriptions](https://developers.google.com/search/docs/appearance/snippet)
 [^appearance]: [Google Search Central: Search appearance and structured data](https://developers.google.com/search/docs/appearance)
 [^manifest]: [MDN: Web application manifest](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/index.html)
+[^gsc-auth]: [Google Search Console API: Voraussetzungen und Berechtigungen](https://developers.google.com/webmaster-tools/v1/prereqs)
+[^recrawl]: [Google Search Central: URLs erneut crawlen lassen](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)

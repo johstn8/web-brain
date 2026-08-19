@@ -43,7 +43,7 @@ Existiert bereits eine Website, vor Scope und Copy den [[10-Strategy/Existing We
 - `Must`, `Should`, `Could`, `Won't now` festlegen.
 - `Must`: die im Auftrag verlangte Anzahl vollständiger Websites mit festen Ports und einer echten Unterseitenarchitektur. Ohne Angabe im Auftrag genau eine Website, siehe [[00-Start/05 Web Product Workflow#Anzahl der Websites]]. Eine One-Page-Website oder reine Ankernavigation genügt nicht.
 - `Must`: SEO für jede Route und jede gebaute Website vollständig planen und testen.
-- `Must`: Hauptnavigation auf höchstens sechs Punkte auslegen, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]. Die Sitemap wird von Anfang an so geschnitten, dass diese Grenze ohne Notlösung eingehalten wird.
+- `Must`: Navigationsmodell aus primären Nutzeraufgaben, Inhaltstiefe und realen Beschriftungen entwickeln; direkte Ziele und Gruppierung begründen und an langen Texten, Zoom und schmalen Breiten prüfen, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]].
 - `Must`: hohes Motion-Niveau nach [[20-Design/Motion and Interaction]] samt einer eigenen Choreografie je Website planen.
 - Jede Funktion braucht Nutzerwert, Owner, Datenbedarf, Missbrauchsfall und Abnahmekriterium.
 - Unsichere Hypothesen zuerst mit dem kleinsten realen Test validieren.

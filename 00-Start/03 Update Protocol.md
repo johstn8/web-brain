@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Update Protocol
@@ -25,8 +25,9 @@ Kein partielles Update darf widersprüchliche oder veraltete Projektinformatione
 
 ## Pflicht-Propagation
 
-- Neue oder entfernte Seite: Sitemap, Navigation, Breadcrumbs, interne Links, Metadaten, Analytics, Tests, `sitemap.xml` und jede gebaute Website synchronisieren. Bei mehr als sechs Hauptnavigationspunkten die Navigation nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]] verdichten.
-- Neues Formular oder Feld: Dateninventar, Rechtsgrundlage, Privacy Copy, Validierung, Rate Limit, Speicherung, Löschung, Tests.
+- Neue oder entfernte Seite: Sitemap, Navigation, Breadcrumbs, interne Links, Metadaten, Analytics, Tests, `sitemap.xml` und jede gebaute Website synchronisieren. Die Navigation nach Nutzerzielen und verfügbarer Breite neu prüfen; es gibt keine globale Höchstzahl an Hauptpunkten.
+- Neues Formular oder Feld: Dateninventar, Rechtsgrundlage, Privacy Copy, Validierung, Rate Limit, Speicherung, Löschung, Tests und das Release-Readiness-Register jeder betroffenen Website aktualisieren. Ein sichtbarer Hinweis auf fehlenden Versand wird dort als eigener Fundort erfasst.
+- Neue oder entfernte Vorschau-Sperre, externe Integration oder produktive Freigabe: [[60-Operations/Release Readiness Register]] jeder betroffenen Website samt Nachweis, Owner und Zielzustand aktualisieren.
 - Neuer Drittanbieter: Dependencies, Datenfluss, Vertrag/AVV, Consent, CSP, Ausfallverhalten, Kostenlimit, Privacy Policy.
 - Neues Asset oder Font: Asset Register, Quelle, tatsächlicher Einsatz, Hosting, Performancebudget und gegebenenfalls `SOURCE-RIGHTS-REVIEW.md` nach dem Build aktualisieren. Der Eintrag darf Verwendung, Preview, Deployment oder eine gebaute Website nicht sperren und erzeugt keinen Ersatz.
 - Motion-Änderung: Motion Inventory, Implementierung, Reduced-Motion-Variante, Messung und Tests aller betroffenen Routen in jeder Website aktualisieren.

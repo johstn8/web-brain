@@ -1,14 +1,14 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Test Matrix
 
 ## Dimensionen
 
-- Viewport: 320, 375, 768, 1024, 1280, 1440, 1920; Portrait/Landscape. Jede Breite wird real gerendert. Bei 1280, 1440 und 1920 wird die Kopfzeile mit der längsten realen Beschriftung auf Einzeiligkeit, Mindestluft und überstehende width-basierte Kinder geprüft
+- Viewport: 320, 375, 768, 1024, 1280, 1440, 1920; Portrait/Landscape. Jede Breite wird real gerendert. Die Kopfzeile wird mit längster realer Beschriftung, großer Systemschrift und 200 Prozent Zoom auf beabsichtigten Reflow, Überlauf, Beschnitt und erreichbare Ziele geprüft
 - Browser: aktuelle stabile Chromium, Firefox, Safari/WebKit; erforderliche ältere Versionen laut Projekt
 - Input: Tastatur, Touch, Maus, Screenreader, Voice/Zoom nach Zielgruppe
 - Preferences: Reduced Motion, Dark/Light, High Contrast/Forced Colors, große Systemschrift
@@ -29,6 +29,8 @@ updated: 2026-08-17
 ## Kritische Flüsse
 
 Immer aufnehmen: Navigation und vollständige Unterseiten jeder gebauten Website, primäre Conversion, Formularfehler, Signup/Login/Recovery, Rollenwechsel, Zahlung/Kündigung, Account-Löschung, Consent/Widerruf, 404/500/Offline, Sitemap/Meta/Canonical/Robots je Route und Motion Inventory. Auf `217.154.218.30` alle Fassungen über `johannstein.com/dev` prüfen, außerhalb alle reservierten Ports.
+
+Zusätzlich je Website den Produktions-Cutover aus [[60-Operations/Release Readiness Register]] als E2E-Kette prüfen: Preview-Sperren bleiben auf Preview aktiv, fehlen aber auf Produktion; Formulare erreichen echte Produktionsziele; eine eindeutige E-Mail-Testanfrage kommt an; Search-Console-Property, Sitemap und gegebenenfalls API zeigen exakt auf die Produktionsdomain.
 
 ## Deployment-Slots und Owner Hosting
 

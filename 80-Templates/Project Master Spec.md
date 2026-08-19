@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Project Master Spec
@@ -11,7 +11,7 @@ updated: 2026-08-17
 ## 0 Project Contract
 
 - Kanonischer Projektpfad: `../projekte/<Projektname>/`
-- Pflichtdateien verlinkt: `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md`, `DATA-PROCESSING-INVENTORY.md`
+- Pflichtdateien verlinkt: `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md`, `DATA-PROCESSING-INVENTORY.md` und je Website `release-readiness/<website-slug>.md`
 - Bestehendes Projekt geöffnet oder neuer Ordner kollisionsfrei angelegt:
 - Zutreffende Brain-Notizen und Quality Gates:
 
@@ -28,7 +28,7 @@ updated: 2026-08-17
 - Projekttyp:
 - Must/Should/Could/Won't:
 - Sitemap: `Route -> Zweck -> CTA -> Index -> Auth/Rolle -> Daten -> Status`; Startseite plus echte verlinkte Unterseiten, nicht nur One-Page-Anker
-- Hauptnavigation: höchstens sechs Punkte, gewählte Beschriftungen und Kurzformen, Rest im Fußbereich
+- Navigationsmodell: direkte Ziele, Gruppen/Untermenüs, Utility-Ebene, Footer, reale Beschriftungen und Responsive-Übergang mit Begründung
 - Kritische Nutzerflüsse:
 
 ## 3 Content
@@ -52,10 +52,10 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Pfad und Slug; zugehöriges UI-UX-Pro-Max-Artefakt `design-system/<website-slug>/MASTER.md`:
 - Attribute/Anti-Attribute, visuelles Leitmotiv, primärer/sekundärer Archetyp:
 - Leitbenchmark aus [[20-Design/Interface Benchmarks]], übernommene und ausdrücklich nicht übernommene Elemente:
-- Primärschrift; Zweitschrift oder bewusster Verzicht; genaue Rollen, Ausschlüsse und Herleitung; kein Retro-Verstoß nach [[20-Design/Typography Layout and Spacing#Retro-Verbot]]:
+- Primärschrift; Zweitschrift oder bewusster Verzicht; genaue Rollen, Lizenz, Lesbarkeit, beabsichtigter Zeitbezug und Herleitung nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]]:
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, Serienkonsistenz, Liste der `ai-placeholder`-Bilder mit Prompt und Ersetzungshinweis:
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]], einschließlich Sektionsliste mit je einer Nutzerfrage:
-- Interaktives Kernmodul je Landing Page: Modul, Datenquelle, Bedienung, Zustände, Fallback:
+- Primäre Beweisform je Landing Page; bei Interaktion zusätzlich Modul, Datenquelle, Bedienung, Zustände und Fallback:
 - Auftaktkomposition und Anordnung der Überschriften je Sektionsart:
 - Kopfzeileninventar und -anordnung, Navigationsbeschriftung, Fußbereichsstruktur und sonstiges Seiten-Chrome:
 - Landing-Page-Haltung: was ist extravagant, was bleibt ruhig, wo liegt die Grenze:
@@ -66,7 +66,7 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
 - pen.dev: `use | skip`, Begründung, `.pen`-Pfade und Freigabestatus:
 - H0-Handwerksuntergrenze nach [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] und gewählte variable Stilparameter für Flächen, Radius, Rahmen, Tiefe, Karten, Kopfzeile, Zweitschrift und Motion:
-- Farbrollen mit benannter Herleitung, Typografie, Spacing, Grid, Radius, Shadow, Motion; keine verbrauchte Farbwelt als dominante Fläche:
+- Farbrollen mit benannter Herleitung, Typografie, Spacing, Grid, Radius, Shadow und Motion; häufige Defaults bewusst entschieden:
 - Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark, Quelle der Werte im Code:
 
 | Rolle | Wert hell | Wert dunkel | Herleitung |
@@ -85,7 +85,7 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Bewegungstokens: eigener Kurven- und Dauersatz, Grammatik je Komponente; B5-Beispiele aus [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] nur bei bewusster Übernahme:
 - Kernartefakt/Leitmedium, direkter Einsatz/Adaption, Quelle für spätere Owner-Einschätzung, Poster und Fallback:
 - Responsive, Zustände und Reduced-Motion-Verhalten:
-- Motion Inventory je primärer Route: globale Bewegung, Einstieg, kontinuierliche Scrollsequenz, zwei weitere Scroll-/In-View-Bewegungen, Interaktionsdetails, Messung und Trace/Video:
+- Motion-Budget `none | low | medium | high` und Inventory der tatsächlich eingesetzten relevanten Bewegungen: Zweck, Trigger, Interaktionsdetails, Fallback, Messung und Trace/Video:
 - Novelty Budget:
 
 ### Abstand zu Vorgängerfassungen
@@ -106,7 +106,7 @@ Genau so viele Zeilen wie im Auftrag verlangte Websites. Bei einer Website liegt
 
 ### Unterscheidungsmatrix
 
-Pflicht bei mehr als einer Website und **vor der ersten Zeile UI-Code** auszufüllen. Für jede weitere Website eine Spalte ergänzen. Jede Pflichtachse unterscheidet sich paarweise; `N/A` braucht eine gleich wirksame Ersatzachse und Begründung. Siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
+Pflicht bei mehr als einer Website und **vor der ersten Zeile UI-Code** auszufüllen. Für jede weitere Website eine Spalte ergänzen. Mindestens fünf für den Auftrag wirksame Achsen unterscheiden sich deutlich; dieselbe sachlich beste Lösung darf auf anderen Achsen wiederkehren. Siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
 
 | Pflichtachse | Website 01 | Website 02 | weitere Website(s) | paarweiser Nachweis |
 |---|---|---|---|---|
@@ -122,7 +122,7 @@ Pflicht bei mehr als einer Website und **vor der ersten Zeile UI-Code** auszufü
 | Komponentenrepertoire: Karte/Zeile/Tabelle/Liste | | | | |
 | Leitbewegung | | | | |
 | Sektionsreihenfolge und Dramaturgie | | | | |
-| interaktives Kernmodul | | | | |
+| primäre Beweisform | | | | |
 | Tonfall der Copy | | | | |
 
 ### Copy-Entscheidung
@@ -165,12 +165,14 @@ Nach [[10-Strategy/Website Copy]] festhalten:
 - Titelkonvention ohne `|`, Metadaten, Canonical, Structured Data für jede Route jeder gebauten Website:
 - sitemap.xml, robots, Redirects für jede gebaute Website:
 - Messplan und Consent-Kategorie:
+- Search-Console-Property, Verifikationsweg, Sitemap-Einreichung und bei API-Nutzung Auth-/Query-Nachweis:
 
 ## 9 Delivery Operations
 
 - Projektwurzel unter `../projekte/<Projektname>/`, Environments und Dependencies; auf `217.154.218.30` Developer-Plattform ohne Projektport, sonst Ein-Klick-Start:
 - Deploy, Migration, atomarer Release und Rollback; bei Owner-Hosting zentrale Registry, Dashboard-Subdomain, Projekt-Basis/Owner-Overlay, Wartungsmodus und Release-Historie:
 - Monitoring, Alerts, Backup, Owner:
+- Release-Readiness-Register je Website: Pfad, offene P0/P1, letzter Produktionsabgleich und Owner:
 
 ## 10 Acceptance
 

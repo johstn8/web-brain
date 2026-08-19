@@ -32,8 +32,8 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | H0-Handwerksuntergrenze, Stilprofile und Leitbenchmark | [[20-Design/Interface Benchmarks|Interface Benchmarks]] | AGENTS, Core Rules, Inspiration Catalog, Design Direction, Color System, Typography, Components, Motion, Derived Design Patterns, Quality Gates |
 | Bilder, Bildbearbeitung und KI-Platzhalter | [[20-Design/Imagery and AI Editing|Imagery and AI Editing]] | Design Direction, Asset Register, Source and Rights Review, Performance, Accessibility, Quality Gates |
 | Informationsmenge, Textbudget, mobile Dosierung | [[10-Strategy/Information Density and Mobile Clarity|Information Density and Mobile Clarity]] | Content and Conversion, Information Architecture, Design Direction, Responsive Design, Quality Gates |
-| Retro-Verbot und Schriftwahl | [[20-Design/Typography Layout and Spacing|Typography Layout and Spacing]] | Anti AI Slop, Color System, Design Direction, Asset Register, Quality Gates |
-| interaktives Kernmodul | [[20-Design/Motion and Interaction|Motion and Interaction]] | Design Direction, Components and UI States, Accessibility, Performance, Quality Gates |
+| Schriftwahl, Stilzitat und Zeitbezug | [[20-Design/Typography Layout and Spacing|Typography Layout and Spacing]] | Anti AI Slop, Color System, Design Direction, Asset Register, Quality Gates |
+| Beweisform, Interaktion und Motion-Budget | [[20-Design/Motion and Interaction|Motion and Interaction]] | Design Direction, Components and UI States, Accessibility, Performance, Quality Gates |
 | visuelle Richtung | [[20-Design/Design Direction|Design Direction]] | Farbe, Typografie, Motion, Master Spec |
 | Tokenvertrag mit Pflichtrollen | [[20-Design/Color System#Tokenvertrag|Color System]] | Interface Benchmarks, Design Direction, Components and UI States, Architecture and Code Consistency, Master Spec, AI Build Prompt, Quality Gates |
 | Radiusskala, Rahmenbehandlung und Tiefe je Website | [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung|Typography Layout and Spacing]] | Interface Benchmarks, Anti AI Slop, Components, Design Direction, Master Spec, Quality Gates |
@@ -58,6 +58,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Asset-Einsatz und spätere Owner-Einschätzung | [[50-Legal/Assets Copyright and Licenses|Assets Copyright and Licenses]] | Design, Performance, Source and Rights Review, Asset Register |
 | lokale Ausführung, Serverzugriff und Developer-Plattform | [[60-Operations/Delivery and Local Start|Delivery and Local Start]] | Workflow, Dependencies, Accessibility, Preview Access Gate, Observability, Launch |
 | Owner-Hosting, zentraler Mandantenbetrieb und editierbare Inhalte | [[60-Operations/Owner Hosting and Dashboard|Owner Hosting and Dashboard]] | Owner Hosting Website Contract, Core Rules, Routing Map, Workflow, Master Spec, Data Processing Inventory, Auth, Privacy, Legal, Delivery, Observability, Quality Gates |
+| fortlaufende Veröffentlichungsreife je Website | [[60-Operations/Release Readiness Register|Release Readiness Register]] | Workflow, Project Master Spec, Preview Access Gate, SEO, Owner Hosting, Test Matrix, Quality Gates, Launch Checklist, Review Queue |
 | Abhängigkeiten | [[60-Operations/Dependencies and Environments|Dependencies and Environments]] | Architecture, Security, Delivery |
 | Betrieb | [[60-Operations/Observability and Maintenance|Observability and Maintenance]] | Security, Billing, QA |
 | Abnahme | [[70-QA/Quality Gates|Quality Gates]] | Test Matrix, Launch Checklist |
@@ -69,7 +70,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 
 ### Neuer Website-Auftrag
 
-Bestimme zuerst die Anzahl der Websites aus dem Auftragstext nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]. Lege dann den kollisionsfreien Projektordner samt PROJECT.md, Source/Rights Review, Asset Register und Data Processing Inventory an. Baue anschließend genau diese Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/NN-…`, jeweils mit allen Unterseiten, Motion Inventory, SEO-Artefakten und Nachweisen. Auf `217.154.218.30` erfolgt Zugriff über `johannstein.com/dev` ohne Projektport, sonst über einen eigenen festen Port. Verlinke zutreffende Brain-Regeln und Quality Gates. Keine Recherche- oder Build-Artefakte außerhalb des Projekts.
+Bestimme zuerst die Anzahl der Websites aus dem Auftragstext nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]. Lege dann den kollisionsfreien Projektordner samt PROJECT.md, Source/Rights Review, Asset Register, Data Processing Inventory und je Website `release-readiness/<website-slug>.md` an. Baue anschließend genau diese Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/NN-…`, jeweils mit allen Unterseiten, dem passenden Motion-Nachweis, SEO-Artefakten und Nachweisen. Auf `217.154.218.30` erfolgt Zugriff über `johannstein.com/dev` ohne Projektport, sonst über einen eigenen festen Port. Verlinke zutreffende Brain-Regeln und Quality Gates. Keine Recherche- oder Build-Artefakte außerhalb des Projekts.
 
 ### Geänderte Anzahl der Websites
 
@@ -77,7 +78,7 @@ Aktualisiere Workflow, Delivery, Ablagestruktur, umgebungsabhängigen Zugriff, M
 
 ### Geänderte Kopfzeile oder Navigation
 
-Aktualisiere Sitemap, Navigationsbeschriftungen, Kurzformen, Fußbereich, Brotkrumen, Komponentenvertrag und die Prüfung auf Einzeiligkeit, Innenhöhe, Mindestluft und width-/height-basierte Seitenverhältnisse bei 1280, 1440 und 1920 Pixel. Über sechs Hauptpunkte wird nicht das Layout gequetscht, sondern die Informationsarchitektur verdichtet.
+Aktualisiere Sitemap, Navigationsbeschriftungen, Gruppierung, Fußbereich, Brotkrumen, Komponentenvertrag und die Prüfung auf Lesbarkeit, Innenhöhe, Mindestluft, Überlauf und Bedienbarkeit bei 320, 375, 768, 1280 und 1920 Pixel sowie 200 Prozent Zoom und Systemschrift. Die Anzahl der Hauptpunkte folgt Nutzerzielen und Informationsarchitektur, keinem globalen Grenzwert.
 
 ### Neue oder geänderte Anti-Slop-Regel
 
@@ -89,7 +90,7 @@ Aktualisiere Quelleninventar, Content-Inventar, Betreiberfakten, Maps-/Place-Ver
 
 ### Neue oder entfernte Seite
 
-Aktualisiere Sitemap, Navigation, interne Links, Metadaten, strukturierte Daten, Tracking-/Consent-Einordnung, Zugriffsregeln, Testfälle und Launch-Checkliste in allen gebauten Websites. Prüfe dabei die Grenze von sechs Hauptnavigationspunkten.
+Aktualisiere Sitemap, Navigation, interne Links, Metadaten, strukturierte Daten, Tracking-/Consent-Einordnung, Zugriffsregeln, Testfälle, Release-Readiness-Register und Launch-Checkliste in allen gebauten Websites. Prüfe, ob die Navigation die tatsächlichen Nutzerziele weiterhin verständlich abbildet.
 
 ### Neue Komponente oder Interaktion
 
@@ -105,7 +106,7 @@ Aktualisiere [[60-Operations/Owner Hosting and Dashboard]], [[80-Templates/Owner
 
 ### Developer-Plattform oder Veröffentlichungsstatus
 
-Aktualisiere [[60-Operations/Delivery and Local Start]], Source-Roots, Statusspeicher unter `.runtime/previews/`, AuthZ, noindex, Freigaberouten, Tastaturbedienung und Build-/Smoke-Tests. `Old-Projects` bleibt Archiv; `vorschau` ist Legacy-Quelle im Veröffentlichungsbereich und keine vierte Übersicht.
+Aktualisiere [[60-Operations/Delivery and Local Start]], [[60-Operations/Release Readiness Register]], die Datei jeder betroffenen Website, Source-Roots, Statusspeicher unter `.runtime/previews/`, AuthZ, noindex, Freigaberouten, Tastaturbedienung und Build-/Smoke-Tests. `Old-Projects` bleibt Archiv; `vorschau` ist Legacy-Quelle im Veröffentlichungsbereich und keine vierte Übersicht.
 
 ### Deployment-Slot, Staging-Domain oder Legacy-Adapter
 

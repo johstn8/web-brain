@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 review_by: 2027-02-05
 impacts:
   - accessibility
@@ -13,26 +13,26 @@ impacts:
 
 # Motion and Interaction
 
-## Verbindliches Motion-Niveau
+## Motion-Budget
 
-Website-Aufträge erhalten eine hohe, inhaltsgetriebene Bewegungsdichte. Motion ist nicht auf den Hero oder ein einzelnes Reveal beschränkt: Jede fertig gebaute Website besitzt eine eigene Scroll-Choreografie über ihre verlinkten Unterseiten. Sie ist Teil der Informationsdramaturgie und wirkt nicht wie eine nachträglich aufgesetzte Effektsammlung.
+Jede Website entscheidet vor der Umsetzung ein Motion-Budget: `none`, `low`, `medium` oder `high`. Die Entscheidung folgt Zielgruppe, Inhalt, Nutzungshäufigkeit, Marke, Gerät, Performancebudget und gewünschter Aufmerksamkeit. Professionelle Qualität wird nicht an der Zahl sichtbarer Animationen gemessen.
 
-Für jede primäre Inhaltsroute im Motion Inventory festhalten:
+Für jede tatsächlich eingesetzte, inhaltlich relevante Bewegung im Motion Inventory festhalten:
 
 `Route -> Kapitel/Ziel -> Mechanik -> Trigger -> betroffene Elemente -> Zweck -> Start/Ende -> Dauer/Easing oder Scroll-Range -> Eingabemethode -> Unterbrechbarkeit -> Mobile-Verhalten -> Reduced-Motion-Variante -> Performance-Messung -> Testnachweis`
 
-Die Website hat mindestens diese Ebenen:
+Mögliche Ebenen:
 
 1. **Globale Bewegung:** Route-Übergang oder klarer Seitenwechsel, Navigationszustand und eine unaufdringliche Fortschritts-/Orientierungsebene.
 2. **Einstieg je Route:** Ein choreografierter Inhalts- und Medienauftakt, der den Text nicht versteckt oder die primäre Aktion verzögert.
-3. **Scroll-Erzählung je primärer Inhaltsroute:** mindestens eine kontinuierlich scrollgebundene Sequenz und mindestens zwei weitere klar unterscheidbare In-View- oder scrollgetriggerte Bewegungen. Geeignet sind gestaffelte Informationsenthüllung, Ebenentiefe/Parallax, Bildausschnitt, Diagramm-/Prozessaufbau, Textmaskierung, horizontal geführte Galerie oder eine temporär klebende Kapitelinszenierung.
+3. **Scroll-Erzählung:** nur wenn eine räumliche Beziehung, ein Prozess, ein Produktdetail oder ein narratives Kapitel dadurch verständlicher wird. Geeignet sind gestaffelte Informationsenthüllung, Ebenentiefe/Parallax, Bildausschnitt, Diagramm-/Prozessaufbau, Textmaskierung, horizontal geführte Galerie oder eine temporär klebende Kapitelinszenierung.
 4. **Interaktionsdetails:** Press, Hover auf geeigneten Geräten, Fokus, Accordion, Tabs, Karten, Formular- und Zustandsfeedback. Diese Bewegung bestätigt die Handlung und bleibt unmittelbar.
 
-Kompakte Pflicht- oder Rechtstextseiten brauchen keine künstliche Scrollinszenierung; Navigation, Seitenwechsel und Controls bleiben dennoch vollständig bewegt und zugänglich. Das Motion Inventory muss jede Ausnahme mit dem Seitenzweck begründen. Über die gesamten primären Inhaltsrouten dokumentiert jede Website mindestens zwölf eigenständige, sichtbare Bewegungsentscheidungen. Mehrere Elemente derselben Stagger-Gruppe zählen als eine Entscheidung.
+Bei `none` bleiben nur unmittelbares Fokus-, Press-, Lade- und Zustandsfeedback, soweit funktional nötig. `low` konzentriert sich auf wenige Übergänge, `medium` darf Seitenrhythmus und Beweise choreografieren, `high` kann die Erfahrung tragen. Es gibt keine Mindestzahl. Eine statische Route muss ihre Ruhe nicht als Ausnahme rechtfertigen.
 
 ## Interaktives Kernmodul
 
-Jede Landing Page erhält zusätzlich zur Scroll-Choreografie **mindestens ein interaktives Kernmodul**: ein Element, das der Nutzer selbst bedient und das dabei etwas Wahres über den Betrieb zeigt. Das ist der wirksamste Unterschied zwischen einer animierten Seite und einer professionellen Seite: Der Nutzer handelt, statt zuzusehen.
+Ein interaktives Kernmodul ist eine Option, wenn der Nutzer damit etwas Wahres über Angebot, Produkt, Prozess oder Auswahl besser verstehen kann. Es wird nicht erfunden, nur um eine Landing Page „interaktiv“ zu machen. Ein starkes Foto, Video, Fallbeispiel, Dokument, Produkt-Screenshot, redaktioneller Text oder klarer Kontaktweg kann der professionellere Beweis sein.
 
 Geeignete Module, jeweils aus dem Gegenstand des Projekts abgeleitet:
 
@@ -57,14 +57,14 @@ Pflichten für jedes Kernmodul:
 - Es fällt auf Mobil nicht weg, sondern erhält eine für Touch entworfene Fassung.
 - Es steht mit Zweck, Datenquelle und Fallback im Motion Inventory.
 
-Gibt es für ein Projekt nachweislich kein sinnvolles Modul, wird das im Design Contract begründet. Ersatzweise trägt dann ein scrollgebundenes Leitmedium nach [[20-Design/Interface Benchmarks#B3 Full-Bleed Leitbild-Landing]] den Auftakt.
+Wird kein Kernmodul eingesetzt, nennt der Design Contract stattdessen die primäre Beweisform. Dafür ist keine Ausnahmebegründung nötig.
 
 ## Choreografie statt Wiederholung
 
 - Werden mehrere Websites beauftragt, erhält jede eine andere Bewegungsgrammatik, zum Beispiel editorielle Kapitelbewegung, produktnahe Interface-Choreografie oder räumlich-mediale Scroll-Erzählung. Sie darf Animationsreferenzen direkt übernehmen oder kreativ adaptieren.
 - Scrollbewegung darf sichtbar mit Fortschritt gekoppelt sein, sie darf Leser aber nicht durch Scroll-Jacking, Zwangs-Scroll, unüberspringbare Intros oder gesperrte Navigation festhalten.
-- Mindestens eine Scrollsequenz pro primärer Route verändert nicht nur Opazität: Sie erklärt eine räumliche Beziehung, einen Prozess, ein Produktdetail oder ein narratives Kapitel.
-- Stagger, Parallax, Pinning, Clip/Mask, transformierende Medien, Zähler, SVG-Pfade und 3D/Canvas sind verfügbare Mittel. Auswahl und Kombination folgen Inhalt und Leitidee, nicht einer globalen Obergrenze.
+- Jede eingesetzte Scrollsequenz erklärt eine räumliche Beziehung, einen Prozess, ein Produktdetail oder ein narratives Kapitel; bloßes Pflicht-Parallax ist ein Befund.
+- Stagger, Parallax, Pinning, Clip/Mask, transformierende Medien, Zähler, SVG-Pfade und 3D/Canvas sind verfügbare Mittel. Auswahl und Kombination folgen Inhalt, Leitidee und Motion-Budget.
 - Ein Inhalt ist vor, während und nach einer Sequenz lesbar. Sehbare Bewegung darf weder DOM- noch Fokusreihenfolge verändern.
 - Autoplay-Medien haben sichtbare Pause-/Stopmöglichkeit; Ton startet nie ungefragt.
 

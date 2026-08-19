@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 impacts:
   - design-tokens
   - components
@@ -69,29 +69,29 @@ Regeln zum Vertrag:
 - Focus-Farbe auf allen angrenzenden Flächen testen.
 - Kontrast mit realen Font-Schnitten, Transparenzen, Bildern und Zuständen testen.
 
-## Verbrauchte Farbwelten
+## Häufige Defaults bewusst entscheiden
 
-Diese Paletten sind durch generierte Websites so stark belegt, dass sie unabhängig von ihrer handwerklichen Qualität nach KI aussehen. Sie werden nicht als dominante Grundfläche verwendet:
+Häufige Paletten sind weder automatisch schlecht noch verboten. Sie werden problematisch, wenn sie ohne Bezug zu Marke, Material, Ort, Inhalt oder Zielgruppe als Abkürzung für „hochwertig“, „freundlich“ oder „technisch“ eingesetzt werden. Jede der folgenden Welten kann die richtige sein; der Design Contract benennt dann Herkunft, Flächengewicht und Kontrastlogik.
 
-| Verbrauchte Farbwelt | Warum sie auffällt | Besserer Weg |
+| Häufiger Default | Risiko ohne Herleitung | Prüffrage |
 |---|---|---|
-| Beige, Creme, Sand, warmes Off-White als Hauptfläche | Standardausgabe vieler Generatoren für „hochwertig“ und „handgemacht“ | Neutralskala aus einem realen Material, Ort oder Produkt ableiten und leicht kühl oder klar setzen |
-| Blau-Lila-Verlauf | Standard für „Technologie“ und „KI“ | eine dominante Markenfarbe mit belegter Herkunft, Verlauf nur wenn er etwas darstellt |
-| Dunkelviolett mit Neon-Akzent | Standard für „Zukunft“ | dunkle Fläche mit genau einem Signalton aus dem Produkt |
-| durchgehend saturiertes Pastell | Standard für „freundlich“ | klare Neutralbasis plus ein oder zwei kräftige Marken- und Signalfarben |
-| gedecktes Dunkelgrün, Oliv, Senf, Ziegel oder Terracotta zusammen mit einer alten Buchserife | erzeugt eine Retro-Anmutung, die der Nutzer ausdrücklich ablehnt; siehe [[20-Design/Typography Layout and Spacing#Retro-Verbot]] | dieselbe Farbfamilie klar und kühl setzen und mit einer zeitgenössischen Grotesk kombinieren, oder eine Signalfarbe aus dem realen Gegenstand ableiten |
+| Beige, Creme, Sand, warmes Off-White | austauschbare Premium-/Handmade-Anmutung | Stammt der Ton aus Marke, Raum, Material oder Bildwelt, und trägt er genügend Kontrast? |
+| Blau-Lila-Verlauf | generisches Technologie- oder KI-Signal | Stellt der Verlauf Marke, Licht, Daten oder räumliche Tiefe dar, oder dekoriert er nur? |
+| Dunkelviolett mit Neon-Akzent | vorhersehbare Zukunftsästhetik | Passt die Energie zum Angebot und bleibt Text auch ohne Glow klar? |
+| saturierte Pastells | undifferenzierte Freundlichkeit | Sind Rollen und Gewichtung erkennbar, oder konkurriert jede Fläche? |
+| Dunkelgrün, Oliv, Senf, Ziegel oder Terracotta | ungewollte Nostalgie | Ist der Zeitbezug beabsichtigt und im gesamten System konsequent? |
 
-Wenn Marke, Material, Ort oder Produkt einen dieser Töne tatsächlich vorgeben, ist er erlaubt. Die Herleitung wird dann im Design Contract benannt. Ein Ton ohne solche Herleitung wird ersetzt.
+Ein unbegründeter Default wird nicht wegen seines Farbnamens ersetzt, sondern weil er keine projektspezifische Arbeit leistet. Eine stark begründete Palette darf dominant, ungewöhnlich, historisch, neutral oder sehr bunt sein.
 
 ## Farbverteilung in Produkt-UI
 
 Für Oberflächen mit Daten, Listen, Status und Verwaltung gilt die Verteilung aus [[20-Design/Interface Benchmarks#B1 Soft Neutral Product Console]]: neutrale Fläche, Abgrenzung über Hairline, Farbe fast ausschließlich semantisch, eine einzige dunkle Signalfarbe für den aktiven Zustand, Kategorietöne nur als kleine Icon-Tints. Wo Farbe keine Bedeutung trägt, ist sie grau.
 
-Grundhaltung: **modern, klar, übersichtlich.** Eine ruhige Neutralskala, eine dominante Markenfarbe mit belegter Herkunft, höchstens eine sekundäre Farbe und eindeutige semantische Farben. Farbe wird gezielt gesetzt, nicht flächendeckend gestreut.
+Grundhaltung für Produkt-UI: Zustand und Aufgabe bleiben klar. Eine ruhige Neutralskala ist eine häufig gute, aber nicht exklusive Lösung. Marketing-, Kultur-, Kinder-, Mode- oder Erlebnisoberflächen dürfen eine volle Palette oder farbgetragene Flächen verwenden, wenn Rollen und Kontrast stabil bleiben.
 
 ## Anti-Slop
 
-- Kein Blau-Lila-Verlauf, außer Marke und Inhalt begründen ihn.
+- Kein Verlauf ohne erkennbare Rolle; Blau-Lila ist dabei weder pauschal verboten noch bevorzugt.
 - Keine Neon-Glows oder zufällige Gradient-Meshes als Ersatz für Art Direction.
 - Farbfläche und Akzent gezielt einsetzen; nicht jede Sektion neu einfärben.
 - Keine Farbe, die nur gewählt wurde, weil sie „hochwertig“ oder „modern“ wirkt. Jede Rolle hat eine benennbare Herleitung.
@@ -100,4 +100,3 @@ Tools wie Coolors können Varianten erzeugen, entscheiden aber nicht über Marke
 
 [^wcag]: [W3C: Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
 [^coolors]: [Coolors](https://coolors.co/)
-

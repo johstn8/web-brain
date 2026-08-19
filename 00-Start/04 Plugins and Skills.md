@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: user-maintained
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Plugins and Skills
@@ -137,12 +137,12 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Vor einer neuen visuellen Richtung oder einem umfassenden UI-Refinement Impeccable mit dem passenden Arbeitsmodus nutzen und die Entscheidung im Design Contract der betreffenden Website festhalten.
 - **Nach der Implementierung ist der KI-Detail-Review mit Impeccable Pflicht**, je gebauter Website getrennt. Ablauf, Prüfliste und Nachweispflicht stehen in [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]]. Ohne diesen Nachweis ist Gate `G1` nicht erfüllt.
-- Bei jeder neuen Website und jeder geänderten Motion Emil Design Engineering vor der Implementierung anwenden. Das Motion Inventory dokumentiert die hohe Route-zu-Route-Choreografie, Bewegungszweck, Häufigkeit, Timing/Scroll-Range, Easing, Unterbrechbarkeit und Reduced-Motion-Fallback.
+- Bei jeder neuen Website und jeder geänderten Motion Emil Design Engineering vor der Implementierung anwenden. Das Motion Inventory dokumentiert das gewählte Motion-Budget sowie für tatsächlich eingesetzte Bewegungen Zweck, Häufigkeit, Timing/Scroll-Range, Easing, Unterbrechbarkeit und Reduced-Motion-Fallback.
 - Beim Schreiben einer einzelnen Bewegung `animate` verwenden. Emil Design Engineering liefert die Haltung, `animate` die Entscheidungsreihenfolge und die Umsetzung.
 - **Vor der Abnahme jeder gebauten Website `review-animations` ausdrücklich aufrufen** und die Befunde entweder beheben oder mit Grund im Decision Log festhalten. Der Nachweis gehört zu Gate `G1`.
 - `prototype` nur in der Entwurfsphase und nur für einzelne Bauteile aufrufen, nie für ganze Websites.
 - Der Skill `apple-design` desselben Repositorys ist bewusst **nicht** installiert. Sein Inhalt steht als Referenz in [[90-References/Apple Fluid Interface]] und wird von dort gelesen.
-- Der Skill `find-animation-opportunities` desselben Repositorys wird **nicht** installiert. Er filtert Bewegung nach dem Grundsatz, dass die meisten Kandidaten abzulehnen sind, und widerspricht damit dem verbindlichen Motion-Niveau aus [[20-Design/Motion and Interaction#Verbindliches Motion-Niveau]].
+- Der Skill `find-animation-opportunities` desselben Repositorys ist derzeit **nicht** installiert. Sein Auswahlprinzip widerspricht dem [[20-Design/Motion and Interaction#Motion-Budget]] nicht mehr; bei künftiger Verfügbarkeit wird er nach Nutzen, Überschneidung und Wartungsaufwand neu bewertet.
 
 ## Vorrang der Brain-Regeln vor Skill-Vorschlägen
 

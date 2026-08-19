@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -14,19 +14,19 @@ impacts:
 
 ## Verbot ohne konkrete Begründung
 
-- **Kicker über Überschriften.** Keine Eyebrow-Zeile, kein Label, keine Kategoriezeile oberhalb einer Überschrift. Weder als Pille, noch als Versalzeile, noch als kleiner farbiger Text, noch als Marker mit vorangestellter Linie oder Ziffer. Details im nächsten Abschnitt.
+- **Redundante Kicker über Überschriften.** Eyebrow, Label oder Kategoriezeile ist ein Befund, wenn sie nur die Überschrift wiederholt, überall mechanisch erscheint oder reine Dekoration ist. Echte Rubrik-, Status-, Datums-, Autor- oder Prozessinformation ist erlaubt. Details im nächsten Abschnitt.
 - Blau-Lila-Gradient, Neon-Glow, Sparkles oder generische Aurora-Fläche
-- Retro-Anmutung: kantige Epochen-Displayschrift, alte Buchserife als Markenschrift einschließlich `Iowan Old Style`, dieselbe Serife kombiniert mit Dunkelgrün oder anderen gedeckten Erdtönen, Vintage-Badges, Ornamente, Papier- und Filmkorn. Kanonisch in [[20-Design/Typography Layout and Spacing#Retro-Verbot]]
+- unmotiviertes Stilzitat ohne Marken- oder Inhaltsbezug, gleich ob retro, futuristisch, minimalistisch, editorial oder technisch. Kanonisch in [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]]
 - unbearbeitete Bestandsbilder mit falschem Winkel, störendem Hintergrund, fremder Farbstimmung oder zu geringer Auflösung; kanonisch in [[20-Design/Imagery and AI Editing]]
 - sichtbare Kennzeichnung, Wasserzeichen oder Overlay auf einem KI-generierten Bild
 - graue Platzhalterflächen, Bildsymbole oder `lorem`-Bilder an Stellen, an denen ein Bild vorgesehen ist
 - Textwände, doppelt beantwortete Nutzerfragen und Abschnitte über dem Budget aus [[10-Strategy/Information Density and Mobile Clarity]]
-- Beige, Creme oder Sand als dominante Grundfläche einer Website, siehe [[20-Design/Color System#Verbrauchte Farbwelten]]
+- häufige Farbpalette ohne projektspezifische Herleitung, siehe [[20-Design/Color System#Häufige Defaults bewusst entscheiden]]
 - Em-Dash in Website-Copy
 - Emojis als Icons oder Aufzählungszeichen
 - Glas-Header ohne gemessenen Kontrast gegen den tatsächlich darunterliegenden Inhalt oder ohne deckenden Fallback. Eine durchscheinende Kopfzeile ist eine optionale Stilentscheidung, kein Standard; Bedingungen in [[30-Frontend/Components and UI States#Option durchscheinende Kopfzeile]]
-- dekorativer Schatten auf ruhenden Inhaltsflächen, inkonsistente Tiefenlogik und Verlauf als Flächenfüllung ohne Bedeutung. Kanonisch in [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]]
-- Kopfzeile mit mehr als sechs Navigationspunkten oder mit umbrechendem Text, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
+- inkonsistente Tiefenlogik und Verlauf oder Schatten ohne erkennbare materielle beziehungsweise hierarchische Rolle. Kanonisch in [[20-Design/Typography Layout and Spacing#Tiefe und Rahmen]]
+- Kopfzeile, deren Inventar nicht aus der Informationsarchitektur folgt, oder die bei realen Texten, Zoom und schmalen Breiten zufällig überläuft, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
 - jede Sektion als gleichförmiges abgerundetes Card-Grid
 - riesige Icons mit winzigem Text
 - frei driftende Radius-, Rahmen- oder Containerwerte außerhalb des im Website-Contract gewählten Systems; uneinheitliche Buttonhöhen ohne funktionalen Grund
@@ -44,21 +44,21 @@ impacts:
 
 ## Kicker und Überschriften
 
-Der Kicker über der Überschrift ist das deutlichste Erkennungszeichen generierter Seiten. Er wiederholt meist, was die Überschrift ohnehin sagt, und verbraucht eine Hierarchiestufe ohne Gegenwert.
+Ein mechanisch wiederholter Kicker über jeder Überschrift ist ein häufiges Erkennungszeichen generierter Seiten. Das Problem ist Redundanz und Scheinhierarchie, nicht die Position an sich.
 
-**Verboten sind unter anderem:**
+**Befunde sind unter anderem:**
 
 - eine Eyebrow-Zeile `PREISE` über der Überschrift „Preise und Gebühren“
 - eine gesperrte Versalzeile mit Ziffer wie `01 AUSGANGSLAGE` über der Sektionsüberschrift
-- kleine Pillen mit `Neu`, `KI-gestützt`, `Beta` oder einem Kategoriewort über dem Titel
+- kleine Pillen mit `Neu`, `KI-gestützt`, `Beta` oder einem Kategoriewort, wenn dieser Zustand nicht real oder für die Entscheidung unwichtig ist
 - ein farbiger Kurztext mit vorangestelltem Strich als reine Dekoration
 
 **Stattdessen:**
 
 - Die Einordnung gehört in die Überschrift selbst. Aus „Preise“ plus „Preise und Gebühren“ wird eine Überschrift, die tatsächlich etwas aussagt.
-- Eine Nummerierung, die wirklich Orientierung stiftet, steht in derselben Zeile wie die Überschrift, in einer Randspalte oder in einer sichtbaren Kapitelnavigation, nicht als eigene Zeile darüber.
+- Eine Nummerierung, die wirklich Orientierung stiftet, darf in derselben Zeile, einer Randspalte, einer sichtbaren Kapitelnavigation oder einer bewusst eigenen Zeile stehen.
 - Kontext, der über die Überschrift hinausgeht, gehört in den Lead darunter, in eine Bildunterschrift oder in die Navigation.
-- Eine reale Metazeile in einem redaktionellen Beitrag, etwa Datum, Rubrik oder Autor, ist kein Kicker in diesem Sinn, solange sie eine echte, nicht redundante Information trägt.
+- Eine reale Metazeile, etwa Datum, Rubrik, Autor, Status, Zielgruppe oder Prozessschritt, ist kein Anti-Slop-Befund, solange sie eine echte, nicht redundante Information trägt.
 
 ## Erkennungsfragen
 
@@ -78,8 +78,8 @@ Der Kicker über der Überschrift ist das deutlichste Erkennungszeichen generier
 - Funktioniert jedes sichtbare Control real?
 - Gibt es für jede Rolle aus [[20-Design/Color System#Tokenvertrag]] einen gesetzten Wert, insbesondere für `border-hover` und `accent-subtle`?
 - Verändert sich beim Überfahren einer klickbaren Karte tatsächlich etwas, und zwar Rahmen und Position statt nur Farbe?
-- Stehen alle Radien auf einer der vier Stufen, und trägt im Ruhezustand wirklich keine Fläche einen Schatten?
-- Ist negatives Tracking auf den großen Stufen gesetzt und im Fließtext nicht?
+- Gehören Radien, Rahmen und Schatten zu einer erkennbaren, dokumentierten Grammatik?
+- Ist das Tracking für die konkrete Schrift und Textstufe lesbar kalibriert?
 - Würde diese Startseite mit ausgetauschtem Logo für jede beliebige Branche funktionieren?
 
 ## Impeccable KI-Detail-Review
@@ -88,7 +88,7 @@ Verbindlich für **jede** gebaute Website, unabhängig davon, wie viele Websites
 
 1. Website vollständig bauen und lokal starten.
 2. Impeccable nach [[00-Start/04 Plugins and Skills]] im Review-Modus auf die reale, laufende Website anwenden, nicht auf Entwürfe oder Beschreibungen.
-3. Gezielt nach Details suchen, die nach KI-Generat aussehen: Kicker über Überschriften, immer gleiche Sektionsanordnung, austauschbare Copy, dekorative Karten, Standardfarben ohne Markenbezug, Verläufe ohne Grund, gleichförmige Hover-Effekte, erfundene Belege, Füllsätze, Symmetrie ohne Absicht, generische Icons.
+3. Gezielt nach Details suchen, die nach KI-Generat aussehen: redundante Kicker über Überschriften, immer gleiche Sektionsanordnung, austauschbare Copy, dekorative Karten, Standardfarben ohne Markenbezug, Verläufe ohne Grund, gleichförmige Hover-Effekte, erfundene Belege, Füllsätze, Symmetrie ohne Absicht, generische Icons.
 4. Die Prüffragen aus [[10-Strategy/Website Copy#Prüffragen vor der Abnahme]] auf jeden sichtbaren Text der Website anwenden, einschließlich Karten, Formularhilfen und Fußzeile.
 5. Jeden Befund entweder korrigieren oder mit inhaltlicher Begründung im Decision Log festhalten. „Gefällt mir so“ ist keine Begründung.
 6. Ergebnis mit Datum, geprüfter Website, Befundliste und Umsetzungsstand im Projekt dokumentieren. Ohne diesen Nachweis ist Gate `G1` in [[70-QA/Quality Gates]] nicht erfüllt.
@@ -98,11 +98,11 @@ Bei mehreren Websites wird der Review je Website getrennt geführt. Ein gemeinsa
 ## Reparatur
 
 1. Eine klare Nutzenbotschaft und ein Markenkonzept festlegen.
-2. Alle Kicker entfernen und ihre Information in Überschrift, Lead oder Navigation überführen.
+2. Redundante Kicker entfernen; echte Metainformation behalten und in eine klare Hierarchie bringen.
 3. Unbelegte und redundante Sektionen löschen.
 4. Tokens vereinheitlichen.
 5. Produkt, Prozess oder echte Arbeit zeigen.
-6. Die Motion-Dichte nicht reduzieren, sondern jeden Moment mit Kapitel, Prozess, räumlicher Beziehung oder Handlung verknüpfen und nach [[20-Design/Motion and Interaction]] als eigenständige Route-Choreografie ausarbeiten.
+6. Das Motion-Budget neu kalibrieren: zwecklose Bewegung entfernen, tragende Bewegung mit Kapitel, Prozess, räumlicher Beziehung oder Handlung verknüpfen.
 7. Copy konkretisieren und alle Links testen.
 8. Mobile, Zustände, Accessibility und Performance vor zusätzlichem Polish fertigstellen.
 

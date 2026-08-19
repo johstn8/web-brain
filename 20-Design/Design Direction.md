@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
@@ -23,10 +23,10 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - vollständiger Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark
 - gewählte Radiusskala, Rahmenbehandlung, Flächenlogik und Tiefe; innerhalb der Website konsistent, aber nicht aus einer anderen Fassung übernommen
 - Bewegungstokens und eine eigene Bewegungsgrammatik; kalibrierte Beispiele in [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]] sind Optionen, keine Defaults
-- Primär- und Zweitschriftentscheidung samt Rollen und Nachweis, dass sie nicht unter das [[20-Design/Typography Layout and Spacing#Retro-Verbot]] fällt; auch die bewusste Entscheidung gegen eine Zweitschrift wird begründet
+- Primär- und gegebenenfalls Zweitschrift samt Rollen, Lesbarkeits-, Lizenz- und Zeitbezugsentscheidung nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]]
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]]
-- interaktives Kernmodul der Landing Page nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]]
+- primäre Beweisform der Landing Page; ein interaktives Kernmodul nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]] nur wenn es inhaltlich trägt
 - Referenzen mit Rolle, übertragbarem Prinzip und konkreter Einsatz-/Adaptionsentscheidung
 - Grad an Dichte, Ausdruck, Motion und Bilddominanz
 - Entscheidung für ein reales Kernartefakt, direkt übernommenes oder kreativ adaptiertes Leitmedium samt statischer Alternative
@@ -40,7 +40,7 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - verlinkte Entscheidungsmatrix aus [[90-References/Reference Research Workflow]]
 - UI UX Pro Max Query, Ergebnisdatum, gewählte Regeln und begründete Abweichungen gemäß [[00-Start/04 Plugins and Skills]]
 - Einsatz oder begründeter Verzicht auf [[90-References/pen.dev Workflow|pen.dev]] samt Artefaktpfad
-- Motion Inventory mit einer inhaltsbezogenen Choreografie für jede primäre Route, hoher Bewegungsdichte und Reduced-Motion-Variante
+- Motion-Budget `none | low | medium | high`; Inventory für die tatsächlich eingesetzten relevanten Bewegungen und Reduced-Motion-Variante
 
 ## Stilachsen
 
@@ -67,17 +67,17 @@ Existieren frühere Projekte oder Durchläufe desselben Betriebs, entsteht vor d
 
 | Bewusst übernehmen | Bewusst neu entscheiden |
 |---|---|
-| verifizierte Fakten, gemeinsame Inhaltsquelle, freigegebene Assets, funktionierende Build- und Deployment-Infrastruktur | Art Direction, Leitmotiv, Fassungsname, Signalfarbe, Typografie, Kopf- und Fußbereich, Seiten-Chrome, Komponentenrepertoire, Motion-Grammatik und interaktives Kernmodul |
+| verifizierte Fakten, gemeinsame Inhaltsquelle, freigegebene Assets, funktionierende Build- und Deployment-Infrastruktur | Art Direction, Leitmotiv, Fassungsname, Signalfarbe, Typografie, Kopf- und Fußbereich, Seiten-Chrome, Komponentenrepertoire, primäre Beweisform und Motion-Grammatik |
 
-Leitmotiv, Fassungsname, Signalfarbe und interaktives Kernmodul dürfen sich nur wiederholen, wenn der jeweilige Design Contract eine konkrete, sachliche Begründung dokumentiert. Gleicher Betrieb, gleicher Builder oder funktionierende Vorgängerversion sind keine Begründung. Gemeinsame Klassen, Komponenten oder Tokens werden nur übernommen, wenn sie Infrastruktur statt Art Direction verkörpern; der Grenzfall wird im Übernahmeregister benannt.
+Leitmotiv, Fassungsname, Signalfarbe und primäre Beweisform dürfen sich wiederholen, wenn der jeweilige Design Contract eine konkrete, sachliche Begründung dokumentiert. Gleicher Betrieb, gleicher Builder oder funktionierende Vorgängerversion sind allein noch keine Begründung. Gemeinsame Klassen, Komponenten oder Tokens werden übernommen, wenn sie Infrastruktur statt Art Direction verkörpern; der Grenzfall wird im Übernahmeregister benannt.
 
 ## Stilabstand bei mehreren Websites
 
 Kanonische Regel für den sichtbaren Unterschied zwischen mehreren gebauten Websites desselben Auftrags. Zwei Websites, die sich beim Überfliegen für dasselbe Angebot halten lassen, verfehlen den Auftrag, auch wenn beide für sich gut sind.
 
-Vor der ersten Zeile UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit einer Spalte je Website. **Jede Achse muss sich zwischen allen Websites klar und nachprüfbar unterscheiden.** Ein leeres Feld, ein bloßes Synonym oder dieselbe Struktur mit anderer Farbe erfüllt die Achse nicht. Ist eine Achse sachlich nicht anwendbar, wird sie durch eine gleich wirksame, im Design Contract begründete Achse ersetzt; sie entfällt nicht ersatzlos.
+Vor der ersten Zeile UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit einer Spalte je Website. Die Matrix erzwingt nicht auf jeder Zeile künstlichen Unterschied. Sie belegt, dass jede Website eine eigenständige, in sich zusammenhängende Richtung besitzt. Mindestens fünf für den Auftrag wirksame Achsen unterscheiden sich deutlich; auf anderen Achsen darf dieselbe sachlich beste Lösung wiederkehren. Bloße Synonyme oder dieselbe Struktur mit anderer Farbe bilden noch keine eigene Richtung.
 
-| Pflichtachse | Was sich unterscheiden muss |
+| Vergleichsachse | Was auf Unterschied oder sachlich gleiche Lösung geprüft wird |
 |---|---|
 | Grundhelligkeit und Farbwelt | Flächengewicht, Kontrastverteilung und Signalfarbe mit eigener Herleitung |
 | Primärschrift | andere Familie oder grundlegend andere typografische Systemlogik, nicht nur anderes Gewicht |
@@ -91,7 +91,7 @@ Vor der ersten Zeile UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix
 | Komponentenrepertoire | derselbe Inhalt erscheint mit anderer Grundform, etwa Karte gegen Zeile gegen Tabelle gegen Liste, nicht nur mit anderer Kartenfarbe |
 | Leitbewegung | prägende Bewegungsgrammatik, etwa Scrollsequenz gegen ortsfeste Bühne gegen Maskenwechsel |
 | Sektionsreihenfolge und Dramaturgie | andere Reihenfolge der Nutzerfragen aus [[10-Strategy/Information Density and Mobile Clarity#Eine Frage pro Abschnitt]] |
-| interaktives Kernmodul | anderes Modul oder deutlich andere Bedienlogik desselben realen Inhalts |
+| primäre Beweisform | etwa Leitbild, Case, Demo, Rechner, Prozess, Team, Produktansicht oder redaktionelle Tiefe |
 | Tonfall der Copy | Anrede, Satzlänge und Nähe unterscheiden sich, die Fakten nicht |
 
 Zusätzlich wird je Website der Vergleich mit älteren Fassungen nach [[#Abstand zu Vorgängerfassungen]] dokumentiert. `prototype` nach [[00-Start/04 Plugins and Skills#Prototype]] kann unklare Einzelachsen sichtbar machen, wird aber nur auf Bauteile angewandt, nie auf ganze Websites.
@@ -102,10 +102,10 @@ Fakten, Preise, Zeiten, Funktionen, Unterseiten, Accessibility, Sicherheit und S
 
 Die Anordnung ist eine Gestaltungsentscheidung, keine Voreinstellung. Wer jede Sektion mit Titel, Lead und Raster beginnt, erzeugt genau die Gleichförmigkeit, die generierte Seiten kennzeichnet.
 
-- **Kein Kicker über einer Überschrift.** Verbindlich nach [[20-Design/Anti AI Slop#Kicker und Überschriften]].
+- Redundante Kicker vermeiden. Echte Rubrik-, Status-, Datums- oder Prozessinformation darf nach [[20-Design/Anti AI Slop#Kicker und Überschriften]] als eigene Hierarchiestufe erscheinen.
 - Für jede Sektionsart eine eigene Anordnung wählen. Mögliche Achsen: Überschrift links neben dem Inhalt statt darüber, Überschrift über zwei Spalten gebrochen, Überschrift als Bildunterschrift, Überschrift im Raster versetzt, Text in einer schmalen Randspalte, Zahl und Wort in derselben Zeile, Überschrift, die den Inhalt umfließt.
 - Überschriften dürfen typografisch groß, gebrochen, überlappend, angeschnitten oder mit einem Medium verschränkt gesetzt werden, solange Lesbarkeit, Fokusreihenfolge und Reflow stimmen.
-- Der Auftakt einer Website ist nie der Standard aus mittigem Titel, Unterzeile und zwei Knöpfen. Er wird aus Inhalt, Leitmetapher und Kernartefakt entwickelt.
+- Der Auftakt wird aus Inhalt, Leitmetapher, Beweis und nächster Handlung entwickelt. Auch ein mittiger Titel mit Unterzeile und Aktionen kann richtig sein, wenn genau diese Ruhe und Symmetrie zum Auftrag passt; er darf nicht bloß ungeprüfter Default sein.
 - Rhythmus entsteht über Maßstabssprünge, Weißraumwechsel und wechselnde Flächenhelligkeit, nicht über immer neue Kartenformen.
 - Jede Abweichung von der Leserichtung braucht eine klare Ausrichtungsachse. Asymmetrie ohne Achse ist Unordnung.
 
@@ -114,10 +114,10 @@ Die Anordnung ist eine Gestaltungsentscheidung, keine Voreinstellung. Wer jede S
 Für die Startseite beziehungsweise Landing Page gilt ein höherer Anspruch als für Unterseiten. Sie darf und soll auffällig sein.
 
 - **Extravagant erlaubt, beliebig nicht.** Große Typografie, ungewöhnliche Raster, randlose Medien, überlappende Ebenen, ausgeprägte Scroll-Choreografie und ein starkes Farbstatement sind ausdrücklich erwünscht, wenn sie aus der Leitmetapher folgen.
-- **Modern und professionell.** Klare Hierarchie, ruhige Neutralbasis, präzise Abstände, keine verbrauchte Farbwelt nach [[20-Design/Color System#Verbrauchte Farbwelten]].
+- **Professionell ist zweckpassend.** Klare Hierarchie, präzise Abstände und ein kohärentes Farb- und Flächensystem. Auch warme, helle, dunkle, zurückhaltende oder expressive Richtungen sind möglich, wenn sie aus Marke, Inhalt und Zielgruppe folgen; siehe [[20-Design/Color System#Häufige Defaults bewusst entscheiden]].
 - **Freundlich statt kühl.** Ansprache, Farbe und Bildauswahl dürfen Wärme und Freude transportieren. Das entsteht über echte Menschen, echte Arbeit, Farbkontrast und Rhythmus, nicht über Emojis, Sparkles oder Ausrufezeichen.
 - **Übersichtlich bleiben.** Auch eine expressive Startseite beantwortet in den ersten zwei Bildschirmhöhen: Wer ist das, was bekomme ich, was ist der nächste Schritt. Die Informationsmenge folgt [[10-Strategy/Information Density and Mobile Clarity]] und wird am 375-Pixel-Viewport entschieden.
-- **Bedienbar statt nur bewegt.** Mindestens ein interaktives Kernmodul nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]].
+- **Beweis vor Pflichtinteraktion.** Interaktion wird eingesetzt, wenn sie etwas Reales zeigt oder eine Aufgabe löst. Statisches Leitbild, Team, Case, Arbeitsprobe oder klare Erklärung sind gleichwertige Beweisformen.
 - **Ein echtes Leitbild.** Der Auftakt trägt ein großes, bearbeitetes oder erzeugtes Bild des tatsächlichen Gegenstands nach [[20-Design/Imagery and AI Editing]]. Findet sich kein reales Bild, wird ein KI-Bild eingesetzt und im Projekt als `ai-placeholder` geführt, ohne sichtbare Kennzeichnung auf der Website.
 - Das Novelty Budget gilt weiterhin: höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt.
 - Unterseiten übernehmen dasselbe Designsystem, treten aber ruhiger auf. Der Ausdruck liegt auf der Landing Page, die Verlässlichkeit auf den Unterseiten.

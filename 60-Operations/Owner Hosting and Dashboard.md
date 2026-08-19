@@ -590,6 +590,8 @@ Die Search Console API arbeitet ausschließlich mit einem autorisierten Konto: D
 
 Die Schlüsseldatei wird beim Einfügen geprüft und **nicht in der Datenbank** abgelegt, sondern als Datei mit Rechten `0600` daneben. Ein Datenbank-Backup enthält damit keine fremden Zugangsdaten. Zurückgezeigt wird sie nie; sichtbar bleiben Dienstkonto, Property und eine Prüfsumme.
 
+Property, Konto, Berechtigung, echter API-Abruf und die davon getrennte Indexierbarkeit werden je Website im [[60-Operations/Release Readiness Register]] geführt. Ein erfolgreicher API-Test schließt einen offenen `noindex`- oder `robots.txt`-Befund nicht.
+
 #### Drei Zustände, nicht zwei
 
 Zugangsdaten hinterlegen und Daten abrufen sind verschiedene Dinge und bekommen verschiedene Zustände: `aus`, `hinterlegt`, `aktiv`. „Hinterlegt“ heißt: Der Schlüssel liegt vor, abgerufen wird noch nichts.
@@ -613,6 +615,7 @@ Das Kontaktformular darf vor der Entscheidung über den E-Mail-Versand gebaut un
 
 - Die Anfrage wird serverseitig gespeichert, nicht nur im Browser bestätigt.
 - Der Zustellzustand ist ein eigenes Feld. `gespeichert` heißt: liegt beim Betreiber vor, es ging keine Benachrichtigung hinaus. Das steht im UI, nicht nur im Datenmodell.
+- Produktions-Endpunkt, realer Betreiberzugang, optionaler E-Mail-Versand und Ende-zu-Ende-Nachweis werden je Website im [[60-Operations/Release Readiness Register]] geführt. Sichtbare Übergangshinweise bleiben dort bis zu ihrer Entfernung oder bewussten Owner-Freigabe verortet.
 - Der Betreiber hat einen belegten Weg, die Anfragen zu lesen und ihren Bearbeitungsstand zu setzen, auch ohne E-Mail.
 - Ein Formular, das nur eine Erfolgsmeldung zeigt und nirgends ankommt, ist schlechter als kein Formular: Der Owner hält sein Anliegen für übermittelt und wartet.
 

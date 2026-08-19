@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 depends_on:
   - "[[90-References/Inspiration Catalog]]"
 impacts:
@@ -18,15 +18,15 @@ impacts:
 > [!important] Rang
 > Diese Notiz ist die kanonische Beschreibung der vom Nutzer ausdrücklich als gut bewerteten Oberflächen. Sie steht bei visuellen Entscheidungen **über** allgemeinen Referenzmustern aus [[90-References/Derived Design Patterns]] und unter dem jeweiligen `PROJECT.md`. Die Belege dazu stehen in [[90-References/Inspiration Catalog#Vom Nutzer bewertete Benchmarks]].
 
-Fünf Benchmarks, fünf Rollen. Jede gebaute Website wählt mindestens einen davon als Leitbenchmark und benennt ihn in ihrem eigenen Design Contract.
+Sechs Benchmarks, sechs Rollen. Jede gebaute Website wählt mindestens einen davon als Leitbenchmark und benennt ihn in ihrem eigenen Design Contract. Ein Benchmark ist ein Werkzeug für den jeweiligen Use Case, kein Normalstil des Brains.
 
 ## H0 Handwerksuntergrenze
 
-H0 ist kein Look und kein sechster Benchmark. Die Untergrenze gilt für jede Website, ohne ihr eine gemeinsame Art Direction aufzuzwingen:
+H0 ist kein Look und kein nummerierter Benchmark. Die Untergrenze gilt für jede Website, ohne ihr eine gemeinsame Art Direction aufzuzwingen:
 
 - anwendbare Komponenten besitzen vollständige Zustände einschließlich `focus-visible`, Laden, Fehler, Leerzustand und deaktiviert;
 - Text, Icons, Controls und Fokus erreichen ihren erforderlichen Kontrast in der tatsächlich gerenderten Kombination aus Variante und Untergrund;
-- ruhende Inhaltsflächen tragen keinen dekorativen Schatten; Abgrenzung entsteht zuerst durch Weißraum, Typografie und bei Bedarf eine Hairline;
+- Hierarchie und Tiefe sind nachvollziehbar; Schatten, Rahmen, Hairlines, Überlagerung, Farbe und Weißraum sind gleichwertige Mittel, wenn sie im gewählten System eine klare Rolle besitzen;
 - Tokens, Typografie, Spacing, Radius-, Rahmen-, Flächen-, Tiefen- und Motionentscheidungen bilden **innerhalb einer Website** ein konsistentes System;
 - Interaktion bleibt per Tastatur, Touch und Zeigegerät verständlich, Reduced Motion erhält die Information und kein visueller Effekt blockiert Inhalt oder primäre Aktion;
 - eine echte Darstellung an den Prüfbreiten ist Teil der Abnahme. Nicht renderbare UI ist ein Blocker nach [[70-QA/Quality Gates]], kein ersatzweise bestandener Textscan.
@@ -35,7 +35,7 @@ Die frühere B5-Regel vermischte diese Handwerksuntergrenze mit einem fertigen S
 
 | Aussage aus dem früheren B5 | Ebene ab jetzt |
 |---|---|
-| Zustandsvollständigkeit, sichtbarer Fokus, Kontrast im Kontext, kein Schatten auf ruhenden Inhaltsflächen, Hairline als mögliches Abgrenzungsmittel, interne Systemkonsistenz | **H0, immer verbindlich** |
+| Zustandsvollständigkeit, sichtbarer Fokus, Kontrast im Kontext, klare Hierarchie und interne Systemkonsistenz | **H0, immer verbindlich** |
 | Anzahl und Abstand der Flächenstufen, Radiusanzahl und -werte, genaue Rahmenbehandlung, Hover-Lift, Kartenaufbau, Kopfzeilenaufbau, Mono-Familie und ihre Rollen, Metazeilentrenner, genaue Reveal- und Bewegungswerte | **Stilebene, je Website zu entscheiden** |
 
 Ein Build ist nicht deshalb handwerklich schwächer, weil er kantig statt weich, zeilen- statt kartenbasiert, deckend statt durchscheinend oder ohne Monospace gestaltet ist. Schwach ist er, wenn seine gewählte Grammatik inkonsistent oder in realen Zuständen unlesbar und unbedienbar wird.
@@ -104,7 +104,7 @@ Bezug: die Solarseite in [[90-References/Inspiration Catalog#Vom Nutzer bewertet
 
 **Nicht übernehmen**
 
-- Die gesperrten Versalzeilen über den Sektionsüberschriften. Das sind Kicker und damit verboten.
+- Redundante gesperrte Versalzeilen über Sektionsüberschriften. Echte Rubrik- oder Prozessinformation darf als Kicker bestehen, wenn sie nicht bloß die Überschrift wiederholt.
 - Erfundene Kennzahlen wie erzeugte Energie, abgeschlossene Projekte, Zufriedenheitsquote oder Jahre Erfahrung ohne Beleg, und ebenso erfundene Kundenstimmen mit Namen. Beides fällt unter [[10-Strategy/Content and Conversion#Beweis-Hierarchie]].
 - Austauschbare Abschnittstexte, die zu jedem beliebigen Anbieter derselben Branche passen.
 
@@ -173,9 +173,35 @@ Die B5-Kartenvariante mit allen Werten und Zuständen steht in [[30-Frontend/Com
 
 Verlaufstext aus Indigo, Violett und Pink; Emojis als Sektionszeichen; Verlaufsflächen als Bildersatz; jede Sektion als gleichförmiges Kartenraster; alles Rechtliche und alle Kennzahlen. Begründung und Belege in [[90-References/Inspiration Catalog#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]].
 
+## B6 Purpose-Fit Professional Web
+
+**Rolle:** Leitbenchmark für Unternehmens-, Praxis-, Beratungs-, Agentur-, Event- und Conversion-Websites, bei denen professionelle Qualität aus Passung statt aus einer wiederholten Designergrammatik entsteht.
+
+Bezug: die vom Nutzer am 19. August 2026 benannte Rocket-Sites-Referenzgruppe in [[90-References/Inspiration Catalog#Rocket-Sites-Referenzgruppe — strukturell analysiert am 19. August 2026]].
+
+**Übernehmen**
+
+- Angebot, Zielgruppe und nächste Handlung werden früh verständlich, aber nicht zwangsläufig in derselben Hero-Komposition.
+- Navigation bildet die reale Angebotstiefe ab. Eine kleine Einzweckseite darf zwei oder drei Ziele besitzen; ein gewachsener B2B-Auftritt darf viele klar gruppierte Ziele, Untermenüs oder Utility-Ebenen führen.
+- Vertrauensaufbau folgt dem Geschäft: Team und Räume bei Praxen, Arbeitsproben und Medien bei Agenturen, Cases und Partner bei B2B, Ablauf und direkte Kontaktwege bei lokalen Diensten.
+- Seitenlänge, Dichte, Bildanteil, Typografie, Farbstimmung und Motion dürfen stark variieren. Konsistenz gilt innerhalb der Website, nicht zwischen allen Builds des Brains.
+- Wiederkehrende Conversion-Aktionen dürfen über lange Seiten hinweg stabil benannt und an sinnvollen Entscheidungspunkten wiederholt werden.
+- Unterseiten, FAQ, Prozess, Referenzen und lange Erklärstrecken werden nur gebaut, wenn Angebot und Nutzerfragen sie tragen. Eine fokussierte kurze Seite ist ebenso professionell wie ein tiefer Informationsauftritt.
+
+**Nicht übernehmen**
+
+- unbelegte Garantien, Zahlen, Testimonials oder Superlative;
+- redundante Inhaltsblöcke, veraltete Termine oder doppelt ausgelieferten Text;
+- sichtbare Unfertigkeit, Attrappen und technisch nicht angebundene Kontaktwege;
+- ein einzelnes Rocket-Sites-Beispiel als neue Vorlage für alle Branchen.
+
+**Entscheidungsregel**
+
+Der Design Contract beantwortet zuerst: Was muss diese konkrete Website verständlich, glaubwürdig und leicht handelbar machen? Erst danach werden Headerinventar, Seitentiefe, Beweisform, Typografie, Flächen, Motion und Interaktion gewählt. B6 darf alleiniger Leitbenchmark sein; es verlangt kein B5-Kartenrezept, kein interaktives Kernmodul und keine Mindestmenge an Bewegung.
+
 ## Gemeinsamer Handwerksnenner
 
-Der gemeinsame Nenner der Benchmarks ist H0, nicht ein gemeinsames Aussehen: eindeutige Zustände, Kontextkontrast, ruhende Flächen ohne dekorativen Schatten, Abgrenzung zuerst durch Hierarchie und bei Bedarf Hairlines sowie ein konsistentes System innerhalb der jeweiligen Website. Farbwelt, Radius, Rahmenrhythmus, Flächenlogik, Kartenanteil, Kopfzeile, Zweitschrift und Bewegungscharakter bleiben Art-Direction-Entscheidungen.
+Der gemeinsame Nenner der Benchmarks ist H0, nicht ein gemeinsames Aussehen: eindeutige Zustände, Kontextkontrast, verständliche Hierarchie und ein konsistentes System innerhalb der jeweiligen Website. Farbwelt, Radius, Schatten, Rahmenrhythmus, Flächenlogik, Kartenanteil, Kopfzeile, Zweitschrift und Bewegungscharakter bleiben Art-Direction-Entscheidungen.
 
 ## Anwendung
 
@@ -183,7 +209,7 @@ Im Design Contract **jeder gebauten Website** wird festgehalten:
 
 - gewählter Leitbenchmark und Begründung,
 - konkret übernommene Elemente je Benchmark,
-- ausdrücklich nicht übernommene Elemente, insbesondere die Kicker und die erfundenen Belege aus B3 und die nicht übernommenen Muster aus B5,
+- ausdrücklich nicht übernommene Elemente, insbesondere redundante Kicker und erfundene Belege aus B3 sowie die nicht übernommenen Muster aus B5,
 - Abweichungen mit inhaltlicher Begründung,
 - die H0-Nachweise und die frei gewählten Stilparameter für Radius, Rahmen, Flächen, Tiefe, Karten, Kopfzeile, Zweitschrift und Motion.
 

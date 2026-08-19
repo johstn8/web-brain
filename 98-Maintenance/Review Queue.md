@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 next_review: 2026-11-01
 ---
 # Review Queue
@@ -78,7 +78,8 @@ Für jedes neue Projekt zusätzlich prüfen:
 - Ist der Leitbenchmark aus [[20-Design/Interface Benchmarks]] benannt, samt nicht übernommener Elemente?
 - Sind alle Bilder überarbeitet, zu einer Serie angeglichen und alle `ai-placeholder`-Bilder mit Ersetzungshinweis übergeben?
 - Halten alle Routen das Textbudget aus [[10-Strategy/Information Density and Mobile Clarity]] ein?
-- Hält die Kopfzeile bei 1280, 1440 und 1920 Pixel die Grenze von sechs Punkten und die Einzeiligkeit ein?
+- Bildet die Kopfzeile die tatsächlichen Nutzerziele bei 320, 375, 768, 1280 und 1920 Pixel sowie 200 Prozent Zoom verständlich und ohne unbedienbaren Überlauf ab?
+- Ist je Website `release-readiness/<website-slug>.md` aktuell, und stimmen offene sichtbare Hinweise, Vorschau-Sperren, E-Mail-Endpunkte, Integrationen, Search Console sowie Indexierungszustand mit dem ausgelieferten System überein?
 - Beschreibt `SOURCE-RIGHTS-REVIEW.md` jeden tatsächlich verwendeten Asset-Eintrag samt Quelle und offenem Hinweis für den Nutzer/Owner, ohne den Build zu verändern?
 - Haben sich eingesetzte Frameworks, Browserziele oder Anbieter geändert?
 - Sind Datenschutzverträge, Löschfristen und Datenflüsse aktuell?

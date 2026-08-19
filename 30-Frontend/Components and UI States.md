@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 impacts:
   - accessibility-tests
   - visual-regression
@@ -77,15 +77,15 @@ Verboten sind dekorative Schwebezustände ohne Aktion, Cursor-Glow als generisch
 
 ## Kopfzeile und Hauptnavigation
 
-Kanonische Funktions- und Geometrieregel für die Kopfzeile jeder Website. Inventar und Anordnung sind Teil der Art Direction und bei mehreren Websites eine Pflichtachse der Unterscheidungsmatrix.
+Kanonische Funktions- und Geometrieregel für die Kopfzeile jeder Website. Inventar und Anordnung sind Teil der Art Direction und bei mehreren Websites eine Pflichtachse der Unterscheidungsmatrix. Es gibt weder eine globale Sollzahl noch eine vorgeschriebene Kopfzeilenform.
 
-- Vor UI-Code dokumentieren: sichtbare Elemente, Reihenfolge, Gruppierung, Positionierungsmodell, Höhe, Verhalten über den vorkommenden Untergründen, Mobile-Übergang und Navigationsbeschriftungen.
-- **Höchstens sechs Navigationselemente** in der sichtbaren Hauptnavigation. Weitere Bedienelemente dürfen die Zeile nicht sprengen.
-- **Nichts in der Kopfzeile ist zweizeilig.** Einzige Ausnahme ist eine bewusst mehrzeilige Wortmarke oder ein Logo.
-- Die Kopfzeile wird bei **1280, 1440 und 1920 Pixel** sowie mit der längsten realen Beschriftung geprüft. Bei Platzmangel werden Inventar, Begriffe oder Informationsarchitektur überarbeitet.
-- Kein Element darf höher sein als die nutzbare Innenhöhe der Kopfzeile. Oben und unten bleibt je mindestens `4px` echte Luft; eine projektbezogen größere Mindestluft steht im Design Contract.
-- Ist ein Kindmaß über die Breite definiert, während die Kopfzeile über die Höhe begrenzt wird, muss das gerenderte Seitenverhältnis an jedem Prüfbreakpoint gemessen werden. Das gilt besonders für Wortmarken, Logos und quadratische Controls.
-- Auf schmalen Flächen ersetzt eine zur jeweiligen Website passende Schublade, ein Sheet oder eine andere dokumentierte Lösung die Desktopanordnung. Fokusmanagement, Escape, Rückfokus und Scrollsperre bleiben Pflicht.
+- Vor UI-Code dokumentieren: Nutzeraufgaben, sichtbare Elemente, Priorität, Reihenfolge, Gruppierung, Positionierungsmodell, Verhalten über den vorkommenden Untergründen, Responsive-Übergang und reale Navigationsbeschriftungen.
+- Die Zahl sichtbarer Links folgt der Informationsarchitektur. Drei direkte Ziele können richtig sein, ebenso acht klar gruppierte Ziele, ein Mega-Menü, eine zweistöckige Utility-/Hauptnavigation, eine seitliche Navigation oder eine knappe Kopfzeile mit tiefem Footer. Kein Muster wird nur gewählt, um eine Zahl einzuhalten.
+- Primäre, häufige Ziele bleiben direkt auffindbar. Seltene, rechtliche oder sekundäre Ziele dürfen in Untermenü, Utility-Bereich oder Fußbereich wechseln, wenn dies ihre Auffindbarkeit nicht verschlechtert.
+- Einzeilige Navigation ist bei einer kompakten horizontalen Kopfzeile ein sinnvolles Ziel, aber kein globales Gesetz. Bewusst mehrzeilige, gestapelte oder umschaltende Konzepte brauchen klare Gruppen und dürfen nicht wie zufälliger Textumbruch aussehen.
+- Geprüft wird an den projektbezogenen Breakpoints sowie mindestens bei 320, 375, 768, 1280 und 1920 Pixel mit den längsten realen Beschriftungen, 200 Prozent Zoom und großer Systemschrift. Kein Element wird abgeschnitten, überlagert ein anderes oder verliert seine erreichbare Zielgröße.
+- Logo, Wortmarke und Controls behalten ihr Seitenverhältnis und eine zum Konzept passende Innenluft. Starre Höhen dürfen Inhalt nicht beschneiden.
+- Auf schmalen Flächen darf die Desktopanordnung zu Schublade, Sheet, gestapeltem Index, Accordion, horizontalem Scroller oder einer anderen dokumentierten Lösung werden. Fokusmanagement, Escape, Rückfokus und Scrollsperre gelten, soweit das Muster sie benötigt.
 - Der aktive Punkt ist ohne Farbe allein erkennbar und trägt `aria-current="page"`.
 - Jede Kopfzeile besitzt einen kontrastgeprüften Zustand über jedem Untergrund. Deckend, im Dokumentfluss, seitlich, aufgeteilt oder durchscheinend sind gleichwertige Art-Direction-Optionen.
 

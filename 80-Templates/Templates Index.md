@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Templates Index
@@ -13,7 +13,8 @@ updated: 2026-08-17
 - [[80-Templates/Asset Register]]: eingesetzte Assets mit Quelle, tatsächlicher Übernahme und nicht blockierendem Owner-Reviewstatus
 - [[80-Templates/Data Processing Inventory]]: Datenschutz und Datenflüsse
 - [[80-Templates/Owner Hosting Website Contract]]: `tenant.json`, `_hosting`-Feldvertrag und Synchronisierungscheck je zentral gehosteter Website
+- [[80-Templates/Release Readiness Register]]: fortlaufende technische, sichtbare und organisatorische Restliste je Website bis zum Produktionsnachweis
 - [[80-Templates/Launch Checklist]]: projektspezifische Freigabe
 - [[80-Templates/AI Build Prompt]]: kompakter Startprompt mit Brain-Routing
 
-Bei einem Website-Auftrag zuerst die Anzahl der Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]] bestimmen und den Ordner nach [[60-Operations/Delivery and Local Start]] anlegen. Master Spec als `PROJECT.md` und die drei Inventarvorlagen unter ihren festgelegten Projektnamen kopieren, `type: project` setzen und aus `PROJECT.md` verlinken. Sobald zentrales Owner-Hosting zum Umfang gehört, zusätzlich [[80-Templates/Owner Hosting Website Contract]] anwenden und `owner-hosting/tenant.json` plus `_hosting`-Vertrag anlegen. Originalvorlagen nicht projektspezifisch verändern.
+Bei einem Website-Auftrag zuerst die Anzahl der Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]] bestimmen und den Ordner nach [[60-Operations/Delivery and Local Start]] anlegen. Master Spec als `PROJECT.md`, die drei Inventarvorlagen unter ihren festgelegten Projektnamen und je Website ein `release-readiness/<website-slug>.md` kopieren, `type: project` setzen und aus `PROJECT.md` verlinken. Sobald zentrales Owner-Hosting zum Umfang gehört, zusätzlich [[80-Templates/Owner Hosting Website Contract]] anwenden und `owner-hosting/tenant.json` plus `_hosting`-Vertrag anlegen. Originalvorlagen nicht projektspezifisch verändern.

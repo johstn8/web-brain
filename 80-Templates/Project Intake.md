@@ -17,7 +17,7 @@ updated: 2026-08-06
 - Bestehende Website und weitere bekannte URLs:
 - Vorhandenes Firmenlogo, Fundort und Dateiformat; falls keines bekannt ist, wird es in der Bestandsaufnahme gesucht:
 - Gewünschte oder verbotene Farbwelt; bestehende Hausfarben:
-- Gewünschte Hauptnavigationspunkte, höchstens sechs:
+- Erwartete primäre Ziele, mögliche Gruppen/Untermenüs und Inhalte für Utility-Navigation oder Footer:
 - Reale Inhalte/Assets/Beweise vorhanden; gewünschte Bilder, Designs, Animationen und direkte Quellen für den sofortigen Einsatz:
 - Google-Maps-/Business-Profil oder eindeutige Adresse und Place ID:
 - Maps-Hinweise zu Öffnungszeiten, Reviews, Stoßzeiten oder weiteren Fakten; Betreiberquelle, Owner und Frist zur Verifikation:

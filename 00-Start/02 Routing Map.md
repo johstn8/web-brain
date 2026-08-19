@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Routing Map
@@ -15,14 +15,14 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Navigation oder neue Seite | [[10-Strategy/Information Architecture and Sitemap]], [[30-Frontend/SEO and Discoverability]] | Sitemap und Navigation synchron |
 | Inspirationsrecherche | [[90-References/Reference Research Workflow]], [[90-References/Inspiration Catalog]] | Entscheidungsmatrix und statischer/interaktiver Nachweis |
 | Visuelles Konzept | alle Notizen unter `20-Design`, [[00-Start/04 Plugins and Skills]], [[90-References/pen.dev Workflow]] | Design Tokens, Direction, Leitbenchmark, UI UX Pro Max Nachweis und pen.dev-Entscheidung |
-| Landing Page gestalten | [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]] | Auftaktkomposition, Leitbild, interaktives Kernmodul, Überschriftenanordnung, Logo-Platzierung, Negativreferenzen |
+| Landing Page gestalten | [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]] | Auftaktkomposition, Beweisform, passende Interaktions-/Motionrolle, Überschriftenanordnung, Logo-Platzierung, Negativreferenzen |
 | Dashboard, Datenansicht oder Verwaltungsoberfläche | [[20-Design/Interface Benchmarks]], [[30-Frontend/Components and UI States]], [[20-Design/Color System]]; bei Owner-Betrieb zusätzlich [[60-Operations/Owner Hosting and Dashboard]] | Benchmark B1/B4 geprüft, Kennzahlen mit Bezugsgröße, Leerzustände, Rollen- und Veröffentlichungsmodell |
 | Bilder beschaffen oder überarbeiten | [[20-Design/Imagery and AI Editing]], [[80-Templates/Asset Register]] | Bildinventar mit Rolle, Bearbeitungsschritten und `ai-placeholder`-Liste |
 | Texte und Informationsmenge festlegen | [[10-Strategy/Information Density and Mobile Clarity]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Website Copy]] | Sektions- und Textbudget je Route, Copy-Prüffragen durchlaufen |
 | Copy schreiben oder überarbeiten | [[10-Strategy/Website Copy]], [[20-Design/Anti AI Slop]] | Text ohne Meta-Sätze, Statementzeilen und unbegründete Dreierfiguren, mit ganzen Sätzen an den tragenden Stellen |
 | Mehrere Websites im selben Auftrag | [[20-Design/Design Direction#Stilabstand bei mehreren Websites]], [[20-Design/Design Direction#Abstand zu Vorgängerfassungen]], [[00-Start/05 Web Product Workflow#Anzahl der Websites]] | vor UI-Code ausgefüllte Unterscheidungsmatrix; jede Pflichtachse unterscheidet sich paarweise, Vorgängerübernahme ist dokumentiert |
 | Schriftwahl | [[20-Design/Typography Layout and Spacing]], [[20-Design/Interface Benchmarks]] | Type Ramp und Nachweis, dass kein Retro-Verstoß vorliegt |
-| Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States]], [[10-Strategy/Information Architecture and Sitemap]] | höchstens sechs Punkte, einzeilig bei 1280, 1440 und 1920 Pixel |
+| Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States]], [[10-Strategy/Information Architecture and Sitemap]] | begründetes Inventar und Muster, Überlauf-/Reflow-Nachweis an realen Beschriftungen |
 | Website fertig, vor Abnahme | [[20-Design/Anti AI Slop]], [[00-Start/04 Plugins and Skills]], [[70-QA/Quality Gates]] | Impeccable KI-Detail-Review je Website mit Befundliste |
 | Einzelne Bewegung bauen oder prüfen | [[20-Design/Motion and Interaction]], [[00-Start/04 Plugins and Skills#Animate]], [[00-Start/04 Plugins and Skills#Review Animations]] | Bewegung mit Zweck, Kurve, Dauer und Reduced-Motion-Fallback, vor der Abnahme durch `review-animations` geprüft |
 | Geste, Feder, Sheet oder Drag | [[90-References/Apple Fluid Interface]], [[20-Design/Motion and Interaction#Gestengeführte Bewegung]] | unterbrechbare Bewegung mit Geschwindigkeitsübergabe und projizierter Ruhelage |
@@ -35,6 +35,7 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Tracking oder Embed | [[50-Legal/Privacy and Consent]] | Consent-Kategorie und Dateninventar |
 | Hosting oder Owner-Dashboard | [[60-Operations/Owner Hosting and Dashboard]], [[80-Templates/Owner Hosting Website Contract]], [[40-Backend-Security/Authentication and Accounts]], [[50-Legal/Privacy and Consent]] | zentraler Tenant-Plan, `tenant.json`, `_hosting`-Feldvertrag, registriertes Buildprofil, Vorschau/Publish/Rollback, Dateninventar und offene Anbieterentscheidungen |
 | Developer-Plattform auf `johannstein.com` | [[60-Operations/Delivery and Local Start]], [[30-Frontend/Accessibility]], [[40-Backend-Security/Preview Access Gate]] | Archiv, aktuelle Projekte und Veröffentlichungsvorhaben; persistenter Status, Tastaturalternative, Login/Freigabe/noindex erhalten |
-| Launch | [[70-QA/Quality Gates]], [[60-Operations/Delivery and Local Start]] | signierte Launch-Checkliste |
+| Website-Build oder -Update | [[60-Operations/Release Readiness Register]] | eigenes, fortlaufend aktualisiertes `release-readiness/<website-slug>.md` je Website |
+| Launch | [[70-QA/Quality Gates]], [[60-Operations/Delivery and Local Start]], [[60-Operations/Release Readiness Register]] | abgeglichenes Release-Readiness-Register je Website und signierte Launch-Checkliste |
 | Brain-Update | [[00-Start/03 Update Protocol]], [[98-Maintenance/Coverage and Impact Map]] | atomarer Changelog-Eintrag |
 | pen.dev oder `.pen` | [[90-References/pen.dev Workflow]], [[60-Operations/Delivery and Local Start]] | versionierte Designquelle, CLI-Exportprüfung und Decision Log |

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-19
 impacts:
   - design-tokens
   - components
@@ -12,36 +12,26 @@ impacts:
 
 ## Grundhaltung
 
-Die Schrift ist modern und zeitgenössisch, nicht historisierend. Zielbild ist die neutrale, präzise Typografie aus [[20-Design/Interface Benchmarks]]: eine gut ausgebaute Grotesk, klare Gewichtsabstufung, ruhige Laufweite, keine Stilzitate.
+Typografie übersetzt Marke, Inhalt, Lesesituation und Bedienaufgabe. Neutral, expressiv, sachlich, humanistisch, technisch, historisch oder bewusst zeitgenössisch sind gleichwertige Richtungen. Verbindlich sind Lesbarkeit, passende Zeichenabdeckung, stabile Rollen, belastbare Webfonts und eine nachvollziehbare Herleitung.
 
-## Retro-Verbot
+## Stilzitat und Zeitbezug
 
-Verbindlich für jede gebaute Website. Verboten ist die **Retro-Anmutung**, also Typografie, die eine vergangene Epoche zitiert, statt eine Haltung zu haben:
+Ein Zeitbezug ist eine Art-Direction-Entscheidung, kein globaler Fehler. Historische Serifen, kantige Displayschriften, Schreibmaschine, Terminal, Ornamente, Papier, Filmkorn oder gedeckte Erdtöne sind erlaubt, wenn sie aus Marke, Produkt, Ort, Publikum oder einer bewusst gewählten kulturellen Referenz entstehen.
 
-- kantige, technisch anmutende Displayschriften mit Achtziger- oder Neunziger-Zitat,
-- alte Buch- und Systemserifen mit hoher x-Höhe und schwerem Duktus in der Rolle der Markenschrift, ausdrücklich einschließlich `Iowan Old Style` und typgleicher Familien,
-- die Kombination aus solcher Serife und gedeckten Erdtönen, insbesondere Dunkelgrün, Oliv, Senf, Ziegel, Terracotta,
-- Schreibmaschinen- und Terminaloptik ohne echten Systembezug, siehe [[20-Design/Anti AI Slop]],
-- gesperrte Versalzeilen, Zierlinien, Ornamente, Badges im Vintage-Stil, gealterte Texturen, Papier- und Filmkorn als Grundstimmung.
-
-Eine Serife an sich ist nicht verboten. Verboten ist die Kombination aus Serife, Erdton, Ornament und Nostalgiegeste, die zusammen einen Retro-Eindruck erzeugen. Eine zeitgenössische Serife auf klarer Neutralbasis mit moderner Farbwelt ist ausdrücklich erlaubt und oft die stärkere Wahl für redaktionelle Inhalte.
-
-Prüffrage: Sieht die Seite aus, als sollte sie älter wirken, als sie ist? Dann wird die Schriftwahl ersetzt.
-
-Die Ausnahme ist ein tatsächlicher, belegter historischer Bezug des Betriebs, etwa ein Gründungsjahr mit erhaltener Wortmarke oder ein Produkt, das aus der zitierten Zeit stammt. Die Herleitung wird dann im Design Contract benannt.
+Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertrauen beschädigt, nur einzelne dekorative Versatzstücke verwendet oder gegen die reale Marke arbeitet. Prüffragen: Welche konkrete Quelle trägt den Zeitbezug? Welche Rollen übernimmt er? Würde die Website ohne Logo noch zu diesem Betrieb gehören? Ist das Zitat auch auf Mobilgerät, in Formularen und in langen Texten funktionsfähig?
 
 ## Schriftwahl
 
-- **Primär: eine variable Grotesk mit großem Gewichtsumfang.** Bewährt sind Inter, Geist, Satoshi, General Sans, Manrope, Söhne-nahe Familien sowie die Systemstacks. Sie tragen Auftakt, Oberfläche und Fließtext gleichermaßen.
+- **Primärschrift nach Aufgabe wählen.** Grotesk, Serif, Slab, Humanist, Mono, Displayfamilie oder Systemstack sind möglich. Für dichte Produkt-UI braucht die primäre Familie robuste Schnitte, Ziffern und kleine Größen; eine Marketingseite darf stärker über eine charaktervolle Displayrolle geführt werden.
 - **Die Zweitschrift ist eine begründete Entscheidung je Website**, kein globaler Reflex. Ihr Contract benennt Familie, Rollen, Ausschlüsse und den Grund, warum die Primärschrift diese Aufgabe nicht übernimmt. Auch `keine Zweitschrift` ist eine gültige, zu dokumentierende Entscheidung.
-- Eine Monospace ist nur sachlich, wenn Zeichenbreite oder technischer Kontext Bedeutung tragen, etwa Code, Terminalausgabe, Tastenkürzel, IDs oder spaltenweise vergleichbare Zahlen. Sie ist sachlich falsch für Anschriften, Fließtext, Sektionstitel, Öffnungszeiten in Prosa und dekorative Abschnittsnummern. Reine Zahlen werden mit tabellarischen Ziffern der Primärschrift gesetzt, sofern kein technischer Grund für Mono besteht.
-- Displayschriften mit starkem Eigencharakter sind erlaubt, wenn sie ausschließlich in der größten Stufe erscheinen und die Leseschrift neutral bleibt.
+- Eine Monospace ist besonders sinnvoll, wenn Zeichenbreite oder technischer Kontext Bedeutung tragen. Sie darf auch markenprägend eingesetzt werden, wenn längere Texte lesbar bleiben und die Rolle begründet ist; für tabellarische Zahlen genügen oft die OpenType-Ziffern der Primärschrift.
+- Displayschriften mit starkem Eigencharakter erhalten die Rollen, in denen ihr Rhythmus und ihre Lesbarkeit funktionieren. Sie sind nicht pauschal auf eine einzige Stufe begrenzt.
 - Die gewählte Familie muss mindestens Regular, Medium und Semibold sowie Ziffern in Tabellenform anbieten. Fehlt das, ist sie für Produkt-UI ungeeignet.
 - Herkunft, Version, Lizenz und Downloaddatum jeder Schrift gehören in das [[80-Templates/Asset Register]].
 
 ## Typografie
 
-- Maximal eine Display- und eine Leseschrift; eine gute variable Familie reicht oft.
+- So wenige Familien wie nötig. Eine oder zwei reichen häufig; weitere sind zulässig, wenn jede eine stabile, wiederkehrende Rolle besitzt und Ladebudget sowie visuelle Kohärenz gewahrt bleiben.
 - Type Ramp definieren: Display, H1-H4, Lead, Body, Small, Label, Code.
 - Für jede Stufe Größe, Zeilenhöhe, Gewicht, Letter-Spacing und Maximalbreite festlegen.
 - Body meist 16px oder größer; Zeilenlänge grob 45 bis 75 Zeichen.
@@ -64,7 +54,7 @@ Ausgangswerte, belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set �
 | Small | `0.875rem` | `1.45` | 400 bis 500 | `0` |
 | Label, Metazeile | `0.75rem` | `1.35` | 500 | `0` bis `0.01em` |
 
-- **Negatives Tracking gehört zu großen Stufen und nur dorthin.** Ab etwa `1.25rem` aufwärts wird enger gesetzt, Fließtext und Beschriftung nie. Das ist der Unterschied zwischen einer gesetzten und einer voreingestellten Überschrift.
+- Tracking folgt Schrift, Größe, Sprache und gewünschtem Charakter. Große Grotesks profitieren oft von engerer Laufweite; andere Familien nicht. Fließtext wird auf Lesbarkeit statt auf eine globale Nullregel geprüft.
 - Große Überschriften erhalten `text-wrap: balance`, Lead und Fließtext `text-wrap: pretty`, damit keine Einzelwortzeile entsteht.
 - Eine gewählte Mono-Familie trägt ausschließlich die im Website-Contract benannten technischen Rollen. `JetBrains Mono` ist ein belegtes Beispiel aus B5, kein Standard. Tags, Adressen, Uhrzeiten, Sektionsnummern und Metazeilen wechseln nicht automatisch in Mono.
 - Ziffern in tabellarischer Form für jede Zahl, die sich ändert oder untereinander steht; dafür genügen meist die OpenType-Ziffern der Primärschrift.
@@ -94,9 +84,9 @@ Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente le
 
 ## Tiefe und Rahmen
 
-- Ruhende Inhaltsflächen tragen nach [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] keinen dekorativen Schatten. Abgrenzung entsteht zuerst durch Hierarchie, Weißraum und bei Bedarf Hairlines.
+- Tiefe kann durch Schatten, Überlagerung, Farbe, Maßstab, Unschärfe, Rahmen oder Weißraum entstehen. Das gewählte Mittel muss zur materiellen Logik der Website passen und darf Hierarchie nicht vortäuschen.
 - Jede Website entscheidet Rahmenstärke, Ton, Vollständigkeit und Rhythmus als eigenes System. Ein Vollrahmen, nur horizontale Hairlines, geteilte Tabellenlinien oder bewusst rahmenlose Flächen sind unterschiedliche gültige Grammatiken.
-- Hover-, Fokus- und Ebenenschatten werden sparsam, konsistent und nur an interaktiven oder tatsächlich überlagernden Elementen eingesetzt. Anzahl und Werte stehen im Website-Contract.
+- Schatten werden konsistent und mit klarer Rolle eingesetzt. Interaktive, überlagernde und bewusst objektartige ruhende Elemente dürfen unterschiedliche dokumentierte Tiefenstufen besitzen.
 - Für B1 bleibt die Oberfläche vollständig schattenfrei. Wer B5 wählt, kann dessen einen flachen Hover-Schatten und Ein-Pixel-Rahmen übernehmen.
 - Fokus bleibt unabhängig von der gewählten Rahmenbehandlung eindeutig sichtbar und kontrastiert gegen jede tatsächlich vorkommende Fläche.
 
@@ -112,4 +102,3 @@ Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente le
 Fontshare bietet freie Fonts, doch Lizenzbedingungen je Familie und Downloadzeitpunkt im Asset Register prüfen.[^fontshare]
 
 [^fontshare]: [Fontshare](https://fontshare.com/)
-
