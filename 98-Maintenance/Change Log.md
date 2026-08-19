@@ -9,6 +9,51 @@ updated: 2026-08-18
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo sie eine feste Anzahl von drei Websites, Auswahlvarianten, Asset-Ausschlüsse, Ersatz, Preview-/Produktionssplit oder KI-Launchblocker nennen, sind sie durch den folgenden Eintrag ausdrücklich überholt.
 
+## 2026-08-19 — Umwandler als Betriebsvoraussetzung, Vormerkung übersteht einen Neustart, Sicherung
+
+Auslöser waren drei Rückfragen: `libwebp` wurde auf dem Server eingerichtet, damit ein Bild nur einmal hochgeladen werden muss; der Dienst sollte sich selbst neu starten lassen; und die Frage, was mit einer vorgemerkten Veröffentlichung geschieht, wenn sie auf eine Ausfallzeit oder ein Systemupdate fällt.
+
+**Diagnose:** Die dritte Frage deckte zwei Lücken auf, die der Umsetzung vom Vortag entgangen waren. Eine ausgelöste Vormerkung galt als „ausgeführt“, sobald ein Job entstand — unabhängig davon, ob der Bau gelang. Ein Neustart mitten im Bau ließ sie damit als erledigt zurück, während die Website unverändert blieb und niemand davon erfuhr. Und ein inhaltlich fehlgeschlagener Bau war nur im Joblog sichtbar.
+
+**Kanonisch neu**
+
+- [[60-Operations/Owner Hosting and Dashboard#Eine Datei genügt, die übrigen Fassungen entstehen daraus]] ersetzt die Regel „Grenze ohne Umwandler“ vom 18. August. Ein Bildumwandler ist eine Betriebsvoraussetzung wie eine Node-Version: Ohne ihn müsste ein Owner wissen, was WebP ist. Ein verlustfreier Umweg zwischen zwei Formaten ist zulässig und dem Verzicht vorzuziehen. Vier Regeln gelten für jedes Programm, das der Dienst startet — absoluter Pfad, keine geerbte Umgebung, begrenzte Laufzeit, und das Ergebnis durchläuft dieselbe Prüfung wie ein Upload von außen. Die alte Regel bleibt als Rückfallweg gültig, wenn der Umwandler fehlt.
+- Zwei Ergänzungen zu [[60-Operations/Owner Hosting and Dashboard#Der Zeitpunkt gehört an die Veröffentlichung]]: Ein Neustart während der Ausführung öffnet die Vormerkung wieder, ein inhaltlicher Fehlschlag wird gemeldet statt wiederholt. Der Zustand wird nicht doppelt geführt, sondern am Job abgelesen.
+- [[60-Operations/Owner Hosting and Dashboard#Datensicherung]]: Eine laufende Datenbank wird nicht kopiert, sondern als stimmige Momentaufnahme herausgeschrieben. Assets gehören dazu, Releases nicht — sie sind reproduzierbar. Fremde Zugangsdaten nur auf ausdrücklichen Wunsch. Eine halb geschriebene Sicherung wird gelöscht, nicht liegengelassen. Und eine Sicherung, die nie geöffnet wurde, ist eine Vermutung: Der Prüflauf gehört dazu.
+
+**In der gebauten Fassung**
+
+`packages/core/bildwandler.mjs` erzeugt die fehlenden Fassungen mit `cwebp` und `dwebp`; JPEG nach PNG läuft über eine verlustfreie WebP-Zwischenstufe, weil es keinen unmittelbaren Weg gibt. Qualitätsstufe 85 trifft die von Hand erzeugten Fassungen des Pilotprojekts fast genau (66 statt 69 kB); überschreitet eine Fassung ihre Grenze, wird die Qualität gesenkt statt abgelehnt. `packages/core/backup.mjs` sichert über `VACUUM INTO`, `backup:verify` zählt nach. Selbsttest 41 von 41, dazu Durchläufe für den Neustartfall und einen echten Bildtausch bis ins Release. Der Dienst wurde neu gestartet und antwortet.
+
+**Graphify neu gebaut.** Der Graph stand seit dem 16. August auf 541 Knoten und bildete weder die Änderung vom 17. noch die beiden vom 18. und 19. ab. Er ist jetzt aktuell: **603 Knoten, 940 Kanten, 47 Gemeinschaften**, gegenüber 541/823/29. Der Shrink-Schutz hat nicht angeschlagen; die Extraktion lief über Subagenten, weil `graphify` selbst nur einen Gemini-Schlüssel kennt und das Brain dafür nicht an einen weiteren Anbieter gegeben wird. 35 von 64 Dateien kamen aus dem Cache, 29 wurden neu gelesen.
+
+Eine Unschärfe bleibt und wird hier festgehalten statt verschwiegen: **13 von 965 Kanten (1,3 %) verloren ihren Endpunkt**, weil zwischengespeicherte Extraktionen aus früheren Läufen auf Knotenkennungen zeigen, die der neue Lauf leicht anders benannt hat. Betroffen sind Querverweise wie „Discovery and Scope → Web Product Workflow“. Die Notizen selbst bleiben über ihre Dokumentknoten verbunden; ein vollständiger Neubau aller 64 Dateien würde es beheben und ist die Sache eines späteren Laufs. Zwölf weitere Kanten fielen zusammen, weil dasselbe Paar einmal als `cites` und einmal als `references` extrahiert wurde — unschädlich.
+
+**Offen bleibt** ein regelmäßiger Sicherungslauf: Der Aufruf gehört in einen systemd-Timer als root, das richtet der Betreiber ein.
+
+## 2026-08-18 — Bilder als Dateien an ihrer Stelle, Termin an der Veröffentlichung, Auskunft danach
+
+Nachtrag desselben Tages. Aus den vorgeschlagenen Erweiterungen wurden vier ausgewählt und gebaut: Bilder tauschen, geplantes Veröffentlichen, eine Ansicht dessen, was sich geändert hat, und der Export der eigenen Inhalte. Die Zertifikatsanzeige wurde ausdrücklich zurückgestellt.
+
+**Diagnose:** Bei allen vieren lag die eigentliche Entscheidung nicht in der Umsetzung, sondern in der Ebene. Ein Bildfeld, das einen Dateinamen entgegennimmt, gibt dem Owner Macht über jede Verlinkung im Projekt, die das Dashboard nicht kennt. Ein Termin je Feld erzeugt Zwischenstände, die niemand entworfen hat; ein Termin-Modus ist versteckter Zustand. Und ein Vergleich vor der Entscheidung beantwortet nicht die Frage, die man danach hat.
+
+**Kanonisch neu**
+
+- [[60-Operations/Owner Hosting and Dashboard#Ein Bild ist eine Datei an einer Stelle, kein Wert in der Inhaltsdatei]]: Ein Bildfeld ersetzt eine Datei an einem registrierten Pfad; der Dateiname bleibt, in die Inhaltsdatei geht nur der Alternativtext.
+- [[60-Operations/Owner Hosting and Dashboard#Was hochgeladen wird, wird gelesen, nicht geglaubt]]: Endung und gemeldeter Typ entscheiden nichts. EXIF, XMP, IPTC und Kommentare werden entfernt, das Farbprofil bleibt, gespeichert wird nur die bereinigte Fassung. Ein Handyfoto trägt regelmäßig GPS-Koordinaten; das ist der Regelfall, nicht die Ausnahme.
+- [[60-Operations/Owner Hosting and Dashboard#Assets sind unveränderlich]]: Ein neues Bild entsteht neben dem alten. Rollback und Rückkehr zu einer früheren Fassung folgen daraus, statt eigene Mechanik zu brauchen.
+- [[60-Operations/Owner Hosting and Dashboard#Eine Datei genügt, die übrigen Fassungen entstehen daraus]] (damals „Grenze ohne Umwandler“): Ohne Bildkonverter werden mehrere Formate einzeln hochgeladen. Dieselbe Datei unter zwei Namen abzulegen ist ausgeschlossen; ein PNG, das als `image/webp` angekündigt wird, ist eine Falschangabe. **Überholt am 19. August**, siehe unten.
+- [[60-Operations/Owner Hosting and Dashboard#Der Zeitpunkt gehört an die Veröffentlichung]]: nicht je Feld, nicht als Modus. Gebaut wird zum Termin, ein Probebau läuft sofort. Eine Vormerkung belegt die Warteschlange nicht, es gibt höchstens eine offene je Website, und wer zwischendurch anderes veröffentlicht, entscheidet ausdrücklich über sie. Verspätetes wird begrenzt nachgeholt, Älteres verfällt sichtbar. Datum und Uhrzeit, Zeitzone an einer Stelle.
+- [[60-Operations/Owner Hosting and Dashboard#Nach der Veröffentlichung: sagen, was jetzt anders ist]]: eigene Ansicht in ganzen Sätzen, verglichen gegen die vorherige Revision statt gegen den heutigen Stand.
+- [[60-Operations/Owner Hosting and Dashboard#Eigene Inhalte mitnehmen]]: Selbstbedienung ohne Rückfrage, ohne Passwort-Hashes, Sitzungen und fremde Zugangsdaten.
+- Der Typkatalog kennt `image`; die Vorlage beschreibt ihn in [[80-Templates/Owner Hosting Website Contract#Der Typ image beschreibt Dateien, keinen Dateinamen]]. Die Mindestnachweise decken jetzt Metadatenentfernung, Uploadverlust beim Speichern, Neustartfestigkeit einer Vormerkung, verdeckende Probebauten und die Sauberkeit des Exports ab.
+
+**In der gebauten Fassung**
+
+Der Pilot Uferlinie v4 gibt seine vier Fahrzeugbilder frei, je zwei Dateien. Bild- und Zeitprüfung stecken in `packages/core/bilder.mjs` und `packages/core/zeit.mjs`, beide ohne Fremdcode; Metadaten werden am Containerformat entlang entfernt, ohne Pixel zu dekodieren. Ein echter Build belegt, dass PNG und WebP im Release ersetzt sind, das unberührte Bild unverändert bleibt und der Alternativtext im HTML steht. Beim Testen fielen zwei eigene Fehler auf und wurden behoben: Das Speichern des Inhaltsformulars setzte hochgeladene Bilder lautlos zurück, und ein laufender Probebau verdeckte Fehlermeldungen und offene Entscheidungen. Selbsttest 40 von 40.
+
+**Zurückgestellt:** die Anzeige des Zertifikatsablaufs. Sie bräuchte Lesezugriff auf `/etc/letsencrypt/live/` oder einen root-Timer, der den Zustand in eine lesbare Datei schreibt — eine Einrichtungsentscheidung, keine Dashboardarbeit.
+
 ## 2026-08-18 — Eine Eingabe je Angabe, Kontaktweg vor Versandweg, Search Console ehrlich benannt
 
 Auslöser war die Beobachtung im laufenden Dashboard, dass Telefonnummern zwei Felder brauchten — eines für die Anzeige, eines zum Anwählen — und dass der Owner die Lücken selbst setzen musste. Dazu kamen springende Seitenränder zwischen den Unterseiten, ein fehlender Kontaktweg zum Betreiber und die Frage, wie ein Search-Console-Zugang überhaupt hinterlegt werden kann.

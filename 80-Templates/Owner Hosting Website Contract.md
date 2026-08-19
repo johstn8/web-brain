@@ -223,6 +223,33 @@ Der Owner wählt links das Land und tippt rechts die nationale Nummer ohne führ
 
 Ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Begründung und Regeln in [[60-Operations/Owner Hosting and Dashboard#Eine Angabe ist ein Feld]].
 
+### Der Typ image beschreibt Dateien, keinen Dateinamen
+
+Ein Bildfeld ersetzt eine Datei an einem registrierten Pfad. Der Dateiname in der Inhaltsdatei bleibt unverändert, damit keine Verlinkung im Projekt bricht; in die Inhaltsdatei geht nur der Alternativtext:
+
+```json
+"fleet_photo": {
+  "type": "image",
+  "pointers": { "alt": "/fleet/0/alt" },
+  "files": {
+    "png":  { "path": "content/assets/wagen.png",  "label": "PNG",
+              "spec": { "type": "png",  "width": 1100, "minHeight": 440, "maxHeight": 500, "maxBytes": 921600 } },
+    "webp": { "path": "content/assets/wagen.webp", "label": "WebP",
+              "spec": { "type": "webp", "width": 1100, "minHeight": 440, "maxHeight": 500, "maxBytes": 256000 } }
+  },
+  "label": "Fahrzeugbild",
+  "help": "Seitenansicht auf freigestelltem Hintergrund.",
+  "publish_policy": "owner_confirm",
+  "responsible": "owner",
+  "risk": "low"
+}
+```
+
+- Jeder Pfad unter `files` muss in der Quelle bereits existieren. Ein Vertrag darf ein Bild ersetzen, aber keines erfinden, das die Website gar nicht einbindet.
+- `spec` ist verbindlich und wird serverseitig gegen die tatsächlichen Bilddaten geprüft, nicht gegen Endung oder gemeldeten Typ.
+- Sind mehrere Formate nötig, genügt **eine** hochgeladene Datei; die übrigen entstehen serverseitig. Dieselbe Datei unter zwei Namen abzulegen ist ausgeschlossen. Begründung in [[60-Operations/Owner Hosting and Dashboard#Eine Datei genügt, die übrigen Fassungen entstehen daraus]].
+- Der Alternativtext ist Pflicht. Ein Bild ohne ihn ist ein Fehler, keine Geschmacksfrage.
+
 ## Builder-Checkliste vor Registrierung
 
 - [ ] Jede sichtbare Inhaltsgruppe besitzt eine stabile Block-ID.
@@ -230,6 +257,7 @@ Ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Begr�
 - [ ] Kein Rechtstext, Tracking-, Consent-, Rollen-, Navigations- oder Buildfeld ist frei editierbar.
 - [ ] Jeder editierbare Pointer existiert in den Basiswerten und liegt innerhalb seines Blocks.
 - [ ] Angaben, die in mehreren Formen in der Datei stehen, bilden ein Feld mit mehreren Pointern, nicht mehrere Felder.
+- [ ] Jedes Bildfeld nennt alle Dateien, die entstehen müssen, samt Maßen, Format und Größengrenze; alle Zielpfade existieren in der Quelle.
 - [ ] Labels, Hilfen, Beispiele und Fehlergrenzen sind für einen Owner verständlich.
 - [ ] Preview-Routen decken Desktop und Mobil ab.
 - [ ] Lange Texte und Bilder wurden gegen reale Layoutgrenzen geprüft.

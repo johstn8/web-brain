@@ -213,6 +213,7 @@ Verbindlich:
 - Deutsche Rufnummern folgen DIN 5008: Ortsnetzkennzahl mit führender Null, ein Leerzeichen, Teilnehmernummer ungetrennt. Blockgrenzen innerhalb der Teilnehmernummer sind willkürlich und werden nicht erfunden.
 - Eine Nummer aus dem Land der Website erscheint national, jede andere international mit Pluszeichen.
 - Der Typkatalog wird um `phone` erweitert. `tel` als einfaches Textfeld ist für neue Verträge nicht mehr zulässig.
+- Dasselbe gilt für `image`: Ein Bildfeld beschreibt die Dateien, die entstehen müssen, und den Alternativtext. Ein Feld, in das ein Dateiname eingetippt wird, ist kein Bildfeld.
 
 ### Vertragsänderungen und bereits veröffentlichte Werte
 
@@ -303,6 +304,8 @@ Ein minimales `tenant.json` sieht so aus:
     "builder_requests": true,
     "appointment_requests": "suggestions",
     "image_uploads": false,
+    "scheduled_publish": true,
+    "content_export": true,
     "maintenance_mode": true
   }
 }
@@ -442,6 +445,31 @@ Ein Builder kann aktuelle Owner-Werte über einen read-only Export in seine loka
 
 Paralleländerungen werden vor Veröffentlichung erkannt. Der Owner sieht einen verständlichen Konfliktvergleich und überschreibt keine zwischenzeitlich veröffentlichte Änderung still.
 
+### Der Zeitpunkt gehört an die Veröffentlichung
+
+Zeitgesteuertes Veröffentlichen wird **nicht** als Modus und **nicht** je Feld umgesetzt.
+
+Ein Feld mit eigenem Termin erzeugt Zwischenstände, die niemand entworfen hat: die neue Telefonnummer ab Montag, die alten Öffnungszeiten noch bis Mittwoch. Die Vorschau kann die Frage „wie sieht die Website dann aus?“ dann nicht mehr beantworten, weil es kein *dann* mehr gibt, sondern eines je Feld.
+
+Ein Modus ist versteckter Zustand. Er wird angeschaltet, vergessen, und eine dringende Korrektur erscheint Wochen später nicht — ohne dass irgendetwas danach aussieht, als sei etwas falsch. Ein Schalter, der die Bedeutung des Veröffentlichen-Knopfes umdeutet, ist eine der verlässlichsten Quellen für „ich habe es doch gemacht“.
+
+Eine Vormerkung ist deshalb dasselbe wie eine Veröffentlichung — geprüfter Entwurf, sichtbarer Vergleich, bestätigte Rechtsprüfung — nur mit einem Zeitpunkt. Verbindlich:
+
+- **Gebaut wird zum Termin, nicht vorher.** Sonst zählt der Stand der Quelle von heute statt der von dann. Damit ein Fehler nicht unbeobachtet auftritt, läuft beim Vormerken sofort ein Probebau, der nichts umschaltet.
+- **Eine Vormerkung ist kein laufender Vorgang.** Sie darf die Veröffentlichungswarteschlange nicht belegen, sonst ist tagelang nichts anderes veröffentlichbar.
+- **Höchstens eine offene Vormerkung je Website.** Wer währenddessen etwas anderes veröffentlicht, entscheidet ausdrücklich über sie. Bliebe sie stillschweigend bestehen, fiele die Zwischenkorrektur am Termin wieder heraus, und der Zusammenhang wäre für niemanden erkennbar.
+- **Verspätet ja, vergessen nein.** War der Dienst zum Termin nicht verfügbar, wird innerhalb eines begrenzten Fensters nachgeholt und als verspätet protokolliert. Ältere Vormerkungen verfallen sichtbar, statt Werte nachzuschieben, deren Inhalt niemand mehr präsent hat.
+- **Ein Neustart mitten in der Ausführung öffnet die Vormerkung wieder.** Genau das erzeugt ein Systemupdate: Der Termin war richtig, der Inhalt geprüft, nur der Bau kam nicht durch. Sie als „ausgeführt“ stehen zu lassen wäre die schlechteste aller Möglichkeiten — die Website bliebe alt, und niemand erführe davon. Das Nachholfenster bleibt dabei in Kraft, damit daraus kein endloses Wiederholen wird.
+- **Ein inhaltlich fehlgeschlagener Bau wird nicht wiederholt, sondern gemeldet.** Ein automatischer zweiter Versuch würde denselben Fehler erzeugen. Der Zustand wird nicht doppelt geführt, sondern am Job abgelesen; er ist die einzige Wahrheit über den Bau. Der Hinweis verschwindet von selbst, sobald danach etwas erfolgreich veröffentlicht wurde.
+- **Datum und Uhrzeit, keine Tageszeit.** Eine gröbere Angabe verlagert die Entscheidung nur auf den Server und macht die Prüfung „ist das schon passiert?“ unbeantwortbar.
+- **Zeitzone an genau einer Stelle.** Gespeichert in UTC, eingegeben und angezeigt in der Ortszeit der Website. An zwei Stellen gerechnet, weicht eine davon einmal im Jahr um eine Stunde ab — nachts, wenn niemand hinsieht.
+
+### Nach der Veröffentlichung: sagen, was jetzt anders ist
+
+Der Vergleich vor der Entscheidung und die Auskunft danach sind zwei verschiedene Fragen. Vorher: „was werde ich ändern?“ Nachher: „was ist jetzt anders als vorher, und wer hat das wann entschieden?“
+
+Jede veröffentlichte Fassung bekommt deshalb eine Ansicht in ganzen Sätzen, verglichen gegen die **vorherige** Revision und nicht gegen den heutigen Stand — sonst zeigt die Ansicht eines alten Standes etwas anderes, sobald danach etwas veröffentlicht wurde. Die Übersicht führt eine Zusammenfassung davon. Eine Zeile im Verlauf mit einer Uhrzeit ist keine Auskunft.
+
 ## Dashboard-Bereiche
 
 Der Seitenrahmen ist auf allen Unterseiten identisch. Seitenränder, Kopfzeile und die Position der Navigation dürfen sich beim Wechsel nicht verschieben. Zwei Ursachen sind dafür verantwortlich und beide werden gesetzt statt in Kauf genommen:
@@ -475,6 +503,45 @@ Ein springender Rahmen liest sich als Unruhe, noch bevor jemand ihn benennen kan
 - serverseitige Typ- und Inhaltsprüfung, sichere Dateinamen, Metadatenbereinigung, Größenvarianten und moderne Formate
 - Zuschnittsvorschau für alle betroffenen Breakpoints, Alt-Text und Rückkehr zum vorherigen Bild
 - Original und erzeugte Varianten gehören zur Release-Historie
+
+#### Ein Bild ist eine Datei an einer Stelle, kein Wert in der Inhaltsdatei
+
+Ein Bildfeld schreibt keinen Dateinamen, sondern ersetzt eine Datei an einem registrierten Pfad. Der Name in der Inhaltsdatei bleibt unverändert; in sie geht nur der Alternativtext.
+
+Der Grund ist Bestandsschutz: Sobald der Owner Dateinamen beeinflusst, kann er jede Verlinkung im Projekt brechen — Vorschaubilder, Open-Graph-Angaben, CSS-Hintergründe, Manifest-Einträge. Diese Stellen kennt das Dashboard nicht und kann sie nicht mitziehen. Ein Pfad ist außerdem nichts, was ein Owner sehen oder entscheiden sollte.
+
+#### Was hochgeladen wird, wird gelesen, nicht geglaubt
+
+- Dateiendung und der vom Browser gemeldete Typ entscheiden nichts. Maßgeblich sind die ersten Bytes.
+- Aus ihnen ergeben sich Format und Maße; geprüft wird gegen die Vorgabe des Feldes. Jede Meldung nennt den geforderten Wert, nicht nur das Scheitern.
+- **Metadaten werden entfernt**: EXIF, XMP, IPTC, Kommentare. Ein Foto vom Handy trägt regelmäßig GPS-Koordinaten und Gerätekennung; wer ein Bild hochlädt, veröffentlicht sonst nebenbei, wo es aufgenommen wurde. Das ist der Regelfall, nicht die Ausnahme.
+- Das Farbprofil bleibt erhalten. Ohne es verschieben sich die Farben sichtbar.
+- Gespeichert wird nur die bereinigte Fassung. Das Original aufzubewahren wäre kein Vorteil, sondern genau die Koordinaten, die gerade entfernt wurden.
+
+#### Assets sind unveränderlich
+
+Ein neues Bild überschreibt kein altes; es entsteht daneben, mit eigener Kennung, und die Revision zeigt darauf. Nur so stellt ein Rollback den alten Stand vollständig her statt des alten Textes mit dem neuen Bild. Die Rückkehr zu einer früheren Fassung ist damit kein eigenes Feature, sondern eine Folge davon.
+
+#### Eine Datei genügt, die übrigen Fassungen entstehen daraus
+
+Braucht eine Stelle mehrere Formate — etwa PNG und WebP für ein `<picture>` —, lädt der Owner trotzdem **eine** Datei hoch. Der Feldvertrag beschreibt, **welche Dateien entstehen müssen**, nicht, wie viele hochgeladen werden.
+
+Ein Bildumwandler ist deshalb eine Betriebsvoraussetzung wie eine Node-Version, keine Bequemlichkeit: Ohne ihn müsste ein Owner wissen, was WebP ist, und es selbst erzeugen. Auf `217.154.218.30` leistet das `libwebp`.
+
+Gibt es keinen unmittelbaren Weg zwischen zwei Formaten, ist ein verlustfreier Umweg zulässig und dem Verzicht vorzuziehen — er verändert kein Bildpixel.
+
+Ausdrücklich **nicht** zulässig bleibt die naheliegende Abkürzung, dieselbe Datei unter beiden Namen abzulegen. Ein PNG, das als `image/webp` angekündigt wird, ist eine Falschangabe; sie fällt irgendwann auf irgendeinem Gerät auf und ist dann schwer zu finden. Ebenso wenig zulässig ist, eine Ableitung wegzulassen und im Release einen Verweis ins Leere stehen zu lassen.
+
+Vier Regeln für jedes Programm, das der Dienst zu diesem Zweck startet:
+
+1. Aufruf mit **absolutem Pfad**, nie über `PATH`.
+2. Kein Netzwerk, keine geerbte Umgebung, ein eigenes Arbeitsverzeichnis innerhalb der beschreibbaren Pfade des Dienstes.
+3. Begrenzte Laufzeit und begrenzte Ausgabegröße; ein hängender Aufruf wird abgebrochen.
+4. Das Ergebnis durchläuft **dieselbe Prüfung wie ein Upload von außen**. Ein Werkzeug kommt nicht durch, nur weil der Dienst es selbst gestartet hat.
+
+Maße werden **vor** der Umwandlung am Original geprüft. Scheitert umgekehrt eine abgeleitete Fassung an einer Größengrenze, sagt die Meldung, dass die hochgeladene Datei in Ordnung war — der Owner hat dann nichts falsch gemacht und darf nicht nach einem Fehler bei sich suchen.
+
+Fehlt der Umwandler, fällt die Oberfläche auf einen Upload je Fassung zurück und erklärt das. Ein stillschweigend halbierter Funktionsumfang wäre schlimmer als ein benannter.
 
 ### Verlauf und Rückgängig
 
@@ -525,6 +592,14 @@ Das Kontaktformular darf vor der Entscheidung über den E-Mail-Versand gebaut un
 - Der Betreiber hat einen belegten Weg, die Anfragen zu lesen und ihren Bearbeitungsstand zu setzen, auch ohne E-Mail.
 - Ein Formular, das nur eine Erfolgsmeldung zeigt und nirgends ankommt, ist schlechter als kein Formular: Der Owner hält sein Anliegen für übermittelt und wartet.
 
+### Eigene Inhalte mitnehmen
+
+Der Owner kann jederzeit und ohne Rückfrage alles herunterladen, was zu seiner Website gespeichert ist: aktuell veröffentlichte Werte, jeden früheren Stand mit Zeitpunkt und Person, Bildmetadaten, Vormerkungen, Anfragen und das Zugriffsprotokoll.
+
+- Der Export ist eine Selbstbedienung, kein Auskunftsverfahren. Er dient auch der Auskunftspflicht nach Art. 15 DSGVO, ist aber zuerst eine Frage der Anständigkeit: Es sind seine Inhalte.
+- **Nicht enthalten sind Passwort-Hashes, Sitzungen und hinterlegte Zugangsdaten fremder Dienste.** Ein Export soll Inhalte herausgeben, nicht eine Datei erzeugen, mit der sich anderswo etwas übernehmen ließe.
+- Das Format ist maschinenlesbar und selbsterklärend benannt, damit es ohne dieses Dashboard verwendbar bleibt.
+
 ### Zugang
 
 - sichere Passwortspeicherung, Rate Limits, Sessionübersicht, Abmelden einzelner oder aller Sitzungen und protokollierte Passwortänderung
@@ -545,6 +620,17 @@ Die Danger Zone bietet **kein** „Website offline nehmen“. Sie aktiviert eine
 - Monitoring unterscheidet den geplanten Wartungsmodus von einer Störung.
 
 Google empfiehlt für vorübergehende Ausfälle einen `503` und kann `Retry-After` beim erneuten Crawlen berücksichtigen; ein über längere Zeit bestehender `503` kann jedoch zur Entfernung von URLs aus dem Index führen.[^google-downtime] Deshalb braucht der Modus Erinnerung, Monitoring und eine klar begrenzte Dauer.
+
+## Datensicherung
+
+Backups trennen Datenbank, Content-Revisionen, Assets, Releases und Schlüssel; ein Restore wird mandantenweise getestet. Verbindlich dabei:
+
+- Eine laufende Datenbank wird **nicht kopiert**, sondern als in sich stimmige Momentaufnahme herausgeschrieben. Eine Dateikopie mitten in einer Transaktion ergibt einen Stand, den es nie gab, und bei WAL-Journalen fehlt zusätzlich der jüngste Teil.
+- **Assets gehören dazu.** Ohne sie zeigt jeder wiederhergestellte Stand auf Bilder, die es nicht mehr gibt — ein Rollback wäre dann Text ohne Bild.
+- **Releases gehören nicht dazu.** Sie sind aus Quelle und Revision reproduzierbar und machen den Löwenanteil des Platzes aus. Wiederhergestellt wird der Stand, nicht sein Bauergebnis.
+- **Zugangsdaten fremder Dienste nur auf ausdrücklichen Wunsch** und nur auf ein Ziel mit denselben Rechten. Eine Sicherung, die unbemerkt fremde Schlüssel enthält, wandert sonst irgendwann auf ein Laufwerk mit schwächeren.
+- Eine **halb geschriebene Sicherung wird gelöscht**, nicht liegengelassen. Sie sähe sonst aus wie eine.
+- Eine Sicherung, die nie geöffnet wurde, ist eine Vermutung. Zur Sicherung gehört ein Prüflauf, der die Integrität bestätigt, die Zeilen der tragenden Tabellen zählt und die Zahl gesicherter Assetdateien gegen die Assets in der Datenbank hält.
 
 ## Rechtstexte, Verantwortung und Haftungszuordnung
 
@@ -603,7 +689,14 @@ Das zentrale Produkt wird also vor der ersten Kundenanbindung gebaut. Eine neue 
 - Buildfehler lässt aktive Website unverändert
 - Preview und Release lesen dieselbe aufgelöste Build-Schnittstelle; der statische Release enthält weder `_hosting` noch Secrets oder interne Pfade
 - atomarer Publish und vollständiger Rollback getestet
-- Uploads gegen Typ, Größe, Inhalt und Pfadmanipulation geprüft
+- Uploads gegen Typ, Größe, Inhalt und Pfadmanipulation geprüft; Metadaten nachweislich entfernt und das Ergebnis weiterhin ein gültiges Bild
+- ein Upload geht beim gewöhnlichen Speichern des Formulars nicht verloren
+- eine geplante Veröffentlichung überlebt einen Dienstneustart, blockiert keine andere Veröffentlichung und löst zur richtigen Ortszeit aus
+- ein laufender Probebau verdeckt weder Fehlermeldungen noch offene Entscheidungen
+- der Export enthält keine Zugangsdaten, Sitzungen oder fremden Schlüssel
+- aus einer hochgeladenen Datei entstehen alle geforderten Fassungen, mit unveränderten Maßen und innerhalb ihrer Grenzen
+- ein Neustart während der Ausführung einer Vormerkung führt zur Wiederholung, ein inhaltlicher Fehlschlag zu einer sichtbaren Meldung
+- eine Sicherung lässt sich öffnen, ihre Integrität bestätigen und ihre Vollständigkeit gegen die Assets prüfen
 - Session-, Rate-Limit-, CSRF-, Recovery- und Audit-Log-Tests
 - Wartungsseite liefert auf jeder öffentlichen Route `503`, `Retry-After` und die vorgesehenen Kontaktdaten
 - öffentliche Website bleibt ohne Dashboard, Datenbank und externe APIs erreichbar

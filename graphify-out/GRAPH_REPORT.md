@@ -1,225 +1,305 @@
-# Graph Report - /srv/Web-Design/web-brain  (2026-08-16)
+# Graph Report - .  (2026-08-19)
 
 ## Corpus Check
-- 66 files · ~99,211 words
+- 68 files · ~114,069 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 541 nodes · 823 edges · 29 communities (26 shown, 3 thin omitted)
-- Extraction: 85% EXTRACTED · 14% INFERRED · 1% AMBIGUOUS · INFERRED: 119 edges (avg confidence: 0.83)
-- Token cost: 77,669 input · 0 output
+- 603 nodes · 940 edges · 47 communities (43 shown, 4 thin omitted)
+- Extraction: 83% EXTRACTED · 16% INFERRED · 0% AMBIGUOUS · INFERRED: 153 edges (avg confidence: 0.85)
+- Token cost: 389,000 input · 0 output
 
 ## Community Hubs (Navigation)
-- Screenshot-Nachweise und Reduced Motion
-- Brain Index und UI UX Pro Max
-- Core Rules und Copy
-- Update-Ablauf und Web-Produkt-Workflow
-- Skillregister und Aufgabenrouting
-- Bewegungsrezepte und Apple-Referenz
-- Motion-Niveau und Landing Page
-- Bestandsaufnahme, Dichte und Farbe
-- Standardrezepte der Bewegung
-- Quality Gates
-- Scroll-Motion-Technik
-- Accessibility-Standards und BFSG
-- Komponentenrezepte und Zustaende
-- Architektur, Performance und Dependencies
-- Konten, Abuse-Schutz und SEO
-- Build-Auftrag und Pflichtartefakte
-- Design Contract und Designmuster
-- Playwright-Aufnahmeregeln
-- Impact Map und Change Log
-- Git-Synchronisation und Preview Gate
-- Anzahl der Websites und Skillvorrang
-- Benchmarks und Handwerksebene B5
-- Designwerkzeuge und Rechteprüfung
-- Negativreferenz Brutalist Terminal
-- Copy-Notiz, Stilabstand und Gate G1
-- Motion-Skills und offene Themen
-- Retro- und Farbverbote
-- Interaktives Kernmodul
-- Anlassgebundene Pruefungen
+- Strategie, Copy und Bilder
+- Barrierefreiheit und BFSG
+- Konten und Abuse-Schutz
+- Performance und Interaktionsregeln
+- Negativreferenz Terminal-Brutalismus
+- Datenschutz und Dateninventar
+- Dashboard-Felder und Integrationen
+- Anti-Slop und Markenwirkung
+- Change Log der Entscheidungen
+- Update-Ablauf und Skillpflicht
+- Design Contract und Novelty Budget
+- Apple Fluid Interface und Gesten
+- Design Direction und Stilabstand
+- Project Master Spec
+- Skillregister und Ausloeser
+- Bewegungsrahmen und Kernmodul
+- Inspirationskatalog
+- Quality Gates und Ablage
+- Zentrales Datenmodell und Mandanten
+- Tokenvertrag und Craft-Referenzen
+- Komponenten und Veroeffentlichungsablauf
+- Deployment-Slots und Legacy-Adapter
+- Interface Benchmarks und H0
+- Kopfzeile und Testmatrix
+- Brain Index und Routing
+- Core Rules
+- Architektur und Codekonsistenz
+- Arbeitsanweisung des Vaults
+- Typografische Kalibrierung
+- Auslieferung und Hosting-Zweck
+- Bauort und Dienstbenutzer
+- Review Queue und Ausloeser
+- Developer-Plattform und Ports
+- Tenant-Registry und Builder-CLI
+- Landing-Page-Referenzen
+- Schriftwahl und Retro-Verbot
+- Radius, Tiefe und Karten
+- Build-Schnittstelle zur Website
+- Owner-Freigabe je Inhaltsblock
+- Unveraenderliche Assets und Sicherung
+- Editorvertrag und Pointer-Allowlist
+- Wartungsmodus statt Abschalten
+- Vertragsupdates und Migration
+- Offene Produktentscheidungen
+- Screenshot- und Videoregeln
+- Obsidian-Konfiguration
+- CLAUDE.md-Import
 
 ## God Nodes (most connected - your core abstractions)
-1. `Apple Fluid Interface` - 17 edges
-2. `Designregeln` - 16 edges
-3. `Motion and Interaction` - 15 edges
-4. `Standardrezepte mit Werten` - 15 edges
-5. `Inspirationskatalog` - 15 edges
-6. `AI Build Prompt` - 14 edges
-7. `Website Copy` - 13 edges
-8. `Design Direction` - 12 edges
-9. `Verbotskatalog ohne konkrete Begruendung` - 11 edges
-10. `Quality Gates` - 11 edges
+1. `Inspirationskatalog` - 21 edges
+2. `Change Log` - 20 edges
+3. `Designregeln` - 19 edges
+4. `Design Direction` - 19 edges
+5. `Project Master Spec` - 19 edges
+6. `Motion and Interaction` - 18 edges
+7. `Pflichtkontext je Aufgabe` - 17 edges
+8. `Plugins and Skills` - 16 edges
+9. `Anzahl der Websites` - 15 edges
+10. `Direction Brief` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Mobile zuerst dosieren am 375-Pixel-Viewport` --semantically_similar_to--> `Viewport-Matrix`  [INFERRED] [semantically similar]
-  10-Strategy/Information Density and Mobile Clarity.md → 20-Design/Responsive Design.md
-- `Erkennungsfragen` --semantically_similar_to--> `Website Copy`  [INFERRED] [semantically similar]
-  20-Design/Anti AI Slop.md → 10-Strategy/Website Copy.md
-- `Unterbrechbarkeit` --semantically_similar_to--> `Motion-Entscheidungsrahmen`  [INFERRED] [semantically similar]
-  90-References/Apple Fluid Interface.md → 20-Design/Motion and Interaction.md
-- `Federwerte` --semantically_similar_to--> `Zeit- und Kurvensatz`  [INFERRED] [semantically similar]
-  90-References/Apple Fluid Interface.md → 20-Design/Motion and Interaction.md
-- `Reaktion und direkte Führung` --semantically_similar_to--> `Press`  [INFERRED] [semantically similar]
-  90-References/Apple Fluid Interface.md → 20-Design/Motion and Interaction.md
+- `Pflichtumfang je Web-Produkt` --semantically_similar_to--> `Unterscheidungsmatrix`  [INFERRED] [semantically similar]
+  90-References/Reference Research Workflow.md → 80-Templates/Project Master Spec.md
+- `Builder-Checkliste vor Registrierung` --semantically_similar_to--> `G8 Betrieb`  [INFERRED] [semantically similar]
+  80-Templates/Owner Hosting Website Contract.md → 70-QA/Quality Gates.md
+- `Atomarer Update-Prozess` --semantically_similar_to--> `Change Impact`  [INFERRED] [semantically similar]
+  AGENTS.md → 80-Templates/Project Master Spec.md
+- `Dependency-Aufnahmekriterium` --semantically_similar_to--> `Dependency-Auswahlkriterien`  [INFERRED] [semantically similar]
+  30-Frontend/Architecture and Code Consistency.md → 60-Operations/Dependencies and Environments.md
+- `Erkennungsfragen` --semantically_similar_to--> `Impeccable Skill`  [INFERRED] [semantically similar]
+  20-Design/Anti AI Slop.md → 00-Start/04 Plugins and Skills.md
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Verbotene Copy-Muster gegen KI-Anmutung** — 10_strategy_website_copy_statementzeile_unter_der_ueberschrift, 10_strategy_website_copy_die_dreierfigur, 10_strategy_website_copy_interpunktion, 10_strategy_website_copy_selbstkommentar, 20_design_anti_ai_slop_verbot_ohne_konkrete_begruendung [EXTRACTED 1.00]
-- **Nachweiskette für den Stilabstand mehrerer Websites** — 20_design_design_direction_stilabstand_bei_mehreren_websites, 20_design_design_direction_unterscheidungsmatrix, 00_start_04_plugins_and_skills_prototype, 70_qa_quality_gates_g1_design, 00_start_02_routing_map_aufgabenrouting [EXTRACTED 1.00]
-- **Motion-Abnahmekette von Bau bis Gate G1** — 00_start_04_plugins_and_skills_animate, 00_start_04_plugins_and_skills_review_animations, 20_design_motion_and_interaction_standardrezepte_mit_werten, 20_design_motion_and_interaction_nachweis_und_abnahme, 70_qa_quality_gates_g1_design [EXTRACTED 1.00]
-- **Durchscheinende Kopfzeile: Rezept, Fallback, Kontrast, Gate** — 30_frontend_components_and_ui_states_durchscheinende_kopfzeile, 30_frontend_components_and_ui_states_backdrop_filter_fallback, 30_frontend_components_and_ui_states_sechs_navigationselemente, 30_frontend_accessibility_kontrastanforderung, 70_qa_quality_gates_g1_design, 70_qa_test_matrix_dimensionen [INFERRED 0.85]
 - **Abo-Kündigung und Kontolöschung als auditierbarer Flow** — 40_backend_security_data_apis_and_billing_account_loeschung, 40_backend_security_data_apis_and_billing_idempotency_key, 40_backend_security_data_apis_and_billing_subscription_state_machine, 40_backend_security_data_apis_and_billing_webhooks, 40_backend_security_authentication_and_accounts_session, 50_legal_legal_decision_tree_verkauf_abo_inhalte [EXTRACTED 1.00]
 - **Consent- und Dateninventar-Kette von Recht bis Betrieb** — 50_legal_privacy_and_consent_dateninventar, 50_legal_privacy_and_consent_consent_entscheidung, 50_legal_privacy_and_consent_consent_ui, 50_legal_legal_decision_tree_cookies, 60_operations_dependencies_and_environments_updates, 70_qa_quality_gates_g6_legal [INFERRED 0.85]
-- **Pflichtdateien eines Projektordners** — 80_templates_project_master_spec, 80_templates_source_and_rights_review, 80_templates_asset_register, 80_templates_data_processing_inventory, 80_templates_project_master_spec_project_contract [EXTRACTED 1.00]
-- **Muster gestengeführter Bewegung** — 20_design_motion_and_interaction_gestengefuehrte_bewegung, 90_references_apple_fluid_interface_unterbrechbarkeit, 90_references_apple_fluid_interface_federwerte, 90_references_apple_fluid_interface_geschwindigkeitsuebergabe_und_momentum, 90_references_apple_fluid_interface_grenzen_und_richtungshinweis [EXTRACTED 1.00]
 - **Referenzrecherche von Katalog bis Design Contract** — 90_references_inspiration_catalog, 90_references_reference_research_workflow, 90_references_reference_research_workflow_entscheidungsmatrix, 90_references_derived_design_patterns, 80_templates_project_master_spec_design_contract [EXTRACTED 1.00]
-- **Wartungskreislauf: Änderung, Auswirkungsprüfung, offene Punkte** — 98_maintenance_change_log, 98_maintenance_coverage_and_impact_map, 98_maintenance_review_queue, 98_maintenance_coverage_and_impact_map_abschlussnachweis, 98_maintenance_change_log_update_protocol [EXTRACTED 1.00]
-- **Atomarer Update-Kreislauf des Brains** — agents_web_brain_arbeitsanweisung_atomarer_update_prozess, 98_maintenance_coverage_and_impact_map, 98_maintenance_change_log, 98_maintenance_review_queue, agents_web_brain_arbeitsanweisung_graphify [EXTRACTED 1.00]
-- **Auslösergebundenes Wartungsmodell der Review Queue** — 98_maintenance_review_queue_grundsatz_echter_ausloeser, 98_maintenance_review_queue_automatisch_geprueft, 98_maintenance_review_queue_anlassgebunden_geprueft, 98_maintenance_review_queue_quartalspruefung_sicherheit_und_billing, 98_maintenance_change_log_pruefliste_an_ausloeser_gebunden [EXTRACTED 1.00]
-- **Handwerksebene B5: Tokenvertrag, Formsprache und Bewegungswerte** — 98_maintenance_change_log_b5_modern_neutral_craft_web, 98_maintenance_change_log_tokenvertrag, 98_maintenance_change_log_radiusskala, 98_maintenance_change_log_kartenrezept, 98_maintenance_change_log_standardrezepte_mit_werten, 98_maintenance_change_log_bewusste_lockerungen [EXTRACTED 1.00]
-- **Motion-Skill-Kette von Bau bis Abnahme** — 98_maintenance_change_log_skill_animate, 98_maintenance_change_log_skill_review_animations, 98_maintenance_change_log_skill_prototype, 98_maintenance_change_log_apple_fluid_interface, 98_maintenance_change_log_quality_gates_g1 [EXTRACTED 1.00]
+- **Pflichtbestandteile des Design Contract je Website** — 00_start_05_web_product_workflow_design_contract, 20_design_design_direction_direction_brief, 20_design_interface_benchmarks_leitbenchmark, 20_design_interface_benchmarks_h0_handwerksuntergrenze, 20_design_color_system_tokenvertrag, 20_design_motion_and_interaction_motion_inventory, 20_design_design_direction_unterscheidungsmatrix [EXTRACTED 1.00]
+- **Anti-Slop-Abwehrsystem des Brains** — 20_design_anti_ai_slop_kicker_und_uberschriften, 20_design_anti_ai_slop_verbotskatalog, 20_design_anti_ai_slop_erkennungsfragen, 20_design_anti_ai_slop_impeccable_ki_detail_review, 20_design_color_system_verbrauchte_farbwelten, 00_start_01_core_rules_marke_und_anti_slop [INFERRED 0.85]
+- **Verbindliche Skill-Kette je Website-Build** — 00_start_04_plugins_and_skills_ui_ux_pro_max, 00_start_04_plugins_and_skills_emil_design_engineering, 00_start_04_plugins_and_skills_animate, 00_start_04_plugins_and_skills_review_animations, 00_start_04_plugins_and_skills_impeccable [EXTRACTED 1.00]
+- **Owner-Hosting Veröffentlichungsfluss von Entwurf bis atomarem Release** — 60_operations_owner_hosting_and_dashboard_owner_editable, 60_operations_owner_hosting_and_dashboard_owner_overlay, 60_operations_owner_hosting_and_dashboard_veroeffentlichungsablauf, 60_operations_owner_hosting_and_dashboard_owner_hosting_worker, 60_operations_owner_hosting_and_dashboard_build_schnittstelle, 60_operations_owner_hosting_and_dashboard_atomarer_publish, 60_operations_owner_hosting_and_dashboard_audit_events [EXTRACTED 1.00]
+- **Kontrollen der Mandanten- und Hostbindung** — 60_operations_owner_hosting_and_dashboard_tenant_id, 60_operations_owner_hosting_and_dashboard_deployment_slots, 60_operations_owner_hosting_and_dashboard_tenant_registry, 70_qa_test_matrix_cross_tenant_hostbindung, 70_qa_quality_gates_g8_betrieb [INFERRED 0.85]
+- **Je Website zu entscheidende variable Formsprache** — 20_design_typography_layout_and_spacing_radiusskala, 20_design_typography_layout_and_spacing_tiefe_und_rahmen, 20_design_typography_layout_and_spacing_zweitschrift, 30_frontend_components_and_ui_states_kartenentscheidung, 30_frontend_components_and_ui_states_kopfzeile, 70_qa_quality_gates_g1_design [INFERRED 0.85]
+- **Design Contract je Website und seine Pflichtmatrizen** — 80_templates_project_master_spec_design_contract, 80_templates_project_master_spec_unterscheidungsmatrix, 80_templates_project_master_spec_website_matrix, 80_templates_project_master_spec_abstand_zu_vorgaengerfassungen, 80_templates_project_master_spec_tokenvertrag [EXTRACTED 1.00]
+- **Sieben-Seiten-Set Modern Neutral Craft** — 90_references_inspiration_catalog_consile, 90_references_inspiration_catalog_candevsdosomething, 90_references_inspiration_catalog_phillip_ohren, 90_references_inspiration_catalog_eve_bcn, 90_references_inspiration_catalog_claudefolio, 90_references_inspiration_catalog_saad_salman, 90_references_inspiration_catalog_thomas_stockham [EXTRACTED 1.00]
+- **Atomarer Update-Kreislauf des Brains** — agents_atomarer_update_prozess, 98_maintenance_coverage_and_impact_map_ausloeser_und_pflichtfolgen, 98_maintenance_coverage_and_impact_map_abschlussnachweis, 98_maintenance_change_log, 98_maintenance_review_queue, agents_pflicht_zum_neubau [INFERRED 0.95]
 
-## Communities (29 total, 3 thin omitted)
+## Communities (47 total, 4 thin omitted)
 
-### Community 21 - "Screenshot-Nachweise und Reduced Motion"
-Cohesion: 0.25
-Nodes (8): Screenshot Manifest, Chromium Headless Aufnahmesetup, Valid nur fuer statischen Zustand, Referenznutzung, Bindende Nebenbedingungen der Bewegungswerte, Reduced Motion, G3 Accessibility, Barrierefreiheit über Reduced Motion hinaus
-
-### Community 11 - "Brain Index und UI UX Pro Max"
-Cohesion: 0.20
-Nodes (14): Brain Index, Schnellstart für KI, Kanonische Bereiche, Brain Scope, Routing Map, UI UX Pro Max Skill, Auslösebedingung UI UX Pro Max, Pflicht-Detailabfragen (+6 more)
-
-### Community 0 - "Core Rules und Copy"
-Cohesion: 0.06
-Nodes (57): Core Rules, Produktregeln, Designregeln, Engineeringregeln, Copyregeln, Marke und Anti-Slop, Beweis-Hierarchie, Copy-Regeln (+49 more)
-
-### Community 7 - "Update-Ablauf und Web-Produkt-Workflow"
-Cohesion: 0.08
-Nodes (31): Recht und Betrieb, Update Protocol, Atomarer Update-Ablauf, Pflicht-Propagation, Definition vollstaendig, Impeccable, Web Product Workflow, Auftragsschwelle und Projektanlage (+23 more)
-
-### Community 9 - "Skillregister und Aufgabenrouting"
-Cohesion: 0.22
-Nodes (15): Aufgabenrouting mit Pflichtkontext und Abschlussartefakt, Route: Einzelne Bewegung bauen oder prüfen, Route: Geste, Feder, Sheet oder Drag, Plugins and Skills, Emil Design Engineering, animate, review-animations, prototype (+7 more)
-
-### Community 10 - "Bewegungsrezepte und Apple-Referenz"
-Cohesion: 0.15
-Nodes (15): apple-design (bewusst nicht installiert), Komposition und Überschriften, Motion-Entscheidungsrahmen, Zeit- und Kurvensatz, Emil Kowalski: Animations on the Web, Apple Fluid Interface, Der tragende Gedanke flüssiger Oberflächen, Unterbrechbarkeit (+7 more)
-
-### Community 23 - "Motion-Niveau und Landing Page"
-Cohesion: 0.47
-Nodes (6): find-animation-opportunities (abgelehnt), Landing-Page-Anspruch, ai-placeholder, Verbindliches Motion-Niveau, Interaktives Kernmodul, G1 Design
-
-### Community 15 - "Bestandsaufnahme, Dichte und Farbe"
-Cohesion: 0.18
-Nodes (12): Bestandsaufnahme, Gezielte Logo-Suche, Mobile zuerst dosieren am 375-Pixel-Viewport, Kontrast und Bedeutung, WCAG 2.2, Premium-Heuristik, Novelty Budget, Unterscheidungsmatrix (+4 more)
-
-### Community 20 - "Standardrezepte der Bewegung"
-Cohesion: 0.25
-Nodes (8): border-hover Token, Standardrezepte mit Werten, Reveal, Stagger, Zeichen- oder Wortauftakt, Karten-Hover, Press, Reaktion und direkte Führung
-
-### Community 18 - "Quality Gates"
-Cohesion: 0.22
-Nodes (9): Logo des Betriebs, Quality Gates, G0 Scope, G2 Funktion, G4 Performance, G5 Security und Daten, G6 Legal, G7 SEO und Marke (+1 more)
-
-### Community 25 - "Scroll-Motion-Technik"
-Cohesion: 0.40
-Nodes (5): Technische Umsetzung von Scroll-Motion, MDN: Scroll-driven animation timelines, GSAP ScrollTrigger, Motion for React: useScroll, web.dev: High-performance CSS animations
-
-### Community 4 - "Accessibility-Standards und BFSG"
-Cohesion: 0.06
-Nodes (34): Accessibility, WCAG 2.2 AA Zielstandard, Accessibility-Prüfung automatisch und manuell, BFSG Rechtlicher Kontext Deutschland, W3C Recommendation WCAG 2.2, W3C Language tags in HTML, BFSG § 1, BFSGV § 19 (+26 more)
-
-### Community 8 - "Komponentenrezepte und Zustaende"
-Cohesion: 0.08
-Nodes (30): Accessibility Build-Checkliste, Accessible Name, Kontrastanforderung 4,5:1 / 3:1, W3C APG Accessible Names and Descriptions, Components and UI States, Komponentenvertrag, UI-Zustandsliste, Kartenrezept (+22 more)
-
-### Community 3 - "Architektur, Performance und Dependencies"
-Cohesion: 0.06
-Nodes (44): Architecture and Code Consistency, Architekturentscheidung nach Anforderungen, Projektweite Einheitlichkeit, Eine primäre Styling-Strategie, Codequalität und Automatisierung, Keine Abstraktion vor zwei Verwendungen, Dependency-Aufnahmekriterium, Performance (+36 more)
-
-### Community 1 - "Konten, Abuse-Schutz und SEO"
+### Community 0 - "Strategie, Copy und Bilder"
 Cohesion: 0.05
-Nodes (49): SEO Technische Basis, sitemap.xml aus kanonischen Routen, Google Search Central Meta descriptions, Authentication and Accounts, Identitätsmodell mit interner user_id, Account Linking, Passkeys/WebAuthn, Abuse-Schutz und Enumeration-Schutz (+41 more)
+Nodes (48): Vorrang der Brain-Regeln vor Skill-Vorschlägen, Beweis-Hierarchie, Content and Conversion, Conversion ohne Dark Patterns, Copy-Regeln, Kernbotschaft-Formel, Discovery and Scope, Messplan (+40 more)
 
-### Community 5 - "Build-Auftrag und Pflichtartefakte"
-Cohesion: 0.12
-Nodes (33): AI Build Prompt, Anzahl der Websites aus dem Auftragstext, Impeccable KI-Detail-Review, UI UX Pro Max Pflicht je Website, Firmenlogo sichtbar einsetzen, Asset Register, ai-placeholder Status, Nicht blockierendes Asset-Statusmodell (+25 more)
-
-### Community 2 - "Design Contract und Designmuster"
+### Community 1 - "Barrierefreiheit und BFSG"
 Cohesion: 0.05
-Nodes (49): Kicker-Verbot ueber Ueberschriften, Scroll-Choreografie je Route, Design Contract, Tokenvertrag mit Pflichtrollen, Unterscheidungsmatrix, Motion Inventory je Route, Abgeleitete Designmuster, Archetyp Produktbeweis (+41 more)
+Nodes (41): Accessibility, Accessible Name, BFSG Rechtlicher Kontext Deutschland, Accessibility Build-Checkliste, W3C APG Accessible Names and Descriptions, BFSG § 1, BFSG § 3 Kleinstunternehmen, BFSGV § 19 (+33 more)
 
-### Community 12 - "Impact Map und Change Log"
+### Community 2 - "Konten und Abuse-Schutz"
+Cohesion: 0.06
+Nodes (39): Authentication and Accounts, Abuse-Schutz und Enumeration-Schutz, Account Linking, Clerk Bot protection, Clerk User enumeration protection, Clerk OAuth account linking, Clerk Restrictions and disposable emails, NIST SP 800-63B-4 (+31 more)
+
+### Community 3 - "Performance und Interaktionsregeln"
+Cohesion: 0.07
+Nodes (37): Interaktionsregeln, W3C WAI-ARIA Authoring Practices, Performance, web.dev Core Web Vitals thresholds, web.dev Core Web Vitals workflows, Core Web Vitals Nutzerziele (LCP, INP, CLS), Performance-Messung CI und RUM, Motion-Dichte auf Compositor-Eigenschaften (+29 more)
+
+### Community 4 - "Negativreferenz Terminal-Brutalismus"
+Cohesion: 0.08
+Nodes (32): Cream/Off-White Dominant Ground Conflicts with Color System Ban, Dithered 1-Bit Halftone Image Panel (NEURAL_SCAN.DITHER), Dot-Matrix Display Headline Type (DEPLOY. SCALE. ROUTE.), Dotted Blueprint Grid Background on Off-White Canvas, All-Monospace UI Language with Uppercase Tracked Nav, Rationale: Terminal-Brutalist Pastiche as Anti-Pattern, Single Orange Accent on Black Rectangular CTA, Hub-and-Spoke Pipeline Diagram (Train/Package/Version to Route/Deploy/Observe) (+24 more)
+
+### Community 5 - "Datenschutz und Dateninventar"
+Cohesion: 0.07
+Nodes (30): Datenschutz und Auftragsverarbeitung, DSGVO Artikel 28, G6 Legal, Asset Register, ai-placeholder Status, Nicht blockierendes Asset-Statusmodell, Data Processing Inventory, Verarbeitungsblock (+22 more)
+
+### Community 6 - "Dashboard-Felder und Integrationen"
+Cohesion: 0.09
+Nodes (24): Ein Bild ist eine Datei an einer Stelle, kein Wert in der Inhaltsdatei, Dashboard-Bereich Bilder, Eine Datei genügt, die übrigen Fassungen entstehen daraus, Eigene Inhalte mitnehmen (Export), Dashboard-Bereiche und stabiler Seitenrahmen, Ein API-Schlüssel genügt nicht: Dienstkonto, DIN 5008 Rufnummernformatierung, Drei Integrationszustände aus/hinterlegt/aktiv (+16 more)
+
+### Community 7 - "Anti-Slop und Markenwirkung"
 Cohesion: 0.16
-Nodes (14): Coverage and Impact Map, Auslöser und Pflichtfolgen, Zeitabhängige Quelle wird verwendet, Neue visuelle Richtung, Abschlussnachweis, Atomarer Update-Prozess, Graphify-Graph und Pflicht zum Neubau, Change Log (+6 more)
+Nodes (22): Marke und Anti-Slop, Anti AI Slop, Erkennungsfragen, Kicker und Überschriften, Reparaturablauf, Verbotskatalog ohne konkrete Begründung, Aftermark AI: Vibe Coded Website Report, Farbrolle accent-subtle (+14 more)
 
-### Community 16 - "Git-Synchronisation und Preview Gate"
-Cohesion: 0.25
-Nodes (11): Kanonische Zuständigkeit, Preview Access Gate, Ablagekonvention vorschau/, Agentengesteuerte Git-Synchronisation des Web-Brains, Entfernung absoluter Gerätepfade, Update Protocol, Routine Web-Brain Quartalsprüfung Sicherheit und Billing, Routine auf Eis wegen fehlendem GitHub-App-Zugriff (+3 more)
+### Community 8 - "Change Log der Entscheidungen"
+Cohesion: 0.15
+Nodes (21): Change Log, Initiales Web-Brain (2026-08-03), Build-first mit Owner-Freigabe vor Launch (2026-08-04), Drei vollständige Motion-Websites (2026-08-05, überholt), Auftragsgesteuerte Websiteanzahl und Kicker-Verbot (2026-08-06), Web-Brain als Git-Repository (2026-08-07), Preview Access Gate (2026-08-09), Deployment-Slots und Staging-Domain (2026-08-17) (+13 more)
 
-### Community 19 - "Anzahl der Websites und Skillvorrang"
-Cohesion: 0.25
-Nodes (9): Neuer Website-Auftrag, Geltung historischer Change-Log-Einträge, Skill animate, Skill prototype, Vorrang der Brain-Regeln vor Skill-Vorschlägen, Auftragsgesteuerte Anzahl der Websites, Drei Varianten unter versions/ (überholt), Web Product Workflow (+1 more)
+### Community 9 - "Update-Ablauf und Skillpflicht"
+Cohesion: 0.23
+Nodes (17): Owner-editierbarer Inhaltsblock, Atomarer Update-Ablauf, Definition vollständig, Update Protocol, Pflicht-Propagation, Impeccable Skill, prototype Skill, Ablage und Zugriff je Website-Anzahl (+9 more)
 
-### Community 13 - "Benchmarks und Handwerksebene B5"
+### Community 10 - "Design Contract und Novelty Budget"
+Cohesion: 0.12
+Nodes (17): Design Contract je Website, Motion Inventory je Route, Novelty Budget, Abgeleitete Designmuster, Anordnung von Ueberschriften, Bewegungsbudget, Archetyp Brutalistisches Operationssystem, Fallback fuer intensive Erlebnisse (+9 more)
+
+### Community 11 - "Apple Fluid Interface und Gesten"
+Cohesion: 0.18
+Nodes (17): Apple Fluid Interface, apple-design Skill (nicht installiert), Drei Barrierefreiheitssignale, Reaktion und direkte Führung, Emil Kowalski Skills Repository, Federwerte damping und response, Geschwindigkeitsübergabe und Momentum, Gestendetails (+9 more)
+
+### Community 12 - "Design Direction und Stilabstand"
+Cohesion: 0.22
+Nodes (15): Mehrere Websites und Parallelität, Abstand zu Vorgängerfassungen, Design Direction, Landing Page Anspruch, Medien und mehrere Websites, Novelty Budget, Premium-Heuristik, Referenznutzung (+7 more)
+
+### Community 13 - "Project Master Spec"
+Cohesion: 0.17
+Nodes (15): Decision Log Entry, Project Master Spec, Abstand zu Vorgängerfassungen, Acceptance ohne KI-Freigabe, Change Impact, Copy-Entscheidung, Engineering Contract, Project Contract (+7 more)
+
+### Community 14 - "Skillregister und Ausloeser"
+Cohesion: 0.23
+Nodes (14): animate Skill, Auslösebedingung UI UX Pro Max, design-system/<website-slug>/MASTER.md, Plugins and Skills, Eintragsformat für Skills und Plugins, Emil Design Engineering, Ausschluss von find-animation-opportunities, pen.dev CLI (+6 more)
+
+### Community 15 - "Bewegungsrahmen und Kernmodul"
+Cohesion: 0.26
+Nodes (13): B2 Rounded Selection Configurator, Choreografie statt Wiederholung, Motion and Interaction, Motion-Entscheidungsrahmen, Gestengeführte Bewegung, Interaktives Kernmodul, Kalibrierte Bewegungsbeispiele, Motion Inventory (+5 more)
+
+### Community 16 - "Inspirationskatalog"
+Cohesion: 0.21
+Nodes (13): Inspirationskatalog, 180-Grad-Produktbetrachter, Apple, ATS Resume Analyzer Dashboard, Claude Code Curriculum, Data Console Dashboard, INIZIO Solar, Linear (+5 more)
+
+### Community 17 - "Quality Gates und Ablage"
 Cohesion: 0.20
-Nodes (14): Neuer oder geänderter Benchmark, B5 Modern Neutral Craft Web, Tokenvertrag, Radiusskala, Kartenrezept und durchscheinende Kopfzeile, Bewusste Lockerungen bei Glas, Schatten und Hover-Lift, Interface Benchmarks B1 bis B4, Kicker-Verbot über Überschriften (+6 more)
+Nodes (11): Anlage- und Schreibregeln, Workspace-Struktur projekte, Quality Gates, G0 Scope, G2 Funktion, G3 Accessibility, G4 Performance, G5 Security und Daten (+3 more)
 
-### Community 24 - "Designwerkzeuge und Rechteprüfung"
+### Community 18 - "Zentrales Datenmodell und Mandanten"
+Cohesion: 0.20
+Nodes (11): Ablage von Code, Geheimnissen und Mandantendaten, audit_events Audit Log, content_revisions, Eigentum der Daten und eine einzige Wahrheit, Owner-Overlay über Projekt-Basis, SQLite statt PostgreSQL, tenant_id und Mandantentrennung, Zentrales Datenmodell (+3 more)
+
+### Community 19 - "Tokenvertrag und Craft-Referenzen"
+Cohesion: 0.22
+Nodes (11): Tokenvertrag mit Pflichtrollen, CanDevsDoSomething, ClaudeFolio, Consile, EVE BCN, Sieben-Seiten-Set Modern Neutral Craft, Phillip Ohren, Saad Salman (+3 more)
+
+### Community 20 - "Komponenten und Veroeffentlichungsablauf"
+Cohesion: 0.22
+Nodes (10): Components and UI States, Forms, Komponentenvertrag, UI-Zustände, Atomarer Publish und Rollback, Nach der Veröffentlichung sagen, was jetzt anders ist, Veröffentlichungsablauf, Zeitgesteuerte Veröffentlichung als Vormerkung (+2 more)
+
+### Community 21 - "Deployment-Slots und Legacy-Adapter"
+Cohesion: 0.31
+Nodes (10): Atomarer Doppelwechsel von Release und Dashboard-Tenant, Dashboard ohne Vertrag (schreibgeschützt), Deployment-Slots, Legacy-Adapter für unveränderliche Altprojekte, Passwortgeschützte Staging-Domain, G8 Betrieb, Deployment-Slot- und Owner-Hosting-Tests, Quellimmutabilität (+2 more)
+
+### Community 22 - "Interface Benchmarks und H0"
+Cohesion: 0.44
+Nodes (9): Designregeln, Anwendung im Design Contract, B1 Soft Neutral Product Console, B4 Data Product Depth, B5 Modern Neutral Craft Web, Interface Benchmarks, Gemeinsamer Handwerksnenner, H0 Handwerksuntergrenze (+1 more)
+
+### Community 23 - "Kopfzeile und Testmatrix"
+Cohesion: 0.28
+Nodes (9): Kopfzeile und Hauptnavigation, Option durchscheinende Kopfzeile, Security-Verifikation, Echte Darstellung als Lieferblocker, G1 Design, Test Matrix, Testdimensionen, Nachweisregel (+1 more)
+
+### Community 24 - "Brain Index und Routing"
+Cohesion: 0.39
+Nodes (8): Brain Index, Kanonische Bereiche des Brains, Schnellstart für KI, Scope: Entscheidungsrahmen statt Tech-Stack, Abschlussartefakt je Aufgabe, Aufgabenrouting, Routing Map, Pflichtkontext je Aufgabe
+
+### Community 25 - "Core Rules"
+Cohesion: 0.36
+Nodes (8): Copy-Regeln, Core Rules, Engineering-Regeln, Produktregeln, Recht und Betrieb, Seitenarchitektur mit echten Unterseiten, Statische Website und zentrales Owner-Dashboard, Umgebungsgerechter Zugriff und Portregel
+
+### Community 26 - "Architektur und Codekonsistenz"
+Cohesion: 0.25
+Nodes (8): Architecture and Code Consistency, Keine Abstraktion vor zwei Verwendungen, Architekturentscheidung nach Anforderungen, Codequalität und Automatisierung, Dependency-Aufnahmekriterium, Projektweite Einheitlichkeit, Empfohlene Schichten, Eine primäre Styling-Strategie
+
+### Community 27 - "Arbeitsanweisung des Vaults"
+Cohesion: 0.39
+Nodes (8): Kanonische Zuständigkeit, Web-Brain Arbeitsanweisung (AGENTS.md), Dateitypen, Einstieg, Priorität bei Konflikten, Verbindliche Regeln, README Web-Brain, Anzahl der Websites steht im Auftrag
+
+### Community 28 - "Typografische Kalibrierung"
+Cohesion: 0.29
+Nodes (7): Kalibrierte Type Ramp, Monospace-Regel, Negatives Tracking nur auf großen Stufen, Tabellarische Ziffern, Status, Tag und Chip, ai-placeholder Bildkennzeichnung, Gestaltungsvorgaben für die Landing Page
+
+### Community 29 - "Auslieferung und Hosting-Zweck"
 Cohesion: 0.33
-Nodes (6): Neues Designwerkzeug, Skill oder CLI, Build-first mit dokumentierter Owner-Freigabe vor Launch, Source and Rights Review, pen.dev CLI Workflow, Assets Copyright and Licenses, UI UX Pro Max und pen.dev Prüfung
+Nodes (7): Delivery and Local Start, Owner Hosting and Dashboard, Core Rule statische Auslieferung ohne Laufzeitabhängigkeit, Topologie nginx, Dashboard, Worker, Zweck und Grenze des Owner-Dashboards, Owner Hosting Website Contract, Pflichtdateien des Website-Vertrags
 
-### Community 6 - "Negativreferenz Brutalist Terminal"
-Cohesion: 0.08
-Nodes (32): SYS.INT Brutalist Terminal Landing Page (Screenshot), Dot-Matrix Display Headline Type (DEPLOY. SCALE. ROUTE.), All-Monospace UI Language with Uppercase Tracked Nav, Dotted Blueprint Grid Background on Off-White Canvas, Hub-and-Spoke Pipeline Diagram (Train/Package/Version to Route/Deploy/Observe), Fake Terminal Log Panel (TERMINAL.SYS), Dithered 1-Bit Halftone Image Panel (NEURAL_SCAN.DITHER), Single Orange Accent on Black Rectangular CTA (+24 more)
+### Community 30 - "Bauort und Dienstbenutzer"
+Cohesion: 0.29
+Nodes (7): Reihenfolge für den Bau des zentralen Produkts, Ein Dienst statt zwei, /srv/Web-Design/projekte/owner-hosting/, owner-hosting-web, owner-hosting-worker, www-data Leserolle, Verbindliche Architekturentscheidung: ein zentraler Bau
 
-### Community 14 - "Copy-Notiz, Stilabstand und Gate G1"
-Cohesion: 0.19
-Nodes (13): Geplante Cloud-Routine für Sicherheits- und Billing-Quellen, Website Copy, Stilabstand bei mehreren Websites, Textbudget, Quality Gate G1, Pflicht zum Graph-Neubau bei jeder Aktualisierung, Imagery and AI Editing, Information Density and Mobile Clarity (+5 more)
+### Community 31 - "Review Queue und Ausloeser"
+Cohesion: 0.38
+Nodes (7): Prüfliste an Auslöser statt Kalenderdaten (2026-08-16), Auslöser und Pflichtfolgen, Zeitabhängige Quelle wird verwendet, Review Queue, Anlassgebunden geprüfte Quellen, Automatisch geprüfte Quellen (Quartalsroutine, auf Eis), Projektbezogene Wiedervorlagen
 
-### Community 22 - "Motion-Skills und offene Themen"
-Cohesion: 0.32
-Nodes (8): Skill review-animations, Apple Fluid Interface, Abgelehnte Skills aus emilkowalski/skills, Motion-Standardrezepte mit Werten, Offene Brain-Themen, prefers-reduced-transparency und prefers-contrast, Skill improve-animations (nicht installiert), Accessibility
+### Community 32 - "Developer-Plattform und Ports"
+Cohesion: 0.33
+Nodes (6): Developer-Plattform johannstein.com/dev, Ein-Klick-Start und Serverausnahme, Keine Hosting-Subdomain für Unterseiten-Vorschauen, Festes Portschema 4310/4320/4330, Server 217.154.218.30, Test-Slot johannstein.de
 
-### Community 17 - "Anlassgebundene Pruefungen"
-Cohesion: 0.20
-Nodes (10): Existing Website Rebuild, Projekt Fahrschule Kladow, Anlassgebunden geprüft, Webstandards und Metriken, Deutsche und europäische Rechtsquellen, Legal Decision Tree, Tools und Bibliotheken, Dependencies and Environments (+2 more)
+### Community 33 - "Tenant-Registry und Builder-CLI"
+Cohesion: 0.33
+Nodes (6): Registrierte Buildprofile, Builder-CLI tenant lint/plan/register, tenant.json Manifest, Tenant Registry, Builder-Checkliste vor Registrierung, Regeln für das Manifest
+
+### Community 34 - "Landing-Page-Referenzen"
+Cohesion: 0.40
+Nodes (6): Landing Page mit Ausdruck, Animated SaaS, Brutalist AI SaaS, COMPUTE, DataFlow, Negativreferenzen und abgeleitete Verbote
+
+### Community 35 - "Schriftwahl und Retro-Verbot"
+Cohesion: 0.50
+Nodes (5): Typography Layout and Spacing, Fontshare, Retro-Verbot, Schriftwahl, Zweitschrift als begründete Entscheidung
+
+### Community 36 - "Radius, Tiefe und Karten"
+Cohesion: 0.50
+Nodes (5): B5-Kalibrierung, Radiusskala und Rahmenbehandlung, Tiefe und Rahmen, Kartenentscheidung, Option B5-Karte
+
+### Community 37 - "Build-Schnittstelle zur Website"
+Cohesion: 0.60
+Nodes (5): Build-Schnittstelle zwischen Hosting und Website, OWNER_HOSTING_ASSET_DIR, OWNER_HOSTING_CONTENT_FILE, OWNER_HOSTING_RELEASE_ID, Build-Integration im Website-Projekt
+
+### Community 38 - "Owner-Freigabe je Inhaltsblock"
+Cohesion: 0.40
+Nodes (5): Welche Inhalte der Owner bearbeiten darf, Rechtstexte, Verantwortung und Haftungszuordnung, owner_editable, Pflichtfrage bei Erstellung und Update, Verbindliche Verbote im Build Prompt
+
+### Community 39 - "Unveraenderliche Assets und Sicherung"
+Cohesion: 0.67
+Nodes (3): Assets sind unveränderlich, Datensicherung und Restore, Mindestnachweise vor Produktivbetrieb
+
+### Community 40 - "Editorvertrag und Pointer-Allowlist"
+Cohesion: 0.67
+Nodes (3): Automatische Dashboard-Generierung aus dem Vertrag, _hosting Editorvertrag, JSON-Pointer-Allowlist
+
+### Community 41 - "Wartungsmodus statt Abschalten"
+Cohesion: 0.67
+Nodes (3): Google Search Central: Planned site downtime, RFC 9110 (503 Service Unavailable, Retry-After), Wartungsmodus statt Abschalten
+
+### Community 42 - "Vertragsupdates und Migration"
+Cohesion: 0.67
+Nodes (3): Website oder Vertrag später aktualisieren, Vertragsänderungen und bereits veröffentlichte Werte, Vertragssynchronisierung bei Website-Updates
 
 ## Ambiguous Edges - Review These
-- `Komposition und Überschriften` → `Material und Tiefe`  [AMBIGUOUS]
-  90-References/Apple Fluid Interface.md · relation: conceptually_related_to
 - `Go/No-Go Entscheidung` → `owner-review-pending ohne Build-Wirkung`  [AMBIGUOUS]
   80-Templates/Launch Checklist.md · relation: conceptually_related_to
 - `Hub-and-Spoke Pipeline Diagram (Train/Package/Version to Route/Deploy/Observe)` → `Isometric 3D Server-Block Illustration`  [AMBIGUOUS]
   .research/screenshots/brutalist.png · relation: semantically_similar_to
 - `Truncated Headline ('Distributed compute, agents that')` → `Excessive Empty Vertical Space Above and Below Hero`  [AMBIGUOUS]
   .research/screenshots/compute.png · relation: conceptually_related_to
-- `Pflicht zum Graph-Neubau bei jeder Aktualisierung` → `Information Density and Mobile Clarity`  [AMBIGUOUS]
-  98-Maintenance/Change Log.md · relation: references
 
 ## Knowledge Gaps
-- **115 isolated node(s):** `Chromium Headless Aufnahmesetup`, `Atomarer Update-Ablauf`, `apple-design (bewusst nicht installiert)`, `find-animation-opportunities (abgelehnt)`, `Eintragsformat für Skills` (+110 more)
+- **122 isolated node(s):** `alwaysUpdateLinks`, `Chromium Headless Aufnahmesetup`, `Kernbotschaft-Formel`, `Beweis-Hierarchie`, `Reihenfolge vor Design` (+117 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What is the exact relationship between `Komposition und Überschriften` and `Material und Tiefe`?**
-  _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
 - **What is the exact relationship between `Go/No-Go Entscheidung` and `owner-review-pending ohne Build-Wirkung`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
 - **What is the exact relationship between `Hub-and-Spoke Pipeline Diagram (Train/Package/Version to Route/Deploy/Observe)` and `Isometric 3D Server-Block Illustration`?**
   _Edge tagged AMBIGUOUS (relation: semantically_similar_to) - confidence is low._
 - **What is the exact relationship between `Truncated Headline ('Distributed compute, agents that')` and `Excessive Empty Vertical Space Above and Below Hero`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **What is the exact relationship between `Pflicht zum Graph-Neubau bei jeder Aktualisierung` and `Information Density and Mobile Clarity`?**
-  _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
-- **Why does `AGENTS.md Web-Brain Arbeitsanweisung` connect `Build-Auftrag und Pflichtartefakte` to `Impact Map und Change Log`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
-- **Why does `Atomarer Update-Prozess` connect `Impact Map und Change Log` to `Build-Auftrag und Pflichtartefakte`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+- **Why does `Quality Gates` connect `Quality Gates und Ablage` to `Deployment-Slots und Legacy-Adapter`, `Datenschutz und Dateninventar`, `Kopfzeile und Testmatrix`?**
+  _High betweenness centrality (0.226) - this node is a cross-community bridge._
+- **Why does `AI Build Prompt` connect `Quality Gates und Ablage` to `Typografische Kalibrierung`, `Datenschutz und Dateninventar`, `Owner-Freigabe je Inhaltsblock`?**
+  _High betweenness centrality (0.196) - this node is a cross-community bridge._
+- **Why does `pen.dev Workflow` connect `Datenschutz und Dateninventar` to `Quality Gates und Ablage`?**
+  _High betweenness centrality (0.193) - this node is a cross-community bridge._
+- **Are the 4 inferred relationships involving `Project Master Spec` (e.g. with `Decision Log Entry` and `Projektbezogene Wiedervorlagen`) actually correct?**
+  _`Project Master Spec` has 4 INFERRED edges - model-reasoned connections that need verification._
