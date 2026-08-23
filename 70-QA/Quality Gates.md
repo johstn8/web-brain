@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -17,7 +17,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Anzahl der Websites entspricht dem Auftrag; Quelle im Auftragstext ist in `PROJECT.md` zitiert. Ohne Angabe im Auftrag genau eine Website
 - [ ] Sitemap, Seitenverträge und primäre Nutzerflüsse aktuell; jede gebaute Website enthält eine verlinkte Startseite und die vollständigen erforderlichen Unterseiten. One-Page/Anker allein ist nicht zulässig.
 - [ ] echte Inhalte oder klar markierte Drafts, keine Produktions-Platzhalter
-- [ ] Inspirationsmatrix mit Auswahl oder begründeter Ablehnung; statische und interaktive Evidenz getrennt
+- [ ] je Website eine konkrete Live-Leitreferenz oder begründeter `Eigenentwurf`; Passung, Shortlist, Übernahmetiefe, konkrete Übernahmen, bewusste Abweichungen sowie statische und interaktive Evidenz dokumentiert
 - [ ] die beauftragte Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/`, bei mehreren mit eigenständiger kohärenter Richtung und Unterschieden auf mindestens fünf wirksamen Achsen bei gleichem Scope; auf `217.154.218.30` über `johannstein.com/dev` ohne Projektport erreichbar, sonst auf eigenem geprüftem lokalen Port
 - [ ] bei Relaunch: alte Website, externe Fundstellen, Maps-/Unternehmensprofil, Social Profiles und Dokumente inventarisiert; Konflikte markiert
 - [ ] gefundenes Firmenlogo in jeder gebauten Website sichtbar eingesetzt und der Einsatzort dokumentiert, oder ausdrücklich festgehalten, dass kein Logo gefunden wurde
@@ -44,7 +44,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] bei vorhandenen Vorgängerfassungen: Übernahmeregister ausgefüllt; wiederholte Leitmotive, Fassungsnamen, Signalfarben oder primäre Beweisformen sind als bewusste sachliche Entscheidung dokumentiert
 - [ ] primäre Beweisform je Landing Page dokumentiert; wenn ein interaktives Kernmodul gewählt wurde, erfüllt es [[20-Design/Motion and Interaction#Interaktives Kernmodul]] mit realen Daten, Tastaturbedienung, Zuständen und statischer Alternative
 - [ ] UI UX Pro Max Abfrage und Auswahl dokumentiert; die Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack liegen mit Datum vor; projektspezifische Abweichungen begründet
-- [ ] Referenzrecherche im Pflichtumfang: mindestens acht erneut angesehene Referenzen, mindestens zwei benannte Negativreferenzen, bei mehreren Websites je Website eine eigene Referenzkombination
+- [ ] Referenzrecherche nach [[90-References/Reference Research Workflow]]: keine Sammlungs-/Galerie-/Award-/Stilbibliotheksseite als Leitreferenz; bei mehreren Websites paarweise verschiedene konkrete Originalseiten; Eigenentwurf nur nach dokumentierter Prüfung plausibler Kandidaten
 - [ ] pen.dev Einsatz oder Verzicht entschieden; verwendete `.pen`-Dateien versioniert und visuell geprüft
 - [ ] Anti-Slop-Review bestanden; keine unbegründeten Standardsektionen
 - [ ] **Impeccable KI-Detail-Review je gebauter Website** durchgeführt, mit Datum, Befundliste und Umsetzungsstand dokumentiert, siehe [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]]

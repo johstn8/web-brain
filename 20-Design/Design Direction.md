@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
@@ -19,6 +19,7 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - drei Markenattribute und drei Anti-Attribute
 - Zielgefühl in einem Satz
 - primäre visuelle Metapher
+- konkrete primäre Leitreferenz aus [[90-References/Website Reference Pool]] oder begründeter `Eigenentwurf`; direkte URL, Passung, Übernahmetiefe, tragende Übernahmen und bewusste Abweichungen nach [[90-References/Reference Research Workflow]]
 - gewählter Leitbenchmark aus [[20-Design/Interface Benchmarks]] samt übernommenen und ausdrücklich nicht übernommenen Elementen
 - vollständiger Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark
 - gewählte Radiusskala, Rahmenbehandlung, Flächenlogik und Tiefe; innerhalb der Website konsistent, aber nicht aus einer anderen Fassung übernommen
@@ -27,7 +28,7 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]]
 - primäre Beweisform der Landing Page; ein interaktives Kernmodul nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]] nur wenn es inhaltlich trägt
-- Referenzen mit Rolle, übertragbarem Prinzip und konkreter Einsatz-/Adaptionsentscheidung
+- Leitreferenz mit übertragbaren Prinzipien und konkreter Einsatz-/Adaptionsentscheidung; bei mehreren Websites eine jeweils andere Originalseite
 - Grad an Dichte, Ausdruck, Motion und Bilddominanz
 - Entscheidung für ein reales Kernartefakt, direkt übernommenes oder kreativ adaptiertes Leitmedium samt statischer Alternative
 - die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen, belegt durch die Unterscheidungsmatrix aus dem Abschnitt Stilabstand bei mehreren Websites

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 impacts:
   - "[[80-Templates/Project Master Spec]]"
   - "[[70-QA/Quality Gates]]"
@@ -19,6 +19,7 @@ impacts:
 ## Design
 
 - Ein visuelles Leitmotiv statt Effekt-Sammlung.
+- Pro Website eine fachlich passende konkrete Live-Seite als Leitreferenz suchen; bei mehreren Websites verschiedene Referenzen verwenden. Eine starke Referenz darf Struktur, visuelle Sprache und Motion prägen, ohne die reale Marke oder Inhalte zu ersetzen. Sammlungen sind nur Entdeckungsquellen; fehlt eine starke Passung, wird ein Eigenentwurf begründet. Siehe [[90-References/Reference Research Workflow]].
 - Definiertes Farb-, Typografie-, Spacing-, Grid-, Radius-, Schatten- und Motion-System.
 - Farbrollen und Bildsprache aus Marke, Produkt, Ort, Referenzen oder realem Material ableiten. Bilder, Designs und Animationen dürfen für den kreativen Build direkt eingesetzt oder adaptiert werden; ihr tatsächlicher Einsatz wird danach dokumentiert.
 - Farbwelten werden aus Marke, Material, Inhalt und realem Kontext hergeleitet. Eine häufig verwendete Palette ist kein Verbot, aber ein unbegründeter Generator-Default ist ein Befund. Siehe [[20-Design/Color System#Häufige Defaults bewusst entscheiden]].

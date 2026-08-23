@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 ---
 
 # Brain Index
@@ -27,7 +27,7 @@ updated: 2026-08-19
 - Betrieb: [[60-Operations/Delivery and Local Start]], [[60-Operations/Owner Hosting and Dashboard]], [[60-Operations/Release Readiness Register]], [[60-Operations/Dependencies and Environments]], [[60-Operations/Observability and Maintenance]]
 - Qualität: [[70-QA/Quality Gates]], [[70-QA/Test Matrix]]
 - Vorlagen: [[80-Templates/Templates Index]]
-- Inspiration und Quellen: [[90-References/Inspiration Catalog]], [[90-References/Apple Fluid Interface]], [[90-References/Reference Research Workflow]], [[90-References/Derived Design Patterns]], [[90-References/Tools and Libraries]], [[90-References/pen.dev Workflow]]
+- Inspiration und Quellen: [[90-References/Website Reference Pool]], [[90-References/Reference Research Workflow]], [[90-References/Inspiration Catalog]], [[90-References/Apple Fluid Interface]], [[90-References/Derived Design Patterns]], [[90-References/Tools and Libraries]], [[90-References/pen.dev Workflow]]
 - Wartung: [[98-Maintenance/Coverage and Impact Map]], [[98-Maintenance/Change Log]], [[98-Maintenance/Review Queue]]
 
 ## Scope

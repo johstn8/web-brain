@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 ---
 
 # Coverage and Impact Map
@@ -63,6 +63,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Betrieb | [[60-Operations/Observability and Maintenance|Observability and Maintenance]] | Security, Billing, QA |
 | Abnahme | [[70-QA/Quality Gates|Quality Gates]] | Test Matrix, Launch Checklist |
 | Referenzmuster | [[90-References/Derived Design Patterns|Derived Design Patterns]] | Catalog, Design Direction, Master Spec |
+| konkreter Website-Referenzpool und Leitreferenzwahl | [[90-References/Reference Research Workflow|Reference Research Workflow]] | Website Reference Pool, Inspiration Catalog, AGENTS, Core Rules, Workflow, Design Direction, Master Spec, AI Build Prompt, Quality Gates |
 | Inspirationsrecherche und Evidenz | [[90-References/Reference Research Workflow|Reference Research Workflow]] | Catalog, Motion, Master Spec, Test Matrix, Quality Gates |
 | pen.dev und `.pen`-Designquellen | [[90-References/pen.dev Workflow|pen.dev Workflow]] | Tools and Libraries, Plugins and Skills, Design Direction, Delivery, Master Spec, QA |
 
@@ -130,7 +131,7 @@ Aktualisiere Produktlogik, serverseitige Berechtigungen, Webhooks, Kündigung, R
 
 ### Neue visuelle Richtung
 
-Aktualisiere Referenzentscheidung samt Negativreferenzen, getrennten UI-UX-Pro-Max-Nachweis unter `design-system/<website-slug>/MASTER.md`, Design Contract der betroffenen Website, Unterscheidungs- und Vorgängermatrix, Auftakt, Kopf-/Fußbereich, Navigation, Chrome, Komponentenrepertoire, Zweitschrift, Tokens, Motion, Asset Register, Master Spec, Impeccable-Review und echte visuelle QA. Referenzen dürfen direkt eingesetzt oder kreativ adaptiert werden; tatsächlicher Einsatz gehört nach dem Build ins Asset Register beziehungsweise Rights Review. Entferne keine gebaute Website aufgrund einer Auswahl- oder Quellenentscheidung.
+Aktualisiere Leitreferenz oder begründeten Eigenentwurf, Passung, Übernahmetiefe, konkrete Übernahmen und bewusste Abweichungen, den getrennten UI-UX-Pro-Max-Nachweis unter `design-system/<website-slug>/MASTER.md`, Design Contract der betroffenen Website, Unterscheidungs- und Vorgängermatrix, Auftakt, Kopf-/Fußbereich, Navigation, Chrome, Komponentenrepertoire, Zweitschrift, Tokens, Motion, Asset Register, Master Spec, Impeccable-Review und echte visuelle QA. Bei mehreren Websites bleiben die Leitreferenzen verschieden. Referenzen dürfen direkt eingesetzt oder kreativ adaptiert werden; tatsächlicher Einsatz gehört nach dem Build ins Asset Register beziehungsweise Rights Review. Entferne keine gebaute Website aufgrund einer Auswahl- oder Quellenentscheidung.
 
 ### Neuer oder geänderter Benchmark
 

@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 ---
 
 # Project Master Spec
@@ -60,8 +60,10 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Kopfzeileninventar und -anordnung, Navigationsbeschriftung, Fußbereichsstruktur und sonstiges Seiten-Chrome:
 - Landing-Page-Haltung: was ist extravagant, was bleibt ruhig, wo liegt die Grenze:
 - Firmenlogo: gefunden ja/nein, Quelle, sichtbarer Einsatzort je Website, Bearbeitungsschritte:
-- Inspirationsmatrix: Quellen, Rollen, statischer/interaktiver Nachweis, direkt übernommene/adaptierte Prinzipien und tatsächlicher Einsatz:
-- Negativreferenzen und daraus abgeleitete Verbote:
+- Referenz-Shortlist aus [[90-References/Website Reference Pool]]: mindestens drei plausible konkrete Live-Seiten, sofern vorhanden; je direkte URL, Passung und Entscheidung:
+- Primäre Leitreferenz oder `Eigenentwurf`: direkte URL, fachliche und gestalterische Passung, Übernahmetiefe `punktuell | teilweise | prägend` mit optionaler Prozentangabe, statischer/interaktiver Nachweis, übernommene Grundstruktur/Design-/Motionprinzipien, bewusste Abweichungen und tatsächlicher Einsatz:
+- Bei mehreren Websites: Nachweis, dass jede Design-Contract-Leitreferenz eine andere Originalseite ist:
+- Optionale Negativreferenzen und daraus abgeleitete Verbote:
 - UI UX Pro Max: Query, Datum, **website-spezifisches** Ergebnisartefakt, Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack, gewählte Regeln und Abweichungen:
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
 - pen.dev: `use | skip`, Begründung, `.pen`-Pfade und Freigabestatus:

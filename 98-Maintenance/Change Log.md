@@ -1,13 +1,27 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-23
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo ältere Einträge feste Websitezahlen, Auswahlvarianten, Asset-Ausschlüsse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdrücklich überholt.
+
+## 2026-08-23 — Eine konkrete Leitreferenz je Website statt Designsammlung
+
+Auslöser war der Wunsch, die bereits gespeicherten positiven Designbeispiele und fünf große Designsammlungen wirksamer für neue Website-Builds zu nutzen. Ein Agent soll nicht nur allgemeine Muster lesen, sondern je gebauter Website eine fachlich passende Originalseite auswählen und deren Grundstruktur, Gestaltung und zweckvolle Motion in frei gewählter Tiefe adaptieren. Bei drei Websites entstehen drei unterschiedliche Referenzentscheidungen; fehlt eine starke Passung, bleibt ein kreativer Eigenentwurf richtig.
+
+**Kanonisch neu**
+
+- [[90-References/Website Reference Pool]] bündelt mehr als hundert direkt aufrufbare Originalseiten nach lokalen Dienstleistungen, Gastronomie und Hospitality, Gesundheit, Immobilien und Architektur, Mobilität und Logistik, Software und Finanzen sowie Studios und immersive Erlebnisse. Die fünf Sammlungen stehen nicht im aktiven Auswahlbestand; sie sind nur als datierte Herkunftsnachweise erhalten.
+- [[90-References/Reference Research Workflow]] ersetzt die bisherige Acht-Referenzen-/Drei-Rollen-Pflicht. Pro Website wird nach einem kurzen fachlichen Vergleich genau eine konkrete Leitreferenz gewählt. Passung wiegt stärker als Spektakel; unter ähnlich passenden Kandidaten wird die professionellere und sinnvoll animationsreichere Seite bevorzugt.
+- Die Übernahmetiefe bleibt bewusst offen: `punktuell`, `teilweise` oder `prägend`, optional grob in Prozent. Dokumentiert werden Folgen für Auftakt, Raster, Dramaturgie, Typografie, Flächen, Medien und Motion sowie bewusste Abweichungen. Projektwahrheit, Brain-Regeln, reale Marke, Accessibility und Technik bleiben verbindlich.
+- Mehrere Websites desselben Auftrags verwenden verschiedene Originalseiten. Galerie-, Award-, Stilbibliotheks- und Sammlungsseiten sind keine Leitreferenzen. Gibt es keine starke fachliche und gestalterische Passung, werden die geprüften Kandidaten begründet verworfen und als `Eigenentwurf` weitergearbeitet.
+- Die Regel wurde in AGENTS, Core Rules, Brain Index, Routing, Web Product Workflow, Design Direction, Inspirationskatalog, Project Master Spec, AI Build Prompt, Quality Gates und Impact Map durchgezogen.
+
+**Recherchegrenze:** Die Sammlungen und darin gelistete Websites können sich ändern. Der Pool ist ein Suchindex, kein eingefrorener Qualitätsbeweis. Vor einer konkreten Übernahme wird die Originalseite mit Desktop, Mobil, Tastatur und Reduced Motion erneut geprüft; interaktive Behauptungen benötigen ein Interaktionsprotokoll.
 
 ## 2026-08-19 — Veröffentlichungsreife je Website und zweckbezogene Designfreiheit
 

@@ -1,14 +1,18 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-19
-review_by: 2027-02-04
+updated: 2026-08-23
+review_by: 2027-02-23
 ---
 
 # Inspirationskatalog
 
 > [!summary] Zweck
-> Dieses Verzeichnis bewahrt Referenzen als analysierbare Quellen und unmittelbare kreative Bauquellen. Für ein Projekt werden passende Bilder, Designs, Layouts, Motion, Copy oder Code direkt eingesetzt oder kreativ adaptiert; der tatsächliche Einsatz wird anschließend dokumentiert und nicht vorab gesperrt.
+> Dieses Verzeichnis bewahrt ausführliche Analysen, Benchmarks und Negativbeispiele. Der kompakte, nach Einsatzfeldern kategorisierte Auswahlbestand konkreter Live-Seiten liegt in [[90-References/Website Reference Pool]]. Für jedes Website-Ergebnis wird nach [[90-References/Reference Research Workflow]] genau eine passende Leitreferenz gewählt oder ein Eigenentwurf begründet.
+
+## Aktiver Pool und Sammlungsgrenze
+
+Für neue Website-Builds ist [[90-References/Website Reference Pool]] der erste Einstieg. Dort stehen ausschließlich direkt aufrufbare Originalseiten. Designsammlungen, Galerien, Award-Listen und Stilbibliotheken werden nicht als Referenz ausgewählt; aus ihnen werden konkrete Originalseiten extrahiert. Die ausführlichen Befunde dieses Katalogs bleiben für die Interpretation, Negativmuster und historische Herkunft erhalten.
 
 ## Prüfstatus
 
@@ -306,12 +310,13 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 
 ## Auswahlregel für Projekte
 
-1. Führe für jedes Web-Produkt den [[90-References/Reference Research Workflow]] aus und halte dessen Pflichtumfang ein.
-2. Wähle je Rolle genau eine Referenz: Struktur, visuelle Sprache und Interaktionsidee. Bei mehreren Websites im Auftrag je Website eine eigene Kombination.
-3. Benenne zusätzlich mindestens zwei Negativreferenzen und das daraus abgeleitete Verbot.
-4. Notiere pro Referenz genau das zu übernehmende Prinzip und das zu vermeidende Risiko im Master Spec.
-5. Prüfe die aktuelle Version einschließlich relevanter Bewegung erneut. Eine Referenz ist Inspiration, keine Anforderung.
-6. Übersetze die Prinzipien in eigene Tokens, Komponenten, Inhalte und Belege.
+1. Führe für jedes Web-Produkt den [[90-References/Reference Research Workflow]] aus und beginne im [[90-References/Website Reference Pool]].
+2. Wähle je Website genau eine konkrete Live-Seite als Leitreferenz, sofern eine starke fachliche und gestalterische Passung existiert. Eine Seite darf Struktur, visuelle Sprache und Interaktion gemeinsam prägen.
+3. Verwende bei mehreren Websites im selben Auftrag paarweise verschiedene Leitreferenzen. Drei Websites erhalten drei unterschiedliche Originalseiten.
+4. Notiere Passungsbegründung, Übernahmetiefe, konkret übernommene Prinzipien, bewusste Abweichungen und tatsächlichen Einsatz im Master Spec.
+5. Prüfe die aktuelle Version einschließlich relevanter Bewegung erneut. Galerie-, Award-, Stilbibliotheks- und Sammlungsseiten sind Recherchewege, keine Leitreferenzen.
+6. Gibt es keine überzeugende Passung, dokumentiere die geprüften Kandidaten und arbeite als begründeter `Eigenentwurf` kreativ weiter.
+7. Übersetze das Referenzprinzip in die reale Marke, Inhalte, Tokens, Komponenten, Accessibility und Technik des Projekts. Kopiere keine fremden Claims, Unternehmensfakten, Logos oder Identitätsmerkmale.
 
 [^curriculum]: [Claude Code FULL COURSE: The Curriculum](https://claude-code-curriculum-deploy.vercel.app/)
 [^motionsites]: [MotionSites AI: Premium AI Website Prompts](https://motionsites.ai/lesson)

@@ -1,10 +1,11 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
-review_by: 2027-02-03
+updated: 2026-08-23
+review_by: 2027-02-23
 depends_on:
   - "[[90-References/Inspiration Catalog]]"
+  - "[[90-References/Website Reference Pool]]"
 impacts:
   - design-direction
   - motion
@@ -16,36 +17,39 @@ impacts:
 
 ## Pflicht und Ergebnis
 
-Vor Design eines Web-Produkts wird Inspiration recherchiert. Pflichtartefakt im Projekt ist eine Entscheidungsmatrix mit:
+Vor Design eines Web-Produkts wird eine konkrete Leitreferenz gesucht. Pflichtartefakt im Projekt ist eine Entscheidungsmatrix mit:
 
-`Quelle -> Rolle -> beobachtetes Prinzip -> Eignung für Ziel/Nutzer -> direkter Einsatz/Adaption -> tatsächlicher Einsatz -> Nachweis`
+`Website -> direkte URL -> Passung zu Branche/Zielgruppe/Inhalt -> tragende Prinzipien -> Übernahmetiefe -> bewusste Abweichungen -> tatsächlicher Einsatz -> Nachweis`
 
-Mindestens der [[90-References/Inspiration Catalog]] wird geprüft. Aktuelle Wettbewerber oder fachnahe Produkte dürfen ergänzt werden. Ein Ergebnis darf lauten, dass keine Referenz übernommen wird, aber nicht, dass die Prüfung entfällt.
+Mindestens der [[90-References/Website Reference Pool]] wird geprüft. Aktuelle Wettbewerber oder fachnahe Produkte dürfen ergänzt werden, wenn ihre direkte Live-URL dokumentiert wird. Sammlungs-, Galerie-, Award- und Stilbibliotheksseiten sind nur Recherchewege und niemals die Leitreferenz selbst. Ein Ergebnis darf nach ernsthafter Suche `Eigenentwurf` lauten, aber nicht, dass die Prüfung entfällt.
 
 ## Pflichtumfang je Web-Produkt
 
-Eine oberflächliche Sichtung genügt nicht. Verbindlich sind:
+Verbindlich sind:
 
-- **Mindestens acht Referenzen aus dem Katalog erneut ansehen**, davon mindestens zwei aus den generierten und experimentellen Websites, mindestens drei aus den professionellen Produkt- und Plattformseiten und mindestens zwei aus den kreativen Studios und Portfolios.
-- **Mindestens zwei ausdrückliche Negativreferenzen** benennen, etwa DataFlow oder Animated SaaS, und daraus konkret ableiten, welches Muster die eigene Seite nicht übernimmt.
-- **Je gewählter Rolle** eine Referenz mit konkretem, benanntem Prinzip: Struktur, visuelle Sprache und Interaktionsidee.
-- **Bei mehreren Websites im Auftrag** je Website eine eigene Referenzkombination. Zwei Websites dürfen nicht aus denselben Referenzen entstehen, sonst unterscheiden sie sich nur in Farbe.
-- **Ergebnis in Sätzen, nicht in Stichworten.** Für jede Referenz wird notiert, welche Kompositionsentscheidung sie konkret auslöst, etwa „Überschrift links neben dem Inhalt statt darüber, wie in der Sektionsführung von Linear“.
+- **Pro Website genau eine konkrete primäre Leitreferenz wählen**, wenn eine fachlich und gestalterisch sinnvolle Passung existiert. Sie darf Struktur, visuelle Sprache und Interaktionsidee gemeinsam prägen.
+- **Mindestens drei plausible Kandidaten kurz vergleichen**, sofern der Pool drei fachlich sinnvolle Kandidaten enthält. Das verhindert die Wahl nach dem ersten attraktiven Screenshot; es ist keine Pflicht, unpassende Seiten aufzufüllen.
+- **Bei mehreren Websites im Auftrag pro Website eine andere Leitreferenz.** Drei Versionen erhalten drei verschiedene Originalseiten. Keine Leitreferenz wird innerhalb desselben Auftrags wiederverwendet.
+- **Passung vor Spektakel.** Branche, Angebotslogik, Zielgruppe, Inhaltsmenge, benötigte Beweise und Markenwirkung zählen stärker als Awards oder technische Effekte. Unter ähnlich passenden Kandidaten wird die professionellere und sinnvoll animationsreichere Seite bevorzugt.
+- **Übernahmetiefe offen benennen:** `punktuell`, `teilweise` oder `prägend`, optional mit grober Prozentangabe. 20, 30, 60 oder 70 Prozent können gleichermaßen richtig sein; kein Mindestwert wird erzwungen.
+- **Eigenentwurf als ehrlicher Fallback.** Findet sich keine starke Passung, wird `Eigenentwurf` mit den geprüften Kandidaten und dem Grund der Ablehnung dokumentiert. Dann wird kreativ aus Projektwahrheit und Brain-Regeln gestaltet, ohne eine beliebige Referenz künstlich aufzuzwingen.
+- **Ergebnis in Sätzen, nicht in Stichworten.** Benannt werden konkrete Folgen für Auftakt, Raster, Sektionsdramaturgie, Typografie, Flächen, Medien und Motion sowie bewusste Abweichungen.
 
-Der Nachweis liegt als Entscheidungsmatrix im Projekt und wird im Design Contract verlinkt.
+Der Nachweis liegt als Entscheidungsmatrix im Projekt und wird im Design Contract verlinkt. Negative Muster aus dem [[90-References/Inspiration Catalog]] können ergänzend helfen, sind aber weder Mindestmenge noch Ersatz für die positive Leitreferenz.
 
 ## Auswahl
 
-1. Projektziel, Zielgruppe, Inhaltsart, Plattform und Grenzen aus `PROJECT.md` extrahieren.
-2. Kandidaten getrennt für **Struktur**, **visuelle Sprache** und **Interaktionsidee** suchen.
-3. Pro Rolle höchstens einen Kandidaten auswählen; eine Quelle darf mehrere Rollen nur mit getrennten Prinzipien belegen.
-3a. Zusätzlich die Anordnung von Überschriften und den Aufbau der Landing Page gezielt gegen [[90-References/Derived Design Patterns#Anordnung von Überschriften]] und [[90-References/Derived Design Patterns#Landing Page mit Ausdruck]] prüfen und die gewählte Anordnung benennen.
-4. Gewünschte Bilder, Designs, Animationen, Texte, Assets, Quellcode oder Kompositionen für direkten Einsatz oder kreative Adaption bestimmen.
-5. Auswahl gegen Accessibility, Performance, Content-Wahrheit, technische Machbarkeit und Wartung abwägen. Diese Prüfung optimiert die Umsetzung und erzeugt keine Herkunfts- oder Asset-Sperre.
+1. Projektziel, Branche, Zielgruppe, Inhaltsart, Beweisformen, Plattform und Grenzen aus `PROJECT.md` extrahieren.
+2. Im [[90-References/Website Reference Pool]] zuerst in der passenden Branchenkategorie suchen, dann bei Bedarf nach Wirkung oder Interaktionsniveau. Nur konkrete Live-Websites in die Shortlist aufnehmen.
+3. Kandidaten nach `Branchenpassung`, `Angebots-/Inhaltspassung`, `Zielgruppenwirkung`, `übertragbarer Struktur`, `Motion-/Interaktionswert` und `technischer Machbarkeit` vergleichen. Fachliche Passung wiegt am stärksten.
+4. Eine Leitreferenz wählen oder `Eigenentwurf` begründen. Bei mehreren Websites die Auswahl paarweise auf unterschiedliche Originalseiten prüfen.
+5. Übernahmetiefe und konkrete Übertragung festlegen: Was wird an Grundstruktur, Auftakt, Raster, Typografie, Flächen, Medienführung, Sektionsdramaturgie und Motion übernommen, adaptiert oder verworfen?
+6. Die Anordnung von Überschriften und den Aufbau der Landing Page zusätzlich gegen [[90-References/Derived Design Patterns#Anordnung von Überschriften]] und [[90-References/Derived Design Patterns#Landing Page mit Ausdruck]] prüfen.
+7. Auswahl gegen Accessibility, Performance, Content-Wahrheit, reale Markenidentität, technische Machbarkeit und Wartung abwägen. Inhalte, Claims, Identitätsmerkmale, Logos und rechtliche Aussagen der Referenz werden nicht auf das neue Unternehmen übertragen.
 
 ## Evidenz erfassen
 
-Je geprüfter Version festhalten:
+Für die gewählte Leitreferenz und alle tatsächlich übernommenen interaktiven Prinzipien festhalten:
 
 - Name, direkte URL, Abrufdatum und Prüfer
 - Browser, Viewport, Eingabemethode, Netzprofil und relevante Präferenzen
@@ -55,6 +59,8 @@ Je geprüfter Version festhalten:
 - Mobile-, Tastatur- und Reduced-Motion-Verhalten
 - Lade-, Fehler- und Fallbackzustand bei Medien, Canvas, 3D oder Ton
 - Scroll-Map je primärer Route: kontinuierliche Scrollsequenz, weitere Scroll-/In-View-Bewegungen, Trigger/Ranges und Rückwärts-Scroll
+
+Für abgelehnte Shortlist-Kandidaten genügen direkte URL, Abrufdatum und ein kurzer, konkreter Ablehnungsgrund. Eine vollständige Browserbeweissammlung ist nur für die gewählte Leitreferenz erforderlich.
 
 Ein Screenshot belegt nur den aufgenommenen Zustand. Animation, Scroll-Choreografie, Audio, Fokusführung und Zustandsübergänge benötigen ein Interaktionsprotokoll und, wenn möglich, eine kurze Video- oder Trace-Aufnahme. Playwright kann Browserkontexte als Video aufzeichnen und reduzierte Bewegung emulieren.[^video][^emulation]
 
@@ -74,7 +80,10 @@ Dateien: `source.md`, `desktop.png`, `mobile.png`, optional `interaction.webm` o
 
 ## Abnahme
 
-- eindeutige Rolle und konkreter Einsatz oder kreative Adaption je gewählter Referenz
+- genau eine konkrete Leitreferenz je Website oder nachvollziehbar begründeter `Eigenentwurf`
+- bei mehreren Websites paarweise verschiedene Leitreferenzen
+- keine Sammlung, Galerie, Award-Liste oder Stilbibliothek als Leitreferenz
+- Passungsbegründung, Übernahmetiefe, konkrete Übernahmen und bewusste Abweichungen
 - statische und interaktive Aussagen getrennt belegt
 - Desktop, Mobil, Tastatur und Reduced Motion beurteilt
 - tatsächlicher Einsatz und technische Risiken dokumentiert
