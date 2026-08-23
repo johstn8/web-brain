@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-18
+updated: 2026-08-23
 depends_on:
   - "[[60-Operations/Owner Hosting and Dashboard]]"
 impacts:
@@ -195,6 +195,7 @@ Preview und Veröffentlichung müssen denselben Content-Loader und dieselbe Komp
 | `label`, `help`, optional `example` | keine Builder-Fachsprache |
 | `type` | aus dem zentral unterstützten Typkatalog |
 | Validierungsgrenzen | passend zum Typ; keine nur clientseitige Grenze |
+| `surface` | `zentral` oder `seite`; fehlend bedeutet `zentral` |
 | `publish_policy` | `owner_confirm`, `scheduled` oder `builder_approval` |
 | `responsible` | `owner`, `builder` oder benannte fachliche Rolle |
 | `risk` | `low`, `medium` oder `high` |
@@ -222,6 +223,23 @@ Eine Telefonnummer steht in der Inhaltsdatei zweimal: als Text für die Anzeige 
 Der Owner wählt links das Land und tippt rechts die nationale Nummer ohne führende Null; Trennzeichen setzt das Feld. Beide Pointer werden daraus gemeinsam geschrieben. Beide Zielpointer müssen in den Basiswerten existieren.
 
 Ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Begründung und Regeln in [[60-Operations/Owner Hosting and Dashboard#Eine Angabe ist ein Feld]].
+
+### `surface` sagt, wo ein Feld bearbeitet wird
+
+Jedes editierbare Feld trägt zusätzlich, **wo** der Owner es ändert:
+
+- `zentral` — im Formular „Zentrale Angaben“. Zu wählen, wenn der Wert an mehreren Stellen der Website erscheint: Telefon, E-Mail, Öffnungszeiten, Schalter wie „Stellenangebot anzeigen“.
+- `seite` — im Seiteneditor, dort wo der Wert steht. Zu wählen, wenn er an genau einer Stelle erscheint: einzelne Bilder, Texte einer bestimmten Seite.
+
+Die Entscheidung ist Teil des Vertrags und nicht der Oberfläche überlassen. Ein Feld erscheint in genau einer der beiden Ansichten; zwei Wege zu derselben Änderung zwingen den Owner zu einer Wahl, deren Unterschied er nicht kennen kann.
+
+Ein Bildfeld ist im Regelfall `seite`. Es beschreibt keine Angabe über den Betrieb, sondern eine Stelle — und stand im gemeinsamen Formular weit weg von dem Ort, an dem man es sieht. An seiner Registrierung ändert das nichts: Pfade, `spec`, Assets, Historie und Rollback bleiben unverändert.
+
+### Änderungen auf der Seite sind kein Vertragsfeld
+
+Was der Owner unmittelbar auf der Seite ändert — dieser Satz, diese Ausrichtung —, wird **nicht** als Vertragsfeld nachgetragen. Die Quelle kennt diesen Satz nicht als Feld, sondern nur als Text im Markup; ein Feld dafür wäre eine Erfindung.
+
+Solche Änderungen sind **Darstellungsregeln**: Seite, Anker im Dokument, optionaler Text, aufgezählte Gestaltung. Sie stehen in einer eigenen Spalte neben dem Overlay, werden nach dem Bau auf das Release angewendet und sind in [[60-Operations/Owner Hosting and Dashboard#Der Seiteneditor]] verbindlich geregelt. Für die Vertragsvorlage folgt daraus nur eines: Ein Vertrag muss dafür **nichts** vorsehen, und es ist kein Grund, ein Feld zu erfinden.
 
 ### Der Typ image beschreibt Dateien, keinen Dateinamen
 
@@ -254,6 +272,8 @@ Ein Bildfeld ersetzt eine Datei an einem registrierten Pfad. Der Dateiname in de
 
 - [ ] Jede sichtbare Inhaltsgruppe besitzt eine stabile Block-ID.
 - [ ] Für jeden Block ist `owner_editable` bewusst entschieden.
+- [ ] Für jedes editierbare Feld ist `surface` bewusst entschieden: zentral bei Werten an mehreren Stellen, `seite` bei Werten an genau einer.
+- [ ] Kein Feld erscheint in beiden Bearbeitungsansichten.
 - [ ] Kein Rechtstext, Tracking-, Consent-, Rollen-, Navigations- oder Buildfeld ist frei editierbar.
 - [ ] Jeder editierbare Pointer existiert in den Basiswerten und liegt innerhalb seines Blocks.
 - [ ] Angaben, die in mehreren Formen in der Datei stehen, bilden ein Feld mit mehreren Pointern, nicht mehrere Felder.

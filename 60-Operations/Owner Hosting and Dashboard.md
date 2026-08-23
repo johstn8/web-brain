@@ -1,8 +1,8 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
-review_by: 2027-02-19
+updated: 2026-08-23
+review_by: 2027-02-23
 depends_on:
   - "[[60-Operations/Delivery and Local Start]]"
   - "[[40-Backend-Security/Authentication and Accounts]]"
@@ -396,6 +396,8 @@ Mandantenbezogene Tabellen tragen `tenant_id` und zusammengesetzte Eindeutigkeit
 
 Ein Feld wird nicht deshalb freigegeben, weil seine technische Bearbeitung einfach ist. Entscheidungskriterien sind Wirkung auf Layout, Aussagen, Recht, Datenschutz, SEO, Integrationen und Folgekosten.
 
+Ob etwas bearbeitbar ist, und **wo** es bearbeitet wird, sind zwei getrennte Entscheidungen. Die zweite beantwortet eine einzige Frage: Erscheint der Wert an mehreren Stellen der Website? Dann ist er zentral. Steht er an genau einer Stelle, gehört er auf die Seite. Ein Fahrzeugbild ist danach keine Angabe über den Betrieb, sondern eine Stelle.
+
 ## Eine Website einrichten
 
 Das Builder-CLI aus `packages/tenant-cli/` bildet den einzigen regulären Registrierungsweg. Die folgenden Befehlsnamen definieren die Zieloberfläche; sie werden mit dem zentralen Produkt implementiert:
@@ -512,13 +514,65 @@ Ein springender Rahmen liest sich als Unruhe, noch bevor jemand ihn benennen kan
 - offene Entwürfe und ausstehende Builder-Anfragen
 - verständliche Handlungsaufforderung statt roher Infrastrukturmeldungen
 
-### Inhalte bearbeiten
+### Bearbeiten: zwei Ansichten, eine Entscheidungsregel
 
-- ausschließlich `owner_editable: true`
-- Gruppierung nach Nutzeraufgabe und Website-Seite, nicht nach JSON-Pfad
-- Autosave als Entwurf, explizite Vorschau, getrenntes Veröffentlichen
-- mobile Vorschau und Warnung bei ungewöhnlicher Textlänge oder Bildwirkung
-- sichtbarer Status „Entwurf“, „Wird geprüft“, „Veröffentlicht“, „Fehlgeschlagen“
+Ein Dashboard mit **einer** Art zu ändern behandelt zwei verschiedene Dinge gleich. Eine Telefonnummer steht an sieben Stellen der Website und gehört an eine Stelle gepflegt. Ein Satz auf der Startseite steht an genau einer Stelle und gehört genau dort geändert. Ein Formular für beides macht das Formular lang und den Satz unauffindbar.
+
+Verbindlich sind deshalb **zwei Ansichten unter einem Bereich** — nicht zwei Bereiche nebeneinander. Der Umschalter steht *innerhalb* von „Bearbeiten“ und benennt beide Ansichten jedes Mal, auch die, auf der man gerade ist.
+
+| Ansicht | Was dort gehört | Warum |
+|---|---|---|
+| Auf der Seite | Texte, Ausrichtung, Textgröße, Versatz, Bilder | Die Stelle ist ihr eigener Kontext. Man sieht, was man ändert. |
+| Zentrale Angaben | Telefon, Mobil, E-Mail, Öffnungszeiten, Stellenanzeige an/aus | Der Wert erscheint an vielen Stellen zugleich; er wird einmal gepflegt, nicht siebenmal. |
+
+Die Zuordnung ist **keine Vermutung der Oberfläche**, sondern steht am Feld: `surface: "zentral"` oder `surface: "seite"`. Ein Feld erscheint in genau **einer** der beiden Ansichten. Zwei Wege zu derselben Änderung hießen, sich zwischen ihnen entscheiden zu müssen, bevor man weiß, worin sie sich unterscheiden.
+
+Weiterhin gilt für die zentralen Angaben: ausschließlich `owner_editable: true`, Gruppierung nach Nutzeraufgabe statt nach JSON-Pfad, Autosave als Entwurf, getrenntes Veröffentlichen, sichtbarer Status.
+
+Eine Landesvorwahl wird in der aufgeklappten Liste mit dem Land dahinter gezeigt („+49 (Deutschland)“), im geschlossenen Feld nur als Vorwahl. Ohne Ländernamen wäre die Liste eine Zahlenkolonne, in der niemand +351 von +352 unterscheidet; im geschlossenen Feld ist die Frage dagegen beantwortet, und der Name drängt die Nummer daneben zusammen. Die kurze Anzeige wird erst im Browser aufgebaut — ohne Skript bleibt der volle Text stehen, statt eine falsche Vorwahl zu behaupten.
+
+### Der Seiteneditor
+
+Der Editor zeigt die **gebaute Website** in einem Rahmen und macht jede bearbeitbare Stelle anklickbar. Beim Klick wird die Stelle hervorgehoben, daneben erscheint eine kleine Leiste. An einem Bild sitzt der Knopf zum Ersetzen unten rechts im Bild.
+
+Was dabei entsteht, ist eine **Darstellungsregel** neben der Website, kein Eingriff in die Quelle:
+
+```text
+{ seite: "kontakt/index.html", anker: "main:1/section:2/p:3",
+  text:  "Neuer Satz",
+  stil:  { ausrichtung, groesse, versatz } }
+```
+
+Verbindlich:
+
+- **Der Anker ist eine Struktur, keine Suche.** Er zählt Elemente vom `<body>` aus, je Schritt Elementname und wievieltes Element dieses Namens. Er kann nicht „irgendwo passen“ und nichts einfügen, was es nicht schon gibt. Textsuche als Anker ist ausgeschlossen: Derselbe Satz kommt zweimal vor, und dann trifft es beim nächsten Bau die andere Stelle.
+- **Nur reiner Text wird ersetzt.** Enthält die Stelle weitere Elemente, bleibt sie unangetastet. Über eine Regel kann deshalb weder Markup noch ein Skript in die Website gelangen; der neue Text wird maskiert.
+- **Gestaltung ist eine aufgezählte Liste, kein CSS.** Vier Ausrichtungen, sechs Textgrößen, ein begrenzter Versatz. Ein Editor, mit dem sich eine Seite frei bauen lässt, baut sie irgendwann kaputt, und niemand kann sagen, wann das passiert ist. Ein Versatz über die Grenze hinaus wird begrenzt, nicht abgelehnt — er ist ein Ziehen über den Rand, kein Angriff.
+- **Gestaltet wird über eine Datei, nicht über `style`-Attribute.** Eine Website mit `style-src 'self'` in ihrer eigenen Richtlinie ignoriert Inline-Stile, und zwar lautlos.
+- **Der Rahmen zeigt den aktiven Release**, nicht die Quelle und keine eigens gebaute Vorschau. Die Quelle ist ein Buildeingang, kein Dokument; eine Vorschau je Tastendruck wäre langsam und prüfte den Anker gegen ein Dokument, das gleich wieder verschwindet.
+- **Die Rahmensperre der Website wird nur in dieser Auslieferung entfernt**, nie im Release. Statt ihrer bekommt die Antwort eine eigene Richtlinie als Kopfzeile, die das Einbetten allein der eigenen Herkunft erlaubt.
+- **Umrandung, Leiste und Bildknopf liegen außerhalb des Rahmens.** Nichts, was der Editor zeichnet, kann dadurch in einem Release landen.
+- **Angewendet wird nach dem Bau und vor den Prüfungen.** Nach dem Bau, weil die Quelle unangetastet bleibt und ein Legacy-Adapter davon nichts wissen muss. Vor den Prüfungen, weil das Ergebnis geprüft gehört: Ein Verweis auf ein Stylesheet, das es nicht gibt, muss dieselbe Prüfung reißen wie jeder andere tote Verweis.
+- **Eine Regel ohne Stelle bricht den Bau nicht ab, sondern wird protokolliert.** Eine Website, die wegen eines verschobenen Absatzes nicht mehr baut, ist der schlechtere Zustand. Verhindert wird der Fall früher: Beim Speichern schickt der Editor den ursprünglichen Text der Stelle mit, der Server löst den Anker gegen das ausgelieferte Dokument auf und vergleicht. Stimmt es nicht überein, wird die Regel abgelehnt — statt später lautlos einen fremden Absatz zu überschreiben.
+- **Der Server sagt, welche Stellen Text sind, nicht der Browser.** Beim Ausliefern der Seite liegt ein Index aller Stellen bei, die **im ausgelieferten Dokument** reinen Text enthalten, mit ihrem Text. Websites führen eigene Skripte aus, und einige schreiben Text nach dem Laden um; ein Editor, der den Ausgangstext aus dem fertigen Dokument nimmt, hielte den erzeugten Text für den ursprünglichen. Stellen, deren Text im fertigen Dokument abweicht, werden gar nicht erst zum Bearbeiten angeboten — eine Änderung daran würde beim nächsten Laden überschrieben.
+- **Der Entwurf trägt den ganzen Stand, nicht die Änderung.** Ohne Entwurf lädt der Editor die Regeln des aktiven Release als Ausgangspunkt und speichert immer den vollständigen Satz. Andernfalls verschwände jede früher veröffentlichte Änderung beim nächsten Bau: Gebaut wird aus der Quelle, und die kennt sie nicht. Beim Veröffentlichen wird trotzdem nur gezeigt, was sich gegenüber dem veröffentlichten Stand geändert hat. Eine leere Regelliste ist dabei eine Aussage — sie heißt „alles zurückgenommen“ — und nicht dasselbe wie „keine Angabe“.
+- **Die Adressen der Website werden für den Rahmen umgebogen.** Eine gebaute Website verweist auf ihre eigene Wurzel; im Rahmen ist die Wurzel das Dashboard. Umgeschrieben wird nur, was der Browser selbst lädt, samt `url(…)` in den ausgelieferten Stylesheets; Verweise in `<a>` bleiben unberührt, weil der Editor deren Klick selbst behandelt. Dazu gehören zwei Kopfzeilen: `X-Frame-Options: SAMEORIGIN` für diese eine Antwort und `frame-src 'self'` in der Richtlinie des Dashboards. Fehlt eines davon, bleibt der Rahmen leer — ohne Fehlermeldung.
+- **Eine zentrale Angabe wird im Editor nicht überschrieben.** Klickt jemand die Telefonnummer auf der Seite an, benennt der Editor sie als zentral und führt zu ihrem Feld. Sie dort zu ändern würde sie an dieser einen Stelle ändern und im Impressum nicht. Erkannt wird sie über **beide** Schreibweisen: die des Vertrags und die, die tatsächlich in der Quelle steht. Nur die eine zu kennen hieße, die Stelle nicht wiederzuerkennen.
+
+Ein Editor, der auf der Seite arbeitet, ist ausdrücklich **kein** Freibrief für freies Layout. Er verschiebt die Grenze nicht, an welchen Stellen der Owner etwas ändern darf, sondern nur den Ort, an dem er es tut.
+
+### Der Entwurf ist eine Sache, kein Zustand
+
+Alles Bearbeitete landet in **genau einem Entwurf je Website** — zentrale Angaben und Änderungen auf der Seite gemeinsam. Beide Teile stehen in getrennten Spalten (`overlay_json`, `layout_json`), beide jeweils als vollständiger Satz und nicht als Differenz, und beide werden über **eine** Schreibfunktion gepflegt: Wer nur einen Teil ändert, übergibt nur ihn; der andere bleibt stehen, statt lautlos leer zu werden.
+
+Ein Entwurf ist der einzige Zustand des Dashboards, den man anlegt, ohne es zu wollen — zwei Tastendrücke im Formular genügen. Er muss deshalb dieselbe Sichtbarkeit und dieselbe Beiläufigkeit beim Loswerden haben:
+
+- Er erscheint auf Übersicht, Bearbeiten und Veröffentlichen als **Karte**: was darin steht, wann er entstand, wer ihn bearbeitet hat.
+- Er lässt sich an jeder dieser Stellen **weiterbearbeiten oder verwerfen**. „Verwerfen“ betrifft den ganzen Entwurf; eine Auswahl zwischen seinen Teilen hat niemand im Kopf, wenn er darauf drückt.
+- Verworfen wird mit Rückfrage und mit Eintrag im Protokoll. Die veröffentlichte Website ist davon nicht betroffen; sie hat den Entwurf nie gesehen.
+- Ein Entwurf ohne Inhalt wird gelöscht, nicht leer gespeichert. Sonst stünde überall „Du hast einen Entwurf“, obwohl nichts darin ist.
+
+Eine **Vormerkung** wird dagegen nicht bearbeitet. Sie ist ein geprüfter, festgeschriebener Stand mit einem Termin; an ihr herumzuändern verbände die Prüfung von gestern mit dem Inhalt von heute. Statt dessen holt eine ausdrückliche Handlung ihre Werte **zurück in den Entwurf** und beendet sie. Danach ist die Reihenfolge wieder sichtbar: bearbeiten, prüfen, vormerken.
 
 ### Bilder
 
