@@ -1,13 +1,35 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-24
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo ältere Einträge feste Websitezahlen, Auswahlvarianten, Asset-Ausschlüsse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdrücklich überholt.
+
+## 2026-08-24 — Was überall wirkt, wird nicht überall bearbeitet
+
+Auslöser war eine Liste von Beobachtungen am Hosting-Dashboard: Seitenränder, die beim Wechsel auf „Bearbeiten“ um 140 px nach außen sprangen; ein Vorwahlfeld, in dem „+49“ am Dreieck klebte; Rückgängig-Pfeile über einem Formular, in dem sie nichts Benennbares zurücknehmen; ein Knopf zum Zurückholen eines verworfenen Entwurfs, der als Nebensatz im leeren Zustand stand; und die Frage, warum Textänderungen nicht sofort und nicht an allen Stellen wirken.
+
+**Diagnose:** Der Editor bot jede Stelle an, die reiner Text ist. Für einen Satz über den Betrieb ist das richtig und für die Kopfzeile falsch — was dort steht, steht auf jeder Seite, und wer den Menüpunkt „Kontakt“ antippt, ändert ihn zugleich in der Schublade, in der Fußzeile und in der Sprungmarke für Bildschirmleser, sieht aber nur die eine Stelle. Umgekehrt fehlte für die wenigen Angaben, die man beiläufig ändern können soll, jeder Weg: Die Zahl der Fahrlehrer im Team war überhaupt kein Feld. Und der Rückgängig-Stapel legte den ganzen Entwurf ab, nahm also beim Drücken auch zurück, was seither zentral geändert worden war.
+
+**Kanonisch neu**
+
+- [[60-Operations/Owner Hosting and Dashboard#Was auf keiner Website bearbeitet wird]]: Kopfzeile, Navigation und Menü, die Seitenliste der Fußzeile, `address`, Anruf- und Mailverweise, die Namen von Impressum, Datenschutz, AGB und Widerruf sowie Angaben für Suchmaschinen und Technik sind für **jede** gehostete Website gesperrt. Die Liste liegt als Code im Owner-Hosting, nicht im Vertrag: Eine neue Hosting-Subdomain soll sie nicht erst eintragen müssen. Ein Vertrag ergänzt sie über `gesperrt`, hebt aber keine Regel auf. Eine gesperrte Stelle antwortet auf einen Klick mit ihrer Begründung — eine Stelle, auf die gar nichts passiert, sieht aus wie ein Fehler und nicht wie eine Entscheidung.
+- **Kopfzeilen werden nicht bearbeitet, Impressum und Datenschutz nicht umbenannt.** Das erste, weil eine Änderung dort überall zugleich wirkt und man ihren Umfang nicht sehen kann; das zweite, weil eine Seite, die nicht so heißt, für ihre Pflicht nicht auffindbar ist. Beides ist keine Vorsicht, sondern eine Entscheidung.
+- **Das Logo wird nicht ersetzt.** Es steht in Kopfzeile, Menü, Fußzeile, als Favicon und im Vorschaubild — vier bis fünf Stellen, von denen der Editor eine kennt. Ein Fahrzeugbild ist der Gegenfall: ein bis zwei Stellen, ein Feld, ein Handgriff. Daraus die Faustregel in [[80-Templates/Owner Hosting Website Contract#Das Logo wird nicht ersetzt, Fahrzeugbilder schon]]: hochladen darf der Owner ein Bild, das ein bis zwei Stellen hat und keine Marke ist.
+- **Der Copyright-Hinweis steht immer**, auch wenn „©“ in der Vorlage fehlt oder in der Schrift nicht darstellbar ist; dann tritt „(c)“ an seine Stelle, nicht eine Lücke. Er gehört zur Rechtszeile der Fußzeile und ist mit ihr gesperrt. Eine Fußzeile ohne ihn gilt als unvollständig, nicht als schlicht.
+- [[60-Operations/Owner Hosting and Dashboard#Der Owner ändert nichts Tiefgreifendes ohne Freigabe]]: Zentrale Angaben werden dreifach abgestuft — mit Rechtswirkung (Formular plus bestätigte Prüfung), ohne Rechtswirkung (Formular, auf Wunsch auch auf der Seite), gesperrt (nur Builder-Auftrag). Die Zuordnung ist Vertragssache und steht im Code, nicht in der Oberfläche.
+- **`seite` am zentralen Feld** ([[80-Templates/Owner Hosting Website Contract#`seite` sagt, wo eine zentrale Angabe steht — und ob man sie dort anfassen darf]]): `stellen` sagt, wo der Wert auf der gebauten Seite erscheint, `form` in welcher Schreibweise, `bearbeitbar` ob er dort eingetippt werden darf, `grund` warum nicht. Damit erkennt der Editor auch Werte, die als Text nichts Besonderes sind — eine „6“ ist eine Sechs, die Zahl der Fahrlehrer im Team aber nur an ihrer Stelle.
+- **Eine Änderung an einer Stelle wirkt an allen, und man sieht es dabei.** Zentrale Werte, die im Entwurf anders sind als im Release, werden im Rahmen fortgeschrieben — samt `href` bei Anruf- und Mailverweisen und `data-count` bei Kennzahlen. Ist `seite.bearbeitbar` gesetzt, erscheint an der Stelle ein Eingabefeld; gespeichert wird trotzdem zentral. Erlaubt nur für einfache Werte ohne Rechtswirkung, und die Grenze zieht der Server.
+- **Der neue Typ `abende`** für wiederkehrende Termine mit einer gemeinsamen Zeit, und die Regel, dass eine **Anzahl nie ein eigenes Feld** ist: „drei Abende pro Woche“ ist die Länge der Liste und wird über `form: "anzahl"` daran gebunden. Ein zweites Feld dafür wäre genau die Stelle, an der Zahl und Liste auseinanderlaufen.
+- [[60-Operations/Owner Hosting and Dashboard#Zurücknehmen gehört zur Seite]]: Zurück, wieder vor und Vollbild stehen nur noch am Rahmen des Seiteneditors. Über einem Formular mit benannten Feldern nimmt ein Pfeil etwas zurück, das man nicht benennen kann — dort stellt man das Feld zurück. Ein Schritt merkt sich außerdem seinen Bereich und stellt nur ihn wieder her; vorher verlor er zwischenzeitliche zentrale Änderungen mit.
+- [[60-Operations/Owner Hosting and Dashboard#Verworfen heißt im Papierkorb, nicht weg]]: Ein verworfener Entwurf geht in einen Papierkorb — genau einer je Website — und steht unter „Veröffentlichen“ oben als eigener Kasten mit Zurückholen und Endgültig löschen. Vorher war er ein Pfeil, dessen Tooltip man lesen musste, um zu wissen, dass er die Rettung ist.
+- [[60-Operations/Owner Hosting and Dashboard#Eine weitere Hosting-Subdomain kostet keine Anpassung]]: DNS, nginx samt Zertifikat, ein Eintrag in `OWNER_HOSTING_DASHBOARD_HOSTS` — mehr nicht. Der Dienst trägt jeden dort genannten Namen bei jedem Start ein und entfernt Namen, die nicht mehr darin stehen; ein Dashboard unter einem abgeschalteten Namen wäre kein Rest, sondern eine offene Tür.
+
+**Oberfläche:** Alle Dashboard-Seiten teilen sich jetzt eine Breite (1360 px, vorher 1080 auf Textseiten und 1360 im Editor) — ein Kopf, der beim Wechsel um 140 px springt, sieht aus wie zwei Programme. Das Vorwahlfeld schrumpft nicht mehr unter seinen Inhalt. Am Bild bleibt genau ein Bedienelement: der blau eingefärbte Knopf unten rechts, frühere Fassungen daneben; die zweite Leiste darüber mit demselben Knopf ist entfallen. Die Farbe der Auswahlumrandung sagt, womit man es zu tun hat: blau ändern, warngelb zentral, grau gesperrt.
 
 ## 2026-08-23 — Eine konkrete Leitreferenz je Website statt Designsammlung
 

@@ -1,8 +1,8 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-23
-review_by: 2027-02-23
+updated: 2026-08-24
+review_by: 2027-02-24
 depends_on:
   - "[[60-Operations/Delivery and Local Start]]"
   - "[[40-Backend-Security/Authentication and Accounts]]"
@@ -143,6 +143,16 @@ Verbindlich:
 - Sitzungen sind an den Tenant gebunden. Nach einem Slotwechsel sind bestehende Dashboard-Sitzungen wertlos, ohne dass sie einzeln gelöscht werden müssten.
 - Ein Wechsel läuft immer in zwei Schritten: Vormerken zeigt nur an, was passieren würde; erst eine ausdrückliche zweite Bestätigung startet Build und Umschaltung.
 - Ein fehlgeschlagener oder parallel gestarteter Kandidat lässt den aktiven Release vollständig unverändert.
+
+### Eine weitere Hosting-Subdomain kostet keine Anpassung
+
+Eine neue Hosting-Subdomain wird eingesetzt und ist sofort nutzbar. Was dafür geschieht, steht abschließend hier:
+
+1. DNS-Eintrag auf den Server.
+2. nginx-Serverblock und Zertifikat — die beiden Schritte, die root brauchen.
+3. Der Name kommt in `OWNER_HOSTING_DASHBOARD_HOSTS` (kommagetrennt). Der Dienst trägt **bei jedem Start** jeden dort genannten Namen als Dashboard-Host des Slots ein und entfernt Namen, die nicht mehr darin stehen. Ein Dashboard, das unter einem abgeschalteten Namen erreichbar bliebe, wäre kein Rest, sondern eine offene Tür.
+
+Kein Datenbankeingriff, keine Codeänderung, keine Anpassung im Dashboard. Insbesondere braucht **die gehostete Website selbst** keine Vorbereitung für den Editor: Kopfzeile, Navigation, Anschrift, Kontaktwege und die Namen der Rechtstexte sind über die allgemeinen Sperren von der ersten Sekunde an geschützt, und Bilder sind nur austauschbar, soweit ein Vertrag sie nennt. Was eine Website darüber hinaus freigibt, steht in ihrem Vertrag und in `owner-hosting/tenant.json` — nicht in einer Dashboard-Ansicht, die je Website angepasst werden müsste.
 
 ### Passwortgeschützte Staging-Domain
 
@@ -398,6 +408,42 @@ Ein Feld wird nicht deshalb freigegeben, weil seine technische Bearbeitung einfa
 
 Ob etwas bearbeitbar ist, und **wo** es bearbeitet wird, sind zwei getrennte Entscheidungen. Die zweite beantwortet eine einzige Frage: Erscheint der Wert an mehreren Stellen der Website? Dann ist er zentral. Steht er an genau einer Stelle, gehört er auf die Seite. Ein Fahrzeugbild ist danach keine Angabe über den Betrieb, sondern eine Stelle.
 
+### Was auf keiner Website bearbeitet wird
+
+Die Tabelle oben ist eine Entscheidungshilfe je Vertrag. Darunter liegt eine Liste, die **ohne Vertrag** gilt und von keinem Vertrag aufgehoben werden kann. Sie steht als Code in `packages/core/sperren.mjs` und wird beim Öffnen des Seiteneditors auf das gebaute Dokument angewendet, bevor irgendeine Stelle als bearbeitbar angeboten wird.
+
+| Bereich | Erkannt an | Warum gesperrt |
+|---|---|---|
+| Kopfzeile | `header`, `[role=banner]` | Steht auf jeder Seite. Eine Änderung wirkt überall zugleich, sichtbar ist nur die eine Stelle. |
+| Navigation und Menü | `nav`, `[role=navigation]`, Schublade, Sprungmarke | Namen und Reihenfolge hängen an den Adressen der Seiten und stehen zusätzlich in der Fußzeile. |
+| Impressum, Datenschutz, AGB, Widerruf | Verweise, deren Adresse den Namen enthält | Eine Seite, die nicht so heißt, ist für ihre Pflicht nicht auffindbar. Umbenennen ist kein Textwunsch, sondern ein Rechtsverlust. |
+| Seitenliste der Fußzeile | `footer nav`, `footer ul` | Führt dieselben Namen wie die Navigation. |
+| Anschrift | `address` | Zentrale Angabe: Kontaktseite, Fußzeile, Impressum, strukturierte Daten. |
+| Anruf- und Mailverweise | `a[href^=tel:]`, `a[href^=mailto:]`, WhatsApp | Zentrale Angabe. An einer Stelle geändert stünde im Impressum weiter die alte Nummer, und der Anruf-Link ginge weiter auf sie. |
+| Angaben für Suchmaschinen und Technik | `[itemprop]`, `script`, `style`, `template`, `noscript` | Keine sichtbare Beschriftung. |
+
+**Das Logo wird nicht ersetzt.** Ein Bild ist im Seiteneditor nur dann austauschbar, wenn der Vertrag es als Bildfeld nennt. Das Logo steht dort ausdrücklich nicht: Es erscheint in Kopfzeile, Menü, Fußzeile, als Favicon und im Vorschaubild für soziale Netzwerke — vier bis fünf Stellen, von denen der Editor nur eine kennt. Eine davon zu tauschen hieße, es an den übrigen nicht getauscht zu haben. Ein Fahrzeugbild ist der Gegenfall: Es steht an ein bis zwei Stellen, und beide gehören zu demselben Feld. Ein Logowechsel ist ein Builder-Auftrag, keine Bearbeitung.
+
+Ein Vertrag **ergänzt** diese Liste über `gesperrt: [{ auswahl, grund }]` — für das, was an einer bestimmten Website besonders ist, etwa die Rechtszeile der Fußzeile oder die Beschriftungen von Kennzahlen. Aufheben kann er keine der allgemeinen Regeln.
+
+Eine gesperrte Stelle ist nicht stumm. Sie lässt sich anklicken und antwortet mit ihrer Begründung — dieselbe, die in der Tabelle steht. Eine Stelle, auf die gar nichts passiert, sieht aus wie ein Fehler des Editors und nicht wie eine Entscheidung; jede Sperre trägt deshalb einen Grund und keine bloße Verweigerung.
+
+### Der Owner ändert nichts Tiefgreifendes ohne Freigabe
+
+Zentrale Angaben sind nicht deshalb harmlos, weil sie an einer Stelle gepflegt werden — sie sind es gerade deswegen nicht: Sie wirken überall zugleich. Für sie gilt eine zusätzliche Abstufung, unabhängig von `owner_editable`:
+
+- **Zentral und mit Rechtswirkung** — Telefon, E-Mail, Anschrift, Bürozeiten. Bearbeitbar im Formular „Zentrale Angaben“, dort mit Kennzeichnung „auch in Rechtstexten“ und vor dem Veröffentlichen mit ausdrücklich bestätigter Prüfung. Auf der Seite gesperrt.
+- **Zentral ohne Rechtswirkung** — Teamgröße, Theorieabende, Hinweistexte. Bearbeitbar im Formular, und wenn der Vertrag es ausdrücklich erlaubt, auch unmittelbar auf der Seite.
+- **Zentral und gesperrt** — Firmenname, Inhaber, Navigation, Seitennamen, Logo. Nur über einen Builder-Auftrag. Der Owner sieht die Stelle, ihre Begründung und den Weg dorthin — nicht ein Eingabefeld.
+
+Die Zuordnung ist Vertragssache und steht im Code, nicht in der Oberfläche. Ein Feld wird nicht dadurch änderbar, dass jemand im Dashboard etwas anklickt.
+
+### Der Copyright-Hinweis steht immer
+
+Jede gehostete Website zeigt in der Fußzeile einen Copyright-Hinweis — **immer**, auch wenn das Zeichen „©“ in der Vorlage fehlt oder in der Schrift nicht vorhanden ist. Fehlt es, wird es ergänzt; ist es nicht darstellbar, tritt „(c)“ an seine Stelle, nicht eine Lücke. Der Hinweis nennt das Jahr und den Betreiber und steht neben Impressum und Datenschutz.
+
+Er ist kein Gestaltungselement und deshalb auch keine Stelle, die der Owner ändert: Er gehört zur Rechtszeile der Fußzeile und ist mit ihr gesperrt. Beim Anlegen einer Website ist er Teil der Abnahme — eine Fußzeile ohne ihn gilt als unvollständig, nicht als schlicht.
+
 ## Eine Website einrichten
 
 Das Builder-CLI aus `packages/tenant-cli/` bildet den einzigen regulären Registrierungsweg. Die folgenden Befehlsnamen definieren die Zieloberfläche; sie werden mit dem zentralen Produkt implementiert:
@@ -551,13 +597,22 @@ Verbindlich:
 - **Gestaltet wird über eine Datei, nicht über `style`-Attribute.** Eine Website mit `style-src 'self'` in ihrer eigenen Richtlinie ignoriert Inline-Stile, und zwar lautlos.
 - **Der Rahmen zeigt den aktiven Release**, nicht die Quelle und keine eigens gebaute Vorschau. Die Quelle ist ein Buildeingang, kein Dokument; eine Vorschau je Tastendruck wäre langsam und prüfte den Anker gegen ein Dokument, das gleich wieder verschwindet.
 - **Die Rahmensperre der Website wird nur in dieser Auslieferung entfernt**, nie im Release. Statt ihrer bekommt die Antwort eine eigene Richtlinie als Kopfzeile, die das Einbetten allein der eigenen Herkunft erlaubt.
-- **Umrandung, Leiste und Bildknopf liegen außerhalb des Rahmens.** Nichts, was der Editor zeichnet, kann dadurch in einem Release landen.
+- **Umrandung, Leiste und Bildknopf liegen außerhalb des Rahmens.** Nichts, was der Editor zeichnet, kann dadurch in einem Release landen. Die Farbe der Umrandung sagt, womit man es zu tun hat: blau für eine Stelle, die man hier ändert, warngelb für eine zentrale Angabe, grau für einen gesperrten Bereich. Eine Auswahl, die überall gleich aussieht, verspricht überall dasselbe.
+- **Ein Bild hat genau einen Handgriff und genau ein Bedienelement dafür.** Der Knopf „Bild ersetzen“ sitzt unten rechts im Bild, leicht blau eingefärbt, damit er sich von einem Foto abhebt; frühere Fassungen stehen als Auswahl unmittelbar links daneben und nur dann, wenn es welche gibt. Eine zweite Leiste über dem Bild mit derselben Beschriftung und demselben Knopf gab es früher und ist entfallen: Zwei Bedienelemente für dieselbe Sache sind eines zu viel, und das obere lag zudem woanders als das Bild, um das es ging.
 - **Angewendet wird nach dem Bau und vor den Prüfungen.** Nach dem Bau, weil die Quelle unangetastet bleibt und ein Legacy-Adapter davon nichts wissen muss. Vor den Prüfungen, weil das Ergebnis geprüft gehört: Ein Verweis auf ein Stylesheet, das es nicht gibt, muss dieselbe Prüfung reißen wie jeder andere tote Verweis.
 - **Eine Regel ohne Stelle bricht den Bau nicht ab, sondern wird protokolliert.** Eine Website, die wegen eines verschobenen Absatzes nicht mehr baut, ist der schlechtere Zustand. Verhindert wird der Fall früher: Beim Speichern schickt der Editor den ursprünglichen Text der Stelle mit, der Server löst den Anker gegen das ausgelieferte Dokument auf und vergleicht. Stimmt es nicht überein, wird die Regel abgelehnt — statt später lautlos einen fremden Absatz zu überschreiben.
 - **Der Server sagt, welche Stellen Text sind, nicht der Browser.** Beim Ausliefern der Seite liegt ein Index aller Stellen bei, die **im ausgelieferten Dokument** reinen Text enthalten, mit ihrem Text. Websites führen eigene Skripte aus, und einige schreiben Text nach dem Laden um; ein Editor, der den Ausgangstext aus dem fertigen Dokument nimmt, hielte den erzeugten Text für den ursprünglichen. Stellen, deren Text im fertigen Dokument abweicht, werden gar nicht erst zum Bearbeiten angeboten — eine Änderung daran würde beim nächsten Laden überschrieben.
 - **Der Entwurf trägt den ganzen Stand, nicht die Änderung.** Ohne Entwurf lädt der Editor die Regeln des aktiven Release als Ausgangspunkt und speichert immer den vollständigen Satz. Andernfalls verschwände jede früher veröffentlichte Änderung beim nächsten Bau: Gebaut wird aus der Quelle, und die kennt sie nicht. Beim Veröffentlichen wird trotzdem nur gezeigt, was sich gegenüber dem veröffentlichten Stand geändert hat. Eine leere Regelliste ist dabei eine Aussage — sie heißt „alles zurückgenommen“ — und nicht dasselbe wie „keine Angabe“.
 - **Die Adressen der Website werden für den Rahmen umgebogen.** Eine gebaute Website verweist auf ihre eigene Wurzel; im Rahmen ist die Wurzel das Dashboard. Umgeschrieben wird nur, was der Browser selbst lädt, samt `url(…)` in den ausgelieferten Stylesheets; Verweise in `<a>` bleiben unberührt, weil der Editor deren Klick selbst behandelt. Dazu gehören zwei Kopfzeilen: `X-Frame-Options: SAMEORIGIN` für diese eine Antwort und `frame-src 'self'` in der Richtlinie des Dashboards. Fehlt eines davon, bleibt der Rahmen leer — ohne Fehlermeldung.
-- **Eine zentrale Angabe wird im Editor nicht überschrieben.** Klickt jemand die Telefonnummer auf der Seite an, benennt der Editor sie als zentral und führt zu ihrem Feld. Sie dort zu ändern würde sie an dieser einen Stelle ändern und im Impressum nicht. Erkannt wird sie über **beide** Schreibweisen: die des Vertrags und die, die tatsächlich in der Quelle steht. Nur die eine zu kennen hieße, die Stelle nicht wiederzuerkennen.
+- **Eine zentrale Angabe wird im Editor nie an einer Stelle überschrieben.** Klickt jemand die Telefonnummer auf der Seite an, benennt der Editor sie als zentral, sagt warum und führt zu ihrem Feld. Sie dort zu überschreiben würde sie an dieser einen Stelle ändern und im Impressum nicht. Erkannt wird sie auf **zwei** Wegen, und beide werden gebraucht:
+    - über den **Text**, in beiden Schreibweisen — der des Vertrags und der, die tatsächlich in der Quelle steht. Nur die eine zu kennen hieße, die Stelle nicht wiederzuerkennen.
+    - über **`seite.stellen`** aus dem Vertrag, eine Liste von CSS-Auswahlen. Nötig für alles, was als Text nichts Besonderes ist: Eine „6“ ist eine Sechs, die Zahl der Fahrlehrer im Team aber nur an ihrer Stelle.
+- **Eine zentrale Angabe darf ausnahmsweise auf der Seite geändert werden — und wird trotzdem zentral gespeichert.** Sagt der Vertrag `seite.bearbeitbar: true`, erscheint an der Stelle ein Eingabefeld statt eines Verweises. Was dort eingetippt wird, geht über einen eigenen Weg (`POST /seite/zentral`) in das Overlay des Entwurfs — nicht in eine Darstellungsregel. Anschließend schreibt der Editor **alle** Stellen im Rahmen fort, an denen der Wert vorkommt. Genau das ist der Sinn der Ausnahme: Man ändert die Zahl dort, wo man sie sieht, und sieht dabei, dass sie überall mitgeht.
+    Erlaubt ist das nur für einfache Werte — Text und ganze Zahl — und nur ohne Rechtswirkung. Eine Telefonnummer besteht aus Land und Ziffern und schreibt zwei Zeiger; Bürozeiten sind eine Tabelle aus sieben Tagen. Ein Eingabefeld am Rand der Seite bekäme davon nur einen Teil zu fassen. Die Grenze wird serverseitig gezogen, nicht in der Oberfläche: Eine Anfrage für ein nicht freigegebenes Feld wird abgewiesen, auch wenn sie von Hand gestellt wird.
+- **Der Rahmen zeigt den Entwurf, nicht nur den Release.** Zentrale Werte, die im Entwurf anders sind als im aktiven Release, werden beim Öffnen im Rahmen fortgeschrieben — gleich ob sie im Formular oder auf der Seite geändert wurden. Sonst stünde im Editor bis zur nächsten Veröffentlichung der alte Wert, und zwar an jeder Stelle zugleich.
+    Fortgeschrieben wird nur, was einen einzelnen Wert hat: Anzeige, Wählform, Anzahl. Bürozeiten und Theorieabende sind Tabellen und bleiben im Rahmen in der veröffentlichten Fassung stehen; ihre Bereiche werden dafür gesperrt, damit niemand sie für den aktuellen Stand hält.
+    Geschrieben wird in das Element, das **nur** aus Text besteht. Ein Anruf-Verweis ist `<a><svg/><span>030 …</span></a>`; wer dort `textContent` setzt, hat die Nummer geschrieben und das Symbol daneben gelöscht. Gibt es kein eindeutiges Textelement, wird gar nichts geschrieben.
+    Die Skripte der Website bekommen dabei den Vortritt und werden danach überschrieben: Ein Zähler, der eine Kennzahl beim Erscheinen hochlaufen lässt, liest sein Ziel beim Laden und schreibt am Ende den alten Wert zurück. Der Editor zieht deshalb innerhalb der ersten anderthalb Sekunden mehrfach nach — und danach nicht mehr. Ein Dauerbeobachter schriebe gegen jede Animation an, die eine Website je hat.
 
 Ein Editor, der auf der Seite arbeitet, ist ausdrücklich **kein** Freibrief für freies Layout. Er verschiebt die Grenze nicht, an welchen Stellen der Owner etwas ändern darf, sondern nur den Ort, an dem er es tut.
 
@@ -571,6 +626,26 @@ Ein Entwurf ist der einzige Zustand des Dashboards, den man anlegt, ohne es zu w
 - Er lässt sich an jeder dieser Stellen **weiterbearbeiten oder verwerfen**. „Verwerfen“ betrifft den ganzen Entwurf; eine Auswahl zwischen seinen Teilen hat niemand im Kopf, wenn er darauf drückt.
 - Verworfen wird mit Rückfrage und mit Eintrag im Protokoll. Die veröffentlichte Website ist davon nicht betroffen; sie hat den Entwurf nie gesehen.
 - Ein Entwurf ohne Inhalt wird gelöscht, nicht leer gespeichert. Sonst stünde überall „Du hast einen Entwurf“, obwohl nichts darin ist.
+
+#### Verworfen heißt im Papierkorb, nicht weg
+
+Verwerfen ist die eine Handlung im Dashboard, die auf einen Klick alles beseitigt. Gerade sie darf nicht die einzige ohne Weg zurück sein — aber der Weg zurück gehört dorthin, wo man ihn sucht, wenn man erschrocken ist.
+
+Ein verworfener Entwurf geht deshalb in einen **Papierkorb**: genau einer je Website, mit Zeitpunkt, Person und Umfang. Unter „Veröffentlichen“ steht er oben auf der Seite als eigener Kasten — „Ein verworfener Entwurf liegt bereit“ — mit zwei Knöpfen: **zurückholen** oder **endgültig löschen**. Er steht dort auch dann, wenn längst wieder etwas Offenes da ist; gerade dann sucht man ihn. Zurückholen ersetzt in diesem Fall den angefangenen Entwurf, und die Rückfrage sagt das.
+
+Er verschwindet beim Zurückholen, beim endgültigen Löschen und beim Veröffentlichen. Ein Papierkorb, der einen älteren Stand über eine gerade beschlossene Fassung legen könnte, wäre eine Falle statt einer Hilfe.
+
+Früher war das Verwerfen ein Schritt im Rückgängig-Stapel — ein Pfeil, dessen Tooltip „Entwurf verworfen“ trug. Zwei Dinge waren daran falsch: Man musste den Tooltip lesen, um zu wissen, dass es die Rettung ist, und der Pfeil stand im Seiteneditor, während das Verwerfen von jeder Seite aus geht.
+
+#### Zurücknehmen gehört zur Seite
+
+**Zurück** und **wieder vor** stehen ausschließlich im Seiteneditor, zusammen mit **Vollbild**, über dem Rahmen. Über dem Formular der zentralen Angaben stehen sie nicht mehr und wirken dort auch nicht.
+
+Der Grund ist die Art der Handlung. Auf der Seite macht man Bewegungen, die man hinterher nicht benennen kann: einen Satz umgeschrieben, eine Überschrift verschoben, ein Bild getauscht. Genau dafür gibt es das Zurücknehmen. Die zentralen Angaben sind ein Formular mit benannten Feldern und sichtbaren Werten — wer dort eine Bürozeit zurückstellen will, stellt sie zurück; ein Pfeil, der stattdessen „2 zentrale Angaben“ zurücknimmt, verlangt Vertrauen in etwas, das man nicht sieht.
+
+Ein Schritt merkt sich außerdem, **worauf** er wirkt, und stellt auch nur das wieder her: die Darstellungsregeln der Seite (`layout`) oder genau ein Bildfeld (`bild:<feld>`). Vorher lag im Stapel der ganze Entwurf; wer auf der Seite einen Satz änderte und danach zentral die Telefonnummer, verlor beim Drücken die Telefonnummer gleich mit — im Stand von vorher stand sie schlicht noch nicht drin.
+
+Was **keinen** Schritt erzeugt: eine Änderung im Formular der zentralen Angaben, eine zentrale Angabe von der Seite aus, das Zurückholen einer Vormerkung und das Verwerfen des Entwurfs. Nach dem Veröffentlichen enden beide Stapel; von dort führt der Verlauf zurück.
 
 Eine **Vormerkung** wird dagegen nicht bearbeitet. Sie ist ein geprüfter, festgeschriebener Stand mit einem Termin; an ihr herumzuändern verbände die Prüfung von gestern mit dem Inhalt von heute. Statt dessen holt eine ausdrückliche Handlung ihre Werte **zurück in den Entwurf** und beendet sie. Danach ist die Reihenfolge wieder sichtbar: bearbeiten, prüfen, vormerken.
 
@@ -622,6 +697,14 @@ Maße werden **vor** der Umwandlung am Original geprüft. Scheitert umgekehrt ei
 Fehlt der Umwandler, fällt die Oberfläche auf einen Upload je Fassung zurück und erklärt das. Ein stillschweigend halbierter Funktionsumfang wäre schlimmer als ein benannter.
 
 ### Verlauf und Rückgängig
+
+Drei Wege zurück, mit verschiedener Reichweite und an verschiedenen Orten. Wer sie vermischt, bekommt einen Knopf, der mal einen Tastendruck und mal einen Arbeitstag zurücknimmt:
+
+| Weg | Reichweite | Wo |
+|---|---|---|
+| Zurück / wieder vor | ein Schritt auf der Seite oder ein Bildfeld | Seiteneditor, über dem Rahmen |
+| Papierkorb | der ganze verworfene Entwurf | Veröffentlichen, oben |
+| Rollback | eine vollständige veröffentlichte Fassung | Verlauf |
 
 - unveränderliches Audit Log für Entwurf, Veröffentlichung, Rollback, Login, Rollen- und Wartungsmodusänderung
 - Filter nach Datum, Person, Feld und Release

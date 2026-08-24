@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-24
 depends_on:
   - "[[60-Operations/Owner Hosting and Dashboard]]"
 impacts:
@@ -201,7 +201,51 @@ Preview und Veröffentlichung müssen denselben Content-Loader und dieselbe Komp
 | `risk` | `low`, `medium` oder `high` |
 | `privacy_ref` | ID im Dateninventar oder `null` |
 
-Der Typkatalog umfasst mindestens `short_text`, `long_text`, `email`, `phone`, `url`, `integer`, `decimal`, `money`, `date`, `time`, `weekly-hours`, `select`, `multi_select`, `boolean`, `image`, `image_list` und validierte strukturierte Listen. Ein unbekannter Typ ist ein Registrierungsfehler, kein generisches Textfeld.
+| `seite` | wo der Wert auf der gebauten Seite steht und ob er dort geändert werden darf; fehlend bedeutet „nirgends registriert, nicht auf der Seite änderbar“ |
+
+Der Typkatalog umfasst mindestens `short_text`, `long_text`, `email`, `phone`, `url`, `integer`, `decimal`, `money`, `date`, `time`, `weekly-hours`, `abende`, `select`, `multi_select`, `boolean`, `image`, `image_list` und validierte strukturierte Listen. Ein unbekannter Typ ist ein Registrierungsfehler, kein generisches Textfeld.
+
+### `seite` sagt, wo eine zentrale Angabe steht — und ob man sie dort anfassen darf
+
+`surface` beantwortet, in welcher Ansicht ein Feld **gepflegt** wird. `seite` beantwortet etwas anderes: wo ein zentral gepflegter Wert auf der fertigen Website **erscheint**. Der Seiteneditor braucht das für drei Dinge — die Stelle als zentral zu erkennen, sie im Rahmen auf den Stand des Entwurfs zu bringen, und in den wenigen erlaubten Fällen ein Eingabefeld an ihr anzubieten.
+
+```json
+"teamGroesse": {
+  "type": "integer",
+  "surface": "zentral",
+  "pointer": "/business/team_size",
+  "label": "Fahrlehrer im Team",
+  "min": 1,
+  "max": 99,
+  "seite": {
+    "stellen": [{ "auswahl": ".hero__facts > div:nth-child(1) > dd", "form": "anzeige" }],
+    "bearbeitbar": true
+  }
+}
+```
+
+- **`stellen[].auswahl`** ist eine CSS-Auswahl im gebauten Dokument. Sie wird gebraucht, wo der Text allein nicht trägt: Eine „6“ ist als Zeichenkette nichts Besonderes, als Zahl der Fahrlehrer im Team aber sehr wohl. Für Telefonnummern und Adressen genügt weiterhin der Textabgleich; ein Vertrag, der jede Stelle aufzählen müsste, wäre beim nächsten Absatz unvollständig.
+- **`stellen[].form`** sagt, in welcher Schreibweise der Wert dort steht: `anzeige` (lesbar), `tel` (Wählform, auch im `href`) oder `anzahl` (Länge einer Liste). **Fehlt `form`**, ist die Stelle ein Bereich, der zu dem Feld gehört, aber nicht aus einem einzelnen Wert besteht — die Bürozeitentabelle etwa. Sie wird gesperrt und nicht fortgeschrieben.
+- **`bearbeitbar`** ist ausdrücklich `false`, solange es nicht dasteht. Es auf `true` zu setzen heißt: Der Owner darf den Wert an der Stelle eintippen, an der er ihn sieht — gespeichert wird er trotzdem zentral, und alle Stellen werden zugleich fortgeschrieben. Erlaubt nur für `short_text` und `integer` und nur ohne Rechtswirkung. Eine Telefonnummer besteht aus Land und Ziffern und schreibt zwei Zeiger; ein Eingabefeld am Rand der Seite bekäme davon nur einen Teil zu fassen.
+- **`grund`** ist der Satz, den der Owner beim Anklicken liest, wenn `bearbeitbar` fehlt. Er nennt die Stellen, an denen der Wert sonst noch steht — „auch im Impressum“ ist die Auskunft, die eine Sperre erklärt. Fehlt er, setzt das Dashboard einen allgemeinen Satz ein; für Felder mit `legalImpact` ist ein eigener Pflicht.
+
+### Der Typ `abende`: wiederkehrende Termine, eine Zeit
+
+Für Termine, die an mehreren Wochentagen zur selben Zeit stattfinden — Theorieabende, Sprechstunden, Kurse. In der Inhaltsdatei steht eine Liste aus Tag, Kurzform und Zeitspanne; im Formular werden die Tage angekreuzt und die Zeit **einmal** eingetragen.
+
+```json
+"theorieAbende": {
+  "type": "abende",
+  "surface": "zentral",
+  "pointer": "/theorie/termine",
+  "label": "Abende des Theorieunterrichts",
+  "max": 7
+}
+```
+
+Nicht `weekly-hours` nehmen: Öffnungszeiten haben je Tag eine eigene Spanne und kennen „geschlossen“. Mit ihnen müsste der Owner dieselbe Uhrzeit dreimal eintippen — und beim vierten Abend wäre sie einmal anders.
+
+**Die Anzahl wird nie als eigenes Feld geführt.** Steht auf der Website „drei Abende pro Woche“, ist diese Zahl die Länge der Liste und wird über eine Stelle mit `"form": "anzahl"` daran gebunden. Ein zweites Feld dafür ist genau die Stelle, an der Zahl und Liste auseinanderlaufen.
 
 ### Der Typ phone schreibt zwei Pointer
 
@@ -241,6 +285,33 @@ Was der Owner unmittelbar auf der Seite ändert — dieser Satz, diese Ausrichtu
 
 Solche Änderungen sind **Darstellungsregeln**: Seite, Anker im Dokument, optionaler Text, aufgezählte Gestaltung. Sie stehen in einer eigenen Spalte neben dem Overlay, werden nach dem Bau auf das Release angewendet und sind in [[60-Operations/Owner Hosting and Dashboard#Der Seiteneditor]] verbindlich geregelt. Für die Vertragsvorlage folgt daraus nur eines: Ein Vertrag muss dafür **nichts** vorsehen, und es ist kein Grund, ein Feld zu erfinden.
 
+### Was nie freigegeben wird, steht nicht im Vertrag
+
+Ein Vertrag zählt auf, was der Owner ändern darf. Unabhängig davon gilt für **jede** gehostete Website eine Sperrliste, die im Owner-Hosting als Code liegt (`packages/core/sperren.mjs`) und die kein Vertrag aufheben kann:
+
+Kopfzeile, Navigation und Menü, die Seitenliste der Fußzeile, `address`, Anruf- und Mailverweise, die Namen von Impressum, Datenschutz, AGB und Widerruf sowie Angaben für Suchmaschinen und Technik.
+
+Zwei davon sind eigene Entscheidungen und keine bloße Vorsicht:
+
+- **Kopfzeilen werden nicht bearbeitet.** Was dort steht, steht auf jeder Seite. Wer den Menüpunkt „Kontakt“ antippt, ändert ihn in der Kopfzeile, im Menü, in der Fußzeile und in der Sprungmarke für Bildschirmleser — sichtbar ist nur die eine Stelle. Eine Änderung, deren Umfang man nicht sehen kann, gehört nicht in ein Feld.
+- **Impressum und Datenschutz werden nicht umbenannt.** Eine Seite, die nicht so heißt, ist für ihre Pflicht nicht auffindbar. Das ist kein Textwunsch, sondern ein Rechtsverlust.
+
+Ein Vertrag darf die Liste über `gesperrt: [{ auswahl, grund }]` **ergänzen** — für das, was an dieser Website besonders ist: die Rechtszeile der Fußzeile mit Firmenname und Inhaber, die Beschriftungen von Kennzahlen, das Logo.
+
+### Das Logo wird nicht ersetzt, Fahrzeugbilder schon
+
+Ein Bild ist im Seiteneditor nur austauschbar, wenn der Vertrag es als Bildfeld nennt. **Das Logo gehört ausdrücklich nicht dazu.** Es erscheint an vier bis fünf Stellen — Kopfzeile, Menü, Fußzeile, Favicon, Vorschaubild für soziale Netzwerke —, von denen der Editor nur eine kennt. Eines davon zu tauschen hieße, es an den übrigen nicht getauscht zu haben. Das ist gewollt und keine Lücke: Ein Logowechsel ist ein Builder-Auftrag.
+
+Ein Fahrzeugbild ist der Gegenfall. Es steht an ein bis zwei Stellen, beide gehören zu demselben Feld, und beide werden vom Buildadapter gemeinsam ersetzt. Dafür ist der Upload da.
+
+Die Faustregel steht damit fest: **Hochladen darf der Owner ein Bild, das ein bis zwei Stellen hat und keine Marke ist.** Alles, was an mehr Stellen erscheint oder die Identität der Website trägt, wird registriert, aber gesperrt — und der Vertrag nennt es unter `gesperrt`, damit ein Klick darauf die Begründung zeigt statt gar nichts.
+
+### Der Copyright-Hinweis steht immer
+
+Jede gehostete Website zeigt in der Fußzeile einen Copyright-Hinweis, **auch wenn das Zeichen „©“ in der Vorlage fehlt**. Fehlt es, wird es ergänzt; ist es in der verwendeten Schrift nicht darstellbar, tritt „(c)“ an seine Stelle, nicht eine Lücke. Der Hinweis nennt Jahr und Betreiber und steht neben Impressum und Datenschutz.
+
+Er ist kein Gestaltungselement, sondern Teil der Rechtszeile — und damit gesperrt. Beim Anlegen einer Website ist er Teil der Abnahme: Eine Fußzeile ohne ihn gilt als unvollständig, nicht als schlicht.
+
 ### Der Typ image beschreibt Dateien, keinen Dateinamen
 
 Ein Bildfeld ersetzt eine Datei an einem registrierten Pfad. Der Dateiname in der Inhaltsdatei bleibt unverändert, damit keine Verlinkung im Projekt bricht; in die Inhaltsdatei geht nur der Alternativtext:
@@ -274,6 +345,12 @@ Ein Bildfeld ersetzt eine Datei an einem registrierten Pfad. Der Dateiname in de
 - [ ] Für jeden Block ist `owner_editable` bewusst entschieden.
 - [ ] Für jedes editierbare Feld ist `surface` bewusst entschieden: zentral bei Werten an mehreren Stellen, `seite` bei Werten an genau einer.
 - [ ] Kein Feld erscheint in beiden Bearbeitungsansichten.
+- [ ] Für jedes zentrale Feld, das auf der Website sichtbar ist, sind `seite.stellen` eingetragen — mit `form`, wo es ein einzelner Wert ist, und ohne, wo es ein Bereich ist.
+- [ ] `seite.bearbeitbar: true` steht nur bei einfachen Werten ohne Rechtswirkung, und für jedes gesperrte zentrale Feld gibt es einen `grund`, der die anderen Stellen nennt.
+- [ ] Eine Anzahl, die auf der Website steht, ist an ihre Liste gebunden (`"form": "anzahl"`) und nicht als zweites Feld geführt.
+- [ ] Kopfzeile, Navigation und die Namen von Impressum und Datenschutz sind nirgends als editierbares Feld registriert.
+- [ ] Das Logo ist kein Bildfeld; es steht unter `gesperrt` mit Begründung.
+- [ ] Die Fußzeile zeigt einen Copyright-Hinweis, und er liegt in einem gesperrten Bereich.
 - [ ] Kein Rechtstext, Tracking-, Consent-, Rollen-, Navigations- oder Buildfeld ist frei editierbar.
 - [ ] Jeder editierbare Pointer existiert in den Basiswerten und liegt innerhalb seines Blocks.
 - [ ] Angaben, die in mehreren Formen in der Datei stehen, bilden ein Feld mit mehreren Pointern, nicht mehrere Felder.

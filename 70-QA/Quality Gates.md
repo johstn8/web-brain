@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-24
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -117,6 +117,10 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] auf `217.154.218.30`: Eintrag und alle Routen über `johannstein.com/dev` geprüft, kein fester Projektport und kein neues `start-local.sh`; auf anderen Rechnern Ein-Klick-Start für geforderte OS, Healthchecks und verständliche Logs
 - [ ] bei Owner-Hosting: `tenant.json` und `_hosting` bestehen [[80-Templates/Owner Hosting Website Contract]]; unbekannte oder gesperrte JSON-Pointer werden serverseitig abgewiesen
 - [ ] bei Owner-Hosting: Contract-Plan belegt Erhalt oder explizite Migration aller vorhandenen Owner-Werte; offene Entwürfe alter Vertragsversionen sind behandelt
+- [ ] bei Owner-Hosting: im Seiteneditor sind Kopfzeile, Navigation, Anschrift, Anruf- und Mailverweise, die Namen von Impressum und Datenschutz sowie das Logo nachweislich nicht bearbeitbar; ein Klick darauf zeigt die Begründung statt gar nichts [[60-Operations/Owner Hosting and Dashboard#Was auf keiner Website bearbeitet wird]]
+- [ ] bei Owner-Hosting: eine zentrale Angabe, die auf der Seite geändert wurde, steht danach an allen Stellen des Rahmens neu — samt `href` bei Kontaktwegen — und liegt im Overlay, nicht in einer Darstellungsregel
+- [ ] bei Owner-Hosting: ein Schritt zurück nach einer zwischenzeitlichen zentralen Änderung nimmt ausschließlich den Seitenschritt zurück; ein verworfener Entwurf ist unter „Veröffentlichen“ zurückholbar
+- [ ] bei Owner-Hosting: die Fußzeile zeigt einen Copyright-Hinweis (`©`, ersatzweise `(c)`) in einem gesperrten Bereich
 - [ ] bei Owner-Hosting: Hostname löst serverseitig genau einen Mandanten auf; negative Cross-Tenant-Tests für Inhalte, Assets, Builds, Releases, Nachrichten und Integrationen bestehen
 - [ ] bei Owner-Hosting: statische öffentliche Website bleibt bei Dashboard-/API-Ausfall erreichbar; Worker baut isoliert, Buildfehler verändert weder aktive Inhaltsrevision noch Release; atomarer Publish, vollständiger Rollback und 503-Wartungsmodus nach [[60-Operations/Owner Hosting and Dashboard]] geprüft
 - [ ] bei Deployment-Slots: ein Drop merkt nur vor; erst die ausdrückliche zweite Bestätigung baut und schaltet um; öffentlicher Release und Dashboard-Tenant wechseln atomar gemeinsam

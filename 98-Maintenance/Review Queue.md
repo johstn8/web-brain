@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-24
 next_review: 2026-11-01
 ---
 # Review Queue
@@ -37,6 +37,14 @@ Diese Quellen werden geprüft, wenn sie gebraucht werden, nicht nach Kalender. D
 | UI UX Pro Max und pen.dev | vor dem ersten Einsatz in einem neuen Projekt und nach jedem Update des Skills | Version/Lizenz, CLI-Verfügbarkeit, Authentifizierung, Projektpfade, Codex-Konfiguration, Skill-Workflow und offizielle Dokumentation |
 | installierte Design- und Motion-Skills | nach einem Skill-Update und immer dann, wenn ein Skill-Vorschlag einer kanonischen Regel widerspricht, siehe [[00-Start/04 Plugins and Skills#Vorrang der Brain-Regeln vor Skill-Vorschlägen]] | Version, Lizenz, lokale Einbindung, Zugriffs- und Datenverhalten |
 | Inspirationskatalog | wenn eine Referenz für ein Projekt tatsächlich herangezogen wird; [[90-References/Reference Research Workflow]] verlangt die erneute Prüfung ohnehin vor jeder Übernahme | Erreichbarkeit, neue Fassung, fortbestehende Relevanz |
+
+## Offene Wartungsschuld
+
+- **Graph nicht neu gebaut, Stand 2026-08-24.** Die Änderung „Was überall wirkt, wird nicht überall bearbeitet" ([[98-Maintenance/Change Log]]) berührt fünf Notizen; `graphify . --update` bricht mit `no LLM API key found` ab, weil in dieser Umgebung weder `ANTHROPIC_API_KEY` noch ein anderer Schlüssel gesetzt ist. Die Extraktion meldet `3 code, 5 docs geändert; 63 unverändert`, es fehlt also nur der semantische Schritt.
+
+  **Folge:** `graphify-out/` bildet den Stand vom 2026-08-23 ab. Eine Graphify-Abfrage zu Sperren, Papierkorb, `seite.stellen` oder dem Copyright-Hinweis findet die neuen Abschnitte **nicht**; bis zum Neubau ist für diese Themen die Notiz selbst zu lesen.
+
+  **Zum Schließen:** Schlüssel setzen (`ANTHROPIC_API_KEY` genügt), dann im Vaultwurzelverzeichnis `graphify . --update --obsidian`, anschließend `graph.json`, `graph.html`, `GRAPH_REPORT.md`, `manifest.json`, `cost.json` und die Community-Labels committen.
 
 ## Eingeschränkt geprüfte Referenzen
 
