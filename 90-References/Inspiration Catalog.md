@@ -1,18 +1,18 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-23
-review_by: 2027-02-23
+updated: 2026-08-27
+review_by: 2027-02-27
 ---
 
 # Inspirationskatalog
 
 > [!summary] Zweck
-> Dieses Verzeichnis bewahrt ausführliche Analysen, Benchmarks und Negativbeispiele. Der kompakte, nach Einsatzfeldern kategorisierte Auswahlbestand konkreter Live-Seiten liegt in [[90-References/Website Reference Pool]]. Für jedes Website-Ergebnis wird nach [[90-References/Reference Research Workflow]] genau eine passende Leitreferenz gewählt oder ein Eigenentwurf begründet.
+> Dieses Verzeichnis bewahrt ausführliche Analysen, Benchmarks und Negativbeispiele. Der kompakte, nach Einsatzfeldern kategorisierte Auswahlbestand konkreter Live-Seiten liegt in [[90-References/Website Reference Pool]]. Externe Leitreferenzen werden nach [[90-References/Reference Research Workflow]] dosiert: keine automatisch ausgewählte Referenz bei einer Einzelwebsite und genau eine referenzgeführte Fassung je Mehrfachauftrag bei starker Passung.
 
 ## Aktiver Pool und Sammlungsgrenze
 
-Für neue Website-Builds ist [[90-References/Website Reference Pool]] der erste Einstieg. Dort stehen ausschließlich direkt aufrufbare Originalseiten. Designsammlungen, Galerien, Award-Listen und Stilbibliotheken werden nicht als Referenz ausgewählt; aus ihnen werden konkrete Originalseiten extrahiert. Die ausführlichen Befunde dieses Katalogs bleiben für die Interpretation, Negativmuster und historische Herkunft erhalten.
+Wenn ein Mehrfachauftrag eine referenzgeführte Fassung erhalten soll, ist [[90-References/Website Reference Pool]] für genau diese Fassung der erste Einstieg. Bei einer Einzelwebsite und den übrigen Eigenentwürfen dient dieser Katalog nur als interne Muster-, Benchmark- und Negativreferenz, nicht als Vorlage. Im Pool stehen ausschließlich direkt aufrufbare Originalseiten. Designsammlungen, Galerien, Award-Listen und Stilbibliotheken werden nicht als Referenz ausgewählt; aus ihnen werden konkrete Originalseiten extrahiert. Die ausführlichen Befunde dieses Katalogs bleiben für die Interpretation, Negativmuster und historische Herkunft erhalten.
 
 ## Prüfstatus
 
@@ -310,13 +310,13 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 
 ## Auswahlregel für Projekte
 
-1. Führe für jedes Web-Produkt den [[90-References/Reference Research Workflow]] aus und beginne im [[90-References/Website Reference Pool]].
-2. Wähle je Website genau eine konkrete Live-Seite als Leitreferenz, sofern eine starke fachliche und gestalterische Passung existiert. Eine Seite darf Struktur, visuelle Sprache und Interaktion gemeinsam prägen.
-3. Verwende bei mehreren Websites im selben Auftrag paarweise verschiedene Leitreferenzen. Drei Websites erhalten drei unterschiedliche Originalseiten.
-4. Notiere Passungsbegründung, Übernahmetiefe, konkret übernommene Prinzipien, bewusste Abweichungen und tatsächlichen Einsatz im Master Spec.
+1. Führe für jedes Web-Produkt den [[90-References/Reference Research Workflow]] aus und bestimme zuerst die Auftragszahl.
+2. Bei genau einer Website entsteht ohne Nutzerreferenz ein Eigenentwurf. Der Pool muss nicht nach einer Vorlage durchsucht werden.
+3. Bei mehreren Websites wird genau eine Fassung von genau einer konkreten Live-Seite geprägt, sofern starke Passung gefunden wird. Beginne nur für diese Fassung im [[90-References/Website Reference Pool]]. Alle übrigen Fassungen bleiben Eigenentwürfe; ohne starke Passung dokumentiere die Suche und erzwinge kein zufälliges Beispiel.
+4. Notiere bei der referenzgeführten Fassung Passungsbegründung, Übernahmetiefe, konkret übernommene Prinzipien, bewusste Abweichungen und tatsächlichen Einsatz im Master Spec. Herleite Eigenentwürfe aus Projektwahrheit, Inhaltsanker, Leitbenchmark und Nutzerfragen.
 5. Prüfe die aktuelle Version einschließlich relevanter Bewegung erneut. Galerie-, Award-, Stilbibliotheks- und Sammlungsseiten sind Recherchewege, keine Leitreferenzen.
-6. Gibt es keine überzeugende Passung, dokumentiere die geprüften Kandidaten und arbeite als begründeter `Eigenentwurf` kreativ weiter.
-7. Übersetze das Referenzprinzip in die reale Marke, Inhalte, Tokens, Komponenten, Accessibility und Technik des Projekts. Kopiere keine fremden Claims, Unternehmensfakten, Logos oder Identitätsmerkmale.
+6. Gibt es keine überzeugende Passung, dokumentiere die geprüften Kandidaten und lasse alle Fassungen als `Eigenentwurf` weiterarbeiten.
+7. Übersetze das Referenzprinzip nur in die benannte Fassung und dort in reale Marke, Inhalte, Tokens, Komponenten, Accessibility und Technik. Kopiere keine fremden Claims, Unternehmensfakten, Logos oder Identitätsmerkmale.
 
 [^curriculum]: [Claude Code FULL COURSE: The Curriculum](https://claude-code-curriculum-deploy.vercel.app/)
 [^motionsites]: [MotionSites AI: Premium AI Website Prompts](https://motionsites.ai/lesson)

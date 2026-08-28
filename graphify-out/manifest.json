@@ -30,19 +30,19 @@
     "semantic_hash": "d1eef139b8f773754edd66299a96f799"
   },
   "00-Start/01 Core Rules.md": {
-    "mtime": 1787491445.2234797,
-    "ast_hash": "23850a5a24c0afa3dfb70a00fff12353",
-    "semantic_hash": "23850a5a24c0afa3dfb70a00fff12353"
+    "mtime": 1787851936.0259452,
+    "ast_hash": "85a986058bb93d1d081f8a27a036c554",
+    "semantic_hash": "85a986058bb93d1d081f8a27a036c554"
   },
   "00-Start/02 Routing Map.md": {
-    "mtime": 1787491498.111273,
-    "ast_hash": "b555da50da35913771b6a2fbd4551d18",
-    "semantic_hash": "b555da50da35913771b6a2fbd4551d18"
+    "mtime": 1787851936.0259452,
+    "ast_hash": "8909dab809d838386d666a1c29693811",
+    "semantic_hash": "8909dab809d838386d666a1c29693811"
   },
   "00-Start/03 Update Protocol.md": {
-    "mtime": 1787145053.3892078,
-    "ast_hash": "1551d5f91870da669f89239ee97e969b",
-    "semantic_hash": "1551d5f91870da669f89239ee97e969b"
+    "mtime": 1787851198.4738655,
+    "ast_hash": "b8a89ab51cb22c18d20f37a109da5798",
+    "semantic_hash": "b8a89ab51cb22c18d20f37a109da5798"
   },
   "00-Start/04 Plugins and Skills.md": {
     "mtime": 1787145631.8689492,
@@ -50,9 +50,9 @@
     "semantic_hash": "5f78ef2c669881c18221d849f3b16587"
   },
   "00-Start/05 Web Product Workflow.md": {
-    "mtime": 1787491498.2632725,
-    "ast_hash": "d6c7fdc622bd045ad392b68e2115c97f",
-    "semantic_hash": "d6c7fdc622bd045ad392b68e2115c97f"
+    "mtime": 1787851936.026945,
+    "ast_hash": "fcd9d74592acafa83fdba258aa907826",
+    "semantic_hash": "fcd9d74592acafa83fdba258aa907826"
   },
   "10-Strategy/Content and Conversion.md": {
     "mtime": 1786876621.4414067,
@@ -75,9 +75,9 @@
     "semantic_hash": "724988d6a48e7b73e70ee121611ef7cd"
   },
   "20-Design/Anti AI Slop.md": {
-    "mtime": 1787144446.7287173,
-    "ast_hash": "f3ba938be8e10f913a09882460cc5fcf",
-    "semantic_hash": "f3ba938be8e10f913a09882460cc5fcf"
+    "mtime": 1787851004.9507315,
+    "ast_hash": "b6c3980bfe24e9d08ce03e23f2e52a7f",
+    "semantic_hash": "b6c3980bfe24e9d08ce03e23f2e52a7f"
   },
   "20-Design/Color System.md": {
     "mtime": 1787144446.7267172,
@@ -85,9 +85,9 @@
     "semantic_hash": "ee67fde212a7fa06510857cc25eae796"
   },
   "20-Design/Design Direction.md": {
-    "mtime": 1787491445.6844778,
-    "ast_hash": "f24df99b1bcb124e886a4e31f62d8bc3",
-    "semantic_hash": "f24df99b1bcb124e886a4e31f62d8bc3"
+    "mtime": 1787851936.026945,
+    "ast_hash": "5c852a4f861d4ca85c4f3a57fa212808",
+    "semantic_hash": "5c852a4f861d4ca85c4f3a57fa212808"
   },
   "20-Design/Motion and Interaction.md": {
     "mtime": 1787144446.7287173,
@@ -100,9 +100,9 @@
     "semantic_hash": "4d925149d930a102089486aa3fd2b9e1"
   },
   "20-Design/Typography Layout and Spacing.md": {
-    "mtime": 1787144446.7277174,
-    "ast_hash": "63b7f8620204ae275046b082f1bc94ea",
-    "semantic_hash": "63b7f8620204ae275046b082f1bc94ea"
+    "mtime": 1787851004.9497313,
+    "ast_hash": "c9b77bcad0f46409354a48a4e2858616",
+    "semantic_hash": "c9b77bcad0f46409354a48a4e2858616"
   },
   "30-Frontend/Accessibility.md": {
     "mtime": 1786110516.5775194,
@@ -175,9 +175,9 @@
     "semantic_hash": "f4ca12035384522c87082afecce10771"
   },
   "70-QA/Quality Gates.md": {
-    "mtime": 1787491498.4002721,
-    "ast_hash": "811a78ca80a8c6d17b476b570b8615fc",
-    "semantic_hash": "811a78ca80a8c6d17b476b570b8615fc"
+    "mtime": 1787851936.026945,
+    "ast_hash": "1d2f5cfc5ff9881c4983dd7c4ee1394a",
+    "semantic_hash": "1d2f5cfc5ff9881c4983dd7c4ee1394a"
   },
   "70-QA/Test Matrix.md": {
     "mtime": 1787144712.9569635,
@@ -185,9 +185,9 @@
     "semantic_hash": "f3470c57eb5d43fd1567e76ea26391e2"
   },
   "80-Templates/AI Build Prompt.md": {
-    "mtime": 1787491498.680271,
-    "ast_hash": "6b27ebf5caa9935a746c480399105d1d",
-    "semantic_hash": "6b27ebf5caa9935a746c480399105d1d"
+    "mtime": 1787851936.026945,
+    "ast_hash": "794d555c8ad0f904fdb0f4841da4b490",
+    "semantic_hash": "794d555c8ad0f904fdb0f4841da4b490"
   },
   "80-Templates/Asset Register.md": {
     "mtime": 1786110516.5785193,
@@ -215,9 +215,9 @@
     "semantic_hash": "a068360bc4ea4fa0806816cd93a51cfd"
   },
   "80-Templates/Project Master Spec.md": {
-    "mtime": 1787491498.5422714,
-    "ast_hash": "c1d97b9a9f019822e0aa8953411be663",
-    "semantic_hash": "c1d97b9a9f019822e0aa8953411be663"
+    "mtime": 1787851936.027945,
+    "ast_hash": "d11efd43383e03954245355162469612",
+    "semantic_hash": "d11efd43383e03954245355162469612"
   },
   "80-Templates/Source and Rights Review.md": {
     "mtime": 1786110516.5795193,
@@ -230,19 +230,19 @@
     "semantic_hash": "f7c441f688494929baa15ee3d2f5735e"
   },
   "90-References/Derived Design Patterns.md": {
-    "mtime": 1787145149.8948653,
-    "ast_hash": "b06f925690d997abd134029207c11718",
-    "semantic_hash": "b06f925690d997abd134029207c11718"
+    "mtime": 1787851004.9537313,
+    "ast_hash": "e067626cd15d5c82cea8224bac4d7652",
+    "semantic_hash": "e067626cd15d5c82cea8224bac4d7652"
   },
   "90-References/Inspiration Catalog.md": {
-    "mtime": 1787491419.3225877,
-    "ast_hash": "012649d401535832961f79f6fab0e7d8",
-    "semantic_hash": "012649d401535832961f79f6fab0e7d8"
+    "mtime": 1787851936.027945,
+    "ast_hash": "d9fbf34e6b8a6e5bd54d444fda2ddfaf",
+    "semantic_hash": "d9fbf34e6b8a6e5bd54d444fda2ddfaf"
   },
   "90-References/Reference Research Workflow.md": {
-    "mtime": 1787491396.7036862,
-    "ast_hash": "f7e9f34a7e6f3a1fa3cb0686e7bcf937",
-    "semantic_hash": "f7e9f34a7e6f3a1fa3cb0686e7bcf937"
+    "mtime": 1787851936.024945,
+    "ast_hash": "2375ffeb10a20044c0447fdc498bf8f1",
+    "semantic_hash": "2375ffeb10a20044c0447fdc498bf8f1"
   },
   "90-References/Tools and Libraries.md": {
     "mtime": 1787145149.8948653,
@@ -255,24 +255,24 @@
     "semantic_hash": "749b49f1cbbaa5ffe1fbe35d37908f7b"
   },
   "98-Maintenance/Change Log.md": {
-    "mtime": 1787492068.6318712,
-    "ast_hash": "69af004b3933f1faf1970376e587c31c",
-    "semantic_hash": ""
+    "mtime": 1787869857.0509648,
+    "ast_hash": "9b5893ef6e60db66b6d547bf3a75fccf",
+    "semantic_hash": "9b5893ef6e60db66b6d547bf3a75fccf"
   },
   "98-Maintenance/Coverage and Impact Map.md": {
-    "mtime": 1787491541.8561156,
-    "ast_hash": "a2bc1b34322f175275b5e33e6ef80d34",
-    "semantic_hash": ""
+    "mtime": 1787851936.028945,
+    "ast_hash": "1bafdbc24b6f0d52369655675b13c97a",
+    "semantic_hash": "1bafdbc24b6f0d52369655675b13c97a"
   },
   "98-Maintenance/Review Queue.md": {
-    "mtime": 1787145149.8978653,
-    "ast_hash": "53995de73a4ca03e57f4d019772d101a",
-    "semantic_hash": "53995de73a4ca03e57f4d019772d101a"
+    "mtime": 1787869760.3831434,
+    "ast_hash": "d6681ff18a949374f26413781465f33b",
+    "semantic_hash": "d6681ff18a949374f26413781465f33b"
   },
   "AGENTS.md": {
-    "mtime": 1787491445.0874803,
-    "ast_hash": "c34328d6d931c77103afde56d919237d",
-    "semantic_hash": "c34328d6d931c77103afde56d919237d"
+    "mtime": 1787851936.024945,
+    "ast_hash": "97a4b3aececc1aa2ccd67da6f867a828",
+    "semantic_hash": "97a4b3aececc1aa2ccd67da6f867a828"
   },
   "CLAUDE.md": {
     "mtime": 1786110516.5805194,
@@ -300,14 +300,14 @@
     "semantic_hash": "3c08001c6ba128e455bad476c68c8a6b"
   },
   "10-Strategy/Information Density and Mobile Clarity.md": {
-    "mtime": 1786876621.4494066,
-    "ast_hash": "158f5ec109b265d5cfb671c1882e689a",
-    "semantic_hash": "158f5ec109b265d5cfb671c1882e689a"
+    "mtime": 1787851004.9527314,
+    "ast_hash": "ad956e3f83a3ae18e52b72925a784ea1",
+    "semantic_hash": "ad956e3f83a3ae18e52b72925a784ea1"
   },
   "20-Design/Imagery and AI Editing.md": {
-    "mtime": 1786110516.5755193,
-    "ast_hash": "df4b42991aa6814a4b75a419ab275555",
-    "semantic_hash": "df4b42991aa6814a4b75a419ab275555"
+    "mtime": 1787851004.9507315,
+    "ast_hash": "317627393babd0e118ab433b07713a79",
+    "semantic_hash": "317627393babd0e118ab433b07713a79"
   },
   "20-Design/Interface Benchmarks.md": {
     "mtime": 1787145730.845791,
@@ -330,14 +330,14 @@
     "semantic_hash": "5a29f6ad3119afc9e0d01656cdcf0950"
   },
   "60-Operations/Owner Hosting and Dashboard.md": {
-    "mtime": 1787490321.4947143,
-    "ast_hash": "03b7b840a370f967a1e0f9a42e72721e",
-    "semantic_hash": ""
+    "mtime": 1787571252.7397728,
+    "ast_hash": "6de184aa7001b6cf5c6f36c6e1b924c2",
+    "semantic_hash": "6de184aa7001b6cf5c6f36c6e1b924c2"
   },
   "80-Templates/Owner Hosting Website Contract.md": {
-    "mtime": 1787488319.581239,
-    "ast_hash": "e85641ba56b4c46596c139a760fd45d4",
-    "semantic_hash": ""
+    "mtime": 1787571252.713773,
+    "ast_hash": "c40698e13766d4d812bf7d0227df62b7",
+    "semantic_hash": "c40698e13766d4d812bf7d0227df62b7"
   },
   "60-Operations/Release Readiness Register.md": {
     "mtime": 1787144122.2063682,
@@ -350,8 +350,8 @@
     "semantic_hash": "53dfdb86ea615a13257e689445764ab6"
   },
   "90-References/Website Reference Pool.md": {
-    "mtime": 1787491557.7070613,
-    "ast_hash": "d2fbf1ba11ebade9f4409520c63e14de",
-    "semantic_hash": "d2fbf1ba11ebade9f4409520c63e14de"
+    "mtime": 1787851936.027945,
+    "ast_hash": "c2fe440edc4861d2248d0d91d7557c97",
+    "semantic_hash": "c2fe440edc4861d2248d0d91d7557c97"
   }
 }

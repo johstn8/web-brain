@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-24
+updated: 2026-08-27
 ---
 
 # Coverage and Impact Map
@@ -28,7 +28,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Sitemap | [[10-Strategy/Information Architecture and Sitemap|Information Architecture and Sitemap]] | Master Spec, SEO, Accessibility, Tests |
 | Inhalte und Conversion | [[10-Strategy/Content and Conversion|Content and Conversion]] | Design Direction, SEO, Legal |
 | Formulierung, Satzform und Textmuster der Copy | [[10-Strategy/Website Copy|Website Copy]] | Content and Conversion, Information Density, Anti AI Slop, Design Direction, Components and UI States, Quality Gates |
-| Stilabstand zwischen mehreren Websites und Vorgängerfassungen | [[20-Design/Design Direction#Stilabstand bei mehreren Websites|Design Direction]] | Web Product Workflow, Master Spec, Interface Benchmarks, Typography, Components, Motion, Quality Gates |
+| Stilabstand zwischen mehreren Websites und Vorgängerfassungen | [[20-Design/Design Direction#Stilabstand bei mehreren Websites|Design Direction]] | Web Product Workflow, Reference Research Workflow, Master Spec, Interface Benchmarks, Typography, Components, Motion, Quality Gates |
 | H0-Handwerksuntergrenze, Stilprofile und Leitbenchmark | [[20-Design/Interface Benchmarks|Interface Benchmarks]] | AGENTS, Core Rules, Inspiration Catalog, Design Direction, Color System, Typography, Components, Motion, Derived Design Patterns, Quality Gates |
 | Bilder, Bildbearbeitung und KI-Platzhalter | [[20-Design/Imagery and AI Editing|Imagery and AI Editing]] | Design Direction, Asset Register, Source and Rights Review, Performance, Accessibility, Quality Gates |
 | Informationsmenge, Textbudget, mobile Dosierung | [[10-Strategy/Information Density and Mobile Clarity|Information Density and Mobile Clarity]] | Content and Conversion, Information Architecture, Design Direction, Responsive Design, Quality Gates |
@@ -68,7 +68,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Betrieb | [[60-Operations/Observability and Maintenance|Observability and Maintenance]] | Security, Billing, QA |
 | Abnahme | [[70-QA/Quality Gates|Quality Gates]] | Test Matrix, Launch Checklist |
 | Referenzmuster | [[90-References/Derived Design Patterns|Derived Design Patterns]] | Catalog, Design Direction, Master Spec |
-| konkreter Website-Referenzpool und Leitreferenzwahl | [[90-References/Reference Research Workflow|Reference Research Workflow]] | Website Reference Pool, Inspiration Catalog, AGENTS, Core Rules, Workflow, Design Direction, Master Spec, AI Build Prompt, Quality Gates |
+| Referenzquote, konkreter Website-Referenzpool und Leitreferenzwahl | [[90-References/Reference Research Workflow|Reference Research Workflow]] | Website Reference Pool, Inspiration Catalog, AGENTS, Core Rules, Routing Map, Workflow, Design Direction, Master Spec, AI Build Prompt, Quality Gates |
 | Inspirationsrecherche und Evidenz | [[90-References/Reference Research Workflow|Reference Research Workflow]] | Catalog, Motion, Master Spec, Test Matrix, Quality Gates |
 | pen.dev und `.pen`-Designquellen | [[90-References/pen.dev Workflow|pen.dev Workflow]] | Tools and Libraries, Plugins and Skills, Design Direction, Delivery, Master Spec, QA |
 
@@ -136,7 +136,11 @@ Aktualisiere Produktlogik, serverseitige Berechtigungen, Webhooks, Kündigung, R
 
 ### Neue visuelle Richtung
 
-Aktualisiere Leitreferenz oder begründeten Eigenentwurf, Passung, Übernahmetiefe, konkrete Übernahmen und bewusste Abweichungen, den getrennten UI-UX-Pro-Max-Nachweis unter `design-system/<website-slug>/MASTER.md`, Design Contract der betroffenen Website, Unterscheidungs- und Vorgängermatrix, Auftakt, Kopf-/Fußbereich, Navigation, Chrome, Komponentenrepertoire, Zweitschrift, Tokens, Motion, Asset Register, Master Spec, Impeccable-Review und echte visuelle QA. Bei mehreren Websites bleiben die Leitreferenzen verschieden. Referenzen dürfen direkt eingesetzt oder kreativ adaptiert werden; tatsächlicher Einsatz gehört nach dem Build ins Asset Register beziehungsweise Rights Review. Entferne keine gebaute Website aufgrund einer Auswahl- oder Quellenentscheidung.
+Aktualisiere Referenzmodus und Referenzquote, bei der einen referenzgeführten Fassung Passung, Übernahmetiefe, konkrete Übernahmen und bewusste Abweichungen, bei Eigenentwürfen deren Herleitung, den getrennten UI-UX-Pro-Max-Nachweis unter `design-system/<website-slug>/MASTER.md`, Design Contract, Unterscheidungs- und Vorgängermatrix, Auftakt, Kopf-/Fußbereich, Navigation, Chrome, Komponentenrepertoire, Zweitschrift, Tokens, Motion, Asset Register, Master Spec, Impeccable-Review und echte visuelle QA. Bei mehreren Websites besitzt genau eine Fassung eine automatisch ausgewählte Leitreferenz, sofern eine starke Passung gefunden wird; die übrigen übernehmen sie nicht quer. Nur eine dokumentiert erfolglose Suche erlaubt die Ausnahme ohne Referenz. Referenzen dürfen in der benannten Fassung direkt eingesetzt oder kreativ adaptiert werden; tatsächlicher Einsatz gehört nach dem Build ins Asset Register beziehungsweise Rights Review. Entferne keine gebaute Website aufgrund einer Auswahl- oder Quellenentscheidung.
+
+### Neue oder geänderte Landing-Page-Komposition
+
+Aktualisiere Design Contract, konkreten Inhaltsanker, primäre Beweisform, H1- und Kopfzeilengeometrie, Bildplan beziehungsweise begründeten bildlosen Auftakt, Informationsbudget, Mobile-/Zoom-Nachweise, Screenshots und Impeccable-Review. Prüfe an 320, 375, 768, 1280 und 1440 Pixel sowie 200 Prozent Zoom, dass die vollständige H1 lesbar bleibt und innerhalb der zweiten mobilen Bildschirmhöhe die nächste Nutzerfrage oder der erste Beweis beginnt. Bei mehreren Websites darf die gemeinsame sachlich beste Grobstruktur wiederkehren; Stilabstand wird danach hergestellt.
 
 ### Neuer oder geänderter Benchmark
 

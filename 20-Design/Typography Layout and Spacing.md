@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-27
 impacts:
   - design-tokens
   - components
@@ -18,7 +18,9 @@ Typografie übersetzt Marke, Inhalt, Lesesituation und Bedienaufgabe. Neutral, e
 
 Ein Zeitbezug ist eine Art-Direction-Entscheidung, kein globaler Fehler. Historische Serifen, kantige Displayschriften, Schreibmaschine, Terminal, Ornamente, Papier, Filmkorn oder gedeckte Erdtöne sind erlaubt, wenn sie aus Marke, Produkt, Ort, Publikum oder einer bewusst gewählten kulturellen Referenz entstehen.
 
-Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertrauen beschädigt, nur einzelne dekorative Versatzstücke verwendet oder gegen die reale Marke arbeitet. Prüffragen: Welche konkrete Quelle trägt den Zeitbezug? Welche Rollen übernimmt er? Würde die Website ohne Logo noch zu diesem Betrieb gehören? Ist das Zitat auch auf Mobilgerät, in Formularen und in langen Texten funktionsfähig?
+Ein starkes Epochenzitat entsteht nicht erst durch eine einzelne Schrift. Sobald mehrere tragende Ebenen wie Displaytypografie, Grundfläche, Linien- oder Rahmenstil, Textur, Bildbehandlung und Seiten-Chrome gemeinsam eine vergangene Epoche simulieren, prägt es die gesamte Website. Diese Intensität ist eine Ausnahme: Sie braucht einen ausdrücklichen Nutzerwunsch oder einen Markenbezug, der ohne das Zitat verloren ginge. Ohne diesen Nachweis bleibt der Grundcharakter gegenwärtig und historische Typografie übernimmt eine klar begrenzte Rolle, etwa eine einzelne Auszeichnungsstufe. Stilabstand zwischen mehreren Fassungen ist kein ausreichender Grund.
+
+Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertrauen beschädigt, den Betrieb hinter der Epoche verschwinden lässt, nur dekorative Versatzstücke verwendet oder gegen die reale Marke arbeitet. Prüffragen: Welche konkrete Quelle trägt den Zeitbezug? Welche Rollen übernimmt er? Wie viele tragende Ebenen zitieren dieselbe Epoche? Würde die Website ohne Logo noch zu diesem Betrieb gehören? Ist das Zitat auch auf Mobilgerät, in Formularen und in langen Texten funktionsfähig? Wäre dieselbe Informationsstruktur in einer gegenwärtigen Ausprägung überzeugender?
 
 ## Schriftwahl
 
@@ -56,6 +58,7 @@ Ausgangswerte, belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set �
 
 - Tracking folgt Schrift, Größe, Sprache und gewünschtem Charakter. Große Grotesks profitieren oft von engerer Laufweite; andere Familien nicht. Fließtext wird auf Lesbarkeit statt auf eine globale Nullregel geprüft.
 - Große Überschriften erhalten `text-wrap: balance`, Lead und Fließtext `text-wrap: pretty`, damit keine Einzelwortzeile entsteht.
+- Der semantische Seitentitel bleibt vollständig sichtbar. `overflow: hidden`, Masken, Layer und klebende Kopfzeilen dürfen nur dekorative Duplikate beschneiden, nie die einzige lesbare H1. Für 320 und 375 Pixel, Desktop-Prüfbreiten, 200 Prozent Zoom und große Systemschrift wird die reale Zeilenanzahl dokumentiert; ein beabsichtigter Größensprung wird verkleinert, sobald Wörter kollidieren, verdeckt oder unlesbar werden.
 - Eine gewählte Mono-Familie trägt ausschließlich die im Website-Contract benannten technischen Rollen. `JetBrains Mono` ist ein belegtes Beispiel aus B5, kein Standard. Tags, Adressen, Uhrzeiten, Sektionsnummern und Metazeilen wechseln nicht automatisch in Mono.
 - Ziffern in tabellarischer Form für jede Zahl, die sich ändert oder untereinander steht; dafür genügen meist die OpenType-Ziffern der Primärschrift.
 - Eine Serifen-Zweitfamilie ist erlaubt und wird dann für genau eine Rolle eingesetzt, etwa den Auftaktsatz oder redaktionelle Lesestrecken. Bei Consile belegt für die Auftaktzeile.

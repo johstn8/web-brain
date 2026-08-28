@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-08
+updated: 2026-08-27
 depends_on:
   - "[[90-References/Inspiration Catalog]]"
 ---
@@ -96,7 +96,7 @@ Aus den Referenzen lassen sich mehrere tragfähige Anordnungen ableiten. Wähle 
 | Anordnung | Beobachtet bei | Wirkt | Geeignet für |
 |---|---|---|---|
 | Überschrift links, Inhalt rechts in eigener Spalte | Linear, Stripe | ruhig, scanbar | erklärende Abschnitte mit vielen Punkten |
-| sehr große Überschrift über die volle Breite, Inhalt darunter versetzt | Obys, INIZIO Solar | laut, plakativ | Auftakt, Kampagne, Kapitelanfang |
+| große Überschrift über die volle Breite, Inhalt darunter versetzt | Obys, INIZIO Solar | laut, plakativ | Auftakt, Kampagne, Kapitelanfang; nur wenn die vollständige H1 an allen Prüfbreiten lesbar bleibt |
 | Überschrift mit Ziffer in derselben Zeile | brutalistische Systeme | ordnend | nummerierte Prozesse ohne Kicker |
 | Überschrift als Bildunterschrift unter dem Medium | Apple, 180-Grad-Produktbetrachter | medienführend | Produkt, Ort, Arbeit als Beweis |
 | Überschrift in eine schmale Randspalte gesetzt, Text daneben | redaktionelle Seiten | textführend | lange Inhaltsseiten |
@@ -109,12 +109,15 @@ Prüfe bei jeder Anordnung: Lesereihenfolge im DOM, Fokusreihenfolge, Verhalten 
 
 Die Startseite trägt den Ausdruck, die Unterseiten tragen die Verlässlichkeit. Aus dem Katalog übertragbar:
 
-- **Kernartefakt sofort und groß**, wie beim 180-Grad-Produktbetrachter, bei Framer oder ElevenLabs. Das reale Produkt, die reale Arbeit oder der reale Ort ist der beste Effekt.
-- **Typografie als Hauptmotiv**, wie bei Obys. Große Schrift ersetzt Dekoration und braucht keine erfundenen Zahlen.
+- **Kernartefakt sofort und groß**, wie beim 180-Grad-Produktbetrachter, bei Framer oder ElevenLabs. Das reale Produkt, die reale Arbeit oder der reale Ort ist der beste Effekt. Ein Rechner, Interface, Prozess oder Dokument kann dieselbe Rolle ohne Bild erfüllen.
+- **Typografie als Hauptmotiv**, wie bei Obys. Große Schrift ersetzt Dekoration, aber nicht Inhalt oder Beweis. Die semantische H1 bleibt vollständig lesbar und wird nie für einen Anschnitt geopfert.
 - **Farbstatement statt Farbverlauf**, wie bei Figma oder INIZIO Solar. Eine kräftige Fläche mit klarer Herkunft wirkt stärker als jeder Verlauf.
 - **Bewegung, die etwas erklärt**, wie bei Rive oder Railway. Der Effekt zeigt einen Zustand, einen Weg oder einen Zusammenhang.
 - **Wärme über echte Motive**, wie bei Notion oder Figma. Freundlichkeit entsteht über Menschen, Handschrift, Illustration mit eigener Handschrift oder Farbe, nicht über Emojis.
 - **Ruhige Zonen zwischen lauten Zonen.** Ohne Pause wirkt Ausdruck wie Lärm.
+- **Nächste Frage früh sichtbar.** Spätestens in der zweiten Bildschirmhöhe beginnt der erste Beweis oder die nächste Nutzerfrage. Eine Stilgeste darf den Seitenfortschritt nicht aufhalten.
+
+Eine Landing Page wird nicht dadurch interessanter, dass sie retrohafter, größer oder leerer wird. Ausdruck entsteht aus der Beziehung zwischen Aussage, Inhaltsanker, Handlung und Übergang. Ein Bild ist dabei optional; wenn es eingesetzt wird, muss es mit Ausschnitt, Maßstab und Raster tatsächlich an dieser Beziehung teilnehmen.
 
 Negativabgleich: DataFlow und Animated SaaS im Katalog zeigen, wie eine Startseite aussieht, die nur erwartbare Blöcke aneinanderreiht. Wenn die eigene Landing Page dieser Beschreibung ähnelt, ist sie nicht fertig.
 

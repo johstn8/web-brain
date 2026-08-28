@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-24
+updated: 2026-08-27
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -17,7 +17,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Anzahl der Websites entspricht dem Auftrag; Quelle im Auftragstext ist in `PROJECT.md` zitiert. Ohne Angabe im Auftrag genau eine Website
 - [ ] Sitemap, Seitenverträge und primäre Nutzerflüsse aktuell; jede gebaute Website enthält eine verlinkte Startseite und die vollständigen erforderlichen Unterseiten. One-Page/Anker allein ist nicht zulässig.
 - [ ] echte Inhalte oder klar markierte Drafts, keine Produktions-Platzhalter
-- [ ] je Website eine konkrete Live-Leitreferenz oder begründeter `Eigenentwurf`; Passung, Shortlist, Übernahmetiefe, konkrete Übernahmen, bewusste Abweichungen sowie statische und interaktive Evidenz dokumentiert
+- [ ] Referenzmodus je Website dokumentiert; bei genau einer Website keine automatisch ausgewählte Live-Leitreferenz, bei mehreren genau eine referenzgeführte Fassung bei starker Passung und alle übrigen als Eigenentwürfe hergeleitet; eine Ausnahme ohne Referenz enthält die dokumentierte erfolglose Suche; nutzer-vorgegebene Referenzen gesondert markiert
 - [ ] die beauftragte Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/`, bei mehreren mit eigenständiger kohärenter Richtung und Unterschieden auf mindestens fünf wirksamen Achsen bei gleichem Scope; auf `217.154.218.30` über `johannstein.com/dev` ohne Projektport erreichbar, sonst auf eigenem geprüftem lokalen Port
 - [ ] bei Relaunch: alte Website, externe Fundstellen, Maps-/Unternehmensprofil, Social Profiles und Dokumente inventarisiert; Konflikte markiert
 - [ ] gefundenes Firmenlogo in jeder gebauten Website sichtbar eingesetzt und der Einsatzort dokumentiert, oder ausdrücklich festgehalten, dass kein Logo gefunden wurde
@@ -36,6 +36,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] **UI UX Pro Max wurde für diese Website ausgeführt** und unter `design-system/<website-slug>/MASTER.md` getrennt persistiert; keine projektweiten Global Rules ziehen Fassungen gleich
 - [ ] Leitbenchmark aus [[20-Design/Interface Benchmarks]] benannt; übernommene und ausdrücklich nicht übernommene Elemente dokumentiert
 - [ ] Schriftwahl, Rollen, Lizenz, Lesbarkeit und beabsichtigter Zeitbezug nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]] dokumentiert
+- [ ] ein starkes vollflächiges Retro- oder Epochenzitat liegt nur bei ausdrücklichem Nutzerwunsch oder tragender Markenevidenz vor; Stilabstand allein ist keine Begründung
 - [ ] Bildplan nach [[20-Design/Imagery and AI Editing]] erfüllt: jedes Bild mit Rolle, geprüftem Winkel, Ausschnitt, Hintergrund und Auflösung; Serienkonsistenz belegt; Bearbeitungsschritte im Asset Register
 - [ ] alle `ai-placeholder`-Bilder gelistet, mit Prompt und Ersetzungshinweis übergeben, ohne sichtbare Kennzeichnung auf der Website; keine leere oder graue Bildstelle im Layout
 - [ ] Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]] eingehalten; Prüffragen dieser Notiz durchlaufen
@@ -44,7 +45,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] bei vorhandenen Vorgängerfassungen: Übernahmeregister ausgefüllt; wiederholte Leitmotive, Fassungsnamen, Signalfarben oder primäre Beweisformen sind als bewusste sachliche Entscheidung dokumentiert
 - [ ] primäre Beweisform je Landing Page dokumentiert; wenn ein interaktives Kernmodul gewählt wurde, erfüllt es [[20-Design/Motion and Interaction#Interaktives Kernmodul]] mit realen Daten, Tastaturbedienung, Zuständen und statischer Alternative
 - [ ] UI UX Pro Max Abfrage und Auswahl dokumentiert; die Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack liegen mit Datum vor; projektspezifische Abweichungen begründet
-- [ ] Referenzrecherche nach [[90-References/Reference Research Workflow]]: keine Sammlungs-/Galerie-/Award-/Stilbibliotheksseite als Leitreferenz; bei mehreren Websites paarweise verschiedene konkrete Originalseiten; Eigenentwurf nur nach dokumentierter Prüfung plausibler Kandidaten
+- [ ] Referenzrecherche nach [[90-References/Reference Research Workflow]]: keine Sammlungs-/Galerie-/Award-/Stilbibliotheksseite als Leitreferenz; bei einer Einzelwebsite kein zufällig ausgewähltes Beispiel; bei mehreren Websites genau eine ausgewählte Originalseite für genau eine Fassung, sofern starke Passung gefunden wurde; keine Quervererbung in die Eigenentwürfe
 - [ ] pen.dev Einsatz oder Verzicht entschieden; verwendete `.pen`-Dateien versioniert und visuell geprüft
 - [ ] Anti-Slop-Review bestanden; keine unbegründeten Standardsektionen
 - [ ] **Impeccable KI-Detail-Review je gebauter Website** durchgeführt, mit Datum, Befundliste und Umsetzungsstand dokumentiert, siehe [[20-Design/Anti AI Slop#Impeccable KI-Detail-Review]]
@@ -52,7 +53,9 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Kopfzeileninventar und Navigationsmuster sind aus der Informationsarchitektur begründet; bei 320, 375, 768, 1280 und 1920 Pixel, langen realen Beschriftungen, großer Systemschrift und 200 Prozent Zoom entstehen kein zufälliger Umbruch, Beschnitt oder Überlauf
 - [ ] Logos, Wortzeichen und Controls behalten an jedem Prüfbreakpoint ihr Seitenverhältnis und werden nicht beschnitten
 - [ ] jede Farbrolle hat eine benannte Herleitung; häufige Paletten sind bewusst gewählt statt reflexhaft übernommen
-- [ ] Auftaktkomposition und Überschriftenanordnung sind bewusst gewählt und im Design Contract begründet; die Landing Page folgt [[20-Design/Design Direction#Landing Page]]
+- [ ] Auftaktkomposition und Überschriftenanordnung sind bewusst gewählt und im Design Contract begründet; Angebot, konkreter Inhaltsanker und primäre Handlung bilden eine gemeinsame Komposition, ein Bild ist optional; die Landing Page folgt [[20-Design/Design Direction#Landing Page]]
+- [ ] die vollständige semantische H1 ist bei 320, 375, 768, 1280 und 1440 Pixel, 200 Prozent Zoom und großer Systemschrift ohne Anschnitt, Maske, Überlagerung oder Kollision mit der realen klebenden Kopfzeile lesbar
+- [ ] auf Mobil beginnt spätestens innerhalb der zweiten Bildschirmhöhe sichtbar die nächste reale Nutzerfrage oder der erste konkrete Beweis; Schriftgröße, Kontaktmetadaten, Dekoration und ungenutzter Weißraum halten den Seitenfortschritt nicht auf
 - [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; Screenshots oder gleichwertige Rendernachweise liegen für die vorgeschriebenen Prüfbreiten vor
 - [ ] kann in der Abnahmeumgebung keine echte Darstellung erzeugt werden, ist dies **vor der Lieferung ein Blocker**. Textanalyse, bestandene Tokenpaare oder ein nachträglicher Hinweis ersetzen den Render nicht
 - [ ] alle UI-Zustände gestaltet

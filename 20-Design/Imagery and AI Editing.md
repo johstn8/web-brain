@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-08-27
 impacts:
   - "[[20-Design/Design Direction]]"
   - "[[30-Frontend/Performance]]"
@@ -32,6 +32,8 @@ Vor jeder Beschaffung wird die Rolle bestimmt. Die Rolle entscheidet über Anfor
 
 Ein Bild ohne Rolle wird nicht eingesetzt. Dekoratives Füllmaterial ist ein Anti-Slop-Befund nach [[20-Design/Anti AI Slop]].
 
+Nicht jeder Auftakt braucht ein Bild. Der Design Contract kann stattdessen ein Interface, einen Rechner, einen Prozess, ein Dokument, eine typografisch-inhaltliche Komposition oder eine andere konkrete Beweisform als Inhaltsanker wählen. Diese Entscheidung ist kein fehlendes Bild. Sobald jedoch eine Bildrolle vorgesehen ist, wird sie mit einem realen, überarbeiteten oder generierten Bild erfüllt; ein leerer Platzhalter bleibt verboten.
+
 ## Bestandsbilder überarbeiten
 
 Bilder aus einer alten Website, aus einem Unternehmensprofil oder vom Betreiber werden weiterverwendet, aber praktisch nie unverändert. Verbindliche Prüfliste je Bild:
@@ -60,7 +62,7 @@ KI-Bilder sind ein reguläres Mittel, nicht die Notlösung. Sie kommen in zwei F
 
 **Fall 1: Ersatz für ein fehlendes reales Bild, als Platzhalter.**
 
-Wenn für ein Leitbild kein brauchbares reales Bild gefunden oder geliefert wurde, wird ein KI-Bild erzeugt und eingesetzt, statt die Bildstelle leer zu lassen oder durch eine graue Fläche zu ersetzen.
+Wenn der Design Contract ein Leitbild vorsieht und dafür kein brauchbares reales Bild gefunden oder geliefert wurde, wird ein KI-Bild erzeugt und eingesetzt, statt die geplante Bildstelle leer zu lassen oder durch eine graue Fläche zu ersetzen.
 
 - Das Bild zeigt den Gegenstand konkret, etwa den Aufzug, die Ladenfront, die Werkstatt, das Fahrzeug, den Behandlungsraum.
 - **Kein sichtbarer Hinweis auf der Website.** Kein Wasserzeichen, kein Overlay, kein Text wie „KI-generiert“, kein Rahmen und keine reduzierte Deckkraft. Dass es KI ist, ist am Bild selbst erkennbar; das genügt.

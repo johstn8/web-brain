@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-08-27
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -17,6 +17,7 @@ impacts:
 - **Redundante Kicker über Überschriften.** Eyebrow, Label oder Kategoriezeile ist ein Befund, wenn sie nur die Überschrift wiederholt, überall mechanisch erscheint oder reine Dekoration ist. Echte Rubrik-, Status-, Datums-, Autor- oder Prozessinformation ist erlaubt. Details im nächsten Abschnitt.
 - Blau-Lila-Gradient, Neon-Glow, Sparkles oder generische Aurora-Fläche
 - unmotiviertes Stilzitat ohne Marken- oder Inhaltsbezug, gleich ob retro, futuristisch, minimalistisch, editorial oder technisch. Kanonisch in [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]]
+- ein vollflächiges Retro- oder Epochenzitat, das nur der Unterschiedlichkeit einer Fassung dient; mehrere historische Signale über Schrift, Papierfarbe, Linien, Textur und Seiten-Chrome brauchen einen ausdrücklichen Nutzerwunsch oder tragenden Markenbezug
 - unbearbeitete Bestandsbilder mit falschem Winkel, störendem Hintergrund, fremder Farbstimmung oder zu geringer Auflösung; kanonisch in [[20-Design/Imagery and AI Editing]]
 - sichtbare Kennzeichnung, Wasserzeichen oder Overlay auf einem KI-generierten Bild
 - graue Platzhalterflächen, Bildsymbole oder `lorem`-Bilder an Stellen, an denen ein Bild vorgesehen ist
@@ -29,6 +30,9 @@ impacts:
 - Kopfzeile, deren Inventar nicht aus der Informationsarchitektur folgt, oder die bei realen Texten, Zoom und schmalen Breiten zufällig überläuft, siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
 - jede Sektion als gleichförmiges abgerundetes Card-Grid
 - riesige Icons mit winzigem Text
+- eine H1, deren einzig lesbare Fassung durch Übergröße, Maske, `overflow`, Überlagerung oder eine klebende Kopfzeile angeschnitten oder verdeckt wird
+- ein Auftakt, dessen Interesse ausschließlich aus großer Schrift, historischer Anmutung oder leerem Weißraum kommen soll und der keinen konkreten Inhaltsanker besitzt
+- ein Bild, das zwar vorhanden ist, aber als unverbundener Vollbreitenblock oder beliebig schwebendes Freistellobjekt keine Rolle in Aussage, Raster oder Beweisführung übernimmt
 - frei driftende Radius-, Rahmen- oder Containerwerte außerhalb des im Website-Contract gewählten Systems; uneinheitliche Buttonhöhen ohne funktionalen Grund
 - aggressive oder überraschende Card-Lifts, Rotation oder Schattensprünge ohne Aufgabe. Interaktionsfeedback folgt der dokumentierten Grammatik aus [[30-Frontend/Components and UI States#Kartenentscheidung]] und erscheint nur auf tatsächlich klickbaren Flächen
 - Hover-Lift, Zeigerwechsel oder Schatten auf einer Fläche, die nichts auslöst
@@ -81,6 +85,8 @@ Ein mechanisch wiederholter Kicker über jeder Überschrift ist ein häufiges Er
 - Gehören Radien, Rahmen und Schatten zu einer erkennbaren, dokumentierten Grammatik?
 - Ist das Tracking für die konkrete Schrift und Textstufe lesbar kalibriert?
 - Würde diese Startseite mit ausgetauschtem Logo für jede beliebige Branche funktionieren?
+- Ist die vollständige H1 an jeder Prüfbreite, bei Zoom und nach Aktivierung der klebenden Kopfzeile ohne Anschnitt oder Überlagerung lesbar?
+- Beginnt innerhalb der ersten zwei Bildschirmhöhen eine neue Nutzerfrage oder ein konkreter Beweis, statt dass Stilgeste und Kontaktmetadaten weiterlaufen?
 
 ## Impeccable KI-Detail-Review
 

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-27
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
@@ -19,7 +19,7 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - drei Markenattribute und drei Anti-Attribute
 - Zielgefühl in einem Satz
 - primäre visuelle Metapher
-- konkrete primäre Leitreferenz aus [[90-References/Website Reference Pool]] oder begründeter `Eigenentwurf`; direkte URL, Passung, Übernahmetiefe, tragende Übernahmen und bewusste Abweichungen nach [[90-References/Reference Research Workflow]]
+- Referenzmodus nach [[90-References/Reference Research Workflow]]: `Eigenentwurf`, `nutzer-vorgegeben` oder bei mehreren Websites für genau eine Fassung `ausgewählte Leitreferenz`, sofern eine starke Passung gefunden wird; nur im letzten Fall direkte URL, Passung, Übernahmetiefe, tragende Übernahmen und bewusste Abweichungen
 - gewählter Leitbenchmark aus [[20-Design/Interface Benchmarks]] samt übernommenen und ausdrücklich nicht übernommenen Elementen
 - vollständiger Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark
 - gewählte Radiusskala, Rahmenbehandlung, Flächenlogik und Tiefe; innerhalb der Website konsistent, aber nicht aus einer anderen Fassung übernommen
@@ -27,13 +27,14 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - Primär- und gegebenenfalls Zweitschrift samt Rollen, Lesbarkeits-, Lizenz- und Zeitbezugsentscheidung nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]]
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]]
-- primäre Beweisform der Landing Page; ein interaktives Kernmodul nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]] nur wenn es inhaltlich trägt
-- Leitreferenz mit übertragbaren Prinzipien und konkreter Einsatz-/Adaptionsentscheidung; bei mehreren Websites eine jeweils andere Originalseite
+- primäre Beweisform und konkreter Inhaltsanker der Landing Page; ein interaktives Kernmodul nach [[20-Design/Motion and Interaction#Interaktives Kernmodul]] nur wenn es inhaltlich trägt
+- bei referenzgeführter Fassung: Leitreferenz mit übertragbaren Prinzipien und konkreter Einsatz-/Adaptionsentscheidung; bei Eigenentwürfen: Herleitung aus Projektwahrheit, Leitbenchmark und Inhaltsanker statt einer verdeckten Ersatzreferenz
 - Grad an Dichte, Ausdruck, Motion und Bilddominanz
 - Entscheidung für ein reales Kernartefakt, direkt übernommenes oder kreativ adaptiertes Leitmedium samt statischer Alternative
 - die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen, belegt durch die Unterscheidungsmatrix aus dem Abschnitt Stilabstand bei mehreren Websites
 - Copy-Entscheidung nach [[10-Strategy/Website Copy]]: Anrede, Tonfall und die Stellen, an denen zusammenhängende ganze Sätze stehen
 - Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften
+- Nutzwertnachweis des Auftakts an den realen Prüfbreiten: vollständige Lesbarkeit, Verhältnis von Überschrift zu Inhaltsanker, sichtbare primäre Handlung und Übergang zur nächsten Nutzerfrage innerhalb der ersten zwei Bildschirmhöhen
 - Platzierung des Firmenlogos nach dem Abschnitt Logo des Betriebs
 - Kopfzeileninventar, Anordnung, Höhe, Navigationsbeschriftung und Mobile-Übergang sowie Fußbereichsstruktur und sonstiges Seiten-Chrome nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
 - notwendige Vertrauenssignale und Route-zu-Route-Erzählung
@@ -62,6 +63,8 @@ Medien sind kein nachträglicher Schmuck. Wenn Produkt, Ort, Ergebnis oder Proze
 
 Verlangt der Auftrag mehrere Websites, müssen sie mehr sein als andere Farben oder Buttonformen. Jede wählt eine eigene Leitmetapher, Auftaktkomposition, Unterseiten-Dramaturgie, Bewegungsrolle und sichtbare Interface-Grammatik. Jede wird als vollständige Website anhand derselben Inhalte, Nutzerflüsse, Accessibility-, Performance- und SEO-Kriterien umgesetzt, nicht gegeneinander zur Auswahl gestellt.
 
+Stilabstand ist kein Selbstzweck. Wenn dieselbe grobe Landing-Page-Anatomie oder Reihenfolge der Nutzerfragen für alle Fassungen sachlich am stärksten ist, darf und soll sie wiederkehren. Eigenständigkeit entsteht dann über Komposition, Medium, Raster, Typografie, Flächenlogik, Komponenten und Motion. Keine Fassung erhält absichtlich einen schwächeren, leereren oder schwerer lesbaren Auftakt, nur damit die Matrix mehr Unterschiede zeigt.
+
 ## Abstand zu Vorgängerfassungen
 
 Existieren frühere Projekte oder Durchläufe desselben Betriebs, entsteht vor dem Design ein Übernahmeregister im `PROJECT.md`:
@@ -77,6 +80,8 @@ Leitmotiv, Fassungsname, Signalfarbe und primäre Beweisform dürfen sich wieder
 Kanonische Regel für den sichtbaren Unterschied zwischen mehreren gebauten Websites desselben Auftrags. Zwei Websites, die sich beim Überfliegen für dasselbe Angebot halten lassen, verfehlen den Auftrag, auch wenn beide für sich gut sind.
 
 Vor der ersten Zeile UI-Code entsteht in `PROJECT.md` eine Unterscheidungsmatrix mit einer Spalte je Website. Die Matrix erzwingt nicht auf jeder Zeile künstlichen Unterschied. Sie belegt, dass jede Website eine eigenständige, in sich zusammenhängende Richtung besitzt. Mindestens fünf für den Auftrag wirksame Achsen unterscheiden sich deutlich; auf anderen Achsen darf dieselbe sachlich beste Lösung wiederkehren. Bloße Synonyme oder dieselbe Struktur mit anderer Farbe bilden noch keine eigene Richtung.
+
+Die Matrix wird nach der gemeinsamen Nutzstruktur ausgefüllt. Zuerst werden die Nutzerfragen, die stärkste Beweisform und die sinnvolle Grobreihenfolge bestimmt. Erst danach werden mindestens fünf wirksame Gestaltungsachsen auseinandergeführt. Referenznähe zählt nicht als eigene Achse. Nach [[90-References/Reference Research Workflow]] ist genau eine Website des Auftrags referenzgeführt, sofern eine starke Passung gefunden wurde; die übrigen Richtungen dürfen ihre Eigenständigkeit nicht durch ein lauteres Stilzitat, eine größere Überschrift oder den Verzicht auf einen benötigten Inhaltsanker simulieren.
 
 | Vergleichsachse | Was auf Unterschied oder sachlich gleiche Lösung geprüft wird |
 |---|---|
@@ -105,21 +110,23 @@ Die Anordnung ist eine Gestaltungsentscheidung, keine Voreinstellung. Wer jede S
 
 - Redundante Kicker vermeiden. Echte Rubrik-, Status-, Datums- oder Prozessinformation darf nach [[20-Design/Anti AI Slop#Kicker und Überschriften]] als eigene Hierarchiestufe erscheinen.
 - Für jede Sektionsart eine eigene Anordnung wählen. Mögliche Achsen: Überschrift links neben dem Inhalt statt darüber, Überschrift über zwei Spalten gebrochen, Überschrift als Bildunterschrift, Überschrift im Raster versetzt, Text in einer schmalen Randspalte, Zahl und Wort in derselben Zeile, Überschrift, die den Inhalt umfließt.
-- Überschriften dürfen typografisch groß, gebrochen, überlappend, angeschnitten oder mit einem Medium verschränkt gesetzt werden, solange Lesbarkeit, Fokusreihenfolge und Reflow stimmen.
+- Überschriften dürfen typografisch groß, gebrochen, überlappend oder mit einem Medium verschränkt gesetzt werden, solange Lesbarkeit, Fokusreihenfolge und Reflow stimmen. Anschnitt ist nur an einem dekorativen Duplikat zulässig; die einzige semantische H1 bleibt vollständig sichtbar.
 - Der Auftakt wird aus Inhalt, Leitmetapher, Beweis und nächster Handlung entwickelt. Auch ein mittiger Titel mit Unterzeile und Aktionen kann richtig sein, wenn genau diese Ruhe und Symmetrie zum Auftrag passt; er darf nicht bloß ungeprüfter Default sein.
 - Rhythmus entsteht über Maßstabssprünge, Weißraumwechsel und wechselnde Flächenhelligkeit, nicht über immer neue Kartenformen.
 - Jede Abweichung von der Leserichtung braucht eine klare Ausrichtungsachse. Asymmetrie ohne Achse ist Unordnung.
 
 ## Landing Page
 
-Für die Startseite beziehungsweise Landing Page gilt ein höherer Anspruch als für Unterseiten. Sie darf und soll auffällig sein.
+Für die Startseite beziehungsweise Landing Page gilt ein höherer Anspruch als für Unterseiten. Höher bedeutet nützlicher, klarer und merkfähiger, nicht automatisch lauter.
 
-- **Extravagant erlaubt, beliebig nicht.** Große Typografie, ungewöhnliche Raster, randlose Medien, überlappende Ebenen, ausgeprägte Scroll-Choreografie und ein starkes Farbstatement sind ausdrücklich erwünscht, wenn sie aus der Leitmetapher folgen.
-- **Professionell ist zweckpassend.** Klare Hierarchie, präzise Abstände und ein kohärentes Farb- und Flächensystem. Auch warme, helle, dunkle, zurückhaltende oder expressive Richtungen sind möglich, wenn sie aus Marke, Inhalt und Zielgruppe folgen; siehe [[20-Design/Color System#Häufige Defaults bewusst entscheiden]].
-- **Freundlich statt kühl.** Ansprache, Farbe und Bildauswahl dürfen Wärme und Freude transportieren. Das entsteht über echte Menschen, echte Arbeit, Farbkontrast und Rhythmus, nicht über Emojis, Sparkles oder Ausrufezeichen.
-- **Übersichtlich bleiben.** Auch eine expressive Startseite beantwortet in den ersten zwei Bildschirmhöhen: Wer ist das, was bekomme ich, was ist der nächste Schritt. Die Informationsmenge folgt [[10-Strategy/Information Density and Mobile Clarity]] und wird am 375-Pixel-Viewport entschieden.
-- **Beweis vor Pflichtinteraktion.** Interaktion wird eingesetzt, wenn sie etwas Reales zeigt oder eine Aufgabe löst. Statisches Leitbild, Team, Case, Arbeitsprobe oder klare Erklärung sind gleichwertige Beweisformen.
-- **Ein echtes Leitbild.** Der Auftakt trägt ein großes, bearbeitetes oder erzeugtes Bild des tatsächlichen Gegenstands nach [[20-Design/Imagery and AI Editing]]. Findet sich kein reales Bild, wird ein KI-Bild eingesetzt und im Projekt als `ai-placeholder` geführt, ohne sichtbare Kennzeichnung auf der Website.
+- **Nutzwert vor Stilintensität.** Der Auftakt bildet eine zusammenhängende Antwort aus Betrieb oder Produkt, konkretem Angebot, nächster Handlung und mindestens einem belastbaren Inhaltsanker. Ein Inhaltsanker kann ein reales Fahrzeug, ein Ort, eine Arbeit, ein Produkt, ein Interface, ein Rechner, ein Ablauf, ein Case, ein Dokument oder eine andere wahre Beweisform sein. Reine Stimmung, leere Fläche und typografische Übergröße zählen nicht.
+- **Bild optional, Bildrolle verbindlich.** Ein starkes Bild kann die beste Lösung sein, ist aber keine Pflicht. Wird ein Bild eingesetzt, ist es hinsichtlich Ausschnitt, Maßstab und Blickrichtung Teil der Komposition und nicht bloß ein vollbreiter Block unter dem eigentlichen Auftakt oder ein kleines freigestelltes Objekt ohne Beziehung zur Aussage. Ist im Design Contract ein benötigtes Bild vorgesehen und fehlt real, gilt [[20-Design/Imagery and AI Editing#KI-generierte Bilder]].
+- **Lesbarkeit ist eine harte Grenze.** Die vollständige H1 bleibt bei 320 und 375 Pixel, den Desktop-Prüfbreiten, 200 Prozent Zoom, großer Systemschrift und mit der realen Kopfzeile lesbar. Kein Wort des semantischen Titels wird angeschnitten, maskiert, überlagert oder von einer klebenden Kopfzeile verdeckt. Dekorative Duplikate dürfen beschnitten werden, der einzige lesbare Titel nie.
+- **Interesse entsteht aus Beziehung.** Maßstab, Raster, Medium, Fakten und Handlung erzeugen Spannung miteinander. Große Typografie, ungewöhnliche Raster, randlose Medien, Überlagerung, Farbe oder Scroll-Choreografie sind erlaubt, wenn sie diese Beziehung stärken. Schriftgröße allein, ein vollflächiges Epochenzitat oder eine erzwungene Andersartigkeit sind kein Konzept.
+- **Die ersten zwei Bildschirmhöhen führen weiter.** In der ersten Bildschirmhöhe stehen auf Mobil Angebot, Zielgruppe beziehungsweise Ort und primäre Aktion. Spätestens innerhalb der zweiten beginnt sichtbar die nächste reale Nutzerfrage oder der erste Beweis. Zwei Bildschirmhöhen dürfen nicht nur dieselbe Überschrift, Kontaktmetadaten, Dekoration oder ungenutzten Weißraum wiederholen.
+- **Beweis vor Pflichtinteraktion.** Interaktion wird eingesetzt, wenn sie etwas Reales zeigt oder eine Aufgabe löst. Bild, Team, Case, Arbeitsprobe, Rechner, Produktansicht, Prozess und klare Erklärung sind gleichwertige Beweisformen.
+- **Stilzitat bleibt nachgeordnet.** Historische oder retrohafte Signale dürfen einen Inhalt akzentuieren. Ein starkes Epochenbild über Fläche, Typografie, Linien, Textur und Seiten-Chrome hinweg ist nur bei ausdrücklichem Nutzerwunsch oder tragendem Markenbezug zulässig und wird nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]] begründet.
+- **Professionell ist zweckpassend.** Hierarchie, präzise Abstände und ein kohärentes Farb- und Flächensystem gelten in warmen, hellen, dunklen, zurückhaltenden und expressiven Richtungen. Freundlichkeit entsteht über Ansprache, reale Motive, Farbe und Rhythmus, nicht über Emojis, Sparkles oder Ausrufezeichen.
 - Das Novelty Budget gilt weiterhin: höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt.
 - Unterseiten übernehmen dasselbe Designsystem, treten aber ruhiger auf. Der Ausdruck liegt auf der Landing Page, die Verlässlichkeit auf den Unterseiten.
 
@@ -138,4 +145,4 @@ Wird im Auftrag oder in der Bestandsaufnahme nach [[10-Strategy/Existing Website
 
 Für jede Referenz notieren: `Rolle`, `Prinzip`, `warum passend`, `konkreter Einsatz oder Adaption`, `tatsächlich verwendete Elemente`, `statischer Nachweis`, `Interaktionsnachweis`. Siehe [[90-References/Inspiration Catalog]] und [[90-References/Reference Research Workflow]].
 
-Inspiration ist bei jedem neuen Web-Produkt Pflicht, die Übernahme eines Musters nicht. Die Designentscheidung entsteht aus Projektziel, Referenzevidenz und UI UX Pro Max Empfehlungen; bei Konflikten gilt der freigegebene Master Spec.
+Die Auseinandersetzung mit Benchmarks und Mustern ist bei jedem neuen Web-Produkt Pflicht. Ihre Zahl folgt [[90-References/Reference Research Workflow]]: Einzelwebsite als Eigenentwurf, bei mehreren genau eine referenzgeführte Fassung bei starker Passung und nur bei dokumentiert erfolgloser Suche keine. Die Designentscheidung entsteht aus Projektziel, Projektwahrheit, Benchmarkevidenz und UI UX Pro Max Empfehlungen; bei Konflikten gilt der freigegebene Master Spec.

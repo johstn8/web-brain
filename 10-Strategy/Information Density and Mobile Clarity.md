@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-16
+updated: 2026-08-27
 depends_on:
   - "[[10-Strategy/Information Architecture and Sitemap]]"
 impacts:
@@ -73,6 +73,7 @@ Die Informationsmenge wird am schmalsten Viewport entschieden und erst danach au
 
 - Der Entwurf beginnt bei 375 Pixeln Breite. Was dort zu viel ist, ist überall zu viel.
 - Innerhalb der ersten Bildschirmhöhe auf Mobil stehen: worum es geht, für wen, und die primäre Aktion. Nichts sonst.
+- Innerhalb der zweiten Bildschirmhöhe beginnt sichtbar die nächste reale Nutzerfrage oder der erste konkrete Beweis. Ein großer Titel, Kontaktdaten, Dekoration oder Weißraum dürfen nicht zwei Bildschirmhöhen lang dieselbe Aussage fortsetzen.
 - Ein Bildschirm auf Mobil zeigt höchstens einen abgeschlossenen Gedanken. Wer scrollt, soll etwas Neues finden, nicht dieselbe Aussage in neuer Verpackung.
 - Vier gleichartige Karten nebeneinander am Desktop werden auf Mobil nicht zu vier gleich hohen Blöcken untereinander. Sie werden zu einer kompakten Liste, einer horizontal geführten Reihe mit sichtbarem Fortschritt oder zu einer gekürzten Auswahl mit Verweis auf die Detailseite.
 - Lange Tabellen erhalten auf Mobil eine echte alternative Darstellung, siehe [[20-Design/Responsive Design]].
@@ -95,5 +96,6 @@ Die Informationsmenge wird am schmalsten Viewport entschieden und erst danach au
 - Überschreitet ein Textblock sein Budget?
 - Wie viele Bildschirmhöhen braucht die Startseite auf 375 Pixeln, und passiert auf jeder etwas Neues?
 - Ist auf Mobil in der ersten Bildschirmhöhe die primäre Aktion sichtbar?
+- Beginnt auf Mobil innerhalb der zweiten Bildschirmhöhe eine neue Nutzerfrage oder ein konkreter Beweis?
 - Steht irgendwo eine Zahl ohne Bezugsgröße?
 - Kann ein Abschnitt ersatzlos entfallen, ohne dass eine Frage unbeantwortet bleibt? Dann entfällt er.

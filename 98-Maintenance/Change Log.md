@@ -1,13 +1,32 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-24
+updated: 2026-08-27
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo ältere Einträge feste Websitezahlen, Auswahlvarianten, Asset-Ausschlüsse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdrücklich überholt.
+
+## 2026-08-27 — Nutzwert vor Stilintensität und eine referenzgeführte Fassung
+
+Auslöser war die gemeinsame Durchsicht von fünf lokal gerenderten Startseiten desselben Fahrschulauftrags in zwei Entwicklungsständen. Die älteren, vom Nutzer bevorzugten Fassungen wurden nicht als neue Vorlage in das Brain kopiert. Extrahiert wurden nur die übertragbaren Gründe, warum ihre Startseiten im Groben überzeugender funktionieren.
+
+**Diagnose:** Die stärkeren Auftakte verbinden eine lesbare Angebotsaussage sofort mit einem konkreten Inhaltsanker, etwa dem tatsächlichen Gegenstand des Betriebs oder einem nützlichen Rechner, und führen anschließend sichtbar zur nächsten Nutzerfrage. Schwächere Fassungen erzeugten Unterschiedlichkeit dagegen über ein dominantes Epochenzitat, typografische Übergröße, einen nur formal vorhandenen Bildblock oder einen Auftakt ohne konkreten Gegenstand. Eine Desktop-H1 wurde dabei angeschnitten, eine weitere Komposition kollidierte mobil mit der klebenden Kopfzeile. Die bisherige Pflicht zu einer anderen Live-Leitreferenz je Website und die Formulierung, eine Landing Page solle auffällig oder extravagant sein, belohnten diese Verschiebung von Nutzwert zu Stilabstand.
+
+**Kanonisch neu**
+
+- [[20-Design/Design Direction#Landing Page]] setzt Angebot, konkreten Inhaltsanker, primäre Handlung, vollständige H1-Lesbarkeit und den Übergang zur nächsten Nutzerfrage vor Stilintensität. Ein Bild ist optional; wenn es eingesetzt wird, muss es in Ausschnitt, Maßstab und Raster an der Aussage teilnehmen. Schriftgröße, leerer Weißraum und Retrograd sind allein kein Konzept.
+- [[10-Strategy/Information Density and Mobile Clarity]] verlangt, dass innerhalb der zweiten mobilen Bildschirmhöhe die nächste reale Nutzerfrage oder der erste Beweis beginnt. [[20-Design/Typography Layout and Spacing]] schützt die einzige semantische H1 vor Anschnitt, Masken, Überlagerung und Kopfzeilenkollision. [[20-Design/Anti AI Slop]] führt die entsprechenden Befunde und Erkennungsfragen.
+- Ein starkes vollflächiges Epochenzitat bleibt möglich, ist aber eine Ausnahme. Es braucht einen ausdrücklichen Nutzerwunsch oder tragenden Markenbezug. Der Wunsch, mehrere Fassungen sichtbar zu unterscheiden, genügt nicht; ohne Nachweis bleibt historische Typografie ein begrenzter Akzent in einem gegenwärtigen System.
+- [[20-Design/Design Direction#Stilabstand bei mehreren Websites]] bestimmt zuerst die gemeinsame sachlich beste Nutzstruktur und erst danach mindestens fünf wirksame Gestaltungsunterschiede. Derselbe grobe Landing-Page-Aufbau darf wiederkehren. Keine Fassung wird durch einen schwächeren Auftakt, fehlenden Inhaltsanker, unlesbare Übergröße oder stärkeren Retrograd künstlich abgesetzt.
+- [[90-References/Reference Research Workflow]] ersetzt die Regel vom 23. August 2026. Eine Einzelwebsite entsteht ohne automatisch ausgewählte Live-Leitreferenz als Eigenentwurf, sofern der Nutzer keine Referenz vorgibt. Bei zwei oder mehr Websites wird genau eine Fassung von genau einer fachlich stark passenden Originalseite geprägt; alle übrigen Fassungen sind Eigenentwürfe und übernehmen die Referenz nicht quer. Nur wenn trotz dokumentierter Suche keine starke Passung existiert, bleiben ausnahmsweise alle Fassungen Eigenentwürfe.
+- Die neue Referenzquote und die Landing-Page-Nutzwertprüfung wurden durch AGENTS, Core Rules, Routing Map, Web Product Workflow, Website Reference Pool, Inspiration Catalog, Derived Design Patterns, Project Master Spec, AI Build Prompt, Quality Gates, Update Protocol und Coverage and Impact Map propagiert.
+
+**Prüfbasis:** Alle fünf lokalen Startseiten wurden in echter Chromium-Darstellung bei 1440 und 375 Pixel aufgenommen und visuell verglichen. Geprüft wurden Auftakt, H1, Kopfzeile, Bild- oder Modulrolle, erste zwei Bildschirmhöhen und der Übergang in die Folgesektionen. Die archivierten Projekte selbst wurden nicht verändert.
+
+**Graphify neu gebaut und Shrink-Schutz geprüft.** Die erste inkrementelle Semantikextraktion lieferte für 22 neu zu lesende Notizen 379 Knoten und 155 Kanten, während ihre bisherigen Dateianteile 566 Knoten umfassten. Ursache war kein entsprechender Inhaltsabbau, sondern die zu grobe Zusammenfassung weitgehend unveränderter Langabschnitte im Website Reference Pool, Inspiration Catalog und Change Log. Die Versöhnung erhielt deshalb die weiterhin belegten Katalog-, Quellen- und Historienknoten, entfernte 39 überholte Konzeptknoten der alten Regeln `primäre Leitreferenz je Website`, `verschiedene Referenz je Website` und `Eigenentwurf nur als Fallback` und ergänzte die neuen Referenzquoten-, Nutzwert-, H1-, Bildrollen- und Mobilfortschrittsbeziehungen. Der aktuelle Graph umfasst **1114 Knoten, 1872 Kanten, 13 Hyperkanten und 81 Gemeinschaften**, gegenüber 1031/1686/5/69. Der einzige anschließende Rückgang um einen Knoten und eine Kante entfernt den geschlossenen Eintrag `Offene Wartungsschuld` aus der Review Queue; ein ungeprüfter Shrink wurde nicht erzwungen. Der neue Graph bildet den vollständigen Notizenstand ab.
 
 ## 2026-08-24 — Was überall wirkt, wird nicht überall bearbeitet
 

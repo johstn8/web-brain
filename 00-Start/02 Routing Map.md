@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-27
 ---
 
 # Routing Map
@@ -13,15 +13,15 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Neue Website beauftragt | [[00-Start/05 Web Product Workflow]], [[60-Operations/Delivery and Local Start]], [[60-Operations/Owner Hosting and Dashboard]], [[10-Strategy/Discovery and Scope]], [[20-Design/Motion and Interaction]], [[30-Frontend/SEO and Discoverability]] | Projektordner, owner-bearbeitbare Inhaltsblöcke mit stabilen Pointern, vollständige Websites mit Unterseiten und umgebungsgerechtem Zugriff, PROJECT.md und Pflichtartefakte |
 | Bestehende Website komplett neu bauen | [[10-Strategy/Existing Website Rebuild]], [[50-Legal/Assets Copyright and Licenses]], [[50-Legal/Privacy and Consent]] | Quelleninventar, Content-Recovery, verifizierte Profile/Maps-Links, SOURCE-RIGHTS-REVIEW.md ohne Build-Sperre oder Asset-Ersatz |
 | Navigation oder neue Seite | [[10-Strategy/Information Architecture and Sitemap]], [[30-Frontend/SEO and Discoverability]] | Sitemap und Navigation synchron |
-| Inspirationsrecherche | [[90-References/Reference Research Workflow]], [[90-References/Website Reference Pool]], [[90-References/Inspiration Catalog]] | eine konkrete Leitreferenz je Website oder begründeter Eigenentwurf, Entscheidungsmatrix und statischer/interaktiver Nachweis |
+| Inspirationsrecherche | [[90-References/Reference Research Workflow]], [[90-References/Website Reference Pool]], [[90-References/Inspiration Catalog]] | Referenzmodus nach Auftragszahl: Einzelwebsite als Eigenentwurf, bei mehreren genau eine referenzgeführte Fassung, sofern starke Passung gefunden wird; Entscheidungsmatrix und gegebenenfalls statischer/interaktiver Nachweis |
 | Visuelles Konzept | alle Notizen unter `20-Design`, [[00-Start/04 Plugins and Skills]], [[90-References/pen.dev Workflow]] | Design Tokens, Direction, Leitbenchmark, UI UX Pro Max Nachweis und pen.dev-Entscheidung |
-| Landing Page gestalten | [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]] | Auftaktkomposition, Beweisform, passende Interaktions-/Motionrolle, Überschriftenanordnung, Logo-Platzierung, Negativreferenzen |
+| Landing Page gestalten | [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]], [[10-Strategy/Information Density and Mobile Clarity]] | Auftaktkomposition mit Angebot, konkretem Inhaltsanker und Handlung; lesbarer Display-Nachweis, Übergang zur nächsten Nutzerfrage, passende Bild-/Interaktionsrolle, Logo-Platzierung, Negativreferenzen |
 | Dashboard, Datenansicht oder Verwaltungsoberfläche | [[20-Design/Interface Benchmarks]], [[30-Frontend/Components and UI States]], [[20-Design/Color System]]; bei Owner-Betrieb zusätzlich [[60-Operations/Owner Hosting and Dashboard]] | Benchmark B1/B4 geprüft, Kennzahlen mit Bezugsgröße, Leerzustände, Rollen- und Veröffentlichungsmodell |
 | Bilder beschaffen oder überarbeiten | [[20-Design/Imagery and AI Editing]], [[80-Templates/Asset Register]] | Bildinventar mit Rolle, Bearbeitungsschritten und `ai-placeholder`-Liste |
 | Texte und Informationsmenge festlegen | [[10-Strategy/Information Density and Mobile Clarity]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Website Copy]] | Sektions- und Textbudget je Route, Copy-Prüffragen durchlaufen |
 | Copy schreiben oder überarbeiten | [[10-Strategy/Website Copy]], [[20-Design/Anti AI Slop]] | Text ohne Meta-Sätze, Statementzeilen und unbegründete Dreierfiguren, mit ganzen Sätzen an den tragenden Stellen |
-| Mehrere Websites im selben Auftrag | [[20-Design/Design Direction#Stilabstand bei mehreren Websites]], [[20-Design/Design Direction#Abstand zu Vorgängerfassungen]], [[00-Start/05 Web Product Workflow#Anzahl der Websites]], [[90-References/Reference Research Workflow]] | vor UI-Code ausgefüllte Unterscheidungsmatrix; je Website eine andere Leitreferenz, mindestens fünf wirksame Unterschiede, Vorgängerübernahme dokumentiert |
-| Schriftwahl | [[20-Design/Typography Layout and Spacing]], [[20-Design/Interface Benchmarks]] | Type Ramp und Nachweis, dass kein Retro-Verstoß vorliegt |
+| Mehrere Websites im selben Auftrag | [[20-Design/Design Direction#Stilabstand bei mehreren Websites]], [[20-Design/Design Direction#Abstand zu Vorgängerfassungen]], [[00-Start/05 Web Product Workflow#Anzahl der Websites]], [[90-References/Reference Research Workflow]] | vor UI-Code ausgefüllte Unterscheidungsmatrix; genau eine referenzgeführte Fassung bei starker Passung, mindestens fünf wirksame Unterschiede ohne Verschlechterung der gemeinsamen Nutzstruktur, Vorgängerübernahme dokumentiert |
+| Schriftwahl | [[20-Design/Typography Layout and Spacing]], [[20-Design/Interface Benchmarks]] | Type Ramp, Rollen und Nachweis der Zeitbezugsintensität; starkes Epochenzitat nur bei Nutzerwunsch oder tragendem Markenbezug |
 | Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States]], [[10-Strategy/Information Architecture and Sitemap]] | begründetes Inventar und Muster, Überlauf-/Reflow-Nachweis an realen Beschriftungen |
 | Website fertig, vor Abnahme | [[20-Design/Anti AI Slop]], [[00-Start/04 Plugins and Skills]], [[70-QA/Quality Gates]] | Impeccable KI-Detail-Review je Website mit Befundliste |
 | Einzelne Bewegung bauen oder prüfen | [[20-Design/Motion and Interaction]], [[00-Start/04 Plugins and Skills#Animate]], [[00-Start/04 Plugins and Skills#Review Animations]] | Bewegung mit Zweck, Kurve, Dauer und Reduced-Motion-Fallback, vor der Abnahme durch `review-animations` geprüft |

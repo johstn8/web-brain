@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-27
 impacts:
   - "[[80-Templates/Project Master Spec]]"
   - "[[70-QA/Quality Gates]]"
@@ -19,21 +19,21 @@ impacts:
 ## Design
 
 - Ein visuelles Leitmotiv statt Effekt-Sammlung.
-- Pro Website eine fachlich passende konkrete Live-Seite als Leitreferenz suchen; bei mehreren Websites verschiedene Referenzen verwenden. Eine starke Referenz darf Struktur, visuelle Sprache und Motion prägen, ohne die reale Marke oder Inhalte zu ersetzen. Sammlungen sind nur Entdeckungsquellen; fehlt eine starke Passung, wird ein Eigenentwurf begründet. Siehe [[90-References/Reference Research Workflow]].
+- Bei einer einzelnen Website keine Live-Seite automatisch als Leitreferenz wählen. Bei mehreren Websites genau eine fachlich passende konkrete Live-Seite für genau eine Fassung prägend verwenden; die übrigen Fassungen sind Eigenentwürfe. Eine vom Nutzer ausdrücklich vorgegebene Referenz hat Vorrang. Sammlungen sind nur Entdeckungsquellen; nur eine dokumentiert fehlende starke Passung erlaubt ausnahmsweise ausschließlich Eigenentwürfe. Siehe [[90-References/Reference Research Workflow]].
 - Definiertes Farb-, Typografie-, Spacing-, Grid-, Radius-, Schatten- und Motion-System.
 - Farbrollen und Bildsprache aus Marke, Produkt, Ort, Referenzen oder realem Material ableiten. Bilder, Designs und Animationen dürfen für den kreativen Build direkt eingesetzt oder adaptiert werden; ihr tatsächlicher Einsatz wird danach dokumentiert.
 - Farbwelten werden aus Marke, Material, Inhalt und realem Kontext hergeleitet. Eine häufig verwendete Palette ist kein Verbot, aber ein unbegründeter Generator-Default ist ein Befund. Siehe [[20-Design/Color System#Häufige Defaults bewusst entscheiden]].
 - Redundante oder rein dekorative Kicker über Überschriften vermeiden. Echte Rubrik-, Status-, Datums- oder Prozessinformation darf eine eigene Hierarchiestufe erhalten. Siehe [[20-Design/Anti AI Slop#Kicker und Überschriften]].
 - Kopfzeileninventar und Navigationsmuster aus Informationsarchitektur, Nutzungshäufigkeit, Wortlängen und Art Direction ableiten. Es gibt keine globale Sollzahl. Siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]].
 - Ein gefundenes Firmenlogo wird in jeder gebauten Website sichtbar verwendet. Siehe [[20-Design/Design Direction#Logo des Betriebs]].
-- Die Landing Page darf extravagant sein und bleibt dabei modern, übersichtlich und professionell. Siehe [[20-Design/Design Direction#Landing Page]].
+- Die Landing Page wird zuerst auf Nutzwert gebaut und darf danach ausdrucksstark werden. Angebot, konkreter Inhaltsanker und nächste Handlung müssen zusammen lesbar sein; ein Bild ist keine Pflicht und Schriftgröße allein kein Konzept. Siehe [[20-Design/Design Direction#Landing Page]].
 - **Bei jedem Website-Build wird der UI UX Pro Max Skill verwendet, ausnahmslos.** Siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]].
 - Der Leitbenchmark stammt aus [[20-Design/Interface Benchmarks]] und wird im Design Contract benannt.
 - **Die H0-Handwerksuntergrenze gilt bei jedem Build.** Zustände, Fokus, Kontextkontrast, klare Hierarchie und ein konsistentes System innerhalb der Website sind verbindlich. Radius, Rahmenbehandlung, Schatten, Karten, Kopfzeile, Zweitschrift, Flächen- und Bewegungslogik werden je Website entschieden. B5 ist ein wählbares Stilprofil. Siehe [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]].
 - Der Tokenvertrag ist vor der ersten Komponente vollständig gesetzt, einschließlich `border-hover` und `accent-subtle`. Siehe [[20-Design/Color System#Tokenvertrag]].
 - Radius-, Rahmen- und Tiefensystem werden je Website begründet und innerhalb dieser Website konsistent angewandt. Siehe [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung]].
 - Bewegung folgt einem je Website gesetzten Zeit- und Kurvensatz. B5-Werte sind kalibrierte Beispiele, keine globalen Defaults. Siehe [[20-Design/Motion and Interaction#Kalibrierte Bewegungsbeispiele]].
-- Typografische Zeitbezüge sind erlaubt, wenn Marke und Inhalt sie tragen. Lesbarkeit, Rollenklarheit und konsequente Umsetzung entscheiden, nicht eine globale Verbotsliste. Siehe [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]].
+- Typografische Zeitbezüge sind erlaubt, wenn Marke und Inhalt sie tragen. Ein starkes vollflächiges Epochenzitat braucht einen ausdrücklichen Nutzerwunsch oder tragende Markenevidenz; sonst bleibt es Akzent in einem gegenwärtigen System. Lesbarkeit und Rollenklarheit entscheiden. Siehe [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]].
 - Bilder werden vor dem Einsatz auf Winkel, Ausschnitt, Hintergrund, Farbe und Auflösung geprüft und bei Bedarf mit KI überarbeitet oder freigestellt. Fehlt ein reales Bild, wird ein KI-Bild eingesetzt und nur im Projekt als `ai-placeholder` geführt, nie sichtbar auf der Website gekennzeichnet. Siehe [[20-Design/Imagery and AI Editing]].
 - Informationen werden logisch gestaffelt und knapp gehalten. Textbudgets und die Dosierung am 375-Pixel-Viewport stehen in [[10-Strategy/Information Density and Mobile Clarity]].
 - Interaktive Kernmodule werden eingesetzt, wenn Nutzer damit etwas Reales verstehen, prüfen, wählen oder erleben können. Ein starkes Leitbild, redaktioneller Aufbau oder direkter Beweis kann die bessere Lösung sein. Siehe [[20-Design/Motion and Interaction#Interaktives Kernmodul]].

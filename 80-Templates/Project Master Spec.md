@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-23
+updated: 2026-08-27
 ---
 
 # Project Master Spec
@@ -55,14 +55,16 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Primärschrift; Zweitschrift oder bewusster Verzicht; genaue Rollen, Lizenz, Lesbarkeit, beabsichtigter Zeitbezug und Herleitung nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]]:
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, Serienkonsistenz, Liste der `ai-placeholder`-Bilder mit Prompt und Ersetzungshinweis:
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]], einschließlich Sektionsliste mit je einer Nutzerfrage:
-- Primäre Beweisform je Landing Page; bei Interaktion zusätzlich Modul, Datenquelle, Bedienung, Zustände und Fallback:
-- Auftaktkomposition und Anordnung der Überschriften je Sektionsart:
+- Primäre Beweisform und konkreter Inhaltsanker je Landing Page; bei Interaktion zusätzlich Modul, Datenquelle, Bedienung, Zustände und Fallback:
+- Auftaktkomposition und Anordnung der Überschriften je Sektionsart; Nachweis, dass H1, Inhaltsanker und primäre Handlung an den Prüfbreiten ohne Anschnitt, Überlagerung oder Kopfzeilenkollision lesbar sind:
 - Kopfzeileninventar und -anordnung, Navigationsbeschriftung, Fußbereichsstruktur und sonstiges Seiten-Chrome:
-- Landing-Page-Haltung: was ist extravagant, was bleibt ruhig, wo liegt die Grenze:
+- Landing-Page-Haltung: wodurch entsteht Nutzwert und Interesse; was ist ausdrucksstark, was bleibt ruhig; wann beginnt innerhalb der ersten zwei Bildschirmhöhen die nächste Nutzerfrage oder der erste Beweis:
 - Firmenlogo: gefunden ja/nein, Quelle, sichtbarer Einsatzort je Website, Bearbeitungsschritte:
-- Referenz-Shortlist aus [[90-References/Website Reference Pool]]: mindestens drei plausible konkrete Live-Seiten, sofern vorhanden; je direkte URL, Passung und Entscheidung:
-- Primäre Leitreferenz oder `Eigenentwurf`: direkte URL, fachliche und gestalterische Passung, Übernahmetiefe `punktuell | teilweise | prägend` mit optionaler Prozentangabe, statischer/interaktiver Nachweis, übernommene Grundstruktur/Design-/Motionprinzipien, bewusste Abweichungen und tatsächlicher Einsatz:
-- Bei mehreren Websites: Nachweis, dass jede Design-Contract-Leitreferenz eine andere Originalseite ist:
+- Referenzmodus nach [[90-References/Reference Research Workflow]]: `Eigenentwurf | nutzer-vorgegeben | ausgewählte Leitreferenz`:
+- Bei `Eigenentwurf`: Herleitung aus Projektwahrheit, Inhaltsanker, Leitbenchmark und Nutzerfragen; Bestätigung, dass keine externe Seite verdeckt als Vorlage dient:
+- Nur bei `ausgewählte Leitreferenz`: Referenz-Shortlist aus [[90-References/Website Reference Pool]] mit mindestens drei plausiblen konkreten Live-Seiten, sofern vorhanden; je direkte URL, Passung und Entscheidung:
+- Nur bei `nutzer-vorgegeben` oder `ausgewählte Leitreferenz`: direkte URL, fachliche und gestalterische Passung, Übernahmetiefe `punktuell | teilweise | prägend` mit optionaler Prozentangabe, statischer/interaktiver Nachweis, übernommene Grundstruktur/Design-/Motionprinzipien, bewusste Abweichungen und tatsächlicher Einsatz:
+- Bei mehreren Websites: Nachweis, dass genau eine Fassung den Modus `ausgewählte Leitreferenz` besitzt, sofern starke Passung gefunden wurde, und die übrigen Eigenentwürfe die Referenz nicht quer übernehmen; andernfalls dokumentierte erfolglose Suche:
 - Optionale Negativreferenzen und daraus abgeleitete Verbote:
 - UI UX Pro Max: Query, Datum, **website-spezifisches** Ergebnisartefakt, Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack, gewählte Regeln und Abweichungen:
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
@@ -108,7 +110,7 @@ Genau so viele Zeilen wie im Auftrag verlangte Websites. Bei einer Website liegt
 
 ### Unterscheidungsmatrix
 
-Pflicht bei mehr als einer Website und **vor der ersten Zeile UI-Code** auszufüllen. Für jede weitere Website eine Spalte ergänzen. Mindestens fünf für den Auftrag wirksame Achsen unterscheiden sich deutlich; dieselbe sachlich beste Lösung darf auf anderen Achsen wiederkehren. Siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
+Pflicht bei mehr als einer Website und **vor der ersten Zeile UI-Code** auszufüllen. Für jede weitere Website eine Spalte ergänzen. Zuerst gemeinsame Nutzerfragen, stärkste Beweisformen und sachlich beste Grobstruktur festhalten; erst danach mindestens fünf wirksame Gestaltungsachsen unterscheiden. Dieselbe sachlich beste Lösung darf wiederkehren. Keine Fassung wird durch einen schwächeren Auftakt, fehlenden Inhaltsanker, unlesbare Typografie oder ein lautereres Epochenzitat künstlich abgesetzt. Siehe [[20-Design/Design Direction#Stilabstand bei mehreren Websites]].
 
 | Pflichtachse | Website 01 | Website 02 | weitere Website(s) | paarweiser Nachweis |
 |---|---|---|---|---|

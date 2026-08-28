@@ -1,8 +1,8 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-23
-review_by: 2027-02-23
+updated: 2026-08-27
+review_by: 2027-02-27
 depends_on:
   - "[[90-References/Reference Research Workflow]]"
   - "[[90-References/Inspiration Catalog]]"
@@ -16,7 +16,7 @@ impacts:
 
 ## Zweck und Grenze
 
-Dies ist der **aktive Auswahlpool für Leitreferenzen**. Jeder Eintrag führt unmittelbar zu einer konkreten Website. Galerie-, Award-, Stilbibliotheks- und Sammelseiten sind keine auswählbaren Leitreferenzen; sie dienten nur der Entdeckung und sind deshalb ausschließlich als Herkunftsnachweise in den Fußnoten erhalten.[^refero][^curated][^lapa][^awwwards][^cssda]
+Dies ist der **aktive Auswahlpool für die eine externe Leitreferenz eines Mehrfachauftrags**. Bei einer einzelnen Website wird er nicht pflichtweise nach einer Vorlage durchsucht; sie entsteht nach [[90-References/Reference Research Workflow]] als Eigenentwurf, sofern der Nutzer keine Referenz vorgibt. Jeder Eintrag führt unmittelbar zu einer konkreten Website. Galerie-, Award-, Stilbibliotheks- und Sammelseiten sind keine auswählbaren Leitreferenzen; sie dienten nur der Entdeckung und sind deshalb ausschließlich als Herkunftsnachweise in den Fußnoten erhalten.[^refero][^curated][^lapa][^awwwards][^cssda]
 
 Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Vor der Wahl wird die aktuelle Live-Fassung im Browser geprüft. Negative, generierte oder nicht direkt aufrufbare Beispiele verbleiben im [[90-References/Inspiration Catalog]], gehören aber nicht in diesen Pool.
 
@@ -178,7 +178,7 @@ Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Vor der Wahl wird die
 
 ## Auswahl in einem Satz
 
-Suche zuerst nach fachlicher und emotionaler Passung, wähle dann **eine** konkrete Leitreferenz je Website und übersetze nur die tragenden Prinzipien in die reale Marke, Inhalte, Zugänglichkeit und Technik des Projekts. Der verbindliche Ablauf steht in [[90-References/Reference Research Workflow]].
+Bei zwei oder mehr gebauten Websites suche für genau eine referenzgeführte Fassung zuerst nach fachlicher und emotionaler Passung. Wähle genau **eine** konkrete Leitreferenz im gesamten Auftrag und übersetze nur die tragenden Prinzipien in diese Fassung. Nur wenn trotz dokumentierter Suche keine starke Passung existiert, entfällt diese Referenz. Einzelwebsites und alle übrigen Fassungen sind Eigenentwürfe. Der verbindliche Ablauf steht in [[90-References/Reference Research Workflow]].
 
 [^refero]: [Refero Styles](https://styles.refero.design/) wurde am 23. August 2026 als Entdeckungsquelle für konkrete Live-Seiten ausgewertet; die Stilkarten verweisen auf die jeweiligen Originalseiten.
 [^curated]: [Curated](https://curated.design/) wurde am 23. August 2026 als Entdeckungsquelle ausgewertet; ausgewählte Originalseiten wurden über die jeweiligen Einzelseiten und Live-Links bestätigt.
