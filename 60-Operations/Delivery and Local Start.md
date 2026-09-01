@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-17
+updated: 2026-08-31
 impacts:
   - dependencies
   - environments
@@ -101,6 +101,23 @@ Die geschützte Developer-Plattform zeigt genau drei visuell getrennte Übersich
 1. **Archiv:** alle entdeckten statischen Fassungen aus `/srv/Web-Design/Old-Projects`; unveränderlicher Bereich ohne Statusverschiebung.
 2. **Aktuelle Projekte:** alle entdeckten Websites aus `/srv/Web-Design/projekte`, standardmäßig hier eingeordnet.
 3. **Zur Veröffentlichung vorgesehen:** nicht archivierte Fassungen, deren Status der Nutzer ausdrücklich hierhin verschoben hat.
+
+### Leserecht auf den Entdeckungswurzeln
+
+Die Entdeckung liest die drei Wurzelordner mit `readdir`. Der Dienst braucht
+darauf **Leserecht**, nicht nur das Durchgangsrecht. Steht in der ACL von
+`/srv/Web-Design/projekte` für `web-johannstein` oder für den Nutzer des
+Owner-Hostings nur `--x`, bleibt der Bereich „Aktuelle Projekte" leer, und zwar
+für jedes Projekt zugleich. Der Fehler sieht aus wie ein einzelnes fehlendes
+Projekt und ist keines.
+
+```bash
+setfacl -m g:web-johannstein:r-x -m u:owner-hosting:r-x /srv/Web-Design/projekte
+```
+
+Der Ordner gehört `admin`; dafür ist kein root nötig. Das Leserecht auf der
+Wurzel öffnet keine Projekte: Ein Projekt mit engeren eigenen Rechten bleibt
+unsichtbar, weil `resolveRoot` nicht hineinkommt.
 
 Der Veröffentlichungsstatus ist Metadatenstatus, kein Datei-Move. Er wird atomar unter `/srv/Web-Design/projekte/johannstein.com/.runtime/previews/` persistiert. Drag and Drop zwischen den beiden veränderlichen Bereichen besitzt eine sichtbare, gleichwertige Tastatur- und Buttonbedienung; Statusmeldungen werden assistiven Technologien angekündigt.
 

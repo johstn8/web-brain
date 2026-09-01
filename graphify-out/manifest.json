@@ -5,19 +5,19 @@
     "semantic_hash": "87b5d70041a76e5f2671ebcaacbd3f4a"
   },
   ".obsidian/appearance.json": {
-    "mtime": 1787147651.0,
-    "ast_hash": "",
-    "semantic_hash": ""
+    "mtime": 1786110516.5675194,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": "99914b932bd37a50b983c5e7c90ae93b"
   },
   ".obsidian/core-plugins.json": {
-    "mtime": 1787147651.0,
-    "ast_hash": "",
-    "semantic_hash": ""
+    "mtime": 1786110516.5675194,
+    "ast_hash": "7c877bea49eaeabb100563bd157b9051",
+    "semantic_hash": "7c877bea49eaeabb100563bd157b9051"
   },
   ".obsidian/graph.json": {
-    "mtime": 1787147651.0,
-    "ast_hash": "",
-    "semantic_hash": ""
+    "mtime": 1786110516.5675194,
+    "ast_hash": "abec44a80a8cd8a2cea4c35ec827b32a",
+    "semantic_hash": "abec44a80a8cd8a2cea4c35ec827b32a"
   },
   ".research/screenshots/README.md": {
     "mtime": 1786110516.5675194,
@@ -160,9 +160,9 @@
     "semantic_hash": "c4fe3f541d4cb7d6f7f0ccbe3a631c80"
   },
   "60-Operations/Delivery and Local Start.md": {
-    "mtime": 1786986557.9987116,
-    "ast_hash": "9f060e5f0220bc0d93752b4e96e1ff06",
-    "semantic_hash": "9f060e5f0220bc0d93752b4e96e1ff06"
+    "mtime": 1788275777.9823415,
+    "ast_hash": "1903f1346edc4d70725747be2894b5b9",
+    "semantic_hash": "1903f1346edc4d70725747be2894b5b9"
   },
   "60-Operations/Dependencies and Environments.md": {
     "mtime": 1786110516.5785193,
@@ -255,9 +255,9 @@
     "semantic_hash": "749b49f1cbbaa5ffe1fbe35d37908f7b"
   },
   "98-Maintenance/Change Log.md": {
-    "mtime": 1787869857.0509648,
-    "ast_hash": "9b5893ef6e60db66b6d547bf3a75fccf",
-    "semantic_hash": "9b5893ef6e60db66b6d547bf3a75fccf"
+    "mtime": 1788275777.9843416,
+    "ast_hash": "71a2f7c5534ab7bbcd393cca2c0d7801",
+    "semantic_hash": "71a2f7c5534ab7bbcd393cca2c0d7801"
   },
   "98-Maintenance/Coverage and Impact Map.md": {
     "mtime": 1787851936.028945,

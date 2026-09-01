@@ -1,13 +1,24 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-27
+updated: 2026-08-31
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo ältere Einträge feste Websitezahlen, Auswahlvarianten, Asset-Ausschlüsse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdrücklich überholt.
+
+## 2026-08-31 — Leserecht auf den Entdeckungswurzeln der Developer-Plattform
+
+- [[60-Operations/Delivery and Local Start]] hält jetzt fest, dass die Entdeckung `readdir` auf den drei Wurzelordnern ausführt und der ausliefernde Dienst dort Leserecht braucht. Mit `--x` allein bleibt der Bereich „Aktuelle Projekte" für alle Projekte zugleich leer, und der Fehler sieht wie ein einzelnes fehlendes Projekt aus.
+- Gefunden beim Bau der Website für die Fahrschule Kladow unter `../projekte/fahrschule-kladow/`. Die ACL auf `/srv/Web-Design/projekte` gab `web-johannstein` und `owner-hosting` nur das Durchgangsrecht.
+- Der nötige `setfacl`-Aufruf steht in der Notiz. Er ist eine Entscheidung des Nutzers und wurde nicht selbst gesetzt.
+
+### Geprüfte Auswirkungen
+
+Betroffen ist allein der Betriebsabschnitt zur Developer-Plattform. Regeln zu Design, Copy, Recht, Sicherheit und Owner-Hosting bleiben unverändert. Das in [[60-Operations/Owner Hosting and Dashboard]] beschriebene Verhalten registrierter Buildprofile war bereits kanonisch und ist im Owner-Hosting jetzt umgesetzt; die Notiz brauchte dafür keine Änderung.
+
 
 ## 2026-08-27 — Nutzwert vor Stilintensität und eine referenzgeführte Fassung
 
