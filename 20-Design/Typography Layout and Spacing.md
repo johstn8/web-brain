@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 impacts:
   - design-tokens
   - components
@@ -63,6 +63,21 @@ Ausgangswerte, belegt in [[90-References/Inspiration Catalog#Sieben-Seiten-Set �
 - Ziffern in tabellarischer Form für jede Zahl, die sich ändert oder untereinander steht; dafür genügen meist die OpenType-Ziffern der Primärschrift.
 - Eine Serifen-Zweitfamilie ist erlaubt und wird dann für genau eine Rolle eingesetzt, etwa den Auftaktsatz oder redaktionelle Lesestrecken. Bei Consile belegt für die Auftaktzeile.
 
+## Typografischer Feinschliff
+
+Diese Punkte entscheiden sichtbar über den Unterschied zwischen einem sauberen Entwurf und einer fertigen Seite. Sie werden am realen Render geprüft, nicht in der Entwurfsdatei.
+
+- **Umbruch der Überschriften.** `text-wrap: balance` für Display- und Überschriftenstufen, `text-wrap: pretty` für Lead und Fließtext. Kein Einzelwort in der letzten Zeile einer Überschrift, kein Schusterjunge am Absatzende. Fest zusammengehörige Paare wie Zahl und Einheit, Vorname und Nachname oder Straße und Hausnummer erhalten ein geschütztes Leerzeichen.
+- **Optischer Randausgleich.** Große Überschriften, Anführungszeichen und Buchstaben mit schrägen oder offenen Flanken sitzen mathematisch bündig, wirken aber eingerückt. Sie werden auf die wahrgenommene Kante ausgerichtet. Hängende Interpunktion ist bei großen Zitaten und Auftaktzeilen die saubere Lösung; sie gilt in der Fachliteratur als Merkmal sorgfältigen Satzes.[^hanging]
+- **Ziffern.** Tabellarische Ziffern für alles, was untereinander steht oder sich ändert. Proportionale Ziffern im Fließtext. Mediävalziffern nur, wenn die Familie sie führt und der Text sie trägt.
+- **Zahlen- und Zeichensatz.** Echte Gedankenstriche, echte Anführungszeichen der Zielsprache, echtes Multiplikationszeichen bei Maßangaben, geschütztes Leerzeichen vor Einheiten und Prozentzeichen nach den Regeln der Zielsprache.
+- **Zeilenlänge und Zeilenhöhe.** Fließtext 45 bis 75 Zeichen, Zeilenhöhe 1,5 bis 1,7. Unter 1,4 wirkt der Absatz gedrängt, über 1,7 zerfällt er.
+- **Größenabstand.** Benachbarte Stufen der Type Ramp unterscheiden sich um mindestens den Faktor 1,25. Stufen, die sich um wenige Pixel unterscheiden, erzeugen Unschärfe statt Hierarchie.
+- **Mindestgrößen.** Fließtext nicht unter 16 Pixel, funktionale Beschriftungen und Tabellenzellen nicht unter 11 Pixel.
+- **Tracking.** Negatives Tracking nur auf großen Stufen und dort für die konkrete Familie kalibriert. Weites Tracking bleibt kurzen Versalbeschriftungen vorbehalten und erscheint nie im Fließtext.
+- **Kein Blocksatz ohne Silbentrennung.** Sonst entstehen weiße Flüsse im Satzspiegel.
+- **Kein Layoutsprung beim Schriftwechsel.** Der Fallback-Stack ist metrisch angenähert, die Schriftanzeige ist so gesetzt, dass kein Text unsichtbar bleibt.
+
 ## Spacing
 
 - 4-Punkt-Basis; semantische Tokens wie `space-1` bis `space-12`.
@@ -105,3 +120,5 @@ Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente le
 Fontshare bietet freie Fonts, doch Lizenzbedingungen je Familie und Downloadzeitpunkt im Asset Register prüfen.[^fontshare]
 
 [^fontshare]: [Fontshare](https://fontshare.com/)
+
+[^hanging]: [CreativePro: Hung Punctuation und Optical Margin Alignment](https://creativepro.com/typetalk-hung-punctuation-optical-margin-alignment/). Geprüft am 3. September 2026.

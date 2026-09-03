@@ -107,6 +107,9 @@ Prüfe bei jeder Anordnung: Lesereihenfolge im DOM, Fokusreihenfolge, Verhalten 
 
 ## Landing Page mit Ausdruck
 
+> [!note] Rang
+> Kanonisch für Aufbau, Auftaktrollen, Auftakt-Repertoire und die Abgrenzung zur generierten Anmutung ist [[20-Design/Landing Page Craft]]. Dieser Abschnitt liefert die Belege und die daraus abgeleiteten Muster.
+
 Die Startseite trägt den Ausdruck, die Unterseiten tragen die Verlässlichkeit. Aus dem Katalog übertragbar:
 
 - **Kernartefakt sofort und groß**, wie beim 180-Grad-Produktbetrachter, bei Framer oder ElevenLabs. Das reale Produkt, die reale Arbeit oder der reale Ort ist der beste Effekt. Ein Rechner, Interface, Prozess oder Dokument kann dieselbe Rolle ohne Bild erfüllen.
@@ -133,6 +136,8 @@ Negativabgleich: DataFlow und Animated SaaS im Katalog zeigen, wie eine Startsei
 Bewegung darf weder Inhalte verzögern noch die Reihenfolge für Tastatur oder Screenreader verändern. Die reduzierte Variante bewahrt Information und Bedienbarkeit, nicht zwingend jeden visuellen Effekt.
 
 ## Muster gegen generische KI-Ästhetik
+
+Der vollständige Katalog erkennbarer Einzelsignaturen steht in [[20-Design/Anti AI Slop#Slop-Signaturen]]. Die folgende Tabelle bleibt die referenzbelegte Kurzfassung.
 
 | Generisches Muster | Bessere Entscheidung |
 |---|---|

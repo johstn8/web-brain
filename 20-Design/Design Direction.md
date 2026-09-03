@@ -1,10 +1,11 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
+  - "[[20-Design/Landing Page Craft]]"
   - "[[20-Design/Color System]]"
   - "[[20-Design/Typography Layout and Spacing]]"
   - "[[20-Design/Motion and Interaction]]"
@@ -33,7 +34,7 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - Entscheidung für ein reales Kernartefakt, direkt übernommenes oder kreativ adaptiertes Leitmedium samt statischer Alternative
 - die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen, belegt durch die Unterscheidungsmatrix aus dem Abschnitt Stilabstand bei mehreren Websites
 - Copy-Entscheidung nach [[10-Strategy/Website Copy]]: Anrede, Tonfall und die Stellen, an denen zusammenhängende ganze Sätze stehen
-- Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften
+- Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften sowie [[20-Design/Landing Page Craft#Auftakt-Repertoire]]
 - Nutzwertnachweis des Auftakts an den realen Prüfbreiten: vollständige Lesbarkeit, Verhältnis von Überschrift zu Inhaltsanker, sichtbare primäre Handlung und Übergang zur nächsten Nutzerfrage innerhalb der ersten zwei Bildschirmhöhen
 - Platzierung des Firmenlogos nach dem Abschnitt Logo des Betriebs
 - Kopfzeileninventar, Anordnung, Höhe, Navigationsbeschriftung und Mobile-Übergang sowie Fußbereichsstruktur und sonstiges Seiten-Chrome nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]
@@ -56,6 +57,7 @@ Entscheide bewusst je Achse: ruhig oder expressiv, editorial oder produktnah, wa
 - Weißraum als Hierarchie, nicht als leerer Luxus.
 - Mikrodetails aus Tokens ableiten.
 - Novelty Budget: maximal ein bis zwei auffällige Mechaniken pro View; Rest ruhig.
+- Genau ein wiedererkennbares Signaturdetail je Website, aus Marke, Material, Ort oder Inhalt hergeleitet und in ruhigerer Form auf den Unterseiten wiederholt. Siehe [[20-Design/Landing Page Craft#Das Signaturdetail]].
 
 ## Medien und mehrere Websites
 
@@ -112,21 +114,26 @@ Die Anordnung ist eine Gestaltungsentscheidung, keine Voreinstellung. Wer jede S
 - Für jede Sektionsart eine eigene Anordnung wählen. Mögliche Achsen: Überschrift links neben dem Inhalt statt darüber, Überschrift über zwei Spalten gebrochen, Überschrift als Bildunterschrift, Überschrift im Raster versetzt, Text in einer schmalen Randspalte, Zahl und Wort in derselben Zeile, Überschrift, die den Inhalt umfließt.
 - Überschriften dürfen typografisch groß, gebrochen, überlappend oder mit einem Medium verschränkt gesetzt werden, solange Lesbarkeit, Fokusreihenfolge und Reflow stimmen. Anschnitt ist nur an einem dekorativen Duplikat zulässig; die einzige semantische H1 bleibt vollständig sichtbar.
 - Der Auftakt wird aus Inhalt, Leitmetapher, Beweis und nächster Handlung entwickelt. Auch ein mittiger Titel mit Unterzeile und Aktionen kann richtig sein, wenn genau diese Ruhe und Symmetrie zum Auftrag passt; er darf nicht bloß ungeprüfter Default sein.
+- Zwei bis drei verschiedene Überschriftenanordnungen pro Seite. Eine einzige wiederholte Anordnung wirkt generiert, mehr als drei wirken zufällig. Die Auswahl steht im Design Contract, die Anordnungen selbst in [[90-References/Derived Design Patterns#Anordnung von Überschriften]].
+- Der Abstand über einer Überschrift ist größer als der Abstand darunter, und benachbarte Typostufen unterscheiden sich um mindestens den Faktor 1,25. Zu nah beieinanderliegende Stufen erzeugen keine Hierarchie.
 - Rhythmus entsteht über Maßstabssprünge, Weißraumwechsel und wechselnde Flächenhelligkeit, nicht über immer neue Kartenformen.
+- Derselbe Inhalt darf bewusst eine andere Grundform erhalten: Zeile, Tabelle, Liste, Fließtext, Bildunterschrift oder Randspalte statt Karte. Die Form folgt der Informationsart, nicht der Bequemlichkeit.
 - Jede Abweichung von der Leserichtung braucht eine klare Ausrichtungsachse. Asymmetrie ohne Achse ist Unordnung.
 
 ## Landing Page
 
 Für die Startseite beziehungsweise Landing Page gilt ein höherer Anspruch als für Unterseiten. Höher bedeutet nützlicher, klarer und merkfähiger, nicht automatisch lauter.
 
-- **Nutzwert vor Stilintensität.** Der Auftakt bildet eine zusammenhängende Antwort aus Betrieb oder Produkt, konkretem Angebot, nächster Handlung und mindestens einem belastbaren Inhaltsanker. Ein Inhaltsanker kann ein reales Fahrzeug, ein Ort, eine Arbeit, ein Produkt, ein Interface, ein Rechner, ein Ablauf, ein Case, ein Dokument oder eine andere wahre Beweisform sein. Reine Stimmung, leere Fläche und typografische Übergröße zählen nicht.
-- **Bild optional, Bildrolle verbindlich.** Ein starkes Bild kann die beste Lösung sein, ist aber keine Pflicht. Wird ein Bild eingesetzt, ist es hinsichtlich Ausschnitt, Maßstab und Blickrichtung Teil der Komposition und nicht bloß ein vollbreiter Block unter dem eigentlichen Auftakt oder ein kleines freigestelltes Objekt ohne Beziehung zur Aussage. Ist im Design Contract ein benötigtes Bild vorgesehen und fehlt real, gilt [[20-Design/Imagery and AI Editing#KI-generierte Bilder]].
-- **Lesbarkeit ist eine harte Grenze.** Die vollständige H1 bleibt bei 320 und 375 Pixel, den Desktop-Prüfbreiten, 200 Prozent Zoom, großer Systemschrift und mit der realen Kopfzeile lesbar. Kein Wort des semantischen Titels wird angeschnitten, maskiert, überlagert oder von einer klebenden Kopfzeile verdeckt. Dekorative Duplikate dürfen beschnitten werden, der einzige lesbare Titel nie.
-- **Interesse entsteht aus Beziehung.** Maßstab, Raster, Medium, Fakten und Handlung erzeugen Spannung miteinander. Große Typografie, ungewöhnliche Raster, randlose Medien, Überlagerung, Farbe oder Scroll-Choreografie sind erlaubt, wenn sie diese Beziehung stärken. Schriftgröße allein, ein vollflächiges Epochenzitat oder eine erzwungene Andersartigkeit sind kein Konzept.
-- **Die ersten zwei Bildschirmhöhen führen weiter.** In der ersten Bildschirmhöhe stehen auf Mobil Angebot, Zielgruppe beziehungsweise Ort und primäre Aktion. Spätestens innerhalb der zweiten beginnt sichtbar die nächste reale Nutzerfrage oder der erste Beweis. Zwei Bildschirmhöhen dürfen nicht nur dieselbe Überschrift, Kontaktmetadaten, Dekoration oder ungenutzten Weißraum wiederholen.
-- **Beweis vor Pflichtinteraktion.** Interaktion wird eingesetzt, wenn sie etwas Reales zeigt oder eine Aufgabe löst. Bild, Team, Case, Arbeitsprobe, Rechner, Produktansicht, Prozess und klare Erklärung sind gleichwertige Beweisformen.
-- **Stilzitat bleibt nachgeordnet.** Historische oder retrohafte Signale dürfen einen Inhalt akzentuieren. Ein starkes Epochenbild über Fläche, Typografie, Linien, Textur und Seiten-Chrome hinweg ist nur bei ausdrücklichem Nutzerwunsch oder tragendem Markenbezug zulässig und wird nach [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]] begründet.
-- **Professionell ist zweckpassend.** Hierarchie, präzise Abstände und ein kohärentes Farb- und Flächensystem gelten in warmen, hellen, dunklen, zurückhaltenden und expressiven Richtungen. Freundlichkeit entsteht über Ansprache, reale Motive, Farbe und Rhythmus, nicht über Emojis, Sparkles oder Ausrufezeichen.
+Aufbau, Auftaktrollen, Auftakt-Repertoire, Überschriftenanordnung auf dieser Seite, Kopfzeilenrolle, Beweisplatzierung, Handlungsdichte, Signaturdetail und die konkrete Abgrenzung zur generierten Anmutung sind kanonisch in [[20-Design/Landing Page Craft]] geregelt. Der Design Contract dieser Website entscheidet daraus und begründet:
+
+- gewählte Auftaktkomposition aus [[20-Design/Landing Page Craft#Auftakt-Repertoire]] und die Besetzung aller sechs Auftaktrollen, insbesondere des Beweisankers
+- **Nutzwert vor Stilintensität.** Angebot, konkreter Inhaltsanker und nächste Handlung bilden eine zusammenhängende, lesbare Antwort. Reine Stimmung, leere Fläche und typografische Übergröße besetzen den Inhaltsanker nicht.
+- **Bild optional, Bildrolle verbindlich.** Wird ein Bild eingesetzt, nimmt es mit Ausschnitt, Maßstab und Blickrichtung am Raster und an der Aussage teil. Fehlt ein vorgesehenes Bild real, gilt [[20-Design/Imagery and AI Editing#KI-generierte Bilder]].
+- **Lesbarkeit ist eine harte Grenze.** Die vollständige semantische H1 bleibt bei 320 und 375 Pixel, an den Desktop-Prüfbreiten, bei 200 Prozent Zoom, bei großer Systemschrift und mit der realen Kopfzeile unangeschnitten und unverdeckt. Dekorative Duplikate dürfen beschnitten werden, der einzige lesbare Titel nie.
+- **Interesse entsteht aus Beziehung.** Maßstab, Raster, Medium, Fakten und Handlung erzeugen Spannung miteinander. Schriftgröße allein, ein vollflächiges Epochenzitat oder eine erzwungene Andersartigkeit sind kein Konzept. Stilzitate bleiben nachgeordnet und folgen [[20-Design/Typography Layout and Spacing#Stilzitat und Zeitbezug]].
+- **Beweis vor Pflichtinteraktion.** Bild, Team, Case, Arbeitsprobe, Rechner, Produktansicht, Prozess und klare Erklärung sind gleichwertige Beweisformen.
+- **Professionell ist zweckpassend.** Hierarchie, präzise Abstände und ein kohärentes Farb- und Flächensystem gelten in warmen, hellen, dunklen, zurückhaltenden und expressiven Richtungen gleichermaßen. Eine ruhige, weitgehend statische Landing Page mit echtem Inhalt ist eine vollwertige Entscheidung und wird als solche dokumentiert.
+- gewähltes Signaturdetail nach [[20-Design/Landing Page Craft#Das Signaturdetail]] samt Herleitung und Wiederholungsorten
 - Das Novelty Budget gilt weiterhin: höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt.
 - Unterseiten übernehmen dasselbe Designsystem, treten aber ruhiger auf. Der Ausdruck liegt auf der Landing Page, die Verlässlichkeit auf den Unterseiten.
 

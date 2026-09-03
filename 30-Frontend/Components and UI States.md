@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-09-03
 impacts:
   - accessibility-tests
   - visual-regression
@@ -88,6 +88,25 @@ Kanonische Funktions- und Geometrieregel für die Kopfzeile jeder Website. Inven
 - Auf schmalen Flächen darf die Desktopanordnung zu Schublade, Sheet, gestapeltem Index, Accordion, horizontalem Scroller oder einer anderen dokumentierten Lösung werden. Fokusmanagement, Escape, Rückfokus und Scrollsperre gelten, soweit das Muster sie benötigt.
 - Der aktive Punkt ist ohne Farbe allein erkennbar und trägt `aria-current="page"`.
 - Jede Kopfzeile besitzt einen kontrastgeprüften Zustand über jedem Untergrund. Deckend, im Dokumentfluss, seitlich, aufgeteilt oder durchscheinend sind gleichwertige Art-Direction-Optionen.
+
+### Kopfzeilen-Repertoire
+
+Die Form der Kopfzeile ist eine Art-Direction-Entscheidung und wird aus dem Repertoire gewählt, nicht geerbt. Bei mehreren Websites ist sie eine Pflichtachse der Unterscheidungsmatrix.
+
+| Form | Wie sie funktioniert | Passt zu | Bedingungen |
+|---|---|---|---|
+| durchgehende Leiste | volle Breite, Logo links, Navigation rechts oder mittig | Unternehmensauftritte mit mehreren gleichrangigen Zielen | einzeilig bei den längsten realen Beschriftungen |
+| schwebende Pille | verkürzte, abgesetzte Leiste mit Abstand zum Seitenrand | fokussierte Seiten mit wenigen Zielen | verdeckt beim Scrollen keinen Inhalt, bleibt bei 320 Pixel bedienbar |
+| geteilte Kopfzeile | Marke an einer Ecke, Navigation oder Aktion an der anderen, ohne verbindende Leiste | expressive Auftakte mit starkem Leitmedium | jedes Element hat für sich einen geprüften Kontrast |
+| zweistöckig | Utility-Zeile über der Hauptnavigation | tiefe Angebote mit Sprache, Konto, Standort oder Service | die zweite Zeile darf mobil entfallen, ihre Ziele nicht |
+| seitliche Navigation | dauerhaft sichtbare Spalte statt Kopfzeile | Anwendungen, Dokumentation, Kataloge | mobiler Übergang dokumentiert |
+| über dem Leitmedium | transparent über dem Auftaktbild, deckend ab dem ersten Scrollen | randlose Bildauftakte | Kontrast gegen den realen Bildbereich, Zustandswechsel ohne Höhensprung, deckender Fallback |
+| beim Abwärtsscrollen ausblendend | verschwindet beim Lesen, erscheint beim Zurückscrollen | lange Lesestrecken und Landing Pages | Erscheinen und Verschwinden folgen der Eingabe unmittelbar, `prefers-reduced-motion` erhält die Erreichbarkeit |
+| erst ab dem zweiten Bildschirm | der Auftakt trägt Marke und Einstieg selbst, die Kopfzeile erscheint danach | Kampagnen- und Einzweckseiten | die primäre Handlung ist im Auftakt ohne Kopfzeile erreichbar |
+
+- Die Kopfzeile belegt auf einem 375 Pixel breiten Gerät höchstens etwa ein Achtel der sichtbaren Höhe.
+- Eine Aktion gehört in die Kopfzeile, wenn sie über die gesamte Website hinweg dieselbe bleibt und häufig gebraucht wird. Sie unterscheidet sich sichtbar von den Navigationslinks und ist auf Touch mindestens 48 mal 48 Pixel groß. Zwei gleich starke Aktionen nebeneinander sind ein Befund.
+- Die landing-page-spezifische Rolle der Kopfzeile, einschließlich Aufmerksamkeitsverhältnis, steht in [[20-Design/Landing Page Craft#Die Kopfzeile auf der Landing Page]].
 
 ### Option durchscheinende Kopfzeile
 

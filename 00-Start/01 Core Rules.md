@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 impacts:
   - "[[80-Templates/Project Master Spec]]"
   - "[[70-QA/Quality Gates]]"
@@ -26,7 +26,10 @@ impacts:
 - Redundante oder rein dekorative Kicker über Überschriften vermeiden. Echte Rubrik-, Status-, Datums- oder Prozessinformation darf eine eigene Hierarchiestufe erhalten. Siehe [[20-Design/Anti AI Slop#Kicker und Überschriften]].
 - Kopfzeileninventar und Navigationsmuster aus Informationsarchitektur, Nutzungshäufigkeit, Wortlängen und Art Direction ableiten. Es gibt keine globale Sollzahl. Siehe [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]].
 - Ein gefundenes Firmenlogo wird in jeder gebauten Website sichtbar verwendet. Siehe [[20-Design/Design Direction#Logo des Betriebs]].
-- Die Landing Page wird zuerst auf Nutzwert gebaut und darf danach ausdrucksstark werden. Angebot, konkreter Inhaltsanker und nächste Handlung müssen zusammen lesbar sein; ein Bild ist keine Pflicht und Schriftgröße allein kein Konzept. Siehe [[20-Design/Design Direction#Landing Page]].
+- Die Landing Page wird zuerst auf Nutzwert gebaut und darf danach ausdrucksstark werden. Angebot, konkreter Inhaltsanker und nächste Handlung müssen zusammen lesbar sein; ein Bild ist keine Pflicht und Schriftgröße allein kein Konzept. Kanonisch in [[20-Design/Landing Page Craft]].
+- Der Auftakt besetzt alle sechs Auftaktrollen und wählt eine benannte Komposition aus [[20-Design/Landing Page Craft#Auftakt-Repertoire]]. Die feste Kette aus Hero, drei Karten, Logo-Wand, Stimmen, Preisen und FAQ ist kein Aufbau, sondern eine Gewohnheit; die Reihenfolge folgt den realen Nutzerfragen dieser Zielgruppe.
+- Jede Website erhält genau ein hergeleitetes Signaturdetail, das auf den Unterseiten ruhiger wiederkehrt. Siehe [[20-Design/Landing Page Craft#Das Signaturdetail]].
+- Pro Seite kommen zwei bis drei verschiedene Überschriftenanordnungen vor. Eine einzige wiederholte Anordnung ist ein Anti-Slop-Befund. Siehe [[20-Design/Design Direction#Komposition und Überschriften]].
 - **Bei jedem Website-Build wird der UI UX Pro Max Skill verwendet, ausnahmslos.** Siehe [[00-Start/04 Plugins and Skills#Auslösebedingung]].
 - Der Leitbenchmark stammt aus [[20-Design/Interface Benchmarks]] und wird im Design Contract benannt.
 - **Die H0-Handwerksuntergrenze gilt bei jedem Build.** Zustände, Fokus, Kontextkontrast, klare Hierarchie und ein konsistentes System innerhalb der Website sind verbindlich. Radius, Rahmenbehandlung, Schatten, Karten, Kopfzeile, Zweitschrift, Flächen- und Bewegungslogik werden je Website entschieden. B5 ist ein wählbares Stilprofil. Siehe [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]].

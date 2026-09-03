@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-23
+updated: 2026-09-03
 ---
 
 # Brain Index
@@ -14,13 +14,14 @@ updated: 2026-08-23
 4. Verbindlicher Ablauf: [[00-Start/05 Web Product Workflow]]
 5. Website-Auftrag: zuerst `../projekte/<Projektname>/` samt `PROJECT.md`, Inventaren und eigenem Release-Readiness-Register je Website anlegen, danach die im Auftrag verlangte Anzahl vollständiger Websites mit Unterseiten, passendem Motion-Budget, SEO und umgebungsgerechtem Zugriff bauen. Ohne Angabe im Auftrag genau eine Website, siehe [[00-Start/05 Web Product Workflow#Anzahl der Websites]]
 6. Bei jeder UI: UI UX Pro Max ausführen, Leitbenchmark aus [[20-Design/Interface Benchmarks]] wählen
-7. Neues Projekt spezifizieren: [[80-Templates/Project Intake]] und [[80-Templates/Project Master Spec]]
-8. Abschluss: [[70-QA/Quality Gates]]
+7. Startseite oder Landing Page: [[20-Design/Landing Page Craft]] vor der ersten Zeile UI-Code lesen
+8. Neues Projekt spezifizieren: [[80-Templates/Project Intake]] und [[80-Templates/Project Master Spec]]
+9. Abschluss: [[70-QA/Quality Gates]]
 
 ## Kanonische Bereiche
 
 - Strategie: [[10-Strategy/Discovery and Scope]], [[10-Strategy/Existing Website Rebuild]], [[10-Strategy/Information Architecture and Sitemap]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Website Copy]], [[10-Strategy/Information Density and Mobile Clarity]]
-- Design: [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[20-Design/Color System]], [[20-Design/Typography Layout and Spacing]], [[20-Design/Imagery and AI Editing]], [[20-Design/Responsive Design]], [[20-Design/Motion and Interaction]], [[20-Design/Anti AI Slop]]
+- Design: [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[20-Design/Landing Page Craft]], [[20-Design/Color System]], [[20-Design/Typography Layout and Spacing]], [[20-Design/Imagery and AI Editing]], [[20-Design/Responsive Design]], [[20-Design/Motion and Interaction]], [[20-Design/Anti AI Slop]]
 - Frontend: [[30-Frontend/Architecture and Code Consistency]], [[30-Frontend/Components and UI States]], [[30-Frontend/Accessibility]], [[30-Frontend/Performance]], [[30-Frontend/SEO and Discoverability]]
 - Backend und Sicherheit: [[40-Backend-Security/Security Baseline]], [[40-Backend-Security/Authentication and Accounts]], [[40-Backend-Security/Data APIs and Billing]]
 - Recht: [[50-Legal/Legal Decision Tree]], [[50-Legal/Privacy and Consent]], [[50-Legal/Assets Copyright and Licenses]]

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -64,6 +64,101 @@ Ein mechanisch wiederholter Kicker über jeder Überschrift ist ein häufiges Er
 - Kontext, der über die Überschrift hinausgeht, gehört in den Lead darunter, in eine Bildunterschrift oder in die Navigation.
 - Eine reale Metazeile, etwa Datum, Rubrik, Autor, Status, Zielgruppe oder Prozessschritt, ist kein Anti-Slop-Befund, solange sie eine echte, nicht redundante Information trägt.
 
+## Slop-Signaturen
+
+Diese Liste ist der Detailkatalog zu den Verboten oben. Sie sammelt die Einzelmerkmale, an denen erfahrene Gestalter eine generierte Oberfläche innerhalb weniger Sekunden erkennen. Sie wird bei jedem Impeccable-Review und bei jeder Landing Page nach [[20-Design/Landing Page Craft]] durchgegangen.
+
+Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst und begründet einsetzt, hält den Grund im Design Contract fest. Wer es ungeprüft übernimmt, hat einen Befund.
+
+### Fläche, Rahmen und Tiefe
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| farbiger Balken an einer Kartenkante, meist oben oder links | eines der zuverlässigsten Einzelmerkmale generierter Oberflächen | Abgrenzung über Rahmen, Flächenwechsel oder Abstand |
+| Hairline-Rahmen und weit gestreuter Schatten am selben Element | zwei Abgrenzungsmittel gleichzeitig, keine Materiallogik | eine Entscheidung: entweder Kante oder Tiefe |
+| Rundung ab etwa 24 Pixel auf allen Containern | alles wird zur gleichen weichen Blase | Radiusskala je Website nach [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung]] |
+| Glasflächen und Blur ohne Überlagerungsproblem | Effekt ohne Aufgabe | deckende Flächen, Blur nur bei echter Schichtung |
+| Karte in Karte | doppelte Tiefe ohne zusätzliche Bedeutung | flach halten, mit Abstand, Typografie und Trennlinien gliedern |
+| dekoratives Rasternetz, Streifenverlauf oder Punktetextur im Hintergrund | Struktur wird behauptet statt aus dem Inhalt erzeugt | leere Fläche oder eine Struktur, die etwas darstellt |
+| radialer Farbschein oder Spotlight hinter dem Auftakt | simuliertes Licht ohne Lichtquelle | reale Bild- oder Materiallogik |
+| farbige Glows und Leuchtschatten auf dunklem Grund | der Standardlook generierter dunkler Oberflächen | monochrome, flache Tiefenstufen |
+
+### Typografie
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| eine einzige Standardfamilie in allen Rollen | keine typografische Entscheidung erkennbar | begründete Familie und Rollen nach [[20-Design/Typography Layout and Spacing#Schriftwahl]] |
+| Stufen mit zu geringem Größenabstand | keine Hierarchie, nur Unschärfe | mindestens Faktor 1,25 zwischen benachbarten Stufen |
+| übergroße kursive Serifen-Displayzeile als Auftakt | war eine Geschmacksentscheidung und ist inzwischen der Standardauftakt generierter Startseiten | nur bei tragendem Markenbezug; sonst eine andere Auszeichnungslogik |
+| Versal-Kicker mit weiter Sperrung über jeder Überschrift | geliehene Autorität, siehe Abschnitt Kicker und Überschriften | Einordnung in die Überschrift legen |
+| kleine Rundquadrat-Kachel mit Icon über der Überschrift | Baustein aus jeder Generatorvorlage | Icon neben den Text stellen oder weglassen |
+| winzige Ziffernmarken neben jeder Sektionsüberschrift | Redaktionsanmutung ohne Redaktion | Reihenfolge über Rhythmus und Hierarchie zeigen |
+| ganze Absätze in Versalien | Wortbilder verschwinden, Lesbarkeit sinkt | Versalien nur für kurze Beschriftungen |
+| stark negatives Tracking auf Fließtext, weites Tracking auf langen Zeilen | Buchstabengruppen zerfallen | Tracking je Stufe kalibrieren |
+| Zeilenhöhe unter 1,3 im Fließtext, Zeilen über etwa 80 Zeichen | ermüdet beim Lesen | 1,5 bis 1,7 und 45 bis 75 Zeichen |
+| Fließtext unter 14 Pixel, Beschriftungen unter 11 Pixel | auf realen Geräten unlesbar | Mindestgrößen einhalten |
+| Blocksatz ohne Silbentrennung | weiße Flüsse im Satz | linksbündig oder Silbentrennung aktivieren |
+
+### Farbe
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| Blau-Violett- oder Violett-Cyan-Verlauf im Auftakt | das bekannteste Einzelmerkmal überhaupt | Farbrollen aus Marke, Material, Ort oder Produkt herleiten |
+| Verlaufstext auf Überschriften oder Kennzahlen | Dekoration ohne Bedeutung, oft mit Kontrastverlust | eine gesetzte Textfarbe |
+| Creme- oder Beigefläche als Signal für Hochwertigkeit | Reflex, keine Herleitung | Neutralskala aus realem Material ableiten |
+| graue Schrift auf farbiger Fläche | wirkt ausgewaschen und fällt unter den Kontrastwert | dunklere Abstufung derselben Farbe oder nahezu Weiß |
+| dauerhafter Dunkelmodus mit mittelgrauem Fließtext | Standardanmutung und Kontrastproblem zugleich | bewusste Entscheidung für Grundhelligkeit, Kontrast im Kontext prüfen |
+
+### Aufbau und Raum
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| die feste Kette Hero, drei Karten mit Icon, Logo-Wand, Stimmen, Preise, FAQ | Blockfolge statt Argumentation | Reihenfolge aus realen Nutzerfragen, siehe [[20-Design/Landing Page Craft#Es gibt keinen Standardaufbau, sondern eine Standardaufgabe]] |
+| exakt drei gleich große Karten mit Icon, Titel und zwei Zeilen Text | die häufigste generierte Sektion | Anzahl aus der Sache, Form aus der Informationsart |
+| Kennzahlenband aus großer Zahl und drei Stützwerten | trägt keine Glaubwürdigkeit, weil die Werte selten belegt sind | belegte Zahl mit Bezugsgröße und Zeitraum oder gar keine |
+| identischer Abstand zwischen allem | kein Rhythmus, keine Gruppierung | eng innerhalb der Gruppe, weit zwischen Gruppen |
+| Überschrift näher am vorherigen Block als an ihrem eigenen Inhalt | zerstört den Lesefluss | Abstand über der Überschrift größer als darunter |
+| Text bündig an der Container- oder Bildschirmkante | wirkt unfertig | Innenabstand mindestens 12 bis 16 Pixel, seitlich mindestens 16 |
+| horizontaler Scroller, dessen Karten an der Kante kleben | Rand geht verloren | gleiche Einzüge an beiden Seiten |
+| Inhalt läuft aus seinem Container oder wird von einer Überlagerung verdeckt | Layoutfehler, der als Stil durchgeht | Umbruch erlauben, Breiten begrenzen, Überlagerung versetzen |
+
+### Bewegung
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| pulsierender Statuspunkt an einem statischen Zustand | vorgetäuschte Lebendigkeit | Bewegung nur bei tatsächlicher Datenänderung |
+| blinkender Cursor an nicht editierbarem Text | Terminalzitat ohne Terminal | Cursor nur in echten Eingaben |
+| dauerlaufendes Logo- oder Textband | fordert Aufmerksamkeit und verbirgt zugleich Inhalt | lesbare, ruhende Darstellung |
+| Bounce- oder Elastic-Kurven auf Oberflächenelementen | wirkt veraltet | weiches Ausklingen; Federphysik nur für tatsächlich physische Bewegung |
+| Bild skaliert oder dreht beim Überfahren | wiederkehrende Generatorgeste | Bild ruhig lassen oder eine inhaltliche Reaktion zeigen |
+| dieselbe Einblendung auf jedem Element beim Scrollen | Bewegung ohne Aufgabe | Bewegung erklärt Zustand, Weg oder Beziehung |
+| Inhalt liegt bis zum Ende der Einblendung auf `opacity: 0` | ausgelieferter Inhalt bleibt unsichtbar, bei Fehlern dauerhaft | Inhalt sichtbar ausliefern, Bewegung als Ergänzung |
+| Animation auf `width`, `height`, `padding` oder `margin` | erzeugt Layout-Neuberechnung und ruckelt | `transform` und `opacity` |
+
+### Bild
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| Bestandsbild mit Team im hellen Büro, abstraktes 3D-Objekt, schwebende Formen | austauschbar und erkennbar generisch | reales Motiv des Betriebs nach [[20-Design/Imagery and AI Editing]] |
+| aus Grundformen zusammengesetzte SVG-Illustration | Platzhalteranmutung | echte Illustration, Foto oder nichts |
+| Foto unter einer fast deckenden Farbfläche | das ausgelieferte Bild ist unsichtbar | Bild zeigen oder entfernen |
+| leere `src`-Attribute und Platzhalterkästen | ausgelieferter Fehler | reales oder erzeugtes Bild einsetzen |
+
+### Copy
+
+| Signatur | Warum sie auffällt | Stattdessen |
+|---|---|---|
+| Marketingvokabular wie `streamline`, `empowern`, `world-class`, `nahtlos`, `ganzheitlich` | austauschbar und inhaltsleer | konkretes Verb, konkretes Objekt |
+| aphoristische Gegensatzformel am Abschnittsende | erkennbarer Generatorrhythmus | ein normaler Schlusssatz oder keiner |
+| dieselbe Beschriftung mehrfach in einem Container | Redundanz | jede Beschriftung genau einmal |
+| Em-Dash-Häufung in Fließtext | siehe [[10-Strategy/Website Copy#Interpunktion]] | Komma, Punkt, Klammer |
+
+### Handwerkliche Untergrenze
+
+Diese Punkte sind keine Stilfrage, sondern ein Mangel: unbehandelte Skriptfehler, Kontrast unter WCAG AA, übersprungene Überschriftenebenen, fehlender sichtbarer Fokus, Flächen mit Hover-Reaktion ohne Funktion, Popover und Menüs, die von einem `overflow: hidden` abgeschnitten werden. Sie werden vor jeder gestalterischen Beurteilung behoben.
+
+Die Signaturen in diesem Abschnitt sind aus zwei öffentlich dokumentierten Musterkatalogen zusammengeführt und gegen die Regeln dieses Brains abgeglichen.[^impeccable][^sixteen]
+
 ## Erkennungsfragen
 
 - Könnte der Text unverändert zu zehn anderen Produkten passen?
@@ -115,3 +210,6 @@ Bei mehreren Websites wird der Review je Website getrennt geführt. Ein gemeinsa
 Der zugrunde liegende Bericht beschreibt diese Muster nach einer nicht unabhängig verifizierten Stichprobe von mehr als 500 Seiten. Seine Liste ist Heuristik, kein Qualitätsstandard.[^report]
 
 [^report]: [Aftermark AI: Vibe Coded Website Report](https://docs.google.com/document/d/e/2PACX-1vTnLEdwSF1HPkuwOkuNneXGCaQAw5N2nnRf7cX_B4zuBLf2VTMi4Yh59gqS-eeVqYpa11iFQYmRjVBW/pub)
+
+[^impeccable]: [Impeccable: Slop](https://impeccable.style/slop/). Musterkatalog zu generierter Oberflächengestaltung. Geprüft am 3. September 2026.
+[^sixteen]: [Developers Digest: AI Design Slop and how to spot it](https://www.developersdigest.tech/blog/ai-design-slop-and-how-to-spot-it). Geprüft am 3. September 2026.

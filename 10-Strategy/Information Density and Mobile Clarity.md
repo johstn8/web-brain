@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 depends_on:
   - "[[10-Strategy/Information Architecture and Sitemap]]"
 impacts:
@@ -68,6 +68,8 @@ Information wird nicht weggelassen, sondern gestaffelt. Auf jeder Ebene steht nu
 Regeln dafür: Ebene 2 wird nie für den Kernnutzen verwendet. Ein zugeklapptes Element trägt eine Beschriftung, die seinen Inhalt verrät. Auf Mobil ist Ebene 2 der Normalfall, auf Desktop darf mehr davon offen liegen. Der Inhalt bleibt in allen Fällen im DOM auffindbar und suchbar.
 
 ## Mobile zuerst dosieren
+
+Die Aufmerksamkeit verteilt sich stark ungleich: die erste Bildschirmhöhe erhält rund 57 Prozent der Betrachtungszeit, die zweite etwa 17 Prozent. Für die Startseite folgen daraus eigene Regeln zur nutzbaren Höhe, zum Höhenbudget der Kopfzeile und zur sichtbaren Fortsetzung, kanonisch in [[20-Design/Landing Page Craft#Die erste Bildschirmhöhe]].
 
 Die Informationsmenge wird am schmalsten Viewport entschieden und erst danach auf Desktop erweitert.
 

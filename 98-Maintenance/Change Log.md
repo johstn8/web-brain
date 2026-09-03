@@ -1,13 +1,35 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-31
+updated: 2026-09-03
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo ältere Einträge feste Websitezahlen, Auswahlvarianten, Asset-Ausschlüsse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdrücklich überholt.
+
+## 2026-09-03 — Die Landing Page bekommt eine eigene kanonische Notiz
+
+Auslöser war der Auftrag, den Grundaufbau von Landing Pages und die Unterscheidung zwischen professioneller und generierter Anmutung gründlich zu recherchieren und als kanonisches Wissen abzulegen, und dabei zugleich Komposition, Überschriftenanordnung und Kopfzeile für mehr gestalterische Freiheit zu öffnen.
+
+**Diagnose:** Die Landing-Page-Regeln lagen bisher als ein Abschnitt in [[20-Design/Design Direction]] und beantworteten vor allem, was ein Auftakt nicht sein darf. Es fehlten der Aufbau der gesamten Seite, ein Entscheidungsraum für die Auftaktkomposition, eine Regel für die Anordnung der Überschriften über die Seite hinweg, eine Rolle für die Kopfzeile im Auftakt und ein prüfbarer Detailkatalog dessen, woran eine generierte Oberfläche tatsächlich erkannt wird. Ohne diesen Entscheidungsraum entsteht bei fehlender Vorgabe immer die wahrscheinlichste Lösung, und genau das ist die Ursache der generischen Anmutung.
+
+**Kanonisch neu**
+
+- [[20-Design/Landing Page Craft]] ist der neue kanonische Besitzer für Aufbau, Auftaktkomposition, Überschriftenanordnung, Kopfzeilenrolle, Beweisplatzierung, Handlungsdichte und die Abgrenzung zur generierten Anmutung der Startseite. Die Notiz führt drei Beurteilungszeitfenster, eine Tabelle erster Nutzerfragen und stärkster Beweisformen je Seitentyp, die sechs Auftaktrollen, ein Auftakt-Repertoire aus zehn Kompositionen, das Signaturdetail, eine Feinschliffliste und vierzehn Prüffragen.
+- Zwei Rollen des Auftakts sind neu benannt und prüfpflichtig: der **Beweisanker**, der in generierten Auftakten fast immer fehlt, und der **Fortschritt**, ohne den ein sauber abschließender erster Bildschirm als vollständig gelesen wird.
+- [[20-Design/Anti AI Slop#Slop-Signaturen]] führt einen Detailkatalog aus rund sechzig konkreten Einzelmerkmalen, gegliedert nach Fläche, Typografie, Farbe, Aufbau, Bewegung, Bild und Copy. Jede Zeile ist ein Befund mit Alternative, kein Verbot; bewusster Einsatz wird im Design Contract begründet.
+- [[20-Design/Design Direction#Landing Page]] behält den Anker, enthält jetzt aber die Entscheidungen des Direction Briefs und verweist für die Herleitung auf die neue Notiz. Neu dort und in [[00-Start/01 Core Rules]]: zwei bis drei verschiedene Überschriftenanordnungen je Seite, größerer Abstand über als unter einer Überschrift, Faktor 1,25 zwischen benachbarten Typostufen, ein hergeleitetes Signaturdetail je Website.
+- [[30-Frontend/Components and UI States#Kopfzeilen-Repertoire]] öffnet die Kopfzeile als Art-Direction-Entscheidung mit acht Formen von der durchgehenden Leiste bis zur erst ab dem zweiten Bildschirm erscheinenden Kopfzeile, mit Höhenbudget und Aktionsregel.
+- [[20-Design/Typography Layout and Spacing#Typografischer Feinschliff]] ergänzt die Handwerksschicht, die zuerst auffällt: Umbruch, Schusterjungen, optischer Randausgleich, Ziffernform, Zeichensatz, Mindestgrößen, Blocksatz.
+- Propagiert durch Brain Index, Routing Map, Core Rules, `AGENTS.md`, Information Density, Derived Design Patterns, Project Master Spec, AI Build Prompt, Quality Gates und Coverage and Impact Map. Die Quality Gates enthalten elf neue G1-Prüfpunkte zur Landing Page.
+
+**Recherchebasis:** Erste Eindrücke innerhalb von 50 Millisekunden und die Wirkung von visueller Komplexität und Prototypikalität, die Verteilung der Betrachtungszeit über die Bildschirmhöhen, die Illusion der Vollständigkeit, das Aufmerksamkeitsverhältnis aus der Conversion-Centered-Design-Systematik, der Fünf-Sekunden-Test, zwei öffentlich dokumentierte Musterkataloge generierter Oberflächen sowie Kennwerte zu Auftaktmedium und Ladezeit. Die Belege stehen als Fußnoten in den jeweiligen Notizen mit Prüfdatum 3. September 2026.
+
+**Nicht geändert:** Beweis-Hierarchie, Textbudgets, Referenzquote, Motion-Budget, Rechts- und Betriebsregeln. Bestehende Projektartefakte wurden nicht angefasst.
+
+**Graphify neu gebaut.** Die inkrementelle Erkennung meldete 16 geänderte Notizen. Die Semantikextraktion lief in dieser Sitzung ohne Subagenten unmittelbar im Host, weil in dieser Umgebung keine Subagenten eingesetzt werden; der Skill sieht diesen Weg ausdrücklich vor. Die 306 bereits belegten Knoten und 765 Kanten dieser 16 Dateien wurden erhalten und um die neuen Landing-Page-, Slop-Signatur-, Kopfzeilen- und Feinschliffknoten ergänzt. Der Graph umfasst jetzt **1202 Knoten, 1990 Kanten, 10 Hyperkanten und 79 Gemeinschaften**, gegenüber 1116/1879/7/79. Die Integritätsdiagnose meldet keine hängenden, fehlenden, doppelten oder kollabierten Kanten. Ein Shrink trat nicht auf. Die Gemeinschaften wurden nach der neuen Zugehörigkeit neu benannt; sechs davon tragen jetzt die Landing-Page-Themen `Landing Page Craft`, `Auftakt-Repertoire`, `Die sechs Auftaktrollen`, `Slop-Signaturen`, `Kopfzeilen-Repertoire` und `Typografischer Feinschliff`.
 
 ## 2026-08-31 — Leserecht auf den Entdeckungswurzeln der Developer-Plattform
 

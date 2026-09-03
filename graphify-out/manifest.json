@@ -25,19 +25,19 @@
     "semantic_hash": "55de0f561a64f58eb2dabe2368e0d9c1"
   },
   "00-Start/00 Brain Index.md": {
-    "mtime": 1787491497.9532738,
-    "ast_hash": "d1eef139b8f773754edd66299a96f799",
-    "semantic_hash": "d1eef139b8f773754edd66299a96f799"
+    "mtime": 1788403780.128539,
+    "ast_hash": "b5e7dc421fc696872377d8620786527a",
+    "semantic_hash": "b5e7dc421fc696872377d8620786527a"
   },
   "00-Start/01 Core Rules.md": {
-    "mtime": 1787851936.0259452,
-    "ast_hash": "85a986058bb93d1d081f8a27a036c554",
-    "semantic_hash": "85a986058bb93d1d081f8a27a036c554"
+    "mtime": 1788403780.1275392,
+    "ast_hash": "8caf8725e1b08753fb35c51731f77e3b",
+    "semantic_hash": "8caf8725e1b08753fb35c51731f77e3b"
   },
   "00-Start/02 Routing Map.md": {
-    "mtime": 1787851936.0259452,
-    "ast_hash": "8909dab809d838386d666a1c29693811",
-    "semantic_hash": "8909dab809d838386d666a1c29693811"
+    "mtime": 1788403780.128539,
+    "ast_hash": "a30af6c1e16310354a34da53e1826f83",
+    "semantic_hash": "a30af6c1e16310354a34da53e1826f83"
   },
   "00-Start/03 Update Protocol.md": {
     "mtime": 1787851198.4738655,
@@ -75,9 +75,9 @@
     "semantic_hash": "724988d6a48e7b73e70ee121611ef7cd"
   },
   "20-Design/Anti AI Slop.md": {
-    "mtime": 1787851004.9507315,
-    "ast_hash": "b6c3980bfe24e9d08ce03e23f2e52a7f",
-    "semantic_hash": "b6c3980bfe24e9d08ce03e23f2e52a7f"
+    "mtime": 1788403671.9856882,
+    "ast_hash": "a75ea7cbb9d4d4e5610ba97ccd4a6972",
+    "semantic_hash": "a75ea7cbb9d4d4e5610ba97ccd4a6972"
   },
   "20-Design/Color System.md": {
     "mtime": 1787144446.7267172,
@@ -85,9 +85,9 @@
     "semantic_hash": "ee67fde212a7fa06510857cc25eae796"
   },
   "20-Design/Design Direction.md": {
-    "mtime": 1787851936.026945,
-    "ast_hash": "5c852a4f861d4ca85c4f3a57fa212808",
-    "semantic_hash": "5c852a4f861d4ca85c4f3a57fa212808"
+    "mtime": 1788403730.1430697,
+    "ast_hash": "0d5afb875b0e2254e7cf6522e135c445",
+    "semantic_hash": "0d5afb875b0e2254e7cf6522e135c445"
   },
   "20-Design/Motion and Interaction.md": {
     "mtime": 1787144446.7287173,
@@ -100,9 +100,9 @@
     "semantic_hash": "4d925149d930a102089486aa3fd2b9e1"
   },
   "20-Design/Typography Layout and Spacing.md": {
-    "mtime": 1787851004.9497313,
-    "ast_hash": "c9b77bcad0f46409354a48a4e2858616",
-    "semantic_hash": "c9b77bcad0f46409354a48a4e2858616"
+    "mtime": 1788403730.1430697,
+    "ast_hash": "499a961e8fbf54a8e3124e46dbe55ddb",
+    "semantic_hash": "499a961e8fbf54a8e3124e46dbe55ddb"
   },
   "30-Frontend/Accessibility.md": {
     "mtime": 1786110516.5775194,
@@ -115,9 +115,9 @@
     "semantic_hash": "ddd688a9f42c96d14e7513d570a18352"
   },
   "30-Frontend/Components and UI States.md": {
-    "mtime": 1787144345.9721503,
-    "ast_hash": "9d9ee9fc5e62aaf78a0cd6a75008e567",
-    "semantic_hash": "9d9ee9fc5e62aaf78a0cd6a75008e567"
+    "mtime": 1788403780.1275392,
+    "ast_hash": "c457a90427a72a85ee099a2fd6063b2d",
+    "semantic_hash": "c457a90427a72a85ee099a2fd6063b2d"
   },
   "30-Frontend/Performance.md": {
     "mtime": 1787145149.8928654,
@@ -175,9 +175,9 @@
     "semantic_hash": "f4ca12035384522c87082afecce10771"
   },
   "70-QA/Quality Gates.md": {
-    "mtime": 1787851936.026945,
-    "ast_hash": "1d2f5cfc5ff9881c4983dd7c4ee1394a",
-    "semantic_hash": "1d2f5cfc5ff9881c4983dd7c4ee1394a"
+    "mtime": 1788403816.143157,
+    "ast_hash": "c489a38891a8c5edfd17ff7ce3f9e223",
+    "semantic_hash": "c489a38891a8c5edfd17ff7ce3f9e223"
   },
   "70-QA/Test Matrix.md": {
     "mtime": 1787144712.9569635,
@@ -185,9 +185,9 @@
     "semantic_hash": "f3470c57eb5d43fd1567e76ea26391e2"
   },
   "80-Templates/AI Build Prompt.md": {
-    "mtime": 1787851936.026945,
-    "ast_hash": "794d555c8ad0f904fdb0f4841da4b490",
-    "semantic_hash": "794d555c8ad0f904fdb0f4841da4b490"
+    "mtime": 1788403839.8729055,
+    "ast_hash": "9bc541e5d6bce40e9f1b8b902c283c6b",
+    "semantic_hash": "9bc541e5d6bce40e9f1b8b902c283c6b"
   },
   "80-Templates/Asset Register.md": {
     "mtime": 1786110516.5785193,
@@ -215,9 +215,9 @@
     "semantic_hash": "a068360bc4ea4fa0806816cd93a51cfd"
   },
   "80-Templates/Project Master Spec.md": {
-    "mtime": 1787851936.027945,
-    "ast_hash": "d11efd43383e03954245355162469612",
-    "semantic_hash": "d11efd43383e03954245355162469612"
+    "mtime": 1788403839.8729055,
+    "ast_hash": "c09b7fbe417024d35128b4c6156293d0",
+    "semantic_hash": "c09b7fbe417024d35128b4c6156293d0"
   },
   "80-Templates/Source and Rights Review.md": {
     "mtime": 1786110516.5795193,
@@ -230,9 +230,9 @@
     "semantic_hash": "f7c441f688494929baa15ee3d2f5735e"
   },
   "90-References/Derived Design Patterns.md": {
-    "mtime": 1787851004.9537313,
-    "ast_hash": "e067626cd15d5c82cea8224bac4d7652",
-    "semantic_hash": "e067626cd15d5c82cea8224bac4d7652"
+    "mtime": 1788403816.1441572,
+    "ast_hash": "200dfc02664041742f63243144a2045c",
+    "semantic_hash": "200dfc02664041742f63243144a2045c"
   },
   "90-References/Inspiration Catalog.md": {
     "mtime": 1787851936.027945,
@@ -255,14 +255,14 @@
     "semantic_hash": "749b49f1cbbaa5ffe1fbe35d37908f7b"
   },
   "98-Maintenance/Change Log.md": {
-    "mtime": 1788275777.9843416,
-    "ast_hash": "71a2f7c5534ab7bbcd393cca2c0d7801",
-    "semantic_hash": "71a2f7c5534ab7bbcd393cca2c0d7801"
+    "mtime": 1788403872.0755646,
+    "ast_hash": "3f41ec0046fd7ae2206590c5374077d3",
+    "semantic_hash": "3f41ec0046fd7ae2206590c5374077d3"
   },
   "98-Maintenance/Coverage and Impact Map.md": {
-    "mtime": 1787851936.028945,
-    "ast_hash": "1bafdbc24b6f0d52369655675b13c97a",
-    "semantic_hash": "1bafdbc24b6f0d52369655675b13c97a"
+    "mtime": 1788403816.1441572,
+    "ast_hash": "6de50f6fa0a11273e9dd58331b722a8f",
+    "semantic_hash": "6de50f6fa0a11273e9dd58331b722a8f"
   },
   "98-Maintenance/Review Queue.md": {
     "mtime": 1787869760.3831434,
@@ -270,9 +270,9 @@
     "semantic_hash": "d6681ff18a949374f26413781465f33b"
   },
   "AGENTS.md": {
-    "mtime": 1787851936.024945,
-    "ast_hash": "97a4b3aececc1aa2ccd67da6f867a828",
-    "semantic_hash": "97a4b3aececc1aa2ccd67da6f867a828"
+    "mtime": 1788403780.128539,
+    "ast_hash": "ddb68d861a3adcac304466c5fea3f2cf",
+    "semantic_hash": "ddb68d861a3adcac304466c5fea3f2cf"
   },
   "CLAUDE.md": {
     "mtime": 1786110516.5805194,
@@ -300,9 +300,9 @@
     "semantic_hash": "3c08001c6ba128e455bad476c68c8a6b"
   },
   "10-Strategy/Information Density and Mobile Clarity.md": {
-    "mtime": 1787851004.9527314,
-    "ast_hash": "ad956e3f83a3ae18e52b72925a784ea1",
-    "semantic_hash": "ad956e3f83a3ae18e52b72925a784ea1"
+    "mtime": 1788403816.1441572,
+    "ast_hash": "c650802ee2247eef88a4e9ac0cdc406c",
+    "semantic_hash": "c650802ee2247eef88a4e9ac0cdc406c"
   },
   "20-Design/Imagery and AI Editing.md": {
     "mtime": 1787851004.9507315,
@@ -353,5 +353,10 @@
     "mtime": 1787851936.027945,
     "ast_hash": "c2fe440edc4861d2248d0d91d7557c97",
     "semantic_hash": "c2fe440edc4861d2248d0d91d7557c97"
+  },
+  "20-Design/Landing Page Craft.md": {
+    "mtime": 1788403601.991434,
+    "ast_hash": "a33be1d551bb6376f5a0724fae087015",
+    "semantic_hash": "a33be1d551bb6376f5a0724fae087015"
   }
 }

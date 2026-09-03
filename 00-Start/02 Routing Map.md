@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 ---
 
 # Routing Map
@@ -15,7 +15,8 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Navigation oder neue Seite | [[10-Strategy/Information Architecture and Sitemap]], [[30-Frontend/SEO and Discoverability]] | Sitemap und Navigation synchron |
 | Inspirationsrecherche | [[90-References/Reference Research Workflow]], [[90-References/Website Reference Pool]], [[90-References/Inspiration Catalog]] | Referenzmodus nach Auftragszahl: Einzelwebsite als Eigenentwurf, bei mehreren genau eine referenzgeführte Fassung, sofern starke Passung gefunden wird; Entscheidungsmatrix und gegebenenfalls statischer/interaktiver Nachweis |
 | Visuelles Konzept | alle Notizen unter `20-Design`, [[00-Start/04 Plugins and Skills]], [[90-References/pen.dev Workflow]] | Design Tokens, Direction, Leitbenchmark, UI UX Pro Max Nachweis und pen.dev-Entscheidung |
-| Landing Page gestalten | [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]], [[10-Strategy/Information Density and Mobile Clarity]] | Auftaktkomposition mit Angebot, konkretem Inhaltsanker und Handlung; lesbarer Display-Nachweis, Übergang zur nächsten Nutzerfrage, passende Bild-/Interaktionsrolle, Logo-Platzierung, Negativreferenzen |
+| Landing Page gestalten | [[20-Design/Landing Page Craft]], [[20-Design/Interface Benchmarks]], [[20-Design/Design Direction]], [[90-References/Derived Design Patterns]], [[20-Design/Anti AI Slop]], [[10-Strategy/Information Density and Mobile Clarity]] | gewählte Auftaktkomposition mit besetzten sechs Auftaktrollen, Seitenaufbau aus realen Nutzerfragen, zwei bis drei Überschriftenanordnungen, begründete Kopfzeilenrolle, Signaturdetail, lesbarer Display-Nachweis, Übergang zur nächsten Nutzerfrage, Logo-Platzierung, durchlaufene Slop-Signaturen |
+| Auftakt oder Überschriftenanordnung überarbeiten | [[20-Design/Landing Page Craft]], [[20-Design/Design Direction#Komposition und Überschriften]], [[20-Design/Typography Layout and Spacing#Typografischer Feinschliff]] | neue Kompositionsentscheidung mit Begründung, geprüfte H1-Lesbarkeit an allen Prüfbreiten, erneuter Impeccable-Review |
 | Dashboard, Datenansicht oder Verwaltungsoberfläche | [[20-Design/Interface Benchmarks]], [[30-Frontend/Components and UI States]], [[20-Design/Color System]]; bei Owner-Betrieb zusätzlich [[60-Operations/Owner Hosting and Dashboard]] | Benchmark B1/B4 geprüft, Kennzahlen mit Bezugsgröße, Leerzustände, Rollen- und Veröffentlichungsmodell |
 | Bilder beschaffen oder überarbeiten | [[20-Design/Imagery and AI Editing]], [[80-Templates/Asset Register]] | Bildinventar mit Rolle, Bearbeitungsschritten und `ai-placeholder`-Liste |
 | Texte und Informationsmenge festlegen | [[10-Strategy/Information Density and Mobile Clarity]], [[10-Strategy/Content and Conversion]], [[10-Strategy/Website Copy]] | Sektions- und Textbudget je Route, Copy-Prüffragen durchlaufen |

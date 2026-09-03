@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -53,7 +53,17 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Kopfzeileninventar und Navigationsmuster sind aus der Informationsarchitektur begründet; bei 320, 375, 768, 1280 und 1920 Pixel, langen realen Beschriftungen, großer Systemschrift und 200 Prozent Zoom entstehen kein zufälliger Umbruch, Beschnitt oder Überlauf
 - [ ] Logos, Wortzeichen und Controls behalten an jedem Prüfbreakpoint ihr Seitenverhältnis und werden nicht beschnitten
 - [ ] jede Farbrolle hat eine benannte Herleitung; häufige Paletten sind bewusst gewählt statt reflexhaft übernommen
-- [ ] Auftaktkomposition und Überschriftenanordnung sind bewusst gewählt und im Design Contract begründet; Angebot, konkreter Inhaltsanker und primäre Handlung bilden eine gemeinsame Komposition, ein Bild ist optional; die Landing Page folgt [[20-Design/Design Direction#Landing Page]]
+- [ ] Auftaktkomposition und Überschriftenanordnung sind bewusst gewählt und im Design Contract begründet; Angebot, konkreter Inhaltsanker und primäre Handlung bilden eine gemeinsame Komposition, ein Bild ist optional; die Landing Page folgt [[20-Design/Landing Page Craft]]
+- [ ] **die sechs Auftaktrollen** aus [[20-Design/Landing Page Craft#Der Auftakt: sechs Rollen, eine Komposition]] sind je Landing Page benannt besetzt, insbesondere Beweisanker und Fortschritt; die gewählte Komposition stammt aus dem [[20-Design/Landing Page Craft#Auftakt-Repertoire]] und ist begründet
+- [ ] die Abschnittsfolge der Landing Page ist aus den realen Nutzerfragen dieser Zielgruppe hergeleitet und nicht aus der Blockkette Hero, drei Karten, Logo-Wand, Stimmen, Preise, FAQ; jeder Abschnitt beantwortet genau eine Frage
+- [ ] zwei bis drei verschiedene Überschriftenanordnungen je Seite, jede der Aufgabe ihres Abschnitts entsprechend; benachbarte Typostufen unterscheiden sich um mindestens den Faktor 1,25; der Abstand über einer Überschrift ist größer als darunter
+- [ ] Kopfzeilenrolle der Landing Page entschieden: Einzweckseite oder Unternehmensstartseite, Form aus dem [[30-Frontend/Components and UI States#Kopfzeilen-Repertoire]], Höhenanteil auf 375 Pixel geprüft, höchstens eine primäre Aktion in der Kopfzeile
+- [ ] **Slop-Signaturen durchgegangen** nach [[20-Design/Anti AI Slop#Slop-Signaturen]]; jede bewusst eingesetzte Signatur ist im Design Contract begründet
+- [ ] Signaturdetail je Website benannt, hergeleitet und mit seinen Wiederholungsorten dokumentiert
+- [ ] typografischer Feinschliff nach [[20-Design/Typography Layout and Spacing#Typografischer Feinschliff]] geprüft: Umbruch der H1, Schusterjungen, optischer Randausgleich, Ziffernform, Zeilenlänge, Mindestgrößen
+- [ ] die erste Bildschirmhöhe zeigt auf 375 Pixel Angebot, Zielgruppe beziehungsweise Ort und die primäre Handlung, und sie sieht nicht abgeschlossen aus; der Übergang in den Folgeinhalt ist sichtbar
+- [ ] das Auftaktmedium ist vorrangig geladen; kein Inhalt der Landing Page bleibt bis zum Ende einer Einblendung unsichtbar
+- [ ] die Prüffragen aus [[20-Design/Landing Page Craft#Prüffragen vor der Abnahme]] sind je gebauter Landing Page am laufenden Build beantwortet
 - [ ] die vollständige semantische H1 ist bei 320, 375, 768, 1280 und 1440 Pixel, 200 Prozent Zoom und großer Systemschrift ohne Anschnitt, Maske, Überlagerung oder Kollision mit der realen klebenden Kopfzeile lesbar
 - [ ] auf Mobil beginnt spätestens innerhalb der zweiten Bildschirmhöhe sichtbar die nächste reale Nutzerfrage oder der erste konkrete Beweis; Schriftgröße, Kontaktmetadaten, Dekoration und ungenutzter Weißraum halten den Seitenfortschritt nicht auf
 - [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; Screenshots oder gleichwertige Rendernachweise liegen für die vorgeschriebenen Prüfbreiten vor

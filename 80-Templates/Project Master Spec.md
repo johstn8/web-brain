@@ -56,7 +56,12 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Bildplan nach [[20-Design/Imagery and AI Editing]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, Serienkonsistenz, Liste der `ai-placeholder`-Bilder mit Prompt und Ersetzungshinweis:
 - Informations- und Textbudget je Route nach [[10-Strategy/Information Density and Mobile Clarity]], einschließlich Sektionsliste mit je einer Nutzerfrage:
 - Primäre Beweisform und konkreter Inhaltsanker je Landing Page; bei Interaktion zusätzlich Modul, Datenquelle, Bedienung, Zustände und Fallback:
-- Auftaktkomposition und Anordnung der Überschriften je Sektionsart; Nachweis, dass H1, Inhaltsanker und primäre Handlung an den Prüfbreiten ohne Anschnitt, Überlagerung oder Kopfzeilenkollision lesbar sind:
+- Gewählte Auftaktkomposition aus [[20-Design/Landing Page Craft#Auftakt-Repertoire]] mit Begründung, und wie die sechs Auftaktrollen Identität, Angebot, Einordnung, Beweisanker, Handlung und Fortschritt jeweils besetzt sind:
+- Anordnung der Überschriften je Sektionsart, zwei bis drei verschiedene Anordnungen je Seite; Nachweis, dass H1, Inhaltsanker und primäre Handlung an den Prüfbreiten ohne Anschnitt, Überlagerung oder Kopfzeilenkollision lesbar sind:
+- Kopfzeilenrolle der Landing Page: Einzweckseite oder Unternehmensstartseite, gewählte Form aus [[30-Frontend/Components and UI States#Kopfzeilen-Repertoire]], Höhenanteil auf 375 Pixel:
+- Abschnittsfolge der Landing Page mit der Nutzerfrage je Abschnitt, hergeleitet nach [[20-Design/Landing Page Craft#Es gibt keinen Standardaufbau, sondern eine Standardaufgabe]]:
+- Signaturdetail: Herleitung, konkrete Ausprägung und Wiederholungsorte auf den Unterseiten:
+- Durchgang durch [[20-Design/Anti AI Slop#Slop-Signaturen]] mit Datum; bewusst eingesetzte Signaturen mit Begründung:
 - Kopfzeileninventar und -anordnung, Navigationsbeschriftung, Fußbereichsstruktur und sonstiges Seiten-Chrome:
 - Landing-Page-Haltung: wodurch entsteht Nutzwert und Interesse; was ist ausdrucksstark, was bleibt ruhig; wann beginnt innerhalb der ersten zwei Bildschirmhöhen die nächste Nutzerfrage oder der erste Beweis:
 - Firmenlogo: gefunden ja/nein, Quelle, sichtbarer Einsatzort je Website, Bearbeitungsschritte:

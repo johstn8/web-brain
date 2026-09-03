@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-03
 ---
 
 # Coverage and Impact Map
@@ -19,7 +19,10 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States|Components and UI States]] | Information Architecture, Design Direction, Test Matrix, Quality Gates |
 | generische KI-Anmutung und Kicker | [[20-Design/Anti AI Slop|Anti AI Slop]] | Design Direction, Derived Design Patterns, Plugins and Skills, Quality Gates |
 | Logo des Betriebs | [[20-Design/Design Direction|Design Direction]] | Existing Website Rebuild, Asset Register, Source and Rights Review, Quality Gates |
-| Landing-Page-Anspruch | [[20-Design/Design Direction|Design Direction]] | Derived Design Patterns, Inspiration Catalog, Master Spec, QA |
+| Landing-Page-Aufbau, Auftaktkomposition, Auftaktrollen, Kopfzeilenrolle der Startseite und Abgrenzung zur generierten Anmutung | [[20-Design/Landing Page Craft|Landing Page Craft]] | Design Direction, Anti AI Slop, Components and UI States, Typography, Information Density, Content and Conversion, Derived Design Patterns, Master Spec, AI Build Prompt, Quality Gates |
+| erkennbare Einzelsignaturen generierter Oberflächen | [[20-Design/Anti AI Slop#Slop-Signaturen\|Anti AI Slop]] | Landing Page Craft, Design Direction, Typography, Color System, Components and UI States, Motion, Quality Gates |
+| typografischer Feinschliff | [[20-Design/Typography Layout and Spacing#Typografischer Feinschliff\|Typography Layout and Spacing]] | Landing Page Craft, Anti AI Slop, Components and UI States, Quality Gates |
+| Kopfzeilenformen und ihre Wahl | [[30-Frontend/Components and UI States#Kopfzeilen-Repertoire\|Components and UI States]] | Landing Page Craft, Design Direction, Information Architecture, Test Matrix, Quality Gates |
 | KI-Fähigkeiten und Pflichtskills | [[00-Start/04 Plugins and Skills|Plugins and Skills]] | Design Direction, Master Spec, Quality Gates, Review Queue |
 | Aktualisierung | [[00-Start/03 Update Protocol|Update Protocol]] | Change Log, Review Queue, diese Karte |
 | Synchronisation und Versionierung des Vaults | `AGENTS.md`, Abschnitt Synchronisation | Update Protocol, Change Log, `.gitignore` |
@@ -85,6 +88,10 @@ Aktualisiere Workflow, Delivery, Ablagestruktur, umgebungsabhängigen Zugriff, M
 ### Geänderte Kopfzeile oder Navigation
 
 Aktualisiere Sitemap, Navigationsbeschriftungen, Gruppierung, Fußbereich, Brotkrumen, Komponentenvertrag und die Prüfung auf Lesbarkeit, Innenhöhe, Mindestluft, Überlauf und Bedienbarkeit bei 320, 375, 768, 1280 und 1920 Pixel sowie 200 Prozent Zoom und Systemschrift. Die Anzahl der Hauptpunkte folgt Nutzerzielen und Informationsarchitektur, keinem globalen Grenzwert.
+
+### Geänderte Landing-Page-, Auftakt- oder Überschriftenregel
+
+Aktualisiere [[20-Design/Landing Page Craft]] als kanonischen Besitzer, danach Design Direction, Anti AI Slop, Derived Design Patterns, Components and UI States, Typography, Information Density, Core Rules, AGENTS.md, Routing Map, Project Master Spec, AI Build Prompt und Quality Gates. Prüfe zusätzlich, ob Auftaktrollen, Kompositionswahl, Überschriftenanordnungen, Kopfzeilenrolle und Signaturdetail im Design Contract jeder betroffenen Website noch stimmen, und wiederhole den Impeccable-Review und die Renderprüfung an allen Prüfbreiten.
 
 ### Neue oder geänderte Anti-Slop-Regel
 
