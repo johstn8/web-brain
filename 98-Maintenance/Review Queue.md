@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-11
 next_review: 2026-11-01
 ---
 # Review Queue
@@ -37,6 +37,30 @@ Diese Quellen werden geprüft, wenn sie gebraucht werden, nicht nach Kalender. D
 | UI UX Pro Max und pen.dev | vor dem ersten Einsatz in einem neuen Projekt und nach jedem Update des Skills | Version/Lizenz, CLI-Verfügbarkeit, Authentifizierung, Projektpfade, Codex-Konfiguration, Skill-Workflow und offizielle Dokumentation |
 | installierte Design- und Motion-Skills | nach einem Skill-Update und immer dann, wenn ein Skill-Vorschlag einer kanonischen Regel widerspricht, siehe [[00-Start/04 Plugins and Skills#Vorrang der Brain-Regeln vor Skill-Vorschlägen]] | Version, Lizenz, lokale Einbindung, Zugriffs- und Datenverhalten |
 | Inspirationskatalog | wenn eine Referenz für ein Projekt tatsächlich herangezogen wird; [[90-References/Reference Research Workflow]] verlangt die erneute Prüfung ohnehin vor jeder Übernahme | Erreichbarkeit, neue Fassung, fortbestehende Relevanz |
+
+## Entschieden am 2026-09-11: visuelles Ziel intern statt extern
+
+Die Quellenauswertung vom 11. September 2026 ergab, dass beide Anbieter erstanbieterlich empfehlen, einem Modell ein Bild als Ziel zu geben — Screenshot, Mockup oder Skizze, in frei wählbarem Detailgrad. Das steht in Spannung zur Regel, bei genau einer Website keine Live-Leitreferenz zu wählen.
+
+**Entscheidung: Die Referenzregel bleibt unverändert.** Der Mechanismus wird übernommen, die Quelle nicht. Das visuelle Ziel entsteht projektintern als Stilkachel `D0` und als gebautes Auftaktfeld, beides kanonisch in [[20-Design/Visual Iteration Loop]]. Begründung: Die Regel gegen eine externe Leitreferenz bei Einzelwebsites ist eine bewusste, am 2026-08-19 kanonisierte Entscheidung über Herkunft und Eigenständigkeit; die hier belegte Lücke betrifft dagegen das Fehlen **irgendeines** visuellen Ziels. Ein intern erzeugtes Ziel schließt die Lücke, ohne die Herkunftsfrage neu aufzumachen.
+
+**Auslöser für eine erneute Prüfung:** wenn eine Einzelwebsite trotz vollständig durchlaufenem Loop generisch bleibt. Dann ist zu prüfen, ob das interne Ziel wirklich ausreicht oder ob eine dokumentierte externe Leitreferenz auch bei genau einer Website zugelassen werden muss.
+
+## Offene Frage: Design Contract aus der Stilkachel erzeugen
+
+Im Ablauf eines OpenAI-Mitarbeiters (`Make Work Flow`, 11. September 2026 ausgewertet) entsteht die Design-Dokumentation **aus** Screenshots eines gelungenen Zustands und wird bei jeder Rückmeldung fortgeschrieben, statt vorab von Hand gefüllt zu werden. Der hiesige Design Contract läuft umgekehrt: erst ausfüllen, dann bauen.
+
+Beides hat einen Zweck. Vorab festlegen verhindert die wahrscheinlichste Lösung; nachträglich erfassen hält die Dokumentation am tatsächlich Gebauten. Mit der `D0 Stilkachel` aus [[20-Design/Visual Iteration Loop]] existieren jetzt beide Artefakte nebeneinander.
+
+**Zu prüfen:** ob Teile des Design Contracts künftig aus der gerenderten Kachel abgeleitet statt doppelt gepflegt werden. **Auslöser:** wenn beim nächsten Build auffällt, dass Kachel und Contract auseinanderlaufen.
+
+## Offene Lücke: keine Referenzimplementierung im Brain
+
+Das gesamte Design- und Frontend-Layer ist reine Prosa. In den vierzehn Notizen unter `20-Design/` und `30-Frontend/` steht **kein einziger Codeblock**. Es gibt damit kein Beispiel dafür, wie ein vollständiger Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]], eine Radius- und Rahmengrammatik nach [[20-Design/Typography Layout and Spacing#Radiusskala und Rahmenbehandlung]] oder eine Auftaktkomposition nach [[20-Design/Landing Page Craft#Auftakt-Repertoire]] konkret als HTML und CSS aussieht. Jeder Build übersetzt dieselben Regeln neu und landet dabei wieder beim Generator-Default.
+
+Erstanbieterliche Gegenposition aus dem Codex-Bootcamp vom Juni 2026: „Lay the foundation by hand, then let Codex scale it. Manually build a couple of representative features end-to-end. Show Codex what ‚correct' looks like on your team. Codex mimics your best-practices and builds upon them.", dazu das Anti-Muster „Skipping foundations forces constant explicit instruction or costly rewrites."
+
+**Status: offen, bewusst nicht in der Änderung vom 2026-09-11 gelöst.** Eine belastbare Referenzimplementierung ist ein eigener Auftrag und kein Nebenprodukt eines Quellen-Ingests. Zu entscheiden ist vorher, ob sie im Vault oder außerhalb liegt, denn ein mitgeliefertes Beispiel wird von Modellen leicht als Pflichtaussehen gelesen — genau das Problem, das [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] bei B5 bereits einmal korrigieren musste. Auslöser für die Entscheidung: der nächste Website-Auftrag, bei dem dieselbe Tokenlücke erneut auftritt.
 
 ## Eingeschränkt geprüfte Referenzen
 

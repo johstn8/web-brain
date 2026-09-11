@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 source: "[[90-References/Inspiration Catalog]]"
 impacts:
   - design-direction
@@ -186,6 +186,8 @@ Die Signaturen in diesem Abschnitt sind aus zwei öffentlich dokumentierten Must
 ## Impeccable KI-Detail-Review
 
 Verbindlich für **jede** gebaute Website, unabhängig davon, wie viele Websites der Auftrag verlangt. Der Review findet nach der Implementierung und vor der Abnahme statt, zusätzlich zu jedem Einsatz von Impeccable während der Gestaltung.
+
+Er setzt den abgeschlossenen [[20-Design/Visual Iteration Loop]] voraus und ersetzt ihn nicht: Der Loop bringt die Fassung auf Qualität, dieser Review prüft sie gegen den Befundkatalog. Ein Review auf einer Fassung, die noch keine drei Durchgänge hinter sich hat, findet Befunde, die der Loop selbst beseitigt hätte, und verbraucht dafür die teurere Prüfrunde.
 
 1. Website vollständig bauen und lokal starten.
 2. Impeccable nach [[00-Start/04 Plugins and Skills]] im Review-Modus auf die reale, laufende Website anwenden, nicht auf Entwürfe oder Beschreibungen.

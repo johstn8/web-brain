@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-09-11
 impacts:
   - design-tokens
   - components
@@ -50,7 +50,8 @@ Regeln zum Vertrag:
 - Für jede Rolle sind Default, Hover, Active, Disabled und die kontrastierende Inhaltsfarbe definiert.
 - Light und Dark werden getrennt kuratiert. Im Dunkelmodus wird nicht invertiert: Der Grund bleibt eine sehr dunkle, entsättigte Fläche, Rahmen werden heller statt dunkler, getönte Kategorieflächen laufen über denselben Ton bei etwa 25 bis 30 Prozent Deckung mit einer aufgehellten Schriftfarbe.
 - Die belegten Referenzwerte sind B5-Kalibrierung, keine Vorlage und kein stiller Fallback.
-- Die tatsächlich gesetzten Werte stehen im Design Contract jeder Website und in genau einer Tokenquelle ihres Codes nach [[30-Frontend/Architecture and Code Consistency]].
+- Die tatsächlich gesetzten Werte stehen in genau einer Tokenquelle des Codes nach [[30-Frontend/Architecture and Code Consistency]]; der Design Contract trägt die Herleitung je Rolle.
+- **Der Vertrag gilt erst als erfüllt, wenn er gerendert und angesehen wurde.** Eine Tabelle gesetzter Werte belegt nicht, dass eine Rolle in ihrer realen Kombination trägt. Der Beleg ist die Stilkachel `D0` nach [[20-Design/Visual Iteration Loop#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]], die jede Pflichtrolle mit ihrem realen Text in Licht und Dunkel zeigt.
 
 ## Harmonie
 

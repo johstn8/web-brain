@@ -1,13 +1,55 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 ---
 
 # Change Log
 
 > [!important] Geltung
 > Einträge vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo ältere Einträge feste Websitezahlen, Auswahlvarianten, Asset-Ausschlüsse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdrücklich überholt.
+
+## 2026-09-11 — Der Render wird Arbeitsmittel: Visual Iteration Loop als kanonische Notiz
+
+Auslöser war die Frage des Nutzers, warum Websites, die KI-Agenten mit diesem Brain als Second Brain bauen, gestalterisch noch nicht professionell wirken. Ausgewertet wurden sieben Videos und ein Foliensatz von OpenAI und Anthropic Labs; fünf davon trugen zu dieser Änderung bei.
+
+**Diagnose:** Das Wissen im Brain ist nicht die Ursache. [[20-Design/Landing Page Craft]], [[20-Design/Anti AI Slop]] und [[20-Design/Typography Layout and Spacing]] sind fachlich stark und belegt. Die Lücke lag zwischen Wissen und Ausführung, an drei Stellen:
+
+1. **Der Render war nur Nachweis.** In [[70-QA/Quality Gates]] stand „Screenshots liegen für die vorgeschriebenen Prüfbreiten vor". Nirgends stand, dass der Agent den Render ansieht, beurteilt und daraufhin korrigiert. Die einzige dokumentierte Schleife war der Impeccable-Review, der genau einmal nach der Implementierung läuft. Das ist eine Prüfung, keine Konvergenz. Ein Entwurf, der alle Regeln erfüllt, ist der erste Entwurf; die professionelle Anmutung entsteht in den Durchgängen danach.
+2. **Es gab keinen Divergenzschritt.** Das [[20-Design/Landing Page Craft#Auftakt-Repertoire]] bietet zehn Kompositionen an, aber keine wurde je gebaut und angesehen. Die Wahl fand rein gedanklich statt, und ein Sprachmodell wählt dabei die wahrscheinlichste Lösung. Das ist genau die Ursache, die [[20-Design/Landing Page Craft#Professionell gegen generiert]] selbst benennt.
+3. **Es gab kein visuelles Ziel.** Der Tokenvertrag wurde als Werteliste dokumentiert, nie als Bild geprüft. Eine Tabelle belegt nicht, dass `text-tertiary` auf `surface-alt` trägt.
+
+**Kanonisch neu**
+
+- [[20-Design/Visual Iteration Loop]] ist der neue kanonische Besitzer dafür, **durch welche Arbeit** eine gebaute Oberfläche ihre Qualität erreicht. Die Notiz führt den Loop `rendern -> ansehen -> benennen -> ändern`, den Schritt `D0 Stilkachel`, das Auftaktfeld, drei Pflichtdurchgänge, die Befundform, eine Abbruchregel und die Nachweisform.
+- **`D0 Stilkachel`**: Vor der ersten Komponente werden Tokenvertrag, Type Ramp, Radius-/Rahmen-/Tiefengrammatik, Aktionszustände, gewählte Inhaltsgrundform und Signaturdetail als **eine gerenderte Seite** ausgegeben und angesehen, in Licht und Dunkel, an echtem Text. Sie ersetzt die Werteaufzählung im Design Contract, sie kommt nicht zu ihr hinzu; [[20-Design/Color System#Tokenvertrag]] gilt erst als erfüllt, wenn er gerendert wurde.
+- **Auftaktfeld**: Zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten werden tatsächlich gebaut und nebeneinander bei 375 und 1280 Pixel beurteilt. Die Anzahl wird ausdrücklich verlangt, sonst entscheidet das Modell die Auswahl für sich. `prototype` wechselt in [[00-Start/04 Plugins and Skills#Prototype]] von optional auf für das Auftaktfeld verbindlich; seine Grenze auf einzelne Bauteile bleibt unverändert, ein Auftakt ist keine Website.
+- **Drei Pflichtdurchgänge** `D1 Komposition`, `D2 Rhythmus und Hierarchie`, `D3 Zustand und Detail`, je Website getrennt, jeder mit benannten Stopps und schriftlicher Befundliste aus Ort, Beobachtung und Änderung. Ein Render ohne Befundliste ist kein Durchgang.
+- **Rendernachweise sind ganzseitig**, nicht nur bis zur Falz. Überlauf, Kollision, abgeschnittene Popover und Fehlerzustände liegen unterhalb des sichtbaren Auftakts. Ergänzt in [[70-QA/Test Matrix]] und [[70-QA/Quality Gates]].
+- Der Loop läuft **vor** dem KI-Detail-Review und ersetzt ihn nicht: Der Loop bringt die Fassung auf Qualität, der Review prüft sie gegen den Befundkatalog. Ein Review auf einer Fassung ohne Durchgänge verbraucht die teurere Prüfrunde für Befunde, die der Loop selbst beseitigt hätte.
+- Propagiert durch `AGENTS.md`, [[00-Start/01 Core Rules]], [[00-Start/00 Brain Index]], [[00-Start/02 Routing Map]] mit zwei neuen Zeilen, [[00-Start/03 Update Protocol]], [[00-Start/04 Plugins and Skills]], [[00-Start/05 Web Product Workflow]] mit neuem Schritt 9, [[20-Design/Landing Page Craft]], [[20-Design/Anti AI Slop]], [[20-Design/Design Direction]], [[20-Design/Color System]], [[70-QA/Quality Gates]] mit drei neuen G1-Prüfpunkten, [[70-QA/Test Matrix]], [[80-Templates/Project Master Spec]], [[80-Templates/AI Build Prompt]] und [[98-Maintenance/Coverage and Impact Map]].
+
+**Konflikt und wie er entschieden wurde**
+
+Beide Anbieter empfehlen erstanbieterlich, dem Modell ein Bild als Ziel zu geben, etwa einen Screenshot oder ein Mockup in frei wählbarem Detailgrad. Das steht in Spannung zur Regel, bei genau einer Website keine Live-Leitreferenz zu wählen. **Die Referenzregel bleibt unverändert.** Übernommen wird der Mechanismus, nicht die Quelle: Das visuelle Ziel entsteht projektintern als `D0 Stilkachel` und als gebautes Auftaktfeld. Begründung und Auslöser für eine erneute Prüfung stehen in [[98-Maintenance/Review Queue]]. Der Nutzer hat die Entscheidung ausdrücklich dem Agenten überlassen.
+
+**Nicht geändert:** Referenzquote und Referenzmodus, Anzahl der Websites, Beweis-Hierarchie, Textbudgets, Motion-Budget, Stilprofile und Leitbenchmarks, Rechts-, Sicherheits- und Betriebsregeln. Bestehende Projektartefakte wurden nicht angefasst.
+
+**Als Anschlussidee vorgemerkt, nicht übernommen:** Dieselbe Quelle führt eine `design.md`, die aus Screenshots eines gelungenen Zustands erzeugt und bei jeder Rückmeldung fortgeschrieben wird, damit wiederkehrende Gestaltungskritik nicht in jeder Sitzung neu entsteht. Das Brain besitzt mit dem Design Contract und der `D0 Stilkachel` bereits zwei Träger dieser Funktion; ein dritter Speicher würde die kanonische Eindeutigkeit verletzen. Ob der Design Contract künftig aus der Kachel erzeugt statt von Hand gefüllt wird, ist in [[98-Maintenance/Review Queue]] als offene Frage vermerkt.
+
+**Bewusst nicht gelöst:** Das Design- und Frontend-Layer enthält in allen vierzehn Notizen **keinen einzigen Codeblock**. Es fehlt jede Referenzimplementierung dafür, wie Tokenvertrag, Radiusgrammatik oder Auftakt konkret als HTML und CSS aussehen. Die `D0 Stilkachel` löst das je Projekt, nicht im Brain. Als offener Punkt mit Auslöser in [[98-Maintenance/Review Queue]] eingetragen, weil ein mitgeliefertes Beispiel leicht als Pflichtaussehen gelesen wird — derselbe Fehler, den [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] bei B5 bereits einmal korrigieren musste.
+
+**Quellenbasis:** `Build beautiful frontends with OpenAI Codex` (Romain Huet und Channing aus dem Codex-Forschungsteam, erstanbieterlich), `Claude Code best practices` (Anthropic), `Introducing Claude Design by Anthropic Labs` (ohne Sprache, rein visuell ausgewertet), `Building websites with ChatGPT Sites` (OpenAI Solutions Engineering) und `Slides - Virtual Builder Bootcamp Codex` vom Juni 2026. Alle Zeitmarken in den Fußnoten sind gegen die erzeugten Transkripte geprüft. Dazu `Make Work Flow - Streamline team engagement with Codex`, das den vollständigen Frontend-Ablauf eines OpenAI-Mitarbeiters zeigt und den Loop unabhängig bestätigt: „This is most of my workflow with front design. It's just taking screenshots and giving them to Codex.", die Ablehnung des One-Shot-Baus, die ortsgebundene Anmerkung im Browser und die Eigenprüfung des Agenten am laufenden Build. Nicht eingeflossen sind `How marketing teams use Codex` und `OpenAI - How our marketing team uses ChatGPT Work`: beide behandeln Kampagnen-Briefings, Mood Boards, synthetische Kundenprofile und Anzeigen-Assets, nicht die Gestaltung von Websites. Das erste liegt koreanisch vor und wurde maschinell übersetzt; sein Wortlaut ist deshalb ausdrücklich nicht zitierfähig und wurde für keine Regel herangezogen. Beide wurden vollständig transkribiert und durchgesehen, bevor sie verworfen wurden.
+
+Transkripte, Frames und Evidenzdateien liegen außerhalb des Vaults im Ingest-Workspace und wurden nicht committet.
+
+**Graphify neu gebaut.** Die inkrementelle Erkennung meldete genau die 19 geänderten Dateien. Der Graph umfasst jetzt **1816 Knoten, 2500 Kanten, 11 Hyperkanten und 140 Gemeinschaften**, gegenüber 1202/1990/10/79. Die Integritätsdiagnose meldet keine hängenden, fehlenden, doppelten, kollabierten oder Selbstschleifen-Kanten. Sechs neue Gemeinschaften tragen die Themen dieser Änderung: `Visual Iteration Loop`, `D0 Stilkachel`, `Auftaktfeld: Divergenz vor Konvergenz`, `Pflichtdurchgänge und Rendernachweis`, `Impeccable KI-Detail-Review` und `Feinschliff am Render`.
+
+**Shrink-Schutz ist im ersten Anlauf angesprungen und war berechtigt.** Der erste Extraktionsdurchgang hätte den Graphen auf 1057 Knoten verkleinert. Die Prüfung nach der Graphify-Regel ergab: Die unberührten Dateien blieben vollständig (818 auf 816, reine Deduplizierung), der Verlust lag ausschließlich bei den 19 neu extrahierten Dateien (384 auf 241). Ursache war die Extraktionsgranularität dieses Laufs, nicht der Notenstand: Der vorherige Lauf hatte **jede Tabellenzeile als eigenen Knoten** geführt, etwa jede Slop-Signatur, jede Auftaktkomposition und jede Zeile der Zuständigkeitstabelle, während der erste Durchgang eine Tabelle zu einem Knoten mit vielen Kanten zusammenfasste. Für Abfragen nach dem kanonischen Besitzer einer einzelnen Regel wäre das ein Rückschritt gewesen. `graph.json` wurde deshalb aus der Sicherung wiederhergestellt und mit vorgegebenen Mindestdichten je Datei neu extrahiert; der zweite Lauf wächst auf 1816 Knoten. Der Shrink wurde nicht erzwungen.
+
+**Zwei Artefaktbesonderheiten dieses Laufs.** Die Signaturdatei `.graphify_labels.json.sig` war mit 69 Einträgen gegenüber 140 Gemeinschaften veraltet und wurde neu erzeugt, damit ein späterer Lauf keine Bezeichnung einer inzwischen anders zusammengesetzten Gemeinschaft weiterverwendet. `GRAPH_REPORT.md` nennt in der Kopfzeile den absoluten Pfad des bauenden Rechners; er lautet jetzt `/home/andreas/Downloads/web-brain-update/web-brain` statt `/srv/Web-Design/web-brain`. Das ist erzeugter Berichtstext, keine Notizangabe, und ändert keine Pfadauflösung im Vault.
+
+**Zur Quellenzuverlässigkeit:** Die Aussagen sind an Produktständen von Mitte 2026 belegt und teilweise werkzeugspezifisch. Übernommen wurde ausschließlich der Arbeitsvorgang, nicht die Werkzeugwahl; konkrete Werkzeuge bleiben in [[00-Start/04 Plugins and Skills]] mit eigener Prüffrist.
 
 ## 2026-09-03 — Die Landing Page bekommt eine eigene kanonische Notiz
 

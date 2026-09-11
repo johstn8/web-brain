@@ -72,11 +72,14 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Bei mehreren Websites: Nachweis, dass genau eine Fassung den Modus `ausgewählte Leitreferenz` besitzt, sofern starke Passung gefunden wurde, und die übrigen Eigenentwürfe die Referenz nicht quer übernehmen; andernfalls dokumentierte erfolglose Suche:
 - Optionale Negativreferenzen und daraus abgeleitete Verbote:
 - UI UX Pro Max: Query, Datum, **website-spezifisches** Ergebnisartefakt, Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack, gewählte Regeln und Abweichungen:
+- Stilkachel `D0` nach [[20-Design/Visual Iteration Loop#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]]: Pfad der gerenderten Kachel, Datum, Befunde und wie sie behoben wurden:
+- Auftaktfeld nach [[20-Design/Visual Iteration Loop#Divergenz vor Konvergenz: das Auftaktfeld]]: die zwei bis drei tatsächlich gebauten Fassungen mit je gewählter Komposition, die gewählte Fassung, die verworfenen und der Grund der Wahl:
+- Visual Iteration Loop nach [[20-Design/Visual Iteration Loop#Pflichtdurchgänge]], je Durchgang `D1`, `D2`, `D3` und weitere: Datum, benannte Stopps, Befundliste mit Ort/Beobachtung/Änderung, vorgenommene Änderung:
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
 - pen.dev: `use | skip`, Begründung, `.pen`-Pfade und Freigabestatus:
 - H0-Handwerksuntergrenze nach [[20-Design/Interface Benchmarks#H0 Handwerksuntergrenze]] und gewählte variable Stilparameter für Flächen, Radius, Rahmen, Tiefe, Karten, Kopfzeile, Zweitschrift und Motion:
 - Farbrollen mit benannter Herleitung, Typografie, Spacing, Grid, Radius, Shadow und Motion; häufige Defaults bewusst entschieden:
-- Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark, Quelle der Werte im Code:
+- Tokenvertrag nach [[20-Design/Color System#Tokenvertrag]]: Herleitung je Pflichtrolle und Quelle der Werte im Code; der Beleg, dass jede Rolle in ihrer realen Kombination trägt, ist die gerenderte Stilkachel, nicht diese Aufzählung:
 
 | Rolle | Wert hell | Wert dunkel | Herleitung |
 |---|---|---|---|
@@ -109,9 +112,9 @@ Vor UI-Code ausfüllen, wenn frühere Fassungen desselben Betriebs existieren.
 
 Genau so viele Zeilen wie im Auftrag verlangte Websites. Bei einer Website liegt der Pfad unter `site/`, bei mehreren unter `versions/NN-…`.
 
-| Website und Pfad | Leitidee / UI- und Unterseiten-Unterschied | Zugriff: `johannstein.com/dev` auf 217.154.218.30 oder lokaler Port/Start außerhalb | Motion-Choreografie und Fallback | Visual-/A11y-/Performance-/SEO-Nachweis | Impeccable-Review | Lieferstatus |
-|---|---|---|---|---|---|---|
-| | | | | | | |
+| Website und Pfad | Leitidee / UI- und Unterseiten-Unterschied | Zugriff: `johannstein.com/dev` auf 217.154.218.30 oder lokaler Port/Start außerhalb | Motion-Choreografie und Fallback | Visual-/A11y-/Performance-/SEO-Nachweis | Auftaktfeld und Durchgänge | Impeccable-Review | Lieferstatus |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
 
 ### Unterscheidungsmatrix
 

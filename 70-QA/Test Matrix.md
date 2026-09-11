@@ -51,6 +51,8 @@ Wo ein Deployment-Slot nach [[60-Operations/Owner Hosting and Dashboard#Deployme
 
 Jeder Gate-Check verweist auf Test, Screenshot, Report oder dokumentierte manuelle Prüfung mit Datum, Environment und Prüfer. „Sieht gut aus“ ist kein Nachweis. Für sichtbare UI-Fehler ist ein echter Rendernachweis zwingend; kann er nicht erzeugt werden, wird dies vor Lieferung als Blocker gemeldet.
 
+Rendernachweise für die visuelle Beurteilung werden **ganzseitig** erzeugt, nicht nur bis zur Falz. Überlauf, Kollision, abgeschnittene Popover und Fehlerzustände liegen typischerweise unterhalb des sichtbaren Auftakts. Der Arbeitsvorgang, in dem diese Renders entstehen und beurteilt werden, steht in [[20-Design/Visual Iteration Loop]]; ein Render ohne zugehörige Befundliste ist dort kein Durchgang.
+
 Für Designreferenzen ist ein Screenshot nur statischer Nachweis. Bewegung, Fokus, Tastatur, Touch, Ton, 3D/Canvas und Reduced Motion benötigen ein Interaktionsprotokoll, Video oder Trace gemäß [[90-References/Reference Research Workflow]].
 
 Für jede primäre Inhaltsroute zusätzlich Vorwärts-/Rückwärts-Scroll, schnelle Scrollbewegung, Deep Link/Reload innerhalb einer Scrollsequenz, Routewechsel während laufender Motion und die `prefers-reduced-motion`-Komposition prüfen.

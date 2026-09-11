@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: user-maintained
-updated: 2026-08-19
+updated: 2026-09-11
 ---
 
 # Plugins and Skills
@@ -109,11 +109,11 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Name: prototype
 - Typ: lokaler Skill aus dem Skillset von Emil Kowalski
-- Status: optional, für Divergenz in der Entwurfsphase
+- Status: **für das Auftaktfeld jeder gebauten Website verbindlich**, darüber hinaus optional für Divergenz in der Entwurfsphase; Auslöser und Umfang in [[20-Design/Visual Iteration Loop#Divergenz vor Konvergenz: das Auftaktfeld]]
 - Auslösung: `disable-model-invocation` ist gesetzt, der Skill startet nie von selbst und wird ausdrücklich aufgerufen
 - Quelle und Lizenz: [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT; Installation unter `/srv/Web-Design/shared-agent-skills/prototype/`, verlinkt nach `~/.claude/skills/` und `~/.agents/skills/`
 - Fähigkeiten: mehrere echte Fassungen eines beschriebenen UI-Teils, jede auf einer benannten Achse verschieden, hinter einem sichtbaren Umschalter zum Durchklicken
-- Grenzen und Risiken: **nur für einzelne Bauteile, Auftaktkompositionen und Interaktionsmuster.** Eine gebaute Website ist nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]] nie eine Auswahlvariante, deshalb wird der Skill niemals auf ganze Websites angewandt. Prototypen liegen außerhalb des Produktionscodes und werden nicht ausgeliefert
+- Grenzen und Risiken: **nur für einzelne Bauteile, Auftaktkompositionen und Interaktionsmuster.** Eine gebaute Website ist nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]] nie eine Auswahlvariante, deshalb wird der Skill niemals auf ganze Websites angewandt. Diese Grenze bleibt durch die neue Pflicht unberührt: Das Auftaktfeld vergleicht Kompositionen eines einzelnen Bauteils, keine Websites. Prototypen liegen außerhalb des Produktionscodes und werden nicht ausgeliefert
 - Datenzugriff: Projekttokens und die betroffene Komponente
 - In welchen Projekten erlaubt: alle UI-Projekte in der Entwurfsphase
 - Letzte Prüfung: 2026-08-16
@@ -140,7 +140,8 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 - Bei jeder neuen Website und jeder geänderten Motion Emil Design Engineering vor der Implementierung anwenden. Das Motion Inventory dokumentiert das gewählte Motion-Budget sowie für tatsächlich eingesetzte Bewegungen Zweck, Häufigkeit, Timing/Scroll-Range, Easing, Unterbrechbarkeit und Reduced-Motion-Fallback.
 - Beim Schreiben einer einzelnen Bewegung `animate` verwenden. Emil Design Engineering liefert die Haltung, `animate` die Entscheidungsreihenfolge und die Umsetzung.
 - **Vor der Abnahme jeder gebauten Website `review-animations` ausdrücklich aufrufen** und die Befunde entweder beheben oder mit Grund im Decision Log festhalten. Der Nachweis gehört zu Gate `G1`.
-- `prototype` nur in der Entwurfsphase und nur für einzelne Bauteile aufrufen, nie für ganze Websites.
+- **Für das Auftaktfeld jeder gebauten Website `prototype` verbindlich aufrufen**, danach den Visual Iteration Loop nach [[20-Design/Visual Iteration Loop]] führen. Darüber hinaus `prototype` nur in der Entwurfsphase und nur für einzelne Bauteile, nie für ganze Websites.
+- Der Loop braucht ein Browserwerkzeug, mit dem der Agent den laufenden Build selbst ganzseitig rendert und ansieht. Welches Werkzeug das ist, wird hier geführt; fehlt eines, ist das ein Blocker nach [[70-QA/Quality Gates]] und wird im Decision Log festgehalten.
 - Der Skill `apple-design` desselben Repositorys ist bewusst **nicht** installiert. Sein Inhalt steht als Referenz in [[90-References/Apple Fluid Interface]] und wird von dort gelesen.
 - Der Skill `find-animation-opportunities` desselben Repositorys ist derzeit **nicht** installiert. Sein Auswahlprinzip widerspricht dem [[20-Design/Motion and Interaction#Motion-Budget]] nicht mehr; bei künftiger Verfügbarkeit wird er nach Nutzen, Überschneidung und Wartungsaufwand neu bewertet.
 

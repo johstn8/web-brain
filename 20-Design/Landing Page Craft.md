@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 sources_checked: 2026-09-03
 review_by: 2027-03-01
 depends_on:
@@ -81,7 +81,7 @@ Die Rolle `Fortschritt` ist die, die am zweithäufigsten fehlt. Ein Auftakt, der
 
 ## Auftakt-Repertoire
 
-Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein Entscheidungsraum, keine Rangfolge. Genau eine Komposition wird gewählt und im Design Contract begründet.
+Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein Entscheidungsraum, keine Rangfolge. Genau eine Komposition wird gewählt und im Design Contract begründet. Die Wahl entsteht nicht gedanklich, sondern am Bild: Zwei bis drei Kompositionen aus dieser Liste werden mit denselben realen Inhalten tatsächlich gebaut und nebeneinander beurteilt, siehe [[20-Design/Visual Iteration Loop#Divergenz vor Konvergenz: das Auftaktfeld]].
 
 | Komposition | Wie sie funktioniert | Passt zu | Woran sie scheitert |
 |---|---|---|---|
@@ -178,7 +178,7 @@ Bedingungen: Es leitet sich aus Marke, Material, Ort, Produkt oder Inhalt her. E
 
 ## Feinschliff, der zuerst auffällt
 
-Diese Punkte trennen einen sauberen Entwurf von einem fertigen. Sie werden am realen Render geprüft, nicht am Entwurf.
+Diese Punkte trennen einen sauberen Entwurf von einem fertigen. Sie werden am realen Render geprüft, nicht am Entwurf. Der Arbeitsvorgang dafür — Auftaktfeld, Pflichtdurchgänge, Befundform und Abbruchregel — ist kanonisch in [[20-Design/Visual Iteration Loop]] geregelt; diese Liste ist der Inhalt, den `D2` und `D3` dort abarbeiten.
 
 - Typografischer Feinschliff nach [[20-Design/Typography Layout and Spacing#Typografischer Feinschliff]]: Zeilenumbruch der H1, Schusterjungen, optischer Randausgleich, Ziffernform, Zeilenlänge.
 - Optische statt mathematischer Ausrichtung: große Überschriften, freigestellte Objekte und Icons werden auf die wahrgenommene Kante ausgerichtet.

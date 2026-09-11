@@ -1,11 +1,12 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 depends_on:
   - "[[10-Strategy/Discovery and Scope]]"
 impacts:
   - "[[20-Design/Landing Page Craft]]"
+  - "[[20-Design/Visual Iteration Loop]]"
   - "[[20-Design/Color System]]"
   - "[[20-Design/Typography Layout and Spacing]]"
   - "[[20-Design/Motion and Interaction]]"
@@ -35,6 +36,7 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - die im Auftrag verlangte Anzahl vollständig gebauter Websites nach [[00-Start/05 Web Product Workflow#Anzahl der Websites]]; bei mehreren jeweils eigene Leitidee, Komposition, Unterseiten-Dramaturgie und Motion-Choreografie bei identischen Fakten und Funktionsanforderungen, belegt durch die Unterscheidungsmatrix aus dem Abschnitt Stilabstand bei mehreren Websites
 - Copy-Entscheidung nach [[10-Strategy/Website Copy]]: Anrede, Tonfall und die Stellen, an denen zusammenhängende ganze Sätze stehen
 - Kompositionsentscheidung für den Auftakt und für jede Sektionsart, ausdrücklich abweichend vom Standardmuster; siehe Abschnitt Komposition und Überschriften sowie [[20-Design/Landing Page Craft#Auftakt-Repertoire]]
+- die im Auftaktfeld tatsächlich gebauten Fassungen, die gewählte und die verworfenen, jeweils mit Komposition und Grund der Wahl; danach Datum, Stopps und Befundlisten der Durchgänge aus [[20-Design/Visual Iteration Loop]]
 - Nutzwertnachweis des Auftakts an den realen Prüfbreiten: vollständige Lesbarkeit, Verhältnis von Überschrift zu Inhaltsanker, sichtbare primäre Handlung und Übergang zur nächsten Nutzerfrage innerhalb der ersten zwei Bildschirmhöhen
 - Platzierung des Firmenlogos nach dem Abschnitt Logo des Betriebs
 - Kopfzeileninventar, Anordnung, Höhe, Navigationsbeschriftung und Mobile-Übergang sowie Fußbereichsstruktur und sonstiges Seiten-Chrome nach [[30-Frontend/Components and UI States#Kopfzeile und Hauptnavigation]]

@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 ---
 
 # Routing Map
@@ -24,7 +24,9 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Mehrere Websites im selben Auftrag | [[20-Design/Design Direction#Stilabstand bei mehreren Websites]], [[20-Design/Design Direction#Abstand zu Vorgängerfassungen]], [[00-Start/05 Web Product Workflow#Anzahl der Websites]], [[90-References/Reference Research Workflow]] | vor UI-Code ausgefüllte Unterscheidungsmatrix; genau eine referenzgeführte Fassung bei starker Passung, mindestens fünf wirksame Unterschiede ohne Verschlechterung der gemeinsamen Nutzstruktur, Vorgängerübernahme dokumentiert |
 | Schriftwahl | [[20-Design/Typography Layout and Spacing]], [[20-Design/Interface Benchmarks]] | Type Ramp, Rollen und Nachweis der Zeitbezugsintensität; starkes Epochenzitat nur bei Nutzerwunsch oder tragendem Markenbezug |
 | Kopfzeile und Hauptnavigation | [[30-Frontend/Components and UI States]], [[10-Strategy/Information Architecture and Sitemap]] | begründetes Inventar und Muster, Überlauf-/Reflow-Nachweis an realen Beschriftungen |
-| Website fertig, vor Abnahme | [[20-Design/Anti AI Slop]], [[00-Start/04 Plugins and Skills]], [[70-QA/Quality Gates]] | Impeccable KI-Detail-Review je Website mit Befundliste |
+| UI gebaut, bevor verfeinert wird | [[20-Design/Visual Iteration Loop]], [[20-Design/Landing Page Craft]], [[20-Design/Anti AI Slop#Slop-Signaturen]] | zwei bis drei gebaute Auftaktfassungen mit dokumentierter Wahl, danach mindestens drei Durchgänge D1 bis D3 mit Datum, Stopps, Befundliste und Änderung je Website |
+| Auftaktfassungen gegeneinander bauen | [[20-Design/Visual Iteration Loop#Divergenz vor Konvergenz: das Auftaktfeld]], [[20-Design/Landing Page Craft#Auftakt-Repertoire]], [[00-Start/04 Plugins and Skills#Prototype]] | verschiedene Kompositionen bei gleichen realen Inhalten, nebeneinander bei 375 und 1280 Pixel beurteilt, Wahl und verworfene Fassungen begründet |
+| Website fertig, vor Abnahme | [[20-Design/Anti AI Slop]], [[00-Start/04 Plugins and Skills]], [[70-QA/Quality Gates]] | abgeschlossener Visual Iteration Loop, danach Impeccable KI-Detail-Review je Website mit Befundliste |
 | Einzelne Bewegung bauen oder prüfen | [[20-Design/Motion and Interaction]], [[00-Start/04 Plugins and Skills#Animate]], [[00-Start/04 Plugins and Skills#Review Animations]] | Bewegung mit Zweck, Kurve, Dauer und Reduced-Motion-Fallback, vor der Abnahme durch `review-animations` geprüft |
 | Geste, Feder, Sheet oder Drag | [[90-References/Apple Fluid Interface]], [[20-Design/Motion and Interaction#Gestengeführte Bewegung]] | unterbrechbare Bewegung mit Geschwindigkeitsübergabe und projizierter Ruhelage |
 | Komponente | [[30-Frontend/Components and UI States]], [[30-Frontend/Accessibility]] | Zustandsmatrix und Tests |

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 ---
 
 # Coverage and Impact Map
@@ -20,6 +20,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | generische KI-Anmutung und Kicker | [[20-Design/Anti AI Slop|Anti AI Slop]] | Design Direction, Derived Design Patterns, Plugins and Skills, Quality Gates |
 | Logo des Betriebs | [[20-Design/Design Direction|Design Direction]] | Existing Website Rebuild, Asset Register, Source and Rights Review, Quality Gates |
 | Landing-Page-Aufbau, Auftaktkomposition, Auftaktrollen, Kopfzeilenrolle der Startseite und Abgrenzung zur generierten Anmutung | [[20-Design/Landing Page Craft|Landing Page Craft]] | Design Direction, Anti AI Slop, Components and UI States, Typography, Information Density, Content and Conversion, Derived Design Patterns, Master Spec, AI Build Prompt, Quality Gates |
+| Arbeitsvorgang der visuellen Qualität: Auftaktfeld, Iterationsdurchgänge, Befundform, Abbruch und Rendernachweis | [[20-Design/Visual Iteration Loop\|Visual Iteration Loop]] | Landing Page Craft, Design Direction, Anti AI Slop, Plugins and Skills, Web Product Workflow, Core Rules, Routing Map, Brain Index, Test Matrix, Quality Gates |
 | erkennbare Einzelsignaturen generierter Oberflächen | [[20-Design/Anti AI Slop#Slop-Signaturen\|Anti AI Slop]] | Landing Page Craft, Design Direction, Typography, Color System, Components and UI States, Motion, Quality Gates |
 | typografischer Feinschliff | [[20-Design/Typography Layout and Spacing#Typografischer Feinschliff\|Typography Layout and Spacing]] | Landing Page Craft, Anti AI Slop, Components and UI States, Quality Gates |
 | Kopfzeilenformen und ihre Wahl | [[30-Frontend/Components and UI States#Kopfzeilen-Repertoire\|Components and UI States]] | Landing Page Craft, Design Direction, Information Architecture, Test Matrix, Quality Gates |

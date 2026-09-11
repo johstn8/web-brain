@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-11
 depends_on:
   - "[[70-QA/Test Matrix]]"
 ---
@@ -66,7 +66,10 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] die Prüffragen aus [[20-Design/Landing Page Craft#Prüffragen vor der Abnahme]] sind je gebauter Landing Page am laufenden Build beantwortet
 - [ ] die vollständige semantische H1 ist bei 320, 375, 768, 1280 und 1440 Pixel, 200 Prozent Zoom und großer Systemschrift ohne Anschnitt, Maske, Überlagerung oder Kollision mit der realen klebenden Kopfzeile lesbar
 - [ ] auf Mobil beginnt spätestens innerhalb der zweiten Bildschirmhöhe sichtbar die nächste reale Nutzerfrage oder der erste konkrete Beweis; Schriftgröße, Kontaktmetadaten, Dekoration und ungenutzter Weißraum halten den Seitenfortschritt nicht auf
-- [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; Screenshots oder gleichwertige Rendernachweise liegen für die vorgeschriebenen Prüfbreiten vor
+- [ ] **Stilkachel `D0` gerendert und angesehen** nach [[20-Design/Visual Iteration Loop#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]]: jede Pflichtfarbrolle mit ihrem realen Text in Licht und Dunkel, Type Ramp an echtem Text, Radius-/Rahmen-/Tiefengrammatik, Aktionen in allen Zuständen, gewählte Inhaltsgrundform mit Leer- und Ladezustand, Signaturdetail; Befunde daran vor dem ersten Auftakt behoben
+- [ ] **Auftaktfeld gebaut**: zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten liegen vor, wurden nebeneinander bei 375 und 1280 Pixel beurteilt; Wahl, verworfene Fassungen und Grund stehen im Design Contract, siehe [[20-Design/Visual Iteration Loop#Divergenz vor Konvergenz: das Auftaktfeld]]
+- [ ] **Visual Iteration Loop durchlaufen**: mindestens die Durchgänge `D1`, `D2` und `D3` aus [[20-Design/Visual Iteration Loop#Pflichtdurchgänge]] je gebauter Website, jeweils mit Datum, benannten Stopps, schriftlicher Befundliste und der daraufhin vorgenommenen Änderung. Renders ohne zugehörige Befundliste erfüllen dieses Gate nicht
+- [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; die Rendernachweise sind **ganzseitig** und nicht nur der sichtbare Auftakt, damit Überlauf, Kollision und Fehlerzustände unterhalb der Falz sichtbar werden
 - [ ] kann in der Abnahmeumgebung keine echte Darstellung erzeugt werden, ist dies **vor der Lieferung ein Blocker**. Textanalyse, bestandene Tokenpaare oder ein nachträglicher Hinweis ersetzen den Render nicht
 - [ ] alle UI-Zustände gestaltet
 - [ ] Motion-Referenzen interaktiv geprüft; Reduced-Motion- und Medienfallback belegt
