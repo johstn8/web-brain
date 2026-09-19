@@ -56,7 +56,7 @@ Beides hat einen Zweck. Vorab festlegen verhindert die wahrscheinlichste Lösung
 
 ## Offene Lücke: keine Referenzimplementierung im Brain
 
-Das gesamte Design- und Frontend-Layer ist reine Prosa. In den vierzehn Notizen unter `20-Design/` und `30-Frontend/` steht **kein einziger Codeblock**. Es gibt damit kein Beispiel dafür, wie ein vollständiger Tokenvertrag nach [[20-design/color-system.md#Tokenvertrag]], eine Radius- und Rahmengrammatik nach [[20-design/typography-layout-and-spacing.md#Radiusskala und Rahmenbehandlung]] oder eine Auftaktkomposition nach [[20-design/landing-page-craft.md#Auftakt-Repertoire]] konkret als HTML und CSS aussieht. Jeder Build übersetzt dieselben Regeln neu und landet dabei wieder beim Generator-Default.
+Das gesamte Design- und Frontend-Layer ist reine Prosa. In den vierzehn Notizen unter `20-design/` und `30-frontend/` steht **kein einziger Codeblock**. Es gibt damit kein Beispiel dafür, wie ein vollständiger Tokenvertrag nach [[20-design/color-system.md#Tokenvertrag]], eine Radius- und Rahmengrammatik nach [[20-design/typography-layout-and-spacing.md#Radiusskala und Rahmenbehandlung]] oder eine Auftaktkomposition nach [[20-design/landing-page-craft.md#Auftakt-Repertoire]] konkret als HTML und CSS aussieht. Jeder Build übersetzt dieselben Regeln neu und landet dabei wieder beim Generator-Default.
 
 Erstanbieterliche Gegenposition aus dem Codex-Bootcamp vom Juni 2026: „Lay the foundation by hand, then let Codex scale it. Manually build a couple of representative features end-to-end. Show Codex what ‚correct' looks like on your team. Codex mimics your best-practices and builds upon them.", dazu das Anti-Muster „Skipping foundations forces constant explicit instruction or costly rewrites."
 

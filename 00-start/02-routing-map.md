@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 ---
 
 # Routing Map
@@ -10,11 +10,11 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 
 | Aufgabe | Pflichtkontext | Abschlussartefakt |
 |---|---|---|
-| Neue Website beauftragt | [[00-start/05-web-product-workflow.md]], [[60-operations/delivery-and-local-start.md]], [[60-operations/owner-hosting-and-dashboard.md]], [[10-strategy/discovery-and-scope.md]], [[20-design/motion-and-interaction.md]], [[30-frontend/seo-and-discoverability.md]] | Projektordner, owner-bearbeitbare Inhaltsblöcke mit stabilen Pointern, vollständige Websites mit Unterseiten und umgebungsgerechtem Zugriff, PROJECT.md und Pflichtartefakte |
+| Neue Website beauftragt | [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]], [[30-frontend/web-kit.md]], [[30-frontend/stack.md]], [[20-design/design-systems-und-artefakte.md]], [[60-operations/delivery-and-local-start.md]], [[60-operations/owner-hosting-and-dashboard.md]], [[10-strategy/discovery-and-scope.md]], [[20-design/motion-and-interaction.md]], [[30-frontend/seo-and-discoverability.md]] | in `PROJECT.md` festgehaltene Bahnwahl mit Begründung, Projektordner, owner-bearbeitbare Inhaltsblöcke mit stabilen Pointern, vollständige Websites mit Unterseiten und umgebungsgerechtem Zugriff, PROJECT.md und die Pflichtartefakte der gewählten Bahn |
 | Bestehende Website komplett neu bauen | [[10-strategy/existing-website-rebuild.md]], [[50-legal/assets-copyright-and-licenses.md]], [[50-legal/privacy-and-consent.md]] | Quelleninventar, Content-Recovery, verifizierte Profile/Maps-Links, SOURCE-RIGHTS-REVIEW.md ohne Build-Sperre oder Asset-Ersatz |
 | Navigation oder neue Seite | [[10-strategy/information-architecture-and-sitemap.md]], [[30-frontend/seo-and-discoverability.md]] | Sitemap und Navigation synchron |
 | Inspirationsrecherche | [[90-references/reference-research-workflow.md]], [[90-references/website-reference-pool.md]], [[90-references/inspiration-catalog.md]] | Referenzmodus nach Auftragszahl: Einzelwebsite als Eigenentwurf, bei mehreren genau eine referenzgeführte Fassung, sofern starke Passung gefunden wird; Entscheidungsmatrix und gegebenenfalls statischer/interaktiver Nachweis |
-| Visuelles Konzept | alle Notizen unter `20-Design`, [[00-start/04-plugins-and-skills.md]], [[90-references/pen-dev-workflow.md]] | Design Tokens, Direction, Leitbenchmark, UI UX Pro Max Nachweis und pen.dev-Entscheidung |
+| Visuelles Konzept | alle Notizen unter `20-design/`, [[20-design/design-systems-und-artefakte.md]], [[00-start/04-plugins-and-skills.md]], [[90-references/pen-dev-workflow.md]] | Design Tokens, Direction, Leitbenchmark, abgeleitetes Design-System-Artifact je Kunde, Ergebnisnachweis nach `G1` und pen.dev-Entscheidung |
 | Landing Page gestalten | [[20-design/landing-page-craft.md]], [[20-design/interface-benchmarks.md]], [[20-design/design-direction.md]], [[90-references/derived-design-patterns.md]], [[20-design/anti-ai-slop.md]], [[10-strategy/information-density-and-mobile-clarity.md]] | gewählte Auftaktkomposition mit besetzten sechs Auftaktrollen, Seitenaufbau aus realen Nutzerfragen, zwei bis drei Überschriftenanordnungen, begründete Kopfzeilenrolle, Signaturdetail, lesbarer Display-Nachweis, Übergang zur nächsten Nutzerfrage, Logo-Platzierung, durchlaufene Slop-Signaturen |
 | Auftakt oder Überschriftenanordnung überarbeiten | [[20-design/landing-page-craft.md]], [[20-design/design-direction.md#Komposition und Überschriften]], [[20-design/typography-layout-and-spacing.md#Typografischer Feinschliff]] | neue Kompositionsentscheidung mit Begründung, geprüfte H1-Lesbarkeit an allen Prüfbreiten, erneuter Impeccable-Review |
 | Dashboard, Datenansicht oder Verwaltungsoberfläche | [[20-design/interface-benchmarks.md]], [[30-frontend/components-and-ui-states.md]], [[20-design/color-system.md]]; bei Owner-Betrieb zusätzlich [[60-operations/owner-hosting-and-dashboard.md]] | Benchmark B1/B4 geprüft, Kennzahlen mit Bezugsgröße, Leerzustände, Rollen- und Veröffentlichungsmodell |

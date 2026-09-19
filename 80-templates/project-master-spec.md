@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-19
 ---
 
 # Project Master Spec
@@ -11,7 +11,8 @@ updated: 2026-08-27
 ## 0 Project Contract
 
 - Kanonischer Projektpfad: `../projekte/<Projektname>/`
-- Pflichtdateien verlinkt: `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md`, `DATA-PROCESSING-INVENTORY.md` und je Website `release-readiness/<website-slug>.md`
+- Bahn: `fast | full`, Grund: — Auslösebedingungen in [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]]; ohne Full-Lane-Auslöser gilt die Fast Lane
+- Pflichtdateien verlinkt: je Website `release-readiness/<website-slug>.md`; in der Full Lane zusätzlich `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md` und `DATA-PROCESSING-INVENTORY.md`
 - Bestehendes Projekt geöffnet oder neuer Ordner kollisionsfrei angelegt:
 - Zutreffende Brain-Notizen und Quality Gates:
 

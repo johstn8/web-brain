@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 ---
 
 # Brain Index
@@ -11,7 +11,7 @@ updated: 2026-09-11
 1. Regeln: [[AGENTS.md]]
 2. Minimaler Kontext: [[00-start/01-core-rules.md]]
 3. Aufgabenrouting: [[00-start/02-routing-map.md]]
-4. Verbindlicher Ablauf: [[00-start/05-web-product-workflow.md]]
+4. Verbindlicher Ablauf: [[00-start/05-web-product-workflow.md]]. Zuerst die Bahn wählen: die [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane|Fast Lane]] ist der Standard
 5. Website-Auftrag: zuerst `../projekte/<Projektname>/` samt `PROJECT.md`, Inventaren und eigenem Release-Readiness-Register je Website anlegen, danach die im Auftrag verlangte Anzahl vollständiger Websites mit Unterseiten, passendem Motion-Budget, SEO und umgebungsgerechtem Zugriff bauen. Ohne Angabe im Auftrag genau eine Website, siehe [[00-start/05-web-product-workflow.md#Anzahl der Websites]]
 6. Bei jeder UI: UI UX Pro Max ausführen, Leitbenchmark aus [[20-design/interface-benchmarks.md]] wählen
 7. Startseite oder Landing Page: [[20-design/landing-page-craft.md]] vor der ersten Zeile UI-Code lesen

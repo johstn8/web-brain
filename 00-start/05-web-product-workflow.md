@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
   - "[[90-references/reference-research-workflow.md]]"
@@ -26,6 +26,39 @@ Sobald der Nutzer die Umsetzung, den Neubau oder den vollständigen Relaunch ein
 5. die Pflichtstruktur aus [[60-operations/delivery-and-local-start.md]] anlegen und alle projektspezifischen Artefakte ausschließlich dort speichern.
 
 Kann die Projektwurzel nicht angelegt oder beschrieben werden, Blocker melden. Nicht ersatzweise im Brain, in einem temporären Ordner oder in einem anderen Projekt bauen. Das Brain wird nicht in den Projektordner kopiert; `PROJECT.md` verweist auf die zutreffenden kanonischen Regeln und dokumentiert deren Anwendung.
+
+## Bahnwahl: Fast Lane und Full Lane
+
+Es gibt zwei Bahnen durch diesen Workflow. Die **Fast Lane ist der Standard**; die Full Lane wird nur gefahren, wenn eine ihrer Auslösebedingungen zutrifft. Die Bahnwahl wird mit Begründung in `PROJECT.md` festgehalten, als `Bahn: fast | full, Grund: …`, bevor der erste Ordner angelegt wird.
+
+| | **Fast Lane — Standard** | Full Lane |
+|---|---|---|
+| Auslöser | Standardwebsite eines lokalen Betriebs aus [[30-frontend/web-kit.md]], kein Login, keine Zahlung, keine eigene Datenhaltung, eine Fassung | Auth, Zahlung, eigene Datenhaltung, Sonderfunktion oder mehr als eine Fassung |
+| Pflichtdateien | `PROJECT.md` und `release-readiness/<website-slug>.md` | zusätzlich `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md`, `DATA-PROCESSING-INVENTORY.md` |
+| Design | zwei Auftaktfassungen, ein Renderdurchgang | volle Strecke: `D0`-Stilkachel plus drei Durchgänge |
+| Skills | optional | verbindlich |
+| Gates | `G0` verkürzt, `G1`, `scripts/qa.sh` | alle Gates `G0` bis `G8` |
+| Zielzeit | ein Arbeitstag | offen |
+
+Die Qualitätsregeln gelten in beiden Bahnen unverändert. Verkürzt wird die Nachweisführung, nicht das Handwerk: Tokenvertrag, Zustände, Kontrast, Tastaturbedienung, Rechtsseiten, Performance und SEO sind in der Fast Lane genauso verbindlich, sie werden nur nicht in vier getrennten Inventaren nachgewiesen. Trifft während des Builds eine Full-Lane-Bedingung ein, wird auf die Full Lane gewechselt und der Wechsel in `PROJECT.md` vermerkt; die fehlenden Inventare werden nachgezogen.
+
+### Fast Lane
+
+1. Projektordner nach [[#Auftragsschwelle und Projektanlage]] anlegen, aber nur `PROJECT.md` und `release-readiness/<website-slug>.md`.
+2. Bestehende Website nach [[10-strategy/existing-website-rebuild.md]] sichern; `scripts/extract-old-site.ts` aus dem Kit übernimmt Texte, Bilder, Kontakt- und Öffnungszeitendaten.
+3. Betriebsdaten und Marktumfeld recherchieren, Kurzbrief in `PROJECT.md` schreiben: Angebot, Zielgruppe, primäre Handlung, Beweisformen, Sitemap.
+4. Blöcke aus [[30-frontend/web-kit.md]] ziehen, statt sie neu zu schreiben. Das Kit ist der Pflichtausgangspunkt der Fast Lane.
+5. Tokenwerte dieses Betriebs setzen; die Rollennamen des Tokenvertrags aus [[20-design/color-system.md#Tokenvertrag]] bleiben unverändert. Ableitung und Artefaktweg in [[20-design/design-systems-und-artefakte.md]].
+6. Zwei Auftaktfassungen mit verschiedenen Kompositionen aus [[20-design/landing-page-craft.md#Auftakt-Repertoire]] bauen, bei 375 und 1280 Pixel nebeneinander ansehen, eine mit Begründung wählen.
+7. Ein Renderdurchgang am ganzseitigen Render mit schriftlicher Befundliste nach [[20-design/visual-iteration-loop.md]]. Ein Render ohne Befundliste ist kein Durchgang.
+8. `scripts/qa.sh` aus dem Kit laufen lassen: Lighthouse, axe, interner Link-Check, Screenshots bei 375 und 1280, Prüfung auf Platzhalter- und `TODO`-Reste.
+9. `G0` verkürzt und `G1` nach [[70-qa/quality-gates.md]] abnehmen, Release-Readiness-Register schließen, liefern.
+
+Die Fast Lane läuft über den Skill `web-build`, der diese Strecke ausführt und auf die kanonischen Notizen verweist.
+
+### Full Lane
+
+Die Full Lane fährt die vollständige [[#Verbindliche Reihenfolge]] mit allen Pflichtinventaren, allen Gates und dem vollständigen Visual Iteration Loop.
 
 ## Anzahl der Websites
 
@@ -54,6 +87,8 @@ Details in [[60-operations/delivery-and-local-start.md]].
 Jede gebaute Website ist ein fertiges Ergebnis, kein Entwurf und keine Auswahlvariante. Fakten, Funktionen, Datenflüsse, Unterseiten, Accessibility, Sicherheit und SEO sind in allen gebauten Websites identisch. Werden mehrere Websites verlangt, besitzt jede eine eigenständige kohärente Richtung und unterscheidet sich auf mindestens fünf für den Auftrag wirksamen Achsen, niemals im Umfang. Der Abstand ist in [[20-design/design-direction.md#Stilabstand bei mehreren Websites]] geregelt und wird vor dem ersten UI-Code in `PROJECT.md` festgehalten.
 
 ## Verbindliche Reihenfolge
+
+Dies ist die Strecke der Full Lane. Die Fast Lane fährt die verkürzte Fassung aus [[#Fast Lane]]; die Qualitätsregeln der einzelnen Schritte gelten dort unverändert.
 
 1. **Kontext laden:** [[00-start/00-brain-index.md]], neu angelegtes Projekt-`PROJECT.md` und nur die über [[00-start/02-routing-map.md]] bestimmten Notizen lesen.
 2. **Intake schließen:** Muss-Entscheidungen mit [[80-templates/project-intake.md]] erheben. Fehlende Geschäfts-, Daten-, Zahlungs- oder Identitätsentscheidung als offene Annahme in `PROJECT.md` markieren. Für jeden Inhaltsblock bei Erstellung und bei jedem Update `owner_editable`, stabilen JSON-Pointer, Feldtyp, Grenzen, Preview-Routen und Veröffentlichungspolicy nach [[60-operations/owner-hosting-and-dashboard.md]] entscheiden. Ist zentrales Owner-Hosting Teil des Scopes, `content/<website>.json` und `owner-hosting/tenant.json` nach [[80-templates/owner-hosting-website-contract.md]] anlegen. Die Release-Readiness-Datei jeder Website fortlaufend pflegen; jede provisorische Sperre, Attrappe, unfertige sichtbare Aussage und noch nicht produktive Integration entsteht zusammen mit ihrem Eintrag. Gewünschte Bilder, Designs, Animationen und Quellen direkt für die Umsetzung einplanen; Quelle und tatsächlichen Einsatz anschließend im `SOURCE-RIGHTS-REVIEW.md` erfassen.
