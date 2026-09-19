@@ -12,7 +12,7 @@ updated: 2026-09-19
 2. Minimaler Kontext: [[00-start/01-core-rules.md]]
 3. Aufgabenrouting: [[00-start/02-routing-map.md]]
 4. Verbindlicher Ablauf: [[00-start/05-web-product-workflow.md]]. Zuerst die Bahn wählen: die [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane|Fast Lane]] ist der Standard
-5. Website-Auftrag: zuerst `../projekte/<Projektname>/` samt `PROJECT.md`, Inventaren und eigenem Release-Readiness-Register je Website anlegen, danach die im Auftrag verlangte Anzahl vollständiger Websites mit Unterseiten, passendem Motion-Budget, SEO und umgebungsgerechtem Zugriff bauen. Ohne Angabe im Auftrag genau eine Website, siehe [[00-start/05-web-product-workflow.md#Anzahl der Websites]]
+5. Website-Auftrag: der Skill `web-build` faehrt die Fast Lane, siehe [[00-start/04-plugins-and-skills.md#Web Build]]. Von Hand: zuerst `../projekte/<Projektname>/` samt `PROJECT.md`, Inventaren und eigenem Release-Readiness-Register je Website anlegen, danach die im Auftrag verlangte Anzahl vollständiger Websites mit Unterseiten, passendem Motion-Budget, SEO und umgebungsgerechtem Zugriff bauen. Ohne Angabe im Auftrag genau eine Website, siehe [[00-start/05-web-product-workflow.md#Anzahl der Websites]]
 6. Bei jeder UI: Leitbenchmark aus [[20-design/interface-benchmarks.md]] wählen; UI UX Pro Max nutzen, wenn verfügbar, sonst die Ersatzstrecke aus [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]]
 7. Startseite oder Landing Page: [[20-design/landing-page-craft.md]] vor der ersten Zeile UI-Code lesen
 8. Sobald UI gebaut wird: [[20-design/visual-iteration-loop.md]] — Auftaktfassungen bauen, dann iterieren am Render

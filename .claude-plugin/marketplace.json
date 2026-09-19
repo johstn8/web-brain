@@ -1,0 +1,11 @@
+{
+  "name": "johstn8",
+  "owner": { "name": "Johann Stein" },
+  "plugins": [
+    {
+      "name": "web-build",
+      "source": "./",
+      "description": "Fast Lane fuer Websites lokaler Betriebe: Projektordner, Extract, Brief, Kit-Bloecke, Tokens, Renderdurchgang, qa.sh, Release-Readiness."
+    }
+  ]
+}

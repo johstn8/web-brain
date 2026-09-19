@@ -161,6 +161,31 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 - Der Skill `apple-design` desselben Repositorys ist bewusst **nicht** installiert. Sein Inhalt steht als Referenz in [[90-references/apple-fluid-interface.md]] und wird von dort gelesen.
 - Der Skill `find-animation-opportunities` desselben Repositorys ist derzeit **nicht** installiert. Sein Auswahlprinzip widerspricht dem [[20-design/motion-and-interaction.md#Motion-Budget]] nicht mehr; bei künftiger Verfügbarkeit wird er nach Nutzen, Überschneidung und Wartungsaufwand neu bewertet.
 
+## Web Build
+
+- Name: `web-build`
+- Typ: eigener Skill dieses Repositorys, unter `.claude/skills/web-build/`
+- Status: Standardweg fuer Website-Auftraege lokaler Betriebe
+- Auslösung: die Beschreibung triggert auf Website-Auftraege fuer lokale Betriebe; der Skill laedt sich selbst, statt gelesen werden zu muessen
+- Quelle und Lizenz: eigenes Werk, mit diesem Vault versioniert
+- Fähigkeiten: fuehrt die Fast Lane aus [[00-start/05-web-product-workflow.md#Fast Lane]] aus - Projektordner, Extract der alten Seite, Recherche, Brief, Kit-Bloecke ziehen, Tokens setzen, Auftaktfassungen, Renderdurchgang, `qa.sh`, Release-Readiness
+- Grenzen und Risiken: nur Fast Lane. Auth, Zahlung, eigene Datenhaltung, Sonderfunktion oder mehrere Fassungen loesen den Wechsel auf die Full Lane aus. Der Skill verweist auf die kanonischen Notizen und dupliziert sie nicht; bei Widerspruch gilt die Notiz
+- Datenzugriff: der Projektordner, `web-kit/` und dieses Vault
+- In welchen Projekten erlaubt: Websites lokaler Betriebe
+- Letzte Prüfung: 2026-09-19
+- Review bis: 2027-03-19
+
+### Installation ueber das Plugin
+
+`.claude-plugin/` buendelt den Skill als Plugin, damit er auf Laptop und Server mit einem Befehl installiert ist statt manuell verlinkt:
+
+```
+/plugin marketplace add johstn8/web-brain
+/plugin install web-build@johstn8
+```
+
+Ein manuell verlinkter Skill laeuft auf zwei Maschinen frueher oder spaeter auseinander; das Plugin macht `/plugin update` zur einzigen noetigen Handlung.
+
 ## Vorrang der Brain-Regeln vor Skill-Vorschlägen
 
 Skills liefern Vorschläge, keine Freigaben. Widerspricht ein Skill-Vorschlag einer kanonischen Notiz, gilt die Notiz, und der Konflikt wird im Decision Log des Projekts vermerkt, statt ihn stillschweigend zugunsten des Skills zu entscheiden.

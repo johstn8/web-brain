@@ -49,11 +49,14 @@ for f in mdfiles:
             if anchor and slug(anchor) not in headings.get(tgt, set()):
                 dead.append((f, i, m.group(0), 'Anker fehlt in ' + tgt))
 
+# Ausnahmen: Dateinamen, die durch Konvention gross geschrieben sind.
+# SKILL.md verlangt Claude Code so, AGENTS.md und CLAUDE.md sind
+# Agentenvertraege, graphify-out/ ist generiert.
+KONVENTION = re.compile(r'(AGENTS|CLAUDE|README|SETUP-OFFEN|SKILL|MEMORY)\.md')
 bad_paths = [f for f in files
              if (' ' in f or f != f.lower())
-             and not re.fullmatch(r'(AGENTS|CLAUDE|README|SETUP-OFFEN)\.md', os.path.basename(f))
-             and not f.startswith('graphify-out/')
-             and os.path.basename(f) != 'README.md']
+             and not KONVENTION.fullmatch(os.path.basename(f))
+             and not f.startswith('graphify-out/')]
 
 for f, i, l, why in dead:
     print(f'TOT  {f}:{i}  {l}  -> {why}')

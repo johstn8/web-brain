@@ -1,0 +1,10 @@
+{
+  "name": "web-build",
+  "version": "1.0.0",
+  "description": "Baut Websites lokaler Betriebe nach dem Web-Brain: Fast Lane von der Beauftragung bis zur Abnahme, mit den Bloecken und Skripten aus web-kit.",
+  "author": { "name": "Johann Stein" },
+  "homepage": "https://github.com/johstn8/web-brain",
+  "repository": "https://github.com/johstn8/web-brain",
+  "license": "UNLICENSED",
+  "keywords": ["website", "astro", "lokaler-betrieb", "design-system", "qa"]
+}
