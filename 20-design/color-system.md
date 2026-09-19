@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 impacts:
   - design-tokens
   - components
@@ -24,33 +24,41 @@ impacts:
 
 Verbindlicher Mindestsatz an Farbrollen für jede gebaute Website. Der Vertrag sichert vollständige Zustände, schreibt aber keine B5-Flächenlogik vor. Grund, Flächen, Textstufen, Rahmen- und Akzentzustände erhalten benannte Werte; wie nah, kontrastreich, häufig oder flächig diese Rollen erscheinen, entscheidet der Design Contract der einzelnen Website.
 
-| Rolle | Aufgabe | Belegter Referenzwert hell | Pflicht |
-|---|---|---|---|
-| `bg` | Seitengrund | `#fafafa` | ja |
-| `surface` | primäre Inhalts- oder Bedienfläche | `#ffffff` | ja |
-| `surface-alt` | kontrastierende oder eingebettete Fläche, sofern benötigt | `#f5f5f5` | ja |
-| `text` | Überschriften und primärer Text | `#0a0a0a` | ja |
-| `text-secondary` | Lead, Erklärzeile, Fließtext zweiter Ordnung | `#525252` | ja |
-| `text-tertiary` | Metazeile, Beschriftung, deaktivierter Text | `#a3a3a3` | ja |
-| `border` | ruhender Hairline-Rahmen und Trennlinie | `#e5e5e5` | ja |
-| `border-hover` | Rahmen bei Hover, Fokus und ausgewähltem Zustand | `#d4d4d4` | ja |
-| `accent` | Marke, primäre Aktion, aktiver Zustand | eine Farbe mit belegter Herkunft | ja |
-| `accent-subtle` | getönte Fläche für Tags, Icon-Träger, ausgewählte Zeile | derselbe Ton bei etwa 8 Prozent Deckung | ja |
-| `accent-contrast` | Schrift und Icon auf gefüllter Akzentfläche | geprüft gegen `accent` | ja |
-| `focus` | Fokusring, deutlich von `accent` unterscheidbar wenn nötig | | ja |
-| `success` `warning` `danger` | semantische Zustände samt zugehöriger `-subtle`-Tönung | | ja |
-| Kategorietöne | feste Zuordnung je Kategorie, nur als Tönung und Icon-Tint | | nur wenn Kategorien existieren |
+| Rolle | Aufgabe | Pflicht |
+|---|---|---|
+| `bg` | Seitengrund | ja |
+| `surface` | primäre Inhalts- oder Bedienfläche | ja |
+| `surface-alt` | kontrastierende oder eingebettete Fläche, sofern benötigt | ja |
+| `text` | Überschriften und primärer Text | ja |
+| `text-secondary` | Lead, Erklärzeile, Fließtext zweiter Ordnung | ja |
+| `text-tertiary` | Metazeile, Beschriftung, deaktivierter Text | ja |
+| `border` | ruhender Hairline-Rahmen und Trennlinie | ja |
+| `border-hover` | Rahmen bei Hover, Fokus und ausgewähltem Zustand; wahrnehmbar verschieden von `border` | ja |
+| `accent` | Marke, primäre Aktion, aktiver Zustand; die Herkunft der Farbe ist im Design Contract belegt | ja |
+| `accent-subtle` | getönte Fläche für Tags, Icon-Träger, ausgewählte Zeile; bleibt erkennbar mit `accent` verwandt | ja |
+| `accent-contrast` | Schrift und Icon auf gefüllter Akzentfläche, gegen `accent` auf Kontrast geprüft | ja |
+| `focus` | Fokusring, deutlich von `accent` unterscheidbar wenn nötig | ja |
+| `success` `warning` `danger` | semantische Zustände samt zugehöriger `-subtle`-Tönung | ja |
+| Kategorietöne | feste Zuordnung je Kategorie, nur als Tönung und Icon-Tint | nur wenn Kategorien existieren |
+
+> [!important] Wo die Werte stehen
+> Diese Tabelle hält den **Vertrag**: welche Rollen es gibt, was jede leistet und welche Pflicht ist. Sie hält **keine Werte mehr**.
+>
+> Die Werte des neutralen Basissystems stehen in `web-kit/tokens/tokens.json`, die je Gewerk abweichenden in `web-kit/tokens/presets/`. Siehe [[30-frontend/web-kit.md#Art-Direction-Presets]]. Die Werte eines Kunden entstehen im Design Contract und gehen von dort nach [[20-design/design-systems-und-artefakte.md]] weiter.
+>
+> Der Grund für die Trennung: Bis zum 19.09.2026 standen dieselben Rollen mit Werten an zwei Stellen, und sie liefen auseinander — `text-tertiary` erreichte mit dem hier genannten Referenzwert auf `surface` nur 2,52:1 statt 4,5:1, `border-hover` gegen `border` nur 1,18:1. Beide Fehler fielen erst auf, als das Kit sie nachrechnete. Zwei Quellen für denselben Wert sind genau die doppelte Haltung, die dieses Vault ausschließt.
+>
+> Die belegten Werte des Stilprofils B5 stehen unverändert dort, wo sie hingehören: als Beleg über eine externe Referenz in [[20-design/interface-benchmarks.md#Flächenlogik des Stilprofils]].
 
 Regeln zum Vertrag:
 
-- **`border-hover` und `accent-subtle` sind nicht optional.** Ohne sie entsteht der tote Hoverzustand und die fehlende getönte Tag-Pille, die eigenen Builds bisher gefehlt haben.
+- **`border-hover` und `accent-subtle` sind nicht optional.** Ohne sie entsteht der tote Hoverzustand und die fehlende getönte Tag-Pille, die eigenen Builds bisher gefehlt haben. `border-hover` muss gegen `border` **wahrnehmbar** verschieden sein; ein Wechsel unter etwa 1,2:1 ist derselbe tote Zustand mit gesetztem Token.
 - Abstand, Reihenfolge und Einsatz der Flächenrollen gehören zur Art Direction. Drei nahe Stufen sind die B5-Variante; eine andere Website darf stärkere Flächenwechsel, eine dunkle Bühne, rahmenlose Abschnitte oder eine reduzierte Flächenzahl wählen.
 - Die drei Textstufen sind eine Hierarchie, kein Vorrat. Jede Stufe hat eine feste Aufgabe. Vier oder mehr Graustufen für Text sind ein Befund.
 - `accent-subtle` bleibt erkennbar mit `accent` verwandt; ob dies über Deckkraft oder einen separat kuratierten Ton geschieht, entscheidet das Farbmodell der Website.
 - Für jede Rolle sind Default, Hover, Active, Disabled und die kontrastierende Inhaltsfarbe definiert.
 - Light und Dark werden getrennt kuratiert. Im Dunkelmodus wird nicht invertiert: Der Grund bleibt eine sehr dunkle, entsättigte Fläche, Rahmen werden heller statt dunkler, getönte Kategorieflächen laufen über denselben Ton bei etwa 25 bis 30 Prozent Deckung mit einer aufgehellten Schriftfarbe.
-- Die belegten Referenzwerte sind B5-Kalibrierung, keine Vorlage und kein stiller Fallback.
-- Die tatsächlich gesetzten Werte stehen in genau einer Tokenquelle des Codes nach [[30-frontend/architecture-and-code-consistency.md]]; der Design Contract trägt die Herleitung je Rolle.
+- Die tatsächlich gesetzten Werte stehen in genau **einer** Tokenquelle des Projekts nach [[30-frontend/architecture-and-code-consistency.md#Einheitlichkeit]], abgeleitet aus dem Kit. Der Design Contract trägt die Herleitung je Rolle, nicht eine zweite Werteliste.
 - **Der Vertrag gilt erst als erfüllt, wenn er gerendert und angesehen wurde.** Eine Tabelle gesetzter Werte belegt nicht, dass eine Rolle in ihrer realen Kombination trägt. Der Beleg ist die Stilkachel `D0` nach [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]], die jede Pflichtrolle mit ihrem realen Text in Licht und Dunkel zeigt.
 
 ## Harmonie

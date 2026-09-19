@@ -44,7 +44,9 @@ Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertra
 
 ### Kalibrierte Type Ramp
 
-Ausgangswerte, belegt in [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]]. Sie werden übernommen, wenn keine Markenentscheidung dagegen steht.
+Diese Werte beschreiben die Typografie des **wählbaren Stilprofils B5**, belegt in [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]]. Sie sind **keine** kanonischen Basiswerte für jede Website und kein stiller Fallback. Jede Website setzt ihre eigene Ramp; die Belegwerte dürfen vollständig, teilweise oder gar nicht übernommen werden.
+
+Die Werte, die tatsächlich ausgeliefert werden, stehen in `web-kit/tokens/tokens.json` und in den Presets unter `web-kit/tokens/presets/`, siehe [[30-frontend/web-kit.md#Art-Direction-Presets]]. Die Ramp des Kits weicht bewusst ab: Sie spannt den Gewichtsraum von 300 bis 800, weil die hier belegten 600 bis 700 für sich genommen keine Hierarchie tragen.
 
 | Stufe | Größe | Zeilenhöhe | Gewicht | Tracking |
 |---|---|---|---|---|
@@ -100,7 +102,7 @@ Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente le
 - Keine frei driftenden Einzelwerte: Jede verwendete Rundung gehört zu einer benannten Stufe oder ist eine dokumentierte optische Korrektur.
 - Verschachtelte Flächen leiten ihre Innenform aus der Außenform und dem Innenabstand ab.
 - Pillen sind nur eine Option für Status, Tags oder kompakte Umschalter. Sie sind kein Standard für primäre Aktionen.
-- Die B5-Kalibrierung `6–8px / 10–12px / 16–20px / 9999px` darf übernommen werden, wenn B5 für diese Website gewählt wurde. Sie gilt nicht projektübergreifend.
+- Die B5-Kalibrierung `6–8px / 10–12px / 16–20px / 9999px` darf übernommen werden, wenn B5 für diese Website gewählt wurde. Sie gilt nicht projektübergreifend. Fünf abweichende, ausgebaute Radiusgrammatiken liegen als Datei in [[30-frontend/web-kit.md#Art-Direction-Presets]] — von Radius null bis zur weichen Stufung.
 
 ## Tiefe und Rahmen
 

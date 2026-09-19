@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-09-19
 depends_on:
   - "[[90-references/inspiration-catalog.md]]"
 impacts:
@@ -66,7 +66,7 @@ Bezug: das vom Nutzer gelieferte Dashboard-Bild sowie das ATS-Dashboard, beide i
 - Eine einzige Radiusstufe für Container, ungefähr `12px` bis `14px`. Pillen nur für Statusanzeigen.
 - Linienicons in einer Strichstärke. Icons sind klein und stehen nie größer als der Text, den sie begleiten.
 - Fortschrittsbalken sind flach, wenige Pixel hoch, mit hellgrauer Spur und einer einzigen kräftigen Füllung. Beschriftung links, Wert rechts, beide über dem Balken.
-- Listeneinträge bestehen aus rundem, sehr hell getöntem Icon-Träger, kräftiger Titelzeile und einer grauen Metazeile im Muster `Name · Zeitangabe`.
+- Listeneinträge bestehen aus rundem, sehr hell getöntem Icon-Träger, kräftiger Titelzeile und einer grauen Metazeile im Muster `Name · Zeitangabe`. Der Mittelpunkt trennt hier genau **zwei** sachlich verschiedene Felder und trägt damit Information; als Aneinanderreihung von drei oder mehr Werten auf jeder Karte wäre er ein Befund nach [[20-design/anti-ai-slop.md#Chrome und Beschriftung]].
 - Großzügiger Innenabstand in den Containern und deutlich sichtbare Abstände zwischen den Blöcken. Dichte entsteht durch Inhalt, nicht durch Zusammenrücken.
 
 **Typografie:** eine neutrale, geometrisch geprägte Grotesk. Titel halbfett, Kennzahlen fett, Fließtext und Metazeilen normal in Grau. Keine Serifen, keine Versalzeilen als Dekoration.
@@ -150,7 +150,7 @@ Die B5-Kartenvariante mit allen Werten und Zuständen steht in [[30-frontend/com
 
 - Eine Karte existiert, weil ihr Inhalt eine eigene, anklickbare oder eigenständig lesbare Einheit ist. Sie existiert nie, weil ein Absatz eine Umrandung braucht.
 - Innerhalb einer Karte gibt es eine klare Reihenfolge: Medium oder Icon, Titel, eine Zeile Erklärung, darunter eine Metazeile in gedeckter Farbe, darunter höchstens eine Aktion.
-- Die Metazeile trennt mit `·` und bleibt einzeilig. Eine Mono-Schrift für technische Werte und Tags ist Teil dieses Stilprofils und wird nicht auf andere Websites übertragen.
+- Die Metazeile trennt mit `·` und bleibt einzeilig; die Grenze aus [[20-design/anti-ai-slop.md#Chrome und Beschriftung]] gilt auch hier. Eine Mono-Schrift für technische Werte und Tags ist Teil dieses Stilprofils und wird nicht auf andere Websites übertragen.
 - Bildflächen in Karten sitzen randlos an der Oberkante mit nur oben gerundeten Ecken und einem festen Seitenverhältnis, im Beleg `16/9`. Kein Rahmen zwischen Bild und Kartenrand.
 - Innenabstand ist großzügig und projektweit identisch. Dichte entsteht über Inhalt, nicht über engere Polster.
 

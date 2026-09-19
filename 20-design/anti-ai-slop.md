@@ -128,13 +128,20 @@ Diese Merkmale erscheinen unabhaengig vom Thema und sind deshalb besonders verra
 
 | Signatur | Warum sie auffaellt | Stattdessen |
 |---|---|---|
-| Metazeile aus Einzelwerten, mit Mittelpunkt verbunden (`A · B · C`) | Gliederungszeichen ohne Gliederungsaufgabe; erscheint in generierten Seiten als Standardausstattung jeder Karte | die Werte in einen Satz setzen oder als benannte Felder auszeichnen |
+| Metazeile aus drei oder mehr Werten, mit Mittelpunkt verbunden (`A · B · C`), auf jeder Karte jedes Abschnitts | Gliederungszeichen ohne Gliederungsaufgabe: es erscheint nicht, weil die Werte es brauchen, sondern weil Metazeilen so aussehen | die Werte in einen Satz setzen oder als benannte Felder auszeichnen. Zwei wirklich verschiedene Felder in einer Zeile zu trennen ist eine gültige Entscheidung, siehe unten |
 | Beschriftung im Muster `WORT — Fragment` mit gesperrtem Gedankenstrich | geliehene Redaktionsanmutung | Rubrik und Aussage trennen oder die Rubrik weglassen |
 | angehaengter Pfeil an Link- und Buttontext (`Mehr erfahren →`) | Dekoration, die keine zusaetzliche Information traegt; der Link ist bereits als Link erkennbar | den Text die Handlung benennen lassen |
 | getoentes Fast-Schwarz (`#0B0B0B`, `#111`) statt Schwarz oder einer hergeleiteten Dunkelstufe | Kompromisswert ohne Entscheidung | echtes Schwarz oder eine aus dem Material hergeleitete Dunkelstufe |
 | Monospace fuer kleine Datenbeschriftungen ohne technischen Bezug | Technik-Anmutung als Dekoration | Mono nur in den im Design Contract benannten Rollen, siehe [[20-design/typography-layout-and-spacing.md#Kalibrierte Type Ramp]] |
 | Gewichtskontrast 400 gegen 600 als einzige Hierarchiestufe | zu nah beieinander, um Hierarchie zu tragen; zugleich der haeufigste Default | echten Gewichtsraum nutzen, etwa 300 gegen 800 |
 | Schriftfamilie Inter, Roboto, Open Sans, Lato oder der System-Stack ohne Begruendung | die zuverlaessigsten Schrifthinweise auf eine generierte Seite | bewusst gewaehlte Familie, siehe [[30-frontend/web-kit.md#Art-Direction-Presets]] |
+
+> [!note] Der Mittelpunkt ist nicht das Merkmal
+> Das Merkmal ist der **unbegründete, überall gleiche** Einsatz. Ein `·`, der genau zwei sachlich verschiedene Felder in einer Zeile trennt — etwa Name und Zeitangabe in einem Aktivitätseintrag — trägt Information und ist eine Entscheidung auf der Stilebene. So steht er in [[20-design/interface-benchmarks.md#B1 Soft Neutral Product Console]] und unter dieser Bedingung in [[30-frontend/components-and-ui-states.md#Kartenentscheidung]].
+>
+> Die Prüffrage lautet nicht „steht dort ein Mittelpunkt", sondern: **Verbindet er Felder, die zusammen in eine Zeile gehören, und wäre ein Satz oder eine Feldauszeichnung hier schlechter?** Bei zwei echten Feldern ist die Antwort oft ja. Ab drei aneinandergereihten Werten, quer über jede Karte jedes Abschnitts, ist sie nein.
+>
+> [[20-design/interface-benchmarks.md]] führt den Metazeilentrenner ausdrücklich als Stilebene, je Website zu entscheiden — nicht als Teil der H0-Handwerksuntergrenze. Ein Benchmark, der ihn nutzt, widerspricht diesem Katalog deshalb nicht.
 
 ### Bekannte Ballungen
 
