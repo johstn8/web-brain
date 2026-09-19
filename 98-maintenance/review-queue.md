@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 next_review: 2026-11-01
 ---
 # Review Queue
@@ -22,7 +22,7 @@ Diese Quellen ändern sich real und sind teuer, wenn das Brain sie falsch wieder
 
 **Auf Eis, Stand 2026-08-16.** Die Routine ist inhaltlich fertig, aber nicht angelegt. Das Claude-Konto ist inzwischen mit GitHub verknüpft, die GitHub-App hat jedoch keinen Zugriff auf das private Repository `johstn8/web-brain`, weshalb die API die Anlage ablehnt. Der Nutzer hat das Thema am 2026-08-16 ausdrücklich zurückgestellt. **Damit findet für diese beiden Zeilen derzeit keine Prüfung statt.** Zum Aufwecken genügt es, das Repository unter https://github.com/settings/installations für die Claude-App freizugeben und die Routine mit den Angaben aus der Tabelle und dem folgenden Absatz anzulegen.
 
-Die Routine liest die Fußnoten-URLs der drei Notizen, vergleicht sie mit der abgeleiteten Aussage und schreibt ihr Ergebnis direkt nach `main`. Ohne Befund aktualisiert sie nur Datum und Status dieser beiden Zeilen, damit sichtbar bleibt, dass sie gelaufen ist. Mit Befund legt sie einen Abschnitt `Befunde der Quartalsprüfung` in dieser Notiz an. Eindeutige Änderungen übernimmt sie selbst, alles Abwägungsbedürftige markiert sie als offene Entscheidung. Den Graphen baut sie nicht neu; das holt die nächste lokale Sitzung nach.
+Die Routine liest die Fußnoten-URLs der drei Notizen, vergleicht sie mit der abgeleiteten Aussage und schreibt ihr Ergebnis direkt nach `main`. Ohne Befund aktualisiert sie nur Datum und Status dieser beiden Zeilen, damit sichtbar bleibt, dass sie gelaufen ist. Mit Befund legt sie einen Abschnitt `Befunde der Quartalsprüfung` in dieser Notiz an. Eindeutige Änderungen übernimmt sie selbst, alles Abwägungsbedürftige markiert sie als offene Entscheidung. Den Graphen baut sie nicht neu; ein Neubau ist seit dem 19.09.2026 ohnehin keine Pflicht mehr, sondern eine Entscheidung nach Bedarf.
 
 ## Anlassgebunden geprüft
 
