@@ -1,9 +1,9 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-24
+updated: 2026-09-19
 depends_on:
-  - "[[60-operations/owner-hosting-and-dashboard.md]]"
+  - "[[60-operations/owner-hosting-interface.md]]"
 impacts:
   - project-master-spec
   - content-schema
@@ -266,7 +266,7 @@ Eine Telefonnummer steht in der Inhaltsdatei zweimal: als Text für die Anzeige 
 
 Der Owner wählt links das Land und tippt rechts die nationale Nummer ohne führende Null; Trennzeichen setzt das Feld. Beide Pointer werden daraus gemeinsam geschrieben. Beide Zielpointer müssen in den Basiswerten existieren.
 
-Ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Begründung und Regeln in [[60-operations/owner-hosting-and-dashboard.md#Eine Angabe ist ein Feld]].
+Ein einfaches Textfeld `tel` ist für neue Verträge nicht mehr zulässig. Begründung und Regeln in `owner-hosting: docs/hosting-and-dashboard.md#Eine Angabe ist ein Feld`.
 
 ### `surface` sagt, wo ein Feld bearbeitet wird
 
@@ -283,7 +283,7 @@ Ein Bildfeld ist im Regelfall `seite`. Es beschreibt keine Angabe über den Betr
 
 Was der Owner unmittelbar auf der Seite ändert — dieser Satz, diese Ausrichtung —, wird **nicht** als Vertragsfeld nachgetragen. Die Quelle kennt diesen Satz nicht als Feld, sondern nur als Text im Markup; ein Feld dafür wäre eine Erfindung.
 
-Solche Änderungen sind **Darstellungsregeln**: Seite, Anker im Dokument, optionaler Text, aufgezählte Gestaltung. Sie stehen in einer eigenen Spalte neben dem Overlay, werden nach dem Bau auf das Release angewendet und sind in [[60-operations/owner-hosting-and-dashboard.md#Der Seiteneditor]] verbindlich geregelt. Für die Vertragsvorlage folgt daraus nur eines: Ein Vertrag muss dafür **nichts** vorsehen, und es ist kein Grund, ein Feld zu erfinden.
+Solche Änderungen sind **Darstellungsregeln**: Seite, Anker im Dokument, optionaler Text, aufgezählte Gestaltung. Sie stehen in einer eigenen Spalte neben dem Overlay, werden nach dem Bau auf das Release angewendet und sind in `owner-hosting: docs/hosting-and-dashboard.md#Der Seiteneditor` verbindlich geregelt. Für die Vertragsvorlage folgt daraus nur eines: Ein Vertrag muss dafür **nichts** vorsehen, und es ist kein Grund, ein Feld zu erfinden.
 
 ### Was nie freigegeben wird, steht nicht im Vertrag
 
@@ -336,7 +336,7 @@ Ein Bildfeld ersetzt eine Datei an einem registrierten Pfad. Der Dateiname in de
 
 - Jeder Pfad unter `files` muss in der Quelle bereits existieren. Ein Vertrag darf ein Bild ersetzen, aber keines erfinden, das die Website gar nicht einbindet.
 - `spec` ist verbindlich und wird serverseitig gegen die tatsächlichen Bilddaten geprüft, nicht gegen Endung oder gemeldeten Typ.
-- Sind mehrere Formate nötig, genügt **eine** hochgeladene Datei; die übrigen entstehen serverseitig. Dieselbe Datei unter zwei Namen abzulegen ist ausgeschlossen. Begründung in [[60-operations/owner-hosting-and-dashboard.md#Eine Datei genügt, die übrigen Fassungen entstehen daraus]].
+- Sind mehrere Formate nötig, genügt **eine** hochgeladene Datei; die übrigen entstehen serverseitig. Dieselbe Datei unter zwei Namen abzulegen ist ausgeschlossen. Begründung in `owner-hosting: docs/hosting-and-dashboard.md#Eine Datei genügt, die übrigen Fassungen entstehen daraus`.
 - Der Alternativtext ist Pflicht. Ein Bild ohne ihn ist ein Fehler, keine Geschmacksfrage.
 
 ## Builder-Checkliste vor Registrierung
@@ -375,7 +375,7 @@ Für **unveränderliche Altprojekte** gibt es eine eng begrenzte Ausnahme. Ein A
 - Er listet jeden bearbeitbaren Pointer mit Typ, Grenzen, Hilfetext und den betroffenen Stellen der Website auf. Was nicht aufgeführt ist, existiert für den Eigentümer nicht.
 - Jeder Pointer muss in der Quelldatei bereits existieren. Overlays legen keine neuen Ebenen an; ein Vertrag kann keine Felder erfinden, die die Website gar nicht rendert.
 - Pointer mit `legalImpact` erscheinen auch in Impressum oder Datenschutzerklärung. Für sie verlangt das Dashboard vor dem Veröffentlichen eine sichtbare, ausdrücklich bestätigte Rechtsprüfung. Alternativ bleibt das Feld im ersten Pilot gesperrt.
-- Gebaut wird über einen Legacy-Buildadapter nach [[60-operations/owner-hosting-and-dashboard.md#Legacy-Adapter für unveränderliche Altprojekte]]: isolierte Kopie, gepinnter Quellhash, kein Schreiben in die Quelle.
+- Gebaut wird über einen Legacy-Buildadapter nach `owner-hosting: docs/hosting-and-dashboard.md#Legacy-Adapter für unveränderliche Altprojekte`: isolierte Kopie, gepinnter Quellhash, kein Schreiben in die Quelle.
 
 Ein Legacy-Vertrag beginnt bewusst klein. Für den ersten vertikalen Schnitt genügen Kontaktwege, strukturierte Öffnungszeiten und ein Schalter. Rechtstexte, Navigation, Routen, Preise, Tracking und Buildkonfiguration bleiben gesperrt.
 

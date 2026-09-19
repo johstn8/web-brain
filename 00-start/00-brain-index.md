@@ -26,7 +26,7 @@ updated: 2026-09-19
 - Frontend: [[30-frontend/stack.md]], [[30-frontend/architecture-and-code-consistency.md]], [[30-frontend/components-and-ui-states.md]], [[30-frontend/accessibility.md]], [[30-frontend/performance.md]], [[30-frontend/seo-and-discoverability.md]]
 - Backend und Sicherheit: [[40-backend-security/security-baseline.md]], [[40-backend-security/authentication-and-accounts.md]], [[40-backend-security/data-apis-and-billing.md]]
 - Recht: [[50-legal/legal-decision-tree.md]], [[50-legal/privacy-and-consent.md]], [[50-legal/assets-copyright-and-licenses.md]]
-- Betrieb: [[60-operations/delivery-and-local-start.md]], [[60-operations/owner-hosting-and-dashboard.md]], [[60-operations/release-readiness-register.md]], [[60-operations/dependencies-and-environments.md]], [[60-operations/observability-and-maintenance.md]]
+- Betrieb: [[60-operations/delivery-and-local-start.md]], [[60-operations/owner-hosting-interface.md]], [[60-operations/release-readiness-register.md]], [[60-operations/dependencies-and-environments.md]], [[60-operations/observability-and-maintenance.md]]
 - Qualität: [[70-qa/quality-gates.md]], [[70-qa/test-matrix.md]]
 - Vorlagen: [[80-templates/templates-index.md]]
 - Inspiration und Quellen: [[90-references/website-reference-pool.md]], [[90-references/reference-research-workflow.md]], [[90-references/inspiration-catalog.md]], [[90-references/apple-fluid-interface.md]], [[90-references/derived-design-patterns.md]], [[90-references/tools-and-libraries.md]], [[90-references/pen-dev-workflow.md]]

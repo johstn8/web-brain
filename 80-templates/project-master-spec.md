@@ -168,7 +168,7 @@ Nach [[10-strategy/website-copy.md]] festhalten:
 ## 7 Legal
 
 - Märkte, Impressum, Privacy, Consent, Accessibility, Verbraucherpflichten; nur prüfpflichtige Entwürfe und benannter Owner für eine spätere Einschätzung:
-- Dienstleister/Transfers/AVV; bei Owner-Hosting Rollenverteilung und AVV-Prüfung nach [[60-operations/owner-hosting-and-dashboard.md]]:
+- Dienstleister/Transfers/AVV; bei Owner-Hosting Rollenverteilung und AVV-Prüfung nach [[60-operations/owner-hosting-interface.md]]:
 - tatsächlicher Asset- und Quelleneinsatz; spätere Owner-Hinweise in `SOURCE-RIGHTS-REVIEW.md`, ohne Ersatz, Auslassung oder KI-Entscheidung:
 - Altes Impressum/Privacy als Faktenquelle ausgewertet; neue Datenflüsse abgeglichen:
 - spätere fachliche Einschätzung durch Nutzer/Owner, ohne technische Sperre durch die KI:

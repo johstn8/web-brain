@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-19
 ---
 
 # AI Build Prompt
@@ -62,7 +62,7 @@ Verbindlich:
 - Copy nach [[10-strategy/website-copy.md]]: keine Meta-Sätze über die Seite, keine sichtbaren „Stand“-Daten, keine Negativabgrenzung, keine Selbstverständlichkeiten, kein verbloses Statement unter einer Überschrift, keine erfundene Dreierfigur, kein Semikolon und kein Gedankenstrich als Einschub, dafür ganze Sätze an den tragenden Stellen
 - bei mehreren Websites die Unterscheidungsmatrix vor dem ersten UI-Code ausfüllen und mindestens fünf wirksame Achsen deutlich unterscheiden; sachlich gleiche Lösungen dürfen begründet wiederkehren
 - bei mehreren Websites zuerst die gemeinsame sachlich beste Nutzstruktur festlegen; keine Fassung durch fehlenden Inhaltsanker, unlesbare Übergröße, stärkeren Retrograd oder eine schlechtere Sektionsfolge künstlich unterscheiden
-- bei Erstellung und jedem Update je Inhaltsblock `owner_editable`, stabilen JSON-Pointer, Feldtyp, Grenzen, Preview-Routen und Veröffentlichungspolicy nach [[60-operations/owner-hosting-and-dashboard.md]] entscheiden; bei zentralem Owner-Hosting den Vertrag nach [[80-templates/owner-hosting-website-contract.md]] anlegen
+- bei Erstellung und jedem Update je Inhaltsblock `owner_editable`, stabilen JSON-Pointer, Feldtyp, Grenzen, Preview-Routen und Veröffentlichungspolicy nach [[60-operations/owner-hosting-interface.md]] entscheiden; bei zentralem Owner-Hosting den Vertrag nach [[80-templates/owner-hosting-website-contract.md]] anlegen
 - je Website ab Projektbeginn `release-readiness/<website-slug>.md` nach [[60-operations/release-readiness-register.md]] führen; jede neue Vorschau-Sperre, Attrappe, sichtbare Unfertig-Aussage und noch nicht produktive Integration in derselben Änderung eintragen
 - serverseitige AuthZ/Validierung, sichere Sessions, Rate- und Kostenlimits
 - Sitemap, Dateninventar, prüfpflichtige Rechtstexte, Dependencies, Tests und Betrieb atomar aktuell halten

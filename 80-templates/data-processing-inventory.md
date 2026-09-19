@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-08-17
+updated: 2026-09-19
 ---
 
 # Data Processing Inventory
@@ -28,7 +28,7 @@ Inventar gegen Netzwerk-Scan, Code, Environment, CSP, Tags, Datenbank, Logs und 
 
 ## Zusatz bei Owner-Hosting
 
-Gilt das Betriebsmodell aus [[60-operations/owner-hosting-and-dashboard.md]], werden getrennte Blöcke mindestens für diese Verarbeitungen angelegt:
+Gilt das Betriebsmodell aus [[60-operations/owner-hosting-interface.md]], werden getrennte Blöcke mindestens für diese Verarbeitungen angelegt:
 
 - Owner-Konto, Passwort-Hash, Einladung, Recovery und Sitzungen
 - Audit Log aus Login, Entwurf, Veröffentlichung, Rollback, Rollen- und Wartungsmodusänderung

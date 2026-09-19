@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-31
+updated: 2026-09-19
 impacts:
   - dependencies
   - environments
@@ -125,7 +125,7 @@ Der Veröffentlichungsstatus ist Metadatenstatus, kein Datei-Move. Er wird atoma
 
 ### Test-Slot johannstein.de
 
-Oberhalb der drei Übersichten steht eine rote Zielfläche. Sie ist **keine vierte Lane**, sondern ein einzelnes Deployment-Ziel nach [[60-operations/owner-hosting-and-dashboard.md#Deployment-Slots]]:
+Oberhalb der drei Übersichten steht eine rote Zielfläche. Sie ist **keine vierte Lane**, sondern ein einzelnes Deployment-Ziel nach `owner-hosting: docs/hosting-and-dashboard.md#Deployment-Slots`:
 
 - Genau eine Website ist gleichzeitig unter `johannstein.de` aktiv, mit Dashboard unter `hosting.johannstein.de`.
 - Jede erkannte Fassung darf hierher gezogen werden, auch eine unveränderliche Archivfassung. Sie bleibt dabei in ihrem Bereich; der Veröffentlichungsstatus in `catalog.json` wird nicht angefasst und nicht umgedeutet.
@@ -147,7 +147,7 @@ Die öffentliche Freigabefunktion referenziert weiterhin die konkrete Quellgrupp
 
 ## Owner-Hosting
 
-Das zentrale Produkt wird einmal unter `/srv/Web-Design/projekte/owner-hosting/` gebaut. Kundenprojekte liefern ausschließlich den versionierten Vertrag aus `content/<website>.json` und `owner-hosting/tenant.json` nach [[80-templates/owner-hosting-website-contract.md]]. Registrierung, Vorschau, Publish/Rollback, Wartungsmodus, Laufzeitpfade und Datenschutz stehen in [[60-operations/owner-hosting-and-dashboard.md]].
+Das zentrale Produkt wird einmal unter `/srv/Web-Design/projekte/owner-hosting/` gebaut. Kundenprojekte liefern ausschließlich den versionierten Vertrag aus `content/<website>.json` und `owner-hosting/tenant.json` nach [[80-templates/owner-hosting-website-contract.md]]. Registrierung, Vorschau, Publish/Rollback, Wartungsmodus, Laufzeitpfade und Datenschutz stehen in [[60-operations/owner-hosting-interface.md]].
 
 ## Environments
 

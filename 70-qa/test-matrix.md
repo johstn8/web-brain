@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-19
+updated: 2026-09-19
 ---
 
 # Test Matrix
@@ -34,7 +34,7 @@ Zusätzlich je Website den Produktions-Cutover aus [[60-operations/release-readi
 
 ## Deployment-Slots und Owner Hosting
 
-Wo ein Deployment-Slot nach [[60-operations/owner-hosting-and-dashboard.md#Deployment-Slots]] betrieben wird, sind zusätzlich zu prüfen:
+Wo ein Deployment-Slot nach `owner-hosting: docs/hosting-and-dashboard.md#Deployment-Slots` betrieben wird, sind zusätzlich zu prüfen:
 
 - **Slotwechsel:** Ein Drop merkt nur vor und verändert weder Website noch Katalogstatus. Erst die zweite Bestätigung baut. Nach Erfolg zeigen öffentliche Website und Dashboard dieselbe Website.
 - **Atomarer Doppelwechsel:** Zu keinem Zeitpunkt gehört der öffentliche Release zu einer anderen Website als der Dashboard-Tenant.

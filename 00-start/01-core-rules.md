@@ -51,7 +51,7 @@ impacts:
 ## Engineering
 
 - Bei Erstellung und jedem Update wird je Inhaltsblock dokumentiert, ob der Owner ihn ohne Builder bearbeiten darf, mit stabilem JSON-Pointer, Feldtyp, Grenzen, Preview-Routen und Veröffentlichungspolicy. Bei Owner-Hosting folgt der Vertrag [[80-templates/owner-hosting-website-contract.md]].
-- Die öffentliche Website bleibt statisch. Das Owner-Dashboard ist eine einzige zentrale Anwendung unter `/srv/Web-Design/projekte/owner-hosting/`, wird nicht je Kundenprojekt kopiert und veröffentlicht über einen getrennten Worker neue statische Builds. Siehe [[60-operations/owner-hosting-and-dashboard.md]].
+- Die öffentliche Website bleibt statisch. Das Owner-Dashboard ist eine einzige zentrale Anwendung unter `/srv/Web-Design/projekte/owner-hosting/`, wird nicht je Kundenprojekt kopiert und veröffentlicht über einen getrennten Worker neue statische Builds. Siehe [[60-operations/owner-hosting-interface.md]].
 - Semantisches HTML und progressive Verbesserung zuerst.
 - Jede Interaktion besitzt Default-, Hover-, Focus-, Active-, Disabled-, Loading-, Success-, Error-, Empty- und Offline-Zustände, soweit anwendbar.
 - Mobile, Tastatur, Screenreader und reduzierte Bewegung sind Teil des Features, kein Nachtrag vor der Abnahme. Prüfstrecke in [[30-frontend/accessibility.md#Prüfung]].
