@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
 impacts:
@@ -13,6 +13,8 @@ impacts:
 ---
 
 # Design Direction
+
+Wo die entschiedenen Werte danach leben - Basissystem, abgeleitetes System je Kunde, Design-Canvas fuer die Auftaktfassungen, Docs fuer die Uebergabe - regelt [[20-design/design-systems-und-artefakte.md]].
 
 ## Direction Brief
 

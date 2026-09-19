@@ -16,6 +16,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Navigation und Lesereihenfolge | [[00-start/00-brain-index.md|Brain Index]] | Routing Map, README |
 | Web-Produkt-Ablauf | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Routing Map, Intake, Master Spec, AI Build Prompt, Quality Gates |
 | Bahnwahl Fast Lane und Full Lane | [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane\|Web Product Workflow]] | Brain Index, Routing Map, Master Spec, web-kit, Quality Gates |
+| wo Tokens, Auftaktfassungen und Kundendokumente leben | [[20-design/design-systems-und-artefakte.md\|Design Systems und Artefakte]] | Brain Index, Routing Map, Design Direction, Color System, web-kit, Master Spec |
 | wiederverwendbares Material: Bloecke, Tokens, Starter, Skripte | [[30-frontend/web-kit.md\|web-kit]] | Stack, Workflow, Color System, Design Systems und Artefakte, Quality Gates |
 | Tech-Stack | [[30-frontend/stack.md\|Stack]] | Brain Index, Architecture and Code Consistency, web-kit, Performance, Dependencies, Master Spec, Quality Gates |
 | Anzahl der Websites | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Delivery, Master Spec, Sitemap, Design Direction, Motion, SEO, Tests, Quality Gates, Decision Log |
