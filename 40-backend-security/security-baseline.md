@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-03
+updated: 2026-09-19
 review_by: 2027-02-03
 impacts:
   - architecture
@@ -18,6 +18,8 @@ impacts:
 Für System, Nutzerrollen, Daten, Geldflüsse und Drittanbieter dokumentieren: Assets, Vertrauensgrenzen, Angreifer, Missbrauchsfälle, Folgen und Controls. OWASP ASVS und Cheat Sheets als Prüfbasis, nicht als Ersatz für projektspezifische Analyse.[^owasp]
 
 ## Pflichtkontrollen
+
+Client-Code ist nicht vertrauenswürdig. Sicherheit, Berechtigungen und Geschäftsregeln werden ausschließlich serverseitig erzwungen; die Oberfläche spiegelt das Ergebnis nur wider.
 
 - Autorisierung bei jeder Serveraktion und jedem Objektzugriff; Default Deny und Least Privilege.
 - RLS bei mandantenfähiger Datenbank, ergänzt durch serverseitige Tests. Service-Role-Schlüssel nie im Client.

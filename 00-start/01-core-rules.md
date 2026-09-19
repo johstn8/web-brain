@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-19
 impacts:
   - "[[80-templates/project-master-spec.md]]"
   - "[[70-qa/quality-gates.md]]"
@@ -53,7 +53,8 @@ impacts:
 - Bei Erstellung und jedem Update wird je Inhaltsblock dokumentiert, ob der Owner ihn ohne Builder bearbeiten darf, mit stabilem JSON-Pointer, Feldtyp, Grenzen, Preview-Routen und Veröffentlichungspolicy. Bei Owner-Hosting folgt der Vertrag [[80-templates/owner-hosting-website-contract.md]].
 - Die öffentliche Website bleibt statisch. Das Owner-Dashboard ist eine einzige zentrale Anwendung unter `/srv/Web-Design/projekte/owner-hosting/`, wird nicht je Kundenprojekt kopiert und veröffentlicht über einen getrennten Worker neue statische Builds. Siehe [[60-operations/owner-hosting-and-dashboard.md]].
 - Semantisches HTML und progressive Verbesserung zuerst.
-- Jede Interaktion besitzt Default-, Hover-, Focus-, Active-, Disabled-, Loading-, Success-, Error- und Empty-Zustände, soweit anwendbar.
+- Jede Interaktion besitzt Default-, Hover-, Focus-, Active-, Disabled-, Loading-, Success-, Error-, Empty- und Offline-Zustände, soweit anwendbar.
+- Mobile, Tastatur, Screenreader und reduzierte Bewegung sind Teil des Features, kein Nachtrag vor der Abnahme. Prüfstrecke in [[30-frontend/accessibility.md#Prüfung]].
 - Server validiert Eingaben, Autorisierung und Geschäftsregeln. Secrets bleiben serverseitig.
 - Performancebudgets, Accessibility, Security, SEO und Monitoring gehören zur Definition of Done.
 - Eine Styling- und Komponentenstrategie pro Projekt.
@@ -69,7 +70,7 @@ impacts:
 ## Marke und Anti-Slop
 
 - Keine Blau-Lila-Verläufe ohne Markenbegründung.
-- Keine Eyebrow-Pills, Sparkles, Emoji-Icons, Fake-Testimonials oder leeren Logo-Walls.
+- Keine Eyebrow-Pills, Sparkles, Emoji-Icons, Fake-Testimonials oder leeren Logo-Walls. Claims, Zertifikate, Auszeichnungen, Kundenlogos, Nutzerzahlen und Leistungswerte werden nie erfunden; ohne Beleg entfallen sie oder werden als Annahme gekennzeichnet.
 - Keine generischen Claims wie „Build your dreams“. Konkretes Ergebnis, Zielgruppe und Differenz nennen.
 - Kein Link, Button, Tab, Carousel oder Social Icon ohne reale Funktion.
 - Website-Titel kurz, beschreibend, ohne `|`; Favicon-Set ist Pflicht.
