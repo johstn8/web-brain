@@ -2,6 +2,10 @@
 
 KI-orientiertes Obsidian-Brain für professionelle Websites mit Schwerpunkt Frontend und Design.
 
+> **Du bist ein Mensch und willst eine Website bauen lassen?** Dann lies
+> [[START-HIER.md]]. Alles Übrige in diesem Repository ist für den Agenten
+> geschrieben.
+
 Start: [[00-start/00-brain-index.md]]
 
 Verbindlicher Ablauf: [[00-start/05-web-product-workflow.md]]. Jeder Umsetzungsauftrag erzeugt vor Recherche oder Code einen eigenen Ordner unter `../projekte/<Projektname>/` mit `PROJECT.md`, `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md`, `DATA-PROCESSING-INVENTORY.md`, einem fortlaufenden `release-readiness/<website-slug>.md` je Website und der Pflichtstruktur aus [[60-operations/delivery-and-local-start.md]].

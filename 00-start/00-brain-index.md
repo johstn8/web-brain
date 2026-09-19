@@ -6,6 +6,8 @@ updated: 2026-09-19
 
 # Brain Index
 
+Für Menschen: [[START-HIER.md]].
+
 ## Schnellstart für KI
 
 1. Regeln: [[AGENTS.md]]
