@@ -1,6 +1,6 @@
 ---
 name: web-build
-description: Baut die Website eines lokalen Betriebs von der Beauftragung bis zur Abnahme - Baeckerei, Fahrschule, Handwerk, Praxis, Restaurant, Kanzlei, Studio. Nutze diesen Skill, sobald jemand eine Website fuer einen Betrieb bauen, neu bauen, relaunchen oder von einer alten Seite ablösen will, auch wenn nur "mach mir eine Seite fuer X" gesagt wird. Fuehrt die Fast Lane aus dem Web-Brain aus: Projektordner, Extract der alten Seite, Recherche, Brief, Kit-Bloecke ziehen, Tokens setzen, Renderdurchgang, qa.sh, Release-Readiness. Nicht fuer Anwendungen mit Login, Zahlung oder eigener Datenhaltung - die laufen ueber die Full Lane.
+description: Baut die Website eines lokalen Betriebs von der Beauftragung bis zur Abnahme, mit einer gewaehlten Art Direction statt der generischen Standardanmutung - Baeckerei, Fahrschule, Handwerk, Praxis, Restaurant, Kanzlei, Studio. Nutze diesen Skill, sobald jemand eine Website fuer einen Betrieb bauen, neu bauen, relaunchen oder von einer alten Seite ablösen will, auch wenn nur "mach mir eine Seite fuer X" gesagt wird. Fuehrt die Fast Lane aus dem Web-Brain aus: Projektordner, Extract der alten Seite, Recherche, Brief, Kit-Bloecke ziehen, Tokens setzen, Renderdurchgang, qa.sh, Release-Readiness. Nicht fuer Anwendungen mit Login, Zahlung oder eigener Datenhaltung - die laufen ueber die Full Lane.
 ---
 
 # Website eines lokalen Betriebs bauen
@@ -78,18 +78,35 @@ Fehlt ein Block wirklich, wird er im Projekt gebaut — und nur dann ins Kit
 gehoben, wenn er ein zweites Mal vorkommen wird. Regel in
 `web-brain/30-frontend/web-kit.md`.
 
-### 6. Tokens setzen
+### 6. Art Direction wählen, dann Tokens setzen
 
-Die **Rollennamen bleiben unverändert**, nur die Werte kommen von diesem
-Betrieb. Herleitung je Farbrolle in den Design Contract.
+Zuerst ein Preset aus `web-kit/tokens/presets/` wählen — `werkstatt`,
+`praxis`, `tisch`, `kanzlei` oder `atelier`. Jedes bringt Schriftwahl,
+Palette, Radius- und Trenngrammatik mit.
 
 ```bash
-node --experimental-strip-types web-kit/scripts/check-contrast.ts \
-  ../projekte/<Projektname>/design-system/site/tokens.json
+node --experimental-strip-types web-kit/scripts/tokens-to-css.ts --preset <name> --out <projekt>/src/styles/tokens.css
+node --experimental-strip-types web-kit/scripts/fetch-fonts.ts   --preset <name> --out <projekt>/public/fonts
+```
+
+**Nicht ohne Preset starten.** Ohne Vorgabe entsteht die wahrscheinlichste
+Lösung, und die ist über alle Aufträge dieselbe — genau die Anmutung, die
+`web-brain/20-design/anti-ai-slop.md#Bekannte Ballungen` beschreibt.
+
+Danach die Werte dieses Betriebs setzen: Akzent aus Marke, Material oder
+Ort, mit Herleitung je Farbrolle in den Design Contract. Die **Rollennamen
+bleiben unverändert**.
+
+```bash
+node --experimental-strip-types web-kit/scripts/check-contrast.ts --preset <name>
 ```
 
 Der Kontrastlauf ist keine Kür: `G1` verlangt Kontrast in **beiden** Themes.
 Erst danach entsteht die erste Komponente.
+
+Vor der Festlegung lohnt der Prüfsatz: **Wäre ich bei einem anderen
+Auftrag derselben Gattung an derselben Stelle gelandet?** Wenn ja, ist es
+kein Entwurf, sondern ein Default.
 
 ### 7. Auftakt: zwei Fassungen, wirklich gebaut
 

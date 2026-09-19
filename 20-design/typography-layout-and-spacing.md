@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-03
+updated: 2026-09-19
 impacts:
   - design-tokens
   - components
@@ -34,6 +34,7 @@ Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertra
 ## Typografie
 
 - So wenige Familien wie nötig. Eine oder zwei reichen häufig; weitere sind zulässig, wenn jede eine stabile, wiederkehrende Rolle besitzt und Ladebudget sowie visuelle Kohärenz gewahrt bleiben.
+- **Die Familie ist eine Entscheidung, kein Default.** Inter, Roboto, Open Sans, Lato und der System-Stack sind die zuverlässigsten Schrifthinweise auf eine generierte Seite; sie sind nicht verboten, brauchen aber dieselbe Herleitung wie jede andere Wahl. Fünf belegte, lizenzfreie Ausgangspunkte je Gewerk liegen als Datei in [[30-frontend/web-kit.md#Art-Direction-Presets]].
 - Type Ramp definieren: Display, H1-H4, Lead, Body, Small, Label, Code.
 - Für jede Stufe Größe, Zeilenhöhe, Gewicht, Letter-Spacing und Maximalbreite festlegen.
 - Body meist 16px oder größer; Zeilenlänge grob 45 bis 75 Zeichen.
@@ -73,6 +74,7 @@ Diese Punkte entscheiden sichtbar über den Unterschied zwischen einem sauberen 
 - **Zahlen- und Zeichensatz.** Echte Gedankenstriche, echte Anführungszeichen der Zielsprache, echtes Multiplikationszeichen bei Maßangaben, geschütztes Leerzeichen vor Einheiten und Prozentzeichen nach den Regeln der Zielsprache.
 - **Zeilenlänge und Zeilenhöhe.** Fließtext 45 bis 75 Zeichen, Zeilenhöhe 1,5 bis 1,7. Unter 1,4 wirkt der Absatz gedrängt, über 1,7 zerfällt er.
 - **Größenabstand.** Benachbarte Stufen der Type Ramp unterscheiden sich um mindestens den Faktor 1,25. Stufen, die sich um wenige Pixel unterscheiden, erzeugen Unschärfe statt Hierarchie.
+- **Gewichtsabstand.** Hierarchie entsteht auch über das Gewicht, und dort ist der Abstand meist zu klein gewählt. 400 gegen 600 ist der häufigste Default und trägt kaum; ein realer Gewichtsraum wie 300 gegen 800 trägt. Das setzt eine Familie voraus, die diesen Raum hat — ein Grund, sie vor der ersten Komponente zu wählen.
 - **Mindestgrößen.** Fließtext nicht unter 16 Pixel, funktionale Beschriftungen und Tabellenzellen nicht unter 11 Pixel.
 - **Tracking.** Negatives Tracking nur auf großen Stufen und dort für die konkrete Familie kalibriert. Weites Tracking bleibt kurzen Versalbeschriftungen vorbehalten und erscheint nie im Fließtext.
 - **Kein Blocksatz ohne Silbentrennung.** Sonst entstehen weiße Flüsse im Satzspiegel.

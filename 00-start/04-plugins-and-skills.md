@@ -161,6 +161,30 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 - Der Skill `apple-design` desselben Repositorys ist bewusst **nicht** installiert. Sein Inhalt steht als Referenz in [[90-references/apple-fluid-interface.md]] und wird von dort gelesen.
 - Der Skill `find-animation-opportunities` desselben Repositorys ist derzeit **nicht** installiert. Sein Auswahlprinzip widerspricht dem [[20-design/motion-and-interaction.md#Motion-Budget]] nicht mehr; bei künftiger Verfügbarkeit wird er nach Nutzen, Überschneidung und Wartungsaufwand neu bewertet.
 
+## Frontend Design
+
+- Name: `frontend-design`
+- Typ: offizielles Plugin von Anthropic fuer Claude Code
+- Status: **stark empfohlen vor jeder neuen visuellen Richtung**, keine Abnahmebedingung
+- Ausloesung: die Beschreibung triggert auf den Bau neuer UI und auf das Umgestalten bestehender
+- Quelle und Lizenz: [anthropics/claude-code](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design), Lizenz im Repository; Installation ueber `/plugin install frontend-design@anthropics`
+- Faehigkeiten: erzwingt eine aesthetische Festlegung **vor** der ersten CSS-Zeile, fuehrt einen Zwei-Pass-Ablauf aus Designplan und Pruefung gegen den Brief und benennt die derzeit bekannten Ballungen generierter Oberflaechen
+- Grenzen und Risiken: die Anweisung ist auf Produkt- und Marketingoberflaechen zugeschnitten und kennt die deutschen Rechts- und Betriebsanforderungen nicht. Bei Widerspruch gilt die kanonische Notiz nach [[00-start/04-plugins-and-skills.md#Vorrang der Brain-Regeln vor Skill-Vorschlägen]]
+- Datenzugriff: die Projektdateien
+- In welchen Projekten erlaubt: alle UI-Projekte
+- Letzte Pruefung: 2026-09-19
+- Review bis: 2027-03-19
+
+### Was davon kanonisch uebernommen ist
+
+Die Anweisung diagnostiziert dieselbe Ursache, die dieses Vault beschreibt, und benennt sie praeziser: **Verteilungskonvergenz.** Ohne Vorgabe waehlt ein Modell die wahrscheinlichste Loesung, und die ist ueber alle Auftraege dieselbe. Drei Punkte sind daraus in die kanonischen Notizen uebernommen:
+
+- die bekannten Ballungen und das Vorlagen-Chrome in [[20-design/anti-ai-slop.md#Bekannte Ballungen]];
+- der Pruefsatz *Waere ich bei einem anderen Auftrag derselben Gattung an derselben Stelle gelandet?* ebenda;
+- der Gewichtsraum als Hierarchiemittel in [[20-design/typography-layout-and-spacing.md#Kalibrierte Type Ramp]].
+
+Nicht uebernommen ist die dortige Empfehlung, Hintergruende mit Verlaeufen, geometrischen Mustern und Effekten zu schichten. Fuer Websites lokaler Betriebe bleibt es bei [[20-design/anti-ai-slop.md]]: dekoratives Rasternetz, Streifenverlauf und radialer Farbschein ohne Lichtquelle sind Befunde. Der Unterschied ist der Gegenstand, nicht die Qualitaet des Rats.
+
 ## Web Build
 
 - Name: `web-build`

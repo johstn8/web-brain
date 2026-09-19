@@ -21,6 +21,7 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Tech-Stack | [[30-frontend/stack.md\|Stack]] | Brain Index, Architecture and Code Consistency, web-kit, Performance, Dependencies, Master Spec, Quality Gates |
 | Anzahl der Websites | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Delivery, Master Spec, Sitemap, Design Direction, Motion, SEO, Tests, Quality Gates, Decision Log |
 | Kopfzeile und Hauptnavigation | [[30-frontend/components-and-ui-states.md|Components and UI States]] | Information Architecture, Design Direction, Test Matrix, Quality Gates |
+| Art Direction als waehlbarer Ausgangspunkt statt Prosa | [[30-frontend/web-kit.md#Art-Direction-Presets\|web-kit]] | Typography, Color System, Design Direction, Anti AI Slop, Quality Gates |
 | generische KI-Anmutung und Kicker | [[20-design/anti-ai-slop.md|Anti AI Slop]] | Design Direction, Derived Design Patterns, Plugins and Skills, Quality Gates |
 | Logo des Betriebs | [[20-design/design-direction.md|Design Direction]] | Existing Website Rebuild, Asset Register, Source and Rights Review, Quality Gates |
 | Landing-Page-Aufbau, Auftaktkomposition, Auftaktrollen, Kopfzeilenrolle der Startseite und Abgrenzung zur generierten Anmutung | [[20-design/landing-page-craft.md|Landing Page Craft]] | Design Direction, Anti AI Slop, Components and UI States, Typography, Information Density, Content and Conversion, Derived Design Patterns, Master Spec, AI Build Prompt, Quality Gates |

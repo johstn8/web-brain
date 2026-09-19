@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 source: "[[90-references/inspiration-catalog.md]]"
 impacts:
   - design-direction
@@ -122,6 +122,34 @@ Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst un
 | horizontaler Scroller, dessen Karten an der Kante kleben | Rand geht verloren | gleiche Einzüge an beiden Seiten |
 | Inhalt läuft aus seinem Container oder wird von einer Überlagerung verdeckt | Layoutfehler, der als Stil durchgeht | Umbruch erlauben, Breiten begrenzen, Überlagerung versetzen |
 
+### Chrome und Beschriftung
+
+Diese Merkmale erscheinen unabhaengig vom Thema und sind deshalb besonders verraeterisch: Sie sind die Ausstattung, die ein Modell ueber jeden Gegenstand legt, statt sie aus ihm herzuleiten.[^frontend]
+
+| Signatur | Warum sie auffaellt | Stattdessen |
+|---|---|---|
+| Metazeile aus Einzelwerten, mit Mittelpunkt verbunden (`A · B · C`) | Gliederungszeichen ohne Gliederungsaufgabe; erscheint in generierten Seiten als Standardausstattung jeder Karte | die Werte in einen Satz setzen oder als benannte Felder auszeichnen |
+| Beschriftung im Muster `WORT — Fragment` mit gesperrtem Gedankenstrich | geliehene Redaktionsanmutung | Rubrik und Aussage trennen oder die Rubrik weglassen |
+| angehaengter Pfeil an Link- und Buttontext (`Mehr erfahren →`) | Dekoration, die keine zusaetzliche Information traegt; der Link ist bereits als Link erkennbar | den Text die Handlung benennen lassen |
+| getoentes Fast-Schwarz (`#0B0B0B`, `#111`) statt Schwarz oder einer hergeleiteten Dunkelstufe | Kompromisswert ohne Entscheidung | echtes Schwarz oder eine aus dem Material hergeleitete Dunkelstufe |
+| Monospace fuer kleine Datenbeschriftungen ohne technischen Bezug | Technik-Anmutung als Dekoration | Mono nur in den im Design Contract benannten Rollen, siehe [[20-design/typography-layout-and-spacing.md#Kalibrierte Type Ramp]] |
+| Gewichtskontrast 400 gegen 600 als einzige Hierarchiestufe | zu nah beieinander, um Hierarchie zu tragen; zugleich der haeufigste Default | echten Gewichtsraum nutzen, etwa 300 gegen 800 |
+| Schriftfamilie Inter, Roboto, Open Sans, Lato oder der System-Stack ohne Begruendung | die zuverlaessigsten Schrifthinweise auf eine generierte Seite | bewusst gewaehlte Familie, siehe [[30-frontend/web-kit.md#Art-Direction-Presets]] |
+
+### Bekannte Ballungen
+
+Nicht einzelne Merkmale, sondern ganze Erscheinungsbilder, zu denen generierte Oberflaechen derzeit zusammenlaufen. Jedes ist fuer manche Auftraege richtig. Zum Befund wird es, wenn es ohne Bezug zum Gegenstand erscheint.[^frontend]
+
+| Ballung | Erkennungszeichen |
+|---|---|
+| Creme und Terrakotta | warmer Cremegrund nahe `#F4F1EA`, kontrastreiche Display-Serife, Akzent nahe `#D97757`. Der Akzent ist zugleich die Interaktionsfarbe von Claude selbst und liest sich deshalb als besonders deutlicher Hinweis |
+| Neon auf Fast-Schwarz | nahezu schwarzer Grund mit genau einem grellen Gruen oder Zinnoberrot |
+| Broadsheet | Haarlinien, Radius null, dichte Zeitungsspalten, Serife ueberall |
+| SaaS-Kartenkasten | Inhalt in gleich grosse abgerundete Karten zerlegt, ein Radius fuer alles unabhaengig von der Hierarchie, derselbe weiche graue Schatten unter jeder, Verlaufsflaechen als Dekoration |
+| Vorlagen-Chrome | die Merkmale aus dem Abschnitt Chrome und Beschriftung in Kombination |
+
+Der Pruefsatz dazu: **Waere ich bei einem anderen Auftrag derselben Gattung an derselben Stelle gelandet?** Wenn ja, ist es kein Entwurf, sondern ein Default. Wo der Auftrag eine Richtung vorgibt, gilt der Auftrag - auch dann, wenn er eine dieser Ballungen verlangt.
+
 ### Bewegung
 
 | Signatur | Warum sie auffällt | Stattdessen |
@@ -215,3 +243,4 @@ Der zugrunde liegende Bericht beschreibt diese Muster nach einer nicht unabhäng
 
 [^impeccable]: [Impeccable: Slop](https://impeccable.style/slop/). Musterkatalog zu generierter Oberflächengestaltung. Geprüft am 3. September 2026.
 [^sixteen]: [Developers Digest: AI Design Slop and how to spot it](https://www.developersdigest.tech/blog/ai-design-slop-and-how-to-spot-it). Geprüft am 3. September 2026.
+[^frontend]: [Anthropic: frontend-design Skill](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) und [Improving frontend design through Skills](https://claude.com/blog/improving-frontend-design-through-skills). Die dort benannte Ursache ist Verteilungskonvergenz: Ohne Vorgabe waehlt ein Modell die wahrscheinlichste Loesung, und die ist ueber alle Auftraege dieselbe. Geprueft am 19. September 2026.
