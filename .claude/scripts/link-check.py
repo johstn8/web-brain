@@ -52,7 +52,7 @@ for f in mdfiles:
 # Ausnahmen: Dateinamen, die durch Konvention gross geschrieben sind.
 # SKILL.md verlangt Claude Code so, AGENTS.md und CLAUDE.md sind
 # Agentenvertraege, graphify-out/ ist generiert.
-KONVENTION = re.compile(r'(AGENTS|CLAUDE|README|SETUP-OFFEN|SKILL|MEMORY)\.md')
+KONVENTION = re.compile(r'(AGENTS|CLAUDE|README|SETUP-OFFEN|START-HIER|SKILL|MEMORY)\.md')
 bad_paths = [f for f in files
              if (' ' in f or f != f.lower())
              and not KONVENTION.fullmatch(os.path.basename(f))
