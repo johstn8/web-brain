@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 ---
 
 # Coverage and Impact Map
@@ -15,6 +15,8 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | globale Arbeitsregeln | [[00-start/01-core-rules.md|Core Rules]] | `AGENTS.md`, AI Build Prompt, Quality Gates |
 | Navigation und Lesereihenfolge | [[00-start/00-brain-index.md|Brain Index]] | Routing Map, README |
 | Web-Produkt-Ablauf | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Routing Map, Intake, Master Spec, AI Build Prompt, Quality Gates |
+| Bahnwahl Fast Lane und Full Lane | [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane\|Web Product Workflow]] | Brain Index, Routing Map, Master Spec, web-kit, Quality Gates |
+| Tech-Stack | [[30-frontend/stack.md\|Stack]] | Brain Index, Architecture and Code Consistency, web-kit, Performance, Dependencies, Master Spec, Quality Gates |
 | Anzahl der Websites | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Delivery, Master Spec, Sitemap, Design Direction, Motion, SEO, Tests, Quality Gates, Decision Log |
 | Kopfzeile und Hauptnavigation | [[30-frontend/components-and-ui-states.md|Components and UI States]] | Information Architecture, Design Direction, Test Matrix, Quality Gates |
 | generische KI-Anmutung und Kicker | [[20-design/anti-ai-slop.md|Anti AI Slop]] | Design Direction, Derived Design Patterns, Plugins and Skills, Quality Gates |

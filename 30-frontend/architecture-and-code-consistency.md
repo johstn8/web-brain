@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-03
+updated: 2026-09-19
 impacts:
   - dependencies
   - tests
@@ -12,7 +12,9 @@ impacts:
 
 ## Architekturentscheidung
 
-Stack nach Anforderungen wählen: Rendering, Interaktivität, Content-Workflow, Teamkenntnis, Hosting, Compliance, Kosten und Lebensdauer. Kein Framework nur wegen Popularität.
+Für Websites lokaler Betriebe ist der Stack kanonisch in [[30-frontend/stack.md]] festgelegt und wird nicht je Projekt neu gewählt. Diese Notiz regelt, wie innerhalb dieses Stacks gebaut wird.
+
+Nur außerhalb dieses Rahmens, etwa bei einer Anwendung mit Auth, Zahlung oder eigener Datenhaltung, wird nach Anforderungen entschieden: Rendering, Interaktivität, Content-Workflow, Teamkenntnis, Hosting, Compliance, Kosten und Lebensdauer. Kein Framework nur wegen Popularität. Die Entscheidung ist dann eine begründungspflichtige Abweichung nach [[30-frontend/stack.md#Abweichung]].
 
 ## Einheitlichkeit
 
