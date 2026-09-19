@@ -1,0 +1,181 @@
+---
+type: canonical
+status: canonical
+updated: 2026-09-11
+---
+
+# Coverage and Impact Map
+
+Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen Bereich zugeordnet und anschließend durch alle betroffenen Artefakte verfolgt.
+
+## Kanonische Zuständigkeit
+
+| Thema | Kanonische Notiz | Häufig betroffene Notizen |
+|---|---|---|
+| globale Arbeitsregeln | [[00-start/01-core-rules.md|Core Rules]] | `AGENTS.md`, AI Build Prompt, Quality Gates |
+| Navigation und Lesereihenfolge | [[00-start/00-brain-index.md|Brain Index]] | Routing Map, README |
+| Web-Produkt-Ablauf | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Routing Map, Intake, Master Spec, AI Build Prompt, Quality Gates |
+| Anzahl der Websites | [[00-start/05-web-product-workflow.md|Web Product Workflow]] | Delivery, Master Spec, Sitemap, Design Direction, Motion, SEO, Tests, Quality Gates, Decision Log |
+| Kopfzeile und Hauptnavigation | [[30-frontend/components-and-ui-states.md|Components and UI States]] | Information Architecture, Design Direction, Test Matrix, Quality Gates |
+| generische KI-Anmutung und Kicker | [[20-design/anti-ai-slop.md|Anti AI Slop]] | Design Direction, Derived Design Patterns, Plugins and Skills, Quality Gates |
+| Logo des Betriebs | [[20-design/design-direction.md|Design Direction]] | Existing Website Rebuild, Asset Register, Source and Rights Review, Quality Gates |
+| Landing-Page-Aufbau, Auftaktkomposition, Auftaktrollen, Kopfzeilenrolle der Startseite und Abgrenzung zur generierten Anmutung | [[20-design/landing-page-craft.md|Landing Page Craft]] | Design Direction, Anti AI Slop, Components and UI States, Typography, Information Density, Content and Conversion, Derived Design Patterns, Master Spec, AI Build Prompt, Quality Gates |
+| Arbeitsvorgang der visuellen Qualität: Auftaktfeld, Iterationsdurchgänge, Befundform, Abbruch und Rendernachweis | [[20-design/visual-iteration-loop.md\|Visual Iteration Loop]] | Landing Page Craft, Design Direction, Anti AI Slop, Plugins and Skills, Web Product Workflow, Core Rules, Routing Map, Brain Index, Test Matrix, Quality Gates |
+| erkennbare Einzelsignaturen generierter Oberflächen | [[20-design/anti-ai-slop.md#Slop-Signaturen\|Anti AI Slop]] | Landing Page Craft, Design Direction, Typography, Color System, Components and UI States, Motion, Quality Gates |
+| typografischer Feinschliff | [[20-design/typography-layout-and-spacing.md#Typografischer Feinschliff\|Typography Layout and Spacing]] | Landing Page Craft, Anti AI Slop, Components and UI States, Quality Gates |
+| Kopfzeilenformen und ihre Wahl | [[30-frontend/components-and-ui-states.md#Kopfzeilen-Repertoire\|Components and UI States]] | Landing Page Craft, Design Direction, Information Architecture, Test Matrix, Quality Gates |
+| KI-Fähigkeiten und Pflichtskills | [[00-start/04-plugins-and-skills.md|Plugins and Skills]] | Design Direction, Master Spec, Quality Gates, Review Queue |
+| Aktualisierung | [[00-start/03-update-protocol.md|Update Protocol]] | Change Log, Review Queue, diese Karte |
+| Synchronisation und Versionierung des Vaults | `AGENTS.md`, Abschnitt Synchronisation | Update Protocol, Change Log, `.gitignore` |
+| Projektumfang | [[10-strategy/discovery-and-scope.md|Discovery and Scope]] | Intake, Master Spec, Sitemap |
+| Relaunch und Quellenwiederherstellung | [[10-strategy/existing-website-rebuild.md|Existing Website Rebuild]] | Project Workflow, Content, Legal, Privacy, Assets, Source and Rights Review, Master Spec, QA |
+| Sitemap | [[10-strategy/information-architecture-and-sitemap.md|Information Architecture and Sitemap]] | Master Spec, SEO, Accessibility, Tests |
+| Inhalte und Conversion | [[10-strategy/content-and-conversion.md|Content and Conversion]] | Design Direction, SEO, Legal |
+| Formulierung, Satzform und Textmuster der Copy | [[10-strategy/website-copy.md|Website Copy]] | Content and Conversion, Information Density, Anti AI Slop, Design Direction, Components and UI States, Quality Gates |
+| Stilabstand zwischen mehreren Websites und Vorgängerfassungen | [[20-design/design-direction.md#Stilabstand bei mehreren Websites|Design Direction]] | Web Product Workflow, Reference Research Workflow, Master Spec, Interface Benchmarks, Typography, Components, Motion, Quality Gates |
+| H0-Handwerksuntergrenze, Stilprofile und Leitbenchmark | [[20-design/interface-benchmarks.md|Interface Benchmarks]] | AGENTS, Core Rules, Inspiration Catalog, Design Direction, Color System, Typography, Components, Motion, Derived Design Patterns, Quality Gates |
+| Bilder, Bildbearbeitung und KI-Platzhalter | [[20-design/imagery-and-ai-editing.md|Imagery and AI Editing]] | Design Direction, Asset Register, Source and Rights Review, Performance, Accessibility, Quality Gates |
+| Informationsmenge, Textbudget, mobile Dosierung | [[10-strategy/information-density-and-mobile-clarity.md|Information Density and Mobile Clarity]] | Content and Conversion, Information Architecture, Design Direction, Responsive Design, Quality Gates |
+| Schriftwahl, Stilzitat und Zeitbezug | [[20-design/typography-layout-and-spacing.md|Typography Layout and Spacing]] | Anti AI Slop, Color System, Design Direction, Asset Register, Quality Gates |
+| Beweisform, Interaktion und Motion-Budget | [[20-design/motion-and-interaction.md|Motion and Interaction]] | Design Direction, Components and UI States, Accessibility, Performance, Quality Gates |
+| visuelle Richtung | [[20-design/design-direction.md|Design Direction]] | Farbe, Typografie, Motion, Master Spec |
+| Tokenvertrag mit Pflichtrollen | [[20-design/color-system.md#Tokenvertrag|Color System]] | Interface Benchmarks, Design Direction, Components and UI States, Architecture and Code Consistency, Master Spec, AI Build Prompt, Quality Gates |
+| Radiusskala, Rahmenbehandlung und Tiefe je Website | [[20-design/typography-layout-and-spacing.md#Radiusskala und Rahmenbehandlung|Typography Layout and Spacing]] | Interface Benchmarks, Anti AI Slop, Components, Design Direction, Master Spec, Quality Gates |
+| Komponentenrepertoire und Kopfzeileninventar je Website | [[30-frontend/components-and-ui-states.md|Components and UI States]] | Interface Benchmarks, Anti AI Slop, Design Direction, Accessibility, Quality Gates |
+| website-spezifische Bewegungswerte und B5-Beispiele | [[20-design/motion-and-interaction.md#Kalibrierte Bewegungsbeispiele|Motion and Interaction]] | Interface Benchmarks, Components, Design Direction, Accessibility, Performance, Master Spec, AI Build Prompt, Quality Gates |
+| Farbe | [[20-design/color-system.md|Color System]] | Accessibility, Tokens, QA |
+| Typografie und Layout | [[20-design/typography-layout-and-spacing.md|Typography Layout and Spacing]] | Responsive Design, Assets, QA |
+| responsive Verhalten | [[20-design/responsive-design.md|Responsive Design]] | Components, Accessibility, Test Matrix |
+| Interaktion und Motion | [[20-design/motion-and-interaction.md|Motion and Interaction]] | Performance, Accessibility, Tests |
+| gestengeführte und federbasierte Bewegung | [[90-references/apple-fluid-interface.md|Apple Fluid Interface]] | Motion and Interaction, Components and UI States, Accessibility |
+| Architektur | [[30-frontend/architecture-and-code-consistency.md|Architecture and Code Consistency]] | Dependencies, Delivery, Security |
+| Komponenten und Zustände | [[30-frontend/components-and-ui-states.md|Components and UI States]] | Accessibility, Test Matrix, Master Spec |
+| Barrierefreiheit | [[30-frontend/accessibility.md|Accessibility]] | Design, Components, Legal, Tests |
+| Performance | [[30-frontend/performance.md|Performance]] | Architecture, Media, Observability, Tests |
+| SEO | [[30-frontend/seo-and-discoverability.md|SEO and Discoverability]] | Sitemap, Content, Launch Checklist |
+| Sicherheit | [[40-backend-security/security-baseline.md|Security Baseline]] | Auth, APIs, Dependencies, QA |
+| Konten | [[40-backend-security/authentication-and-accounts.md|Authentication and Accounts]] | Data APIs, Privacy, Test Matrix |
+| Vorschau-Sperre | [[40-backend-security/preview-access-gate.md|Preview Access Gate]] | Security Baseline, Delivery, SEO, QA |
+| Daten, API, Billing | [[40-backend-security/data-apis-and-billing.md|Data APIs and Billing]] | Security, Privacy, Operations, Tests |
+| Rechtliche Einordnung | [[50-legal/legal-decision-tree.md|Legal Decision Tree]] | Privacy, Assets, Accessibility, Launch |
+| Datenschutz und Consent | [[50-legal/privacy-and-consent.md|Privacy and Consent]] | Data Inventory, Analytics, Tests |
+| Asset-Einsatz und spätere Owner-Einschätzung | [[50-legal/assets-copyright-and-licenses.md|Assets Copyright and Licenses]] | Design, Performance, Source and Rights Review, Asset Register |
+| lokale Ausführung, Serverzugriff und Developer-Plattform | [[60-operations/delivery-and-local-start.md|Delivery and Local Start]] | Workflow, Dependencies, Accessibility, Preview Access Gate, Observability, Launch |
+| Owner-Hosting, zentraler Mandantenbetrieb und editierbare Inhalte | [[60-operations/owner-hosting-and-dashboard.md|Owner Hosting and Dashboard]] | Owner Hosting Website Contract, Core Rules, Routing Map, Workflow, Master Spec, Data Processing Inventory, Auth, Privacy, Legal, Delivery, Observability, Quality Gates |
+| wo eine Angabe bearbeitet wird: zentral oder auf der Seite | [[60-operations/owner-hosting-and-dashboard.md#Bearbeiten: zwei Ansichten, eine Entscheidungsregel|Owner Hosting and Dashboard]] | Owner Hosting Website Contract (`surface`), Master Spec, Content-Schema, Test Matrix, Quality Gates |
+| Änderungen unmittelbar auf der Seite (Darstellungsregeln) | [[60-operations/owner-hosting-and-dashboard.md#Der Seiteneditor|Owner Hosting and Dashboard]] | Owner Hosting Website Contract, Components and UI States, Test Matrix, Quality Gates |
+| was auf keiner Website bearbeitet wird (Kopfzeile, Navigation, Anschrift, Kontaktwege, Rechtstextnamen, Logo) | [[60-operations/owner-hosting-and-dashboard.md#Was auf keiner Website bearbeitet wird\|Owner Hosting and Dashboard]] | Owner Hosting Website Contract (`gesperrt`), Components and UI States, Legal Pages, Test Matrix, Quality Gates |
+| Copyright-Hinweis in der Fußzeile | [[60-operations/owner-hosting-and-dashboard.md#Der Copyright-Hinweis steht immer\|Owner Hosting and Dashboard]] | Owner Hosting Website Contract, Legal Pages, Launch Checklist, Quality Gates |
+| Weg zurück: Schritt, Papierkorb, Rollback | [[60-operations/owner-hosting-and-dashboard.md#Verlauf und Rückgängig\|Owner Hosting and Dashboard]] | Test Matrix, Quality Gates |
+| fortlaufende Veröffentlichungsreife je Website | [[60-operations/release-readiness-register.md|Release Readiness Register]] | Workflow, Project Master Spec, Preview Access Gate, SEO, Owner Hosting, Test Matrix, Quality Gates, Launch Checklist, Review Queue |
+| Abhängigkeiten | [[60-operations/dependencies-and-environments.md|Dependencies and Environments]] | Architecture, Security, Delivery |
+| Betrieb | [[60-operations/observability-and-maintenance.md|Observability and Maintenance]] | Security, Billing, QA |
+| Abnahme | [[70-qa/quality-gates.md|Quality Gates]] | Test Matrix, Launch Checklist |
+| Referenzmuster | [[90-references/derived-design-patterns.md|Derived Design Patterns]] | Catalog, Design Direction, Master Spec |
+| Referenzquote, konkreter Website-Referenzpool und Leitreferenzwahl | [[90-references/reference-research-workflow.md|Reference Research Workflow]] | Website Reference Pool, Inspiration Catalog, AGENTS, Core Rules, Routing Map, Workflow, Design Direction, Master Spec, AI Build Prompt, Quality Gates |
+| Inspirationsrecherche und Evidenz | [[90-references/reference-research-workflow.md|Reference Research Workflow]] | Catalog, Motion, Master Spec, Test Matrix, Quality Gates |
+| pen.dev und `.pen`-Designquellen | [[90-references/pen-dev-workflow.md|pen.dev Workflow]] | Tools and Libraries, Plugins and Skills, Design Direction, Delivery, Master Spec, QA |
+
+## Auslöser und Pflichtfolgen
+
+### Neuer Website-Auftrag
+
+Bestimme zuerst die Anzahl der Websites aus dem Auftragstext nach [[00-start/05-web-product-workflow.md#Anzahl der Websites]]. Lege dann den kollisionsfreien Projektordner samt PROJECT.md, Source/Rights Review, Asset Register, Data Processing Inventory und je Website `release-readiness/<website-slug>.md` an. Baue anschließend genau diese Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/NN-…`, jeweils mit allen Unterseiten, dem passenden Motion-Nachweis, SEO-Artefakten und Nachweisen. Auf `217.154.218.30` erfolgt Zugriff über `johannstein.com/dev` ohne Projektport, sonst über einen eigenen festen Port. Verlinke zutreffende Brain-Regeln und Quality Gates. Keine Recherche- oder Build-Artefakte außerhalb des Projekts.
+
+### Geänderte Anzahl der Websites
+
+Aktualisiere Workflow, Delivery, Ablagestruktur, umgebungsabhängigen Zugriff, Master Spec mit Website-Matrix und Design Contract je Website, Sitemap, Design Direction, Motion-Nachweis, SEO, Tests, Impeccable-Reviews und Quality Gates. Alle gebauten Websites teilen Fakten, Scope, Accessibility und Sicherheit; Unterschiede gehören explizit in die Website-Matrix. Keine Auswahl-, Verwerfungs- oder Produktionskandidaten dokumentieren.
+
+### Geänderte Kopfzeile oder Navigation
+
+Aktualisiere Sitemap, Navigationsbeschriftungen, Gruppierung, Fußbereich, Brotkrumen, Komponentenvertrag und die Prüfung auf Lesbarkeit, Innenhöhe, Mindestluft, Überlauf und Bedienbarkeit bei 320, 375, 768, 1280 und 1920 Pixel sowie 200 Prozent Zoom und Systemschrift. Die Anzahl der Hauptpunkte folgt Nutzerzielen und Informationsarchitektur, keinem globalen Grenzwert.
+
+### Geänderte Landing-Page-, Auftakt- oder Überschriftenregel
+
+Aktualisiere [[20-design/landing-page-craft.md]] als kanonischen Besitzer, danach Design Direction, Anti AI Slop, Derived Design Patterns, Components and UI States, Typography, Information Density, Core Rules, AGENTS.md, Routing Map, Project Master Spec, AI Build Prompt und Quality Gates. Prüfe zusätzlich, ob Auftaktrollen, Kompositionswahl, Überschriftenanordnungen, Kopfzeilenrolle und Signaturdetail im Design Contract jeder betroffenen Website noch stimmen, und wiederhole den Impeccable-Review und die Renderprüfung an allen Prüfbreiten.
+
+### Neue oder geänderte Anti-Slop-Regel
+
+Aktualisiere Anti AI Slop als kanonischen Besitzer, danach Design Direction, Derived Design Patterns, Color System, Core Rules, AGENTS.md, AI Build Prompt und Quality Gates. Prüfe bestehende Projektartefakte nur, wenn der Nutzer das ausdrücklich verlangt.
+
+### Relaunch einer bestehenden Website
+
+Aktualisiere Quelleninventar, Content-Inventar, Betreiberfakten, Maps-/Place-Verweis, offizielle Profile, Speisekarten/Preislisten, Asset Register, Rights Review, prüfpflichtige Impressum-/Privacy-Entwürfe, Dateninventar, Sitemap, Redirects und Tests. Die Umsetzung verwendet alle gewünschten Assets unmittelbar; offene Einträge halten nur tatsächlichen Einsatz, Owner und möglichen späteren Prüftermin fest, niemals einen Ersatz oder Launch-Blocker.
+
+### Neue oder entfernte Seite
+
+Aktualisiere Sitemap, Navigation, interne Links, Metadaten, strukturierte Daten, Tracking-/Consent-Einordnung, Zugriffsregeln, Testfälle, Release-Readiness-Register und Launch-Checkliste in allen gebauten Websites. Prüfe, ob die Navigation die tatsächlichen Nutzerziele weiterhin verständlich abbildet.
+
+### Neue Komponente oder Interaktion
+
+Aktualisiere Komponentenvertrag, Zustände, Tastaturverhalten, Screenreader-Name, responsive Regeln, Motion-Fallback, Tests und gegebenenfalls das Designsystem.
+
+### Zeitabhängige Quelle wird verwendet
+
+Wird eine externe Quelle für eine Projektentscheidung herangezogen, etwa ein Grenzwert aus WCAG oder Core Web Vitals, eine Rechtsquelle, eine Bibliothek, die Maps-Nutzungsbedingungen oder ein Skill, wird sie in diesem Moment auf Aktualität geprüft und das Prüfdatum in der kanonischen Notiz vermerkt. Die Zuordnung von Auslöser zu Gegenstand steht in [[98-maintenance/review-queue.md#Anlassgebunden geprüft]]. Sicherheits-, Auth- und Billing-Quellen laufen stattdessen über die geplante Routine in [[98-maintenance/review-queue.md#Automatisch geprüft]] und werden nicht zusätzlich von Hand geprüft.
+
+### Owner-Hosting, Dashboard oder neue owner-bearbeitbare Inhalte
+
+Aktualisiere [[60-operations/owner-hosting-and-dashboard.md]], [[80-templates/owner-hosting-website-contract.md]], Core Rules, Routing Map, Workflow, Content-Schema, Tenant-Manifest, Project Master Spec, Data Processing Inventory, Rollen/AuthZ, Uploads, Buildprofil, Publish/Rollback, Monitoring, Hostingvertrag/AVV-Prüfung, Rechtstext-Workflow und Quality Gates. Bei jedem Inhaltsupdate `owner_editable`, stabilen Pointer, Typ, Grenzen, Preview-Routen und Veröffentlichungspolicy erneut beantworten. Bei Vertragsänderung Owner-Overlays und offene Entwürfe planen und migrieren; ein Rollback über die Formänderung hinweg wird geprüft, nicht angenommen. Steht eine Angabe mehrfach in der Inhaltsdatei, wird sie ein Feld mit mehreren Pointern und nicht mehrere Felder. Neue externe Integrationen bleiben deaktiviert, bis Capability, Konto, Anbieter, Datenfluss und Zugangsweg übereinstimmen; ihre Oberfläche darf vorher entstehen, muss dann aber ihren tatsächlichen Zustand benennen und Eingaben verlustfrei speichern. Bei Uploads gehören Inhaltsprüfung, Metadatenentfernung und Unveränderlichkeit der Fassungen zum Feature, nicht zur Nacharbeit. Vor jeder Oberflächenänderung wird geprüft, ob ein Satz gestrichen oder hinter ein Erklärzeichen verschoben werden kann, ohne dass eine Zusicherung verlorengeht. Zeitgesteuertes Veröffentlichen wird je Veröffentlichung entschieden, nie je Feld und nie über einen Modus. Für jedes editierbare Feld wird zusätzlich `surface` entschieden: zentral bei Werten an mehreren Stellen, `seite` bei Werten an genau einer; kein Feld erscheint in beiden Bearbeitungsansichten. Änderungen unmittelbar auf der Seite bleiben Darstellungsregeln neben der Website und werden **nicht** nachträglich zu Vertragsfeldern erhoben. Ein Entwurf ist an jeder Stelle, an der er sichtbar ist, auch verwerfbar; verworfen liegt er im Papierkorb und wird unter „Veröffentlichen“ zurückgeholt, nicht über einen Pfeil. Eine Vormerkung wird nicht bearbeitet, sondern zurück in den Entwurf geholt. Für jedes zentrale Feld, das auf der Website sichtbar ist, wird zusätzlich `seite.stellen` eingetragen und `seite.bearbeitbar` bewusst entschieden — es steht ausschließlich bei einfachen Werten ohne Rechtswirkung. Kopfzeile, Navigation, Anschrift, Kontaktwege, die Namen der Rechtstexte und das Logo sind für jede Website gesperrt und werden nirgends als editierbares Feld registriert; die Fußzeile führt einen Copyright-Hinweis in einem gesperrten Bereich.
+
+### Developer-Plattform oder Veröffentlichungsstatus
+
+Aktualisiere [[60-operations/delivery-and-local-start.md]], [[60-operations/release-readiness-register.md]], die Datei jeder betroffenen Website, Source-Roots, Statusspeicher unter `.runtime/previews/`, AuthZ, noindex, Freigaberouten, Tastaturbedienung und Build-/Smoke-Tests. `Old-Projects` bleibt Archiv; `vorschau` ist Legacy-Quelle im Veröffentlichungsbereich und keine vierte Übersicht.
+
+### Deployment-Slot, Staging-Domain oder Legacy-Adapter
+
+Aktualisiere [[60-operations/owner-hosting-and-dashboard.md#Deployment-Slots]], [[60-operations/delivery-and-local-start.md#Test-Slot johannstein.de]], [[70-qa/quality-gates.md]], [[70-qa/test-matrix.md]] und [[80-templates/owner-hosting-website-contract.md#Legacy-Bridge-Vertrag als Ausnahme]]. Prüfe dabei DNS, Zertifikatsabdeckung aller Hosts, nginx-Rollback, Basic Auth gegen ACME-Erreichbarkeit, `noindex` an beiden Stellen (nginx-Header und Release-`robots.txt`), Socketrechte je Gruppe sowie `ReadWritePaths` beider betroffener Units. Der Quellhash jedes über einen Legacy-Adapter gebauten Projekts wird vor und nach der Änderung verglichen und im Change Log festgehalten.
+
+### Neue externe Abhängigkeit
+
+Aktualisiere Abhängigkeitsinventar, Lizenz, Versionierung, Datenflüsse, CSP-/Netzwerkbedarf, Sicherheitsprüfung, Startskripte und Updateplan.
+
+### Neue Datenerhebung oder Drittanbieter
+
+Aktualisiere Dateninventar, Rechtsgrundlage, Einwilligungslogik, Datenschutzerklärung, Lösch- und Exportprozesse, Auftragsverarbeitung, Security Review und Tests.
+
+### Neue Anmeldung oder Kontenregel
+
+Aktualisiere Authentifizierungsmodell, Verknüpfungsregeln, Abuse-Schutz, Recovery, Sessionverwaltung, Datenschutz, Billing-Abhängigkeiten und End-to-End-Tests.
+
+### Neues Abo oder Preisangebot
+
+Aktualisiere Produktlogik, serverseitige Berechtigungen, Webhooks, Kündigung, Rückerstattung, Datenlöschung, Rechtstexte, E-Mails, Monitoring und Tests.
+
+### Neue visuelle Richtung
+
+Aktualisiere Referenzmodus und Referenzquote, bei der einen referenzgeführten Fassung Passung, Übernahmetiefe, konkrete Übernahmen und bewusste Abweichungen, bei Eigenentwürfen deren Herleitung, den getrennten UI-UX-Pro-Max-Nachweis unter `design-system/<website-slug>/MASTER.md`, Design Contract, Unterscheidungs- und Vorgängermatrix, Auftakt, Kopf-/Fußbereich, Navigation, Chrome, Komponentenrepertoire, Zweitschrift, Tokens, Motion, Asset Register, Master Spec, Impeccable-Review und echte visuelle QA. Bei mehreren Websites besitzt genau eine Fassung eine automatisch ausgewählte Leitreferenz, sofern eine starke Passung gefunden wird; die übrigen übernehmen sie nicht quer. Nur eine dokumentiert erfolglose Suche erlaubt die Ausnahme ohne Referenz. Referenzen dürfen in der benannten Fassung direkt eingesetzt oder kreativ adaptiert werden; tatsächlicher Einsatz gehört nach dem Build ins Asset Register beziehungsweise Rights Review. Entferne keine gebaute Website aufgrund einer Auswahl- oder Quellenentscheidung.
+
+### Neue oder geänderte Landing-Page-Komposition
+
+Aktualisiere Design Contract, konkreten Inhaltsanker, primäre Beweisform, H1- und Kopfzeilengeometrie, Bildplan beziehungsweise begründeten bildlosen Auftakt, Informationsbudget, Mobile-/Zoom-Nachweise, Screenshots und Impeccable-Review. Prüfe an 320, 375, 768, 1280 und 1440 Pixel sowie 200 Prozent Zoom, dass die vollständige H1 lesbar bleibt und innerhalb der zweiten mobilen Bildschirmhöhe die nächste Nutzerfrage oder der erste Beweis beginnt. Bei mehreren Websites darf die gemeinsame sachlich beste Grobstruktur wiederkehren; Stilabstand wird danach hergestellt.
+
+### Neuer oder geänderter Benchmark
+
+Aktualisiere zuerst [[20-design/interface-benchmarks.md]] als kanonischen Besitzer, danach den Beleg im [[90-references/inspiration-catalog.md]] samt Prüfstatus und Fußnote, anschließend Design Direction, Color System, Typography, Components and UI States, Derived Design Patterns und Quality Gates. Ein Benchmark wird immer mit übernommenen **und** ausdrücklich nicht übernommenen Elementen erfasst. Änderungen an H0 dürfen keine konkrete Formsprache vorschreiben; Stilprofile bleiben wählbar.
+
+### Neues oder geändertes Bildmaterial
+
+Aktualisiere Bildrolle, Bearbeitungsschritte, Serienkonsistenz, `srcset`-Varianten, Alt-Texte, Kontrastprüfung bei Text auf Bild, Performancebudget, Asset Register und Source and Rights Review. Wird ein `ai-placeholder` ersetzt, bleiben Rolle, Seitenverhältnis und Pfad unverändert, damit kein Layout bricht.
+
+### Geänderte Informationsmenge oder Textlänge
+
+Aktualisiere Sektionsliste je Route, Textbudget, mobile Staffelung, Navigation, Sitemap, interne Verweise und Tests. Wird ein Abschnitt gestrichen, prüfe, ob die zugehörige Nutzerfrage an anderer Stelle beantwortet bleibt.
+
+### Neues Designwerkzeug, Skill oder CLI
+
+Aktualisiere Plugins and Skills, kanonischen Tool-Workflow, Berechtigungen und Datenzugriff, Version/Lizenz, Projektablage, Start-/Fehlerpfad, Master Spec, Quality Gates und Review Queue. Automatisch erzeugte Dateien dürfen bestehende Quellen nicht unkontrolliert überschreiben.
+
+### Geänderte Vorschrift oder externer Standard
+
+Prüfe das gesamte betroffene Thema, Quellen und Abrufdatum. Markiere rechtlich unsichere Schlüsse als prüfpflichtig und ändere keine Produktentscheidung nur auf Basis einer Zusammenfassung.
+
+## Abschlussnachweis
+
+Ein Update gilt erst als vollständig, wenn im [[98-maintenance/change-log.md]] festgehalten ist:
+
+- was geändert wurde,
+- welche Auslöser aus dieser Karte galten,
+- welche Notizen geprüft wurden,
+- welche Tests oder Linkprüfungen liefen,
+- welche offenen Punkte in der [[98-maintenance/review-queue.md]] verblieben.

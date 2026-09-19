@@ -165,15 +165,15 @@
 
 ## Surprising Connections (you probably didn't know these)
 - `Regel: eine Information hat genau eine kanonische Notiz` --semantically_similar_to--> `Kanonische Zustaendigkeit`  [INFERRED] [semantically similar]
-  AGENTS.md → 98-Maintenance/Coverage and Impact Map.md
+  AGENTS.md → 98-maintenance/coverage-and-impact-map.md
 - `seite sagt, wo eine zentrale Angabe steht und ob man sie dort anfassen darf` --semantically_similar_to--> `Der Seiteneditor`  [INFERRED] [semantically similar]
-  80-Templates/Owner Hosting Website Contract.md → 60-Operations/Owner Hosting and Dashboard.md
+  80-templates/owner-hosting-website-contract.md → 60-operations/owner-hosting-and-dashboard.md
 - `prototype (lokaler Skill)` --semantically_similar_to--> `Auftakt-Repertoire`  [INFERRED] [semantically similar]
-  00-Start/04 Plugins and Skills.md → 20-Design/Landing Page Craft.md
+  00-start/04-plugins-and-skills.md → 20-design/landing-page-craft.md
 - `Offene Frage: Design Contract aus der Stilkachel erzeugen` --semantically_similar_to--> `Website Design Contract je gebauter Website`  [INFERRED] [semantically similar]
-  98-Maintenance/Review Queue.md → 80-Templates/Project Master Spec.md
+  98-maintenance/review-queue.md → 80-templates/project-master-spec.md
 - `Route-Level SEO and Indexability` --semantically_similar_to--> `Production Indexability Cutover`  [INFERRED] [semantically similar]
-  30-Frontend/SEO and Discoverability.md → 60-Operations/Release Readiness Register.md
+  30-frontend/seo-and-discoverability.md → 60-operations/release-readiness-register.md
 
 ## Import Cycles
 - None detected.
@@ -747,9 +747,9 @@ Nodes (3): Coverage and Impact Map, Abschlussnachweis, Update-Schritt 2: impacts
 
 ## Ambiguous Edges - Review These
 - `Reference Research Workflow` → `Uebernommen wird der Mechanismus, nicht die Quelle`  [AMBIGUOUS]
-  20-Design/Visual Iteration Loop.md · relation: conceptually_related_to
+  20-design/visual-iteration-loop.md · relation: conceptually_related_to
 - `D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil` → `Offene Frage: Design Contract aus der Stilkachel erzeugen`  [AMBIGUOUS]
-  98-Maintenance/Review Queue.md · relation: conceptually_related_to
+  98-maintenance/review-queue.md · relation: conceptually_related_to
 
 ## Knowledge Gaps
 - **1101 isolated node(s):** `alwaysUpdateLinks`, `Aufnahme 2026-08-03`, `Quellenbasierter Bestand`, `Kernbotschaft`, `Conversion ohne Dark Patterns` (+1096 more)

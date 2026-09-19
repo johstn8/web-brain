@@ -1,0 +1,55 @@
+---
+type: canonical
+status: canonical
+updated: 2026-08-06
+impacts:
+  - "[[10-strategy/information-architecture-and-sitemap.md]]"
+  - "[[10-strategy/content-and-conversion.md]]"
+  - "[[80-templates/project-master-spec.md]]"
+---
+
+# Discovery and Scope
+
+## Projektpflicht
+
+Ein Umsetzungsauftrag beginnt mit der Projektanlage nach [[00-start/05-web-product-workflow.md]]. Discovery-Ergebnisse werden in diesem Projekt-`PROJECT.md` gespeichert; eine Unterhaltung allein ist keine Projektdokumentation.
+
+## Reihenfolge vor Design
+
+0. Anzahl der zu bauenden Websites aus dem Auftragstext bestimmen und in `PROJECT.md` mit Quelle festhalten
+1. Geschäftsmodell und Betreiber
+2. Primäre Zielgruppe, Kontext, Fähigkeiten und Geräte
+3. Zu lösendes Problem und Alternative heute
+4. Primäre Nutzeraktion und Erfolgskennzahl
+5. Angebot, Differenzierung und belastbare Belege
+6. Inhalte, Funktionen, Integrationen und Daten
+7. Zielmärkte, Sprachen, regulatorische Grenzen
+8. Budget, Termin, Team, Betrieb und Risikotoleranz
+
+## Bestandsprojekt
+
+Existiert bereits eine Website, vor Scope und Copy den [[10-strategy/existing-website-rebuild.md]] anwenden. Bestehende Inhalte, Bilder, Designs und Interaktionen sind nutzbare Wiederherstellungs- und Kreativquelle. Aktualität wird getrennt dokumentiert, sie erzeugt keinen Build-Stopp oder visuellen Ersatz.
+
+## Projekttyp klassifizieren
+
+- Marketing-Site: Vertrauen, Erklärung, Lead oder Conversion.
+- Content-Site: Auffindbarkeit, redaktioneller Workflow, Taxonomie.
+- E-Commerce: Produktfindung, Warenkorb, Checkout, Verbraucherpflichten.
+- Web-App/SaaS: Aufgabenfluss, Zustände, Auth, Daten, Abrechnung.
+- Portfolio/Experience: Erinnerung und Marke, aber stets nutzbarer Fallback.
+
+## Scope-Regeln
+
+- `Must`, `Should`, `Could`, `Won't now` festlegen.
+- `Must`: die im Auftrag verlangte Anzahl vollständiger Websites mit festen Ports und einer echten Unterseitenarchitektur. Ohne Angabe im Auftrag genau eine Website, siehe [[00-start/05-web-product-workflow.md#Anzahl der Websites]]. Eine One-Page-Website oder reine Ankernavigation genügt nicht.
+- `Must`: SEO für jede Route und jede gebaute Website vollständig planen und testen.
+- `Must`: Navigationsmodell aus primären Nutzeraufgaben, Inhaltstiefe und realen Beschriftungen entwickeln; direkte Ziele und Gruppierung begründen und an langen Texten, Zoom und schmalen Breiten prüfen, siehe [[30-frontend/components-and-ui-states.md#Kopfzeile und Hauptnavigation]].
+- `Must`: hohes Motion-Niveau nach [[20-design/motion-and-interaction.md]] samt einer eigenen Choreografie je Website planen.
+- Jede Funktion braucht Nutzerwert, Owner, Datenbedarf, Missbrauchsfall und Abnahmekriterium.
+- Unsichere Hypothesen zuerst mit dem kleinsten realen Test validieren.
+- Keine Funktion nur hinzufügen, weil eine Inspiration sie zeigt.
+- Harte Nicht-Ziele festhalten. Sie schützen vor schleichendem Scope.
+
+## Messplan
+
+Maximal eine primäre und wenige sekundäre Kennzahlen. Ereignisse nur erfassen, wenn eine Entscheidung daran hängt. Datenschutzfreundliche, aggregierte Messung bevorzugen. Baseline, Zielwert, Zeitraum und Verantwortlichen definieren.
