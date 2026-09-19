@@ -43,7 +43,7 @@ Verbindlich:
 - Referenzquote nach [[90-references/reference-research-workflow.md]]: bei einer Einzelwebsite keine automatisch ausgewählte Leitreferenz; bei mehreren Websites genau eine referenzgeführte Fassung bei starker Passung und niemals eine Designsammlung als Leitreferenz; nur dokumentiert fehlende Passung erlaubt die Ausnahme ohne Referenz
 - keine Fakten, Testimonials, Logos, Zertifikate oder Metriken erfinden
 - keine redundanten oder rein dekorativen Kicker; echte Rubrik-, Status-, Datums- oder Prozessinformation darf eine eigene Hierarchiestufe erhalten
-- **bei jedem Website-Build UI UX Pro Max ausführen, ausnahmslos und bei mehreren Websites je Website getrennt**
+- UI UX Pro Max nutzen, wenn verfügbar, bei mehreren Websites je Website getrennt; sonst die Ersatzstrecke aus [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]] fahren. `G1` verlangt das Ergebnis, nicht den Skill-Lauf
 - Typografie und mögliche Zeitbezüge aus Marke, Inhalt und Lesesituation herleiten; starkes vollflächiges Retro- oder Epochenzitat nur bei ausdrücklichem Nutzerwunsch oder tragendem Markenbezug, nie bloß für Stilabstand
 - keine graue oder leere Platzhalterfläche dort, wo ein Bild vorgesehen ist, und keine sichtbare Kennzeichnung eines KI-Bildes
 - Radius-, Rahmen- und Tiefenentscheidungen bleiben innerhalb der einzelnen Website konsistent; Schatten, Rahmen, Hairlines und rahmenlose Flächen sind gleichwertige Mittel

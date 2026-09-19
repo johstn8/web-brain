@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: user-maintained
-updated: 2026-09-11
+updated: 2026-09-19
 ---
 
 # Plugins and Skills
@@ -12,7 +12,7 @@ Diese Liste beschreibt verfügbare KI-Fähigkeiten. Ein Eintrag ist keine Erlaub
 
 - Name: UI UX Pro Max
 - Typ: lokaler Skill
-- Status: installiert und **bei jedem Website-Build ausnahmslos verbindlich**
+- Status: installiert und **bei jedem Website-Build stark empfohlen**, keine Abnahmebedingung; Ersatzstrecke in [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]]
 - Version oder Commit: in der lokalen Metadatei nicht ausgewiesen; vor Upgrade erfassen
 - Quelle und Lizenz: lokale Installation unter `~/.agents/skills/ui-ux-pro-max/`; Lizenz noch zu prüfen
 - Fähigkeiten: durchsuchbare Empfehlungen zu Produkttyp, Stil, Farbe, Typografie, Landingpages, UX, Motion, Charts und unterstützten Stacks
@@ -24,9 +24,25 @@ Diese Liste beschreibt verfügbare KI-Fähigkeiten. Ein Eintrag ist keine Erlaub
 
 ### Auslösebedingung
 
-**Jeder Website-Build verwendet UI UX Pro Max, immer.** Es gibt keine Ausnahme für kleine Aufträge, Einzelseiten, Relaunches, Prototypen, Korrekturen an einer bestehenden Website oder Aufträge mit vorgegebenem Design. Bei mehreren Websites im Auftrag wird der Skill je Website getrennt ausgeführt.
+**Starke Empfehlung, keine Abnahmebedingung.** Wo UI UX Pro Max verfügbar ist, wird er bei jedem Website-Build verwendet, bei mehreren Websites je Website getrennt. Er ist der schnellste Weg zu einer belegten Design-Entscheidung, und wer ihn überspringt, zahlt die Zeit an anderer Stelle nach.
 
-Wird eine Website ohne dokumentierten Skill-Nachweis gebaut, ist Gate `G1` in [[70-qa/quality-gates.md]] nicht erfüllt und die Website gilt als nicht abgenommen. Ist der Skill technisch nicht ausführbar, wird das als Blocker gemeldet und im Decision Log festgehalten; die fehlende Ausführung wird nicht stillschweigend übergangen.
+Die Abnahme hängt nicht daran. Gate `G1` in [[70-qa/quality-gates.md]] prüft seit dem 19.09.2026 das Ergebnis — vollständiger Tokenvertrag, vollständige Zustände, Type Ramp, Kontrast in beiden Themes, echte Darstellung — und nicht, welches Werkzeug es erzeugt hat. Der Grund ist betrieblich: Der Skill liegt unter einem lokalen Pfad, ruft ein Python-Skript auf, und seine Lizenzfrage ist nach [[98-maintenance/review-queue.md]] noch offen. Eine Auslieferung, die an drei Installationen auf einem einzelnen Rechner hängt, ist kein Qualitätsmaßstab, sondern ein Ausfallrisiko.
+
+Ist der Skill nicht ausführbar, wird das im Decision Log festgehalten und die Ersatzstrecke gefahren. Das ist ein Vermerk, kein Blocker.
+
+### Ersatzstrecke ohne Skills
+
+Sind UI UX Pro Max, Impeccable oder `review-animations` auf der Maschine nicht verfügbar, wird dieselbe Arbeit ohne sie geleistet und genauso nachgewiesen:
+
+| Statt | Ersatz | Nachweis unter `design-system/<website-slug>/` |
+|---|---|---|
+| UI UX Pro Max `--design-system` | Design Contract direkt aus [[20-design/design-direction.md]], [[20-design/interface-benchmarks.md]] und dem gewählten Leitbenchmark füllen; Farb-, Typo-, Dichte- und Motion-Entscheidung je einzeln begründen | `DESIGN-CONTRACT.md` mit Datum |
+| UI UX Pro Max Detailabfragen | die Prüffragen der jeweiligen kanonischen Notiz durchgehen: Landing Page Craft, Color System, Typography, Components and UI States, Motion and Interaction | Antwortliste je Domäne mit Datum |
+| Impeccable KI-Detail-Review | den Befundkatalog aus [[20-design/anti-ai-slop.md#Impeccable KI-Detail-Review]] und die [[20-design/anti-ai-slop.md#Slop-Signaturen]] manuell am ganzseitigen Render durchgehen | Befundliste mit Ort, Beobachtung, Änderung |
+| `review-animations` | die zehn Prüfstandards aus [[00-start/04-plugins-and-skills.md#Review Animations]] je eingesetzter Bewegung durchgehen | Motion Inventory mit Prüfspalte |
+| `prototype` für das Auftaktfeld | die Auftaktfassungen von Hand bauen; das Kit liefert die Blöcke, verglichen wird trotzdem nebeneinander bei 375 und 1280 Pixel | Screenshots und Wahlbegründung |
+
+Die Ersatzstrecke kostet mehr Zeit und liefert dasselbe Ergebnis. Sie ist kein Grund, einen Prüfpunkt zu streichen.
 
 ### Verbindlicher Ablauf
 
@@ -69,7 +85,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Name: Emil Design Engineering
 - Typ: lokaler Skill
-- Status: für Motion- und Interaktionsentscheidungen verbindlich
+- Status: für Motion- und Interaktionsentscheidungen stark empfohlen; Ersatzstrecke in [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]]
 - Quelle und Lizenz: lokale Installation unter `~/.agents/skills/emil-design-eng/`; Quellen und Lizenz vor einem externen Einsatz prüfen
 - Fähigkeiten: Bewegungsentscheidung nach Häufigkeit und Zweck, Timing/Easing, Unterbrechbarkeit, Gesten sowie Performance- und Reduced-Motion-Prüfung
 - Grenzen und Risiken: bei der verbindlich hohen Bewegungsdichte Choreografie, Accessibility und Performance gemeinsam planen; konkrete Projektanforderungen gehen vor
@@ -82,7 +98,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Name: animate
 - Typ: lokaler Skill aus dem Skillset von Emil Kowalski
-- Status: für den Bau einzelner Bewegungen verbindlich, sobald eine neue Animation geschrieben wird
+- Status: für den Bau einzelner Bewegungen empfohlen, sobald eine neue Animation geschrieben wird
 - Quelle und Lizenz: [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT; Installation unter `/srv/Web-Design/shared-agent-skills/animate/`, verlinkt nach `~/.claude/skills/` und `~/.agents/skills/`
 - Fähigkeiten: Entscheidungsreihenfolge von der Frage, ob überhaupt animiert wird, über Zweck, Werkzeug, Eigenschaften, Kurve und Dauer bis zu Unterbrechung und Austritt, dazu die Implementierung
 - Grenzen und Risiken: er entscheidet je Einzelbewegung und ersetzt die Route-Choreografie aus [[20-design/motion-and-interaction.md]] nicht; er darf keine Bewegung streichen, die das verbindliche Motion-Niveau trägt
@@ -95,7 +111,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Name: review-animations
 - Typ: lokaler Skill aus dem Skillset von Emil Kowalski
-- Status: vor der Abnahme jeder gebauten Website verbindlich
+- Status: vor der Abnahme jeder gebauten Website empfohlen; verbindlich ist die geprüfte Bewegung, nicht der Skill-Lauf
 - Auslösung: `disable-model-invocation` ist gesetzt, der Skill startet nie von selbst und wird ausdrücklich aufgerufen
 - Quelle und Lizenz: [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT; Installation unter `/srv/Web-Design/shared-agent-skills/review-animations/`, verlinkt nach `~/.claude/skills/` und `~/.agents/skills/`
 - Fähigkeiten: zehn Prüfstandards mit Werten für Begründung, Häufigkeit, Easing, Dauer unter 300 ms, Ursprungspunkt, Unterbrechbarkeit, GPU-Eigenschaften, Reduced Motion, asymmetrischen Ein- und Austritt und Kohärenz
@@ -109,7 +125,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Name: prototype
 - Typ: lokaler Skill aus dem Skillset von Emil Kowalski
-- Status: **für das Auftaktfeld jeder gebauten Website verbindlich**, darüber hinaus optional für Divergenz in der Entwurfsphase; Auslöser und Umfang in [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]
+- Status: **für das Auftaktfeld jeder gebauten Website empfohlen**, darüber hinaus optional für Divergenz in der Entwurfsphase; Auslöser und Umfang in [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]
 - Auslösung: `disable-model-invocation` ist gesetzt, der Skill startet nie von selbst und wird ausdrücklich aufgerufen
 - Quelle und Lizenz: [emilkowalski/skills](https://github.com/emilkowalski/skills), MIT; Installation unter `/srv/Web-Design/shared-agent-skills/prototype/`, verlinkt nach `~/.claude/skills/` und `~/.agents/skills/`
 - Fähigkeiten: mehrere echte Fassungen eines beschriebenen UI-Teils, jede auf einer benannten Achse verschieden, hinter einem sichtbaren Umschalter zum Durchklicken
@@ -123,7 +139,7 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 
 - Name: Impeccable
 - Typ: lokaler Skill
-- Status: für visuelle UI-Arbeit, Reviews und Verfeinerungen verbindlich
+- Status: für visuelle UI-Arbeit, Reviews und Verfeinerungen stark empfohlen; Ersatzstrecke in [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]]
 - Version oder Commit: 4.0.4
 - Quelle und Lizenz: lokale Installation unter `~/.agents/skills/impeccable/`; Lizenz vor externem Einsatz prüfen
 - Fähigkeiten: visuelle Richtung, Hierarchie, responsive und zugängliche UI-Qualität, Zustände und begrenzte Verifikationsschleifen
@@ -136,11 +152,11 @@ python3 ~/.agents/skills/ui-ux-pro-max/scripts/search.py "<Produkttyp> <Branche>
 ### Ergänzung zum verbindlichen Ablauf
 
 - Vor einer neuen visuellen Richtung oder einem umfassenden UI-Refinement Impeccable mit dem passenden Arbeitsmodus nutzen und die Entscheidung im Design Contract der betreffenden Website festhalten.
-- **Nach der Implementierung ist der KI-Detail-Review mit Impeccable Pflicht**, je gebauter Website getrennt. Ablauf, Prüfliste und Nachweispflicht stehen in [[20-design/anti-ai-slop.md#Impeccable KI-Detail-Review]]. Ohne diesen Nachweis ist Gate `G1` nicht erfüllt.
+- **Nach der Implementierung ist der KI-Detail-Review je gebauter Website Pflicht**, das Werkzeug dafür nicht. Ablauf und Prüfliste stehen in [[20-design/anti-ai-slop.md#Impeccable KI-Detail-Review]]; Impeccable arbeitet sie am schnellsten ab, die manuelle Strecke oben liefert denselben Nachweis. `G1` verlangt die Befundliste, nicht das Werkzeugprotokoll.
 - Bei jeder neuen Website und jeder geänderten Motion Emil Design Engineering vor der Implementierung anwenden. Das Motion Inventory dokumentiert das gewählte Motion-Budget sowie für tatsächlich eingesetzte Bewegungen Zweck, Häufigkeit, Timing/Scroll-Range, Easing, Unterbrechbarkeit und Reduced-Motion-Fallback.
 - Beim Schreiben einer einzelnen Bewegung `animate` verwenden. Emil Design Engineering liefert die Haltung, `animate` die Entscheidungsreihenfolge und die Umsetzung.
-- **Vor der Abnahme jeder gebauten Website `review-animations` ausdrücklich aufrufen** und die Befunde entweder beheben oder mit Grund im Decision Log festhalten. Der Nachweis gehört zu Gate `G1`.
-- **Für das Auftaktfeld jeder gebauten Website `prototype` verbindlich aufrufen**, danach den Visual Iteration Loop nach [[20-design/visual-iteration-loop.md]] führen. Darüber hinaus `prototype` nur in der Entwurfsphase und nur für einzelne Bauteile, nie für ganze Websites.
+- **Vor der Abnahme jeder gebauten Website die Bewegungen gegen die zehn Prüfstandards prüfen**, bevorzugt mit `review-animations`, sonst manuell. Befunde beheben oder mit Grund im Decision Log festhalten. `G1` verlangt die geprüfte Bewegung, nicht den Skill-Lauf.
+- **Für das Auftaktfeld jeder gebauten Website die Fassungen wirklich bauen**, bevorzugt mit `prototype`, danach den Visual Iteration Loop nach [[20-design/visual-iteration-loop.md]] führen. Darüber hinaus `prototype` nur in der Entwurfsphase und nur für einzelne Bauteile, nie für ganze Websites.
 - Der Loop braucht ein Browserwerkzeug, mit dem der Agent den laufenden Build selbst ganzseitig rendert und ansieht. Welches Werkzeug das ist, wird hier geführt; fehlt eines, ist das ein Blocker nach [[70-qa/quality-gates.md]] und wird im Decision Log festgehalten.
 - Der Skill `apple-design` desselben Repositorys ist bewusst **nicht** installiert. Sein Inhalt steht als Referenz in [[90-references/apple-fluid-interface.md]] und wird von dort gelesen.
 - Der Skill `find-animation-opportunities` desselben Repositorys ist derzeit **nicht** installiert. Sein Auswahlprinzip widerspricht dem [[20-design/motion-and-interaction.md#Motion-Budget]] nicht mehr; bei künftiger Verfügbarkeit wird er nach Nutzen, Überschneidung und Wartungsaufwand neu bewertet.

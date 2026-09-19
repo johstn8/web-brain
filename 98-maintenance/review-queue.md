@@ -98,7 +98,7 @@ Für jedes neue Projekt zusätzlich prüfen:
 - Liegt für jede gebaute Website ein datierter Impeccable KI-Detail-Review mit Befundliste vor?
 - Liegt für jede gebaute Website ein datierter `review-animations`-Durchlauf mit Befundliste vor?
 - Sind die Copy-Prüffragen aus [[10-strategy/website-copy.md#Prüffragen vor der Abnahme]] auf jeden sichtbaren Text angewandt?
-- Ist UI UX Pro Max für jede gebaute Website ausgeführt und mit Datum belegt?
+- Liegt je gebauter Website ein datierter Designnachweis unter `design-system/<website-slug>/` vor, aus UI UX Pro Max oder aus der Ersatzstrecke?
 - Ist der Leitbenchmark aus [[20-design/interface-benchmarks.md]] benannt, samt nicht übernommener Elemente?
 - Sind alle Bilder überarbeitet, zu einer Serie angeglichen und alle `ai-placeholder`-Bilder mit Ersetzungshinweis übergeben?
 - Halten alle Routen das Textbudget aus [[10-strategy/information-density-and-mobile-clarity.md]] ein?

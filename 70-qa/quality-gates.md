@@ -12,6 +12,8 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 
 ## G0 Scope
 
+In der Fast Lane nach [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]] gilt `G0` **verkürzt**: die ersten fünf Punkte plus Logo und Release-Readiness. Die Punkte zu Referenzmodus, mehreren Fassungen und Relaunch-Inventar entfallen, weil ihre Auslöser dort definitionsgemäß nicht vorliegen. In der Full Lane gilt die vollständige Liste.
+
 - [ ] eigener Ordner unter `../projekte/<Projektname>/`; PROJECT.md und alle Pflichtinventare vorhanden und verlinkt
 - [ ] Projekt-Master-Spec vollständig; Annahmen und Nicht-Ziele markiert
 - [ ] Anzahl der Websites entspricht dem Auftrag; Quelle im Auftragstext ist in `PROJECT.md` zitiert. Ohne Angabe im Auftrag genau eine Website
@@ -25,6 +27,20 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 
 ## G1 Design
 
+`G1` prüft das **Ergebnis**, nicht das Werkzeug, das es erzeugt hat. Welcher Skill, welches Plugin und welche Maschine im Spiel waren, ist für die Abnahme ohne Belang; entscheidend ist, dass die folgenden Eigenschaften am laufenden Build nachweisbar sind. Die Nachweisform je Punkt ist der Render, die Tokenquelle oder der Design Contract, nicht ein Werkzeugprotokoll.
+
+### Kernprüfung
+
+Diese fünf Punkte tragen das Gate. Fällt einer, ist `G1` nicht erfüllt, unabhängig davon, wie die Website entstanden ist.
+
+- [ ] **Tokenvertrag vollständig und gerendert**: jede Pflichtrolle aus [[20-design/color-system.md#Tokenvertrag]] hat einen gesetzten Wert in genau einer Tokenquelle, für Licht und Dunkel getrennt kuratiert, und ist an realem Text angesehen worden
+- [ ] **Zustände vollständig**: jede Interaktion zeigt ihre anwendbaren Zustände nach [[30-frontend/components-and-ui-states.md]] — Default, Hover, Focus, Active, Disabled, Loading, Success, Error, Empty, Offline; sichtbarer Fokus, unterscheidbares Verhalten interaktiver und nicht interaktiver Flächen
+- [ ] **Type Ramp vorhanden und angewandt**: die Stufen sind benannt, haben je eine Aufgabe, benachbarte Stufen unterscheiden sich um mindestens den Faktor 1,25, und die Zuordnung ist auf jeder primären Route eingehalten
+- [ ] **Kontrast in beiden Themes**: jede Text-auf-Fläche-Kombination des Tokenvertrags erfüllt den Zielstandard aus [[30-frontend/accessibility.md#Zielstandard]] in Licht **und** Dunkel, einschließlich der dritten Textstufe auf `surface-alt` und der Zustände von `accent`
+- [ ] **echte Darstellung geprüft**: ganzseitige Renders bei 375 und 1280 Pixel liegen vor, mit langen Inhalten, Zoom und Fehlerzuständen; ein nicht renderbarer Build ist vor der Lieferung ein Blocker, den Textanalyse nicht ersetzt
+
+### Handwerk und Komposition
+
 - [ ] Design Direction und Tokens für Farbe, Typo, Spacing, Grid, Radius, Shadow, Motion
 - [ ] **Tokenvertrag vollständig** nach [[20-design/color-system.md#Tokenvertrag]]: jede Pflichtrolle hat einen gesetzten Wert in genau einer Tokenquelle, einschließlich `bg`, `surface`, `surface-alt`, drei Textstufen, `border`, `border-hover`, `accent`, `accent-subtle`, `accent-contrast`, `focus` und der semantischen Rollen; Light und Dark getrennt kuratiert
 - [ ] **H0-Handwerksuntergrenze erfüllt** nach [[20-design/interface-benchmarks.md#H0 Handwerksuntergrenze]]: vollständige Zustände, sichtbarer Fokus, Kontextkontrast, klare Hierarchie und ein konsistentes System innerhalb der Website
@@ -33,7 +49,7 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Kopfzeileninventar und -anordnung sind website-spezifisch; eine durchscheinende Kopfzeile erfüllt nur bei Wahl die Fallback-Regeln aus [[30-frontend/components-and-ui-states.md#Option durchscheinende Kopfzeile]]
 - [ ] eigener Zeit- und Kurvensatz als Tokens; die Beispiele aus [[20-design/motion-and-interaction.md#Kalibrierte Bewegungsbeispiele]] sind nur bei dokumentierter Übernahme Prüfmaß
 - [ ] negatives Tracking nur auf großen Typostufen; tabellarische Ziffern für vergleichbare Zahlen; Mono nur in den begründeten technischen Rollen der Website, nie automatisch für Anschriften, Fließtext, Sektionstitel, Zeiten, Tags oder Abschnittsnummern
-- [ ] **UI UX Pro Max wurde für diese Website ausgeführt** und unter `design-system/<website-slug>/MASTER.md` getrennt persistiert; keine projektweiten Global Rules ziehen Fassungen gleich
+- [ ] die Designentscheidungen dieser Website sind unter `design-system/<website-slug>/` getrennt festgehalten; keine projektweiten Global Rules ziehen Fassungen gleich. Wurde UI UX Pro Max genutzt, liegt sein `MASTER.md` dort; wurde die Ersatzstrecke aus [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]] gefahren, liegt dort deren Nachweis
 - [ ] Leitbenchmark aus [[20-design/interface-benchmarks.md]] benannt; übernommene und ausdrücklich nicht übernommene Elemente dokumentiert
 - [ ] Schriftwahl, Rollen, Lizenz, Lesbarkeit und beabsichtigter Zeitbezug nach [[20-design/typography-layout-and-spacing.md#Stilzitat und Zeitbezug]] dokumentiert
 - [ ] ein starkes vollflächiges Retro- oder Epochenzitat liegt nur bei ausdrücklichem Nutzerwunsch oder tragender Markenevidenz vor; Stilabstand allein ist keine Begründung
@@ -44,11 +60,11 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] bei mehreren Websites: Unterscheidungsmatrix vor UI-Code ausgefüllt; jede Website besitzt eine eigenständige kohärente Richtung und unterscheidet sich auf mindestens fünf für den Auftrag wirksamen Achsen
 - [ ] bei vorhandenen Vorgängerfassungen: Übernahmeregister ausgefüllt; wiederholte Leitmotive, Fassungsnamen, Signalfarben oder primäre Beweisformen sind als bewusste sachliche Entscheidung dokumentiert
 - [ ] primäre Beweisform je Landing Page dokumentiert; wenn ein interaktives Kernmodul gewählt wurde, erfüllt es [[20-design/motion-and-interaction.md#Interaktives Kernmodul]] mit realen Daten, Tastaturbedienung, Zuständen und statischer Alternative
-- [ ] UI UX Pro Max Abfrage und Auswahl dokumentiert; die Pflicht-Detailabfragen zu `landing`, `style`, `color`, `typography`, `ux`, `gsap` und Stack liegen mit Datum vor; projektspezifische Abweichungen begründet
+- [ ] die Entscheidungen zu Landing, Stil, Farbe, Typografie, UX und Motion sind mit Datum und Begründung dokumentiert, gleich ob aus einer Skill-Abfrage oder aus der Ersatzstrecke
 - [ ] Referenzrecherche nach [[90-references/reference-research-workflow.md]]: keine Sammlungs-/Galerie-/Award-/Stilbibliotheksseite als Leitreferenz; bei einer Einzelwebsite kein zufällig ausgewähltes Beispiel; bei mehreren Websites genau eine ausgewählte Originalseite für genau eine Fassung, sofern starke Passung gefunden wurde; keine Quervererbung in die Eigenentwürfe
 - [ ] pen.dev Einsatz oder Verzicht entschieden; verwendete `.pen`-Dateien versioniert und visuell geprüft
 - [ ] Anti-Slop-Review bestanden; keine unbegründeten Standardsektionen
-- [ ] **Impeccable KI-Detail-Review je gebauter Website** durchgeführt, mit Datum, Befundliste und Umsetzungsstand dokumentiert, siehe [[20-design/anti-ai-slop.md#Impeccable KI-Detail-Review]]
+- [ ] **KI-Detail-Review je gebauter Website** durchgeführt, mit Datum, Befundliste und Umsetzungsstand dokumentiert. Der Befundkatalog steht in [[20-design/anti-ai-slop.md#Impeccable KI-Detail-Review]]; ob Impeccable ihn abarbeitet oder der Agent ihn manuell durchgeht, ist für dieses Gate ohne Belang
 - [ ] keine redundanten, rein dekorativen Kicker; echte Metainformation besitzt eine begründete, zugängliche Hierarchiestufe
 - [ ] Kopfzeileninventar und Navigationsmuster sind aus der Informationsarchitektur begründet; bei 320, 375, 768, 1280 und 1920 Pixel, langen realen Beschriftungen, großer Systemschrift und 200 Prozent Zoom entstehen kein zufälliger Umbruch, Beschnitt oder Überlauf
 - [ ] Logos, Wortzeichen und Controls behalten an jedem Prüfbreakpoint ihr Seitenverhältnis und werden nicht beschnitten
@@ -66,15 +82,15 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] die Prüffragen aus [[20-design/landing-page-craft.md#Prüffragen vor der Abnahme]] sind je gebauter Landing Page am laufenden Build beantwortet
 - [ ] die vollständige semantische H1 ist bei 320, 375, 768, 1280 und 1440 Pixel, 200 Prozent Zoom und großer Systemschrift ohne Anschnitt, Maske, Überlagerung oder Kollision mit der realen klebenden Kopfzeile lesbar
 - [ ] auf Mobil beginnt spätestens innerhalb der zweiten Bildschirmhöhe sichtbar die nächste reale Nutzerfrage oder der erste konkrete Beweis; Schriftgröße, Kontaktmetadaten, Dekoration und ungenutzter Weißraum halten den Seitenfortschritt nicht auf
-- [ ] **Stilkachel `D0` gerendert und angesehen** nach [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]]: jede Pflichtfarbrolle mit ihrem realen Text in Licht und Dunkel, Type Ramp an echtem Text, Radius-/Rahmen-/Tiefengrammatik, Aktionen in allen Zuständen, gewählte Inhaltsgrundform mit Leer- und Ladezustand, Signaturdetail; Befunde daran vor dem ersten Auftakt behoben
-- [ ] **Auftaktfeld gebaut**: zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten liegen vor, wurden nebeneinander bei 375 und 1280 Pixel beurteilt; Wahl, verworfene Fassungen und Grund stehen im Design Contract, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]
-- [ ] **Visual Iteration Loop durchlaufen**: mindestens die Durchgänge `D1`, `D2` und `D3` aus [[20-design/visual-iteration-loop.md#Pflichtdurchgänge]] je gebauter Website, jeweils mit Datum, benannten Stopps, schriftlicher Befundliste und der daraufhin vorgenommenen Änderung. Renders ohne zugehörige Befundliste erfüllen dieses Gate nicht
+- [ ] **Stilkachel `D0` gerendert und angesehen** (Full Lane; in der Fast Lane deckt die Kernprüfung dieselben Eigenschaften ab) nach [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]]: jede Pflichtfarbrolle mit ihrem realen Text in Licht und Dunkel, Type Ramp an echtem Text, Radius-/Rahmen-/Tiefengrammatik, Aktionen in allen Zuständen, gewählte Inhaltsgrundform mit Leer- und Ladezustand, Signaturdetail; Befunde daran vor dem ersten Auftakt behoben
+- [ ] **Auftaktfeld gebaut** (Fast Lane: zwei Fassungen): zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten liegen vor, wurden nebeneinander bei 375 und 1280 Pixel beurteilt; Wahl, verworfene Fassungen und Grund stehen im Design Contract, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]
+- [ ] **Visual Iteration Loop durchlaufen**: in der Full Lane mindestens die Durchgänge `D1`, `D2` und `D3` aus [[20-design/visual-iteration-loop.md#Pflichtdurchgänge]], in der Fast Lane ein Durchgang, je gebauter Website, jeweils mit Datum, benannten Stopps, schriftlicher Befundliste und der daraufhin vorgenommenen Änderung. Renders ohne zugehörige Befundliste erfüllen dieses Gate nicht
 - [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; die Rendernachweise sind **ganzseitig** und nicht nur der sichtbare Auftakt, damit Überlauf, Kollision und Fehlerzustände unterhalb der Falz sichtbar werden
 - [ ] kann in der Abnahmeumgebung keine echte Darstellung erzeugt werden, ist dies **vor der Lieferung ein Blocker**. Textanalyse, bestandene Tokenpaare oder ein nachträglicher Hinweis ersetzen den Render nicht
 - [ ] alle UI-Zustände gestaltet
 - [ ] Motion-Referenzen interaktiv geprüft; Reduced-Motion- und Medienfallback belegt
 - [ ] Motion-Budget `none | low | medium | high` ist begründet; jede tatsächlich eingesetzte relevante Bewegung steht im Motion Inventory, hat einen Zweck und besteht Reduced-Motion-, Eingabe- und Performanceprüfung
-- [ ] **`review-animations` je gebauter Website ausgeführt** und mit Datum, Befundliste und Umsetzungsstand dokumentiert, siehe [[00-start/04-plugins-and-skills.md#Review Animations]]; offene Befunde sind im Decision Log begründet
+- [ ] jede eingesetzte Bewegung ist gegen die zehn Prüfstandards aus [[00-start/04-plugins-and-skills.md#Review Animations]] geprüft und mit Datum, Befundliste und Umsetzungsstand dokumentiert; ob `review-animations` das leistet oder die Liste manuell durchlaufen wird, ist für dieses Gate ohne Belang
 - [ ] Bewegungsentscheidungen enthalten Zweck, Häufigkeit, Easing/Dauer oder Scroll-Range, Eingabemethode, Unterbrechbarkeit und Reduced-Motion-Fallback; keine Animation verzögert häufige Tastaturbedienung
 
 ## G2 Funktion

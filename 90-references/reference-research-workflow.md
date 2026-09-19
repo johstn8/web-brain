@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-09-19
 review_by: 2027-02-27
 depends_on:
   - "[[90-references/inspiration-catalog.md]]"
@@ -25,7 +25,7 @@ Die Modi sind `Eigenentwurf`, `nutzer-vorgegeben` und `ausgewählte Leitreferenz
 
 | Anzahl gebauter Websites | Automatisch ausgewählte externe Leitreferenzen | Folge |
 |---|---:|---|
-| genau eine | `0` | Die Website entsteht als Eigenentwurf aus Projektwahrheit, Leitbenchmark, Designregeln und UI UX Pro Max. Der Pool wird nicht pflichtweise nach einer Vorlage durchsucht. |
+| genau eine | `0` | Die Website entsteht als Eigenentwurf aus Projektwahrheit, Leitbenchmark und Designregeln. Der Pool wird nicht pflichtweise nach einer Vorlage durchsucht. |
 | zwei oder mehr | `1` | Genau eine Fassung wird nach starker Passungsprüfung von genau einer konkreten Originalseite geprägt. Alle übrigen Fassungen sind Eigenentwürfe und verwenden diese Seite nicht verdeckt als zweite Vorlage. Nur wenn trotz dokumentierter Suche keine starke Passung existiert, entfällt die Referenz als begründete Ausnahme. |
 
 Für die mögliche referenzgeführte Fassung wird mindestens der [[90-references/website-reference-pool.md]] geprüft. Aktuelle Wettbewerber oder fachnahe Produkte dürfen ergänzt werden, wenn ihre direkte Live-URL dokumentiert wird. Sammlungs-, Galerie-, Award- und Stilbibliotheksseiten sind nur Recherchewege und niemals die Leitreferenz selbst. Gibt es keine starke Passung, bleiben alle Fassungen Eigenentwürfe; eine beliebige Seite wird nicht erzwungen.
