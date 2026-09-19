@@ -6,7 +6,7 @@ updated: 2026-08-06
 
 # Screenshot Manifest
 
-Globale Rechercheevidenz, keine Projektassets. Prozess: [[90-References/Reference Research Workflow]].
+Globale Rechercheevidenz, keine Projektassets. Prozess: [[90-references/reference-research-workflow.md]].
 
 ## Aufnahme 2026-08-03
 
@@ -18,6 +18,6 @@ Globale Rechercheevidenz, keine Projektassets. Prozess: [[90-References/Referenc
 | `dataflow.png` | valid | pending | Hero und Navigation sichtbar |
 | `brutalist.png` | valid | pending | Hero und Folgebereich sichtbar |
 
-Am 2026-08-06 wurden die Aufnahmen zu Optimus, GiGi Energy, Agentic, Everest und v0 IRL gelöscht, weil die zugehörigen Referenzen aus dem [[90-References/Inspiration Catalog|Katalog]] entfernt wurden.
+Am 2026-08-06 wurden die Aufnahmen zu Optimus, GiGi Energy, Agentic, Everest und v0 IRL gelöscht, weil die zugehörigen Referenzen aus dem [[90-references/inspiration-catalog.md|Katalog]] entfernt wurden.
 
 `valid` gilt nur für den sichtbaren statischen Zustand. Mobil, Interaktion, Tastatur und Reduced Motion sind projektspezifisch neu zu prüfen.
