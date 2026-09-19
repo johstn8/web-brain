@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 ---
 
 # Update Protocol
@@ -20,8 +20,8 @@ Kein partielles Update darf widersprüchliche oder veraltete Projektinformatione
 5. Doppelte Aussagen suchen. Nur die kanonische Aussage behalten.
 6. Links, Fußnoten, Status, Datum und Review-Frist prüfen.
 7. Betroffene Quality Gates ausführen.
-8. [[98-maintenance/change-log.md]] ergänzen.
-9. Änderung und Change-Log-Eintrag in einem Commit sichern und pushen. Erst danach gilt das Update als abgeschlossen.
+8. Änderung in einem Commit nach der Commit-Konvention aus `AGENTS.md` sichern und pushen: Betreffzeile benennt die kanonische Änderung, Body enthält die Begründung. Erst danach gilt das Update als abgeschlossen.
+9. Nur wenn die Begründung länger lebt als der Diff — eine gekippte Regel, eine verworfene Alternative, eine Recherchebasis — zusätzlich einen Eintrag in [[98-maintenance/change-log.md]] anlegen. Für gewöhnliche Änderungen ist die Commit-Historie das Protokoll.
 
 ## Pflicht-Propagation
 
@@ -40,4 +40,4 @@ Kein partielles Update darf widersprüchliche oder veraltete Projektinformatione
 
 ## Definition vollständig
 
-Vollständig bedeutet: keine widersprüchlichen Quellen, keine offenen Seiteneffekte, alle erforderlichen Tests grün und die Änderung im Changelog nachvollziehbar.
+Vollständig bedeutet: keine widersprüchlichen Quellen, keine offenen Seiteneffekte, alle erforderlichen Tests grün und die Änderung im Commit nachvollziehbar begründet.

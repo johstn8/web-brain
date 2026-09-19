@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-09-19
 depends_on:
   - "[[70-qa/test-matrix.md]]"
 ---
@@ -148,5 +148,5 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 - [ ] Dependency-/Serverliste, `.env.example`, Deploy, Migration und Rollback
 - [ ] Monitoring, Alerts, Backups und Restore-Test
 - [ ] Subscription-Löschfluss, Datenlöschung und Supportpfad getestet
-- [ ] Changelog und Übergabe aktuell
+- [ ] Übergabe aktuell; Entscheidungen des Builds im Decision Log des Projekts und in der Commit-Historie nachvollziehbar
 - [ ] jedes Release-Readiness-Register gegen Repository, ausgelieferten Produktionskandidaten und externe Infrastruktur abgeglichen; offene `P0` sichtbar, offene `P1` mit datierter Owner-Entscheidung

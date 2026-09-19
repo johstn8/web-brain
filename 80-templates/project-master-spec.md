@@ -196,4 +196,4 @@ Nach [[10-strategy/website-copy.md]] festhalten:
 
 ## Change Impact
 
-Bei jeder Änderung: kanonischer Owner, betroffene Abschnitte/Artefakte, Tests, Changelog.
+Bei jeder Änderung: kanonischer Owner, betroffene Abschnitte/Artefakte, Tests, Commit nach der Commit-Konvention aus `AGENTS.md`.

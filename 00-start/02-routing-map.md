@@ -40,5 +40,5 @@ Lade nur die Zeilen, die zur Aufgabe passen.
 | Developer-Plattform auf `johannstein.com` | [[60-operations/delivery-and-local-start.md]], [[30-frontend/accessibility.md]], [[40-backend-security/preview-access-gate.md]] | Archiv, aktuelle Projekte und Veröffentlichungsvorhaben; persistenter Status, Tastaturalternative, Login/Freigabe/noindex erhalten |
 | Website-Build oder -Update | [[60-operations/release-readiness-register.md]] | eigenes, fortlaufend aktualisiertes `release-readiness/<website-slug>.md` je Website |
 | Launch | [[70-qa/quality-gates.md]], [[60-operations/delivery-and-local-start.md]], [[60-operations/release-readiness-register.md]] | abgeglichenes Release-Readiness-Register je Website und signierte Launch-Checkliste |
-| Brain-Update | [[00-start/03-update-protocol.md]], [[98-maintenance/coverage-and-impact-map.md]] | atomarer Changelog-Eintrag |
+| Brain-Update | [[00-start/03-update-protocol.md]], [[98-maintenance/coverage-and-impact-map.md]] | atomarer Commit nach der Commit-Konvention aus `AGENTS.md`; Change-Log-Eintrag nur bei langlebiger Begründung |
 | pen.dev oder `.pen` | [[90-references/pen-dev-workflow.md]], [[60-operations/delivery-and-local-start.md]] | versionierte Designquelle, CLI-Exportprüfung und Decision Log |

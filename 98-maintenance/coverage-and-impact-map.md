@@ -174,10 +174,12 @@ Prüfe das gesamte betroffene Thema, Quellen und Abrufdatum. Markiere rechtlich 
 
 ## Abschlussnachweis
 
-Ein Update gilt erst als vollständig, wenn im [[98-maintenance/change-log.md]] festgehalten ist:
+Ein Update gilt erst als vollständig, wenn der Commit-Body festhält:
 
 - was geändert wurde,
 - welche Auslöser aus dieser Karte galten,
 - welche Notizen geprüft wurden,
 - welche Tests oder Linkprüfungen liefen,
 - welche offenen Punkte in der [[98-maintenance/review-queue.md]] verblieben.
+
+Die Commit-Konvention steht in `AGENTS.md`. Ein zusätzlicher Eintrag im [[98-maintenance/change-log.md]] entsteht nur für Entscheidungen, deren Begründung länger lebt als der Diff.
