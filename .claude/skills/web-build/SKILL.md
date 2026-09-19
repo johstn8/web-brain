@@ -48,10 +48,14 @@ node --experimental-strip-types web-kit/scripts/extract-old-site.ts \
   --url https://<alte-seite> --out ../projekte/<Projektname>/extract
 ```
 
-Das Ergebnis ist ein **Rohbestand, keine Wahrheit**. Jede Angabe — Preise,
-Öffnungszeiten, Leistungen — gegen eine Primärquelle prüfen. Veraltete
-Angaben stehen genau dort am häufigsten. Ablauf in
-`web-brain/10-strategy/existing-website-rebuild.md`.
+**Übernehmen, nicht rückfragen.** Preise, Öffnungszeiten, Leistungen und
+Kontaktdaten von der alten Seite gelten als richtig und werden eingebaut.
+Die Website eines Betriebs ist für seine eigenen Angaben eine Primärquelle.
+
+Wirkt etwas veraltet oder widersprechen sich zwei Quellen: plausiblere
+Angabe nehmen, Anmerkung in `PROJECT.md` unter `Übernommene Angaben`, Eintrag
+in `release-readiness/<website-slug>.md` — und weiterarbeiten. Regel in
+`web-brain/10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage`.
 
 ### 3. Recherche und Brief
 
@@ -150,6 +154,30 @@ Zustände, Type Ramp, Kontrast in beiden Themes, echte Darstellung.
 
 Danach das Release-Readiness-Register gegen Repository und ausgelieferten
 Stand abgleichen und schließen.
+
+## Nicht anhalten
+
+Der Auftrag ist, durchzuarbeiten. Die Nachfrageschwelle steht kanonisch in
+`web-brain/00-start/05-web-product-workflow.md#Nachfrageschwelle`, in Kurzform:
+
+**Nicht fragen** bei Angaben, die auf der alten Seite stehen · fehlenden
+Kleinigkeiten — Platzhalter setzen und eintragen · widersprüchlichen Quellen
+— plausiblere nehmen, notieren · Geschmacksfragen — entscheiden und begründen
+· Angaben, die alt wirken — trotzdem übernehmen, Zweifel notieren.
+
+**Fragen** bei Wechsel auf die Full Lane · vor dem Löschen · bei einem
+Auftrag, der sich selbst widerspricht · bei rechtlich oder
+sicherheitsrelevanten Entscheidungen · bei einer Pflichtangabe, die nirgends
+auffindbar ist.
+
+Alles Aufgefallene sammelt sich als Anmerkung in `PROJECT.md` und im
+Release-Readiness-Register. Der Nutzer liest es am Ende gesammelt.
+
+Platzhalter sind erlaubt und blockieren nur die Veröffentlichung, nicht die
+Arbeit. Die eine Grenze: Kundenstimmen, Zertifikate, Auszeichnungen und
+Kennzahlen werden nicht erfunden — die Website eines realen Betriebs steht
+damit für dessen Ruf gerade. Beschreibender Text und Bildplatzhalter fallen
+nicht darunter.
 
 ## Was in dieser Bahn nicht verkürzt wird
 

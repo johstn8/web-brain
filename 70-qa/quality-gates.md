@@ -18,7 +18,7 @@ In der Fast Lane nach [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane 
 - [ ] Projekt-Master-Spec vollständig; Annahmen und Nicht-Ziele markiert
 - [ ] Anzahl der Websites entspricht dem Auftrag; Quelle im Auftragstext ist in `PROJECT.md` zitiert. Ohne Angabe im Auftrag genau eine Website
 - [ ] Sitemap, Seitenverträge und primäre Nutzerflüsse aktuell; jede gebaute Website enthält eine verlinkte Startseite und die vollständigen erforderlichen Unterseiten. One-Page/Anker allein ist nicht zulässig.
-- [ ] echte Inhalte oder klar markierte Drafts, keine Produktions-Platzhalter
+- [ ] echte Inhalte oder klar markierte Drafts. Platzhalter sind **während des Builds erlaubt** nach [[00-start/05-web-product-workflow.md#Platzhalter sind erlaubt]]; zur Abnahme sind sie entweder ersetzt oder stehen vollzählig als offener Punkt im Release-Readiness-Register. Ein unbekannter Platzhalter ist der Befund, nicht der bekannte
 - [ ] Referenzmodus je Website dokumentiert; bei genau einer Website keine automatisch ausgewählte Live-Leitreferenz, bei mehreren genau eine referenzgeführte Fassung bei starker Passung und alle übrigen als Eigenentwürfe hergeleitet; eine Ausnahme ohne Referenz enthält die dokumentierte erfolglose Suche; nutzer-vorgegebene Referenzen gesondert markiert
 - [ ] die beauftragte Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/`, bei mehreren mit eigenständiger kohärenter Richtung und Unterschieden auf mindestens fünf wirksamen Achsen bei gleichem Scope; auf `217.154.218.30` über `johannstein.com/dev` ohne Projektport erreichbar, sonst auf eigenem geprüftem lokalen Port
 - [ ] bei Relaunch: alte Website, externe Fundstellen, Maps-/Unternehmensprofil, Social Profiles und Dokumente inventarisiert; Konflikte markiert

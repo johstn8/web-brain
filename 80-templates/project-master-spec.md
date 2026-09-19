@@ -35,10 +35,11 @@ updated: 2026-09-19
 ## 3 Content
 
 - Bestandswebsite und Quelleninventar:
-- Verifizierte Unternehmensfakten, Öffnungszeiten, Angebote, Preise/Speisekarte und Aktualitätsdatum; Maps-Hinweise nur mit Primärquellenbestätigung:
+- Unternehmensfakten, Öffnungszeiten, Angebote, Preise/Speisekarte mit Quelle und Abrufdatum. Angaben von der eigenen Website des Betriebs gelten als richtig, siehe [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]]:
+- **Übernommene Angaben und Anmerkungen:** was von wo übernommen wurde, welche Angabe Zweifel weckt, welcher Widerspruch auffiel. Anmerkungen statt Rückfragen; der Nutzer liest sie gesammelt:
 - Google Place ID/Maps-URL, erlaubter Integrationsweg und Fallback:
 - Verifizierte offizielle Profile und Linkziele:
-- Übernommene, neu formulierte, verworfene und noch zu bestätigende Inhalte:
+- Übernommene, neu formulierte, verworfene Inhalte sowie gesetzte Platzhalter (je mit Eintrag im Release-Readiness-Register):
 - Value Proposition:
 - Voice und verbotene Muster:
 - Reale Belege:

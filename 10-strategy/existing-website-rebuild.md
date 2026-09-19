@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-06
+updated: 2026-09-19
 review_by: 2027-02-03
 depends_on:
   - "[[00-start/05-web-product-workflow.md]]"
@@ -19,9 +19,30 @@ impacts:
 
 ## Trigger und Ziel
 
-Bei vollständigem Neubau, Relaunch oder Modernisierung einer vorhandenen Website ist Quellenwiederherstellung Pflicht. Ziel ist, bestätigte Unternehmenssubstanz zu bewahren, veraltete oder falsche Angaben zu erkennen und den Neubau nicht mit erfundenem Ersatzinhalt zu füllen.
+Bei vollständigem Neubau, Relaunch oder Modernisierung einer vorhandenen Website ist Quellenwiederherstellung Pflicht. Ziel ist, vorhandene Unternehmenssubstanz zu bewahren und den Neubau nicht mit erfundenem Ersatzinhalt zu füllen. Gefundene Angaben werden nach [[#Übernahme ohne Rückfrage]] übernommen, nicht erst bestätigt.
 
 Vor Beginn muss der Projektordner nach [[00-start/05-web-product-workflow.md]] existieren. Sämtliche Fundstellen, Downloads und Entscheidungen bleiben in diesem Projekt.
+
+## Übernahme ohne Rückfrage
+
+**Die eigene Website des Betriebs ist für seine eigenen Angaben eine Primärquelle, keine Verdachtsquelle.** Preise, Öffnungszeiten, Leistungen, Kontaktdaten und Anschrift werden von dort übernommen, als richtig behandelt und eingebaut. Der Build hält dafür nicht an.
+
+Das gilt ausdrücklich auch dann, wenn die Angabe alt aussehen könnte. Eine veraltete Öffnungszeit ist ein Fehler, der vor dem Launch in zwei Minuten korrigiert wird; eine unterbrochene Arbeit kostet mehr als sie verhindert.
+
+**Was auffällt, wird notiert, nicht erfragt.** In `PROJECT.md` entsteht der Abschnitt `Übernommene Angaben` mit Quelle, Abrufdatum und — sofern vorhanden — dem Zweifel in einem Satz:
+
+```
+## Übernommene Angaben
+Quelle: https://alte-seite.de, abgerufen am 2026-09-19
+
+- Öffnungszeiten, Preise, Leistungen, Kontakt: übernommen
+- Anmerkung: Die Preisliste nennt "Stand 2023". Wirkt alt, wurde trotzdem
+  übernommen. Vor dem Launch bestätigen lassen.
+```
+
+Dieselbe Anmerkung geht als offener Punkt in `release-readiness/<website-slug>.md`. Dort gehört sie hin: Sie blockiert die **Veröffentlichung**, nicht die **Arbeit**.
+
+**Widerspricht sich etwas, wird es benannt.** Sagen zwei Quellen Verschiedenes — die Website nennt andere Zeiten als das Maps-Profil, das Impressum eine andere Anschrift als die Kontaktseite — dann wird die plausiblere genommen, der Widerspruch notiert und weitergearbeitet. Ein Widerspruch ist eine Anmerkung, keine Rückfrage.
 
 ## Quellenreihenfolge
 
@@ -32,12 +53,12 @@ Vor Beginn muss der Projektordner nach [[00-start/05-web-product-workflow.md]] e
 5. Social-, Lieferdienst-, Branchen- und Presseprofile
 6. weitere Drittquellen und Designreferenzen
 
-Konflikte nicht durch Mehrheitsentscheidung lösen. Quelle, Datum und Widerspruch in `SOURCE-RIGHTS-REVIEW.md` erfassen und Betreiberbestätigung anfordern.
+Konflikte nicht durch Mehrheitsentscheidung lösen. Quelle, Datum und Widerspruch im Projekt erfassen, die plausiblere Angabe verwenden und weiterarbeiten. Die Betreiberbestätigung holt der Nutzer vor dem Launch über [[60-operations/release-readiness-register.md]], nicht der Agent während des Builds.
 
 ## Bestandsaufnahme
 
 - Alle erreichbaren Seiten, Navigation, Downloads, Metadaten, strukturierte Daten und Redirect-relevante URLs erfassen.
-- Betreiber-, Kontakt-, Register-, Standort- und Branchenangaben extrahieren und verifizieren.
+- Betreiber-, Kontakt-, Register-, Standort- und Branchenangaben extrahieren und übernehmen.
 - Leistungen, Produkte, Preise, Öffnungszeiten, Reservierung, Liefer-/Abholwege, Speisekarten und zeitkritische Hinweise erfassen.
 - Fotos, Logos, Videos, PDFs, Fonts und sonstige Medien mit Original-URL, erkennbarem Urheber und gewünschter beziehungsweise tatsächlicher Verwendung inventarisieren.
 - **Logo gezielt suchen und einsetzen.** Das Logo des Betriebs wird aktiv gesucht: im Kopfbereich der alten Website, im Favicon, im Social-Asset, in PDFs, auf Fahrzeugen, Schildern oder Drucksachen und in offiziellen Profilen. Wird eines gefunden, wird es in jeder gebauten Website sichtbar verwendet, bevorzugt auf der Startseite. Auflösung, Alter oder gestalterische Qualität sind kein Grund, es wegzulassen oder durch ein eigenes Zeichen zu ersetzen. Platzierungsregeln in [[20-design/design-direction.md#Logo des Betriebs]]. Wird keines gefunden, wird das ausdrücklich als Befund dokumentiert.

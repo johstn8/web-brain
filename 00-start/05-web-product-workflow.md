@@ -27,6 +27,34 @@ Sobald der Nutzer die Umsetzung, den Neubau oder den vollständigen Relaunch ein
 
 Kann die Projektwurzel nicht angelegt oder beschrieben werden, Blocker melden. Nicht ersatzweise im Brain, in einem temporären Ordner oder in einem anderen Projekt bauen. Das Brain wird nicht in den Projektordner kopiert; `PROJECT.md` verweist auf die zutreffenden kanonischen Regeln und dokumentiert deren Anwendung.
 
+## Nachfrageschwelle
+
+**Der Agent arbeitet durch.** Er fragt nur, wenn eine Antwort die Arbeit in eine andere Richtung lenken würde — nicht, um sich abzusichern. Eine Rückfrage kostet den Nutzer einen Kontextwechsel; das muss sie wert sein.
+
+| Er fragt **nicht** | Er tut stattdessen |
+|---|---|
+| Angaben stehen auf der alten Website oder im Unternehmensprofil | übernehmen nach [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]] |
+| eine Kleinigkeit fehlt: ein Bild, eine Zeile Text, eine Beschreibung | Platzhalter setzen und in `release-readiness/<website-slug>.md` eintragen |
+| zwei Quellen widersprechen sich | plausiblere nehmen, Widerspruch in `PROJECT.md` notieren |
+| Geschmacksfrage: Komposition, Farbe, Bildauswahl, Formulierung | entscheiden, im Design Contract begründen, am Ende zur Ansicht vorlegen |
+| eine Angabe wirkt veraltet | trotzdem übernehmen, Zweifel als Anmerkung eintragen |
+
+| Er fragt **schon** | Weil |
+|---|---|
+| Wechsel auf die Full Lane | ändert Umfang und Zeit des Auftrags |
+| bevor er etwas löscht | nicht umkehrbar |
+| der Auftrag widerspricht sich in sich | jede Auslegung wäre geraten |
+| eine rechtlich oder sicherheitsrelevante Entscheidung steht an | trägt der Nutzer, nicht die KI |
+| eine Pflichtangabe fehlt **und** ist nirgends auffindbar | ohne sie wäre das Ergebnis unbrauchbar |
+
+Alles, was auffiel und nicht gefragt wurde, steht am Ende als **Anmerkung** in `PROJECT.md` und als offener Punkt im Release-Readiness-Register. Der Nutzer liest es gesammelt, statt es einzeln beantworten zu müssen.
+
+### Platzhalter sind erlaubt
+
+Ein fehlendes Bild, ein fehlender Text, eine fehlende Beschreibung halten den Build nicht auf. Der Agent setzt etwas Plausibles ein, macht es im Projekt kenntlich und trägt es als offenen Punkt ein. Platzhalter blockieren die **Veröffentlichung** nach [[70-qa/quality-gates.md#G0 Scope]], nicht die Arbeit.
+
+Die eine Grenze: **belegbare Behauptungen werden nicht erfunden.** Kundenstimmen, Zertifikate, Auszeichnungen, Mitgliedschaften, Nutzerzahlen und Leistungswerte stehen auf der Website eines realen Betriebs für dessen Ruf gerade und treffen dessen Kunden. Fehlt der Beleg, entfällt die Aussage oder der Abschnitt. Beschreibender Text, Beispielinhalte und Bildplatzhalter fallen **nicht** darunter.
+
 ## Bahnwahl: Fast Lane und Full Lane
 
 Es gibt zwei Bahnen durch diesen Workflow. Die **Fast Lane ist der Standard**; die Full Lane wird nur gefahren, wenn eine ihrer Auslösebedingungen zutrifft. Die Bahnwahl wird mit Begründung in `PROJECT.md` festgehalten, als `Bahn: fast | full, Grund: …`, bevor der erste Ordner angelegt wird.
@@ -45,7 +73,7 @@ Die Qualitätsregeln gelten in beiden Bahnen unverändert. Verkürzt wird die Na
 ### Fast Lane
 
 1. Projektordner nach [[#Auftragsschwelle und Projektanlage]] anlegen, aber nur `PROJECT.md` und `release-readiness/<website-slug>.md`.
-2. Bestehende Website nach [[10-strategy/existing-website-rebuild.md]] sichern; `scripts/extract-old-site.ts` aus dem Kit übernimmt Texte, Bilder, Kontakt- und Öffnungszeitendaten.
+2. Bestehende Website nach [[10-strategy/existing-website-rebuild.md]] sichern; `scripts/extract-old-site.ts` aus dem Kit übernimmt Texte, Bilder, Kontakt- und Öffnungszeitendaten. Die Angaben werden nach [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]] übernommen und eingebaut, nicht erst bestätigt.
 3. Betriebsdaten und Marktumfeld recherchieren, Kurzbrief in `PROJECT.md` schreiben: Angebot, Zielgruppe, primäre Handlung, Beweisformen, Sitemap.
 4. Blöcke aus [[30-frontend/web-kit.md]] ziehen, statt sie neu zu schreiben. Das Kit ist der Pflichtausgangspunkt der Fast Lane.
 5. Tokenwerte dieses Betriebs setzen; die Rollennamen des Tokenvertrags aus [[20-design/color-system.md#Tokenvertrag]] bleiben unverändert. Ableitung und Artefaktweg in [[20-design/design-systems-und-artefakte.md]].

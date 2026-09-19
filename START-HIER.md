@@ -123,14 +123,25 @@ Er fährt die **Fast Lane** — Zielzeit ein Arbeitstag:
 Auf die **Full Lane** wechselt er nur bei Login, Zahlung, eigener
 Datenhaltung, Sonderfunktion oder mehreren Fassungen. Das sagt er dir.
 
-### Wann er dich fragt
+### Wann er dich fragt — und wann nicht
 
-Von selbst — du musst nicht danebensitzen:
+Er arbeitet durch. Du musst nicht danebensitzen.
 
-- wenn eine Pflichtangabe fehlt und er sie nicht recherchieren kann
-- wenn er auf die Full Lane wechseln muss
-- bevor er etwas löscht
-- wenn ein Fakt sich widerspricht
+**Er fragt nicht**, wenn eine Angabe auf der alten Seite steht, wenn eine
+Kleinigkeit fehlt (Platzhalter), wenn zwei Quellen sich widersprechen
+(nimmt die plausiblere) oder wenn etwas Geschmackssache ist. Alles, was ihm
+dabei auffiel, steht am Ende **gesammelt** in `PROJECT.md` — du liest es
+einmal, statt es einzeln zu beantworten.
+
+**Er fragt**, wenn er auf die Full Lane wechseln muss, bevor er etwas
+löscht, wenn dein Auftrag sich selbst widerspricht, bei rechtlich oder
+sicherheitsrelevanten Entscheidungen, oder wenn eine Pflichtangabe nirgends
+auffindbar ist.
+
+Das Einzige, was er nie erfindet: Kundenstimmen, Zertifikate,
+Auszeichnungen und Kennzahlen. Deine Website steht damit für den Ruf des
+Betriebs gerade. Beschreibender Text und Bildplatzhalter sind davon nicht
+betroffen.
 
 ### Was du bekommst
 
@@ -153,7 +164,7 @@ Er darf oder kann das nicht:
 | **nginx installieren** | er hat kein Schreibrecht in `/etc`, nur `systemctl reload nginx`. Vorlage liegt in `web-kit/scripts/nginx-site.conf.template` |
 | **Zertifikate** | für Domain und Vorschau-Subdomain |
 | **Formular-Endpoint als Dienst** | `web-kit/scripts/kontakt-endpoint.mjs`, braucht `MAIL_TO` |
-| **Fakten bestätigen** | Preise und Zeiten von der alten Seite sind oft veraltet |
+| **Fakten bestätigen — am Ende, nicht vorher** | Er übernimmt Preise und Zeiten von der alten Seite und arbeitet weiter. Was ihm auffiel, steht gesammelt in `PROJECT.md` und im Release-Readiness-Register. |
 
 Alles davon steht auch in `SETUP-OFFEN.md`.
 
