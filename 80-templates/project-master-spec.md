@@ -11,6 +11,8 @@ updated: 2026-09-19
 ## 0 Project Contract
 
 - Kanonischer Projektpfad: `../projekte/<Projektname>/`
+- Vorschau-Link: `https://johannstein.com/dev/<projekt>/` — steht ab dem ersten Build, nach [[00-start/05-web-product-workflow.md#Jede Website liegt sofort auf /dev]]
+- Owner-Hosting-Anbindung: `erfüllt | begründete Ausnahme` — Standard ist erfüllt, siehe [[00-start/05-web-product-workflow.md#Owner-Hosting ist Standard]]
 - Bahn: `fast | full`, Grund: — Auslösebedingungen in [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]]; ohne Full-Lane-Auslöser gilt die Fast Lane
 - Pflichtdateien verlinkt: je Website `release-readiness/<website-slug>.md`; in der Full Lane zusätzlich `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md` und `DATA-PROCESSING-INVENTORY.md`
 - Bestehendes Projekt geöffnet oder neuer Ordner kollisionsfrei angelegt:

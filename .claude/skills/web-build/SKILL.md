@@ -72,9 +72,15 @@ nicht belegt ist, entfällt oder wird als Annahme markiert.
 Datei, stabile Pointer, keine Inhalte in Komponenten. Warum das so ist:
 `web-brain/60-operations/owner-hosting-interface.md`.
 
-### 5. Blöcke ziehen
+### 5. Blöcke ziehen — mit Owner-Hosting
 
-Aus `web-kit/blocks/`. **Das Kit ist der Pflichtausgangspunkt.** Wer einen
+Aus `web-kit/blocks/`. **Das Kit ist der Pflichtausgangspunkt.**
+
+**Owner-Hosting wird immer mitgebaut**, auch wenn es nicht im Auftrag steht:
+eine Datei `content/<website>.json`, stabile Pointer, Feldtypen, Preview-Route,
+dazu der Content-Loader aus dem Starter. Der Starter bringt das alles mit — es
+wegzulassen wäre Rückbau, es nachzurüsten kostet ein Vielfaches. Regel in
+`web-brain/00-start/05-web-product-workflow.md#Owner-Hosting ist Standard`. Wer einen
 Block neu schreibt, den es dort gibt, hat den falschen Weg genommen und
 begründet das in `PROJECT.md`.
 
@@ -146,7 +152,18 @@ Platzhalter- und `TODO`-Reste, interne Links, Screenshots bei 375 und 1280,
 axe gegen WCAG 2.1 AA, Lighthouse. Eine **übersprungene** Prüfung gilt nicht
 als bestanden und gehört in `release-readiness/<website-slug>.md`.
 
-### 10. Abnahme
+### 10. Auf /dev sichtbar machen
+
+**Sobald der erste Build steht**, nicht erst zur Abnahme. Die
+Developer-Plattform erkennt `site/dist/` unterhalb von
+`../projekte/<Projektname>/` von allein; erscheint der Eintrag nicht, ist das
+ein Delivery-Fehler und wird dort behoben, nicht mit einem eigenen Port
+umgangen.
+
+Den Link in `PROJECT.md` eintragen. Der Nutzer soll mitschauen können, während
+noch gebaut wird.
+
+### 11. Abnahme
 
 `G0` verkürzt und `G1` aus `web-brain/70-qa/quality-gates.md`. `G1` prüft
 das Ergebnis, nicht das Werkzeug: vollständiger Tokenvertrag, vollständige
@@ -155,23 +172,22 @@ Zustände, Type Ramp, Kontrast in beiden Themes, echte Darstellung.
 Danach das Release-Readiness-Register gegen Repository und ausgelieferten
 Stand abgleichen und schließen.
 
-## Nicht anhalten
+## Erst bauen, dann fragen
 
-Der Auftrag ist, durchzuarbeiten. Die Nachfrageschwelle steht kanonisch in
-`web-brain/00-start/05-web-product-workflow.md#Nachfrageschwelle`, in Kurzform:
+**Vor der ersten gerenderten Website wird nichts gefragt.** Nicht die
+Bahnwahl, nicht die Art Direction, nicht die fehlende Telefonnummer.
+Entscheiden, weiterbauen, anmerken. Kanonisch in
+`web-brain/00-start/05-web-product-workflow.md#Erst bauen, dann fragen`.
 
-**Nicht fragen** bei Angaben, die auf der alten Seite stehen · fehlenden
-Kleinigkeiten — Platzhalter setzen und eintragen · widersprüchlichen Quellen
-— plausiblere nehmen, notieren · Geschmacksfragen — entscheiden und begründen
-· Angaben, die alt wirken — trotzdem übernehmen, Zweifel notieren.
+**Genau eine Ausnahme:** anhalten, bevor etwas Vorhandenes überschrieben
+oder gelöscht wird. Das ist nicht umkehrbar, alles andere ist es.
 
-**Fragen** bei Wechsel auf die Full Lane · vor dem Löschen · bei einem
-Auftrag, der sich selbst widerspricht · bei rechtlich oder
-sicherheitsrelevanten Entscheidungen · bei einer Pflichtangabe, die nirgends
-auffindbar ist.
-
-Alles Aufgefallene sammelt sich als Anmerkung in `PROJECT.md` und im
-Release-Readiness-Register. Der Nutzer liest es am Ende gesammelt.
+Was an die Stelle der Frage tritt: fehlende Angabe → Platzhalter · Angabe
+steht auf der alten Seite → übernehmen · Quellen widersprechen sich →
+plausiblere nehmen · Geschmacksfrage → entscheiden und begründen ·
+mehrdeutiger Auftrag → nächstliegende Lesart bauen · Auth oder Zahlung
+taucht auf → die statische Seite fertig bauen und den Zusatzbedarf
+anmerken.
 
 Platzhalter sind erlaubt und blockieren nur die Veröffentlichung, nicht die
 Arbeit. Die eine Grenze: Kundenstimmen, Zertifikate, Auszeichnungen und
@@ -179,7 +195,18 @@ Kennzahlen werden nicht erfunden — die Website eines realen Betriebs steht
 damit für dessen Ruf gerade. Beschreibender Text und Bildplatzhalter fallen
 nicht darunter.
 
-## Was in dieser Bahn nicht verkürzt wird
+### Die eine Nachricht am Ende
+
+Wenn die Website steht, gerendert und durch `qa.sh` gelaufen ist, kommt
+**eine** Nachricht, kein Tröpfeln über den Tag:
+
+1. **Der Link** auf `johannstein.com/dev/<projekt>/`, vor allem anderen
+2. **Entschieden:** Bahn, Art Direction, Auftaktkomposition, Sektionsfolge — je eine Zeile Begründung
+3. **Angenommen:** je Annahme Quelle und Folge
+4. **Offen:** identisch mit `release-readiness/<website-slug>.md`
+5. **Zu entscheiden:** was nach 3 und 4 übrig bleibt, meist wenig
+
+## Was in dieser Bahn nicht verkürzt wird## Was in dieser Bahn nicht verkürzt wird
 
 Die Qualitätsregeln gelten unverändert. Verkürzt ist die Nachweisführung,
 nicht das Handwerk: Tokenvertrag, Zustände, Kontrast, Tastaturbedienung,

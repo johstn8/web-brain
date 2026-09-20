@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-09-20
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
   - "[[90-references/reference-research-workflow.md]]"
@@ -27,33 +27,47 @@ Sobald der Nutzer die Umsetzung, den Neubau oder den vollständigen Relaunch ein
 
 Kann die Projektwurzel nicht angelegt oder beschrieben werden, Blocker melden. Nicht ersatzweise im Brain, in einem temporären Ordner oder in einem anderen Projekt bauen. Das Brain wird nicht in den Projektordner kopiert; `PROJECT.md` verweist auf die zutreffenden kanonischen Regeln und dokumentiert deren Anwendung.
 
-## Nachfrageschwelle
+## Erst bauen, dann fragen
 
-**Der Agent arbeitet durch.** Er fragt nur, wenn eine Antwort die Arbeit in eine andere Richtung lenken würde — nicht, um sich abzusichern. Eine Rückfrage kostet den Nutzer einen Kontextwechsel; das muss sie wert sein.
+**Vor der ersten gerenderten Website wird nichts gefragt.** Nicht die Bahnwahl, nicht die Art Direction, nicht die fehlende Telefonnummer. Der Agent trifft die Entscheidung, die er für die beste hält, baut weiter und merkt sie an.
 
-| Er fragt **nicht** | Er tut stattdessen |
+Der Grund ist der Unterschied zwischen zwei Gesprächen. Das eine beginnt mit sieben Fragen über eine Website, die es noch nicht gibt; jede Antwort ist geraten, weil niemand die Seite gesehen hat. Das andere beginnt mit einer fertigen Website und einer Liste von zwölf Entscheidungen, die daran sichtbar sind. Das zweite ist kürzer und führt zu besseren Antworten.
+
+### Genau eine Ausnahme
+
+Der Agent hält an, **bevor er etwas Vorhandenes überschreibt oder löscht** — einen bestehenden Projektordner, eine bestehende Datei, einen bestehenden Build. Das ist nicht umkehrbar, alles andere ist es.
+
+Sonst nichts. Kein Halt für fehlende Angaben, widersprüchliche Quellen, Geschmacksfragen, Bahnwechsel oder eine Aufgabe, die größer ist als gedacht.
+
+### Was an die Stelle der Frage tritt
+
+| Lage | Statt zu fragen |
 |---|---|
-| Angaben stehen auf der alten Website oder im Unternehmensprofil | übernehmen nach [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]] |
-| eine Kleinigkeit fehlt: ein Bild, eine Zeile Text, eine Beschreibung | Platzhalter setzen und in `release-readiness/<website-slug>.md` eintragen |
-| zwei Quellen widersprechen sich | plausiblere nehmen, Widerspruch in `PROJECT.md` notieren |
-| Geschmacksfrage: Komposition, Farbe, Bildauswahl, Formulierung | entscheiden, im Design Contract begründen, am Ende zur Ansicht vorlegen |
-| eine Angabe wirkt veraltet | trotzdem übernehmen, Zweifel als Anmerkung eintragen |
-
-| Er fragt **schon** | Weil |
-|---|---|
-| Wechsel auf die Full Lane | ändert Umfang und Zeit des Auftrags |
-| bevor er etwas löscht | nicht umkehrbar |
-| der Auftrag widerspricht sich in sich | jede Auslegung wäre geraten |
-| eine rechtlich oder sicherheitsrelevante Entscheidung steht an | trägt der Nutzer, nicht die KI |
-| eine Pflichtangabe fehlt **und** ist nirgends auffindbar | ohne sie wäre das Ergebnis unbrauchbar |
-
-Alles, was auffiel und nicht gefragt wurde, steht am Ende als **Anmerkung** in `PROJECT.md` und als offener Punkt im Release-Readiness-Register. Der Nutzer liest es gesammelt, statt es einzeln beantworten zu müssen.
+| Pflichtangabe fehlt | plausiblen Platzhalter setzen, eintragen |
+| Angabe steht auf der alten Seite | übernehmen nach [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]] |
+| zwei Quellen widersprechen sich | plausiblere nehmen, Widerspruch notieren |
+| Geschmacksfrage | entscheiden, im Design Contract begründen |
+| der Auftrag ist mehrdeutig | die nächstliegende Lesart bauen, Auslegung notieren |
+| Auth, Zahlung oder Datenhaltung tauchen auf | die statische Website fertig bauen, den Zusatzbedarf als Full-Lane-Vorschlag anmerken |
+| eine Anforderung ist größer als der Auftrag | den kleineren, lauffähigen Stand bauen und den Rest anmerken |
 
 ### Platzhalter sind erlaubt
 
 Ein fehlendes Bild, ein fehlender Text, eine fehlende Beschreibung halten den Build nicht auf. Der Agent setzt etwas Plausibles ein, macht es im Projekt kenntlich und trägt es als offenen Punkt ein. Platzhalter blockieren die **Veröffentlichung** nach [[70-qa/quality-gates.md#G0 Scope]], nicht die Arbeit.
 
 Die eine Grenze: **belegbare Behauptungen werden nicht erfunden.** Kundenstimmen, Zertifikate, Auszeichnungen, Mitgliedschaften, Nutzerzahlen und Leistungswerte stehen auf der Website eines realen Betriebs für dessen Ruf gerade und treffen dessen Kunden. Fehlt der Beleg, entfällt die Aussage oder der Abschnitt. Beschreibender Text, Beispielinhalte und Bildplatzhalter fallen **nicht** darunter.
+
+### Die Vorlage am Ende
+
+Wenn die Website steht, gerendert und durch `qa.sh` gelaufen ist, kommt **eine** Nachricht. Kein Tröpfeln über den Tag:
+
+1. **Der Link.** `johannstein.com/dev/<projekt>/` — bevor irgendetwas anderes gesagt wird.
+2. **Was entschieden wurde**, mit Begründung in je einer Zeile: Bahn, Art Direction, Auftaktkomposition, Sektionsfolge.
+3. **Was angenommen wurde.** Jede Annahme mit Quelle und Folge: *„Öffnungszeiten von der alten Seite, Stand dort 2023. Falls überholt, eine Zeile in `content/beispiel.json`."*
+4. **Was offen ist.** Platzhalter, ungeprüfte Fakten, fehlende Bilder, Rechtstexte zur Freigabe — identisch mit `release-readiness/<website-slug>.md`.
+5. **Was der Nutzer entscheiden muss**, sofern etwas übrig bleibt. Meist bleibt wenig übrig, weil Punkt 3 und 4 das meiste schon beantworten.
+
+Diese Liste ist das Ergebnis der Arbeit, nicht ihr Anfang.
 
 ## Bahnwahl: Fast Lane und Full Lane
 
@@ -76,13 +90,44 @@ Die Qualitätsregeln gelten in beiden Bahnen unverändert. Verkürzt wird die Na
 2. Bestehende Website nach [[10-strategy/existing-website-rebuild.md]] sichern; `scripts/extract-old-site.ts` aus dem Kit übernimmt Texte, Bilder, Kontakt- und Öffnungszeitendaten. Die Angaben werden nach [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]] übernommen und eingebaut, nicht erst bestätigt.
 3. Betriebsdaten und Marktumfeld recherchieren, Kurzbrief in `PROJECT.md` schreiben: Angebot, Zielgruppe, primäre Handlung, Beweisformen, Sitemap.
 4. Blöcke aus [[30-frontend/web-kit.md]] ziehen, statt sie neu zu schreiben. Das Kit ist der Pflichtausgangspunkt der Fast Lane.
+   **Owner-Hosting wird dabei immer mitgebaut**, siehe [[#Owner-Hosting ist Standard]]: eine Inhaltsdatei, stabile Pointer, Feldtypen, Preview-Route. Es nachträglich einzuziehen kostet ein Vielfaches.
 5. Tokenwerte dieses Betriebs setzen; die Rollennamen des Tokenvertrags aus [[20-design/color-system.md#Tokenvertrag]] bleiben unverändert. Ableitung und Artefaktweg in [[20-design/design-systems-und-artefakte.md]].
 6. Zwei Auftaktfassungen mit verschiedenen Kompositionen aus [[20-design/landing-page-craft.md#Auftakt-Repertoire]] bauen, bei 375 und 1280 Pixel nebeneinander ansehen, eine mit Begründung wählen.
 7. Ein Renderdurchgang am ganzseitigen Render mit schriftlicher Befundliste nach [[20-design/visual-iteration-loop.md]]. Ein Render ohne Befundliste ist kein Durchgang.
 8. `scripts/qa.sh` aus dem Kit laufen lassen: Lighthouse, axe, interner Link-Check, Screenshots bei 375 und 1280, Prüfung auf Platzhalter- und `TODO`-Reste.
-9. `G0` verkürzt und `G1` nach [[70-qa/quality-gates.md]] abnehmen, Release-Readiness-Register schließen, liefern.
+9. **Auf `johannstein.com/dev` verfügbar machen** — siehe [[#Jede Website liegt sofort auf /dev]]. Das geschieht, sobald der erste Build steht, nicht am Ende.
+10. `G0` verkürzt und `G1` nach [[70-qa/quality-gates.md]] abnehmen, Release-Readiness-Register schließen.
+11. **Eine** Nachricht nach [[#Die Vorlage am Ende]]: Link zuerst, dann Entscheidungen, Annahmen und Offenes.
 
 Die Fast Lane läuft über den Skill `web-build`, der diese Strecke ausführt und auf die kanonischen Notizen verweist.
+
+### Owner-Hosting ist Standard
+
+**Jede gebaute Website erfüllt die Schnittstelle aus [[60-operations/owner-hosting-interface.md]]**, ohne dass es im Auftrag stehen muss. Vier Pflichten:
+
+1. aller owner-bearbeitbare Inhalt in genau einer Datei `content/<website>.json`;
+2. stabile JSON-Pointer, die nicht umbenannt, sondern migriert werden;
+3. je Feld `owner_editable`, Feldtyp, Grenzen, Label und Veröffentlichungspolicy;
+4. je Block eine benannte Preview-Route.
+
+Dazu der Content-Loader: liest `OWNER_HOSTING_CONTENT_FILE`, sonst die Projektdatei. Der Starter aus [[30-frontend/web-kit.md]] bringt ihn mit, es ist also kein Zusatzaufwand, sondern ein unterlassener Rückbau.
+
+Der Grund für „immer": Die Anbindung nachträglich einzuziehen heißt, jeden Text aus jeder Komponente herauszuoperieren und Pointer zu vergeben, während der Owner schon Werte eingetragen hat. Von Anfang an kostet sie nichts, weil das Kit ohnehin so gebaut ist.
+
+Ob das Dashboard die Website am Ende wirklich aufnimmt, entscheidet der Nutzer. Die Website ist dafür bereit, in jedem Fall.
+
+### Jede Website liegt sofort auf /dev
+
+Auf dem Server `217.154.218.30` ist **jede gebaute Website unter `johannstein.com/dev` erreichbar**, sobald der erste Build steht — nicht erst zur Abnahme.
+
+Die Developer-Plattform erkennt Builds selbst: Sie findet `site/` und `versions/<fassung>/` unterhalb von `../projekte/<Projektname>/` mit den Ausgabeordnern `dist/`, `build/` oder `public/`. Ein Build an der richtigen Stelle erscheint damit von allein.
+
+- Erscheint er nicht, ist das ein **Delivery-Fehler** und wird dort behoben, nicht mit einem eigenen Port oder Prozess umgangen. Kanonisch in [[60-operations/delivery-and-local-start.md#Auf `217.154.218.30`]].
+- Der Link gehört in `PROJECT.md` und ist die erste Zeile der Abschlussnachricht.
+- Der Zugriff ist durch das Gate nach [[40-backend-security/preview-access-gate.md]] geschützt und trägt `noindex`. Eine Fassung unter `/dev` ist eine Vorschau, keine Veröffentlichung.
+- Kein fester lokaler Projektport, kein `start-local.sh`. Auf anderen Rechnern gilt weiter die Portregel.
+
+Der Nutzer soll die Seite ansehen können, während noch daran gearbeitet wird. Ein Build, den nur der Agent sieht, hilft niemandem.
 
 ### Full Lane
 

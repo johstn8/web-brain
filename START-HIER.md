@@ -120,23 +120,37 @@ Er fährt die **Fast Lane** — Zielzeit ein Arbeitstag:
 9. Lässt `qa.sh` laufen: Platzhalterreste, Links, Screenshots, axe, Lighthouse
 10. Nimmt gegen die Gates ab
 
-Auf die **Full Lane** wechselt er nur bei Login, Zahlung, eigener
-Datenhaltung, Sonderfunktion oder mehreren Fassungen. Das sagt er dir.
+Zwei Dinge macht er dabei immer mit, auch wenn du nichts sagst:
 
-### Wann er dich fragt — und wann nicht
+- **Owner-Hosting-Anbindung.** Die Seite ist von Anfang an so gebaut, dass
+  das Dashboard sie aufnehmen kann — eine Inhaltsdatei, stabile Pointer,
+  Preview-Routen. Nachrüsten kostet ein Vielfaches, mitbauen kostet nichts.
+- **`johannstein.com/dev`.** Sobald der erste Build steht, ist die Seite
+  dort erreichbar. Du kannst mitschauen, während noch gebaut wird.
 
-Er arbeitet durch. Du musst nicht danebensitzen.
+Auf die **Full Lane** wechselt er bei Login, Zahlung, eigener Datenhaltung
+oder Sonderfunktion — aber er fragt dich nicht vorher. Er baut die statische
+Seite fertig und merkt den Zusatzbedarf an.
 
-**Er fragt nicht**, wenn eine Angabe auf der alten Seite steht, wenn eine
-Kleinigkeit fehlt (Platzhalter), wenn zwei Quellen sich widersprechen
-(nimmt die plausiblere) oder wenn etwas Geschmackssache ist. Alles, was ihm
-dabei auffiel, steht am Ende **gesammelt** in `PROJECT.md` — du liest es
-einmal, statt es einzeln zu beantworten.
+### Er fragt dich erst, wenn die Seite steht
 
-**Er fragt**, wenn er auf die Full Lane wechseln muss, bevor er etwas
-löscht, wenn dein Auftrag sich selbst widerspricht, bei rechtlich oder
-sicherheitsrelevanten Entscheidungen, oder wenn eine Pflichtangabe nirgends
-auffindbar ist.
+Das ist die wichtigste Regel für dich: **Vor der ersten fertigen Website
+fragt er nichts.** Keine Bahnwahl, keine Farbfrage, keine fehlende
+Telefonnummer. Er entscheidet, baut weiter und merkt es an.
+
+Genau eine Ausnahme: Er hält an, **bevor er etwas Vorhandenes überschreibt
+oder löscht.** Das ist nicht umkehrbar, alles andere ist es.
+
+Am Ende bekommst du **eine** Nachricht, nicht zwölf:
+
+1. der **Link** auf `johannstein.com/dev/<projekt>/`
+2. was er **entschieden** hat, je eine Zeile Begründung
+3. was er **angenommen** hat, mit Quelle und Folge
+4. was **offen** ist — Platzhalter, ungeprüfte Fakten, Rechtstexte
+5. was **du entscheiden musst**, meist wenig
+
+Du siehst die Seite also, bevor du die erste Frage beantwortest. Das ist
+der Punkt.
 
 Das Einzige, was er nie erfindet: Kundenstimmen, Zertifikate,
 Auszeichnungen und Kennzahlen. Deine Website steht damit für den Ruf des
@@ -145,7 +159,8 @@ betroffen.
 
 ### Was du bekommst
 
-- die gebaute Website unter `projekte/<name>/site/`
+- die Website live unter `johannstein.com/dev/<projekt>/`, geschützt und `noindex`
+- die Quellen unter `projekte/<name>/site/`
 - Screenshots bei 375 und 1280 in `qa-bericht/shots/`
 - Lighthouse- und axe-Bericht
 - Impressum und Datenschutz als **prüfpflichtige Entwürfe**
