@@ -70,7 +70,11 @@ erfindet er.
 - Art Direction: `werkstatt`, `praxis`, `tisch`, `kanzlei` oder `atelier`.
   Sagst du nichts, schlägt er eine vor und begründet sie.
 - Eine Seite, die dir gefällt. Dann prägt sie die Fassung.
-- Anzahl der Fassungen. **Ohne Angabe wird genau eine gebaut.**
+- **Anzahl der Fassungen: eine bis drei.** Ohne Angabe wird genau eine
+  gebaut. Sagst du „zwei Versionen", bekommst du zwei vollständige
+  Websites mit demselben Inhalt und verschiedenen Presets — beide unter
+  `/dev`, beide fertig, keine ist ein Entwurf. Bis drei bleibt das die
+  schnelle Strecke.
 
 **Was du nie erfinden sollst:** Kundenstimmen, Zertifikate, Auszeichnungen,
 Nutzerzahlen. Was nicht belegt ist, lässt er weg — das ist Absicht.
@@ -98,6 +102,7 @@ Wichtigste Handlung: [Anruf | Formular | Termin | Besuch]
 Besonderheit: [ein Satz, warum man dorthin geht und nicht woandershin]
 
 Material: [Ordnerpfad zu Logo und Fotos, oder "nichts vorhanden"]
+Fassungen: [1, 2 oder 3 — weglassen heißt 1]
 ```
 
 Das reicht. Alles Weitere fragt er nach oder entscheidet er begründet.

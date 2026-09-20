@@ -75,9 +75,9 @@ Es gibt zwei Bahnen durch diesen Workflow. Die **Fast Lane ist der Standard**; d
 
 | | **Fast Lane — Standard** | Full Lane |
 |---|---|---|
-| Auslöser | Standardwebsite eines lokalen Betriebs aus [[30-frontend/web-kit.md]], kein Login, keine Zahlung, keine eigene Datenhaltung, eine Fassung | Auth, Zahlung, eigene Datenhaltung, Sonderfunktion oder mehr als eine Fassung |
+| Auslöser | Standardwebsite eines lokalen Betriebs aus [[30-frontend/web-kit.md]], kein Login, keine Zahlung, keine eigene Datenhaltung, **eine bis drei Fassungen aus verschiedenen Presets** | Auth, Zahlung, eigene Datenhaltung, Sonderfunktion, mehr als drei Fassungen oder Fassungen, die sich nicht über Preset und Komposition unterscheiden lassen |
 | Pflichtdateien | `PROJECT.md` und `release-readiness/<website-slug>.md` | zusätzlich `SOURCE-RIGHTS-REVIEW.md`, `ASSET-REGISTER.md`, `DATA-PROCESSING-INVENTORY.md` |
-| Design | zwei Auftaktfassungen, ein Renderdurchgang | volle Strecke: `D0`-Stilkachel plus drei Durchgänge |
+| Design | je Fassung zwei Auftaktvarianten und ein Renderdurchgang | volle Strecke: `D0`-Stilkachel plus drei Durchgänge |
 | Skills | optional | verbindlich |
 | Gates | `G0` verkürzt, `G1`, `scripts/qa.sh` | alle Gates `G0` bis `G8` |
 | Zielzeit | ein Arbeitstag | offen |
@@ -100,6 +100,21 @@ Die Qualitätsregeln gelten in beiden Bahnen unverändert. Verkürzt wird die Na
 11. **Eine** Nachricht nach [[#Die Vorlage am Ende]]: Link zuerst, dann Entscheidungen, Annahmen und Offenes.
 
 Die Fast Lane läuft über den Skill `web-build`, der diese Strecke ausführt und auf die kanonischen Notizen verweist.
+
+### Mehrere Fassungen in der Fast Lane
+
+Bis zu drei Fassungen bleiben Fast Lane, **wenn jede ein eigenes Preset aus [[30-frontend/web-kit.md#Art-Direction-Presets]] trägt.** Sie teilen denselben Inhalt aus `content/<website>.json` und unterscheiden sich über Tokens, Grammatik und Auftaktkomposition.
+
+Der geforderte Stilabstand aus [[20-design/design-direction.md#Stilabstand bei mehreren Websites]] ist damit **von Bauart erfüllt**, nicht nachträglich zu belegen: Zwei verschiedene Presets unterscheiden sich bereits in Schriftwahl, Farbwelt, Radius- und Rahmengrammatik, Trennmittel zwischen Sektionen und Bewegungswertesatz. Das sind fünf wirksame Achsen.
+
+- Ablage unter `versions/01-<preset>/`, `versions/02-<preset>/` und so fort.
+- Jede Fassung ist vollständig und eigenständig ausliefernd, keine Auswahlvariante nach [[#Anzahl der Websites]].
+- Jede erscheint einzeln unter `johannstein.com/dev`.
+- Der Inhalt bleibt **einmal** kanonisch. Fakten werden nicht je Fassung kopiert; eine Faktenänderung bleibt eine Änderung.
+
+Auf die Full Lane geht es erst, wenn mehr als drei Fassungen verlangt sind oder sich zwei Fassungen **nicht** über Preset und Komposition trennen lassen — dann ist der Unterschied inhaltlich und braucht die volle Nachweisführung.
+
+Diese Lockerung gilt seit dem 20.09.2026. Sie wurde möglich, weil die Presets eine Fassung zu einem Wertewechsel machen; vorher war jede Fassung Handarbeit und die Full Lane deshalb berechtigt.
 
 ### Owner-Hosting ist Standard
 
@@ -149,7 +164,7 @@ Kanonische Regel. Die Anzahl der zu bauenden Websites steht immer im Auftrag des
 ### Folgen für Ablage und Zugriff
 
 - **Eine Website:** Ablage unter `site/`.
-- **Mehrere Websites:** Ablage unter `versions/01-<richtung>/`, `versions/02-<richtung>/` und so fort.
+- **Mehrere Websites:** Ablage unter `versions/01-<richtung>/`, `versions/02-<richtung>/` und so fort. In der Fast Lane ist `<richtung>` der Presetname, siehe [[#Mehrere Fassungen in der Fast Lane]].
 - **Build auf `217.154.218.30`:** kein fester lokaler Projektport und kein neues `start-local.sh`; Zugriff über die Developer-Plattform auf `johannstein.com`.
 - **Build auf anderen Rechnern:** je Website ein eigener fester Port und die lokalen Startskripte.
 

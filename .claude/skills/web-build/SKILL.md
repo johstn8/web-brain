@@ -18,7 +18,12 @@ Die Quellen liegen in zwei Repositories neben diesem Projekt:
 
 Die Fast Lane ist der Standard. Auf die Full Lane wird gewechselt, sobald
 eine dieser Bedingungen zutrifft: **Auth, Zahlung, eigene Datenhaltung,
-Sonderfunktion oder mehr als eine Fassung.** Dann gilt
+Sonderfunktion oder mehr als drei Fassungen.**
+
+**Eine bis drei Fassungen bleiben Fast Lane**, wenn jede ein eigenes Preset
+trägt: gleicher Inhalt, verschiedene Tokens und Grammatik, Ablage unter
+`versions/01-<preset>/`. Der Stilabstand ist damit von Bauart erfüllt.
+Ohne Angabe im Auftrag wird **genau eine** gebaut. Dann gilt
 `web-brain/00-start/05-web-product-workflow.md#Verbindliche Reihenfolge`
 statt dieser Strecke.
 
