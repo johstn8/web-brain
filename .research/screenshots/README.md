@@ -50,4 +50,6 @@ Ordner `gastronomie-2026-10-02/`, je Seite `<slug>--desktop.jpg` (Auftakt, 1200 
 | `lopez--*` | [Zum Hecht, Bahlingen](https://www.zum-hecht.de/) | 6 | vorgeschlagen als Negativbeispiel: „Herzlich willkommen" in Versalien über einem Karussell |
 | `trattoriaportofino--*` | [Trattoria Portofino, Mülheim](https://www.trattoria-portofino.de/) | 3 | vorgeschlagen als Negativbeispiel: Holzmaserung, Trikolore-Linien, Navigation in Signalorange |
 
+Die beiden Bögen `vorschlag-benchmarks.jpg` und `vorschlag-negativ.jpg` zeigen die Vorschläge zur Freigabe durch den Nutzer.
+
 Nicht bewertbar und deshalb nicht abgelegt: bullerei.com und brennergrill.de (Einwilligungsdialog liess sich headless nicht schliessen, `manual-review`), gazzo.de (leere Aufnahme, `invalid`), maedchenohneabitur.de (Domain zeigt einen anderen Betrieb), bancone.co.uk (Anmeldefenster verdeckt den Auftakt).
