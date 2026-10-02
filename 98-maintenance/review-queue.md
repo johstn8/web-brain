@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 next_review: 2026-11-01
 ---
 # Review Queue
@@ -45,6 +45,8 @@ Die Quellenauswertung vom 11. September 2026 ergab, dass beide Anbieter erstanbi
 **Entscheidung: Die Referenzregel bleibt unverändert.** Der Mechanismus wird übernommen, die Quelle nicht. Das visuelle Ziel entsteht projektintern als Stilkachel `D0` und als gebautes Auftaktfeld, beides kanonisch in [[20-design/visual-iteration-loop.md]]. Begründung: Die Regel gegen eine externe Leitreferenz bei Einzelwebsites ist eine bewusste, am 2026-08-19 kanonisierte Entscheidung über Herkunft und Eigenständigkeit; die hier belegte Lücke betrifft dagegen das Fehlen **irgendeines** visuellen Ziels. Ein intern erzeugtes Ziel schließt die Lücke, ohne die Herkunftsfrage neu aufzumachen.
 
 **Auslöser für eine erneute Prüfung:** wenn eine Einzelwebsite trotz vollständig durchlaufenem Loop generisch bleibt. Dann ist zu prüfen, ob das interne Ziel wirklich ausreicht oder ob eine dokumentierte externe Leitreferenz auch bei genau einer Website zugelassen werden muss.
+
+**Ausgelöst und neu entschieden am 2026-10-02.** Die vierte Fassung der Trattoria Alberto, eine Einzelwebsite mit vollständig durchlaufener Fast Lane, bestand alle Messungen und wurde vom Nutzer trotzdem als generiert erkannt; die drei Fassungen davor ebenso. Das interne Ziel reicht nicht. Seitdem steht vor jeder Website ein **Gattungsvergleich** mit externen Benchmarks, kanonisch in [[90-references/reference-research-workflow.md#Gattungsvergleich]] und [[20-design/qualitaetsraster.md]], und eine Einzelwebsite darf höchstens eine dieser Benchmarks als Leitreferenz nutzen. Die Herkunftsfrage bleibt geschützt: übernommen werden Prinzipien, nie Bilder, Texte, Logos oder Identitätsmerkmale.
 
 ## Offene Frage: Design Contract aus der Stilkachel erzeugen
 

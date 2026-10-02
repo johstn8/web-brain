@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 depends_on:
   - "[[70-qa/test-matrix.md]]"
 ---
@@ -12,14 +12,15 @@ Ein Projekt ist nur fertig, wenn jedes zutreffende Gate belegt ist. `N/A` brauch
 
 ## G0 Scope
 
-In der Fast Lane nach [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]] gilt `G0` **verkürzt**: die ersten fünf Punkte plus Logo und Release-Readiness. Die Punkte zu Referenzmodus, mehreren Fassungen und Relaunch-Inventar entfallen, weil ihre Auslöser dort definitionsgemäß nicht vorliegen. In der Full Lane gilt die vollständige Liste.
+In der Fast Lane nach [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]] gilt `G0` **verkürzt**: die ersten fünf Punkte plus Gattungsvergleich, Logo und Release-Readiness. Die Punkte zu Referenzmodus, mehreren Fassungen und Relaunch-Inventar entfallen, weil ihre Auslöser dort definitionsgemäß nicht vorliegen. In der Full Lane gilt die vollständige Liste.
 
 - [ ] eigener Ordner unter `../projekte/<Projektname>/`; PROJECT.md und alle Pflichtinventare vorhanden und verlinkt
 - [ ] Projekt-Master-Spec vollständig; Annahmen und Nicht-Ziele markiert
 - [ ] Anzahl der Websites entspricht dem Auftrag; Quelle im Auftragstext ist in `PROJECT.md` zitiert. Ohne Angabe im Auftrag genau eine Website
 - [ ] Sitemap, Seitenverträge und primäre Nutzerflüsse aktuell; jede gebaute Website enthält eine verlinkte Startseite und die vollständigen erforderlichen Unterseiten. One-Page/Anker allein ist nicht zulässig.
 - [ ] echte Inhalte oder klar markierte Drafts. Platzhalter sind **während des Builds erlaubt** nach [[00-start/05-web-product-workflow.md#Platzhalter sind erlaubt]]; zur Abnahme sind sie entweder ersetzt oder stehen vollzählig als offener Punkt im Release-Readiness-Register. Ein unbekannter Platzhalter ist der Befund, nicht der bekannte
-- [ ] Referenzmodus je Website dokumentiert; bei genau einer Website keine automatisch ausgewählte Live-Leitreferenz, bei mehreren genau eine referenzgeführte Fassung bei starker Passung und alle übrigen als Eigenentwürfe hergeleitet; eine Ausnahme ohne Referenz enthält die dokumentierte erfolglose Suche; nutzer-vorgegebene Referenzen gesondert markiert
+- [ ] **Gattungsvergleich je Website abgelegt**, auch in der Fast Lane und bei genau einer Website, nach [[90-references/reference-research-workflow.md#Gattungsvergleich]]: bewertete Kandidaten, zwei bis drei Benchmarks, ein bis zwei Negativbeispiele, übertragbare Prinzipien
+- [ ] Referenzmodus je Website dokumentiert; bei genau einer Website höchstens eine Leitreferenz aus den Benchmarks des Gattungsvergleichs, bei mehreren genau eine referenzgeführte Fassung bei starker Passung und alle übrigen als Eigenentwürfe hergeleitet; eine Ausnahme ohne Referenz enthält die dokumentierte erfolglose Suche; nutzer-vorgegebene Referenzen gesondert markiert
 - [ ] die beauftragte Anzahl vollständiger Websites unter `site/` beziehungsweise `versions/`, bei mehreren mit eigenständiger kohärenter Richtung und Unterschieden auf mindestens fünf wirksamen Achsen bei gleichem Scope; auf `217.154.218.30` über `johannstein.com/dev` ohne Projektport erreichbar, sonst auf eigenem geprüftem lokalen Port
 - [ ] bei Relaunch: alte Website, externe Fundstellen, Maps-/Unternehmensprofil, Social Profiles und Dokumente inventarisiert; Konflikte markiert
 - [ ] gefundenes Firmenlogo in jeder gebauten Website sichtbar eingesetzt und der Einsatzort dokumentiert, oder ausdrücklich festgehalten, dass kein Logo gefunden wurde
@@ -31,13 +32,16 @@ In der Fast Lane nach [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane 
 
 ### Kernprüfung
 
-Diese fünf Punkte tragen das Gate. Fällt einer, ist `G1` nicht erfüllt, unabhängig davon, wie die Website entstanden ist.
+Diese acht Punkte tragen das Gate, in der Fast Lane genauso wie in der Full Lane. Fällt einer, ist `G1` nicht erfüllt, unabhängig davon, wie die Website entstanden ist.
 
 - [ ] **Tokenvertrag vollständig und gerendert**: jede Pflichtrolle aus [[20-design/color-system.md#Tokenvertrag]] hat einen gesetzten Wert in genau einer Tokenquelle, für Licht und Dunkel getrennt kuratiert, und ist an realem Text angesehen worden
 - [ ] **Zustände vollständig**: jede Interaktion zeigt ihre anwendbaren Zustände nach [[30-frontend/components-and-ui-states.md]] — Default, Hover, Focus, Active, Disabled, Loading, Success, Error, Empty, Offline; sichtbarer Fokus, unterscheidbares Verhalten interaktiver und nicht interaktiver Flächen
 - [ ] **Type Ramp vorhanden und angewandt**: die Stufen sind benannt, haben je eine Aufgabe, benachbarte Stufen unterscheiden sich um mindestens den Faktor 1,25, und die Zuordnung ist auf jeder primären Route eingehalten
 - [ ] **Kontrast in beiden Themes**: jede Text-auf-Fläche-Kombination des Tokenvertrags erfüllt den Zielstandard aus [[30-frontend/accessibility.md#Zielstandard]] in Licht **und** Dunkel, einschließlich der dritten Textstufe auf `surface-alt` und der Zustände von `accent`
 - [ ] **echte Darstellung geprüft**: ganzseitige Renders bei 375 und 1280 Pixel liegen vor, mit langen Inhalten, Zoom und Fehlerzuständen; ein nicht renderbarer Build ist vor der Lieferung ein Blocker, den Textanalyse nicht ersetzt
+- [ ] **keine harte Sperre**: `qa.sh` meldet in der Prüfung aus `web-kit/scripts/check-slop.ts` null Sperren auf allen Routen, und die Sperren S6 und S7 aus [[20-design/anti-ai-slop.md#Harte Sperren]] sind am Render durchgesehen. Eine Sperre lässt sich nicht im Design Contract begründen
+- [ ] **Gattungsregel eingehalten**: greift für die Gattung eine Zeile aus [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]], hat der Auftakt genau diese Komposition, oder der ausdrückliche Wunsch des Nutzers nach einer anderen ist in `PROJECT.md` zitiert
+- [ ] **Benchmarkvergleich bestanden** nach [[20-design/qualitaetsraster.md#Benchmarkvergleich]]: Bogen mit eigener Startseite, Benchmarks und Negativbeispielen liegt vor, die eigene Seite erreicht mindestens 16 Punkte, die drei Fragen sind schriftlich beantwortet
 
 ### Handwerk und Komposition
 
@@ -61,21 +65,22 @@ Diese fünf Punkte tragen das Gate. Fällt einer, ist `G1` nicht erfüllt, unabh
 - [ ] bei vorhandenen Vorgängerfassungen: Übernahmeregister ausgefüllt; wiederholte Leitmotive, Fassungsnamen, Signalfarben oder primäre Beweisformen sind als bewusste sachliche Entscheidung dokumentiert
 - [ ] primäre Beweisform je Landing Page dokumentiert; wenn ein interaktives Kernmodul gewählt wurde, erfüllt es [[20-design/motion-and-interaction.md#Interaktives Kernmodul]] mit realen Daten, Tastaturbedienung, Zuständen und statischer Alternative
 - [ ] die Entscheidungen zu Landing, Stil, Farbe, Typografie, UX und Motion sind mit Datum und Begründung dokumentiert, gleich ob aus einer Skill-Abfrage oder aus der Ersatzstrecke
-- [ ] Referenzrecherche nach [[90-references/reference-research-workflow.md]]: keine Sammlungs-/Galerie-/Award-/Stilbibliotheksseite als Leitreferenz; bei einer Einzelwebsite kein zufällig ausgewähltes Beispiel; bei mehreren Websites genau eine ausgewählte Originalseite für genau eine Fassung, sofern starke Passung gefunden wurde; keine Quervererbung in die Eigenentwürfe
+- [ ] Referenzrecherche nach [[90-references/reference-research-workflow.md]]: keine Sammlungs-/Galerie-/Award-/Stilbibliotheksseite als Leitreferenz oder Benchmark; bei einer Einzelwebsite höchstens eine Leitreferenz aus dem Gattungsvergleich; bei mehreren Websites genau eine ausgewählte Originalseite für genau eine Fassung, sofern starke Passung gefunden wurde; keine Quervererbung in die Eigenentwürfe
 - [ ] pen.dev Einsatz oder Verzicht entschieden; verwendete `.pen`-Dateien versioniert und visuell geprüft
 - [ ] Anti-Slop-Review bestanden; keine unbegründeten Standardsektionen
 - [ ] **KI-Detail-Review je gebauter Website** durchgeführt, mit Datum, Befundliste und Umsetzungsstand dokumentiert. Der Befundkatalog steht in [[20-design/anti-ai-slop.md#Impeccable KI-Detail-Review]]; ob Impeccable ihn abarbeitet oder der Agent ihn manuell durchgeht, ist für dieses Gate ohne Belang
-- [ ] keine redundanten, rein dekorativen Kicker; echte Metainformation besitzt eine begründete, zugängliche Hierarchiestufe
+- [ ] keine Dachzeile über einer Überschrift und keine Teilauszeichnung in einer Überschrift; die frühere Metainformation steht nach [[20-design/anti-ai-slop.md#Kicker und Überschriften]] in Überschrift, Satz oder Infoband
 - [ ] Kopfzeileninventar und Navigationsmuster sind aus der Informationsarchitektur begründet; bei 320, 375, 768, 1280 und 1920 Pixel, langen realen Beschriftungen, großer Systemschrift und 200 Prozent Zoom entstehen kein zufälliger Umbruch, Beschnitt oder Überlauf
 - [ ] Logos, Wortzeichen und Controls behalten an jedem Prüfbreakpoint ihr Seitenverhältnis und werden nicht beschnitten
 - [ ] jede Farbrolle hat eine benannte Herleitung; häufige Paletten sind bewusst gewählt statt reflexhaft übernommen
 - [ ] Auftaktkomposition und Überschriftenanordnung sind bewusst gewählt und im Design Contract begründet; Angebot, konkreter Inhaltsanker und primäre Handlung bilden eine gemeinsame Komposition, ein Bild ist optional; die Landing Page folgt [[20-design/landing-page-craft.md]]
 - [ ] **die sechs Auftaktrollen** aus [[20-design/landing-page-craft.md#Der Auftakt: sechs Rollen, eine Komposition]] sind je Landing Page benannt besetzt, insbesondere Beweisanker und Fortschritt; die gewählte Komposition stammt aus dem [[20-design/landing-page-craft.md#Auftakt-Repertoire]] und ist begründet
+- [ ] die Sektionsfolge steht mit Anordnung und Bildmaßstab je Sektion im Design Contract; keine zwei aufeinanderfolgenden Sektionen sind gleich gebaut, siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]]
 - [ ] die Abschnittsfolge der Landing Page ist aus den realen Nutzerfragen dieser Zielgruppe hergeleitet und nicht aus der Blockkette Hero, drei Karten, Logo-Wand, Stimmen, Preise, FAQ; jeder Abschnitt beantwortet genau eine Frage
 - [ ] zwei bis drei verschiedene Überschriftenanordnungen je Seite, jede der Aufgabe ihres Abschnitts entsprechend; benachbarte Typostufen unterscheiden sich um mindestens den Faktor 1,25; der Abstand über einer Überschrift ist größer als darunter
 - [ ] Kopfzeilenrolle der Landing Page entschieden: Einzweckseite oder Unternehmensstartseite, Form aus dem [[30-frontend/components-and-ui-states.md#Kopfzeilen-Repertoire]], Höhenanteil auf 375 Pixel geprüft, höchstens eine primäre Aktion in der Kopfzeile
 - [ ] **Slop-Signaturen durchgegangen** nach [[20-design/anti-ai-slop.md#Slop-Signaturen]]; jede bewusst eingesetzte Signatur ist im Design Contract begründet
-- [ ] Signaturdetail je Website benannt, hergeleitet und mit seinen Wiederholungsorten dokumentiert
+- [ ] falls ein Signaturdetail gesetzt ist: aus realem Material des Betriebs hergeleitet, kein typografisches Ornament, keine Nummerierung, keine Metazeile; eine Website ohne Signaturdetail erfüllt diesen Punkt
 - [ ] typografischer Feinschliff nach [[20-design/typography-layout-and-spacing.md#Typografischer Feinschliff]] geprüft: Umbruch der H1, Schusterjungen, optischer Randausgleich, Ziffernform, Zeilenlänge, Mindestgrößen
 - [ ] die erste Bildschirmhöhe zeigt auf 375 Pixel Angebot, Zielgruppe beziehungsweise Ort und die primäre Handlung, und sie sieht nicht abgeschlossen aus; der Übergang in den Folgeinhalt ist sichtbar
 - [ ] das Auftaktmedium ist vorrangig geladen; kein Inhalt der Landing Page bleibt bis zum Ende einer Einblendung unsichtbar
@@ -83,7 +88,7 @@ Diese fünf Punkte tragen das Gate. Fällt einer, ist `G1` nicht erfüllt, unabh
 - [ ] die vollständige semantische H1 ist bei 320, 375, 768, 1280 und 1440 Pixel, 200 Prozent Zoom und großer Systemschrift ohne Anschnitt, Maske, Überlagerung oder Kollision mit der realen klebenden Kopfzeile lesbar
 - [ ] auf Mobil beginnt spätestens innerhalb der zweiten Bildschirmhöhe sichtbar die nächste reale Nutzerfrage oder der erste konkrete Beweis; Schriftgröße, Kontaktmetadaten, Dekoration und ungenutzter Weißraum halten den Seitenfortschritt nicht auf
 - [ ] **Stilkachel `D0` gerendert und angesehen** (Full Lane; in der Fast Lane deckt die Kernprüfung dieselben Eigenschaften ab) nach [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]]: jede Pflichtfarbrolle mit ihrem realen Text in Licht und Dunkel, Type Ramp an echtem Text, Radius-/Rahmen-/Tiefengrammatik, Aktionen in allen Zuständen, gewählte Inhaltsgrundform mit Leer- und Ladezustand, Signaturdetail; Befunde daran vor dem ersten Auftakt behoben
-- [ ] **Auftaktfeld gebaut** (Fast Lane: zwei Fassungen): zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten liegen vor, wurden nebeneinander bei 375 und 1280 Pixel beurteilt; Wahl, verworfene Fassungen und Grund stehen im Design Contract, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]
+- [ ] **Auftaktfeld gebaut** (Fast Lane: zwei Fassungen): zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen, bei einer Gattungsregel mit verschiedenen Ausprägungen der gesetzten Komposition, und denselben realen Inhalten liegen vor, wurden nebeneinander bei 375 und 1280 Pixel beurteilt; Wahl, verworfene Fassungen und Grund stehen im Design Contract, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]
 - [ ] **Visual Iteration Loop durchlaufen**: in der Full Lane mindestens die Durchgänge `D1`, `D2` und `D3` aus [[20-design/visual-iteration-loop.md#Pflichtdurchgänge]], in der Fast Lane ein Durchgang, je gebauter Website, jeweils mit Datum, benannten Stopps, schriftlicher Befundliste und der daraufhin vorgenommenen Änderung. Renders ohne zugehörige Befundliste erfüllen dieses Gate nicht
 - [ ] **echte Darstellung** auf Mobile, Tablet, Desktop, Zoom und mit langen Inhalten geprüft; die Rendernachweise sind **ganzseitig** und nicht nur der sichtbare Auftakt, damit Überlauf, Kollision und Fehlerzustände unterhalb der Falz sichtbar werden
 - [ ] kann in der Abnahmeumgebung keine echte Darstellung erzeugt werden, ist dies **vor der Lieferung ein Blocker**. Textanalyse, bestandene Tokenpaare oder ein nachträglicher Hinweis ersetzen den Render nicht

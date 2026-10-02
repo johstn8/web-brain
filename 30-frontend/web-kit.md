@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 depends_on:
   - "[[30-frontend/stack.md]]"
   - "[[20-design/color-system.md]]"
@@ -24,10 +24,10 @@ impacts:
 | Ordner | Inhalt |
 |---|---|
 | `tokens/` | `tokens.json` als Quelle, `tokens.css` generiert, Theme-Ableitung |
-| `blocks/` | Kopfzeile, `auftakt/` mit vier Kompositionen, Leistungen, Öffnungszeiten, Anfahrt, Team, Kontaktformular, Bewertungen, Preise, FAQ, Fußzeile |
+| `blocks/` | Kopfzeile, `auftakt/` mit fünf Kompositionen, darunter `Leitbild` als gesetzter Auftakt der Gastronomie, Leistungen, Öffnungszeiten, Anfahrt, Team, Kontaktformular, Bewertungen, Preise, FAQ, Fußzeile |
 | `legal/` | Impressum, Datenschutz, `consent/` |
 | `content/` | `schema.json` als Datenmodell für Betriebsdaten |
-| `scripts/` | `extract-old-site.ts`, `render-shots.ts`, `check-axe.ts`, `check-contrast.ts`, `link-check.ts`, `tokens-to-css.ts`, `tokens-to-designsystem.ts`, `qa.sh` |
+| `scripts/` | `extract-old-site.ts`, `render-shots.ts`, `check-axe.ts`, `check-slop.ts`, `check-contrast.ts`, `link-check.ts`, `tokens-to-css.ts`, `tokens-to-designsystem.ts`, `qa.sh` |
 | `starter/` | lauffähiges Astro-Projekt, das alles einbindet |
 
 ## Die Rollennamen sind fix
@@ -43,10 +43,10 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | Preset | Fuer | Abgrenzung | Display / Text |
 |---|---|---|---|
 | `werkstatt` | Handwerk, Fahrzeugservice, Logistik, Bau | Rahmen, Radius null | Archivo 800 / Public Sans |
-| `praxis` | Gesundheit, Pflege, Therapie | Flaeche, weiche Rundung | Newsreader / Public Sans |
-| `tisch` | Gastronomie, Baeckerei, Hotellerie | Flaeche, dunkler Grund | Fraunces 300 / Work Sans |
+| `praxis` | Gesundheit, Pflege, Therapie | Flaeche, weiche Rundung | Source Serif 4 / Public Sans |
+| `tisch` | Gastronomie, Baeckerei, Hotellerie | Flaeche, dunkler Grund | Alegreya 400 / Work Sans |
 | `kanzlei` | Kanzlei, Steuerberatung, Verwaltung | Haarlinie, schmale Lesestrecke | Spectral / Spectral |
-| `atelier` | Studio, Architektur, Fotografie | Weissraum als einziges Trennmittel | Bricolage Grotesque / Instrument Sans |
+| `atelier` | Studio, Architektur, Fotografie | Weissraum als einziges Trennmittel | Bricolage Grotesque / Hanken Grotesk |
 
 Jedes ist an drei konkreten Seiten aus [[90-references/website-reference-pool.md]] belegt. Ein Preset ist keine Kopie dieser Seiten, sondern die Ableitung ihrer Grammatik auf den Tokenvertrag.
 
@@ -58,7 +58,7 @@ Ein Preset ist ein Ausgangspunkt, kein Fertigprodukt. Die Werte des Betriebs - A
 
 ### Schriften
 
-Keine der verwendeten Familien ist eine, zu der ein Modell ohne Vorgabe greift. Alle stehen unter der SIL Open Font License 1.1 und werden von `scripts/fetch-fonts.ts` heruntergeladen und **im Projekt gehostet**: eine Einbindung von `fonts.googleapis.com` waere ein Drittanbieter-Datenfluss und damit ein Consent-Fall nach [[50-legal/privacy-and-consent.md]] fuer etwas, das keinen Consent braucht. Die Lizenz gehoert danach in das Asset Register.
+Keine der verwendeten Familien steht auf der [[20-design/typography-layout-and-spacing.md#Sperrliste]]. **Das galt bis 2026-10-02 nicht**: `tisch` schlug Fraunces vor, `praxis` Newsreader, `atelier` Instrument Sans, also genau die Familien, zu denen ein Modell ohne Vorgabe greift. Eine Fassung der Trattoria Alberto wurde damit gebaut, bevor es auffiel. Jede Familie eines Presets wird deshalb vor dem Eintrag gegen die Sperrliste geprüft, und ein Projekt prüft die Familie des gewählten Presets trotzdem noch einmal. Alle stehen unter der SIL Open Font License 1.1 und werden von `scripts/fetch-fonts.ts` heruntergeladen und **im Projekt gehostet**: eine Einbindung von `fonts.googleapis.com` waere ein Drittanbieter-Datenfluss und damit ein Consent-Fall nach [[50-legal/privacy-and-consent.md]] fuer etwas, das keinen Consent braucht. Die Lizenz gehoert danach in das Asset Register.
 
 ## qa.sh
 
@@ -68,9 +68,18 @@ Keine der verwendeten Familien ist eine, zu der ein Modell ohne Vorgabe greift. 
 2. interner Link-Check über das ausgelieferte HTML
 3. ganzseitige Screenshots bei 375 und 1280 Pixel
 4. axe gegen WCAG 2.1 AA
-5. Lighthouse für Performance, Accessibility, Best Practices und SEO
+5. harte Sperren gegen KI-Anmutung über `check-slop.ts`, siehe [[#Harte Sperren im QA-Lauf]]
+6. Lighthouse für Performance, Accessibility, Best Practices und SEO
 
 Fehlt ein Werkzeug, meldet der Lauf die Prüfung als **übersprungen**, nie als bestanden. Eine übersprungene Prüfung gehört als offener Punkt in `release-readiness/<website-slug>.md` nach [[60-operations/release-readiness-register.md]]. Ohne echten Render ist `G1` nach [[70-qa/quality-gates.md#G1 Design]] nicht erfüllt; das ist ein Blocker vor der Lieferung.
+
+### Harte Sperren im QA-Lauf
+
+`scripts/check-slop.ts` öffnet jede Route aus der Sitemap im Browser und misst am gerenderten Dokument die Sperren S1 bis S5 aus [[20-design/anti-ai-slop.md#Harte Sperren]]: Dachzeile über einer Überschrift, Nummernmarke, Teilauszeichnung in einer Überschrift, Ausblendung eines Fotos über Verlauf oder Maske und drei gleich gebaute Sektionen in Folge auf der Startseite. Jede Sperre lässt `qa.sh` scheitern; die Prüfung kann nicht über `--skip` abgewählt werden.
+
+Gemessen wird am Render, nicht am Quelltext, weil eine Dachzeile ein Absatz, ein Span, eine Pseudo-Zeile oder Teil eines Blocks sein kann. Die Schwellen sind an realen Seiten geeicht: Die Gastronomie-Benchmarks MINE, Pageou, Barra, Lilia und Carbone bestehen ohne Sperre, Impasto Rosso fällt mit zwei Dachzeilen durch, und alle vier Fassungen der Trattoria Alberto fallen genau an den Stellen durch, die der Nutzer kritisiert hat. Ein leichter Lesbarkeitsschleier über einem Foto ist erlaubt; gesperrt ist nur der Verlauf, der an einem Ende deckend wird, und die Maske, die das Bild transparent auslaufen lässt.
+
+Die unveränderte Startseite des Starters besteht die Prüfung nicht: Sie ist ein technisches Gerüst mit vier gleich gebauten Sektionen und wird im Projekt umgebaut.
 
 ## Wie das Kit wächst
 

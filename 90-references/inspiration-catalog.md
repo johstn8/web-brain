@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-27
+updated: 2026-10-02
 review_by: 2027-02-27
 ---
 
@@ -117,6 +117,25 @@ Vom Nutzer als professionell und ausdrücklich wegen ihrer stilistischen Bandbre
 **Nicht übernommen**
 
 Die Gruppe ist Inspiration, kein Wahrheitsbeleg für ihre Zahlen, Garantien, Testimonials, Events, rechtlichen Texte oder Drittanbieterflüsse. Sichtbare Dopplungen, veraltete Termine, Rechtschreibfehler und unbelegte Aussagen einzelner Seiten werden nicht zum Muster. Vor einer konkreten visuellen Übernahme wird die aktuelle Referenz nach [[90-references/reference-research-workflow.md]] im Browser erneut geprüft.
+
+## Gastronomie: Negativbeispiele
+
+Bewertet nach dem [[20-design/qualitaetsraster.md]]. Sie zeigen, wie eine Restaurantseite nicht aussehen soll, und gehören in jeden Benchmarkvergleich dieser Gattung als Gegenpol.
+
+### Impasto Rosso, Berlin — vom Nutzer als schwach benannt, 6 Punkte
+
+[impastorosso.de](https://impastorosso.de/), aufgenommen am 2. Oktober 2026. Die Fotos des Raums sind brauchbar, die Seite ist es nicht: Baukastenvorlage mit Bildkarussell und Pfeilen im Auftakt, der Satz „Genießen Sie die Aromen des authentischen Italiens" fällt durch den Namenstausch-Test, zwei Dachzeilen in Versalien über den Überschriften, Doppellinien als Ornament, drei Karten mit Skizzensymbolen für Menü, Reservierung und Standort, ein Newsletter-Kasten, zwei gleich starke umrandete Aktionen in der Kopfzeile. `check-slop.ts` meldet zwei harte Sperren. Lehre: Gute Fotos retten keine Vorlagenseite.
+
+### Trattoria Alberto, Fassungen 01 bis 04 — interne Negativbeispiele vom 12. und 20. September 2026
+
+Unter `projekte/trattoria-alberto/versions/`. Alle vier haben Kontrast, Rhythmus, Zustände, axe und Lighthouse bestanden und wurden vom Nutzer trotzdem als generiert erkannt. Sie bleiben unverändert erhalten, weil sie zeigen, was Messungen nicht finden.
+
+| Fassung | Raster | Was der Nutzer kritisiert hat | Sperre nach heutigem Stand |
+|---|---:|---|---|
+| `01-sala` | 11 | Der Auftakt ist der einzige der vier, der für eine Trattoria trägt. Danach sind alle Blöcke gleich gebaut, und das Auftaktbild läuft über einen Verlauf in den dunklen Seitengrund aus | S4 Ausblendung, S5 drei gleiche Sektionen in Folge |
+| `02-carta` | 10 | Speisekarte als Auftakt: für eine Trattoria keine Landingpage | S3 Zählplakette „8 Weine" in Überschriften |
+| `03-kladow` | 9 | Kontaktauftakt mit Tageslinie: Auskunft statt Atmosphäre | S1 Statuspille über der H1 |
+| `04-tavola` | 12 | Dachzeile „Cucina Italiana · seit 2002 in Berlin-Kladow", Nummernmarken als „Signaturdetail", das letzte Wort der H1 rot und kursiv | S1, S2, S3, S6 auf fast jeder Route |
 
 ## Generierte und experimentelle Websites
 

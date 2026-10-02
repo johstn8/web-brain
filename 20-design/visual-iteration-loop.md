@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-10-02
 sources_checked: 2026-09-11
 review_by: 2027-03-11
 depends_on:
@@ -136,6 +136,15 @@ tatsächlich gebaut und gerendert**, bevor eine weiterverfolgt wird.
 - Jede Fassung wählt eine **andere Komposition** aus dem
   [[20-design/landing-page-craft.md#Auftakt-Repertoire]] und besetzt alle sechs Rollen aus
   [[20-design/landing-page-craft.md#Der Auftakt: sechs Rollen, eine Komposition]].
+- **Greift eine [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt|Gattungsregel]],
+  ist die Komposition gesetzt.** Dann unterscheiden sich die Fassungen innerhalb dieser
+  Komposition: anderes Bild oder anderer Bildausschnitt, andere Lage der H1, anderer
+  Satz, andere Lösung des Infobands. Eine Fassung in einer anderen Komposition zu bauen,
+  nur um zwei verschiedene zu haben, ist verschwendete Arbeit; für Gastronomie wurde
+  genau das 2026 gebaut und vom Nutzer verworfen.
+- Gewählt wird erst **nach dem Blick auf die Benchmarks**: Die Fassungen liegen auf
+  demselben Bogen wie die Auftakte der Benchmarks aus dem Gattungsvergleich, siehe
+  [[20-design/qualitaetsraster.md#Benchmarkvergleich]].
 - Alle Fassungen verwenden **dieselben realen Inhalte, Fakten und Bilder**. Verglichen
   wird die Komposition, nicht der Textaufwand.
 - Die Aufgabe an den Bauschritt bleibt für das Aussehen bewusst offen und für die
@@ -172,11 +181,18 @@ vermischt.
 | Durchgang | Frage | Stopps | Woran gearbeitet wird |
 |---|---|---|---|
 | **D1 Komposition** | Stimmt die Grundordnung, bevor ein Detail verbessert wird? | 375, 1280 | Auftaktrollen besetzt, Inhaltsanker sichtbar, Fortschritt erkennbar, Abschnittsfolge aus realen Nutzerfragen, Kopfzeilenanteil an der ersten mobilen Bildschirmhöhe |
-| **D2 Rhythmus und Hierarchie** | Ist die Seite gegliedert oder nur gefüllt? | 375, 768, 1280 | Abstandsrhythmus eng in der Gruppe und weit zwischen Gruppen, Abstand über der Überschrift größer als darunter, Maßstabssprünge, Anzahl der Überschriftenanordnungen, Flächen- und Rahmengrammatik, optische statt mathematischer Ausrichtung, typografischer Feinschliff nach [[20-design/typography-layout-and-spacing.md#Typografischer Feinschliff]] |
+| **D2 Rhythmus und Hierarchie** | Ist die Seite gegliedert oder nur gefüllt? | 375, 768, 1280 | Wechsel von Anordnung und Bildmaßstab zwischen aufeinanderfolgenden Sektionen nach [[20-design/landing-page-craft.md#Sektionsrhythmus]], Abstandsrhythmus eng in der Gruppe und weit zwischen Gruppen, Abstand über der Überschrift größer als darunter, Maßstabssprünge, Anzahl der Überschriftenanordnungen, Flächen- und Rahmengrammatik, optische statt mathematischer Ausrichtung, typografischer Feinschliff nach [[20-design/typography-layout-and-spacing.md#Typografischer Feinschliff]] |
 | **D3 Zustand und Detail** | Ist die Seite fertig oder nur im Ruhezustand fertig? | 375, 1280, 200 Prozent Zoom, Licht und Dunkel, sofern beide ausgeliefert werden | Fokus auf jedem realen Untergrund, Hover nur auf Auslösendem, Laden, Leer, Fehler, deaktiviert, Buttonhöhen, Touchziele, Kontrast in der realen Kombination, Layoutsprung beim Laden von Schrift und Auftaktmedium |
 
 Weitere Durchgänge sind erlaubt und häufig nötig. Drei sind die Untergrenze, nicht das
 Ziel.
+
+**Abschluss jedes Loops ist der Benchmarkvergleich** nach
+[[20-design/qualitaetsraster.md#Benchmarkvergleich]]: die eigene Startseite neben den
+Benchmarks und Negativbeispielen ihrer Gattung, mit Rasterpunkten und den drei
+schriftlichen Antworten. Er gilt auch in der Fast Lane, die nur einen Durchgang fährt.
+Messbare Prüfungen können bestanden sein, während die Seite neben guten Seiten ihrer
+Gattung sofort als generiert auffällt; genau das hat dieser Schritt 2026 nachgeholt.
 
 Bei mehreren gebauten Websites läuft der Loop je Website getrennt. Ein gemeinsamer
 Durchgang über alle Fassungen genügt nicht, weil sie unterschiedliche Art Directions

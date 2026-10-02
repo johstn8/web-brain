@@ -115,14 +115,20 @@ Er fährt die **Fast Lane** — Zielzeit ein Arbeitstag:
 
 1. Legt `projekte/<name>/` an
 2. Zieht die alte Seite, falls es eine gibt
-3. Recherchiert und schreibt einen Kurzbrief in `PROJECT.md`
+3. Recherchiert, schreibt einen Kurzbrief in `PROJECT.md` und sieht sich
+   gute und schlechte Websites derselben Branche an, die er nach einem
+   festen Raster bewertet
 4. Füllt `content/<website>.json` mit den echten Daten
 5. Zieht die Blöcke aus dem Kit
 6. Wählt eine Art Direction, setzt die Farben des Betriebs, rechnet den
    Kontrast in hell **und** dunkel nach
-7. Baut **zwei** Auftaktfassungen und sieht sie sich nebeneinander an
-8. Rendert die ganze Seite, schreibt eine Befundliste, korrigiert
-9. Lässt `qa.sh` laufen: Platzhalterreste, Links, Screenshots, axe, Lighthouse
+7. Baut **zwei** Auftaktfassungen und sieht sie sich neben den besten
+   Websites der Branche an; für Restaurants ist der Auftakt ein großes Foto
+   über die ganze Höhe
+8. Rendert die ganze Seite, schreibt eine Befundliste, korrigiert und legt
+   die fertige Startseite noch einmal neben die besten Websites der Branche
+9. Lässt `qa.sh` laufen: Platzhalterreste, Links, Screenshots, axe, die
+   gesperrten KI-Muster, Lighthouse
 10. Nimmt gegen die Gates ab
 
 Zwei Dinge macht er dabei immer mit, auch wenn du nichts sagst:

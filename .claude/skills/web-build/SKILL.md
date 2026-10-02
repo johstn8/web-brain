@@ -71,6 +71,23 @@ Beweisformen, Sitemap.
 Keine Zahlen, Zertifikate, Auszeichnungen oder Kundenstimmen erfinden. Was
 nicht belegt ist, entfällt oder wird als Annahme markiert.
 
+### 3b. Gattungsvergleich — auch bei genau einer Website
+
+Bevor irgendetwas gestaltet wird: acht bis zwölf Websites **derselben
+Gattung** aufnehmen (Ort, Stadt, Deutschland, international), je Auftakt bei
+1440 und 390 Pixel, und nach dem Qualitätsraster bewerten. Ergebnis: zwei
+bis drei **Benchmarks** mit mindestens 16 von 20 Punkten, ein bis zwei
+**Negativbeispiele**, die übertragbaren Prinzipien in Sätzen. Zuerst in den
+Pool schauen; für Gastronomie stehen dort schon Benchmarks.
+
+- Ablauf: `web-brain/90-references/reference-research-workflow.md#Gattungsvergleich`
+- Raster: `web-brain/20-design/qualitaetsraster.md`
+- Pool: `web-brain/90-references/website-reference-pool.md`
+
+Ohne diesen Schritt entsteht eine Seite, die alle Messungen besteht und neben
+guten Seiten ihrer Gattung trotzdem generiert aussieht. Genau das ist bei der
+Trattoria Alberto viermal passiert.
+
 ### 4. Inhalt in Form bringen
 
 `content/<website>.json` nach `web-kit/content/schema.json` füllen. Eine
@@ -123,11 +140,48 @@ Vor der Festlegung lohnt der Prüfsatz: **Wäre ich bei einem anderen
 Auftrag derselben Gattung an derselben Stelle gelandet?** Wenn ja, ist es
 kein Entwurf, sondern ein Default.
 
+**Schriften gegen die Sperrliste prüfen, auch die des Presets.** Bis
+2026-10-02 schlugen drei der fünf Presets eine gesperrte Familie vor.
+Liste: `web-brain/20-design/typography-layout-and-spacing.md#Sperrliste`.
+
+**Die Sektionsfolge der Startseite vorher aufschreiben**, je Sektion mit
+Anordnung und Bildmaßstab. Zwei gleiche Zeilen hintereinander: umplanen,
+bevor gebaut wird. Regel: `web-brain/20-design/landing-page-craft.md#Sektionsrhythmus`.
+
+### 6b. Die harten Sperren — vor der ersten Komponente lesen
+
+Diese Muster werden **nicht gebaut**, auch nicht mit Begründung, auch nicht
+als Signaturdetail:
+
+- **keine Zeile über einer Überschrift** — kein Ort, kein „seit 2002", keine
+  Gattung in Fremdsprache, kein Status, keine Rubrik
+- **keine Nummern an Sektionen** — kein `01 ·`, keine Ziffer mit Linie
+- **kein Wort einer Überschrift in anderer Farbe oder kursiv** — eine
+  Überschrift, eine Farbe, ein Schnitt
+- **kein Verlauf, der ein Foto in den Seitengrund ausblendet**
+- **nie drei gleich gebaute Sektionen in Folge** auf der Startseite
+- keine fremdsprachigen Zierwörter, keine Vorlagenmöbel
+
+Kanonisch: `web-brain/20-design/anti-ai-slop.md#Harte Sperren`. `qa.sh` misst
+die ersten fünf und scheitert daran; die Prüfung lässt sich nicht abwählen.
+Ein Signaturdetail ist **nicht** verlangt — fehlt reales Material dafür,
+entfällt es.
+
 ### 7. Auftakt: zwei Fassungen, wirklich gebaut
 
-Zwei Auftaktfassungen mit **verschiedenen Kompositionen** aus
-`web-kit/blocks/auftakt/` und denselben realen Inhalten bauen, bei 375 und
-1280 Pixel nebeneinander ansehen, eine mit Begründung wählen.
+**Zuerst prüfen, ob eine Gattungsregel greift**
+(`web-brain/20-design/landing-page-craft.md#Gattungsregeln für den Auftakt`).
+Für **Gastronomie** ist die Komposition gesetzt: das randlose Leitbild aus
+`web-kit/blocks/auftakt/Leitbild.astro` — Foto oder Video über die volle
+Höhe, H1 auf dem Bild, ein Satz, Band mit Zeiten, Adresse, Telefon, eine
+Handlung. Die zwei Fassungen unterscheiden sich dann in Bild, Bildausschnitt,
+Lage der H1 und Satz, nicht in der Komposition. Typo-, Kontakt- oder
+Index-Auftakt für ein Restaurant wurden gebaut und vom Nutzer verworfen.
+
+Ohne Gattungsregel: zwei Auftaktfassungen mit **verschiedenen
+Kompositionen** aus `web-kit/blocks/auftakt/`. In beiden Fällen mit denselben
+realen Inhalten bauen, bei 375 und 1280 Pixel **neben die Auftakte der
+Benchmarks** legen, eine mit Begründung wählen.
 
 Gedanklich wählen zählt nicht. Ein Sprachmodell wählt dabei die
 wahrscheinlichste Lösung, und genau die sieht generiert aus. Repertoire in
@@ -147,6 +201,13 @@ node --experimental-strip-types web-kit/scripts/render-shots.ts \
 echter Render erzeugbar, ist das ein Blocker vor der Lieferung, kein Grund
 zum Überspringen.
 
+**Danach der Benchmarkvergleich.** Eigene Startseite, Benchmarks und
+Negativbeispiele auf einen Bogen, Auftakt bei 1440 und 390 Pixel und die
+ganze Startseite. Schriftlich beantworten: Sieht die Seite aus wie die
+Benchmarks oder wie die Negativbeispiele? Wie viele Rasterpunkte? Welche
+Entscheidung der Benchmarks fehlt noch? **Unter 16 Punkten ist die Seite
+nicht fertig.** Regel: `web-brain/20-design/qualitaetsraster.md#Benchmarkvergleich`.
+
 ### 9. QA
 
 ```bash
@@ -154,7 +215,7 @@ web-kit/scripts/qa.sh --dir <projekt>/site/dist
 ```
 
 Platzhalter- und `TODO`-Reste, interne Links, Screenshots bei 375 und 1280,
-axe gegen WCAG 2.1 AA, Lighthouse. Eine **übersprungene** Prüfung gilt nicht
+axe gegen WCAG 2.1 AA, **harte Sperren gegen KI-Anmutung**, Lighthouse. Eine **übersprungene** Prüfung gilt nicht
 als bestanden und gehört in `release-readiness/<website-slug>.md`.
 
 ### 10. Auf /dev sichtbar machen
@@ -206,15 +267,16 @@ Wenn die Website steht, gerendert und durch `qa.sh` gelaufen ist, kommt
 **eine** Nachricht, kein Tröpfeln über den Tag:
 
 1. **Der Link** auf `johannstein.com/dev/<projekt>/`, vor allem anderen
-2. **Entschieden:** Bahn, Art Direction, Auftaktkomposition, Sektionsfolge — je eine Zeile Begründung
+2. **Entschieden:** Bahn, Benchmarks aus dem Gattungsvergleich, Art Direction, Auftaktkomposition, Sektionsfolge — je eine Zeile Begründung, dazu der Benchmarkbogen mit Rasterpunkten
 3. **Angenommen:** je Annahme Quelle und Folge
 4. **Offen:** identisch mit `release-readiness/<website-slug>.md`
-5. **Zu entscheiden:** was nach 3 und 4 übrig bleibt, meist wenig
+5. **Zu entscheiden:** was nach 3 und 4 übrig bleibt, meist wenig, dazu neue Benchmark-Funde mit mindestens 16 Punkten, die der Nutzer in den Pool aufnehmen kann
 
-## Was in dieser Bahn nicht verkürzt wird## Was in dieser Bahn nicht verkürzt wird
+## Was in dieser Bahn nicht verkürzt wird
 
 Die Qualitätsregeln gelten unverändert. Verkürzt ist die Nachweisführung,
-nicht das Handwerk: Tokenvertrag, Zustände, Kontrast, Tastaturbedienung,
+nicht das Handwerk. **Gattungsvergleich, harte Sperren und Benchmarkvergleich
+werden nie verkürzt.** Tokenvertrag, Zustände, Kontrast, Tastaturbedienung,
 Rechtsseiten, Performance und SEO sind genauso verbindlich wie in der Full
 Lane.
 

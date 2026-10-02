@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
 impacts:
@@ -61,7 +61,7 @@ Entscheide bewusst je Achse: ruhig oder expressiv, editorial oder produktnah, wa
 - Weißraum als Hierarchie, nicht als leerer Luxus.
 - Mikrodetails aus Tokens ableiten.
 - Novelty Budget: maximal ein bis zwei auffällige Mechaniken pro View; Rest ruhig.
-- Genau ein wiedererkennbares Signaturdetail je Website, aus Marke, Material, Ort oder Inhalt hergeleitet und in ruhigerer Form auf den Unterseiten wiederholt. Siehe [[20-design/landing-page-craft.md#Das Signaturdetail]].
+- Höchstens ein Signaturdetail je Website, nur aus realem Material des Betriebs hergeleitet, nie aus Typografie, Ziffern oder Linien; fehlt solches Material, entfällt es. Siehe [[20-design/landing-page-craft.md#Das Signaturdetail]].
 
 ## Medien und mehrere Websites
 
@@ -114,7 +114,7 @@ Fakten, Preise, Zeiten, Funktionen, Unterseiten, Accessibility, Sicherheit und S
 
 Die Anordnung ist eine Gestaltungsentscheidung, keine Voreinstellung. Wer jede Sektion mit Titel, Lead und Raster beginnt, erzeugt genau die Gleichförmigkeit, die generierte Seiten kennzeichnet.
 
-- Redundante Kicker vermeiden. Echte Rubrik-, Status-, Datums- oder Prozessinformation darf nach [[20-design/anti-ai-slop.md#Kicker und Überschriften]] als eigene Hierarchiestufe erscheinen.
+- Keine Dachzeile über einer Überschrift und keine Teilauszeichnung in einer Überschrift, siehe [[20-design/anti-ai-slop.md#Harte Sperren]]. Wohin die frühere Rubrik-, Status-, Datums- oder Ortsinformation stattdessen gehört, steht in [[20-design/anti-ai-slop.md#Kicker und Überschriften]].
 - Für jede Sektionsart eine eigene Anordnung wählen. Mögliche Achsen: Überschrift links neben dem Inhalt statt darüber, Überschrift über zwei Spalten gebrochen, Überschrift als Bildunterschrift, Überschrift im Raster versetzt, Text in einer schmalen Randspalte, Zahl und Wort in derselben Zeile, Überschrift, die den Inhalt umfließt.
 - Überschriften dürfen typografisch groß, gebrochen, überlappend oder mit einem Medium verschränkt gesetzt werden, solange Lesbarkeit, Fokusreihenfolge und Reflow stimmen. Anschnitt ist nur an einem dekorativen Duplikat zulässig; die einzige semantische H1 bleibt vollständig sichtbar.
 - Der Auftakt wird aus Inhalt, Leitmetapher, Beweis und nächster Handlung entwickelt. Auch ein mittiger Titel mit Unterzeile und Aktionen kann richtig sein, wenn genau diese Ruhe und Symmetrie zum Auftrag passt; er darf nicht bloß ungeprüfter Default sein.
@@ -137,7 +137,9 @@ Aufbau, Auftaktrollen, Auftakt-Repertoire, Überschriftenanordnung auf dieser Se
 - **Interesse entsteht aus Beziehung.** Maßstab, Raster, Medium, Fakten und Handlung erzeugen Spannung miteinander. Schriftgröße allein, ein vollflächiges Epochenzitat oder eine erzwungene Andersartigkeit sind kein Konzept. Stilzitate bleiben nachgeordnet und folgen [[20-design/typography-layout-and-spacing.md#Stilzitat und Zeitbezug]].
 - **Beweis vor Pflichtinteraktion.** Bild, Team, Case, Arbeitsprobe, Rechner, Produktansicht, Prozess und klare Erklärung sind gleichwertige Beweisformen.
 - **Professionell ist zweckpassend.** Hierarchie, präzise Abstände und ein kohärentes Farb- und Flächensystem gelten in warmen, hellen, dunklen, zurückhaltenden und expressiven Richtungen gleichermaßen. Eine ruhige, weitgehend statische Landing Page mit echtem Inhalt ist eine vollwertige Entscheidung und wird als solche dokumentiert.
-- gewähltes Signaturdetail nach [[20-design/landing-page-craft.md#Das Signaturdetail]] samt Herleitung und Wiederholungsorten
+- Gattungsvergleich mit Benchmarks, Negativbeispielen und übertragbaren Prinzipien nach [[20-design/qualitaetsraster.md#Gattungsvergleich]]
+- Sektionsfolge der Startseite mit Anordnung und Bildmaßstab je Sektion nach [[20-design/landing-page-craft.md#Sektionsrhythmus]]
+- Signaturdetail nach [[20-design/landing-page-craft.md#Das Signaturdetail]] samt Herkunft aus realem Material, oder der Vermerk, dass keines gesetzt ist
 - Das Novelty Budget gilt weiterhin: höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt.
 - Unterseiten übernehmen dasselbe Designsystem, treten aber ruhiger auf. Der Ausdruck liegt auf der Landing Page, die Verlässlichkeit auf den Unterseiten.
 

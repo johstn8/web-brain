@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-10-02
 impacts:
   - "[[20-design/design-direction.md]]"
   - "[[30-frontend/performance.md]]"
@@ -93,6 +93,8 @@ Ein generiertes Bild, das gegen eine dieser Regeln verstößt, wird neu erzeugt 
 - Alt-Texte beschreiben den Inhalt aus Sicht des Zwecks. Rein dekorative Struktur- und Texturbilder erhalten ein leeres `alt`. Der Alt-Text nennt nie, dass ein Bild generiert wurde.
 - Bildgewicht zählt in das Performancebudget aus [[30-frontend/performance.md]]. Ein Leitbild rechtfertigt Gewicht, eine Dekoration nicht.
 - Text steht nie ungeschützt auf einem Bild. Kontrast wird gegen den tatsächlichen Bildausschnitt in jedem Breakpoint geprüft.
+- Schutz für Text auf einem Foto ist ein **gleichmäßiger, leichter Schleier** oder die Wahl einer ruhigen Bildzone. Ein Verlauf, der das Foto zu einer Kante hin in den Seitengrund ausblendet, und eine Maske, die es transparent auslaufen lässt, sind harte Sperren, siehe [[20-design/anti-ai-slop.md#Harte Sperren]] S4. Ein Foto endet an einer Kante.
+- In der Gastronomie ist professionelle Fotografie von Raum, Menschen und Essen der stärkste einzelne Hebel. Fehlt sie, wird mit dem besten verfügbaren Material gebaut und ein Fotoshooting als `P1` im Release-Readiness-Register vermerkt, siehe [[20-design/qualitaetsraster.md#Bildmaterial als Engpass]].
 
 ## Nachweis
 

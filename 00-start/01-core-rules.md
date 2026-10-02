@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 impacts:
   - "[[80-templates/project-master-spec.md]]"
   - "[[70-qa/quality-gates.md]]"
@@ -19,16 +19,19 @@ impacts:
 ## Design
 
 - Ein visuelles Leitmotiv statt Effekt-Sammlung.
-- Bei einer einzelnen Website keine Live-Seite automatisch als Leitreferenz wählen. Bei mehreren Websites genau eine fachlich passende konkrete Live-Seite für genau eine Fassung prägend verwenden; die übrigen Fassungen sind Eigenentwürfe. Eine vom Nutzer ausdrücklich vorgegebene Referenz hat Vorrang. Sammlungen sind nur Entdeckungsquellen; nur eine dokumentiert fehlende starke Passung erlaubt ausnahmsweise ausschließlich Eigenentwürfe. Siehe [[90-references/reference-research-workflow.md]].
+- **Vor jeder Website steht der Gattungsvergleich**: gute und schlechte Websites derselben Gattung ansehen, nach [[20-design/qualitaetsraster.md]] bewerten, zwei bis drei Benchmarks benennen. Vor der Lieferung wird die eigene Startseite im Benchmarkvergleich daneben gelegt und muss mindestens 16 von 20 Punkten erreichen. Siehe [[90-references/reference-research-workflow.md#Gattungsvergleich]].
+- Bei einer einzelnen Website prägt höchstens eine Benchmark des Gattungsvergleichs als Leitreferenz. Bei mehreren Websites genau eine fachlich passende konkrete Live-Seite für genau eine Fassung prägend verwenden; die übrigen Fassungen sind Eigenentwürfe. Eine vom Nutzer ausdrücklich vorgegebene Referenz hat Vorrang. Sammlungen sind nur Entdeckungsquellen; nur eine dokumentiert fehlende starke Passung erlaubt ausnahmsweise ausschließlich Eigenentwürfe. Siehe [[90-references/reference-research-workflow.md]].
 - Definiertes Farb-, Typografie-, Spacing-, Grid-, Radius-, Schatten- und Motion-System.
 - Farbrollen und Bildsprache aus Marke, Produkt, Ort, Referenzen oder realem Material ableiten. Bilder, Designs und Animationen dürfen für den kreativen Build direkt eingesetzt oder adaptiert werden; ihr tatsächlicher Einsatz wird danach dokumentiert.
 - Farbwelten werden aus Marke, Material, Inhalt und realem Kontext hergeleitet. Eine häufig verwendete Palette ist kein Verbot, aber ein unbegründeter Generator-Default ist ein Befund. Siehe [[20-design/color-system.md#Häufige Defaults bewusst entscheiden]].
-- Redundante oder rein dekorative Kicker über Überschriften vermeiden. Echte Rubrik-, Status-, Datums- oder Prozessinformation darf eine eigene Hierarchiestufe erhalten. Siehe [[20-design/anti-ai-slop.md#Kicker und Überschriften]].
+- **Harte Sperren, nicht begründbar:** keine Zeile über einer Überschrift, keine Nummern an Sektionen, kein farbig oder kursiv abgesetzter Teil einer Überschrift, kein Verlauf, der ein Foto ausblendet, keine drei gleich gebauten Sektionen in Folge, keine fremdsprachigen Zierwörter, keine Vorlagenmöbel. `qa.sh` misst die ersten fünf. Kanonisch in [[20-design/anti-ai-slop.md#Harte Sperren]].
 - Kopfzeileninventar und Navigationsmuster aus Informationsarchitektur, Nutzungshäufigkeit, Wortlängen und Art Direction ableiten. Es gibt keine globale Sollzahl. Siehe [[30-frontend/components-and-ui-states.md#Kopfzeile und Hauptnavigation]].
 - Ein gefundenes Firmenlogo wird in jeder gebauten Website sichtbar verwendet. Siehe [[20-design/design-direction.md#Logo des Betriebs]].
 - Die Landing Page wird zuerst auf Nutzwert gebaut und darf danach ausdrucksstark werden. Angebot, konkreter Inhaltsanker und nächste Handlung müssen zusammen lesbar sein; ein Bild ist keine Pflicht und Schriftgröße allein kein Konzept. Kanonisch in [[20-design/landing-page-craft.md]].
 - Der Auftakt besetzt alle sechs Auftaktrollen und wählt eine benannte Komposition aus [[20-design/landing-page-craft.md#Auftakt-Repertoire]]. Die feste Kette aus Hero, drei Karten, Logo-Wand, Stimmen, Preisen und FAQ ist kein Aufbau, sondern eine Gewohnheit; die Reihenfolge folgt den realen Nutzerfragen dieser Zielgruppe.
-- Jede Website erhält genau ein hergeleitetes Signaturdetail, das auf den Unterseiten ruhiger wiederkehrt. Siehe [[20-design/landing-page-craft.md#Das Signaturdetail]].
+- Ein Signaturdetail ist möglich, nicht verlangt, und stammt nur aus realem Material des Betriebs, nie aus Typografie, Ziffern oder Linien. Siehe [[20-design/landing-page-craft.md#Das Signaturdetail]].
+- Für manche Gattungen ist der Auftakt gesetzt. **Gastronomie erhält das randlose Leitbild**: Foto oder Video über die volle Höhe, H1 darauf, ein Satz, ein Band mit Zeiten, Adresse und Telefon. Siehe [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]].
+- Aufeinanderfolgende Sektionen wechseln Anordnung und Bildmaßstab. Siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]].
 - Pro Seite kommen zwei bis drei verschiedene Überschriftenanordnungen vor. Eine einzige wiederholte Anordnung ist ein Anti-Slop-Befund. Siehe [[20-design/design-direction.md#Komposition und Überschriften]].
 - **Vor der ersten Komponente wird der Tokenvertrag als Stilkachel gerendert und angesehen**, in Licht und Dunkel, an echtem Text. Sie ist das visuelle Ziel des Projekts und ersetzt die reine Werteaufzählung im Design Contract. Siehe [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]].
 - **Der Auftakt wird nicht nur gewählt, sondern gebaut.** Zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten entstehen wirklich, werden bei 375 und 1280 Pixel nebeneinander angesehen, und die Wahl steht mit Grund im Design Contract. Siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
@@ -70,7 +73,7 @@ impacts:
 ## Marke und Anti-Slop
 
 - Keine Blau-Lila-Verläufe ohne Markenbegründung.
-- Keine Eyebrow-Pills, Sparkles, Emoji-Icons, Fake-Testimonials oder leeren Logo-Walls. Claims, Zertifikate, Auszeichnungen, Kundenlogos, Nutzerzahlen und Leistungswerte werden nie erfunden; ohne Beleg entfallen sie oder werden als Annahme gekennzeichnet.
+- Keine Dachzeilen, Eyebrow-Pills, Sparkles, Emoji-Icons, Fake-Testimonials oder leeren Logo-Walls. Claims, Zertifikate, Auszeichnungen, Kundenlogos, Nutzerzahlen und Leistungswerte werden nie erfunden; ohne Beleg entfallen sie oder werden als Annahme gekennzeichnet.
 - Keine generischen Claims wie „Build your dreams“. Konkretes Ergebnis, Zielgruppe und Differenz nennen.
 - Kein Link, Button, Tab, Carousel oder Social Icon ohne reale Funktion.
 - Website-Titel kurz, beschreibend, ohne `|`; Favicon-Set ist Pflicht.

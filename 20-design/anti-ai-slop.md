@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 source: "[[90-references/inspiration-catalog.md]]"
 impacts:
   - design-direction
@@ -12,9 +12,27 @@ impacts:
 
 # Anti AI Slop
 
+## Harte Sperren
+
+Diese Muster sind **gesperrt, nicht begründbar**. Für sie gibt es keinen Weg über den Design Contract, keine Ausnahme wegen eines Signaturdetails und keine Abwägung im Review. Sie entstehen nicht aus einer Entscheidung, sondern aus der Wahrscheinlichkeit, und sie werden von Menschen sofort als generiert erkannt.
+
+| Nr. | Gesperrt | Erkennungszeichen | Stattdessen |
+|---|---|---|---|
+| S1 | **Dachzeile über einer Überschrift** | eine kurze Zeile direkt über H1, H2 oder H3, in Versalien, gesperrt, farbig oder deutlich kleiner: Ort, Gründungsjahr, Kategorie, Gattungsname in Fremdsprache, Status, „Über uns", „Willkommen" | Die Information gehört in die Überschrift, in einen Satz darunter oder in ein Infoband. Auch wahre Angaben wie „seit 2002" oder „Berlin-Kladow" stehen nie als Dachzeile |
+| S2 | **Nummernmarke an Sektionen** | `01`, `02 ·`, `I.`, eine Ziffer mit Linie oder Wort über oder vor einer Sektionsüberschrift, auch als „Signaturdetail" | Reihenfolge zeigt sich über Rhythmus und Hierarchie. Ziffern stehen nur **im Inhalt** einer echten Abfolge, etwa in einer Anleitung in Schritten, nie als Marke an einer Sektion |
+| S3 | **Teilauszeichnung in einer Überschrift** | ein Wort oder Satzteil einer Überschrift in Akzentfarbe, Kursive, anderer Familie, mit Verlauf, Unterstreichung oder Hinterlegung; ganz besonders die Doppelkombination farbig **und** kursiv | Eine Überschrift hat eine Farbe und einen Schnitt. Betonung entsteht durch den Satz, nicht durch Auszeichnung |
+| S4 | **Ausblendung eines Fotos** | ein Verlauf, der das Auftaktbild oder ein großes Foto zu einer Kante hin in den Seitengrund auflöst, eine Maske, die es transparent auslaufen lässt, oder ein Schleier, der es überwiegend abdunkelt | Das Foto endet an einer harten Kante. Für Lesbarkeit genügt ein gleichmäßiger, leichter Schleier oder Text in einer ruhigen Bildzone |
+| S5 | **Gleichförmige Startseite** | drei Sektionen hintereinander mit derselben Anordnung, etwa Überschrift links und Inhalt rechts auf derselben Fläche | Anordnung und Maßstab wechseln, siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]] |
+| S6 | **Fremdsprachige Zierwörter** | Gattungs- oder Stimmungswörter in der Landessprache der Küche als Dekoration: „Cucina Italiana", „Benvenuti", „Dolce Vita", „Bon Appétit" als Beschriftung, Plakette oder Dachzeile | Eigennamen, Speisenbezeichnungen und der eingetragene Name des Betriebs bleiben, alles andere wird in der Sprache der Website gesagt |
+| S7 | **Vorlagenmöbel** | Icon-Karten mit Skizzensymbolen für Menü, Reservierung, Standort; Ornament- oder Doppellinien unter Überschriften; Pfeile eines Bildkarussells im Auftakt; „Herzlich willkommen" als Überschrift | weglassen; die Inhalte direkt zeigen |
+
+**S1 bis S5 werden maschinell geprüft.** `web-kit/scripts/check-slop.ts` misst sie am gerenderten Dokument und läuft in jedem `qa.sh`; eine harte Sperre lässt den Lauf scheitern und kann nicht abgewählt werden. Kanonisch für das Werkzeug ist [[30-frontend/web-kit.md#Harte Sperren im QA-Lauf]]. S6 und S7 prüft der Agent am Render.
+
+**Warum diese Muster hart gesperrt sind und die übrigen nicht.** Bis Oktober 2026 waren alle Muster dieses Katalogs Befunde mit Begründungsweg: „wer es bewusst einsetzt, hält den Grund fest". Für Kicker galt zusätzlich „echte Metainformation ist erlaubt", für Ziffern „wenn sie Orientierung stiften", und das Signaturdetail durfte ausdrücklich eine Ziffernlogik sein. In vier Fassungen eines Restaurantprojekts fand sich für jedes dieser Muster eine Begründung: Das Gründungsjahr ist wahr, also Metainformation; die Ziffern sind das Signaturdetail; das farbig kursive Wort ist Markenbezug. Der Nutzer hat jede Fassung trotzdem sofort als generiert erkannt. Eine Regel, die sich mit einem wahren Satz umgehen lässt, schützt nicht vor einem Modell, das immer einen wahren Satz findet.
+
 ## Verbot ohne konkrete Begründung
 
-- **Redundante Kicker über Überschriften.** Eyebrow, Label oder Kategoriezeile ist ein Befund, wenn sie nur die Überschrift wiederholt, überall mechanisch erscheint oder reine Dekoration ist. Echte Rubrik-, Status-, Datums-, Autor- oder Prozessinformation ist erlaubt. Details im nächsten Abschnitt.
+- **Kicker über Überschriften** sind eine harte Sperre, siehe [[#Harte Sperren]] S1.
 - Blau-Lila-Gradient, Neon-Glow, Sparkles oder generische Aurora-Fläche
 - unmotiviertes Stilzitat ohne Marken- oder Inhaltsbezug, gleich ob retro, futuristisch, minimalistisch, editorial oder technisch. Kanonisch in [[20-design/typography-layout-and-spacing.md#Stilzitat und Zeitbezug]]
 - ein vollflächiges Retro- oder Epochenzitat, das nur der Unterschiedlichkeit einer Fassung dient; mehrere historische Signale über Schrift, Papierfarbe, Linien, Textur und Seiten-Chrome brauchen einen ausdrücklichen Nutzerwunsch oder tragenden Markenbezug
@@ -48,27 +66,24 @@ impacts:
 
 ## Kicker und Überschriften
 
-Ein mechanisch wiederholter Kicker über jeder Überschrift ist ein häufiges Erkennungszeichen generierter Seiten. Das Problem ist Redundanz und Scheinhierarchie, nicht die Position an sich.
+Die Dachzeile über einer Überschrift ist seit 2026-10-02 eine harte Sperre, siehe [[#Harte Sperren]] S1. Diese Stelle erklärt nur noch, wohin die Information stattdessen geht.
 
-**Befunde sind unter anderem:**
+| Was in der Dachzeile stand | Wohin es gehört |
+|---|---|
+| Ort, Stadtteil, Adresse | in die H1 selbst („Trattoria Alberto in Kladow") oder in das Infoband des Auftakts |
+| Gründungsjahr, Familienbetrieb | in einen Satz des Leads oder der Geschichte des Hauses |
+| Gattung in Fremdsprache („Cucina Italiana") | entfällt, siehe S6; die Bilder zeigen die Küche |
+| Rubrik („Über uns", „Unsere Karte") | in die Überschrift, die dann etwas aussagt |
+| Status („Jetzt geöffnet") | in das Infoband mit den Öffnungszeiten |
+| Abschnittsnummer | entfällt, siehe S2 |
 
-- eine Eyebrow-Zeile `PREISE` über der Überschrift „Preise und Gebühren“
-- eine gesperrte Versalzeile mit Ziffer wie `01 AUSGANGSLAGE` über der Sektionsüberschrift
-- kleine Pillen mit `Neu`, `KI-gestützt`, `Beta` oder einem Kategoriewort, wenn dieser Zustand nicht real oder für die Entscheidung unwichtig ist
-- ein farbiger Kurztext mit vorangestelltem Strich als reine Dekoration
-
-**Stattdessen:**
-
-- Die Einordnung gehört in die Überschrift selbst. Aus „Preise“ plus „Preise und Gebühren“ wird eine Überschrift, die tatsächlich etwas aussagt.
-- Eine Nummerierung, die wirklich Orientierung stiftet, darf in derselben Zeile, einer Randspalte, einer sichtbaren Kapitelnavigation oder einer bewusst eigenen Zeile stehen.
-- Kontext, der über die Überschrift hinausgeht, gehört in den Lead darunter, in eine Bildunterschrift oder in die Navigation.
-- Eine reale Metazeile, etwa Datum, Rubrik, Autor, Status, Zielgruppe oder Prozessschritt, ist kein Anti-Slop-Befund, solange sie eine echte, nicht redundante Information trägt.
+**Zulässig bleiben** Datum und Autor über einem Artikel in einer Artikelliste und die Schrittanzeige innerhalb eines mehrstufigen Formulars, etwa „Schritt 2 von 3". Beides ist keine Dachzeile einer Gestaltung, sondern ein Bedienzustand. Auf der Startseite eines lokalen Betriebs kommen beide nicht vor.
 
 ## Slop-Signaturen
 
 Diese Liste ist der Detailkatalog zu den Verboten oben. Sie sammelt die Einzelmerkmale, an denen erfahrene Gestalter eine generierte Oberfläche innerhalb weniger Sekunden erkennen. Sie wird bei jedem Impeccable-Review und bei jeder Landing Page nach [[20-design/landing-page-craft.md]] durchgegangen.
 
-Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst und begründet einsetzt, hält den Grund im Design Contract fest. Wer es ungeprüft übernimmt, hat einen Befund.
+Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst und begründet einsetzt, hält den Grund im Design Contract fest. Wer es ungeprüft übernimmt, hat einen Befund. **Ausgenommen sind die [[#Harte Sperren]]**: Sie gelten auch dann, wenn eine der folgenden Zeilen dasselbe Merkmal als Befund beschreibt.
 
 ### Fläche, Rahmen und Tiefe
 
@@ -90,9 +105,10 @@ Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst un
 | eine einzige Standardfamilie in allen Rollen | keine typografische Entscheidung erkennbar | begründete Familie und Rollen nach [[20-design/typography-layout-and-spacing.md#Schriftwahl]] |
 | Stufen mit zu geringem Größenabstand | keine Hierarchie, nur Unschärfe | mindestens Faktor 1,25 zwischen benachbarten Stufen |
 | übergroße kursive Serifen-Displayzeile als Auftakt | war eine Geschmacksentscheidung und ist inzwischen der Standardauftakt generierter Startseiten | nur bei tragendem Markenbezug; sonst eine andere Auszeichnungslogik |
-| Versal-Kicker mit weiter Sperrung über jeder Überschrift | geliehene Autorität, siehe Abschnitt Kicker und Überschriften | Einordnung in die Überschrift legen |
+| ein Teil der Überschrift farbig oder kursiv abgesetzt | die häufigste Einzelgeste generierter Auftakte, besonders als Doppelkombination | harte Sperre S3 |
+| Versal-Kicker mit weiter Sperrung über einer Überschrift | geliehene Autorität | harte Sperre S1 |
 | kleine Rundquadrat-Kachel mit Icon über der Überschrift | Baustein aus jeder Generatorvorlage | Icon neben den Text stellen oder weglassen |
-| winzige Ziffernmarken neben jeder Sektionsüberschrift | Redaktionsanmutung ohne Redaktion | Reihenfolge über Rhythmus und Hierarchie zeigen |
+| winzige Ziffernmarken neben jeder Sektionsüberschrift | Redaktionsanmutung ohne Redaktion | harte Sperre S2 |
 | ganze Absätze in Versalien | Wortbilder verschwinden, Lesbarkeit sinkt | Versalien nur für kurze Beschriftungen |
 | stark negatives Tracking auf Fließtext, weites Tracking auf langen Zeilen | Buchstabengruppen zerfallen | Tracking je Stufe kalibrieren |
 | Zeilenhöhe unter 1,3 im Fließtext, Zeilen über etwa 80 Zeichen | ermüdet beim Lesen | 1,5 bis 1,7 und 45 bis 75 Zeichen |
@@ -154,6 +170,7 @@ Nicht einzelne Merkmale, sondern ganze Erscheinungsbilder, zu denen generierte O
 | Broadsheet | Haarlinien, Radius null, dichte Zeitungsspalten, Serife ueberall |
 | SaaS-Kartenkasten | Inhalt in gleich grosse abgerundete Karten zerlegt, ein Radius fuer alles unabhaengig von der Hierarchie, derselbe weiche graue Schatten unter jeder, Verlaufsflaechen als Dekoration |
 | Vorlagen-Chrome | die Merkmale aus dem Abschnitt Chrome und Beschriftung in Kombination |
+| Redaktionsattrappe | gesperrte Versal-Dachzeile, Sektionsnummern mit Haarlinie, Display-Serife mit einem farbig kursiven Wort, Leinen- oder Papiergrund. Liest sich als „Magazin", ohne dass es eine Redaktion gibt; trat 2026 in vier Restaurantfassungen in wechselnder Kombination auf |
 
 Der Pruefsatz dazu: **Waere ich bei einem anderen Auftrag derselben Gattung an derselben Stelle gelandet?** Wenn ja, ist es kein Entwurf, sondern ein Default. Wo der Auftrag eine Richtung vorgibt, gilt der Auftrag - auch dann, wenn er eine dieser Ballungen verlangt.
 
@@ -177,6 +194,7 @@ Der Pruefsatz dazu: **Waere ich bei einem anderen Auftrag derselben Gattung an d
 | Bestandsbild mit Team im hellen Büro, abstraktes 3D-Objekt, schwebende Formen | austauschbar und erkennbar generisch | reales Motiv des Betriebs nach [[20-design/imagery-and-ai-editing.md]] |
 | aus Grundformen zusammengesetzte SVG-Illustration | Platzhalteranmutung | echte Illustration, Foto oder nichts |
 | Foto unter einer fast deckenden Farbfläche | das ausgelieferte Bild ist unsichtbar | Bild zeigen oder entfernen |
+| Foto, das über einen Verlauf in den Seitengrund ausläuft | der Übergang wirkt weich gemeint und billig gemacht; das Bild verliert seine Kante | harte Sperre S4 |
 | leere `src`-Attribute und Platzhalterkästen | ausgelieferter Fehler | reales oder erzeugtes Bild einsetzen |
 
 ### Copy
@@ -197,7 +215,10 @@ Die Signaturen in diesem Abschnitt sind aus zwei öffentlich dokumentierten Must
 ## Erkennungsfragen
 
 - Könnte der Text unverändert zu zehn anderen Produkten passen?
-- Steht über einer Überschrift eine Zeile, die nur wiederholt, was die Überschrift sagt?
+- Steht über irgendeiner Überschrift eine kurze Zeile, gleich was sie sagt?
+- Ist in irgendeiner Überschrift ein Teil anders gefärbt, kursiv oder anders gesetzt?
+- Besteht der Satz des Auftakts den [[20-design/qualitaetsraster.md#Namenstausch-Test]]?
+- Sieht die Startseite neben den Benchmarks ihrer Gattung aus wie eine von ihnen, siehe [[20-design/qualitaetsraster.md#Benchmarkvergleich]]?
 - Ist eine Sektion vorhanden, weil Nutzer sie brauchen oder weil ein Generator sie erwartet?
 - Gibt es mehr visuelle Effekte als belastbare Beweise?
 - Wiederholt sich dieselbe Kartenform ohne Informationsgrund?
@@ -224,9 +245,9 @@ Verbindlich für **jede** gebaute Website, unabhängig davon, wie viele Websites
 
 Er setzt den abgeschlossenen [[20-design/visual-iteration-loop.md]] voraus und ersetzt ihn nicht: Der Loop bringt die Fassung auf Qualität, dieser Review prüft sie gegen den Befundkatalog. Ein Review auf einer Fassung, die noch keine drei Durchgänge hinter sich hat, findet Befunde, die der Loop selbst beseitigt hätte, und verbraucht dafür die teurere Prüfrunde.
 
-1. Website vollständig bauen und lokal starten.
+1. Website vollständig bauen und lokal starten. `qa.sh` mit der Prüfung der [[#Harte Sperren]] muss vorher ohne Sperre durchlaufen; ein Review auf einer Fassung mit Sperren ist verschwendet.
 2. Impeccable nach [[00-start/04-plugins-and-skills.md]] im Review-Modus auf die reale, laufende Website anwenden, nicht auf Entwürfe oder Beschreibungen.
-3. Gezielt nach Details suchen, die nach KI-Generat aussehen: redundante Kicker über Überschriften, immer gleiche Sektionsanordnung, austauschbare Copy, dekorative Karten, Standardfarben ohne Markenbezug, Verläufe ohne Grund, gleichförmige Hover-Effekte, erfundene Belege, Füllsätze, Symmetrie ohne Absicht, generische Icons.
+3. Gezielt nach Details suchen, die nach KI-Generat aussehen: die Sperren S6 und S7, die keine Maschine findet, immer gleiche Sektionsanordnung, austauschbare Copy, dekorative Karten, Standardfarben ohne Markenbezug, Verläufe ohne Grund, gleichförmige Hover-Effekte, erfundene Belege, Füllsätze, Symmetrie ohne Absicht, generische Icons.
 4. Die Prüffragen aus [[10-strategy/website-copy.md#Prüffragen vor der Abnahme]] auf jeden sichtbaren Text der Website anwenden, einschließlich Karten, Formularhilfen und Fußzeile.
 5. Jeden Befund entweder korrigieren oder mit inhaltlicher Begründung im Decision Log festhalten. „Gefällt mir so“ ist keine Begründung.
 6. Ergebnis mit Datum, geprüfter Website, Befundliste und Umsetzungsstand im Projekt dokumentieren. Ohne diesen Nachweis ist Gate `G1` in [[70-qa/quality-gates.md]] nicht erfüllt.
@@ -236,7 +257,7 @@ Bei mehreren Websites wird der Review je Website getrennt geführt. Ein gemeinsa
 ## Reparatur
 
 1. Eine klare Nutzenbotschaft und ein Markenkonzept festlegen.
-2. Redundante Kicker entfernen; echte Metainformation behalten und in eine klare Hierarchie bringen.
+2. Dachzeilen, Nummernmarken und Teilauszeichnungen entfernen; die Information nach [[#Kicker und Überschriften]] umsetzen.
 3. Unbelegte und redundante Sektionen löschen.
 4. Tokens vereinheitlichen.
 5. Produkt, Prozess oder echte Arbeit zeigen.

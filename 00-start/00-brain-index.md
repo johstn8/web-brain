@@ -1,7 +1,7 @@
 ---
 type: index
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 ---
 
 # Brain Index
@@ -16,15 +16,16 @@ Für Menschen: [[START-HIER.md]].
 4. Verbindlicher Ablauf: [[00-start/05-web-product-workflow.md]]. Zuerst die Bahn wählen: die [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane|Fast Lane]] ist der Standard
 5. Website-Auftrag: der Skill `web-build` faehrt die Fast Lane, siehe [[00-start/04-plugins-and-skills.md#Web Build]]. Von Hand: zuerst `../projekte/<Projektname>/` samt `PROJECT.md`, Inventaren und eigenem Release-Readiness-Register je Website anlegen, danach die im Auftrag verlangte Anzahl vollständiger Websites mit Unterseiten, passendem Motion-Budget, SEO und umgebungsgerechtem Zugriff bauen. Ohne Angabe im Auftrag genau eine Website, siehe [[00-start/05-web-product-workflow.md#Anzahl der Websites]]
 6. Bei jeder UI: Leitbenchmark aus [[20-design/interface-benchmarks.md]] wählen; UI UX Pro Max nutzen, wenn verfügbar, sonst die Ersatzstrecke aus [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]]
-7. Startseite oder Landing Page: [[20-design/landing-page-craft.md]] vor der ersten Zeile UI-Code lesen
-8. Sobald UI gebaut wird: [[20-design/visual-iteration-loop.md]] — Auftaktfassungen bauen, dann iterieren am Render
-9. Neues Projekt spezifizieren: [[80-templates/project-intake.md]] und [[80-templates/project-master-spec.md]]
-10. Abschluss: [[70-qa/quality-gates.md]]
+7. Vor jedem Entwurf: Gattungsvergleich nach [[90-references/reference-research-workflow.md#Gattungsvergleich]] mit dem [[20-design/qualitaetsraster.md]]; die [[20-design/anti-ai-slop.md#Harte Sperren]] kennen
+8. Startseite oder Landing Page: [[20-design/landing-page-craft.md]] vor der ersten Zeile UI-Code lesen, zuerst die Gattungsregeln
+9. Sobald UI gebaut wird: [[20-design/visual-iteration-loop.md]] — Auftaktfassungen bauen, dann iterieren am Render, zum Schluss der Benchmarkvergleich
+10. Neues Projekt spezifizieren: [[80-templates/project-intake.md]] und [[80-templates/project-master-spec.md]]
+11. Abschluss: [[70-qa/quality-gates.md]]
 
 ## Kanonische Bereiche
 
 - Strategie: [[10-strategy/discovery-and-scope.md]], [[10-strategy/existing-website-rebuild.md]], [[10-strategy/information-architecture-and-sitemap.md]], [[10-strategy/content-and-conversion.md]], [[10-strategy/website-copy.md]], [[10-strategy/information-density-and-mobile-clarity.md]]
-- Design: [[20-design/interface-benchmarks.md]], [[20-design/design-systems-und-artefakte.md]], [[20-design/design-direction.md]], [[20-design/landing-page-craft.md]], [[20-design/visual-iteration-loop.md]], [[20-design/color-system.md]], [[20-design/typography-layout-and-spacing.md]], [[20-design/imagery-and-ai-editing.md]], [[20-design/responsive-design.md]], [[20-design/motion-and-interaction.md]], [[20-design/anti-ai-slop.md]]
+- Design: [[20-design/interface-benchmarks.md]], [[20-design/design-systems-und-artefakte.md]], [[20-design/design-direction.md]], [[20-design/landing-page-craft.md]], [[20-design/qualitaetsraster.md]], [[20-design/visual-iteration-loop.md]], [[20-design/color-system.md]], [[20-design/typography-layout-and-spacing.md]], [[20-design/imagery-and-ai-editing.md]], [[20-design/responsive-design.md]], [[20-design/motion-and-interaction.md]], [[20-design/anti-ai-slop.md]]
 - Frontend: [[30-frontend/stack.md]], [[30-frontend/web-kit.md]], [[30-frontend/architecture-and-code-consistency.md]], [[30-frontend/components-and-ui-states.md]], [[30-frontend/accessibility.md]], [[30-frontend/performance.md]], [[30-frontend/seo-and-discoverability.md]]
 - Backend und Sicherheit: [[40-backend-security/security-baseline.md]], [[40-backend-security/authentication-and-accounts.md]], [[40-backend-security/data-apis-and-billing.md]]
 - Recht: [[50-legal/legal-decision-tree.md]], [[50-legal/privacy-and-consent.md]], [[50-legal/assets-copyright-and-licenses.md]]

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 impacts:
   - design-tokens
   - components
@@ -30,6 +30,16 @@ Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertra
 - Displayschriften mit starkem Eigencharakter erhalten die Rollen, in denen ihr Rhythmus und ihre Lesbarkeit funktionieren. Sie sind nicht pauschal auf eine einzige Stufe begrenzt.
 - Die gewählte Familie muss mindestens Regular, Medium und Semibold sowie Ziffern in Tabellenform anbieten. Fehlt das, ist sie für Produkt-UI ungeeignet.
 - Herkunft, Version, Lizenz und Downloaddatum jeder Schrift gehören in das [[80-templates/asset-register.md]].
+
+### Sperrliste
+
+Diese Familien sind die Trainingsdaten-Defaults generierter Oberflächen. Sie werden nicht gewählt, auch nicht, wenn ein Preset, ein Skill oder eine Referenz sie vorschlägt:[^impeccablefonts]
+
+Inter, Roboto, Open Sans, Lato, Montserrat, Arial und Helvetica ohne Begründung, Fraunces, Instrument Sans, Instrument Serif, Geist, Mona Sans, Plus Jakarta Sans, Space Grotesk, Space Mono, Recoleta, Playfair Display, Cormorant, Lora, Crimson, Newsreader, Syne, IBM Plex, DM Sans, DM Serif, Outfit.
+
+- **Die Prüfung gegen diese Liste findet vor dem Design Contract statt**, nicht im Review. Wer eine Familie aus einem Kit-Preset übernimmt, prüft sie trotzdem: Bis 2026-10-02 schlugen drei der fünf Presets eine gesperrte Familie vor, und eine Fassung wurde damit gebaut, bevor der Fehler auffiel.
+- **Die Sperrliste steht über jeder Preset-Empfehlung.** Ein Preset liefert Rollen und Grammatik, nicht das letzte Wort über die Familie.
+- Ersatz wird am Bild gewählt: zwei bis drei Kandidaten mit der echten Auftaktzeile nebeneinander rendern, dann entscheiden. Breite und Grauwert ändern sich mit der Familie; Stufen und Gewichte werden danach nachgezogen.
 
 ## Typografie
 
@@ -126,3 +136,5 @@ Fontshare bietet freie Fonts, doch Lizenzbedingungen je Familie und Downloadzeit
 [^fontshare]: [Fontshare](https://fontshare.com/)
 
 [^hanging]: [CreativePro: Hung Punctuation und Optical Margin Alignment](https://creativepro.com/typetalk-hung-punctuation-optical-margin-alignment/). Geprüft am 3. September 2026.
+
+[^impeccablefonts]: [Impeccable: Slop](https://impeccable.style/slop/) und die lokal installierte Fassung in `shared-agent-skills/impeccable/scripts/detector/shared/constants.mjs` (`OVERUSED_FONTS`) sowie `shared-agent-skills/impeccable/reference/new-work.md`. Geprüft am 2. Oktober 2026.

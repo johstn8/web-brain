@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-27
+updated: 2026-10-02
 review_by: 2027-02-27
 depends_on:
   - "[[90-references/reference-research-workflow.md]]"
@@ -18,7 +18,7 @@ impacts:
 
 Dies ist der **aktive Auswahlpool für die eine externe Leitreferenz eines Mehrfachauftrags**. Bei einer einzelnen Website wird er nicht pflichtweise nach einer Vorlage durchsucht; sie entsteht nach [[90-references/reference-research-workflow.md]] als Eigenentwurf, sofern der Nutzer keine Referenz vorgibt. Jeder Eintrag führt unmittelbar zu einer konkreten Website. Galerie-, Award-, Stilbibliotheks- und Sammelseiten sind keine auswählbaren Leitreferenzen; sie dienten nur der Entdeckung und sind deshalb ausschließlich als Herkunftsnachweise in den Fußnoten erhalten.[^refero][^curated][^lapa][^awwwards][^cssda]
 
-Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Vor der Wahl wird die aktuelle Live-Fassung im Browser geprüft. Negative, generierte oder nicht direkt aufrufbare Beispiele verbleiben im [[90-references/inspiration-catalog.md]], gehören aber nicht in diesen Pool.
+Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Einträge mit einem Rasterwert sind nach dem [[20-design/qualitaetsraster.md]] bewertet und dienen als Benchmarks im [[90-references/reference-research-workflow.md#Gattungsvergleich]]. **Neue Einträge kommen nur nach Freigabe durch den Nutzer in den Pool**; Vorschläge liegen bis dahin als Rechercheevidenz unter `.research/screenshots/`. Vor der Wahl wird die aktuelle Live-Fassung im Browser geprüft. Negative, generierte oder nicht direkt aufrufbare Beispiele verbleiben im [[90-references/inspiration-catalog.md]], gehören aber nicht in diesen Pool.
 
 ## Lokale Dienstleistungen, Beratung und Recruiting
 
@@ -59,6 +59,19 @@ Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Vor der Wahl wird die
 | [Thomas Stockham](https://www.tstockham.com/) | Entwickler, Portfolio | präzise, systemisch | mittel |
 
 ## Gastronomie, Hotellerie, Reisen und Genuss
+
+### Bewertete Benchmarks
+
+Vom Nutzer am 2. Oktober 2026 als gut benannt, danach nach dem Raster bewertet. Aufnahmen unter `.research/screenshots/gastronomie-2026-10-02/`.
+
+| Konkrete Website | Raster | Einstufung | Was sie zeigt | Was nicht übernommen wird |
+|---|---:|---|---|---|
+| [MINE Restaurant, Berlin](https://minerestaurant.de/) | 18 | Benchmark | Der Auftakt der Gattung: Video der Gäste im Raum über die volle Höhe, ein Satz mit Haltung und Ort, darunter Zeiten, letzte Bestellung und Adresse als Band, „Tisch reservieren" als einzige starke Aktion in der Kopfzeile. Besteht `check-slop.ts` ohne Sperre. | der Ankündigungsstreifen über der Kopfzeile; die Michelin-Plakette nur, weil sie real ist |
+| [Lagalante, Berlin](https://lagalante-restaurant.de/) | 15 | gut mit Mängeln | Freigestellte Teller auf Weiß als durchgehende Serie, ein Porträt des Kochs in Schwarzweiß, handgezeichnete Wortmarke, asymmetrisch gestreute Bilder in wechselnder Größe. | die Textwand auf Mobil, das blasse Riesenwort „MENU" hinter der Karte, die englische Reservierungsaktion neben deutscher Navigation |
+
+Weitere Kandidaten aus dem Gattungsvergleich vom 2. Oktober 2026 sind bewertet und dem Nutzer zur Aufnahme vorgeschlagen; bis zur Entscheidung stehen sie nur im Screenshot-Manifest.
+
+### Weitere Einträge, unbewertet
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|

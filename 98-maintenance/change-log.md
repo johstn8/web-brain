@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 ---
 
 # Change Log
@@ -12,6 +12,31 @@ updated: 2026-09-19
 > Ein Change-Log-Eintrag ist keine Abschlussbedingung mehr. Das Aenderungsprotokoll des Vaults ist die Commit-Historie; die Commit-Konvention aus `AGENTS.md` verlangt eine Betreffzeile, die die kanonische Aenderung benennt, und einen Body mit der Begruendung. Ein Eintrag hier entsteht nur noch fuer Entscheidungen, deren Begruendung laenger lebt als der Diff: eine gekippte Regel, eine verworfene Alternative, eine Recherchebasis.
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
+
+## 2026-10-02 — Harte Sperren, Gattungsregel und Gattungsvergleich: Regeln ohne Begründungsweg
+
+Auslöser war die Durchsicht der vier Fassungen der Trattoria Alberto durch den Nutzer. Alle vier hatten Kontrast, Rhythmus, Zustände, axe und Lighthouse bestanden. Sein Urteil: Nur der Auftakt von `01-sala` ist für eine Trattoria überhaupt ansehnlich, und alle vier wirken generiert. Benannt hat er kleine Dachzeilen über Überschriften wie „Cucina Italiana · seit 2002 in Berlin-Kladow", ein Wort der Überschrift in anderer Farbe und kursiv, Blöcke, die alle gleich aussehen, und den Farbübergang am Auftaktbild. Als Gegenbeispiele nannte er drei Berliner Restaurantseiten, eine davon ausdrücklich als schwach.
+
+**Diagnose: Die Regeln existierten, aber jede hatte einen Ausweg.**
+
+1. **Begründungsweg.** Der Slop-Katalog war als „Befund, kein Verbot" formuliert; wer ein Merkmal begründet, hält den Grund fest. Kicker waren erlaubt, wenn sie „echte Metainformation" tragen, Ziffern, wenn sie „Orientierung stiften", und das Signaturdetail durfte ausdrücklich eine Ziffernlogik sein. In jeder Fassung fand sich ein wahrer Satz als Begründung.
+2. **Lücke im Katalog.** Die Teilauszeichnung einer Überschrift durch Farbe und Kursive stand nirgends.
+3. **Lücke in der Strecke.** Die Fast Lane und der Skill `web-build` riefen den Anti-Slop-Katalog nicht auf; `G1` erlaubte, ihn „manuell durchzugehen".
+4. **Pflicht zum Signaturdetail.** Ein Modell, das ein Detail erfinden muss, greift zu Linien, Ziffern und Beschriftungen.
+5. **Kein Blick auf die Gattung.** Bei einer einzelnen Website war Referenzrecherche ausdrücklich nicht vorgesehen. Die Review-Queue nannte genau diesen Fall seit dem 11. September als Auslöser.
+6. **Das Kit selbst.** Der Baustein `Gestapelt` lieferte eine Versal-Ortszeile über der H1 aus, und drei der fünf Presets schlugen eine Schrift von der Sperrliste vor.
+7. **Freie Komposition.** Das Auftakt-Repertoire war „Entscheidungsraum, keine Rangfolge"; für ein Restaurant wurden Typo-, Index- und Kontaktauftakt gebaut, die der Nutzer alle verwarf.
+
+**Kanonisch neu**
+
+- [[20-design/anti-ai-slop.md#Harte Sperren]]: sieben Sperren ohne Begründungsweg, S1 bis S5 maschinell gemessen von `web-kit/scripts/check-slop.ts` in jedem `qa.sh`, nicht abwählbar. Geeicht an realen Seiten: die Benchmarks bestehen, die schwache Referenzseite und alle vier Trattoria-Fassungen fallen genau an den kritisierten Stellen durch.
+- [[20-design/qualitaetsraster.md]], neue Notiz: zehn Kriterien am Bild, Namenstausch-Test, Gattungsvergleich und Benchmarkvergleich mit Schwelle 16 von 20.
+- [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]]: Gastronomie erhält das randlose Leitbild, im Kit als `blocks/auftakt/Leitbild.astro`. [[20-design/landing-page-craft.md#Sektionsrhythmus]]: keine zwei gleich gebauten Sektionen in Folge. Das Signaturdetail ist nicht mehr Pflicht.
+- [[90-references/reference-research-workflow.md#Gattungsvergleich]]: Pflicht für jede Website, auch eine einzelne; eine Einzelwebsite darf höchstens eine Benchmark als Leitreferenz nutzen. Neue Benchmarks kommen nur nach Freigabe durch den Nutzer in den Pool.
+- [[20-design/typography-layout-and-spacing.md#Sperrliste]] als kanonische Liste; Presets `tisch`, `praxis` und `atelier` im Kit korrigiert.
+- [[70-qa/quality-gates.md]]: Kernprüfung von fünf auf acht Punkte, die neuen drei gelten auch in der Fast Lane.
+
+**Bewusst nicht geändert:** die vier Fassungen der Trattoria Alberto. Sie stehen als interne Negativbeispiele im [[90-references/inspiration-catalog.md#Gastronomie: Negativbeispiele]].
 
 ## 2026-09-11 — Der Render wird Arbeitsmittel: Visual Iteration Loop als kanonische Notiz
 

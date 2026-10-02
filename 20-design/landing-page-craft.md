@@ -1,13 +1,14 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-11
+updated: 2026-10-02
 sources_checked: 2026-09-03
 review_by: 2027-03-01
 depends_on:
   - "[[20-design/design-direction.md]]"
   - "[[10-strategy/information-density-and-mobile-clarity.md]]"
   - "[[20-design/interface-benchmarks.md]]"
+  - "[[20-design/qualitaetsraster.md]]"
 impacts:
   - "[[20-design/anti-ai-slop.md]]"
   - "[[20-design/design-direction.md]]"
@@ -19,7 +20,7 @@ impacts:
 # Landing Page Craft
 
 > [!important] Rang
-> Diese Notiz ist der kanonische Besitzer für Aufbau, Auftaktkomposition, Überschriftenanordnung, Kopfzeilenrolle, Beweisreihenfolge und Handlungsdichte der Startseite beziehungsweise Landing Page sowie für die konkrete Abgrenzung zwischen professioneller und generierter Anmutung an dieser Seite.
+> Diese Notiz ist der kanonische Besitzer für Aufbau, Auftaktkomposition einschließlich der Gattungsregeln, Sektionsrhythmus, Überschriftenanordnung, Kopfzeilenrolle, Beweisreihenfolge und Handlungsdichte der Startseite beziehungsweise Landing Page sowie für die konkrete Abgrenzung zwischen professioneller und generierter Anmutung an dieser Seite.
 > Angrenzende Besitzer bleiben unverändert: [[20-design/design-direction.md]] für die Art Direction der gesamten Website, [[10-strategy/information-density-and-mobile-clarity.md]] für Informationsmenge und Textbudget, [[10-strategy/website-copy.md]] für Formulierung, [[10-strategy/content-and-conversion.md]] für Kernbotschaft und Beweis-Hierarchie, [[30-frontend/components-and-ui-states.md]] für Kopfzeilengeometrie und Komponentenverträge, [[20-design/anti-ai-slop.md]] für den vollständigen Befundkatalog.
 
 ## Warum diese Seite eine eigene Notiz hat
@@ -73,7 +74,7 @@ Ein Auftakt besteht nicht aus Blöcken, sondern aus Rollen. Jede Rolle muss bese
 | Einordnung | Für wen, wo, unter welcher Bedingung | Lead, Faktenzeile, Bildunterschrift, Metazeile |
 | Beweisanker | Woran sehe ich, dass es stimmt | reales Objekt, Ort, Arbeit, Oberfläche, Rechner, Ablauf, Dokument |
 | Handlung | Was tue ich jetzt | primäre Aktion, gegebenenfalls eine klar andersartige zweite |
-| Fortschritt | Geht es weiter, und wohin | angeschnittene Folgesektion, Kapitelmarke, Faktenband, Sprungziel |
+| Fortschritt | Geht es weiter, und wohin | angeschnittene Folgesektion, Faktenband, Bildkante, Sprungziel |
 
 Die Rolle `Beweisanker` ist die, die in generierten Auftakten fast immer fehlt. Stimmung, große Schrift und leere Fläche besetzen sie nicht. Ein Bild besetzt sie nur dann, wenn darauf tatsächlich der Gegenstand des Betriebs zu sehen ist.
 
@@ -81,7 +82,7 @@ Die Rolle `Fortschritt` ist die, die am zweithäufigsten fehlt. Ein Auftakt, der
 
 ## Auftakt-Repertoire
 
-Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein Entscheidungsraum, keine Rangfolge. Genau eine Komposition wird gewählt und im Design Contract begründet. Die Wahl entsteht nicht gedanklich, sondern am Bild: Zwei bis drei Kompositionen aus dieser Liste werden mit denselben realen Inhalten tatsächlich gebaut und nebeneinander beurteilt, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
+Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein Entscheidungsraum, keine Rangfolge — **außer dort, wo eine [[#Gattungsregeln für den Auftakt|Gattungsregel]] die Komposition festlegt.** Genau eine Komposition wird gewählt und im Design Contract begründet. Die Wahl entsteht nicht gedanklich, sondern am Bild: Zwei bis drei Kompositionen aus dieser Liste werden mit denselben realen Inhalten tatsächlich gebaut und nebeneinander beurteilt, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
 
 | Komposition | Wie sie funktioniert | Passt zu | Woran sie scheitert |
 |---|---|---|---|
@@ -90,13 +91,36 @@ Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein E
 | **Typo-Auftakt mit Faktenspur** | keine Bildfläche, dafür Überschrift plus eine Zeile echter Fakten wie Ort, Zeitraum, Preisrahmen, Kapazität | Dienstleistung ohne gutes Bildmaterial, B2B, Beratung | Übergröße ohne Fakten, dann bleibt nur Dekoration |
 | **Werkzeug zuerst** | Rechner, Suchfeld, Konfigurator, Verfügbarkeitsprüfung steht im Auftakt und ist sofort bedienbar | Verzeichnis, Buchung, Preisfindung, Auswahl | ein Modul ohne reale Daten, oder eines, das nur so aussieht |
 | **Beweis zuerst** | eine abgeschlossene Arbeit, ein Objekt oder eine Oberfläche steht groß, die Überschrift steht als Bildunterschrift darunter | Portfolio, Handwerk, Fallstudien | die Arbeit ist nicht selbsterklärend und trägt keine Einordnung |
-| **Index-Auftakt** | eine redaktionelle Liste, Tabelle oder Karte ist selbst der Auftakt | Katalog, Archiv, Programm, Speisekarte | ein Index ohne Filter, Sortierung oder Zustände |
+| **Index-Auftakt** | eine redaktionelle Liste, Tabelle oder Karte ist selbst der Auftakt | Katalog, Archiv, Programm; für die Startseite einer Gastronomie nicht, dort greift die Gattungsregel | ein Index ohne Filter, Sortierung oder Zustände |
 | **Ortsfeste Bühne** | ein Medium bleibt stehen, der Text wechselt beim Scrollen | Produktkampagne mit mehreren gleichwertigen Aussagen | mehr als drei Wechsel, kein Fortschrittsgefühl, kein Reduced-Motion-Weg |
 | **Kontaktauftakt** | Ort, Zeiten, Weg und Kontaktweg stehen bereits im Auftakt, gestaltet und nicht als Fußnote | lokale Dienste, deren häufigste Aufgabe der Kontakt ist | Kontaktdaten ohne Angebot, dann fehlt die Antwort auf die erste Frage |
 | **Materialfläche** | eine kräftige, aus Marke oder Material hergeleitete Farb- oder Materialfläche ersetzt das Bild | Marken mit starker Farbherkunft, fehlendem Bildmaterial | eine Farbfläche ohne Herleitung, dann ist sie ein Verlauf mit anderen Mitteln |
 | **Ruhiger Mittelsatz** | mittig gesetzter Titel, Unterzeile, eine Aktion, sehr viel Ruhe | Angebote, deren Wert gerade in Zurückhaltung liegt | wenn er ungeprüfter Default ist statt einer Entscheidung. Diese Komposition ist erlaubt und muss ausdrücklich begründet werden, weil sie zugleich die häufigste generierte Form ist |
 
 **Novelty Budget bleibt gültig.** Höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt, siehe [[20-design/design-direction.md#Premium-Heuristik]].
+
+## Gattungsregeln für den Auftakt
+
+Für manche Gattungen gibt es eine Komposition, die so viel besser funktioniert als alle anderen, dass die Wahl entfällt. Dort ist sie **gesetzt**; eine andere Komposition braucht einen ausdrücklichen Wunsch des Nutzers. Die übrigen Gattungen wählen weiter frei aus dem Repertoire.
+
+| Gattung | Gesetzte Komposition | Belegt durch |
+|---|---|---|
+| **Gastronomie**: Restaurant, Trattoria, Pizzeria, Café, Bar, Weinbar, Biergarten, Hotelrestaurant | **Randloses Leitbild** in der Ausprägung unten | Entscheidung des Nutzers vom 2026-10-02 nach Durchsicht von vier Fassungen; Gattungsvergleich mit zwanzig Restaurantseiten, siehe [[90-references/website-reference-pool.md#Gastronomie, Hotellerie, Reisen und Genuss]] |
+
+**Das Leitbild der Gastronomie** besteht aus genau diesen Teilen:
+
+1. **Ein Foto oder Video über die volle erste Bildschirmhöhe**, randlos. Es zeigt den Raum in Betrieb, Menschen am Tisch, die Küche bei der Arbeit oder ein Gericht in Nahaufnahme. Kein Bild der Fassade, kein leerer Raum, keine Collage, kein Karussell.
+2. **Die H1 liegt auf dem Bild**, in einer Farbe und einem Schnitt, als Name des Hauses oder als ein Satz, der den [[20-design/qualitaetsraster.md#Namenstausch-Test]] besteht. Darüber steht nichts, siehe [[20-design/anti-ai-slop.md#Harte Sperren]].
+3. **Höchstens ein weiterer kurzer Satz.** Alles Weitere gehört in die nächste Sektion.
+4. **Ein Band mit den praktischen Angaben** am unteren Rand des Auftakts: Öffnungszeiten, Adresse, Telefon. Deckende Fläche, Beschriftung in Satzschreibung, auf 375 Pixel zweispaltig, damit das Band in der ersten Bildschirmhöhe bleibt.
+5. **Eine Handlung**: Reservieren oder Anrufen, in der Kopfzeile dauerhaft sichtbar; im Bild höchstens dieselbe Handlung noch einmal, nie eine zweite daneben.
+6. **Ein gleichmäßiger Schleier** nur so stark, wie der gemessene Kontrast es verlangt, oder Text in einer ruhigen Bildzone. Kein Verlauf, der das Bild ausblendet; das Bild endet unten an der harten Kante des Bandes.
+
+Das Kit liefert diese Komposition als Baustein `blocks/auftakt/Leitbild.astro`, siehe [[30-frontend/web-kit.md]]. Das Auftaktfeld vergleicht in dieser Gattung keine Kompositionen, sondern Ausprägungen desselben Leitbilds, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
+
+**Ohne gutes Bildmaterial bleibt die Regel bestehen.** Gebaut wird mit dem besten verfügbaren Foto, bearbeitet nach [[20-design/imagery-and-ai-editing.md]]; das Fotoshooting wird als `P1` im Release-Readiness-Register vermerkt, siehe [[20-design/qualitaetsraster.md#Bildmaterial als Engpass]]. Ein Ausweichen auf Typo-Auftakt, Kontaktauftakt oder Index-Auftakt ist für Gastronomie keine Lösung des Bildproblems; diese Fassungen wurden gebaut und vom Nutzer verworfen.
+
+Weitere Gattungen erhalten eine Zeile in dieser Tabelle, sobald ein Gattungsvergleich und eine Nutzerentscheidung dafür vorliegen.
 
 ## Überschriften: Ort, Maßstab, Beziehung
 
@@ -106,13 +130,28 @@ Die Anordnung der Überschriften entscheidet mehr über die Anmutung als die Sch
 
 - Die semantische H1 ist der Anker der Auftaktkomposition, nicht ihre Überschrift. Sie steht dort, wo sie mit dem Beweisanker in Beziehung tritt: über ihm, neben ihm, unter ihm als Bildunterschrift, in ihn hineinragend oder um ihn herum gesetzt.
 - **Zwei bis drei verschiedene Überschriftenanordnungen pro Landing Page.** Eine einzige wiederholte Anordnung wirkt generiert, mehr als drei wirken zufällig. Die Auswahl wird im Design Contract genannt.
-- Die Anordnung folgt der Aufgabe des Abschnitts: erklärende Abschnitte vertragen die Überschrift seitlich, zählbare Abschnitte vertragen Ziffer und Wort in derselben Zeile, medienführende Abschnitte vertragen die Überschrift als Bildunterschrift, Zäsuren vertragen eine Überschrift zwischen zwei Blöcken.
+- Die Anordnung folgt der Aufgabe des Abschnitts: erklärende Abschnitte vertragen die Überschrift seitlich, medienführende Abschnitte vertragen die Überschrift als Bildunterschrift oder auf dem Bild, Zäsuren vertragen eine Überschrift zwischen zwei Blöcken. Sektionsziffern sind keine Anordnung, sondern eine harte Sperre, siehe [[20-design/anti-ai-slop.md#Harte Sperren]] S2.
 - Der Abstand über einer Überschrift ist größer als der Abstand darunter. Eine Überschrift, die näher am vorangehenden Block steht als an ihrem eigenen Inhalt, zerstört den Lesefluss.
 - Der Größenabstand zwischen zwei Stufen beträgt mindestens den Faktor 1,25. Stufen, die sich um wenige Pixel unterscheiden, erzeugen keine Hierarchie, sondern Unschärfe.
 - Sektionsüberschriften dürfen typografisch groß, gebrochen, überlappend oder mit einem Medium verschränkt sein. Die einzige semantische H1 bleibt vollständig lesbar; Anschnitt ist ausschließlich an einem dekorativen Duplikat zulässig.
-- Der Kicker über der Überschrift ist ein Befund, sobald er die Überschrift wiederholt oder mechanisch auf jedem Abschnitt erscheint. Echte Rubrik-, Datums-, Status- oder Prozessinformation darf eine eigene Stufe erhalten. Kanonisch in [[20-design/anti-ai-slop.md#Kicker und Überschriften]].
+- Über einer Überschrift steht nichts. Dachzeile und Teilauszeichnung sind harte Sperren, siehe [[20-design/anti-ai-slop.md#Harte Sperren]] S1 und S3; wohin die Information stattdessen geht, steht in [[20-design/anti-ai-slop.md#Kicker und Überschriften]].
 
 Der Katalog der beobachteten Anordnungen mit ihren Belegen steht in [[90-references/derived-design-patterns.md#Anordnung von Überschriften]].
+
+## Sektionsrhythmus
+
+Die häufigste Kritik an gebauten Startseiten nach dem Auftakt lautet: **Die Blöcke sehen alle gleich aus.** Das entsteht, wenn jede Sektion aus derselben Form gebaut wird, etwa Überschrift links, Inhalt rechts, gleiche Fläche, gleiche Breite, und nur der Text wechselt. Jede einzelne Sektion ist dann korrekt, die Seite ist trotzdem monoton.
+
+Regeln für die Startseite:
+
+- **Keine zwei Sektionen hintereinander mit derselben Anordnung.** Drei in Folge sind eine harte Sperre und werden von `check-slop.ts` gemessen, siehe [[20-design/anti-ai-slop.md#Harte Sperren]] S5.
+- **Maßstab wechseln, nicht nur Inhalt.** Ein Wechsel zwischen vollbreitem Bild, Bild-Text-Paar, reinem Text in schmaler Spalte und einer dichten Liste ist ein Rhythmus; derselbe Zweispalter mit anderem Text ist keiner.
+- **Bildgrößen wechseln.** Mindestens drei verschiedene Bildmaßstäbe auf der Startseite einer bildfähigen Gattung: vollbreit, halbe Breite, Detail.
+- **In der Gastronomie trägt mindestens jede zweite Sektion ein Foto.** Eine Restaurantseite, die nach dem Auftakt aus Text auf dunkler Fläche besteht, verschenkt ihr stärkstes Mittel.
+- **Flächenwechsel sind ein Mittel, kein Rhythmus.** Ein Wechsel der Hintergrundfarbe ohne Wechsel der Anordnung macht aus gleichen Blöcken farbige gleiche Blöcke.
+- **Weniger Sektionen, jede anders**, ist besser als viele ähnliche. Die Benchmarks der Gastronomie kommen mit drei bis fünf Sektionen nach dem Auftakt aus, siehe [[20-design/qualitaetsraster.md#Was die Benchmarks gemeinsam haben]].
+
+Die Sektionsfolge wird vor dem Bau als Liste mit Anordnung und Bildmaßstab je Sektion in den Design Contract geschrieben, etwa „1 vollbreites Foto mit Satz, 2 Text schmal, 3 Bild rechts mit Liste links, 4 Raster aus drei Detailfotos". Steht dort zweimal hintereinander dieselbe Beschreibung, wird umgeplant, bevor gebaut wird.
 
 ## Die Kopfzeile auf der Landing Page
 
@@ -163,6 +202,9 @@ Der Unterschied liegt fast nie an einem einzelnen Element. Er liegt daran, ob ei
 | Copy | austauschbare Behauptungen, Buzzwords, Meta-Sätze | konkrete Fakten, ganze Sätze, Bedingungen nahe der Entscheidung |
 | Detail | einheitliche Rundung überall, Hairline plus weiter Schatten, seitlicher Farbbalken | eine dokumentierte Radius-, Rahmen- und Tiefengrammatik |
 | Zustände | nur der Ruhezustand ist gestaltet | Fokus, Laden, Fehler, Leer und Deaktiviert sind gestaltet |
+| Überschrift | Dachzeile darüber, ein Wort farbig und kursiv darin | eine Zeile, eine Farbe, ein Schnitt; die Aussage trägt |
+| Rhythmus | jede Sektion derselbe Zweispalter auf derselben Fläche | Anordnung und Bildmaßstab wechseln von Sektion zu Sektion |
+| Zurückhaltung | erfundene Details: Nummern, Linien, Plaketten, Zierwörter | das reale Material trägt, Gestaltungsmittel treten zurück |
 
 Der vollständige Katalog erkennbarer Einzelsignaturen steht in [[20-design/anti-ai-slop.md#Slop-Signaturen]]. Er wird bei jeder Landing Page durchgegangen.
 
@@ -170,11 +212,11 @@ Der vollständige Katalog erkennbarer Einzelsignaturen steht in [[20-design/anti
 
 ## Das Signaturdetail
 
-Jede Landing Page erhält genau ein wiedererkennbares gestalterisches Detail, das aus dem Projekt selbst stammt und auf den Unterseiten in ruhigerer Form wiederkehrt. Es ersetzt die Sammlung austauschbarer Effekte durch ein Motiv.
+Ein Signaturdetail ist **möglich, nicht verlangt**. Bis 2026-10-02 war es Pflicht, und die Pflicht hat Dekoration erzeugt: Ein Modell, das ein Detail erfinden muss, greift zu Linien, Ziffern und Beschriftungen, und genau diese stehen jetzt unter den [[20-design/anti-ai-slop.md#Harte Sperren]].
 
-Mögliche Träger: eine Maßlinie, eine Rasterkante, ein Schnittwinkel aus dem Logo, eine Materialkante, eine Ziffernlogik, eine wiederkehrende Bildbeschneidung, eine besondere Behandlung der Metazeile, eine Farbe, die ausschließlich an einer Stelle vorkommt.
+Wenn eine Website eines trägt, dann stammt es aus dem **realen Material** des Betriebs: eine Bildbeschneidung, die aus dem Logo kommt, die Handschrift von der Tafel, die Farbe des Schildes über dem Eingang, eine Fotografie, die nur dieses Haus hat. Es ist nie ein typografisches Ornament an Überschriften, nie eine Nummerierung, nie eine Metazeile und nie eine Linie mit Beschriftung.
 
-Bedingungen: Es leitet sich aus Marke, Material, Ort, Produkt oder Inhalt her. Es funktioniert auch bei 320 Pixel und bei reduzierter Bewegung. Es ist ein Detail und keine zweite Art Direction. Es steht im Design Contract mit Herleitung und Wiederholungsorten.
+Bedingungen: Es funktioniert bei 320 Pixel und bei reduzierter Bewegung, es ist ein Detail und keine zweite Art Direction, und es steht mit Herkunft im Design Contract. Fehlt ein solches Material, entfällt das Detail. Eine Seite ohne Signaturdetail ist keine schwächere Seite; eine Seite mit erfundenem ist eine generierte.
 
 ## Feinschliff, der zuerst auffällt
 
@@ -203,10 +245,14 @@ Diese Fragen werden je gebauter Landing Page am laufenden Build beantwortet und 
 8. Ist dies eine Seite mit einem Ziel oder mit mehreren, und passt das Kopfzeileninventar dazu?
 9. Welcher Beweis steht in den ersten zwei Bildschirmhöhen, und ist er die stärkste real verfügbare Form?
 10. Heißt die primäre Handlung überall gleich, und gibt es pro Bildschirmausschnitt genau eine?
-11. Welches Signaturdetail trägt die Seite, woher stammt es, und wo kehrt es wieder?
+11. Trägt die Seite ein Signaturdetail, und stammt es aus realem Material des Betriebs statt aus Typografie?
 12. Würde diese Startseite mit ausgetauschtem Logo für einen beliebigen anderen Betrieb derselben Branche funktionieren?
 13. Wie lange dauert es, bis das Auftaktmedium sichtbar ist?
 14. Welche Entscheidung dieser Seite steht nicht im Design Contract?
+15. Greift für diese Gattung eine [[#Gattungsregeln für den Auftakt|Gattungsregel]], und ist sie eingehalten?
+16. Sind zwei aufeinanderfolgende Sektionen gleich gebaut?
+17. Steht über irgendeiner Überschrift etwas, oder ist ein Teil einer Überschrift anders gesetzt?
+18. Wie schneidet die Startseite im [[20-design/qualitaetsraster.md#Benchmarkvergleich]] gegen die Benchmarks ihrer Gattung ab?
 
 [^google50]: [Google Research: Users love simple and familiar designs](https://research.google/blog/users-love-simple-and-familiar-designs-why-websites-need-to-make-a-great-first-impression/) sowie die zugrunde liegende Studie zu visueller Komplexität und Prototypikalität, [research.google/pubs](https://research.google.com/pubs/archive/38315.pdf). Geprüft am 3. September 2026.
 [^fivesecond]: [Lyssna: Five second testing guide](https://www.lyssna.com/guides/five-second-testing-guide/). Geprüft am 3. September 2026.

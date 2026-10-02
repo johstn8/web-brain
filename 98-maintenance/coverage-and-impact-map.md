@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 ---
 
 # Coverage and Impact Map
@@ -23,6 +23,10 @@ Diese Karte verhindert Teilupdates. Änderungen werden zuerst einem kanonischen 
 | Kopfzeile und Hauptnavigation | [[30-frontend/components-and-ui-states.md|Components and UI States]] | Information Architecture, Design Direction, Test Matrix, Quality Gates |
 | Art Direction als waehlbarer Ausgangspunkt statt Prosa | [[30-frontend/web-kit.md#Art-Direction-Presets\|web-kit]] | Typography, Color System, Design Direction, Anti AI Slop, Quality Gates |
 | generische KI-Anmutung und Kicker | [[20-design/anti-ai-slop.md|Anti AI Slop]] | Design Direction, Derived Design Patterns, Plugins and Skills, Quality Gates |
+| harte Sperren S1 bis S7 und ihre maschinelle Prüfung | [[20-design/anti-ai-slop.md#Harte Sperren\|Anti AI Slop]] | Core Rules, Landing Page Craft, Design Direction, Web Kit (`check-slop.ts`, `qa.sh`), Quality Gates, Web-Build-Skill, AI Build Prompt, Master Spec |
+| Qualitätsraster, Namenstausch-Test, Gattungsvergleich und Benchmarkvergleich | [[20-design/qualitaetsraster.md\|Qualitätsraster]] | Reference Research Workflow, Website Reference Pool, Inspiration Catalog, Visual Iteration Loop, Landing Page Craft, Core Rules, Web Product Workflow, Web-Build-Skill, Quality Gates, Master Spec |
+| Gattungsregeln für den Auftakt und Sektionsrhythmus | [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt\|Landing Page Craft]] | Visual Iteration Loop, Core Rules, Web Product Workflow, Web Kit (`blocks/auftakt/Leitbild.astro`), Web-Build-Skill, Quality Gates, Master Spec |
+| Sperrliste der Schriftfamilien | [[20-design/typography-layout-and-spacing.md#Sperrliste\|Typography Layout and Spacing]] | Web Kit (Presets), Web-Build-Skill, AI Build Prompt, Anti AI Slop |
 | Logo des Betriebs | [[20-design/design-direction.md|Design Direction]] | Existing Website Rebuild, Asset Register, Source and Rights Review, Quality Gates |
 | Landing-Page-Aufbau, Auftaktkomposition, Auftaktrollen, Kopfzeilenrolle der Startseite und Abgrenzung zur generierten Anmutung | [[20-design/landing-page-craft.md|Landing Page Craft]] | Design Direction, Anti AI Slop, Components and UI States, Typography, Information Density, Content and Conversion, Derived Design Patterns, Master Spec, AI Build Prompt, Quality Gates |
 | Arbeitsvorgang der visuellen Qualität: Auftaktfeld, Iterationsdurchgänge, Befundform, Abbruch und Rendernachweis | [[20-design/visual-iteration-loop.md\|Visual Iteration Loop]] | Landing Page Craft, Design Direction, Anti AI Slop, Plugins and Skills, Web Product Workflow, Core Rules, Routing Map, Brain Index, Test Matrix, Quality Gates |

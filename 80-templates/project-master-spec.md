@@ -1,7 +1,7 @@
 ---
 type: template
 status: canonical
-updated: 2026-09-19
+updated: 2026-10-02
 ---
 
 # Project Master Spec
@@ -64,11 +64,15 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Anordnung der Überschriften je Sektionsart, zwei bis drei verschiedene Anordnungen je Seite; Nachweis, dass H1, Inhaltsanker und primäre Handlung an den Prüfbreiten ohne Anschnitt, Überlagerung oder Kopfzeilenkollision lesbar sind:
 - Kopfzeilenrolle der Landing Page: Einzweckseite oder Unternehmensstartseite, gewählte Form aus [[30-frontend/components-and-ui-states.md#Kopfzeilen-Repertoire]], Höhenanteil auf 375 Pixel:
 - Abschnittsfolge der Landing Page mit der Nutzerfrage je Abschnitt, hergeleitet nach [[20-design/landing-page-craft.md#Es gibt keinen Standardaufbau, sondern eine Standardaufgabe]]:
-- Signaturdetail: Herleitung, konkrete Ausprägung und Wiederholungsorte auf den Unterseiten:
+- Sektionsfolge der Startseite: je Sektion Anordnung und Bildmaßstab nach [[20-design/landing-page-craft.md#Sektionsrhythmus]]:
+- Gattungsregel für den Auftakt nach [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]]: greift ja/nein, gesetzte Komposition oder zitierter Nutzerwunsch:
+- Signaturdetail, falls gesetzt: Herkunft aus realem Material, Ausprägung, Wiederholungsorte; sonst „keines":
+- Harte Sperren nach [[20-design/anti-ai-slop.md#Harte Sperren]]: Ergebnis von `check-slop.ts` je Route und Durchsicht von S6 und S7, Datum:
 - Durchgang durch [[20-design/anti-ai-slop.md#Slop-Signaturen]] mit Datum; bewusst eingesetzte Signaturen mit Begründung:
 - Kopfzeileninventar und -anordnung, Navigationsbeschriftung, Fußbereichsstruktur und sonstiges Seiten-Chrome:
 - Landing-Page-Haltung: wodurch entsteht Nutzwert und Interesse; was ist ausdrucksstark, was bleibt ruhig; wann beginnt innerhalb der ersten zwei Bildschirmhöhen die nächste Nutzerfrage oder der erste Beweis:
 - Firmenlogo: gefunden ja/nein, Quelle, sichtbarer Einsatzort je Website, Bearbeitungsschritte:
+- Gattungsvergleich nach [[90-references/reference-research-workflow.md#Gattungsvergleich]]: Ablage, bewertete Kandidaten mit Rasterpunkten, Benchmarks, Negativbeispiele, übertragbare Prinzipien in Sätzen:
 - Referenzmodus nach [[90-references/reference-research-workflow.md]]: `Eigenentwurf | nutzer-vorgegeben | ausgewählte Leitreferenz`:
 - Bei `Eigenentwurf`: Herleitung aus Projektwahrheit, Inhaltsanker, Leitbenchmark und Nutzerfragen; Bestätigung, dass keine externe Seite verdeckt als Vorlage dient:
 - Nur bei `ausgewählte Leitreferenz`: Referenz-Shortlist aus [[90-references/website-reference-pool.md]] mit mindestens drei plausiblen konkreten Live-Seiten, sofern vorhanden; je direkte URL, Passung und Entscheidung:
@@ -79,6 +83,7 @@ Dieser Unterabschnitt wird **für jede gebaute Website vollständig wiederholt**
 - Stilkachel `D0` nach [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]]: Pfad der gerenderten Kachel, Datum, Befunde und wie sie behoben wurden:
 - Auftaktfeld nach [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]]: die zwei bis drei tatsächlich gebauten Fassungen mit je gewählter Komposition, die gewählte Fassung, die verworfenen und der Grund der Wahl:
 - Visual Iteration Loop nach [[20-design/visual-iteration-loop.md#Pflichtdurchgänge]], je Durchgang `D1`, `D2`, `D3` und weitere: Datum, benannte Stopps, Befundliste mit Ort/Beobachtung/Änderung, vorgenommene Änderung:
+- Benchmarkvergleich nach [[20-design/qualitaetsraster.md#Benchmarkvergleich]]: Pfad des Bogens, Rasterpunkte der eigenen Startseite, die drei Antworten, Datum:
 - Impeccable KI-Detail-Review je gebauter Website: Datum, Befunde, Umsetzungsstand:
 - pen.dev: `use | skip`, Begründung, `.pen`-Pfade und Freigabestatus:
 - H0-Handwerksuntergrenze nach [[20-design/interface-benchmarks.md#H0 Handwerksuntergrenze]] und gewählte variable Stilparameter für Flächen, Radius, Rahmen, Tiefe, Karten, Kopfzeile, Zweitschrift und Motion:
