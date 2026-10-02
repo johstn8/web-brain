@@ -33,22 +33,22 @@ Ordner `gastronomie-2026-10-02/`, je Seite `<slug>--desktop.jpg` (Auftakt, 1200 
 | `minerestaurant--*` | [MINE, Berlin](https://minerestaurant.de/) | 18 | Benchmark, **im Pool** (vom Nutzer benannt) |
 | `lagalante--*` | [Lagalante, Berlin](https://lagalante-restaurant.de/) | 15 | gut mit Mängeln, **im Pool** (vom Nutzer benannt). Die Desktopaufnahme zeigt einen gescrollten Zustand und ist für den Auftakt `invalid` |
 | `impastorosso--*` | [Impasto Rosso, Berlin](https://impastorosso.de/) | 6 | Negativbeispiel, **im Inspirationskatalog** (vom Nutzer benannt) |
-| `carbone--*` | [Carbone, New York](https://carbonenewyork.com/) | 19 | vorgeschlagen als Benchmark |
-| `bigmamma--*` | [Big Mamma Group](https://www.bigmammagroup.com/) | 18 | vorgeschlagen als Benchmark |
-| `tulus--*` | [Tulus Lotrek, Berlin](https://www.tuluslotrek.de/) | 17 | vorgeschlagen als Benchmark |
-| `pageou--*` | [Pageou, München](https://www.pageou.de/) | 16 | vorgeschlagen als Benchmark |
-| `poletto--*` | [Cornelia Poletto, Hamburg](https://www.cornelia-poletto.de/) | 16 | vorgeschlagen als Benchmark; Dachzeilen in den Teaserblöcken nicht übernehmen |
-| `standard--*` | [Standard Serious Pizza, Berlin](https://www.standard-berlin.de/) | 16 | vorgeschlagen als Benchmark |
-| `padella--*` | [Padella, London](https://www.padella.co/) | 16 | vorgeschlagen als Benchmark |
-| `barra--*` | [Barra, Berlin](https://www.barraberlin.com/) | 15 | vorgeschlagen, gut mit Mängeln |
-| `lilia--*` | [Lilia, New York](https://www.lilianewyork.com/) | 15 | vorgeschlagen, gut mit Mängeln |
+| `carbone--*` | [Carbone, New York](https://carbonenewyork.com/) | 19 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
+| `bigmamma--*` | [Big Mamma Group](https://www.bigmammagroup.com/) | 18 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
+| `tulus--*` | [Tulus Lotrek, Berlin](https://www.tuluslotrek.de/) | 17 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
+| `pageou--*` | [Pageou, München](https://www.pageou.de/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
+| `poletto--*` | [Cornelia Poletto, Hamburg](https://www.cornelia-poletto.de/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben); Dachzeilen in den Teaserblöcken nicht übernehmen |
+| `standard--*` | [Standard Serious Pizza, Berlin](https://www.standard-berlin.de/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
+| `padella--*` | [Padella, London](https://www.padella.co/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
+| `barra--*` | [Barra, Berlin](https://www.barraberlin.com/) | 15 | gut mit Mängeln, **im Pool** (vom Nutzer freigegeben) |
+| `lilia--*` | [Lilia, New York](https://www.lilianewyork.com/) | 15 | gut mit Mängeln, **im Pool** (vom Nutzer freigegeben) |
 | `viacarota--*` | [Via Carota, New York](https://www.viacarota.com/) | 12 | nicht vorgeschlagen: Auftakt ist ein Siegel ohne Foto |
 | `otto--*` | [Otto, Berlin](https://www.otto-berlin.net/) | 12 | nicht vorgeschlagen: Illustration statt Foto, Buchungsfenster verdeckt den Auftakt |
 | `nobelhart--*` | [Nobelhart & Schmutzig, Berlin](https://www.nobelhartundschmutzig.com/) | 11 | nicht vorgeschlagen: Textkasten über Waldfoto, Sticker als Plaketten |
-| `ottenthal--*` | [Ottenthal, Berlin](https://www.ottenthal.com/) | 7 | vorgeschlagen als Negativbeispiel: Fotocollage ohne Serie |
-| `muret--*` | [Muret La Barba, Berlin](https://www.muretlabarba.de/) | 6 | vorgeschlagen als Negativbeispiel: Shop-Navigation und Bildraster verdrängen das Restaurant |
-| `lopez--*` | [Zum Hecht, Bahlingen](https://www.zum-hecht.de/) | 6 | vorgeschlagen als Negativbeispiel: „Herzlich willkommen" in Versalien über einem Karussell |
-| `trattoriaportofino--*` | [Trattoria Portofino, Mülheim](https://www.trattoria-portofino.de/) | 3 | vorgeschlagen als Negativbeispiel: Holzmaserung, Trikolore-Linien, Navigation in Signalorange |
+| `ottenthal--*` | [Ottenthal, Berlin](https://www.ottenthal.com/) | 7 | Negativbeispiel, **im Inspirationskatalog** (vom Nutzer bestätigt): Fotocollage ohne Serie |
+| `muret--*` | [Muret La Barba, Berlin](https://www.muretlabarba.de/) | 6 | Negativbeispiel, **im Inspirationskatalog** (vom Nutzer bestätigt): Shop-Navigation und Bildraster verdrängen das Restaurant |
+| `lopez--*` | [Zum Hecht, Bahlingen](https://www.zum-hecht.de/) | 6 | **vom Nutzer als Vorbild eingestuft, im Pool**; Raster hatte es als Negativbeispiel vorgeschlagen |
+| `trattoriaportofino--*` | [Trattoria Portofino, Mülheim](https://www.trattoria-portofino.de/) | 3 | Negativbeispiel, **im Inspirationskatalog** (vom Nutzer bestätigt): Holzmaserung, Trikolore-Linien, Navigation in Signalorange |
 
 Die beiden Bögen `vorschlag-benchmarks.jpg` und `vorschlag-negativ.jpg` zeigen die Vorschläge zur Freigabe durch den Nutzer.
 

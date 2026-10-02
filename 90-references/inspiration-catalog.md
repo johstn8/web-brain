@@ -126,6 +126,14 @@ Bewertet nach dem [[20-design/qualitaetsraster.md]]. Sie zeigen, wie eine Restau
 
 [impastorosso.de](https://impastorosso.de/), aufgenommen am 2. Oktober 2026. Die Fotos des Raums sind brauchbar, die Seite ist es nicht: Baukastenvorlage mit Bildkarussell und Pfeilen im Auftakt, der Satz „Genießen Sie die Aromen des authentischen Italiens" fällt durch den Namenstausch-Test, zwei Dachzeilen in Versalien über den Überschriften, Doppellinien als Ornament, drei Karten mit Skizzensymbolen für Menü, Reservierung und Standort, ein Newsletter-Kasten, zwei gleich starke umrandete Aktionen in der Kopfzeile. `check-slop.ts` meldet zwei harte Sperren. Lehre: Gute Fotos retten keine Vorlagenseite.
 
+### Weitere Negativbeispiele, vom Nutzer am 2. Oktober 2026 bestätigt
+
+| Seite | Raster | Warum sie schwach ist |
+|---|---:|---|
+| [Trattoria Portofino, Mülheim](https://www.trattoria-portofino.de/) | 3 | Holzmaserung als Hintergrund, Trikolore-Linien als Ornament, Navigation in Signalorange, freigestellte Pizza als Dekoration |
+| [Muret La Barba, Berlin](https://www.muretlabarba.de/) | 6 | Shop-Navigation und ein Bildraster aus gemischten Quellen verdrängen das Restaurant, kein Bild trägt |
+| [Ottenthal, Berlin](https://www.ottenthal.com/) | 7 | Fotocollage ohne Serie, kein Leitbild, kein Satz |
+
 ### Trattoria Alberto, Fassungen 01 bis 04 — interne Negativbeispiele vom 12. und 20. September 2026
 
 Unter `projekte/trattoria-alberto/versions/`. Alle vier haben Kontrast, Rhythmus, Zustände, axe und Lighthouse bestanden und wurden vom Nutzer trotzdem als generiert erkannt. Sie bleiben unverändert erhalten, weil sie zeigen, was Messungen nicht finden.

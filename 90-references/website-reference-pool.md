@@ -69,7 +69,22 @@ Vom Nutzer am 2. Oktober 2026 als gut benannt, danach nach dem Raster bewertet. 
 | [MINE Restaurant, Berlin](https://minerestaurant.de/) | 18 | Benchmark | Der Auftakt der Gattung: Video der Gäste im Raum über die volle Höhe, ein Satz mit Haltung und Ort, darunter Zeiten, letzte Bestellung und Adresse als Band, „Tisch reservieren" als einzige starke Aktion in der Kopfzeile. Besteht `check-slop.ts` ohne Sperre. | der Ankündigungsstreifen über der Kopfzeile; die Michelin-Plakette nur, weil sie real ist |
 | [Lagalante, Berlin](https://lagalante-restaurant.de/) | 15 | gut mit Mängeln | Freigestellte Teller auf Weiß als durchgehende Serie, ein Porträt des Kochs in Schwarzweiß, handgezeichnete Wortmarke, asymmetrisch gestreute Bilder in wechselnder Größe. | die Textwand auf Mobil, das blasse Riesenwort „MENU" hinter der Karte, die englische Reservierungsaktion neben deutscher Navigation |
 
-Weitere Kandidaten aus dem Gattungsvergleich vom 2. Oktober 2026 sind bewertet und dem Nutzer zur Aufnahme vorgeschlagen; bis zur Entscheidung stehen sie nur im Screenshot-Manifest.
+Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
+
+| Konkrete Website | Raster | Einstufung | Was sie zeigt | Was nicht übernommen wird |
+|---|---:|---|---|---|
+| [Carbone, New York](https://carbonenewyork.com/) | 19 | Benchmark | Kinoreifes Raumfoto im Auftakt; danach wechseln vollbreites Bild, Bild-Text-Paare in beiden Richtungen und dunkle Textflächen, ohne eine Anordnung zu wiederholen | die vielen Standorte und der Newsletter |
+| [Big Mamma Group](https://www.bigmammagroup.com/) | 18 | Benchmark | Video aus der Küche über die volle Höhe, ein einziger Satz darauf, „Book a table" als einzige starke Aktion | die italienische Zeile als Überschrift einer deutschen Website (S6) |
+| [Tulus Lotrek, Berlin](https://www.tuluslotrek.de/) | 17 | Benchmark | Das Team als Auftaktbild, die Karte als ruhiger Text, Fassade als Abschluss | das Buchungsfenster, das den Auftakt verdeckt |
+| [Pageou, München](https://www.pageou.de/) | 16 | Benchmark | Lichtdurchflutetes Raumfoto über die volle Breite, kleine zentrierte Wortmarke, sehr wenig Text | — |
+| [Cornelia Poletto, Hamburg](https://www.cornelia-poletto.de/) | 16 | Benchmark | Die Köchin als Auftakt, Zitat mit Unterschrift, Teaserblöcke im Wechsel von Bild und Text | die Versal-Dachzeilen in den Teaserblöcken (S1) |
+| [Standard Serious Pizza, Berlin](https://www.standard-berlin.de/) | 16 | Benchmark | Die Wortmarke über die volle Breite ist die Überschrift, freigestellte Pizza und Reportagefoto asymmetrisch daneben | die Dreierfigur „People. Pizza. Culture." |
+| [Padella, London](https://www.padella.co/) | 16 | Benchmark | Ladenfront mit Köchen hinter der Scheibe als Auftakt, handgeschriebene Wortmarke | das Hinweisfenster beim Laden |
+| [Barra, Berlin](https://www.barraberlin.com/) | 15 | gut mit Mängeln | Ein gerahmtes Gerichtfoto, darunter ein Raster aus Detailfotos in einer Serie | die knappe Seite ohne Zeiten im Auftakt |
+| [Lilia, New York](https://www.lilianewyork.com/) | 15 | gut mit Mängeln | Ein einziges Pastafoto über die volle Breite unter der Wortmarke | das Karussell ohne Text |
+| [Zum Hecht, Bahlingen](https://www.zum-hecht.de/) | 6 | **vom Nutzer als Vorbild eingestuft** | Vollflächige Speisefotografie in dunkler Stimmung, Adresse, Telefon und E-Mail direkt im Auftakt | „Herzlich willkommen" als Überschrift und die Karussellpfeile (S7) |
+
+**Abweichung zwischen Raster und Nutzer:** Zum Hecht hatte im Raster 6 Punkte und wurde vom Nutzer trotzdem als Vorbild eingestuft. Nach [[20-design/qualitaetsraster.md#Benchmarkvergleich]] gilt seine Einstufung. Die Lehre: Ein starkes, vollflächiges Speisefoto mit den praktischen Angaben direkt im Auftakt wiegt für ihn schwerer als die Vorlagenmerkmale, die das Raster abzieht. Übernommen wird das Foto und die Lage der Angaben, nicht die Vorlagenmerkmale.
 
 ### Weitere Einträge, unbewertet
 
