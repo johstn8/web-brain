@@ -20,7 +20,7 @@ Hier landen Websites, die der Nutzer selbst gefunden hat und gut findet. Sie sin
 
 ## Eintragen
 
-Eine Zeile je Fund in die Tabelle [[#Offen]]: Adresse, und ein Satz, **was** daran gefällt, so konkret wie möglich. „Die runden Produktkacheln auf Hellgrau" hilft mehr als „modern". Bewertung, Gattung und Einordnung sind nicht nötig, die übernimmt der Agent. Ein Fund darf auch nur ein Detail betreffen, etwa wie ein Menü aufklappt oder wie Preise gesetzt sind.
+Eine Zeile je Fund in die Tabelle [[#Offen]]: Adresse, und ein Satz, **was** daran gefällt, so konkret wie möglich. „Die runden Produktkacheln auf Hellgrau" hilft mehr als „modern". **Ohne Notiz gilt das ganze Designkonzept der Seite als Fund:** Typografie, Farb- und Flächenlogik, Radien, Aktionsform, Raster, Sektionsaufbau und Bewegung werden gemessen und eingeordnet. Mit Notiz liegt der Schwerpunkt auf dem Genannten. Bewertung, Gattung und Einordnung sind nicht nötig, die übernimmt der Agent. Ein Fund darf auch nur ein Detail betreffen, etwa wie ein Menü aufklappt oder wie Preise gesetzt sind.
 
 Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche wird jeder offene Eintrag verarbeitet.
 
