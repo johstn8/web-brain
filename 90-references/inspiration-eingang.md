@@ -48,11 +48,11 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 | [ko:mon](https://www.ko-mon.de/) | Auftakt, Scrollen, Wörter färben sich ein, abgerundet | Vorlage `kongress`, dazu `Wortlicht`, `Kopfinsel` | – |
 | [jovoco](https://jovoco.io/) | Rundungen, schlichter Auftakt mit Google-Bewertung, Sprachwahl, Kopfzeile | Vorlage `rund`, dazu `Bewertungszeile` | Pillen-Dachzeilen (S1), IBM Plex (Sperrliste) |
 | [metagram](https://metagram-solutions.com/) | versetzte Boxen mit Kennzahlen, schräge Karte mit animierten Bögen | Vorlage `verlauf`, dazu `Kennzahlen`, `Bogenkarte` | Poppins- und Inter-Satz, Regenbogenflächen |
-| [Scaly](https://scaly.com/) | Elemente, Aufbau, Design | Aufbau mit Bild in Fläche und Wechsel hell/dunkel in `Kacheln` und `Vollbild`; Bewertung im Auftakt in `Bewertungszeile` | Chat-Fenster, Versal-Dachzeilen (S1) |
-| [tunymedia](https://tunymedia.at/) | Elemente, Aufbau, Design | runde Bildausschnitte und Logoreihe in `auftakt/Schlicht`, Preset `dienst` | Bildausschnitt mit Sonderform als Baustein: zu markengebunden |
+| [Scaly](https://scaly.com/) | Elemente, Aufbau, Design | Vorlage `kurs` | Chat-Fenster, Versal-Dachzeilen (S1) |
+| [tunymedia](https://tunymedia.at/) | Elemente, Aufbau, Design | Vorlage `bogen` | – |
 | [Lagalante](https://www.lagalante-restaurant.de/nuovo/) | Gerichte auf Weiß, Rechteckbilder am Rand, Textmenge | Vorlage `gericht`, dazu `Freisteller`, zweite Gastronomie-Form in [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]] | blasses Riesenwort hinter der Karte |
-| [MINE](https://minerestaurant.de/) | guter Grundaufbau | bestätigt `auftakt/Leitbild` als gesetzte Form | – |
-| [Carbone](https://carbonenewyork.com/) | kein KI-Eindruck, Geschichte, Bildplatzierung, Auftakt | bestätigt Leitbild; Lehre: Bild und Geschichte tragen, nicht Effekte | – |
+| [MINE](https://minerestaurant.de/) | guter Grundaufbau | Vorlage `salon`; bestätigt `auftakt/Leitbild` als Grundform | Michelin-Plakette und Auszeichnungen, die Vorlage behauptet keinen Preis |
+| [Carbone](https://carbonenewyork.com/) | kein KI-Eindruck, Geschichte, Bildplatzierung, Auftakt | Vorlage `abend`; Lehre: Bild und Geschichte tragen, nicht Effekte | – |
 | [Standard Serious Pizza](https://www.standard-berlin.de/) | Weiß, Boxen und Bilder, große Schrift im Auftakt | Vorlage `wortmarke`, dazu `auftakt/Riesenwort` | Handzeichnungen und Schachbrett sind Marke, kein Baustein |
 | [THE1](https://the1.amsterdam/) | große Bilder, Schrift, Farben, ganz große Überschriften, Einfachheit | Vorlage `hafen` mit Rot `#fa4d43`, Gelb `#fbb833`, Pink `#f19ec8`, Grün `#027b49` und den Riesenziffern, dazu `Farbfelder` | – |
 | [Lightship](https://www.lightshiprv.com/) | Aufbau, Kopfzeile mit Morph, abgerundete Bilder, Überschrift auf Bild, Karten mit Plus | Vorlage `rahmen`, dazu `Kopfinsel`, `Querband` | der Stern-Logo-Morph selbst: gebaut ist das Schrumpfen, die Form hängt am Logo |

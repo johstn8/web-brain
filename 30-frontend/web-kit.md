@@ -53,6 +53,10 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | `verlauf` | metagram-solutions.com | Mittelsatz, Säulen-Diagramm, Kacheln mit Mini-Diagrammen, schräge Weltkarte, Schillerflächen |
 | `system` | comito.de | dunkles Vollbild, Glaskarten, rotes Puzzle aus Fotos und Flächen, Leistungskarten auf Grau |
 | `gericht` | lagalante-restaurant.de | Gerichte ohne Rahmen am Rand angeschnitten, blasses Wort, Haarlinie, Karte mittig, Fotos außen |
+| `salon` | minerestaurant.de | kursive Cardo, festes Band mit Zeiten am unteren Rand, runder Aufkleber, Bildreihe, Halbseite dunkel |
+| `abend` | carbonenewyork.com | Marine und Creme, dreigeteilte Kopfzeile, vollbreite Fotos, Halbseiten im Wechsel, keine Bewegung |
+| `kurs` | scaly.com | Pfirsichkarte im Auftakt, schwebende Stichworte, Blob-Foto, Reiter, gestaffeltes Team |
+| `bogen` | tunymedia.at | Abschnitte enden in Bogenkanten, gekippte Bildcollagen, Gerät in der Mitte des Abschlusses |
 
 `scripts/vorlage-bauen.sh <name>` baut sie nach `projekte/kit-vorlagen/versions/<name>/dist`, von dort erscheinen sie auf `/dev`. Eine Vorlage wird für den Auftrag kopiert und umgeschrieben: Inhalte aus `content/<website>.json`, Farben und Bilder des Betriebs. Der Aufbau bleibt. Fotos der Vorlagen stehen unter Unsplash-Lizenz und werden ersetzt. Kommt eine neue Website in den [[90-references/inspiration-eingang.md]], entsteht daraus eine neue Vorlage, nicht ein neues Preset.
 
