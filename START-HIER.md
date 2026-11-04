@@ -31,7 +31,7 @@ Das musst du **nicht** mitliefern:
 | Er hat | Bedeutet |
 |---|---|
 | das ganze Regelwerk | Copy-Regeln, Anti-Slop-Katalog, Auftakt-Repertoire, Zustandsmatrix, Rechtsseiten-Logik, Quality Gates |
-| `web-kit` | Blöcke, Tokenvertrag, fünf Art-Direction-Presets, Rechtsseiten, Consent, QA-Skripte, lauffähiger Astro-Starter |
+| `web-kit` | Blöcke, Tokenvertrag, acht Art-Direction-Presets, Stilmessung und Stilverlauf, Rechtsseiten, Consent, QA-Skripte, lauffähiger Astro-Starter |
 | über 150 belegte Referenzseiten | nach Gewerk sortiert in `90-references/website-reference-pool.md` |
 | einen Browser | er rendert den Build selbst und sieht ihn sich an, bei 375 und 1280 Pixel |
 | Netz | er kann deine alte Website ziehen und recherchieren |

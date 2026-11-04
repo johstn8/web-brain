@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-08-27
+updated: 2026-11-04
 depends_on:
   - "[[90-references/inspiration-catalog.md]]"
 ---
@@ -27,13 +27,15 @@ Professionelle Websites verbinden fünf Eigenschaften:
 
 ### Produktbeweis
 
-Geeignet für SaaS, Entwicklerwerkzeuge und Plattformen.
+Geeignet für SaaS, Entwicklerwerkzeuge und Plattformen, und für Hersteller und Betriebe mit greifbaren Produkten.
 
 **Dramaturgie:** Problem → direkt nutzbare oder realistische Demo → Kernworkflow → Integrationen → Sicherheit und Betrieb → Belege → Einstieg.
 
 **Gestaltung:** Produktoberflächen sind das Leitmedium. Animation erklärt Zustandswechsel. Code, Diagramme und technische Texte erscheinen nur, wenn sie der Zielgruppe helfen.
 
 **Risiko:** Eine erfundene Oberfläche ist dekorativer als eine abstrakte Illustration, aber nicht glaubwürdiger.
+
+**Bei physischen Produkten** trägt das freigestellte Produkt auf einer hellgrauen Kachel mit großem Radius, daneben wenige echte Kennwerte als kleine Etiketten am Bild, etwa Gewicht, Reichweite, Auflösung. Belegt an [rico-gmbh.de](https://www.rico-gmbh.de/), eingegangen über [[90-references/inspiration-eingang.md]]. Voraussetzung sind reale Freisteller und belegte Werte; ohne sie entfällt das Muster.
 
 ### Redaktioneller Index
 

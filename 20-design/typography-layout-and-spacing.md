@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 impacts:
   - design-tokens
   - components
@@ -44,7 +44,7 @@ Inter, Roboto, Open Sans, Lato, Montserrat, Arial und Helvetica ohne Begründung
 ## Typografie
 
 - So wenige Familien wie nötig. Eine oder zwei reichen häufig; weitere sind zulässig, wenn jede eine stabile, wiederkehrende Rolle besitzt und Ladebudget sowie visuelle Kohärenz gewahrt bleiben.
-- **Die Familie ist eine Entscheidung, kein Default.** Inter, Roboto, Open Sans, Lato und der System-Stack sind die zuverlässigsten Schrifthinweise auf eine generierte Seite; sie sind nicht verboten, brauchen aber dieselbe Herleitung wie jede andere Wahl. Fünf belegte, lizenzfreie Ausgangspunkte je Gewerk liegen als Datei in [[30-frontend/web-kit.md#Art-Direction-Presets]].
+- **Die Familie ist eine Entscheidung, kein Default.** Inter, Roboto, Open Sans, Lato und der System-Stack sind die zuverlässigsten Schrifthinweise auf eine generierte Seite; sie sind nicht verboten, brauchen aber dieselbe Herleitung wie jede andere Wahl. Acht lizenzfreie Ausgangspunkte liegen als Datei in [[30-frontend/web-kit.md#Art-Direction-Presets]]; der Stil selbst entsteht nach [[20-design/design-direction.md#Stilwahl je Auftrag]].
 - Type Ramp definieren: Display, H1-H4, Lead, Body, Small, Label, Code.
 - Für jede Stufe Größe, Zeilenhöhe, Gewicht, Letter-Spacing und Maximalbreite festlegen.
 - Body meist 16px oder größer; Zeilenlänge grob 45 bis 75 Zeichen.
@@ -111,8 +111,8 @@ Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente le
 
 - Keine frei driftenden Einzelwerte: Jede verwendete Rundung gehört zu einer benannten Stufe oder ist eine dokumentierte optische Korrektur.
 - Verschachtelte Flächen leiten ihre Innenform aus der Außenform und dem Innenabstand ab.
-- Pillen sind nur eine Option für Status, Tags oder kompakte Umschalter. Sie sind kein Standard für primäre Aktionen.
-- Die B5-Kalibrierung `6–8px / 10–12px / 16–20px / 9999px` darf übernommen werden, wenn B5 für diese Website gewählt wurde. Sie gilt nicht projektübergreifend. Fünf abweichende, ausgebaute Radiusgrammatiken liegen als Datei in [[30-frontend/web-kit.md#Art-Direction-Presets]] — von Radius null bis zur weichen Stufung.
+- Die Form der Aktionen ist eine eigene Entscheidung, unabhängig vom Radius der Container: Kante, weich, rund oder Pille. Keine davon ist Standard. Im Kit steht sie als `grammar.aktionsform`, Regel in [[20-design/design-direction.md#Stilwahl je Auftrag]].
+- Die B5-Kalibrierung `6–8px / 10–12px / 16–20px / 9999px` darf übernommen werden, wenn B5 für diese Website gewählt wurde. Sie gilt nicht projektübergreifend. Acht ausgebaute Radiusgrammatiken liegen als Datei in [[30-frontend/web-kit.md#Art-Direction-Presets]], von Radius null bis zu Kacheln mit 20 Pixel und Pillen-Aktionen.
 
 ## Tiefe und Rahmen
 

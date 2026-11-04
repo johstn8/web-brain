@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
   - "[[90-references/reference-research-workflow.md]]"
@@ -90,9 +90,10 @@ Die Qualitätsregeln gelten in beiden Bahnen unverändert. Verkürzt wird die Na
 2. Bestehende Website nach [[10-strategy/existing-website-rebuild.md]] sichern; `scripts/extract-old-site.ts` aus dem Kit übernimmt Texte, Bilder, Kontakt- und Öffnungszeitendaten. Die Angaben werden nach [[10-strategy/existing-website-rebuild.md#Übernahme ohne Rückfrage]] übernommen und eingebaut, nicht erst bestätigt.
 3. Betriebsdaten und Marktumfeld recherchieren, Kurzbrief in `PROJECT.md` schreiben: Angebot, Zielgruppe, primäre Handlung, Beweisformen, Sitemap.
    **Gattungsvergleich** nach [[90-references/reference-research-workflow.md#Gattungsvergleich]]: acht bis zwölf Websites derselben Gattung aufnehmen, nach [[20-design/qualitaetsraster.md]] bewerten, zwei bis drei Benchmarks und ein bis zwei Negativbeispiele benennen, die übertragbaren Prinzipien in Sätzen festhalten. Er entfällt auch bei genau einer Website nicht.
+   **Stilrecherche** nach [[90-references/reference-research-workflow.md#Stilrecherche]]: Wirkung in drei Adjektiven, zuerst der [[90-references/inspiration-eingang.md]], dann drei bis fünf aktuelle Websites mit dieser Wirkung, mindestens eine aus einer anderen Gattung, gemessen mit `scripts/stil-messen.ts`. Der Stil entsteht in jedem Lauf neu, nicht aus dem Kit.
 4. Blöcke aus [[30-frontend/web-kit.md]] ziehen, statt sie neu zu schreiben. Das Kit ist der Pflichtausgangspunkt der Fast Lane.
    **Owner-Hosting wird dabei immer mitgebaut**, siehe [[#Owner-Hosting ist Standard]]: eine Inhaltsdatei, stabile Pointer, Feldtypen, Preview-Route. Es nachträglich einzuziehen kostet ein Vielfaches.
-5. Tokenwerte dieses Betriebs setzen; die Rollennamen des Tokenvertrags aus [[20-design/color-system.md#Tokenvertrag]] bleiben unverändert. Ableitung und Artefaktweg in [[20-design/design-systems-und-artefakte.md]]. Jede Schriftfamilie wird vorher gegen die [[20-design/typography-layout-and-spacing.md#Sperrliste]] geprüft, auch wenn das Preset sie vorschlägt. Die Sektionsfolge der Startseite steht mit Anordnung und Bildmaßstab je Sektion im Design Contract, bevor gebaut wird, siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]].
+5. Projekteigenes Preset nach [[20-design/design-direction.md#Stilwahl je Auftrag]] ableiten, zwei Richtungen als Stilkachel rendern, eine wählen und mit `scripts/stilverlauf.ts` gegen die letzten Websites prüfen. Danach die Tokenwerte dieses Betriebs setzen; die Rollennamen des Tokenvertrags aus [[20-design/color-system.md#Tokenvertrag]] bleiben unverändert. Ableitung und Artefaktweg in [[20-design/design-systems-und-artefakte.md]]. Jede Schriftfamilie wird vorher gegen die [[20-design/typography-layout-and-spacing.md#Sperrliste]] geprüft, auch wenn das Preset sie vorschlägt. Die Sektionsfolge der Startseite steht mit Anordnung und Bildmaßstab je Sektion im Design Contract, bevor gebaut wird, siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]].
 6. Zwei Auftaktfassungen bauen: mit verschiedenen Kompositionen aus [[20-design/landing-page-craft.md#Auftakt-Repertoire]], oder, wenn eine [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt|Gattungsregel]] greift, als zwei Ausprägungen der gesetzten Komposition. Für Gastronomie ist das das Leitbild aus `blocks/auftakt/Leitbild.astro`. Bei 375 und 1280 Pixel neben den Auftakten der Benchmarks ansehen, eine mit Begründung wählen.
 7. Ein Renderdurchgang am ganzseitigen Render mit schriftlicher Befundliste nach [[20-design/visual-iteration-loop.md]]. Ein Render ohne Befundliste ist kein Durchgang. Er endet mit dem [[20-design/qualitaetsraster.md#Benchmarkvergleich]]: eigene Startseite neben Benchmarks und Negativbeispielen, Rasterpunkte, drei schriftliche Antworten. Unter 16 Punkten wird weitergearbeitet.
 8. `scripts/qa.sh` aus dem Kit laufen lassen: Lighthouse, axe, interner Link-Check, Screenshots bei 375 und 1280, Prüfung auf Platzhalter- und `TODO`-Reste und die [[20-design/anti-ai-slop.md#Harte Sperren]]. Eine harte Sperre lässt den Lauf scheitern und wird behoben, nicht begründet.
@@ -104,7 +105,7 @@ Die Fast Lane läuft über den Skill `web-build`, der diese Strecke ausführt un
 
 ### Mehrere Fassungen in der Fast Lane
 
-Bis zu drei Fassungen bleiben Fast Lane, **wenn jede ein eigenes Preset aus [[30-frontend/web-kit.md#Art-Direction-Presets]] trägt.** Sie teilen denselben Inhalt aus `content/<website>.json` und unterscheiden sich über Tokens, Grammatik und Auftaktkomposition.
+Bis zu drei Fassungen bleiben Fast Lane, **wenn jede ein eigenes Preset trägt**, abgeleitet nach [[20-design/design-direction.md#Stilwahl je Auftrag]] aus verschiedenen Stilreferenzen oder Kit-Presets aus [[30-frontend/web-kit.md#Art-Direction-Presets]]. Sie teilen denselben Inhalt aus `content/<website>.json` und unterscheiden sich über Tokens, Grammatik und Auftaktkomposition.
 
 Der geforderte Stilabstand aus [[20-design/design-direction.md#Stilabstand bei mehreren Websites]] ist damit **von Bauart erfüllt**, nicht nachträglich zu belegen: Zwei verschiedene Presets unterscheiden sich bereits in Schriftwahl, Farbwelt, Radius- und Rahmengrammatik, Trennmittel zwischen Sektionen und Bewegungswertesatz. Das sind fünf wirksame Achsen.
 

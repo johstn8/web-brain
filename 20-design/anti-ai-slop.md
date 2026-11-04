@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 source: "[[90-references/inspiration-catalog.md]]"
 impacts:
   - design-direction
@@ -170,6 +170,7 @@ Nicht einzelne Merkmale, sondern ganze Erscheinungsbilder, zu denen generierte O
 | Broadsheet | Haarlinien, Radius null, dichte Zeitungsspalten, Serife ueberall |
 | SaaS-Kartenkasten | Inhalt in gleich grosse abgerundete Karten zerlegt, ein Radius fuer alles unabhaengig von der Hierarchie, derselbe weiche graue Schatten unter jeder, Verlaufsflaechen als Dekoration |
 | Vorlagen-Chrome | die Merkmale aus dem Abschnitt Chrome und Beschriftung in Kombination |
+| Hausstil von gestern | Serife als Displayschrift, Radius null an Aktionen, warmer Papier- oder Leinengrund, gedeckte Erdtöne. Das ist nicht der Stil generierter Seiten allgemein, sondern der dieses Systems: Bis 2026-11-04 trugen fünf von acht gebauten Websites eine Serife als Displayschrift, weil drei der fünf Kit-Presets eine vorschlugen. `web-kit/scripts/stilverlauf.ts` misst die Ballung; Regel in [[20-design/design-direction.md#Stilwahl je Auftrag]] |
 | Redaktionsattrappe | gesperrte Versal-Dachzeile, Sektionsnummern mit Haarlinie, Display-Serife mit einem farbig kursiven Wort, Leinen- oder Papiergrund. Liest sich als „Magazin", ohne dass es eine Redaktion gibt; trat 2026 in vier Restaurantfassungen in wechselnder Kombination auf |
 
 Der Pruefsatz dazu: **Waere ich bei einem anderen Auftrag derselben Gattung an derselben Stelle gelandet?** Wenn ja, ist es kein Entwurf, sondern ein Default. Wo der Auftrag eine Richtung vorgibt, gilt der Auftrag - auch dann, wenn er eine dieser Ballungen verlangt.

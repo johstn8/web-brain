@@ -13,6 +13,16 @@ updated: 2026-10-02
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
 
+## 2026-11-04 — Stil je Auftrag statt Hausstil aus dem Kit
+
+Auslöser war das Urteil des Nutzers nach Nush O Jan: Die Websites seien insgesamt zu gleich, Buttons immer eckig, oft die ältere Schrift der Fahrschule v11 und ein älterer Stil. Als Gegenbeispiel nannte er rico-gmbh.de, und er wünschte, dass jeder Lauf neu recherchiert und individueller baut.
+
+**Befund, gemessen mit dem neuen `stilverlauf.ts`:** Fünf der letzten acht Websites trugen eine Serife als Displayschrift, die meisten einen warmen Papiergrund. Die Ursache lag im Kit: Drei der fünf Presets hatten Radius null, drei eine Serife, die Buttons hingen an `radius-sm`, und der Gattungsvergleich schaute nur in die eigene Gattung, deren Konvention bei Restaurants, Kanzleien und Praxen älter ist als die Gegenwart.
+
+**Kanonisch neu:** [[20-design/design-direction.md#Stilwahl je Auftrag]] mit Gegenwart als Normalfall, zwei gerenderten Richtungen und [[20-design/design-direction.md#Abstand zu den letzten Projekten]]; [[90-references/reference-research-workflow.md#Stilrecherche]] auch gattungsfremd und gemessen; [[90-references/inspiration-eingang.md]] für Funde des Nutzers; Ballung „Hausstil von gestern" in [[20-design/anti-ai-slop.md#Bekannte Ballungen]]. Im Kit: drei gegenwärtige Presets, `grammar.aktionsform`, `stil-messen.ts`, `stilverlauf.ts`, `karten` und `texte` im Schema.
+
+**Verworfen:** die Sperrliste zu lockern, weil Rico Inter verwendet, und die harten Sperren für gegenwärtige Seiten zu öffnen, die ein Wort der Überschrift einfärben. Übernommen wird die Grammatik solcher Seiten, nicht diese Merkmale.
+
 ## 2026-10-02 — Harte Sperren, Gattungsregel und Gattungsvergleich: Regeln ohne Begründungsweg
 
 Auslöser war die Durchsicht der vier Fassungen der Trattoria Alberto durch den Nutzer. Alle vier hatten Kontrast, Rhythmus, Zustände, axe und Lighthouse bestanden. Sein Urteil: Nur der Auftakt von `01-sala` ist für eine Trattoria überhaupt ansehnlich, und alle vier wirken generiert. Benannt hat er kleine Dachzeilen über Überschriften wie „Cucina Italiana · seit 2002 in Berlin-Kladow", ein Wort der Überschrift in anderer Farbe und kursiv, Blöcke, die alle gleich aussehen, und den Farbübergang am Auftaktbild. Als Gegenbeispiele nannte er drei Berliner Restaurantseiten, eine davon ausdrücklich als schwach.

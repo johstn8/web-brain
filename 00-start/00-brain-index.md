@@ -32,7 +32,7 @@ Für Menschen: [[START-HIER.md]].
 - Betrieb: [[60-operations/delivery-and-local-start.md]], [[60-operations/owner-hosting-interface.md]], [[60-operations/release-readiness-register.md]], [[60-operations/dependencies-and-environments.md]], [[60-operations/observability-and-maintenance.md]]
 - Qualität: [[70-qa/quality-gates.md]], [[70-qa/test-matrix.md]]
 - Vorlagen: [[80-templates/templates-index.md]]
-- Inspiration und Quellen: [[90-references/website-reference-pool.md]], [[90-references/reference-research-workflow.md]], [[90-references/inspiration-catalog.md]], [[90-references/apple-fluid-interface.md]], [[90-references/derived-design-patterns.md]], [[90-references/tools-and-libraries.md]], [[90-references/pen-dev-workflow.md]]
+- Inspiration und Quellen: [[90-references/inspiration-eingang.md]], [[90-references/website-reference-pool.md]], [[90-references/reference-research-workflow.md]], [[90-references/inspiration-catalog.md]], [[90-references/apple-fluid-interface.md]], [[90-references/derived-design-patterns.md]], [[90-references/tools-and-libraries.md]], [[90-references/pen-dev-workflow.md]]
 - Wartung: [[98-maintenance/coverage-and-impact-map.md]], [[98-maintenance/change-log.md]], [[98-maintenance/review-queue.md]]
 
 ## Scope

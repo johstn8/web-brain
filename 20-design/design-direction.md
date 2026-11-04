@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
 impacts:
@@ -26,7 +26,8 @@ Vor UI-Code **für jede gebaute Website getrennt** festlegen:
 - Referenzmodus nach [[90-references/reference-research-workflow.md]]: `Eigenentwurf`, `nutzer-vorgegeben` oder bei mehreren Websites für genau eine Fassung `ausgewählte Leitreferenz`, sofern eine starke Passung gefunden wird; nur im letzten Fall direkte URL, Passung, Übernahmetiefe, tragende Übernahmen und bewusste Abweichungen
 - gewählter Leitbenchmark aus [[20-design/interface-benchmarks.md]] samt übernommenen und ausdrücklich nicht übernommenen Elementen
 - vollständiger Tokenvertrag nach [[20-design/color-system.md#Tokenvertrag]] mit gesetztem Wert je Pflichtrolle für Light und Dark
-- gewählte Radiusskala, Rahmenbehandlung, Flächenlogik und Tiefe; innerhalb der Website konsistent, aber nicht aus einer anderen Fassung übernommen
+- Herkunft des Stils nach [[#Stilwahl je Auftrag]]: Stilrecherche, die zwei gerenderten Richtungen, die gewählte und das Ergebnis von `stilverlauf.ts`
+- gewählte Radiusskala, Aktionsform, Rahmenbehandlung, Flächenlogik und Tiefe; innerhalb der Website konsistent, aber nicht aus einer anderen Fassung übernommen
 - Bewegungstokens und eine eigene Bewegungsgrammatik; kalibrierte Beispiele in [[20-design/motion-and-interaction.md#Kalibrierte Bewegungsbeispiele]] sind Optionen, keine Defaults
 - Primär- und gegebenenfalls Zweitschrift samt Rollen, Lesbarkeits-, Lizenz- und Zeitbezugsentscheidung nach [[20-design/typography-layout-and-spacing.md#Stilzitat und Zeitbezug]]
 - Bildplan nach [[20-design/imagery-and-ai-editing.md]]: Rolle je Bild, Bearbeitungsbedarf, Freistellungen, geplante `ai-placeholder`-Bilder
@@ -70,6 +71,28 @@ Medien sind kein nachträglicher Schmuck. Wenn Produkt, Ort, Ergebnis oder Proze
 Verlangt der Auftrag mehrere Websites, müssen sie mehr sein als andere Farben oder Buttonformen. Jede wählt eine eigene Leitmetapher, Auftaktkomposition, Unterseiten-Dramaturgie, Bewegungsrolle und sichtbare Interface-Grammatik. Jede wird als vollständige Website anhand derselben Inhalte, Nutzerflüsse, Accessibility-, Performance- und SEO-Kriterien umgesetzt, nicht gegeneinander zur Auswahl gestellt.
 
 Stilabstand ist kein Selbstzweck. Wenn dieselbe grobe Landing-Page-Anatomie oder Reihenfolge der Nutzerfragen für alle Fassungen sachlich am stärksten ist, darf und soll sie wiederkehren. Eigenständigkeit entsteht dann über Komposition, Medium, Raster, Typografie, Flächenlogik, Komponenten und Motion. Keine Fassung erhält absichtlich einen schwächeren, leereren oder schwerer lesbaren Auftakt, nur damit die Matrix mehr Unterschiede zeigt.
+
+## Stilwahl je Auftrag
+
+Kanonische Regel dafür, woher der Stil einer Website kommt. Sie gilt für jede Website, auch für genau eine.
+
+**Gegenwärtig ist der Normalfall.** Ohne Bezug aus Marke, Ort oder Auftrag wirkt eine Website von heute: gegenwärtige Grotesk oder eine Serife mit klar begrenzter Rolle, Aktionen mit einer bewusst gewählten Form, ein Grund, der nicht Papier imitiert. Eine klassische Anmutung, also Serife als Displayschrift, Radius null überall, warmer Papier- oder Leinengrund, kondensierte Schildschrift, ist eine Entscheidung nach [[20-design/typography-layout-and-spacing.md#Stilzitat und Zeitbezug]] und braucht diesen Bezug. Dass die Gattung es nahelegt, genügt nicht: Fünf der acht Websites bis 2026-11-04 trugen eine Serife als Displayschrift, und der Nutzer hat den Gesamteindruck als zu gleich und zu alt benannt.
+
+**Jeder Lauf recherchiert seinen Stil neu.** Das Kit liefert Material und Prüfungen, nicht den Stil. Zusätzlich zum Gattungsvergleich entsteht je Auftrag eine [[90-references/reference-research-workflow.md#Stilrecherche|Stilrecherche]]: drei bis fünf aktuelle Websites, die die gesuchte Wirkung tragen, ausdrücklich auch aus anderen Gattungen. Ein Fliesenleger kann von einem Industriehersteller lernen, ein Café von einer Sportmarke. Daraus wird ein projekteigenes Preset unter `<projekt>/design/<name>.json` abgeleitet; ein Kit-Preset aus [[30-frontend/web-kit.md#Art-Direction-Presets]] dient dabei als technischer Startpunkt, nicht als Stilentscheidung.
+
+**Zwei Richtungen am Bild, nicht im Kopf.** Vor der ersten Komponente werden zwei Richtungen aus verschiedenen Referenzen als Stilkachel gerendert, also Kopfzeile, Auftaktzeile, Aktionen und eine Inhaltsfläche mit echtem Text. Eine wird mit Begründung gewählt. Ein Modell, das nur gedanklich wählt, landet bei der wahrscheinlichsten Lösung.
+
+**Aktionsform ist eine eigene Entscheidung.** Kante, weich, rund oder Pille wird je Website gewählt und im Design Contract begründet, unabhängig vom Radius der Container. Im Kit steht sie als `grammar.aktionsform`.
+
+### Abstand zu den letzten Projekten
+
+Vor der Festlegung läuft `web-kit/scripts/stilverlauf.ts --kandidat <preset>`. Es liest Displayschrift, Aktionsform, Grundhelligkeit und Papiergrund aus dem ausgelieferten CSS der letzten Websites unter `projekte/`.
+
+- Gleiche Displayfamilie wie eine der letzten drei Websites: andere Familie wählen.
+- Serife oder Papiergrund, wenn zwei der letzten drei das schon trugen: andere Richtung wählen.
+- Gleiche Aktionsform wie die letzten zwei: andere Form wählen.
+
+Jede dieser Wiederholungen ist nur zulässig, wenn Marke oder Auftrag sie verlangen, etwa ein Logo in genau dieser Schrift. Die Begründung steht dann in `PROJECT.md`. Fassungen desselben Betriebs regelt zusätzlich [[#Abstand zu Vorgängerfassungen]].
 
 ## Abstand zu Vorgängerfassungen
 

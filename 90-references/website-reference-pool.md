@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 review_by: 2027-02-27
 depends_on:
   - "[[90-references/reference-research-workflow.md]]"
@@ -134,6 +134,12 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 | [Dust Moto](https://www.dustmoto.com/) | Motorrad, E-Commerce | reduziert, lifestyle-orientiert | mittel bis hoch |
 | [Lightship](https://www.lightshiprv.com/) | E-Mobilität, Reiseprodukt | hell, produktzentriert, technisch | hoch |
 | [United Carriers](https://unitedcarriers.com/) | Logistik, Dienstleistungen | kinetisch, editorial, technisch | hoch |
+
+## Hersteller, Industrie und Technik
+
+| Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
+|---|---|---|---|
+| [RICO, Kempten](https://www.rico-gmbh.de/) | Hersteller, Maschinenbau, Technik, Handwerk mit Geräten | hell, produktnah, Kacheln mit großem Radius, eine Markenfarbe; vom Nutzer genannt, über [[90-references/inspiration-eingang.md]] verarbeitet, Grundlage des Kit-Presets `produkt` | mittel |
 
 ## SaaS, KI, Software, Finanzen und Entwicklerprodukte
 

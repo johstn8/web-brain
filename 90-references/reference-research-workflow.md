@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 review_by: 2027-02-27
 depends_on:
   - "[[20-design/qualitaetsraster.md]]"
@@ -61,6 +61,19 @@ Verbindlich für jede Website. Ergebnis ist ein Bogen mit bewerteten Seiten, zwe
 
 Ablage im Projekt: `research/gattungsvergleich/<YYYY-MM-DD>/` mit den Aufnahmen, dem Bogen und einer `bewertung.md` mit Punkten je Kriterium, Einstufung und übertragbaren Prinzipien.
 
+## Stilrecherche
+
+Verbindlich für jede Website, neben dem Gattungsvergleich. Der Gattungsvergleich sagt, was eine gute Seite dieser Gattung leisten muss; die Stilrecherche sagt, wie diese Website aussehen soll. Wer den Stil nur aus der eigenen Gattung holt, landet bei deren Konvention, und bei Restaurants, Kanzleien und Praxen ist die oft älter als die Gegenwart. Regel und Begründung in [[20-design/design-direction.md#Stilwahl je Auftrag]].
+
+1. **Wirkung festlegen**, bevor gesucht wird: drei Adjektive aus dem Direction Brief, etwa „präzise, technisch, hell" oder „zugewandt, lebendig, unkompliziert".
+2. **Zuerst den [[90-references/inspiration-eingang.md|Inspirationseingang]] lesen.** Was der Nutzer selbst gesammelt hat, schlägt jede eigene Suche.
+3. **Drei bis fünf Websites aufnehmen, die diese Wirkung tragen**, mindestens eine aus einer anderen Gattung. Gesucht wird über gute Marken, Hersteller und die Kundenlisten guter Agenturen, nicht über Galerien. Die Seiten sollen gegenwärtig sein, Relaunch in den letzten zwei bis drei Jahren, soweit erkennbar.
+4. **Messen statt schätzen:** je Seite `web-kit/scripts/stil-messen.ts --url <adresse> --out research/stil/<slug>`. Das Skript liefert Schriften, Type Ramp, Radien von Aktionen, Kacheln und Bildern, Grund- und Akzentfarben und die Auftakte bei 1440 und 390 Pixel.
+5. **Ableiten, nicht kopieren:** Aus den Messungen entsteht ein projekteigenes Preset `design/<name>.json` mit Werten dieses Betriebs. Übernommen wird die Grammatik, also Radiusverhältnis, Flächenlogik, Gewichtsraum und Aktionsform. Nicht übernommen werden Texte, Bilder, Logos, Farben einer fremden Marke und die Komposition einzelner Sektionen.
+6. **Zwei Richtungen rendern** nach [[20-design/design-direction.md#Stilwahl je Auftrag]] und `stilverlauf.ts` gegen die gewählte laufen lassen.
+
+Ablage im Projekt: `research/stil/<slug>/` mit `messung.json` und den Aufnahmen, dazu eine `stil.md` mit Wirkung, Referenzen, übernommener Grammatik und dem Ergebnis des Stilverlaufs. Die harten Sperren gelten auch dann, wenn eine Referenz sie verletzt: Viele gegenwärtige Seiten färben ein Wort der Überschrift ein oder setzen eine Pille als Dachzeile darüber, rico-gmbh.de etwa beides. Übernommen wird dann alles andere.
+
 ## Auswahl
 
 1. Projektziel, Zahl der Websites, Branche, Zielgruppe, Inhaltsart, Beweisformen, Plattform und Grenzen aus `PROJECT.md` extrahieren.
@@ -107,6 +120,7 @@ Dateien: `source.md`, `desktop.png`, `mobile.png`, optional `interaction.webm` o
 
 - Referenzmodus je Website dokumentiert
 - Gattungsvergleich je Website mit bewerteten Kandidaten, zwei bis drei Benchmarks, ein bis zwei Negativbeispielen und übertragbaren Prinzipien abgelegt
+- Stilrecherche je Website mit Wirkung, gemessenen Referenzen, projekteigenem Preset und Ergebnis von `stilverlauf.ts`
 - Benchmarkvergleich vor der Lieferung mit Bogen, Rasterpunkten und den drei Antworten nach [[20-design/qualitaetsraster.md#Benchmarkvergleich]]
 - bei genau einer Website höchstens eine Leitreferenz, und nur aus den Benchmarks des Gattungsvergleichs
 - bei mehreren Websites genau eine ausgewählte konkrete Leitreferenz für genau eine Fassung; nur bei dokumentiert fehlender starker Passung keine, alle übrigen als Eigenentwurf hergeleitet
