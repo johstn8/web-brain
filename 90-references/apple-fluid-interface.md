@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-08-16
+updated: 2026-11-04
 review_by: 2027-02-16
 depends_on:
   - "[[20-design/motion-and-interaction.md]]"
@@ -86,6 +86,26 @@ Erst wird der projizierte Endpunkt bestimmt, dann der nächstgelegene Rastpunkt 
 - Statt einer Trennlinie unter einer klebenden Kopfzeile eine kleine Verlaufsmaske dort, wo Inhalt und schwebende Fläche sich tatsächlich überlappen.
 - Eine Glasfläche materialisiert sich, sie blendet nicht nur ein. Unschärfe und Maßstab laufen dabei gemeinsam.
 
+### Liquid Glass im Web
+
+Vom Nutzer am 4. November 2026 als Vorbild für Form und Glasanmutung benannt. Gemessen an [Glisse](https://glisse.kelvinzhang.ca/), einer Umsetzung von Apples Liquid Glass für das Web.[^glisse] Im Kit liegt das Material als `blocks/glas.css` und `blocks/GlasFilter.astro`, siehe [[30-frontend/web-kit.md]].
+
+**Der Unterschied zum üblichen Milchglas.** Generierte Oberflächen setzen `blur(20px)` und eine weiße Fläche: Der Grund wird zu Nebel. Liquid Glass hält den Grund erkennbar, verstärkt seine Farbe und zeichnet die Kante mit Licht.
+
+| Eigenschaft | Gemessener Wert |
+|---|---|
+| Unschärfe | `blur(3px)`, an Reglergriffen `blur(2px)`; deutlich weniger als üblich |
+| Sättigung | `saturate(1.5)`, an Griffen zusätzlich `brightness(1.15)` |
+| Füllung | `rgba(255 255 255 / 0.6)` auf Bedienelementen, dunkel `rgba(40 40 40 / 0.62)` |
+| Kante | kein Rahmen, sondern Innenschatten: `inset 0 0 0 1.5px` Weiß 50 %, `inset 0 2px 1px` Weiß 45 % als Lichtkante oben |
+| Tiefe im Glas | `inset 2px 7px 24px` Schwarz 9 % und `inset -2px -7px 24px` Weiß 16 % |
+| Außenschatten | ruhend fast keiner, `0 1px 3px` Schwarz 6 %; angehobene Griffe `0 6px 24px` Schwarz 20 % |
+| Lichtbrechung | `backdrop-filter` mit SVG-Filter `url(#…)`, nur Chromium; Regler Biegung 0,45, Streuung 0,4, Rand 0,13 |
+
+**Formen.** Alles ist voll gerundet: Knöpfe 40 Pixel hoch mit Radius 20, Tab-Leiste 60 Pixel hoch mit Radius 30, Reglergriffe als Kapsel mit Radius 999. Ecken eines Containers folgen seiner Höhe, nicht einer festen Stufe. Gedrückte Elemente heben sich wie eine Linse aus der Fläche, statt nur die Farbe zu wechseln.
+
+**Grenzen.** Das Glas braucht etwas darunter: über einfarbigem Grund ist es wirkungslos. Für Text wird die Füllung gegenüber Glisse angehoben, weil Bedienelemente einer Demo kürzer gelesen werden als Website-Texte. Kontrast und deckender Rückfall gelten nach [[30-frontend/components-and-ui-states.md#Option durchscheinende Kopfzeile]]; `glas.css` deckt zusätzlich `prefers-reduced-transparency` und `forced-colors` ab.
+
 ## Barrierefreiheit über Reduced Motion hinaus
 
 Drei unabhängige Signale, nicht eines:
@@ -104,3 +124,4 @@ Die Typografieaussagen der Vorlage zu größenabhängigem Tracking und Zeilenabs
 [^wwdc-type]: [Apple WWDC 2020: The Details of UI Typography](https://developer.apple.com/videos/play/wwdc2020/10175/)
 [^wwdc-principles]: [Apple: Principles of Great Design](https://developer.apple.com/videos/design/)
 [^emilskills]: [Emil Kowalski: Skills For Designers and Engineers, MIT-Lizenz](https://github.com/emilkowalski/skills)
+[^glisse]: [Glisse, Kelvin Zhang](https://glisse.kelvinzhang.ca/), Version 0.5.0, gemessen am 4. November 2026.

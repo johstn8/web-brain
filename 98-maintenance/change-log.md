@@ -13,6 +13,16 @@ updated: 2026-10-02
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
 
+## 2026-11-04 — Erster Inspirationseingang des Nutzers verarbeitet
+
+Der Nutzer hat 16 Websites mit Notizen eingereicht. Alle wurden mit `stil-messen.ts` vermessen, entlang der Scrollstrecke aufgenommen und in [[90-references/inspiration-eingang.md#Verarbeitet]] eingeordnet. Daraus entstanden fünf Presets, dreizehn Blöcke und das Glasmaterial im Kit.
+
+**Aus den Repositories entfernt** auf Weisung des Nutzers: vier Seiten, die er als ungeeignet verworfen hat, und eine Fahrschulseite, die `check-slop.ts` mit 14 harten Sperren bestätigt hat. Sie stehen nicht mehr im Pool, im Katalog, in den Presets oder im Graphen; die Git-Historie bleibt nach `AGENTS.md` unverändert.
+
+**Geänderte Regel:** Die Gastronomie kennt neben dem Leitbild eine zweite Form auf weißem Grund, siehe [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]], weil der Nutzer Lagalante und Standard Serious Pizza ausdrücklich gelobt hat.
+
+**Nicht übernommen, obwohl gelobt:** riesige Ziffern auf Sektionen (S2) bei THE1, eingefärbte Wörter in Überschriften (S3) bei ko:mon und Meracinque, Pillen-Dachzeilen (S1) bei jovoco. Hier stehen Lob und harte Sperre gegeneinander; die Sperren bleiben, bis der Nutzer anders entscheidet.
+
 ## 2026-11-04 — Stil je Auftrag statt Hausstil aus dem Kit
 
 Auslöser war das Urteil des Nutzers nach Nush O Jan: Die Websites seien insgesamt zu gleich, Buttons immer eckig, oft die ältere Schrift der Fahrschule v11 und ein älterer Stil. Als Gegenbeispiel nannte er rico-gmbh.de, und er wünschte, dass jeder Lauf neu recherchiert und individueller baut.

@@ -251,7 +251,7 @@ Nodes (26): Abgeleitete Designmuster, Anordnung von Überschriften, Bewegungsbud
 
 ### Community 14 - "Projektreferenzen B2B"
 Cohesion: 0.08
-Nodes (26): Agency Invest, arcana Solutions, Einstellungserfolg, Fortiscloud, Julius Schaefer, Matthias Niggehoff, Modulo Consulting, optiMICE (+18 more)
+Nodes (26): Agency Invest, Einstellungserfolg, Julius Schaefer, Matthias Niggehoff, Modulo Consulting, optiMICE (+18 more)
 
 ### Community 15 - "Referenzprüfung und Ablage"
 Cohesion: 0.11
@@ -283,7 +283,7 @@ Nodes (21): Build-Time Content Loader Isolation, Builder-Checkliste vor Registri
 
 ### Community 22 - "Curriculum- und Projektquellen"
 Cohesion: 0.10
-Nodes (21): Auswahlregel für Projekte, Claude Code FULL COURSE: The Curriculum, comito, DEDIQ, eProc, ESP Media, Fokus, Inno One (+13 more)
+Nodes (21): Auswahlregel für Projekte, Claude Code FULL COURSE: The Curriculum, comito, eProc, ESP Media, Fokus, Inno One (+13 more)
 
 ### Community 23 - "Slop-Signaturen Aufbau und Raum"
 Cohesion: 0.11
@@ -543,7 +543,7 @@ Nodes (9): Brand Direction Inputs, Business Legal and Data Decision Escalation, 
 
 ### Community 87 - "Projektreferenzen Handwerk und Logistik"
 Cohesion: 0.22
-Nodes (9): car-tex, Spedition Stuckmann, Dust Moto, Fahrschule Gosink, Lightship, Mobilität, Automotive und Logistik, Scout Motors, T3 by EquipmentShare (+1 more)
+Nodes (9): car-tex, Spedition Stuckmann, Dust Moto, Lightship, Mobilität, Automotive und Logistik, Scout Motors, T3 by EquipmentShare (+1 more)
 
 ### Community 88 - "Git-Synchronisation"
 Cohesion: 0.31
@@ -663,7 +663,7 @@ Nodes (6): Bearbeiten: zwei Ansichten, eine Entscheidungsregel, Dashboard-Bereic
 
 ### Community 117 - "Projektreferenzen Immobilien"
 Cohesion: 0.33
-Nodes (6): Hofmann Immobilienverwaltung, Immobilien Einkauf, Huts, Immobilien, Architektur, Räume und Bau, Kononenko Architectural Bureau, THE1 Amsterdam
+Nodes (6): Immobilien Einkauf, Huts, Immobilien, Architektur, Räume und Bau, Kononenko Architectural Bureau, THE1 Amsterdam
 
 ### Community 118 - "Changelog 2026-09-03 Landing Page"
 Cohesion: 0.33

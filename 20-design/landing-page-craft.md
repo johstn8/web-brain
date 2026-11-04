@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-04
 sources_checked: 2026-09-03
 review_by: 2027-03-01
 depends_on:
@@ -95,6 +95,9 @@ Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein E
 | **Ortsfeste Bühne** | ein Medium bleibt stehen, der Text wechselt beim Scrollen | Produktkampagne mit mehreren gleichwertigen Aussagen | mehr als drei Wechsel, kein Fortschrittsgefühl, kein Reduced-Motion-Weg |
 | **Kontaktauftakt** | Ort, Zeiten, Weg und Kontaktweg stehen bereits im Auftakt, gestaltet und nicht als Fußnote | lokale Dienste, deren häufigste Aufgabe der Kontakt ist | Kontaktdaten ohne Angebot, dann fehlt die Antwort auf die erste Frage |
 | **Materialfläche** | eine kräftige, aus Marke oder Material hergeleitete Farb- oder Materialfläche ersetzt das Bild | Marken mit starker Farbherkunft, fehlendem Bildmaterial | eine Farbfläche ohne Herleitung, dann ist sie ein Verlauf mit anderen Mitteln |
+| **Riesenwort** | ein Wort oder kurzer Satz füllt die volle Breite, Bild oder Freisteller darunter, im Kit `auftakt/Riesenwort` | Marken mit kurzem Namen, Gastronomie, Produkte | ein langes Wort, das klein wird; Bild, das die H1 verdeckt |
+| **Schlichter Beweis** | Titel, ein Satz, zwei Aktionen, echte Bewertung, Bild mit großem Radius, darunter Kundenlogos, im Kit `auftakt/Schlicht` | Dienstleister mit gutem Ruf und wenig Fotos | erfundene Bewertung, Logos ohne Erlaubnis |
+| **Glasbühne** | kühles Bild über die volle Fläche, ruhiger Titel mittig, Handlung im Glasfeld, im Kit `auftakt/Glasbuehne` | Finanzen, Software, hochwertige Dienstleistung | unruhige Bildmitte; Feld ohne Funktion |
 | **Ruhiger Mittelsatz** | mittig gesetzter Titel, Unterzeile, eine Aktion, sehr viel Ruhe | Angebote, deren Wert gerade in Zurückhaltung liegt | wenn er ungeprüfter Default ist statt einer Entscheidung. Diese Komposition ist erlaubt und muss ausdrücklich begründet werden, weil sie zugleich die häufigste generierte Form ist |
 
 **Novelty Budget bleibt gültig.** Höchstens ein bis zwei auffällige Mechaniken pro Bildschirmausschnitt, siehe [[20-design/design-direction.md#Premium-Heuristik]].
@@ -119,6 +122,8 @@ Für manche Gattungen gibt es eine Komposition, die so viel besser funktioniert 
 Das Kit liefert diese Komposition als Baustein `blocks/auftakt/Leitbild.astro`, siehe [[30-frontend/web-kit.md]]. Das Auftaktfeld vergleicht in dieser Gattung keine Kompositionen, sondern Ausprägungen desselben Leitbilds, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
 
 **Ohne gutes Bildmaterial bleibt die Regel bestehen.** Gebaut wird mit dem besten verfügbaren Foto, bearbeitet nach [[20-design/imagery-and-ai-editing.md]]; das Fotoshooting wird als `P1` im Release-Readiness-Register vermerkt, siehe [[20-design/qualitaetsraster.md#Bildmaterial als Engpass]]. Ein Ausweichen auf Typo-Auftakt, Kontaktauftakt oder Index-Auftakt ist für Gastronomie keine Lösung des Bildproblems; diese Fassungen wurden gebaut und vom Nutzer verworfen.
+
+**Zweite zugelassene Form der Gastronomie: der weiße Grund.** Am 4. November 2026 hat der Nutzer Lagalante und Standard Serious Pizza ausdrücklich als Vorbild genannt. Sind sehr gute Freisteller oder Gerichtfotos vorhanden, darf statt des Leitbilds eine große Wortmarke oder ein freigestelltes Gericht direkt auf Weiß den Auftakt tragen, gebaut aus `blocks/auftakt/Riesenwort.astro` und `blocks/Freisteller.astro`. Name, Zeiten und die eine Handlung bleiben in der ersten Bildschirmhöhe. Ohne solches Bildmaterial gilt das Leitbild.
 
 Weitere Gattungen erhalten eine Zeile in dieser Tabelle, sobald ein Gattungsvergleich und eine Nutzerentscheidung dafür vorliegen.
 

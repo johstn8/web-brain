@@ -43,4 +43,19 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 
 | Adresse | Was gefiel | Daraus wurde | Nicht übernommen |
 |---|---|---|---|
+| [Glisse](https://glisse.kelvinzhang.ca/) | Apple-Design, Formen und Glas | `blocks/glas.css`, `GlasFilter.astro`, Preset `glas`; Werte in [[90-references/apple-fluid-interface.md#Liquid Glass im Web]] | die React-Bibliothek selbst; wir brauchen kein React |
+| [comito](https://www.comito.de/) | Auftakt und Unterseitenköpfe, Minimalismus, Kopfzeile | `auftakt/Vollbild` mit `hoehe="seite"`, Glaschips, Preset `dienst` | seitliche Kontaktleiste, dauerhaft schwebender Knopf |
+| [ko:mon](https://www.ko-mon.de/) | Auftakt, Scrollen, Wörter färben sich ein, abgerundet | `Wortlicht` ohne gsap, `Kennzahlen` als Zeile, `Kopfinsel` über Bild, Preset `dienst` | eingefärbte Wörter in Überschriften (S3) |
+| [jovoco](https://jovoco.io/) | Rundungen, schlichter Auftakt mit Google-Bewertung, Sprachwahl, Kopfzeile | `auftakt/Schlicht`, `Bewertungszeile`, Sprachwahl in `Kopfinsel`, Preset `dienst` | Pillen-Dachzeilen (S1), IBM Plex (Sperrliste) |
+| [metagram](https://metagram-solutions.com/) | versetzte Boxen mit Kennzahlen, schräge Karte mit animierten Bögen | `Kennzahlen` versetzt, `Bogenkarte` | Poppins- und Inter-Satz, Regenbogenflächen |
+| [Scaly](https://scaly.com/) | Elemente, Aufbau, Design | Aufbau mit Bild in Fläche und Wechsel hell/dunkel in `Kacheln` und `Vollbild`; Bewertung im Auftakt in `Bewertungszeile` | Chat-Fenster, Versal-Dachzeilen (S1) |
+| [tunymedia](https://tunymedia.at/) | Elemente, Aufbau, Design | runde Bildausschnitte und Logoreihe in `auftakt/Schlicht`, Preset `dienst` | Bildausschnitt mit Sonderform als Baustein: zu markengebunden |
+| [Lagalante](https://www.lagalante-restaurant.de/nuovo/) | Gerichte auf Weiß, Rechteckbilder am Rand, Textmenge | `Freisteller`, Preset `teller`, zweite Gastronomie-Form in [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]] | blasses Riesenwort hinter der Karte |
+| [MINE](https://minerestaurant.de/) | guter Grundaufbau | bestätigt `auftakt/Leitbild` als gesetzte Form | – |
+| [Carbone](https://carbonenewyork.com/) | kein KI-Eindruck, Geschichte, Bildplatzierung, Auftakt | bestätigt Leitbild; Lehre: Bild und Geschichte tragen, nicht Effekte | – |
+| [Standard Serious Pizza](https://www.standard-berlin.de/) | Weiß, Boxen und Bilder, große Schrift im Auftakt | `auftakt/Riesenwort`, Preset `teller` | Handzeichnungen und Schachbrett sind Marke, kein Baustein |
+| [THE1](https://the1.amsterdam/) | große Bilder, Schrift, Farben, ganz große Überschriften, Einfachheit | Preset `nord` (Rot `#fa4d43`, Gelb `#fbb833`, Pink `#f19ec8`, Grün `#027b49`), `Farbfelder`, `grammar.farbfelder` | riesige Ziffern 1, 2, 3 (S2); stattdessen Wörter |
+| [Lightship](https://www.lightshiprv.com/) | Aufbau, Kopfzeile mit Morph, abgerundete Bilder, Überschrift auf Bild, Karten mit Plus | `Kopfinsel`, `Querband`, `auftakt/Riesenwort` | der Stern-Logo-Morph selbst: gebaut ist das Schrumpfen, die Form hängt am Logo |
+| [Meracinque](https://www.meracinque.com/) | Farbwahl, Platzierungen, Blöcke, Video | Preset `genuss`, `Farbfelder`, Video in `auftakt/Vollbild` | eingefärbte Wörter in Überschriften (S3) |
+| [Mercury](https://mercury.com/) | kühler Look, Glasfelder im Auftakt | Preset `glas`, `auftakt/Glasbuehne`, `Kacheln` | – |
 | [RICO, Kempten](https://www.rico-gmbh.de/) | vom Nutzer am 2026-11-04 als Beispiel für einen Stil genannt, der „auch mal sinnvoll sein kann" | Kit-Preset `produkt`: Neo-Grotesk, weißer Grund, hellgraue Kacheln `#f0f2f5` mit 20 px Radius, Aktionen 8 px, keine Schatten, eine kräftige Markenfarbe. Muster „Produkt mit Kennwerten" in [[90-references/derived-design-patterns.md#Produktbeweis]]. Pool-Eintrag unter Hersteller und Technik. | farbige Wörter in Überschriften und Pillen-Dachzeilen (S1, S3), Inter (Sperrliste), Einwilligungsbanner für Werbetracking |

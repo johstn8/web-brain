@@ -25,6 +25,7 @@ impacts:
 |---|---|
 | `tokens/` | `tokens.json` als Quelle, `tokens.css` generiert, Theme-Ableitung |
 | `blocks/` | Kopfzeile, `auftakt/` mit fünf Kompositionen, darunter `Leitbild` als gesetzter Auftakt der Gastronomie, Leistungen, Öffnungszeiten, Anfahrt, Team, Kontaktformular, Bewertungen, Preise, `Karte` für Speise-, Getränke- und Preiskarten mit Gruppen, FAQ, Fußzeile |
+| `blocks/` neu | `auftakt/Vollbild`, `Schlicht`, `Riesenwort`, `Glasbuehne`, `Kopfinsel`, `Bewertungszeile`, `Wortlicht`, `Kennzahlen`, `Bogenkarte`, `Querband`, `Kacheln`, `Freisteller`, `Farbfelder`, Glasmaterial `glas.css`; Herkunft und Voraussetzungen in `blocks/README.md` |
 | `legal/` | Impressum, Datenschutz, `consent/` |
 | `content/` | `schema.json` als Datenmodell für Betriebsdaten, mit `karten` (Gruppen, Positionen, Varianten, Merkmale) und `texte` (owner-bearbeitbare Fließtexte je stabilem Schlüssel) |
 | `scripts/` | `extract-old-site.ts`, `render-shots.ts`, `check-axe.ts`, `check-slop.ts`, `check-contrast.ts`, `link-check.ts`, `tokens-to-css.ts`, `tokens-to-designsystem.ts`, `fetch-fonts.ts`, `stil-messen.ts`, `stilverlauf.ts`, `qa.sh` |
@@ -38,10 +39,15 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 
 ## Art-Direction-Presets
 
-`tokens/presets/` trägt acht vollständige Stilrichtungen als **Datei**, nicht als Prosa. Jede ist ein kompletter Tokensatz mit Schriftrollen, Palette für Licht und Dunkel, Radius-, Abstands-, Aktions- und Bewegungsgrammatik. Alle acht mit derselben Auftaktzeile gerendert liegen als `tokens/presets/kacheln/uebersicht.webp` im Kit.
+`tokens/presets/` trägt dreizehn vollständige Stilrichtungen als **Datei**, nicht als Prosa. Jede ist ein kompletter Tokensatz mit Schriftrollen, Palette für Licht und Dunkel, Radius-, Abstands-, Aktions- und Bewegungsgrammatik. Alle mit derselben Auftaktzeile gerendert liegen als `tokens/presets/kacheln/uebersicht.webp` im Kit.
 
 | Preset | Anmutung | Für | Abgrenzung, Aktion | Display / Text |
 |---|---|---|---|---|
+| `glas` | gegenwärtig | Finanzen, Software, hochwertige Dienstleistung | Glas über Bild, Aktion Pille | Albert Sans |
+| `nord` | gegenwärtig | Kreative Betriebe, Kultur, Marken mit Haltung | Farbfelder auf Hellgrau, Aktion Pille | Familjen Grotesk |
+| `teller` | gegenwärtig | Gastronomie, Manufaktur, starke Fotos | Reinweiß, Aktion Pille | Jost |
+| `dienst` | gegenwärtig | IT, Agentur, Weiterbildung, Veranstaltung | weiche Kacheln, Aktion Pille | Manrope |
+| `genuss` | gegenwärtig | Lebensmittelmarke, Hofladen, Feinkost | Farbfelder auf Creme, Aktion weich | Gupter / Readex Pro |
 | `produkt` | gegenwärtig | Hersteller, Industrie, Technik | Kacheln mit 20 px Radius, Aktion weich | Onest |
 | `freundlich` | gegenwärtig | Kita, Friseur, Café, Sport, Fahrschule | Farbfläche, Aktion Pille | Gabarito / Figtree |
 | `klar` | gegenwärtig | Beratung, Immobilien, IT, moderne Praxis | Haarlinie, Aktion rund | Golos Text |
@@ -55,7 +61,7 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 
 **Warum das ein Artefakt und keine Regel ist.** Eine Stilrichtung als Prosa muss bei jeder Anwendung gelesen, verstanden und in CSS übersetzt werden, und das Ergebnis fällt jedes Mal anders aus. Als Datei wird sie einmal gebaut und danach gewählt oder abgeleitet.
 
-**Warum es acht sind und nicht mehr fünf.** Bis 2026-11-04 hatten drei der fünf Presets Radius null, drei eine Serife, und die Buttons hingen an `radius-sm`. Das Ergebnis über mehrere Projekte war ein einheitlicher, älterer Hausstil, siehe [[20-design/anti-ai-slop.md#Bekannte Ballungen]]. Seitdem ist die Aktionsform ein eigenes Feld `grammar.aktionsform` (`kante`, `weich`, `rund`, `pille`), das `tokens-to-css.ts` als `--aktion-radius` ausgibt, und drei gegenwärtige Presets sind dazugekommen.
+**Warum es dreizehn sind und nicht mehr fünf.** Bis 2026-11-04 hatten drei der fünf Presets Radius null, drei eine Serife, und die Buttons hingen an `radius-sm`. Das Ergebnis über mehrere Projekte war ein einheitlicher, älterer Hausstil, siehe [[20-design/anti-ai-slop.md#Bekannte Ballungen]]. Seitdem ist die Aktionsform ein eigenes Feld `grammar.aktionsform` (`kante`, `weich`, `rund`, `pille`), das `tokens-to-css.ts` als `--aktion-radius` ausgibt, und drei gegenwärtige Presets sind dazugekommen. Fünf weitere stammen aus den Funden des Nutzers vom selben Tag, siehe [[90-references/inspiration-eingang.md#Verarbeitet]]. Kräftige Flächen außerhalb der Farbrollen stehen in `grammar.farbfelder`, der Kontrastlauf prüft sie mit.
 
 ### Werkzeuge für die Stilwahl
 

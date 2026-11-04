@@ -27,10 +27,7 @@ Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Einträge mit einem R
 | [comito](https://www.comito.de/) | Beratung, B2B-Service | sachlich, vertrauensnah | niedrig bis mittel |
 | [ko:mon](https://www.ko-mon.de/) | Beratung, Organisation | ruhig, editorial | niedrig bis mittel |
 | [jovoco](https://jovoco.io/) | Digitalberatung, B2B | produktnah, modern | mittel |
-| [DEDIQ](https://www.dediq.com/) | Investment, Corporate | präzise, souverän | niedrig bis mittel |
-| [Fortiscloud](https://www.fortiscloud.de/) | IT-Service, Cloud | technisch, klar | mittel |
 | [metagram Solutions](https://metagram-solutions.com/) | Daten, Beratung | reduziert, systemisch | mittel |
-| [arcana Solutions](https://arcana-solutions.com/) | Analytics, B2B | technisch, erklärend | mittel |
 | [ESP Media](https://espmedia.de/) | Medien, Agentur | visuell, projektbezogen | mittel |
 | [Pexon](https://pexon-consulting.de/) | Cloud, Consulting | strukturiert, fachlich | mittel |
 | [Scaly](https://scaly.com/) | Software, Beratung | modern, produktnah | mittel |
@@ -116,7 +113,6 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
-| [Hofmann Immobilienverwaltung](https://www.hofmann-immobilienverwaltung.de/) | Verwaltung, lokale Immobilien | seriös, informationsorientiert | niedrig |
 | [Immobilien Einkauf](https://immobilien-einkauf.de/) | Immobilienservice | direkt, conversion-orientiert | niedrig bis mittel |
 | [Huts](https://huts.com/) | Architektur, Wohnen | natürlich, editorial, großzügig | mittel |
 | [THE1 Amsterdam](https://the1.amsterdam/) | Büroflächen, Architektur | urban, farbig, geschichtsbewusst | mittel bis hoch |
@@ -127,7 +123,6 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
 | [car-tex](https://www.car-tex.de/) | Fahrzeugservice, Automotive | technisch, lokal | niedrig bis mittel |
-| [Fahrschule Gosink](https://fahrschule-gosink.de/) | Fahrschule, lokale Ausbildung | persönlich, mobilorientiert, prozessklar | mittel |
 | [Spedition Stuckmann](https://spedition-stuckmann.de/) | Logistik, Transport | robust, seriös | niedrig |
 | [Scout Motors](https://www.scoutmotors.com/) | Fahrzeugmarke, Outdoor | bildstark, markenprägend | hoch |
 | [T3 by EquipmentShare](https://t3.tech/) | Flottenbetrieb, B2B-Software | technisch, produktnah | mittel bis hoch |
@@ -139,6 +134,7 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
+| [Glisse](https://glisse.kelvinzhang.ca/) | Glasmaterial, Bedienelemente | Liquid Glass für das Web, Komponentenbibliothek, Maßstab für `blocks/glas.css` | hoch |
 | [RICO, Kempten](https://www.rico-gmbh.de/) | Hersteller, Maschinenbau, Technik, Handwerk mit Geräten | hell, produktnah, Kacheln mit großem Radius, eine Markenfarbe; vom Nutzer genannt, über [[90-references/inspiration-eingang.md]] verarbeitet, Grundlage des Kit-Presets `produkt` | mittel |
 
 ## SaaS, KI, Software, Finanzen und Entwicklerprodukte
