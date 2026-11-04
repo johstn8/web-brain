@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 review_by: 2027-02-27
 depends_on:
   - "[[20-design/qualitaetsraster.md]]"
@@ -17,6 +17,8 @@ impacts:
 # Reference Research Workflow
 
 ## Pflicht und Ergebnis
+
+**Eine Website darf einem Vorbild eng folgen; das ist seit 2026-11-05 der Normalfall.** Die Quoten unten stammen aus der Zeit, in der Eigenentwürfe als Standard galten. Eine vom Nutzer genannte Seite oder Vorlage hat immer Vorrang und zählt nicht gegen sie, und die Übernahmetiefe darf `prägend` sein. Grenzen bleiben Texte, Bilder, Logos und Quellcode der Seite.
 
 Vor dem Design jeder Website, **auch einer einzelnen**, steht der [[#Gattungsvergleich]]: gute und schlechte Websites derselben Gattung werden angesehen, nach dem [[20-design/qualitaetsraster.md]] bewertet, und die zwei bis drei besten werden zum Maßstab. Er ist unabhängig von Auftragszahl und Referenzmodus und entfällt nie.
 

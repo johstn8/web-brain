@@ -27,6 +27,7 @@ Remote `git@github.com:johstn8/web-brain`, Branch `main`, privat. Der Agent füh
 - Der kanonische Stand liegt im Git-Remote, nicht im lokalen Arbeitsverzeichnis.
 - Externe Fakten erhalten Markdown-Fußnoten mit direkter URL, keine nackten Quellenlisten.
 - Die Anzahl der zu bauenden Websites steht ausschließlich im Auftrag des Nutzers; keine Angabe bedeutet genau eine Website. Kanonisch in [[00-start/05-web-product-workflow.md#Anzahl der Websites]].
+- Gestaltet wird von einer Website aus, nicht von Regeln aus. Jede neue Website folgt im Aufbau einer Vorlage oder einer vom Nutzer genannten Seite und wird am Ende daneben gelegt. Kanonisch in [[20-design/design-direction.md#Stilwahl je Auftrag]].
 - Über Veröffentlichung, Rechtstexte und Asset-Freigabe entscheidet allein der Nutzer, nie die KI. Rechtliche Prüfhinweise sperren keinen Build und keine Vorschau.
 
 Jede fachliche Regel zu Design, Copy, Komponenten, Farbe, Technik, Recht und Betrieb steht in den Notizen, beginnend bei [[00-start/01-core-rules.md]].
@@ -47,7 +48,9 @@ Jede fachliche Regel zu Design, Copy, Komponenten, Farbe, Technik, Recht und Bet
 
 ## Priorität bei Konflikten
 
-1. Auftragstext · 2. `PROJECT.md` · 3. dieses AGENTS.md · 4. kanonische Fachnotiz · 5. Vorlage · 6. Referenz. Konflikt dokumentieren, nicht still entscheiden.
+1. Auftragstext · 2. `PROJECT.md` · 3. in Gestaltungsfragen: Websites, die der Nutzer genannt hat, und die daraus gebauten Vorlagen in `web-kit/vorlagen/` · 4. dieses AGENTS.md · 5. kanonische Fachnotiz · 6. Dateivorlage · 7. sonstige Referenz. Konflikt dokumentieren, nicht still entscheiden.
+
+Der dritte Rang ist Absicht. Die Notizen sind aus Fehlern entstanden und beschreiben, was schiefging; die Websites des Nutzers zeigen, was er will. Weicht eine Regel von einer solchen Website ab, gewinnt die Website. Unberührt bleiben Recht, Barrierefreiheit, Wahrheit der Inhalte und die Grenze gegen das Kopieren fremder Texte, Bilder und Marken.
 
 ## Graphify
 

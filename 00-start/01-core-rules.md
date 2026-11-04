@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-05
 impacts:
   - "[[80-templates/project-master-spec.md]]"
   - "[[70-qa/quality-gates.md]]"
@@ -18,24 +18,24 @@ impacts:
 
 ## Design
 
+- **Vorrang der Vorbilder.** Eine Website entsteht aus dem Aufbau einer konkreten guten Seite, nicht aus diesen Regeln. Ausgangspunkt ist eine Vorlage aus [[30-frontend/web-kit.md#Website-Vorlagen]] oder eine vom Nutzer genannte Website. Alles in diesem Abschnitt gilt nur, soweit das Vorbild es nicht anders macht. Der Aufbau wechselt von Auftrag zu Auftrag; Text links, Bild rechts, Knöpfe darunter ist eine Möglichkeit von vielen und kein Standard.
 - Ein visuelles Leitmotiv statt Effekt-Sammlung.
-- **Vor jeder Website steht der Gattungsvergleich**: gute und schlechte Websites derselben Gattung ansehen, nach [[20-design/qualitaetsraster.md]] bewerten, zwei bis drei Benchmarks benennen. Vor der Lieferung wird die eigene Startseite im Benchmarkvergleich daneben gelegt und muss mindestens 16 von 20 Punkten erreichen. Siehe [[90-references/reference-research-workflow.md#Gattungsvergleich]].
-- Bei einer einzelnen Website prägt höchstens eine Benchmark des Gattungsvergleichs als Leitreferenz. Bei mehreren Websites genau eine fachlich passende konkrete Live-Seite für genau eine Fassung prägend verwenden; die übrigen Fassungen sind Eigenentwürfe. Eine vom Nutzer ausdrücklich vorgegebene Referenz hat Vorrang. Sammlungen sind nur Entdeckungsquellen; nur eine dokumentiert fehlende starke Passung erlaubt ausnahmsweise ausschließlich Eigenentwürfe. Siehe [[90-references/reference-research-workflow.md]].
+- **Vor jeder Website steht der Blick auf gute Seiten:** Vorlagen und Inspirationseingang zuerst, dazu der Gattungsvergleich nach [[90-references/reference-research-workflow.md#Gattungsvergleich]], soweit er neue Erkenntnis bringt.
+- Eine Website darf von einem Vorbild stark geprägt sein; das ist der Normalfall. Bei mehreren Websites trägt jede ein anderes Vorbild.
 - Definiertes Farb-, Typografie-, Spacing-, Grid-, Radius-, Schatten- und Motion-System.
 - Farbrollen und Bildsprache aus Marke, Produkt, Ort, Referenzen oder realem Material ableiten. Bilder, Designs und Animationen dürfen für den kreativen Build direkt eingesetzt oder adaptiert werden; ihr tatsächlicher Einsatz wird danach dokumentiert.
 - Farbwelten werden aus Marke, Material, Inhalt und realem Kontext hergeleitet. Eine häufig verwendete Palette ist kein Verbot, aber ein unbegründeter Generator-Default ist ein Befund. Siehe [[20-design/color-system.md#Häufige Defaults bewusst entscheiden]].
-- **Harte Sperren, nicht begründbar:** keine Zeile über einer Überschrift, keine Nummern an Sektionen, kein farbig oder kursiv abgesetzter Teil einer Überschrift, kein Verlauf, der ein Foto ausblendet, keine drei gleich gebauten Sektionen in Folge, keine fremdsprachigen Zierwörter, keine Vorlagenmöbel. `qa.sh` misst die ersten fünf. Kanonisch in [[20-design/anti-ai-slop.md#Harte Sperren]].
+- **Sperren für Entwürfe ohne Vorbild:** keine Zeile über einer Überschrift, keine Nummern an Sektionen, kein farbig oder kursiv abgesetzter Teil einer Überschrift, kein Verlauf, der ein Foto ausblendet, keine drei gleich gebauten Sektionen in Folge. Sie fangen die typischen KI-Muster ab. Macht das Vorbild es so, gilt das Vorbild, siehe [[20-design/anti-ai-slop.md#Harte Sperren]].
 - Kopfzeileninventar und Navigationsmuster aus Informationsarchitektur, Nutzungshäufigkeit, Wortlängen und Art Direction ableiten. Es gibt keine globale Sollzahl. Siehe [[30-frontend/components-and-ui-states.md#Kopfzeile und Hauptnavigation]].
 - Ein gefundenes Firmenlogo wird in jeder gebauten Website sichtbar verwendet. Siehe [[20-design/design-direction.md#Logo des Betriebs]].
 - Die Landing Page wird zuerst auf Nutzwert gebaut und darf danach ausdrucksstark werden. Angebot, konkreter Inhaltsanker und nächste Handlung müssen zusammen lesbar sein; ein Bild ist keine Pflicht und Schriftgröße allein kein Konzept. Kanonisch in [[20-design/landing-page-craft.md]].
-- Der Auftakt besetzt alle sechs Auftaktrollen und wählt eine benannte Komposition aus [[20-design/landing-page-craft.md#Auftakt-Repertoire]]. Die feste Kette aus Hero, drei Karten, Logo-Wand, Stimmen, Preisen und FAQ ist kein Aufbau, sondern eine Gewohnheit; die Reihenfolge folgt den realen Nutzerfragen dieser Zielgruppe.
+- Der Auftakt kommt aus dem Vorbild. Die Rollen und das Repertoire in [[20-design/landing-page-craft.md]] sind Prüffragen für Entwürfe ohne Vorbild.
 - Ein Signaturdetail ist möglich, nicht verlangt, und stammt nur aus realem Material des Betriebs, nie aus Typografie, Ziffern oder Linien. Siehe [[20-design/landing-page-craft.md#Das Signaturdetail]].
-- Für manche Gattungen ist der Auftakt gesetzt. **Gastronomie erhält das randlose Leitbild**: Foto oder Video über die volle Höhe, H1 darauf, ein Satz, ein Band mit Zeiten, Adresse und Telefon. Siehe [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]].
+- Gastronomie bewährt sich mit Vollbild-Foto oder weißem Grund mit Freistellern; beides ist eine Empfehlung, keine Vorgabe. Siehe [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt]].
 - Aufeinanderfolgende Sektionen wechseln Anordnung und Bildmaßstab. Siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]].
-- Pro Seite kommen zwei bis drei verschiedene Überschriftenanordnungen vor. Eine einzige wiederholte Anordnung ist ein Anti-Slop-Befund. Siehe [[20-design/design-direction.md#Komposition und Überschriften]].
 - **Vor der ersten Komponente wird der Tokenvertrag als Stilkachel gerendert und angesehen**, in Licht und Dunkel, an echtem Text. Sie ist das visuelle Ziel des Projekts und ersetzt die reine Werteaufzählung im Design Contract. Siehe [[20-design/visual-iteration-loop.md#D0 Stilkachel: das visuelle Ziel vor dem ersten Bauteil]].
-- **Der Auftakt wird nicht nur gewählt, sondern gebaut.** Zwei bis drei Auftaktfassungen mit verschiedenen Kompositionen und denselben realen Inhalten entstehen wirklich, werden bei 375 und 1280 Pixel nebeneinander angesehen, und die Wahl steht mit Grund im Design Contract. Siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
-- **Mindestens drei Iterationsdurchgänge am ganzseitigen Render des laufenden Builds**, je Website getrennt, jeder mit schriftlicher Befundliste. Ein Render ohne Befundliste ist kein Durchgang. Siehe [[20-design/visual-iteration-loop.md#Pflichtdurchgänge]].
+- **Am Ende liegt die Seite neben ihrem Vorbild.** Aufbau, Maßstab, Rhythmus und Anmutung werden Bild an Bild verglichen. Weicht sie sichtbar ab, ohne dass der Inhalt das verlangt, wird nachgebaut.
+- Mindestens ein Durchgang am ganzseitigen Render mit Befundliste, mehr nach Bedarf. Siehe [[20-design/visual-iteration-loop.md#Pflichtdurchgänge]].
 - **Bei jedem Website-Build wird UI UX Pro Max stark empfohlen**, ist aber keine Abnahmebedingung. Fehlt der Skill, gilt die Ersatzstrecke aus [[00-start/04-plugins-and-skills.md#Ersatzstrecke ohne Skills]]. Gate `G1` prüft das Ergebnis: Tokenvertrag, Zustände, Type Ramp, Kontrast in beiden Themes, echte Darstellung. Siehe [[00-start/04-plugins-and-skills.md#Auslösebedingung]].
 - Der Leitbenchmark stammt aus [[20-design/interface-benchmarks.md]] und wird im Design Contract benannt.
 - **Die H0-Handwerksuntergrenze gilt bei jedem Build.** Zustände, Fokus, Kontextkontrast, klare Hierarchie und ein konsistentes System innerhalb der Website sind verbindlich. Radius, Rahmenbehandlung, Schatten, Karten, Kopfzeile, Zweitschrift, Flächen- und Bewegungslogik werden je Website entschieden. B5 ist ein wählbares Stilprofil. Siehe [[20-design/interface-benchmarks.md#H0 Handwerksuntergrenze]].

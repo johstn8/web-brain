@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
   - "[[90-references/reference-research-workflow.md]]"
@@ -91,12 +91,12 @@ Die Qualitätsregeln gelten in beiden Bahnen unverändert. Verkürzt wird die Na
 3. Betriebsdaten und Marktumfeld recherchieren, Kurzbrief in `PROJECT.md` schreiben: Angebot, Zielgruppe, primäre Handlung, Beweisformen, Sitemap.
    **Gattungsvergleich** nach [[90-references/reference-research-workflow.md#Gattungsvergleich]]: acht bis zwölf Websites derselben Gattung aufnehmen, nach [[20-design/qualitaetsraster.md]] bewerten, zwei bis drei Benchmarks und ein bis zwei Negativbeispiele benennen, die übertragbaren Prinzipien in Sätzen festhalten. Er entfällt auch bei genau einer Website nicht.
    **Stilrecherche** nach [[90-references/reference-research-workflow.md#Stilrecherche]]: Wirkung in drei Adjektiven, zuerst der [[90-references/inspiration-eingang.md]], dann drei bis fünf aktuelle Websites mit dieser Wirkung, mindestens eine aus einer anderen Gattung, gemessen mit `scripts/stil-messen.ts`. Der Stil entsteht in jedem Lauf neu, nicht aus dem Kit.
-4. Blöcke aus [[30-frontend/web-kit.md]] ziehen, statt sie neu zu schreiben. Das Kit ist der Pflichtausgangspunkt der Fast Lane.
+4. **Vorbild wählen und Vorlage kopieren.** Eine [[30-frontend/web-kit.md#Website-Vorlagen|Vorlage]] oder genannte Website gibt den ganzen Aufbau vor. Der Aufbau wechselt von Auftrag zu Auftrag, `stilverlauf.ts` zeigt die letzten. Blöcke aus dem Kit helfen, wo sie passen.
    **Owner-Hosting wird dabei immer mitgebaut**, siehe [[#Owner-Hosting ist Standard]]: eine Inhaltsdatei, stabile Pointer, Feldtypen, Preview-Route. Es nachträglich einzuziehen kostet ein Vielfaches.
 5. Projekteigenes Preset nach [[20-design/design-direction.md#Stilwahl je Auftrag]] ableiten, zwei Richtungen als Stilkachel rendern, eine wählen und mit `scripts/stilverlauf.ts` gegen die letzten Websites prüfen. Danach die Tokenwerte dieses Betriebs setzen; die Rollennamen des Tokenvertrags aus [[20-design/color-system.md#Tokenvertrag]] bleiben unverändert. Ableitung und Artefaktweg in [[20-design/design-systems-und-artefakte.md]]. Jede Schriftfamilie wird vorher gegen die [[20-design/typography-layout-and-spacing.md#Sperrliste]] geprüft, auch wenn das Preset sie vorschlägt. Die Sektionsfolge der Startseite steht mit Anordnung und Bildmaßstab je Sektion im Design Contract, bevor gebaut wird, siehe [[20-design/landing-page-craft.md#Sektionsrhythmus]].
-6. Zwei Auftaktfassungen bauen: mit verschiedenen Kompositionen aus [[20-design/landing-page-craft.md#Auftakt-Repertoire]], oder, wenn eine [[20-design/landing-page-craft.md#Gattungsregeln für den Auftakt|Gattungsregel]] greift, als zwei Ausprägungen der gesetzten Komposition. Für Gastronomie ist das das Leitbild aus `blocks/auftakt/Leitbild.astro`. Bei 375 und 1280 Pixel neben den Auftakten der Benchmarks ansehen, eine mit Begründung wählen.
+6. Inhalte des Betriebs einsetzen und die Seite neben ihr Vorbild legen, bei 375 und 1280 Pixel: Auftakt, Abschnittsfolge, Maßstab. Sichtbare Abweichung ohne inhaltlichen Grund wird nachgebaut.
 7. Ein Renderdurchgang am ganzseitigen Render mit schriftlicher Befundliste nach [[20-design/visual-iteration-loop.md]]. Ein Render ohne Befundliste ist kein Durchgang. Er endet mit dem [[20-design/qualitaetsraster.md#Benchmarkvergleich]]: eigene Startseite neben Benchmarks und Negativbeispielen, Rasterpunkte, drei schriftliche Antworten. Unter 16 Punkten wird weitergearbeitet.
-8. `scripts/qa.sh` aus dem Kit laufen lassen: Lighthouse, axe, interner Link-Check, Screenshots bei 375 und 1280, Prüfung auf Platzhalter- und `TODO`-Reste und die [[20-design/anti-ai-slop.md#Harte Sperren]]. Eine harte Sperre lässt den Lauf scheitern und wird behoben, nicht begründet.
+8. `scripts/qa.sh` aus dem Kit laufen lassen: Lighthouse, axe, interner Link-Check, Screenshots bei 375 und 1280, Prüfung auf Platzhalter- und `TODO`-Reste und die [[20-design/anti-ai-slop.md#Harte Sperren]]. Eine harte Sperre lässt den Lauf scheitern, außer das Vorbild macht es so, dann `--erlaubt`.
 9. **Auf `johannstein.com/dev` verfügbar machen** — siehe [[#Jede Website liegt sofort auf /dev]]. Das geschieht, sobald der erste Build steht, nicht am Ende.
 10. `G0` verkürzt und `G1` nach [[70-qa/quality-gates.md]] abnehmen, Release-Readiness-Register schließen.
 11. **Eine** Nachricht nach [[#Die Vorlage am Ende]]: Link zuerst, dann Entscheidungen, Annahmen und Offenes.

@@ -33,12 +33,12 @@ Ein Befund entsteht, wenn das Stilzitat austauschbar ist, Lesbarkeit oder Vertra
 
 ### Sperrliste
 
-Diese Familien sind die Trainingsdaten-Defaults generierter Oberflächen. Sie werden nicht gewählt, auch nicht, wenn ein Preset, ein Skill oder eine Referenz sie vorschlägt:[^impeccablefonts]
+Diese Familien sind die Trainingsdaten-Defaults generierter Oberflächen. Ohne Vorbild werden sie nicht gewählt, auch wenn ein Preset oder ein Skill sie vorschlägt. Nutzt die Vorbild-Website eine dieser Familien, oder ist sie der nächste freie Ersatz für deren Schrift, ist sie erlaubt:[^impeccablefonts]
 
 Inter, Roboto, Open Sans, Lato, Montserrat, Arial und Helvetica ohne Begründung, Fraunces, Instrument Sans, Instrument Serif, Geist, Mona Sans, Plus Jakarta Sans, Space Grotesk, Space Mono, Recoleta, Playfair Display, Cormorant, Lora, Crimson, Newsreader, Syne, IBM Plex, DM Sans, DM Serif, Outfit.
 
 - **Die Prüfung gegen diese Liste findet vor dem Design Contract statt**, nicht im Review. Wer eine Familie aus einem Kit-Preset übernimmt, prüft sie trotzdem: Bis 2026-10-02 schlugen drei der fünf Presets eine gesperrte Familie vor, und eine Fassung wurde damit gebaut, bevor der Fehler auffiel.
-- **Die Sperrliste steht über jeder Preset-Empfehlung.** Ein Preset liefert Rollen und Grammatik, nicht das letzte Wort über die Familie.
+- **Die Sperrliste steht über jeder Preset-Empfehlung**, aber unter dem Vorbild.
 - Ersatz wird am Bild gewählt: zwei bis drei Kandidaten mit der echten Auftaktzeile nebeneinander rendern, dann entscheiden. Breite und Grauwert ändern sich mit der Familie; Stufen und Gewichte werden danach nachgezogen.
 
 ## Typografie

@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 depends_on:
   - "[[10-strategy/discovery-and-scope.md]]"
 impacts:
@@ -76,9 +76,13 @@ Stilabstand ist kein Selbstzweck. Wenn dieselbe grobe Landing-Page-Anatomie oder
 
 Kanonische Regel dafür, woher der Stil einer Website kommt. Sie gilt für jede Website, auch für genau eine.
 
+**Aufbau vor Farbe.** Eine Website unterscheidet sich von der nächsten durch ihren Aufbau: wo was steht, in welchem Maßstab, wie die Abschnitte aufeinander folgen, wie die Kopfzeile sitzt. Farben und Schriften sind der kleinere Teil. Am 5. November 2026 hat der Nutzer das klargestellt: Acht Presets auf denselben Blöcken ergaben acht Färbungen derselben Seite. Deshalb wird von einer ganzen Vorlage aus [[30-frontend/web-kit.md#Website-Vorlagen]] oder von einer genannten Website ausgegangen, nicht von Blöcken und Tokens. Mehrere Vorbilder werden nicht gemittelt: Ein Mittelwert aus drei guten Seiten ist keine davon. Die Website folgt einem Vorbild; ein zweites liefert höchstens einzelne Teile.
+
+**Am Vorbild messen.** Die Maße werden gemessen, nicht geschätzt, die Abschnitte mit `stil-messen.ts --strecke` aufgenommen, das Ergebnis neben das Original gelegt. Am Original hält sich die Seite strenger als an die Notizen dieses Vaults.
+
 **Gegenwärtig ist der Normalfall.** Ohne Bezug aus Marke, Ort oder Auftrag wirkt eine Website von heute: gegenwärtige Grotesk oder eine Serife mit klar begrenzter Rolle, Aktionen mit einer bewusst gewählten Form, ein Grund, der nicht Papier imitiert. Eine klassische Anmutung, also Serife als Displayschrift, Radius null überall, warmer Papier- oder Leinengrund, kondensierte Schildschrift, ist eine Entscheidung nach [[20-design/typography-layout-and-spacing.md#Stilzitat und Zeitbezug]] und braucht diesen Bezug. Dass die Gattung es nahelegt, genügt nicht: Fünf der acht Websites bis 2026-11-04 trugen eine Serife als Displayschrift, und der Nutzer hat den Gesamteindruck als zu gleich und zu alt benannt.
 
-**Jeder Lauf recherchiert seinen Stil neu.** Das Kit liefert Material und Prüfungen, nicht den Stil. Zusätzlich zum Gattungsvergleich entsteht je Auftrag eine [[90-references/reference-research-workflow.md#Stilrecherche|Stilrecherche]]: drei bis fünf aktuelle Websites, die die gesuchte Wirkung tragen, ausdrücklich auch aus anderen Gattungen. Ein Fliesenleger kann von einem Industriehersteller lernen, ein Café von einer Sportmarke. Daraus wird ein projekteigenes Preset unter `<projekt>/design/<name>.json` abgeleitet; ein Kit-Preset aus [[30-frontend/web-kit.md#Art-Direction-Presets]] dient dabei als technischer Startpunkt, nicht als Stilentscheidung.
+**Jeder Lauf recherchiert seinen Stil neu.** Das Kit liefert Material und Prüfungen, nicht den Stil. Zusätzlich zum Gattungsvergleich entsteht je Auftrag eine [[90-references/reference-research-workflow.md#Stilrecherche|Stilrecherche]]: drei bis fünf aktuelle Websites, die die gesuchte Wirkung tragen, ausdrücklich auch aus anderen Gattungen. Ein Fliesenleger kann von einem Industriehersteller lernen, ein Café von einer Sportmarke. Daraus werden Aufbau und Werte übernommen; die passende Vorlage ist der Startpunkt, sonst die Seite selbst.
 
 **Zwei Richtungen am Bild, nicht im Kopf.** Vor der ersten Komponente werden zwei Richtungen aus verschiedenen Referenzen als Stilkachel gerendert, also Kopfzeile, Auftaktzeile, Aktionen und eine Inhaltsfläche mit echtem Text. Eine wird mit Begründung gewählt. Ein Modell, das nur gedanklich wählt, landet bei der wahrscheinlichsten Lösung.
 

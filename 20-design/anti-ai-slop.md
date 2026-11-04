@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 source: "[[90-references/inspiration-catalog.md]]"
 impacts:
   - design-direction
@@ -14,7 +14,11 @@ impacts:
 
 ## Harte Sperren
 
-Diese Muster sind **gesperrt, nicht begründbar**. Für sie gibt es keinen Weg über den Design Contract, keine Ausnahme wegen eines Signaturdetails und keine Abwägung im Review. Sie entstehen nicht aus einer Entscheidung, sondern aus der Wahrscheinlichkeit, und sie werden von Menschen sofort als generiert erkannt.
+Diese Muster sind für **Entwürfe ohne Vorbild** gesperrt und nicht begründbar: Für sie gibt es keinen Weg über den Design Contract und keine Abwägung im Review.
+
+**Ausnahme seit 2026-11-05: das Vorbild.** Folgt eine Website einer Vorlage oder einer vom Nutzer genannten Seite und macht diese es so, darf sie es auch, etwa die riesigen Ziffern von THE1 oder das eingefärbte Wort von ko:mon. `check-slop.ts --erlaubt <sperren>` und `qa.sh --erlaubt` stufen genau diese Sperren dann zum Befund herab, der Grund steht in `PROJECT.md`. Kleine Dachzeilen und plötzlich kursive Wörter hat der Nutzer ausdrücklich als KI-typisch benannt; sie bleiben auch mit Vorbild die Ausnahme.
+
+Diese Sperren fangen ab, was ein Modell ohne Vorbild von selbst baut. Sie entstehen nicht aus einer Entscheidung, sondern aus der Wahrscheinlichkeit, und sie werden von Menschen sofort als generiert erkannt.
 
 | Nr. | Gesperrt | Erkennungszeichen | Stattdessen |
 |---|---|---|---|
@@ -26,7 +30,7 @@ Diese Muster sind **gesperrt, nicht begründbar**. Für sie gibt es keinen Weg �
 | S6 | **Fremdsprachige Zierwörter** | Gattungs- oder Stimmungswörter in der Landessprache der Küche als Dekoration: „Cucina Italiana", „Benvenuti", „Dolce Vita", „Bon Appétit" als Beschriftung, Plakette oder Dachzeile | Eigennamen, Speisenbezeichnungen und der eingetragene Name des Betriebs bleiben, alles andere wird in der Sprache der Website gesagt |
 | S7 | **Vorlagenmöbel** | Icon-Karten mit Skizzensymbolen für Menü, Reservierung, Standort; Ornament- oder Doppellinien unter Überschriften; Pfeile eines Bildkarussells im Auftakt; „Herzlich willkommen" als Überschrift | weglassen; die Inhalte direkt zeigen |
 
-**S1 bis S5 werden maschinell geprüft.** `web-kit/scripts/check-slop.ts` misst sie am gerenderten Dokument und läuft in jedem `qa.sh`; eine harte Sperre lässt den Lauf scheitern und kann nicht abgewählt werden. Kanonisch für das Werkzeug ist [[30-frontend/web-kit.md#Harte Sperren im QA-Lauf]]. S6 und S7 prüft der Agent am Render.
+**S1 bis S5 werden maschinell geprüft.** `web-kit/scripts/check-slop.ts` misst sie am gerenderten Dokument und läuft in jedem `qa.sh`; eine harte Sperre lässt den Lauf scheitern, außer sie ist über `--erlaubt` mit Vorbild freigegeben. Kanonisch für das Werkzeug ist [[30-frontend/web-kit.md#Harte Sperren im QA-Lauf]]. S6 und S7 prüft der Agent am Render.
 
 **Warum diese Muster hart gesperrt sind und die übrigen nicht.** Bis Oktober 2026 waren alle Muster dieses Katalogs Befunde mit Begründungsweg: „wer es bewusst einsetzt, hält den Grund fest". Für Kicker galt zusätzlich „echte Metainformation ist erlaubt", für Ziffern „wenn sie Orientierung stiften", und das Signaturdetail durfte ausdrücklich eine Ziffernlogik sein. In vier Fassungen eines Restaurantprojekts fand sich für jedes dieser Muster eine Begründung: Das Gründungsjahr ist wahr, also Metainformation; die Ziffern sind das Signaturdetail; das farbig kursive Wort ist Markenbezug. Der Nutzer hat jede Fassung trotzdem sofort als generiert erkannt. Eine Regel, die sich mit einem wahren Satz umgehen lässt, schützt nicht vor einem Modell, das immer einen wahren Satz findet.
 

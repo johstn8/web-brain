@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 sources_checked: 2026-09-03
 review_by: 2027-03-01
 depends_on:
@@ -82,7 +82,7 @@ Die Rolle `Fortschritt` ist die, die am zweithäufigsten fehlt. Ein Auftakt, der
 
 ## Auftakt-Repertoire
 
-Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein Entscheidungsraum, keine Rangfolge — **außer dort, wo eine [[#Gattungsregeln für den Auftakt|Gattungsregel]] die Komposition festlegt.** Genau eine Komposition wird gewählt und im Design Contract begründet. Die Wahl entsteht nicht gedanklich, sondern am Bild: Zwei bis drei Kompositionen aus dieser Liste werden mit denselben realen Inhalten tatsächlich gebaut und nebeneinander beurteilt, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
+Zuerst gilt der Aufbau des Vorbilds. Text links, Bild rechts und zwei Knöpfe darunter ist die Lösung, zu der ein Modell immer greift; sie braucht einen Grund. Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein Entscheidungsraum, keine Rangfolge — **außer dort, wo eine [[#Gattungsregeln für den Auftakt|Gattungsregel]] die Komposition festlegt.** Genau eine Komposition wird gewählt und im Design Contract begründet. Die Wahl entsteht nicht gedanklich, sondern am Bild: Zwei bis drei Kompositionen aus dieser Liste werden mit denselben realen Inhalten tatsächlich gebaut und nebeneinander beurteilt, siehe [[20-design/visual-iteration-loop.md#Divergenz vor Konvergenz: das Auftaktfeld]].
 
 | Komposition | Wie sie funktioniert | Passt zu | Woran sie scheitert |
 |---|---|---|---|
@@ -104,7 +104,9 @@ Die Auftaktkomposition wird gewählt, nicht geerbt. Die folgende Liste ist ein E
 
 ## Gattungsregeln für den Auftakt
 
-Für manche Gattungen gibt es eine Komposition, die so viel besser funktioniert als alle anderen, dass die Wahl entfällt. Dort ist sie **gesetzt**; eine andere Komposition braucht einen ausdrücklichen Wunsch des Nutzers. Die übrigen Gattungen wählen weiter frei aus dem Repertoire.
+Diese Regeln gelten nur ohne Vorbild. Hat der Nutzer eine Website genannt oder folgt die Seite einer Vorlage aus [[30-frontend/web-kit.md#Website-Vorlagen]], kommt der Auftakt von dort.
+
+Für manche Gattungen gibt es eine Komposition, die sich ohne Vorbild am besten bewährt hat. Dort ist sie **die Empfehlung**; eine andere Komposition braucht einen ausdrücklichen Wunsch des Nutzers. Die übrigen Gattungen wählen weiter frei aus dem Repertoire.
 
 | Gattung | Gesetzte Komposition | Belegt durch |
 |---|---|---|

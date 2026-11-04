@@ -13,6 +13,16 @@ updated: 2026-10-02
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
 
+## 2026-11-05 — Vorbilder stehen über den Regeln
+
+Der Nutzer fand die Stilvorlagen zu weit von seinen Websites entfernt und immer gleich aufgebaut: Text links, Bild rechts, Knöpfe darunter. Das Brain sei teils zu stark in seinen Vorgaben; es solle mehr an den Websites als am Brain gehalten werden.
+
+**Diagnose:** Ein Preset wechselt Farben und Schriften, nicht den Aufbau, und das Kit war Pflichtausgangspunkt. Mehrere Seiten wurden zu einem Preset gemittelt, und ein Mittelwert aus guten Seiten ist keine davon. Dazu verlangte das Brain gesperrte Muster, gesetzte Auftakte und Quoten gegen enge Vorbilder.
+
+**Gekippt:** Rangfolge in `AGENTS.md`, genannte Websites und Vorlagen stehen in Gestaltungsfragen vor den Notizen. Das Kit ist nicht mehr Pflichtausgangspunkt, sondern [[30-frontend/web-kit.md#Website-Vorlagen]] sind es. Harte Sperren und Sperrliste gelten nur noch ohne Vorbild, `--erlaubt` gibt sie frei. Gattungsregeln sind Empfehlungen, die Leitreferenz-Quote gilt nicht für genannte Seiten, Pflichtfassungen des Auftakts entfallen zugunsten des Vergleichs mit dem Vorbild.
+
+**Bewusst geblieben:** Recht, Barrierefreiheit, wahre Inhalte, das Verbot, fremde Texte, Bilder und Marken zu kopieren, und die Abneigung gegen kleine Dachzeilen und plötzliche Kursive, die der Nutzer selbst als KI-typisch benannt hat.
+
 ## 2026-11-04 — Erster Inspirationseingang des Nutzers verarbeitet
 
 Der Nutzer hat 16 Websites mit Notizen eingereicht. Alle wurden mit `stil-messen.ts` vermessen, entlang der Scrollstrecke aufgenommen und in [[90-references/inspiration-eingang.md#Verarbeitet]] eingeordnet. Daraus entstanden fünf Presets, dreizehn Blöcke und das Glasmaterial im Kit.

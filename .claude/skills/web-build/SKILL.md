@@ -98,21 +98,21 @@ Speise-, Getränke- und Preiskarten gehören nach `karten`, Fließtexte nach
 `texte`, beide in dieselbe Datei. Eine Nebendatei neben dem Schema ist für
 das Owner-Hosting unsichtbar.
 
-### 5. Blöcke ziehen — mit Owner-Hosting
+### 5. Vorbild wählen und Vorlage kopieren
 
-Aus `web-kit/blocks/`. **Das Kit ist der Pflichtausgangspunkt.**
+**Eine Website entsteht aus dem Aufbau einer konkreten Seite, nicht aus
+Regeln.** Hat der Nutzer eine Website genannt, ist sie das Vorbild. Sonst
+eine Vorlage aus `web-kit/vorlagen/` nach `web-kit/vorlagen/README.md`,
+nach Wirkung gewählt und nicht nach Branche. Der Aufbau wechselt von Auftrag
+zu Auftrag; Text links, Bild rechts, Knöpfe darunter ist kein Standard.
+Mehrere Vorbilder nie mitteln.
 
-**Owner-Hosting wird immer mitgebaut**, auch wenn es nicht im Auftrag steht:
-eine Datei `content/<website>.json`, stabile Pointer, Feldtypen, Preview-Route,
-dazu der Content-Loader aus dem Starter. Der Starter bringt das alles mit — es
-wegzulassen wäre Rückbau, es nachzurüsten kostet ein Vielfaches. Regel in
-`web-brain/00-start/05-web-product-workflow.md#Owner-Hosting ist Standard`. Wer einen
-Block neu schreibt, den es dort gibt, hat den falschen Weg genommen und
-begründet das in `PROJECT.md`.
+Die Vorlage in das Projekt kopieren und umschreiben: Inhalte, Bilder, Farben
+des Betriebs. Blöcke aus `web-kit/blocks/` helfen, wo sie passen.
 
-Fehlt ein Block wirklich, wird er im Projekt gebaut — und nur dann ins Kit
-gehoben, wenn er ein zweites Mal vorkommen wird. Regel in
-`web-brain/30-frontend/web-kit.md`.
+**Owner-Hosting wird immer mitgebaut**: eine Datei `content/<website>.json`,
+stabile Pointer, Feldtypen, Preview-Route, Content-Loader aus dem Starter.
+Regel in `web-brain/00-start/05-web-product-workflow.md#Owner-Hosting ist Standard`.
 
 ### 6. Stil recherchieren, ableiten, gegen den Verlauf prüfen
 
@@ -179,10 +179,10 @@ Liste: `web-brain/20-design/typography-layout-and-spacing.md#Sperrliste`.
 Anordnung und Bildmaßstab. Zwei gleiche Zeilen hintereinander: umplanen,
 bevor gebaut wird. Regel: `web-brain/20-design/landing-page-craft.md#Sektionsrhythmus`.
 
-### 6b. Die harten Sperren — vor der ersten Komponente lesen
+### 6b. Die Sperren — für alles ohne Vorbild
 
-Diese Muster werden **nicht gebaut**, auch nicht mit Begründung, auch nicht
-als Signaturdetail:
+Ohne Vorbild werden diese Muster **nicht gebaut**. Macht das Vorbild es so,
+ist es erlaubt (`qa.sh --erlaubt nummernmarke,teilauszeichnung`):
 
 - **keine Zeile über einer Überschrift** — kein Ort, kein „seit 2002", keine
   Gattung in Fremdsprache, kein Status, keine Rubrik
@@ -194,29 +194,16 @@ als Signaturdetail:
 - keine fremdsprachigen Zierwörter, keine Vorlagenmöbel
 
 Kanonisch: `web-brain/20-design/anti-ai-slop.md#Harte Sperren`. `qa.sh` misst
-die ersten fünf und scheitert daran; die Prüfung lässt sich nicht abwählen.
+die ersten fünf und scheitert daran, außer sie sind mit `--erlaubt` freigegeben.
 Ein Signaturdetail ist **nicht** verlangt — fehlt reales Material dafür,
 entfällt es.
 
-### 7. Auftakt: zwei Fassungen, wirklich gebaut
+### 7. Neben das Vorbild legen
 
-**Zuerst prüfen, ob eine Gattungsregel greift**
-(`web-brain/20-design/landing-page-craft.md#Gattungsregeln für den Auftakt`).
-Für **Gastronomie** ist die Komposition gesetzt: das randlose Leitbild aus
-`web-kit/blocks/auftakt/Leitbild.astro` — Foto oder Video über die volle
-Höhe, H1 auf dem Bild, ein Satz, Band mit Zeiten, Adresse, Telefon, eine
-Handlung. Die zwei Fassungen unterscheiden sich dann in Bild, Bildausschnitt,
-Lage der H1 und Satz, nicht in der Komposition. Typo-, Kontakt- oder
-Index-Auftakt für ein Restaurant wurden gebaut und vom Nutzer verworfen.
-
-Ohne Gattungsregel: zwei Auftaktfassungen mit **verschiedenen
-Kompositionen** aus `web-kit/blocks/auftakt/`. In beiden Fällen mit denselben
-realen Inhalten bauen, bei 375 und 1280 Pixel **neben die Auftakte der
-Benchmarks** legen, eine mit Begründung wählen.
-
-Gedanklich wählen zählt nicht. Ein Sprachmodell wählt dabei die
-wahrscheinlichste Lösung, und genau die sieht generiert aus. Repertoire in
-`web-brain/20-design/landing-page-craft.md#Auftakt-Repertoire`.
+Vorbild und eigene Seite bei 375 und 1280 Pixel Bild an Bild vergleichen:
+Auftakt, Abschnittsfolge, Maßstab, Kopfzeile, Rhythmus. Sichtbare Abweichung
+ohne inhaltlichen Grund wird nachgebaut. **Am Original hält sich die Seite
+strenger als an die Notizen.**
 
 ### 8. Ein Renderdurchgang
 

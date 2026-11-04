@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 depends_on:
   - "[[30-frontend/stack.md]]"
   - "[[20-design/color-system.md]]"
@@ -17,7 +17,7 @@ impacts:
 
 `git@github.com:johstn8/web-kit.git`, geklont neben diesem Vault. Das Kit hält das Material: Tokens, Blöcke, Rechtsseiten, Datenmodell, Skripte und einen lauffähigen Starter. Dieses Vault hält die Entscheidungen. Nichts wird doppelt gehalten.
 
-**Das Kit ist der Pflichtausgangspunkt der Fast Lane** nach [[00-start/05-web-product-workflow.md#Bahnwahl: Fast Lane und Full Lane]]. Wer einen Block neu schreibt, den es dort gibt, hat den falschen Weg genommen und begründet das in `PROJECT.md`.
+**Das Kit ist Werkzeug, kein Korsett.** Ausgangspunkt einer Website ist eine [[#Website-Vorlagen|Vorlage]] oder die Seite, die der Nutzer genannt hat. Blöcke sind Hilfen, wo sie passen; wer für den Aufbau des Vorbilds eigenes Markup braucht, schreibt es. Pflicht bleiben Datenmodell, Owner-Hosting, Rechtsseiten und die Prüfskripte.
 
 ## Struktur
 
@@ -37,17 +37,33 @@ Der Tokenvertrag aus [[20-design/color-system.md#Tokenvertrag]] liegt im Kit als
 
 Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind identisch, werden aber über andere Tokenwerte, eine andere Auftaktkomposition und eine andere Sektionsfolge gezogen.
 
+## Website-Vorlagen
+
+`vorlagen/<name>/` hält je eine vollständige Startseite nach dem Aufbau einer Website, die der Nutzer genannt hat: eigenes Markup, eigene Kopfzeile, eigene Sektionsfolge, gemessene Maße, Beispielinhalte einer erfundenen Firma. Hier unterscheiden sich Websites wirklich. Ein Preset wechselt Farben und Schriften auf demselben Aufbau, eine Vorlage wechselt den Aufbau.
+
+| Vorlage | Aufbau nach | Kennzeichen |
+|---|---|---|
+| `hafen` | the1.amsterdam | 215 px Schrift, rechts gegen links gesetzt, Farbbänder mit Riesenziffern, Foto aus dem Kreis, Liste steuert Bild |
+| `rahmen` | lightshiprv.com | Foto im Rahmen, Riesensatz klebt, Bilder fahren darüber, schwebende Leiste, Karten mit Plus |
+| `kuehl` | mercury.com | schmale Spalte von 860 px, Bänder dunkel, Sand, Weiß, Gerät steigt ins Foto, Glasfelder |
+| `schmal` | meracinque.com | schmale große Antiqua, Produkt steht fest, Titel läuft dahinter, Mini-Insel, Stern-Aufkleber |
+| `wortmarke` | standard-berlin.de | Wortmarke über die volle Breite, Hochformat am Rand, gerahmte Standortkästen, Schachbrett |
+| `kongress` | ko-mon.de | Glaspille, Wörter färben sich ein, klebende Vollbilder, Stimmen in Spalten, Pfirsichgrund |
+| `rund` | jovoco.io | blaue Karte neben Vorteilen, dunkles Band, Mosaik aus Zahlen und Bildern, Branchenzeilen |
+| `verlauf` | metagram-solutions.com | Mittelsatz, Säulen-Diagramm, Kacheln mit Mini-Diagrammen, schräge Weltkarte, Schillerflächen |
+| `system` | comito.de | dunkles Vollbild, Glaskarten, rotes Puzzle aus Fotos und Flächen, Leistungskarten auf Grau |
+| `gericht` | lagalante-restaurant.de | Gerichte ohne Rahmen am Rand angeschnitten, blasses Wort, Haarlinie, Karte mittig, Fotos außen |
+
+`scripts/vorlage-bauen.sh <name>` baut sie nach `projekte/kit-vorlagen/versions/<name>/dist`, von dort erscheinen sie auf `/dev`. Eine Vorlage wird für den Auftrag kopiert und umgeschrieben: Inhalte aus `content/<website>.json`, Farben und Bilder des Betriebs. Der Aufbau bleibt. Fotos der Vorlagen stehen unter Unsplash-Lizenz und werden ersetzt. Kommt eine neue Website in den [[90-references/inspiration-eingang.md]], entsteht daraus eine neue Vorlage, nicht ein neues Preset.
+
+Werden Fremdseiten so eng nachgebaut, entscheidet der Nutzer vor der Veröffentlichung, ob der Abstand reicht; bei Wettbewerbern derselben Stadt ist eine Verwechslung zu vermeiden.
+
 ## Art-Direction-Presets
 
-`tokens/presets/` trägt dreizehn vollständige Stilrichtungen als **Datei**, nicht als Prosa. Jede ist ein kompletter Tokensatz mit Schriftrollen, Palette für Licht und Dunkel, Radius-, Abstands-, Aktions- und Bewegungsgrammatik. Alle mit derselben Auftaktzeile gerendert liegen als `tokens/presets/kacheln/uebersicht.webp` im Kit.
+`tokens/presets/` trägt acht vollständige Stilrichtungen als **Datei**, nicht als Prosa. Jede ist ein kompletter Tokensatz mit Schriftrollen, Palette für Licht und Dunkel, Radius-, Abstands-, Aktions- und Bewegungsgrammatik. Alle mit derselben Auftaktzeile gerendert liegen als `tokens/presets/kacheln/uebersicht.webp` im Kit.
 
 | Preset | Anmutung | Für | Abgrenzung, Aktion | Display / Text |
 |---|---|---|---|---|
-| `glas` | gegenwärtig | Finanzen, Software, hochwertige Dienstleistung | Glas über Bild, Aktion Pille | Albert Sans |
-| `nord` | gegenwärtig | Kreative Betriebe, Kultur, Marken mit Haltung | Farbfelder auf Hellgrau, Aktion Pille | Familjen Grotesk |
-| `teller` | gegenwärtig | Gastronomie, Manufaktur, starke Fotos | Reinweiß, Aktion Pille | Jost |
-| `dienst` | gegenwärtig | IT, Agentur, Weiterbildung, Veranstaltung | weiche Kacheln, Aktion Pille | Manrope |
-| `genuss` | gegenwärtig | Lebensmittelmarke, Hofladen, Feinkost | Farbfelder auf Creme, Aktion weich | Gupter / Readex Pro |
 | `produkt` | gegenwärtig | Hersteller, Industrie, Technik | Kacheln mit 20 px Radius, Aktion weich | Onest |
 | `freundlich` | gegenwärtig | Kita, Friseur, Café, Sport, Fahrschule | Farbfläche, Aktion Pille | Gabarito / Figtree |
 | `klar` | gegenwärtig | Beratung, Immobilien, IT, moderne Praxis | Haarlinie, Aktion rund | Golos Text |
@@ -61,7 +77,7 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 
 **Warum das ein Artefakt und keine Regel ist.** Eine Stilrichtung als Prosa muss bei jeder Anwendung gelesen, verstanden und in CSS übersetzt werden, und das Ergebnis fällt jedes Mal anders aus. Als Datei wird sie einmal gebaut und danach gewählt oder abgeleitet.
 
-**Warum es dreizehn sind und nicht mehr fünf.** Bis 2026-11-04 hatten drei der fünf Presets Radius null, drei eine Serife, und die Buttons hingen an `radius-sm`. Das Ergebnis über mehrere Projekte war ein einheitlicher, älterer Hausstil, siehe [[20-design/anti-ai-slop.md#Bekannte Ballungen]]. Seitdem ist die Aktionsform ein eigenes Feld `grammar.aktionsform` (`kante`, `weich`, `rund`, `pille`), das `tokens-to-css.ts` als `--aktion-radius` ausgibt, und drei gegenwärtige Presets sind dazugekommen. Fünf weitere stammen aus den Funden des Nutzers vom selben Tag, siehe [[90-references/inspiration-eingang.md#Verarbeitet]]. Kräftige Flächen außerhalb der Farbrollen stehen in `grammar.farbfelder`, der Kontrastlauf prüft sie mit.
+**Warum es acht sind und nicht mehr fünf.** Bis 2026-11-04 hatten drei der fünf Presets Radius null, drei eine Serife, und die Buttons hingen an `radius-sm`. Das Ergebnis über mehrere Projekte war ein einheitlicher, älterer Hausstil, siehe [[20-design/anti-ai-slop.md#Bekannte Ballungen]]. Seitdem ist die Aktionsform ein eigenes Feld `grammar.aktionsform` (`kante`, `weich`, `rund`, `pille`), das `tokens-to-css.ts` als `--aktion-radius` ausgibt, und drei gegenwärtige Presets sind dazugekommen. Fünf weitere aus den Funden des Nutzers wurden am 2026-11-05 wieder entfernt: Sie mittelten mehrere Websites und wichen im Aufbau nicht ab. An ihre Stelle traten die [[#Website-Vorlagen]]. Kräftige Flächen außerhalb der Farbrollen stehen in `grammar.farbfelder`, der Kontrastlauf prüft sie mit.
 
 ### Werkzeuge für die Stilwahl
 
