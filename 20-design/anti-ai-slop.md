@@ -148,6 +148,7 @@ Diese Merkmale erscheinen unabhaengig vom Thema und sind deshalb besonders verra
 
 | Signatur | Warum sie auffaellt | Stattdessen |
 |---|---|---|
+| Ovale Stichwörter, die wie Knöpfe aussehen und keine sind („Video-Schnitt", „Farbkorrekturen") | Der Nutzer hat sie am 2026-11-05 bei Dentalize als KI-typisch benannt; sie versprechen eine Aktion und sind nur Aufzählung | Ein Satz oder eine schlichte Liste; die Pillenform bleibt echten Aktionen vorbehalten |
 | Metazeile aus drei oder mehr Werten, mit Mittelpunkt verbunden (`A · B · C`), auf jeder Karte jedes Abschnitts | Gliederungszeichen ohne Gliederungsaufgabe: es erscheint nicht, weil die Werte es brauchen, sondern weil Metazeilen so aussehen | die Werte in einen Satz setzen oder als benannte Felder auszeichnen. Zwei wirklich verschiedene Felder in einer Zeile zu trennen ist eine gültige Entscheidung, siehe unten |
 | Beschriftung im Muster `WORT — Fragment` mit gesperrtem Gedankenstrich | geliehene Redaktionsanmutung | Rubrik und Aussage trennen oder die Rubrik weglassen |
 | angehaengter Pfeil an Link- und Buttontext (`Mehr erfahren →`) | Dekoration, die keine zusaetzliche Information traegt; der Link ist bereits als Link erkennbar | den Text die Handlung benennen lassen |

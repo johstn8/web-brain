@@ -13,6 +13,10 @@ updated: 2026-10-02
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
 
+## 2026-11-05 — Sechs weitere Vorlagen aus dem Eingang
+
+Der Nutzer hat Dentalize, Inno ONE, Cornelia Poletto, Padella, Salswee und Zum Hecht mit Notizen eingereicht. Jede Seite wurde aufgenommen und als eigene Vorlage nachgebaut: `kachel`, `kerbe`, `gastgeber`, `tageskarte`, `konditorei`, `gasthaus`. Das Kit hat damit zwanzig Vorlagen. Neu in den Slop-Signaturen: ovale Stichwörter, die keine Knöpfe sind. `check-slop.ts` hielt SVG-Logos über Überschriften fälschlich für Dachzeilen.
+
 ## 2026-11-05 — Vorbilder stehen über den Regeln
 
 Der Nutzer fand die Stilvorlagen zu weit von seinen Websites entfernt und immer gleich aufgebaut: Text links, Bild rechts, Knöpfe darunter. Das Brain sei teils zu stark in seinen Vorgaben; es solle mehr an den Websites als am Brain gehalten werden.

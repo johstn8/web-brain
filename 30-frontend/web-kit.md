@@ -57,6 +57,12 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | `abend` | carbonenewyork.com | Marine und Creme, dreigeteilte Kopfzeile, vollbreite Fotos, Halbseiten im Wechsel, keine Bewegung |
 | `kurs` | scaly.com | Pfirsichkarte im Auftakt, schwebende Stichworte, Blob-Foto, Reiter, gestaffeltes Team |
 | `bogen` | tunymedia.at | Abschnitte enden in Bogenkanten, gekippte Bildcollagen, Gerät in der Mitte des Abschlusses |
+| `kachel` | dentalize.de | Filmkacheln mit Radius, Überschriften in Grau und Schwarz, Bento auf Hellgrau, gestapelte Filme, Streubild, klebende Schritte |
+| `kerbe` | inno-one.de | dunkle Tafeln mit Kerbe oben in der Mitte, leichte Manrope, Liniendiagramme, Bewertungszeile, versetzter Vergleich |
+| `gastgeber` | cornelia-poletto.de | Porträt über die volle Breite, Satz mit Unterschrift auf Hellblau, drei Halbseiten mit eigener Knopffarbe, Partnerleiste |
+| `tageskarte` | padella.co | Schwarz und Weiß, Ladenfront, drei Bilder mit Hover-Wechsel, Tageskarte im Rahmen, weiches Scrollen |
+| `konditorei` | salswee.com | Creme und Beige, Stücke ragen über Streifenkanten, Raster von Rand zu Rand, Teller auf Muster, Fuß mit runden Oberkanten |
+| `gasthaus` | zum-hecht.de | schwarze Kopfzeile mit gebrochener Wortmarke, harte Wechsel, Titel mit gerahmter Unterzeile, enge Galerie, Kopffarbe in `--kopf` |
 
 `scripts/vorlage-bauen.sh <name>` baut sie nach `projekte/kit-vorlagen/versions/<name>/dist`, von dort erscheinen sie auf `/dev`. Eine Vorlage wird für den Auftrag kopiert und umgeschrieben: Inhalte aus `content/<website>.json`, Farben und Bilder des Betriebs. Der Aufbau bleibt. Fotos der Vorlagen stehen unter Unsplash-Lizenz und werden ersetzt. Kommt eine neue Website in den [[90-references/inspiration-eingang.md]], entsteht daraus eine neue Vorlage, nicht ein neues Preset.
 

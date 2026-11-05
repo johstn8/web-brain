@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-05
 review_by: 2027-02-27
 depends_on:
   - "[[90-references/reference-research-workflow.md]]"
@@ -87,6 +87,7 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
+| [Salswee](https://salswee.com/) | Patisserie, Café, Manufaktur | warm, cremig, produktgeführt; vom Nutzer genannt, Vorlage `konditorei` | mittel |
 | [Mùn Rooftop Rome](https://munrooftoprome.com/) | Restaurant, Bar, Hotel | dunkel, atmosphärisch, fotografisch | mittel bis hoch |
 | [Amrit Palace](https://amritpalace.com/) | Restaurant, Gastronomie | warm, editorial, genussorientiert | mittel |
 | [Meracinque](https://www.meracinque.com/) | italienische Küche, Food-E-Commerce | farbig, charaktervoll, produktnah | mittel |
