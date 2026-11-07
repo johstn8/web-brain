@@ -26,7 +26,7 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 
 ## Verarbeiten
 
-1. **Aufnehmen und messen:** `web-kit/scripts/stil-messen.ts --url <adresse> --out .research/eingang/<slug>`. Ergebnis sind Messung und Auftakte bei 1440 und 390 Pixel.
+1. **Aufnehmen und messen:** `web-kit/scripts/stil-messen.ts --url <adresse> --out .research/eingang/<slug>`. Ergebnis sind Messung und Auftakte bei 1440 und 390 Pixel. Nennt der Nutzer einen Effekt, etwa Hover, Scrollanimation oder Übergang, zusätzlich `web-kit/scripts/effekte-messen.ts --url <adresse> --out .research/eingang/<slug> --film`; gebaut wird nach den gemessenen Werten.
 2. **Einordnen in eine oder mehrere von drei Ablagen:**
    - **Erst trennen, was gelobt und was abgelehnt wurde.** Gespeichert wird nur das Gelobte. Was der Nutzer ablehnt, landet als Lehre in [[20-design/anti-ai-slop.md]] oder entfällt; eine Seite, die er verwirft, wird aus Pool, Katalog und Kit entfernt.
    - **Ganze Seite → Website-Vorlage**, nur wenn der Nutzer die Seite insgesamt stark nennt. Die Seite wird Abschnitt für Abschnitt aufgenommen (`--strecke 15`) und als eigene Vorlage unter `web-kit/vorlagen/<name>/` nachgebaut, dann neben das Original gelegt. Mehrere Seiten werden nie zu einer gemittelt.
@@ -41,6 +41,8 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 |---|---|---|
 
 ## Verarbeitet
+
+Am 2026-11-07 sind die Effekte aller Seiten, an denen der Nutzer Effekte gelobt hat, mit `web-kit/scripts/effekte-messen.ts` nachgemessen: ko:mon, Lightship, metagram, Dentalize, Padella, ESP Media, Saad Salman, Modulo, Agency Invest, Sales Culture. Vorlagen und Blöcke folgen seitdem diesen Werten; die Werte stehen im Kopfkommentar jeder Datei und in `web-kit/vorlagen/README.md` unter „Gemessene Effekte“. Die beiden Figma-Seiten ließen sich nicht messen.
 
 Am 2026-11-07 hat der Nutzer 20 weitere Seiten als „Quatsch" verworfen: SocialNatives, Pexon, Julius Schaefer, eProc, Einstellungserfolg, KMC, Logokunst, Lieblingslead, Pink Elephant Coach, Matthias Niggehoff, Pflegequeen, Immobilien Einkauf, Barra, Lilia, CanDevsDoSomething, EVE BCN, ClaudeFolio, Thomas Stockham, das ATS-Dashboard und StepSafer. Sie sind aus Pool, Katalog und Kit entfernt.
 

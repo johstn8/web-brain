@@ -99,6 +99,7 @@ Werden Fremdseiten so eng nachgebaut, entscheidet der Nutzer vor der Veröffentl
 ### Werkzeuge für die Stilwahl
 
 - `scripts/stil-messen.ts --url <adresse> --out <ordner>` misst an einer Referenzseite Schriften, Type Ramp, Radien von Aktionen, Kacheln und Bildern, Grund- und Akzentfarben und nimmt den Auftakt bei 1440 und 390 Pixel auf. Grundlage der [[90-references/reference-research-workflow.md#Stilrecherche]] und des [[90-references/inspiration-eingang.md]].
+- `scripts/effekte-messen.ts --url <adresse> --out <ordner> [--film]` misst, was ein Screenshot nicht zeigt: Hover per echter Mausbewegung an Element und Kindern samt Übergangszeit, Elemente, die sich beim Scrollen verändern, mit Bereich und Anfangs- und Endwert, `@keyframes`, `transition` und `:hover`-Regeln aus den Stylesheets, gsap-Tweens und ScrollTrigger mit Start, Ende und `scrub`, Lenis und Swiper. `--film` legt alle 250 Pixel ein kleines Bild ab. Seit 2026-11-07 Pflicht, sobald der Nutzer an einer Seite einen Effekt lobt; vorher wurden Effekte aus Screenshots geschätzt. Seiten aus Figma Sites lassen sich damit nicht messen, ihre Laufzeit startet im Testbrowser nicht.
 - `scripts/stilverlauf.ts --kandidat <preset>` liest Displayschrift, Aktionsform, Grundhelligkeit und Papiergrund aus dem ausgelieferten CSS der letzten Websites unter `projekte/` und meldet Wiederholungen nach [[20-design/design-direction.md#Abstand zu den letzten Projekten]].
 
 ### Schriften

@@ -13,6 +13,10 @@ updated: 2026-10-02
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
 
+## 2026-11-07 — Effekte werden gemessen, nicht geschätzt
+
+Bis heute wurden Hover und Scrollanimationen aus Screenshots erschlossen; bei Padella hatte das einen Bildwechsel erfunden, den es dort nicht gibt. Neu ist `web-kit/scripts/effekte-messen.ts`. Zehn Seiten mit gelobten Effekten sind gemessen, sechs Vorlagen und sechs Blöcke danach korrigiert und mit demselben Skript nachgemessen.
+
 ## 2026-11-07 — Nur Gelobtes wird gespeichert
 
 Der Nutzer hat alle übrigen Referenzen bewertet: 20 verworfen, fünf insgesamt stark, zehn nur in Teilen. Daraus wurden fünf Vorlagen (`creator`, `raster`, `praxishell`, `trattoria`, `licht`) und zwölf Blöcke für die gelobten Einzelteile; die Elementseite liegt auf `/dev` unter `kit-vorlagen/elemente`. Neu ist die Regel, dass nur Gelobtes gespeichert wird und Teillob einen Block statt einer Vorlage ergibt, in [[90-references/inspiration-eingang.md#Verarbeiten]]. Jede Vorlage führt jetzt, was gelobt und was Füllung ist.
