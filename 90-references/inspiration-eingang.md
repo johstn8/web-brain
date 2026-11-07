@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-05
+updated: 2026-11-07
 review_by: 2027-02-27
 depends_on:
   - "[[90-references/reference-research-workflow.md]]"
@@ -27,6 +27,9 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 ## Verarbeiten
 
 1. **Aufnehmen und messen:** `web-kit/scripts/stil-messen.ts --url <adresse> --out .research/eingang/<slug>`. Ergebnis sind Messung und Auftakte bei 1440 und 390 Pixel. Nennt der Nutzer einen Effekt, etwa Hover, Scrollanimation oder Übergang, zusätzlich `web-kit/scripts/effekte-messen.ts --url <adresse> --out .research/eingang/<slug> --film`; gebaut wird nach den gemessenen Werten.
+   - **Lädt die Seite headless nicht**, etwa Figma Sites und Figma Make: im echten Chrome des Nutzers über die Chrome-Erweiterung messen (DOM, Computed Styles, CSS-Regeln, echte Maus-Hover mit Zeitmessung, Scroll-Abtastung, schmale Breite über ein gleich-originiges iframe). Ablage als `messung.json` und `befund.md` unter `.research/eingang/<slug>/`, jeder Wert gekennzeichnet als gemessen oder geschätzt.
+   - **Tailwind-v4-Seiten** bewegen über die Properties `translate`, `scale` und `rotate`, nicht nur über `transform`; wer nur `transform` vergleicht, sieht keinen Hover.
+   - **Figma-Make-Seiten** haben die Root-Schriftgröße 14 px. Alle rem-Werte und Breakpoints sind ×14 zu rechnen, `lg` liegt bei 896 px, nicht bei 1024.
 2. **Einordnen in eine oder mehrere von drei Ablagen:**
    - **Erst trennen, was gelobt und was abgelehnt wurde.** Gespeichert wird nur das Gelobte. Was der Nutzer ablehnt, landet als Lehre in [[20-design/anti-ai-slop.md]] oder entfällt; eine Seite, die er verwirft, wird aus Pool, Katalog und Kit entfernt.
    - **Ganze Seite → Website-Vorlage**, nur wenn der Nutzer die Seite insgesamt stark nennt. Die Seite wird Abschnitt für Abschnitt aufgenommen (`--strecke 15`) und als eigene Vorlage unter `web-kit/vorlagen/<name>/` nachgebaut, dann neben das Original gelegt. Mehrere Seiten werden nie zu einer gemittelt.
@@ -82,6 +85,6 @@ Am 2026-11-07 hat der Nutzer 20 weitere Seiten als „Quatsch" verworfen: Social
 | [Tulus Lotrek](https://www.tuluslotrek.de/) | nur: Idee des Reservierungsfensters | Block `Reservierung`, inhaltlich und gestalterisch verbessert | die Seite selbst |
 | [Consile](https://consile.app/) | Konzept und Design einer Produktvorstellung | Block `Produktschritte` | Orange überall, zu wenig Abwechslung, Verläufe |
 | [Saad Salman](https://saadsalman.org/) | schwebende Elemente, Hover | Block `Schwebend` | Ovale über Überschriften, Verläufe in Überschriften |
-| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktansichten, Knöpfe | Block `Produktansicht`; die Figma-Seite lud 2026-11-07 headless nicht, gebaut nach der Analyse vom August | – |
-| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | stark | kein neuer Baustein; das Leitbild-Prinzip steht in B3 | Ovale über Überschriften, Verläufe |
+| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktansichten, Knöpfe | Block `Produktansicht`, nach der Messung vom 2026-11-07 im echten Chrome umgebaut und nachgemessen; Befund in `.research/eingang/produktbetrachter-180/` | – |
+| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | stark | Vorlage `signal` nach der Messung vom 2026-11-07 im echten Chrome, nur die übertragbaren Teile; Prinzip in B3; Befund in `.research/eingang/inizio-solar/` | Ovale über Überschriften, Verläufe |
 | [RICO, Kempten](https://www.rico-gmbh.de/) | vom Nutzer am 2026-11-04 als Beispiel für einen Stil genannt, der „auch mal sinnvoll sein kann" | Kit-Preset `produkt`: Neo-Grotesk, weißer Grund, hellgraue Kacheln `#f0f2f5` mit 20 px Radius, Aktionen 8 px, keine Schatten, eine kräftige Markenfarbe. Muster „Produkt mit Kennwerten" in [[90-references/derived-design-patterns.md#Produktbeweis]]. Pool-Eintrag unter Hersteller und Technik. | farbige Wörter in Überschriften und Pillen-Dachzeilen (S1, S3), Inter (Sperrliste), Einwilligungsbanner für Werbetracking |

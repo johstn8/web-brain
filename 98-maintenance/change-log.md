@@ -1,7 +1,7 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-07
 ---
 
 # Change Log
@@ -12,6 +12,16 @@ updated: 2026-10-02
 > Ein Change-Log-Eintrag ist keine Abschlussbedingung mehr. Das Aenderungsprotokoll des Vaults ist die Commit-Historie; die Commit-Konvention aus `AGENTS.md` verlangt eine Betreffzeile, die die kanonische Aenderung benennt, und einen Body mit der Begruendung. Ein Eintrag hier entsteht nur noch fuer Entscheidungen, deren Begruendung laenger lebt als der Diff: eine gekippte Regel, eine verworfene Alternative, eine Recherchebasis.
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
+
+## 2026-11-07 — Figma-Benchmarks im echten Chrome gemessen
+
+Die Seiten aus Figma Make laden headless nicht. Der Nutzer hat den 180-Grad-Produktbetrachter und INIZIO Solar deshalb selbst in seinem Chrome vermessen. Die Werte stehen in `.research/eingang/`, jeweils als gemessen oder geschätzt gekennzeichnet.
+
+Der Block `Produktansicht` hatte überblendende Ansichten mit Pfeilen und Punkten. Das Original dreht stufenlos mit dem Zeiger und wechselt das Bild hart in 45°-Stufen. Der Block ist danach umgebaut und nachgemessen.
+
+INIZIO hatte bisher keinen Baustein, obwohl der Nutzer die Seite insgesamt stark nannte. Daraus ist jetzt die Vorlage `signal` geworden, mit den übertragbaren Teilen. B2 und B3 tragen die gemessenen Werte.
+
+Neu im Eingang ist der Weg für Seiten, die headless nicht laden. Dazu kommen zwei Fallen: Tailwind v4 bewegt über `translate` und `scale`, und Figma Make rechnet mit 14 px Root-Schriftgröße.
 
 ## 2026-11-07 — Effekte werden gemessen, nicht geschätzt
 

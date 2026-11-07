@@ -1,8 +1,8 @@
 ---
 type: maintenance
 status: canonical
-updated: 2026-10-02
-next_review: 2026-11-01
+updated: 2026-11-07
+next_review: 2026-12-01
 ---
 # Review Queue
 
@@ -83,7 +83,7 @@ Bei der erneuten Prüfung erfassen: Desktop und Mobil, Tastatur, reduzierte Bewe
 
 ## Benchmarks
 
-- **Interaktive Nachprüfung der drei Figma-Benchmarks.** Der 180-Grad-Produktbetrachter, die INIZIO-Solarseite und das ATS-Dashboard wurden am 2026-08-06 nur über ausgelieferte Stilvariablen, Bildassets und Textinhalte ausgewertet. Motion, Tastaturbedienung, Fokusführung und Mobilverhalten sind nicht belegt. Vor einer Übernahme dieser Aspekte in ein Projekt interaktiv nachprüfen und Status in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]] aktualisieren.
+- **Interaktive Nachprüfung der Figma-Benchmarks.** Erledigt am 2026-11-07 für den 180-Grad-Produktbetrachter und INIZIO Solar: vom Nutzer im echten Chrome gemessen, Befunde in `.research/eingang/`. Offen bleibt das ATS-Dashboard; der Nutzer hat es am 2026-11-07 verworfen, eine Nachprüfung lohnt nur, wenn er es wieder aufnimmt.
 - **Herkunft der Dashboard-Bildvorlage.** Für `B1` liegt nur ein vom Nutzer geliefertes Bild ohne öffentliche Quelle vor. Falls die Originalquelle bekannt wird, Fußnote und Prüfstatus ergänzen.
 
 ## Projektbezogene Wiedervorlagen

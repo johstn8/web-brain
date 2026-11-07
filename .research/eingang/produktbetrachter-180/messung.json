@@ -1,0 +1,63 @@
+{
+  "quelle": "https://tutor-timer-28553736.figma.site/",
+  "gemessen": "2026-11-07",
+  "methode": "echter Chrome des Nutzers über die Chrome-Erweiterung: DOM, Computed Styles, CSS-Regeln, echte Maus-Hover mit Zeitmessung, Ziehen und Klicken, Scroll-Abtastung, 390 px über ein gleich-originiges iframe",
+  "kennzeichnung": { "M": "gemessen", "A": "abgeleitet oder geschätzt" },
+  "technik": { "wert": "Figma Make, React, Tailwind v4, shadcn/ui", "status": "M" },
+  "viewports": { "wert": ["1025x713 DPR 2", "467", "390"], "status": "M" },
+  "grundlagen": {
+    "status": "M",
+    "root_font_px": 14,
+    "schrift": "ui-sans-serif, system-ui (keine Webfont)",
+    "typo": { "grund": "14/21", "text_xs": "10.5/14", "text_sm": "12.25/17.5", "h3": "15.75/23.6 w500", "h1": "14/21 w500, nicht größer als Fließtext" },
+    "variablen": { "--radius": ".625rem = 8.75px (md 6.75, 2xl 14)", "--primary": "#030213", "--foreground": "oklch(.145 0 0)", "--secondary": "oklch(.95 .0058 264.53)", "--muted": "#ececf0", "--muted-foreground": "#717182", "--accent": "#e9ebef", "--border": "#0000001a" },
+    "seitengrund": "gray-50 oklch(.985 .002 247.839)",
+    "karte": { "grund": "weiß", "radius_px": 8.75, "padding": "p-4", "schatten": "0 1px 3px rgb(0 0 0/.1), 0 1px 2px -1px rgb(0 0 0/.1)" },
+    "auswahl": { "gewaehlt": "border-blue-500 oklch(.623 .214 259.815) + bg-blue-50 oklch(.97 .014 254.604)", "ungewaehlt": "border-gray-200 oklch(.928 .006 264.531)", "grautexte": ["gray-600 oklch(.446 .03 256.8)", "gray-500 oklch(.551 .027 264.4)"] }
+  },
+  "aufbau_desktop": {
+    "status": "M",
+    "breakpoint_lg_px": 896,
+    "container": "max-w-6xl 1008px + p-6",
+    "kopf": "zentriert: Titel, Unterzeile gray-600, Badges (secondary/outline, rounded-md, px-2 py-0.5, 10.5px w500), Preis w600; Abstand zum Raster 28px",
+    "raster": { "spalten": 3, "gap_px": 21, "links": "Steuerkarten 271px", "rechts": "Bühne 2 Spalten 562px" },
+    "steuerkarten": {
+      "abstand_px": 21,
+      "titel": "14-px-Linienicon, gap-2, mb-3",
+      "farbe": { "raster": "2x2 gap-2", "kachel": "118x81, p-3, rounded-lg, Rand 2px", "punkt": "21px rund, Rand 1px", "name": "10.5px", "preis": "10.5px gray-500" },
+      "groesse": { "raster": "3x2", "knopf": "76x37, py-2 px-3, Rand 1px", "gewaehlt": "blau wie oben" },
+      "zoom": { "slider": "14px hoch, Spur muted, Füllung primary, Griff 14px Rand 1px primary", "skala": "50% / Wert / 200%", "knoepfe": "Zoom-, Reset (flex-1), Zoom+, outline h 28 rounded-md" }
+    },
+    "buehne": { "radius_px": 14, "padding": "p-8", "grund": "linear-gradient nach unten rechts gray-50 -> gray-100", "flaeche_h_px": 600, "cursor": "grab / grabbing", "bild": "1024x1024 object-contain, bei 100% 506x506" },
+    "overlays": { "oben_links": "Zoom: 100%", "oben_rechts": "Ansichtsname + Grad", "stil": "bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-sm, 12.25 gray-600 / 10.5 gray-500", "hinweis_unten": "bg-black/70 weiß px-4 py-2 rounded-lg 12.25px, dauerhaft" },
+    "unter_buehne": { "abstand": "mt-6 gap-4", "reihe": "-45° | Auto Rotate | +45°, outline h 28", "segmentleiste": { "stufen": "0..315 in 45", "traeger": "bg-gray-100 rounded-lg p-1 gap-1", "segment": "px-3 py-2 rounded-md text-xs", "aktiv": "bg-white shadow-sm", "hover": "bg-white/50" } },
+    "detailkarte": "mt-8 weiß rounded-lg p-6 shadow-sm; Titel zentriert; zwei Spalten Product Details / Size Guide als flex justify-between, space-y-2, 12.25 gray-600; blauer Entwicklerhinweis (nicht übernehmen)"
+  },
+  "interaktion": {
+    "ziehen": { "status": "M", "grad_pro_px": 0.8, "belege": ["250px -> 200°", "50px -> 40°"], "richtung": "nach rechts steigt der Winkel", "umbruch": "modulo 360" },
+    "ansichtsname": { "status": "M", "regel": "nächstes 45°-Vielfaches, Grenzen ±22.5°", "namen_original": ["Front", "Front-Right", "Side", "Side-Back", "Back", "Back-Left", "Left Side", "Front-Left"], "bemerkung": "Namen inkonsistent" },
+    "bildwechsel": { "status": "M", "bilder": 3, "front": "292.5°-67.5°", "seite": "67.5°-157.5° und 247.5°-292.5° (dasselbe Bild, nicht gespiegelt)", "ruecken": "157.5°-247.5°", "uebergang": "hart per src, kein Überblenden" },
+    "segmentleiste": { "status": "M", "markiert": "nächste 45°-Stufe" },
+    "auto_rotate": { "geschwindigkeit_grad_s": "31-32", "beleg": "6.4° je ~208ms, volle Drehung ~11.5s", "status": "M", "taktung": { "wert": "intern", "status": "A" }, "knopf": "wird zu Stop, gefüllt primary" },
+    "zoom": { "status": "M", "stufe": "25%", "bereich": "50-200%", "umsetzung": "transform: scale() plus max-width/max-height", "uebergang": "300ms cubic-bezier(0,0,.2,1), gemessen 1 -> 1.25 in ~310ms" },
+    "doppelklick_reset": { "status": "A", "beleg": "nur laut Hinweistext" },
+    "defekt": { "status": "M", "wert": "-45°, +45° und Segmente ohne Wirkung bei echten Klicks" },
+    "farbwahl": { "status": "M", "wert": "ändert Badge, Preis, Titel; Bild bleibt schwarz" }
+  },
+  "hover": {
+    "status": "M",
+    "kachel": "Rand gray-200 -> gray-300 oklch(.872 .01 258.338), transition all 150ms cubic-bezier(.4,0,.2,1)",
+    "outline_knopf": "Grund -> accent #e9ebef, 150ms gleiche Kurve",
+    "segment": "Grund -> weiß 50%, transition-colors 150ms",
+    "slider_griff": "Ring 4px ring/50",
+    "nicht_vorhanden": ["Lift", "Scale", "Keyframes", "Scrollanimation", "Sticky (außer Figma-Leiste)"]
+  },
+  "mobil": {
+    "status": "M",
+    "unter_896": "eine Spalte, Bühne zuerst, Steuerkarten order-last",
+    "unter_672": "Detailspalten einspaltig",
+    "bei_390": "Bühne 292 breit, 600 hoch, Bild 292x292 mit Leerfläche; Hinweis 4 Zeilen; Segmentleiste 367px passt knapp",
+    "schwaeche": "feste Bühnenhöhe statt Seitenverhältnis"
+  },
+  "assets": { "status": "M", "wert": "3 Produktfotos 1024x1024 (fremde Marke, nicht übernehmen), 11 Lucide-Icons, kein Video, Canvas oder WebGL" }
+}

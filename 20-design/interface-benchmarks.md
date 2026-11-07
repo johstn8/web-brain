@@ -77,34 +77,39 @@ Bezug: das vom Nutzer gelieferte Dashboard-Bild in [[90-references/inspiration-c
 
 **Rolle:** Leitbild für Produkt-, Varianten- und Größenauswahl sowie für jede Seite, deren Kern ein einzelnes Objekt ist.
 
-Bezug: der 180-Grad-Produktbetrachter in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]]. Am 2026-11-07 vom Nutzer bestätigt: starker Aufbau der Produktansichten, gute Knöpfe. Als Baustein im Kit: `blocks/Produktansicht.astro`.
+Bezug: der 180-Grad-Produktbetrachter in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]]. Am 2026-11-07 vom Nutzer bestätigt: starker Aufbau der Produktansichten, gute Knöpfe. Am selben Tag im echten Chrome gemessen, Befund in `.research/eingang/produktbetrachter-180/`. Als Baustein im Kit: `blocks/Produktansicht.astro`.
 
 - Das Objekt steht freigestellt und groß auf einer hellen, neutralen Studiofläche, mit weichem Bodenschatten und ohne Rahmen. Es ist das Leitmedium der Seite, nicht eine Abbildung neben Text.
-- Der Betrachter wechselt über benannte Ansichten. Die Bezeichnungen bleiben konkret, etwa `Vorderansicht links`, `Seitenansicht`, `Rückansicht`. Ein Zähler oder Punktindikator zeigt die Position in der Reihe.
-- Bedienung über Ziehen, Wischen und Pfeiltasten. Jede Ansicht ist auch ohne Zeigegerät direkt anwählbar; der Betrachter ist nie die einzige Möglichkeit, alle Ansichten zu sehen.
-- Auswahlelemente sind weich abgerundet: Größen als gleich große Felder mit deutlicher Radiusstufe, Farben als runde Felder mit sichtbarem Auswahlring. Der ausgewählte Zustand ist an Fläche und Kontrast erkennbar, nie nur an Farbe.
+- Das Objekt dreht stufenlos mit der Hand: 0,8° je Pixel. Acht benannte 45°-Stufen wählen das Bild, und der Wechsel ist hart, ohne Überblenden. Die Bezeichnungen bleiben konkret und einheitlich, etwa `Vorderansicht`, `Vorne rechts`, `Rückansicht`. Name und Gradzahl liegen als kleines Feld oben rechts auf der Bühne.
+- Darunter eine beschriftete Segmentleiste 0°–315° in einem grauen Träger, das aktive Segment weiß mit leichtem Schatten. Dazu −45° und +45° sowie Drehen mit Anhalten. Bedienung außerdem über Wischen und Pfeiltasten; jede Stufe ist ohne Zeigegerät direkt anwählbar.
+- Aufbau: Steuerkarten links in einem Drittel, die Bühne rechts in zwei Dritteln, groß gerundet und mit leichtem Verlauf. Schmal steht die Bühne zuerst und ist quadratisch, nicht fest hoch.
+- Auswahl in weißen Karten mit kleinem Linienicon im Titel: Farben als Kacheln mit Punkt, Name und optionalem Preis im 2er-Raster, Rand 2 px; Größen im 3er-Raster, Rand 1 px. Gewählt ist ein Akzentrand mit hellem Akzentgrund, und die Auswahl ist an mehr als der Farbe erkennbar. Zoom ist eine Option mit Regler und Zurücksetzen.
 - Nicht verfügbare Optionen bleiben sichtbar, sind aber eindeutig als nicht wählbar markiert und benennen den Grund.
 - Sekundäre Informationen wie Materialangabe, Pflegehinweis oder Größenhilfe liegen in einer kurzen, klar getrennten Detailliste, nicht in Fließtext.
 - Übertragung auf Nicht-Produkte: Dieselbe Grammatik trägt Leistungspakete, Raumtypen, Termine, Modelle oder Ausstattungsvarianten. Gibt es nichts sinnvoll Wählbares, wird die Mechanik nicht erfunden. Dann bleibt vom Benchmark nur die weiche, abgerundete Formsprache auf heller Neutralfläche.
 
-**Motion:** Die Ansichtsdrehung folgt der Eingabe unmittelbar und ist unterbrechbar. Auswahlwechsel bestätigen in unter 200 ms. Kein automatisches Dauerdrehen ohne Stoppmöglichkeit.
+**Motion (gemessen):** Die Drehung folgt der Eingabe unmittelbar und ist unterbrechbar. Hover ändert nur Randfarbe oder Grund, in 150 ms `cubic-bezier(.4,0,.2,1)`, ohne Lift und ohne Scale. Zoom läuft in 300 ms `cubic-bezier(0,0,.2,1)`. Automatisches Drehen läuft mit etwa 31,5° je Sekunde, hat immer einen Stopp und entfällt bei reduzierter Bewegung. Es gibt keine Scrollanimation.
 
 ## B3 Full-Bleed Leitbild-Landing
 
 **Rolle:** Auftakt für Dienstleister, Betriebe und Anlagen, deren Gegenstand fotografierbar ist.
 
-Bezug: die Solarseite in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]]. Am 2026-11-07 vom Nutzer bestätigt: stark, aber Ovale über Überschriften und Verläufe machen die KI sichtbar.
+Bezug: die Solarseite in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]]. Am 2026-11-07 vom Nutzer bestätigt: stark, aber Ovale über Überschriften und Verläufe machen die KI sichtbar. Am selben Tag im echten Chrome gemessen, Befund in `.research/eingang/inizio-solar/`. Als Vorlage im Kit: `vorlagen/signal/`.
 
 **Übernehmen**
 
-- Ein einziges großes, randloses Leitbild trägt den Auftakt. Der Gegenstand des Betriebs ist darauf tatsächlich zu sehen: die Anlage, der Laden, das Fahrzeug, die Werkstatt, das Team bei der Arbeit.
-- Genau eine kräftige Signalfarbe aus dem Gegenstand selbst gegen eine dunkle, entsättigte Grundfläche. Die Signalfarbe erscheint in Marke, primärer Aktion und wenigen Akzenten, nie flächig.
-- Leistungen als kleine, klar benannte Gruppe statt als lange Liste. Vier bis sechs Einträge mit je einer Zeile Erklärung reichen.
+- Ein einziges großes, randloses Leitbild trägt den Auftakt, mit einer gleichmäßigen Abdunklung von etwa 70 % statt eines Verlaufs. Der Gegenstand des Betriebs ist darauf tatsächlich zu sehen: die Anlage, der Laden, das Fahrzeug, die Werkstatt, das Team bei der Arbeit.
+- Genau eine kräftige Signalfarbe gegen fast schwarzen Grund. Helle und dunkle Abschnitte wechseln sich ab. Die Signalfarbe trägt Marke, Aktionen, Icon-Kacheln und höchstens jede zweite Leistungskachel. Auf Weiß steht sie nie als Text.
+- Leistungen als kleine, klar benannte Gruppe: vier bis sechs Kacheln mit Icon, Titel und einer Zeile, abwechselnd gefüllt und hellgrau. Beim Hover wächst die Kachel auf 1,05, ein Eckkreis wächst und blasst aus.
+- Ein Ablauf oder Service als Liste mit kleiner Icon-Kachel je Zeile auf dunklem Grund; beim Hover verstärkt sich die Kachel und der Titel nimmt die Signalfarbe an.
+- Drei Schriften mit fester Rolle sind hier richtig: Display für H1/H2, eine zweite für Navigation, Knöpfe und H3, eine Textschrift.
+- **Motion (gemessen):** Alle Hover dauern 300 ms `cubic-bezier(.4,0,.2,1)`. Die Navigation zeigt einen Unterstrich, der von der Mitte wächst, und der Pfeil im Knopf rückt 3,5 px. Es gibt keine Scrollanimation, kein Reveal und kein Parallax; nur die Kopfzeile klebt.
 - Eine kurze Nutzenüberschrift, ein erklärender Satz, eine primäre Aktion. Danach folgt Beweis.
 
 **Nicht übernehmen**
 
-- Jede Zeile oder Pille über einer Überschrift, auch echte Rubrikinformation (harte Sperre S1), und Verläufe in Flächen oder Schrift.
+- Jede Zeile oder Pille über einer Überschrift, auch echte Rubrikinformation (harte Sperre S1), und Verläufe in Flächen, auf Fotos oder in Schrift, besonders der animierte Verlauf der Überschriften. Ebenso ein einzelnes Wort der Überschrift in Signalfarbe.
+- Leuchteffekte (Glow) und ein Scroll-Indikator, der dauernd hüpft.
 - Erfundene Kennzahlen wie erzeugte Energie, abgeschlossene Projekte, Zufriedenheitsquote oder Jahre Erfahrung ohne Beleg, und ebenso erfundene Kundenstimmen mit Namen. Beides fällt unter [[10-strategy/content-and-conversion.md#Beweis-Hierarchie]].
 - Austauschbare Abschnittstexte, die zu jedem beliebigen Anbieter derselben Branche passen.
 

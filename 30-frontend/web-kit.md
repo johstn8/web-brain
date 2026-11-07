@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-05
+updated: 2026-11-07
 depends_on:
   - "[[30-frontend/stack.md]]"
   - "[[20-design/color-system.md]]"
@@ -60,7 +60,7 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | `kachel` | dentalize.de | Filmkacheln mit Radius, Überschriften in Grau und Schwarz, Bento auf Hellgrau, gestapelte Filme, Streubild, klebende Schritte |
 | `kerbe` | inno-one.de | dunkle Tafeln mit Kerbe oben in der Mitte, leichte Manrope, Liniendiagramme, Bewertungszeile, versetzter Vergleich |
 | `gastgeber` | cornelia-poletto.de | Porträt über die volle Breite, Satz mit Unterschrift auf Hellblau, drei Halbseiten mit eigener Knopffarbe, Partnerleiste |
-| `tageskarte` | padella.co | Schwarz und Weiß, Ladenfront, drei Bilder mit Hover-Wechsel, Tageskarte im Rahmen, weiches Scrollen |
+| `tageskarte` | padella.co | Schwarz und Weiß, Ladenfront, drei Bilder mit Hover-Zoom auf 106 %, Tageskarte im Rahmen, weiches Scrollen |
 | `konditorei` | salswee.com | Creme und Beige, Stücke ragen über Streifenkanten, Raster von Rand zu Rand, Teller auf Muster, Fuß mit runden Oberkanten |
 | `gasthaus` | zum-hecht.de | schwarze Kopfzeile mit gebrochener Wortmarke, harte Wechsel, Titel mit gerahmter Unterzeile, enge Galerie, Kopffarbe in `--kopf` |
 | `creator` | espmedia.de | gestapelte Bilder im Auftakt, Bilder mit Werten im Glas, dunkle Kampagnenkacheln, steigende Säulen, schräge Handys |
@@ -68,6 +68,7 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | `praxishell` | zahnarzt-wels.at | Bild bis an den oberen Rand, leichte Outfit, Auszeichnungen transparent auf dem Auftakt, Glasfeld für Formulare, Bildbänder über die volle Breite |
 | `trattoria` | bigmammagroup.com | Küchenbild mit einem Satz, Standortkarten mit 16 px Radius und Zähler, dunkle Neuigkeiten, Grün statt Braun |
 | `licht` | pageou.de | feste weiße Kopfzeile, Raumbild, dünne Antiqua, Ornament, Bilderdrittel, Papierkarten, Gutschein |
+| `signal` | INIZIO Solar | Vollbild mit 70 % Abdunklung, eine Signalfarbe auf Schwarz, Wechsel hell und dunkel, Leistungskacheln mit Hover, Ablaufliste, drei Schriften mit Rolle |
 
 **Bindend ist an einer Vorlage nur, was der Nutzer an ihrem Vorbild gelobt hat.** Der Rest ist Füllung und darf im Auftrag ersetzt werden; die Aufstellung je Vorlage steht in `web-kit/vorlagen/README.md` unter „Was gelobt wurde". Lobt der Nutzer nur einzelne Elemente einer Seite, entsteht keine Vorlage, sondern ein Baustein in `blocks/`, aufgeführt in `web-kit/blocks/README.md` unter „Elemente aus dem Eingang", nach [[90-references/inspiration-eingang.md#Verarbeiten]].
 
@@ -99,7 +100,7 @@ Werden Fremdseiten so eng nachgebaut, entscheidet der Nutzer vor der Veröffentl
 ### Werkzeuge für die Stilwahl
 
 - `scripts/stil-messen.ts --url <adresse> --out <ordner>` misst an einer Referenzseite Schriften, Type Ramp, Radien von Aktionen, Kacheln und Bildern, Grund- und Akzentfarben und nimmt den Auftakt bei 1440 und 390 Pixel auf. Grundlage der [[90-references/reference-research-workflow.md#Stilrecherche]] und des [[90-references/inspiration-eingang.md]].
-- `scripts/effekte-messen.ts --url <adresse> --out <ordner> [--film]` misst, was ein Screenshot nicht zeigt: Hover per echter Mausbewegung an Element und Kindern samt Übergangszeit, Elemente, die sich beim Scrollen verändern, mit Bereich und Anfangs- und Endwert, `@keyframes`, `transition` und `:hover`-Regeln aus den Stylesheets, gsap-Tweens und ScrollTrigger mit Start, Ende und `scrub`, Lenis und Swiper. `--film` legt alle 250 Pixel ein kleines Bild ab. Seit 2026-11-07 Pflicht, sobald der Nutzer an einer Seite einen Effekt lobt; vorher wurden Effekte aus Screenshots geschätzt. Seiten aus Figma Sites lassen sich damit nicht messen, ihre Laufzeit startet im Testbrowser nicht.
+- `scripts/effekte-messen.ts --url <adresse> --out <ordner> [--film]` misst, was ein Screenshot nicht zeigt: Hover per echter Mausbewegung an Element und Kindern samt Übergangszeit, Elemente, die sich beim Scrollen verändern, mit Bereich und Anfangs- und Endwert, `@keyframes`, `transition` und `:hover`-Regeln aus den Stylesheets, gsap-Tweens und ScrollTrigger mit Start, Ende und `scrub`, Lenis und Swiper. `--film` legt alle 250 Pixel ein kleines Bild ab. Seit 2026-11-07 Pflicht, sobald der Nutzer an einer Seite einen Effekt lobt; vorher wurden Effekte aus Screenshots geschätzt. Seiten aus Figma Sites und Figma Make lassen sich damit nicht messen, ihre Laufzeit startet im Testbrowser nicht; der Weg dafür steht in [[90-references/inspiration-eingang.md#Verarbeiten]]. Das Skript vergleicht neben `transform` auch die Einzel-Properties `translate`, `scale` und `rotate`, die Tailwind v4 setzt.
 - `scripts/stilverlauf.ts --kandidat <preset>` liest Displayschrift, Aktionsform, Grundhelligkeit und Papiergrund aus dem ausgelieferten CSS der letzten Websites unter `projekte/` und meldet Wiederholungen nach [[20-design/design-direction.md#Abstand zu den letzten Projekten]].
 
 ### Schriften

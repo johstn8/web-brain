@@ -124,8 +124,8 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben. Barra und L
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
-| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktdemo, Tool | Produktansichten und Knöpfe; Baustein `Produktansicht` | hoch |
-| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | Energie, B2B-Angebot | stark, aber Ovale über Überschriften und Verläufe; Leitbild-Prinzip in B3 | mittel |
+| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktdemo, Tool | Produktansichten und Knöpfe, gemessen 2026-11-07; Baustein `Produktansicht` | hoch |
+| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | Energie, B2B-Angebot | stark, aber Ovale über Überschriften und Verläufe; gemessen 2026-11-07, Vorlage `signal`, Prinzip in B3 | mittel |
 | [Apple](https://www.apple.com/) | Premiumprodukt, Hardware | medienzentriert, präzise | hoch |
 | [Stripe](https://stripe.com/) | Fintech, Plattform | informationsstark, systemisch | hoch |
 | [Linear](https://linear.app/) | Produktivität, SaaS | dunkel, präzise, produktzentriert | hoch |

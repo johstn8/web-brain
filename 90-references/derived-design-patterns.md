@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-11-04
+updated: 2026-11-07
 depends_on:
   - "[[90-references/inspiration-catalog.md]]"
 ---
@@ -98,7 +98,7 @@ Aus den Referenzen lassen sich mehrere tragfähige Anordnungen ableiten. Wähle 
 | Anordnung | Beobachtet bei | Wirkt | Geeignet für |
 |---|---|---|---|
 | Überschrift links, Inhalt rechts in eigener Spalte | Linear, Stripe | ruhig, scanbar | erklärende Abschnitte mit vielen Punkten |
-| große Überschrift über die volle Breite, Inhalt darunter versetzt | Obys, INIZIO Solar | laut, plakativ | Auftakt, Kampagne, Kapitelanfang; nur wenn die vollständige H1 an allen Prüfbreiten lesbar bleibt |
+| große Überschrift über die volle Breite, Inhalt darunter versetzt | Obys | laut, plakativ | Auftakt, Kampagne, Kapitelanfang; nur wenn die vollständige H1 an allen Prüfbreiten lesbar bleibt |
 | Überschrift mit Ziffer in derselben Zeile | brutalistische Systeme | ordnend | nummerierte Prozesse ohne Kicker |
 | Überschrift als Bildunterschrift unter dem Medium | Apple, 180-Grad-Produktbetrachter | medienführend | Produkt, Ort, Arbeit als Beweis |
 | Überschrift in eine schmale Randspalte gesetzt, Text daneben | redaktionelle Seiten | textführend | lange Inhaltsseiten |

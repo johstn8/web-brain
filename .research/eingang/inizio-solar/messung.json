@@ -1,0 +1,58 @@
+{
+  "quelle": "https://sixth-powder-95605714.figma.site/",
+  "gemessen": "2026-11-07",
+  "methode": "echter Chrome des Nutzers über die Chrome-Erweiterung: DOM, Computed Styles, CSS-Regeln, echte Maus-Hover mit Zeitmessung, Scroll-Abtastung in 400-px-Schritten, 390 px über ein gleich-originiges iframe",
+  "kennzeichnung": { "M": "gemessen", "A": "abgeleitet oder geschätzt" },
+  "technik": { "wert": "Figma Make, React, Tailwind v4", "status": "M" },
+  "viewports": { "wert": ["1025x713, Seitenhöhe 5012", "390, Seitenhöhe 9158"], "status": "M" },
+  "inhaltsstand": { "status": "M", "wert": "Auftakt heißt jetzt 'Powering the Future with Sustainable Tech'; 'Solar Revolution' steht in About" },
+  "grundlagen": {
+    "status": "M",
+    "root_font_px": 14,
+    "schriften": { "display": "Space Grotesk 600/700", "ueberschrift_navigation_knoepfe": "Outfit 500/600", "text": "Inter 400/500" },
+    "farben": { "neon-green": "#39ec2a", "matte-black": "#0a0a0a", "charcoal": "#1a1a1a", "soft-grey": "#888", "hell": "weiß, gray-50/100" },
+    "verlauf_ueberschrift": { "wert": "linear-gradient(135deg,#39ec2a,#00d4ff), background-size 200%, gradient-shift 3s ease infinite", "uebernehmen": false },
+    "typo": {
+      "hero": "clamp(3rem,8vw,6rem) Space Grotesk 700 ls -.03em lh .95 (82px; 390: 42px)",
+      "display": "clamp(2rem,4vw,3.5rem) 600 ls -.02em lh 1.1 (41px; mobil 28px)",
+      "headline": "clamp(1.5rem,3vw,2.25rem) Outfit 600 ls -.015em lh 1.2",
+      "title": "clamp(1.25rem,2vw,1.5rem) Outfit 500 ls -.01em lh 1.3 (20.5px)",
+      "body_large": "1.125rem Inter lh 1.6",
+      "body": "1rem lh 1.6 ls -.005em",
+      "caption": ".875rem lh 1.4",
+      "overline": { "wert": ".75rem Outfit 600 ls .1em uppercase", "uebernehmen": false }
+    },
+    "radien_px": { "karten": 21, "knoepfe": 12.75, "weitere": [8.75, 14], "pillen": "voll rund" },
+    "glow": { "wert": "neon-glow-Klassen vorhanden, beim Hover ohne Wirkung; hover:neon-green an Links ohne Wirkung", "status": "M" }
+  },
+  "abschnitte_desktop": {
+    "status": "M",
+    "navigation": "sticky top 0, h 63, matte-black/95 + blur 12px, Unterkante 1px weiß 10%; Logo 35px + Name Outfit 600 20.5px; Links Outfit 500 12.25px px-4 py-3, Abstand 35px; Outline-Knopf Neon 2px rounded-xl px-6 py-3",
+    "auftakt": "min-h-screen, Vollbildfoto object-cover + Abdunklung matte-black/70; Inhalt zentriert max-w-5xl: Badge-Pille, H1, Text body-large soft-grey max-w-4xl, zwei Knöpfe gap-6 px-10 py-4 57px hoch Outfit 500 15.75px (gefüllt Neon/schwarz mit Pfeil, Outline weiß 2px), drei Kennzahlen, Scroll-Indikator (Kapsel 21x35, Punkt pulse 2s, Kapsel bounce 1s)",
+    "loesungen": "weiß py-24; Kopf zentriert mb-20; Raster 3x2 gap-8, Karte 304x197 p-8 rounded-3xl, abwechselnd Neon gefüllt / gray-50; Icon 35px + title; Text 16px; Kreis 56px unten rechts -8px versetzt, Deckkraft 20%; Knopf charcoal mt-20",
+    "services": "charcoal py-20, 2 Spalten gap-16: links H2 (zweites Wort Neon), Intro 21px soft-grey, sechs Zeilen (Icon-Kachel 42px Neon 10% + Neonrand rounded-lg, Titel 21px weiß, Text soft-grey) space-y-8, Neon-Knopf; rechts Foto 600 hoch rounded-2xl mit Verlauf und Glas-Kennzahlenkarte, Deko-Kreise",
+    "about_werte_stimmen": "weiß py-24; 2 Spalten gap-20 Text + Kennzahlen | Foto 600 hoch rounded-3xl; Werte 3 Spalten (Icon-Kachel 70px rounded-2xl Neonrand 2px); Stimmen 3 Karten gray-50 rounded-3xl p-8",
+    "footer": "matte-black pt-20 pb-10; 6er-Raster (Marke 2 Spalten, 4 Linkspalten), Newsletter (Eingabe charcoal Rand weiß 20%, Fokus Neonrand, Knopf Neon), vier Social-Kacheln 42px rounded-xl"
+  },
+  "hover": {
+    "status": "M",
+    "uebergang": "alle 300ms cubic-bezier(.4,0,.2,1)",
+    "leistungskarte": { "scale": "1 -> 1.05", "zeitreihe": { "0ms": 1.023, "100ms": 1.046, "200ms": 1.05, "300ms": 1.05 }, "kreis": "scale 1.5, Deckkraft .2 -> .1", "graue_karte": "gray-50 -> gray-100, Text soft-grey -> charcoal", "glow": "keiner" },
+    "kennzahl_auftakt": "scale 1.05",
+    "nav_link": "Unterstrich 2px Neon, scale-x 0 -> 1 von der Mitte, Textfarbe bleibt",
+    "nav_knopf": "transparent -> Neon gefüllt, Text schwarz",
+    "auftakt_knopf_gefuellt": "nur Pfeil translate 3.5px nach rechts",
+    "outline_knopf": "weiß gefüllt, Text schwarz",
+    "explore_knopf": "charcoal -> Neon, Text schwarz",
+    "service_zeile": "Icon-Kachel Neon 10% -> 20%, Titel -> Neon, Text -> weiß",
+    "wert": "Icon-Kachel -> Neon gefüllt + scale 1.1, Icon schwarz, Titel Neon",
+    "footer_link": "translate 3.5px, Farbe bleibt",
+    "social_kachel": "scale 1.1, Icon + Rand Neon"
+  },
+  "hover_abgeleitet": { "status": "A", "stimmenkarte": "laut Klassen hover:shadow-lg + scale-105, nicht nachgemessen" },
+  "scroll": { "status": "M", "wert": "keine scrollabhängige Änderung (kein Reveal, Parallax, Scroll-Timeline), scroll-behavior auto, nur die Navigation sticky", "keyframes": ["gradient-shift", "pulse", "bounce", "enter/exit", "accordion-*", "caret-blink"], "laufend": ["gradient-shift x3", "bounce", "pulse"] },
+  "mobil": { "status": "M", "navigation": "Burger 38x38; Panel matte-black/98 + blur, Links Outfit 500 16px px-4 py-3, vollbreiter Outline-Knopf, ohne Animation", "h1": "42px mittig 3 Zeilen", "knoepfe": "untereinander vollbreit je 57", "raster": "alles einspaltig, Karten 362 breit; Services: Foto unter der Liste", "schwaeche": "Auftakt höher als der Bildschirm, Badge knapp unter der Navigation" },
+  "assets": { "status": "M", "wert": "Logo PNG 432x522, drei Unsplash-Fotos (Solarfeld, Montagehände, Dashboard), 46 Lucide-SVGs, kein Video; nicht übernehmen" },
+  "uebertragbar": ["Vollbild-Leitbild mit 70-%-Abdunklung", "eine Signalfarbe auf fast schwarzem Grund", "Wechsel heller und dunkler Abschnitte", "abwechselnd gefüllte Leistungskacheln mit 1.05-Hover und wachsendem Eckkreis", "Service-Liste mit Icon-Kachel-Hover", "Unterstrich-Hover der Navigation", "drei Schriften mit klarer Rolle"],
+  "nicht_uebertragbar": ["Overline-Kicker", "animierter Verlauf in Überschriften", "Badge-Pille über der H1", "zweites Wort der H2 in Neon", "unbelegte Kennzahlen (10+, 5000+, 50 MW, 500+, 98 %, 99,9 %, 25yr) und Stimmen", "Glow-Klassen ohne Wirkung", "Scroll-Indikator mit Dauer-Bounce"]
+}
