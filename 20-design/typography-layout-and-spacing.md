@@ -125,7 +125,7 @@ Radius und Rahmen gehören zur variablen Stilebene. Vor der ersten Komponente le
 ## Layout
 
 - Containerbreiten und Seiten-Gutters als fluides Token, etwa mit `clamp()`. Belegte Ausgangswerte: Inhaltsbreite `64rem` bis `80rem`, Lesestrecke `42rem` bis `48rem`, Seitenpolster `clamp(1rem, 5vw, 2rem)`.
-- Sektionspolster fluide und großzügig, Richtwert `clamp(4rem, 10vw, 8rem)` oben und unten. Der Abstand zwischen zwei Sektionen ist deutlich größer als jeder Abstand innerhalb einer Sektion. Bei Phillip Ohren und EVE BCN ist dieser Weißraum das einzige Trennmittel zwischen den Abschnitten; er ersetzt Trennlinien und Flächenwechsel.
+- Sektionspolster fluide und großzügig, Richtwert `clamp(4rem, 10vw, 8rem)` oben und unten. Der Abstand zwischen zwei Sektionen ist deutlich größer als jeder Abstand innerhalb einer Sektion. Bei Phillip Ohren ist dieser Weißraum das einzige Trennmittel zwischen den Abschnitten; er ersetzt Trennlinien und Flächenwechsel.
 - Grid explizit: Spalten, Gutter, Maximalbreite und Ausnahmen. Kartenraster halten einen Gutter aus derselben Spacing-Skala, Richtwert `1rem` bis `1.5rem`.
 - Visuelle Ausrichtung an Textkanten, Baselines und gemeinsamen Achsen.
 - Zentrierte Textblöcke nur kurz; lange Inhalte linksbündig.

@@ -64,6 +64,8 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | `konditorei` | salswee.com | Creme und Beige, Stücke ragen über Streifenkanten, Raster von Rand zu Rand, Teller auf Muster, Fuß mit runden Oberkanten |
 | `gasthaus` | zum-hecht.de | schwarze Kopfzeile mit gebrochener Wortmarke, harte Wechsel, Titel mit gerahmter Unterzeile, enge Galerie, Kopffarbe in `--kopf` |
 
+**Bindend ist an einer Vorlage nur, was der Nutzer an ihrem Vorbild gelobt hat.** Der Rest ist Füllung und darf im Auftrag ersetzt werden; die Aufstellung je Vorlage steht in `web-kit/vorlagen/README.md` unter „Was gelobt wurde". Lobt der Nutzer nur einzelne Elemente einer Seite, entsteht keine Vorlage, sondern ein Baustein in `blocks/`, nach [[90-references/inspiration-eingang.md#Verarbeiten]].
+
 `scripts/vorlage-bauen.sh <name>` baut sie nach `projekte/kit-vorlagen/versions/<name>/dist`, von dort erscheinen sie auf `/dev`. Eine Vorlage wird für den Auftrag kopiert und umgeschrieben: Inhalte aus `content/<website>.json`, Farben und Bilder des Betriebs. Der Aufbau bleibt. Fotos der Vorlagen stehen unter Unsplash-Lizenz und werden ersetzt. Kommt eine neue Website in den [[90-references/inspiration-eingang.md]], entsteht daraus eine neue Vorlage, nicht ein neues Preset.
 
 Werden Fremdseiten so eng nachgebaut, entscheidet der Nutzer vor der Veröffentlichung, ob der Abstand reicht; bei Wettbewerbern derselben Stadt ist eine Verwechslung zu vermeiden.
@@ -117,7 +119,7 @@ Fehlt ein Werkzeug, meldet der Lauf die Prüfung als **übersprungen**, nie als 
 
 `scripts/check-slop.ts` öffnet jede Route aus der Sitemap im Browser und misst am gerenderten Dokument die Sperren S1 bis S5 aus [[20-design/anti-ai-slop.md#Harte Sperren]]: Dachzeile über einer Überschrift, Nummernmarke, Teilauszeichnung in einer Überschrift, Ausblendung eines Fotos über Verlauf oder Maske und drei gleich gebaute Sektionen in Folge auf der Startseite. Jede Sperre lässt `qa.sh` scheitern; die Prüfung kann nicht über `--skip` abgewählt werden.
 
-Gemessen wird am Render, nicht am Quelltext, weil eine Dachzeile ein Absatz, ein Span, eine Pseudo-Zeile oder Teil eines Blocks sein kann. Die Schwellen sind an realen Seiten geeicht: Die Gastronomie-Benchmarks MINE, Pageou, Barra, Lilia und Carbone bestehen ohne Sperre, Impasto Rosso fällt mit zwei Dachzeilen durch, und alle vier Fassungen der Trattoria Alberto fallen genau an den Stellen durch, die der Nutzer kritisiert hat. Ein leichter Lesbarkeitsschleier über einem Foto ist erlaubt; gesperrt ist nur der Verlauf, der an einem Ende deckend wird, und die Maske, die das Bild transparent auslaufen lässt.
+Gemessen wird am Render, nicht am Quelltext, weil eine Dachzeile ein Absatz, ein Span, eine Pseudo-Zeile oder Teil eines Blocks sein kann. Die Schwellen sind an realen Seiten geeicht: Die Gastronomie-Benchmarks MINE, Pageou und Carbone bestehen ohne Sperre, Impasto Rosso fällt mit zwei Dachzeilen durch, und alle vier Fassungen der Trattoria Alberto fallen genau an den Stellen durch, die der Nutzer kritisiert hat. Ein leichter Lesbarkeitsschleier über einem Foto ist erlaubt; gesperrt ist nur der Verlauf, der an einem Ende deckend wird, und die Maske, die das Bild transparent auslaufen lässt.
 
 Die unveränderte Startseite des Starters besteht die Prüfung nicht: Sie ist ein technisches Gerüst mit vier gleich gebauten Sektionen und wird im Projekt umgebaut.
 

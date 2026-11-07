@@ -1,7 +1,7 @@
 ---
 type: canonical
 status: canonical
-updated: 2026-09-19
+updated: 2026-11-07
 depends_on:
   - "[[90-references/inspiration-catalog.md]]"
 impacts:
@@ -44,7 +44,7 @@ Ein Build ist nicht deshalb handwerklich schwächer, weil er kantig statt weich,
 
 **Rolle:** Grundhaltung für Oberflächen mit Daten, Listen, Status und Verwaltung. Höchste Priorität. Wenn nichts anderes im Auftrag steht, ist das die Standardanmutung für Anwendungs-UI.
 
-Bezug: das vom Nutzer gelieferte Dashboard-Bild sowie das ATS-Dashboard, beide in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]].
+Bezug: das vom Nutzer gelieferte Dashboard-Bild in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]].
 
 **Fläche und Farbe**
 
@@ -77,7 +77,7 @@ Bezug: das vom Nutzer gelieferte Dashboard-Bild sowie das ATS-Dashboard, beide i
 
 **Rolle:** Leitbild für Produkt-, Varianten- und Größenauswahl sowie für jede Seite, deren Kern ein einzelnes Objekt ist.
 
-Bezug: der 180-Grad-Produktbetrachter in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]].
+Bezug: der 180-Grad-Produktbetrachter in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]]. Am 2026-11-07 vom Nutzer bestätigt: starker Aufbau der Produktansichten, gute Knöpfe. Als Baustein im Kit: `blocks/Produktansicht.astro`.
 
 - Das Objekt steht freigestellt und groß auf einer hellen, neutralen Studiofläche, mit weichem Bodenschatten und ohne Rahmen. Es ist das Leitmedium der Seite, nicht eine Abbildung neben Text.
 - Der Betrachter wechselt über benannte Ansichten. Die Bezeichnungen bleiben konkret, etwa `Vorderansicht links`, `Seitenansicht`, `Rückansicht`. Ein Zähler oder Punktindikator zeigt die Position in der Reihe.
@@ -93,7 +93,7 @@ Bezug: der 180-Grad-Produktbetrachter in [[90-references/inspiration-catalog.md#
 
 **Rolle:** Auftakt für Dienstleister, Betriebe und Anlagen, deren Gegenstand fotografierbar ist.
 
-Bezug: die Solarseite in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]].
+Bezug: die Solarseite in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]]. Am 2026-11-07 vom Nutzer bestätigt: stark, aber Ovale über Überschriften und Verläufe machen die KI sichtbar.
 
 **Übernehmen**
 
@@ -104,7 +104,7 @@ Bezug: die Solarseite in [[90-references/inspiration-catalog.md#Vom Nutzer bewer
 
 **Nicht übernehmen**
 
-- Redundante gesperrte Versalzeilen über Sektionsüberschriften. Echte Rubrik- oder Prozessinformation darf als Kicker bestehen, wenn sie nicht bloß die Überschrift wiederholt.
+- Jede Zeile oder Pille über einer Überschrift, auch echte Rubrikinformation (harte Sperre S1), und Verläufe in Flächen oder Schrift.
 - Erfundene Kennzahlen wie erzeugte Energie, abgeschlossene Projekte, Zufriedenheitsquote oder Jahre Erfahrung ohne Beleg, und ebenso erfundene Kundenstimmen mit Namen. Beides fällt unter [[10-strategy/content-and-conversion.md#Beweis-Hierarchie]].
 - Austauschbare Abschnittstexte, die zu jedem beliebigen Anbieter derselben Branche passen.
 
@@ -112,7 +112,7 @@ Bezug: die Solarseite in [[90-references/inspiration-catalog.md#Vom Nutzer bewer
 
 **Rolle:** Aufbau für Anwendungen, die Daten auswerten.
 
-Bezug: das ATS-Dashboard in [[90-references/inspiration-catalog.md#Vom Nutzer bewertete Benchmarks]].
+Bezug: ursprünglich das ATS-Dashboard, das der Nutzer am 2026-11-07 verworfen hat. Die Regeln bleiben als allgemeine Regeln für Datenansichten; ein Vorbild hat B4 derzeit nicht.
 
 - Jede Kennzahl wird eingeordnet: eigener Wert, Vergleichswert und benannter Zeitraum. Eine Zahl ohne Bezugsgröße ist keine Aussage.
 - Kategorien erhalten je eine feste Farbe, die über alle Ansichten hinweg dieselbe bleibt. Farbe ist nie das einzige Unterscheidungsmerkmal; Beschriftung steht immer dabei.
@@ -122,56 +122,17 @@ Bezug: das ATS-Dashboard in [[90-references/inspiration-catalog.md#Vom Nutzer be
 
 ## B5 Modern Neutral Craft Web
 
-**Rolle:** Wählbares Stilprofil für Marketing-Landings, Portfolios, Verzeichnisse und inhaltsgetriebene Seiten. B5 ist nicht die allgemeine Handwerksuntergrenze. Nur eine Website, die B5 als Leit- oder Zusatzbenchmark wählt, übernimmt seine konkrete Formsprache.
+**Rolle:** Wählbares Stilprofil für Produktvorstellungen, Portfolios und inhaltsgetriebene Seiten. B5 ist nicht die Handwerksuntergrenze; nur eine Website, die B5 wählt, übernimmt seine Formsprache.
 
-Bezug: das Sieben-Seiten-Set in [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]]. Vom Nutzer am 8. August 2026 ausdrücklich für Oberfläche, Bedienung, Animation und Kastengestaltung als Messlatte benannt und ausdrücklich **nicht** für Rechtstexte, Belege oder Inhaltswahrheit.
+Bezug: [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]]. Von den sieben Seiten vom August hat der Nutzer am 2026-11-07 vier verworfen. B5 beruht jetzt nur noch auf dem, was er an Consile und Saad Salman gelobt hat, und auf Phillip Ohren.
 
-### Flächenlogik des Stilprofils
+- **Produktvorstellung nach Consile:** ein Produkt, Schritt für Schritt gezeigt, mit echter Oberfläche statt Illustration. Nicht übernommen wird die eine Markenfarbe auf jeder Fläche und jeder Verlauf: Der Nutzer erkennt genau daran die KI. Eine B5-Seite wechselt Flächen und Töne.
+- **Schwebende Elemente nach Saad Salman:** einzelne Karten oder Bilder liegen mit ruhigem Versatz über dem Grund und bewegen sich beim Scrollen leicht gegeneinander. Klickbare Flächen heben beim Hover um ein bis zwei Pixel, der Rahmen nimmt den Akzent an, dazu höchstens ein sehr flacher Schatten, belegt `0 8px 30px rgba(0,0,0,.06)`.
+- **Weißraum nach Phillip Ohren:** großer Abstand ist das Trennmittel, kein Linien- oder Flächenwechsel; Text darf direkt auf dem Leitbild einer Leistung stehen.
+- **Rahmen statt Schatten im Ruhezustand.** Ein Pixel, eine Rahmenstufe für Ruhe und eine für Hover und Fokus.
+- **Nicht übernommen:** Ovale und Pillen über Überschriften, Pillen als Etiketten, die keine Knöpfe sind, Verläufe in Überschriften und Flächen, Statuspunkte mit atmendem Ring, Mono-Schrift als Stilmittel, Emojis als Sektionszeichen.
 
-Die sieben Referenzen arbeiten mit drei nahen Helligkeitsstufen:
-
-- **Seitengrund**, minimal abgesetzt gegen Weiß, im Beleg `#fafafa`.
-- **Fläche** für Karten, Panels und Kopfzeile, im Beleg `#ffffff`.
-- **Sekundärfläche** für eingebettete Bereiche, Codeblöcke und Leerzustände, im Beleg `#f5f5f5`.
-
-Der Kontrast zwischen Grund und Fläche ist absichtlich sehr klein. Die Karte wird nicht durch ihre Füllung sichtbar, sondern durch ihren Hairline-Rahmen. Das ist ein B5-Merkmal, keine Pflicht für eine andere Art Direction. Kanonische Rollen, nicht diese konkrete Helligkeitslogik, stehen in [[20-design/color-system.md#Tokenvertrag]].
-
-### Rahmen als Hauptmittel, Tiefe als Ausnahme
-
-- Jede abgegrenzte Fläche trägt genau **einen Pixel Rahmen** in sehr niedrigem Kontrast. Innerhalb einer B5-Website ist dies die einzige Rahmenstärke.
-- Es gibt **zwei** Rahmenstufen: die ruhende und eine deutlich sichtbarere für Hover, Fokus und ausgewählten Zustand. Im Beleg `#e5e5e5` gegen `#d4d4d4`, bei ClaudeFolio bis auf die Vordergrundfarbe hoch.
-- **Im Ruhezustand trägt keine Fläche einen Schatten.** Tiefe ist ein Zustandssignal, kein Dekor.
-- Ein weicher Hover-Schatten ist erlaubt, aber nur auf tatsächlich klickbaren Flächen, in genau einer Stufe, sehr flach und sehr transparent. Belegter Richtwert `0 8px 30px rgba(0,0,0,.06)`. Mehr als eine Schattenstufe pro Projekt ist ein Befund.
-- Verläufe bleiben Flächen ohne Bedeutung verboten. Ein Verlauf darf ein reales Objekt, eine Lichtsituation oder einen Datenzustand darstellen, nie „Hochwertigkeit".
-
-### Kartenstil
-
-Die B5-Kartenvariante mit allen Werten und Zuständen steht in [[30-frontend/components-and-ui-states.md#Kartenentscheidung]]. Als Stil gilt hier:
-
-- Eine Karte existiert, weil ihr Inhalt eine eigene, anklickbare oder eigenständig lesbare Einheit ist. Sie existiert nie, weil ein Absatz eine Umrandung braucht.
-- Innerhalb einer Karte gibt es eine klare Reihenfolge: Medium oder Icon, Titel, eine Zeile Erklärung, darunter eine Metazeile in gedeckter Farbe, darunter höchstens eine Aktion.
-- Die Metazeile trennt mit `·` und bleibt einzeilig; die Grenze aus [[20-design/anti-ai-slop.md#Chrome und Beschriftung]] gilt auch hier. Eine Mono-Schrift für technische Werte und Tags ist Teil dieses Stilprofils und wird nicht auf andere Websites übertragen.
-- Bildflächen in Karten sitzen randlos an der Oberkante mit nur oben gerundeten Ecken und einem festen Seitenverhältnis, im Beleg `16/9`. Kein Rahmen zwischen Bild und Kartenrand.
-- Innenabstand ist großzügig und projektweit identisch. Dichte entsteht über Inhalt, nicht über engere Polster.
-
-### Bedienung und Zustand
-
-- Die Kopfzeile ist durchscheinend mit Blur, hat aber einen geprüften Kontrast und einen deckenden Fallback. Diese Ausprägung ist eine Option in [[30-frontend/components-and-ui-states.md#Kopfzeile und Hauptnavigation]], kein allgemeines Kopfzeilenrezept.
-- Klickbare Karten heben beim Hover um ein bis zwei Pixel und hellen gleichzeitig ihren Rahmen auf. Werte in [[20-design/motion-and-interaction.md#Kalibrierte Bewegungsbeispiele]].
-- Status wird als Pille mit Punkt gezeigt, nicht als Farbfläche. Ein echter Live-Zustand darf einen atmenden Ring tragen; ein statischer Zustand nie.
-- Tags und Kategorien sind Pillen aus dem Kategorieton bei sehr niedriger Deckung mit demselben Ton als Schriftfarbe. Der Ton färbt nie eine Sektionsfläche.
-- Linienicons in einer einzigen Strichstärke und nie größer als der Text, den sie begleiten.
-
-### Motion
-
-- Bewegung ist kurz, gerichtet und in der Fläche verankert. Der Standard-Reveal ist ein Aufstieg über zwölf Pixel mit Opazität in etwa 500 Millisekunden, `ease-out`, mit gehaltenem Endzustand.
-- Der Auftakt einer Seite darf einen zeichen- oder wortweisen Aufbau mit Unschärfe tragen. Er blockiert die primäre Aktion nicht.
-- Dekorative Hintergründe werden weich ausmaskiert, nicht hart beschnitten.
-- Die Werte sind als B5-Kalibrierung in [[20-design/motion-and-interaction.md#Kalibrierte Bewegungsbeispiele]] dokumentiert. Jede Website setzt ihren eigenen Zeit- und Kurvensatz.
-
-### Was aus diesem Set nicht übernommen wird
-
-Verlaufstext aus Indigo, Violett und Pink; Emojis als Sektionszeichen; Verlaufsflächen als Bildersatz; jede Sektion als gleichförmiges Kartenraster; alles Rechtliche und alle Kennzahlen. Begründung und Belege in [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]].
+Die Bausteine dazu stehen im Kit: `blocks/Schwebend.astro` und `blocks/Produktschritte.astro`.
 
 ## B6 Purpose-Fit Professional Web
 

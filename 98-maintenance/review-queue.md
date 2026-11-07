@@ -68,7 +68,7 @@ Erstanbieterliche Gegenposition aus dem Codex-Bootcamp vom Juni 2026: „Lay the
 
 Diese Seiten benötigen eine erneute manuelle Prüfung in einem vollständigen Browser:
 
-- Die sieben Benchmarkseiten des Sets „Modern Neutral Craft" vom 8. August 2026: Consile, CanDevsDoSomething, Phillip Ohren, EVE BCN, ClaudeFolio, Saad Salman, Thomas Stockham. Belegt sind ausschließlich Markup und CSS. **Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten sind nicht belegt** und werden vor einer Übernahme genau dieser Aspekte nach [[90-references/reference-research-workflow.md]] interaktiv geprüft. Die statisch belegten Werte bleiben als wählbares Stilprofil in [[20-design/interface-benchmarks.md#B5 Modern Neutral Craft Web]] erhalten; sie sind keine websiteübergreifende Vorgabe.
+- Die drei verbliebenen Benchmarkseiten des Sets „Modern Neutral Craft" vom 8. August 2026: Consile, Phillip Ohren, Saad Salman; die anderen vier hat der Nutzer am 2026-11-07 verworfen. Belegt sind ausschließlich Markup und CSS. **Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten sind nicht belegt** und werden vor einer Übernahme genau dieser Aspekte nach [[90-references/reference-research-workflow.md]] interaktiv geprüft. Die statisch belegten Werte bleiben als wählbares Stilprofil in [[20-design/interface-benchmarks.md#B5 Modern Neutral Craft Web]] erhalten; sie sind keine websiteübergreifende Vorgabe.
 
 - Perplexity
 - Locomotive

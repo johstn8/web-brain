@@ -89,7 +89,7 @@ Vor jeder Motion-Entscheidung dokumentieren: `Häufigkeit -> Zweck -> Trigger ->
 
 ## Kalibrierte Bewegungsbeispiele
 
-Diese Werte beschreiben die Bewegungsgrammatik des wählbaren B5-Stilprofils. Sie sind aus den sieben Referenzen in [[20-design/interface-benchmarks.md#B5 Modern Neutral Craft Web]] ausgelesen und in [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]] belegt. Sie sind **keine** kanonischen Basiswerte für jede Website. Jeder Website-Contract setzt seinen eigenen Zeit- und Kurvensatz; die Beispiele dürfen vollständig, teilweise oder gar nicht übernommen werden.
+Diese Werte beschreiben die Bewegungsgrammatik des wählbaren B5-Stilprofils. Sie stammen aus den Referenzen in [[20-design/interface-benchmarks.md#B5 Modern Neutral Craft Web]], seit 2026-11-07 nur noch Consile, Saad Salman und Phillip Ohren, und in [[90-references/inspiration-catalog.md#Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026]] belegt. Sie sind **keine** kanonischen Basiswerte für jede Website. Jeder Website-Contract setzt seinen eigenen Zeit- und Kurvensatz; die Beispiele dürfen vollständig, teilweise oder gar nicht übernommen werden.
 
 ### Zeit- und Kurvensatz
 

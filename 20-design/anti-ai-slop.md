@@ -98,7 +98,7 @@ Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst un
 | Rundung ab etwa 24 Pixel auf allen Containern | alles wird zur gleichen weichen Blase | Radiusskala je Website nach [[20-design/typography-layout-and-spacing.md#Radiusskala und Rahmenbehandlung]] |
 | Glasflächen und Blur ohne Überlagerungsproblem | Effekt ohne Aufgabe | deckende Flächen, Blur nur bei echter Schichtung |
 | Karte in Karte | doppelte Tiefe ohne zusätzliche Bedeutung | flach halten, mit Abstand, Typografie und Trennlinien gliedern |
-| dekoratives Rasternetz, Streifenverlauf oder Punktetextur im Hintergrund | Struktur wird behauptet statt aus dem Inhalt erzeugt | leere Fläche oder eine Struktur, die etwas darstellt |
+| dekoratives Rasternetz, Streifenverlauf oder Punktetextur im Hintergrund | Struktur wird behauptet statt aus dem Inhalt erzeugt | leere Fläche oder eine Struktur, die etwas darstellt. Ausnahme: ein feines Raster wie bei Fokus, das der Nutzer am 2026-11-07 gut fand; es trägt dort eine Planungssoftware, Vorlage `raster` |
 | radialer Farbschein oder Spotlight hinter dem Auftakt | simuliertes Licht ohne Lichtquelle | reale Bild- oder Materiallogik |
 | farbige Glows und Leuchtschatten auf dunklem Grund | der Standardlook generierter dunkler Oberflächen | monochrome, flache Tiefenstufen |
 
@@ -125,6 +125,8 @@ Jede Zeile ist ein **Befund, kein Verbot**: Wer eines dieser Merkmale bewusst un
 |---|---|---|
 | Blau-Violett- oder Violett-Cyan-Verlauf im Auftakt | das bekannteste Einzelmerkmal überhaupt | Farbrollen aus Marke, Material, Ort oder Produkt herleiten |
 | Verlaufstext auf Überschriften oder Kennzahlen | Dekoration ohne Bedeutung, oft mit Kontrastverlust | eine gesetzte Textfarbe |
+| eine Markenfarbe auf jeder Fläche, dazu Verläufe | Der Nutzer erkannte daran am 2026-11-07 bei Consile, Saad Salman und INIZIO die KI: zu wenig Abwechslung | Flächen und Töne wechseln; die Markenfarbe trägt Aktion und wenige Akzente |
+| Braun mit Creme oder Altrosa als Grundpalette | wirkt nach dem Nutzer altmodisch, siehe Big Mamma am 2026-11-07; derselbe Altstil wie unter [[#Bekannte Ballungen]] | nur wählen, wenn Betrieb oder Material es trägt, sonst kühlere oder klarere Töne |
 | Creme- oder Beigefläche als Signal für Hochwertigkeit | Reflex, keine Herleitung | Neutralskala aus realem Material ableiten |
 | graue Schrift auf farbiger Fläche | wirkt ausgewaschen und fällt unter den Kontrastwert | dunklere Abstufung derselben Farbe oder nahezu Weiß |
 | dauerhafter Dunkelmodus mit mittelgrauem Fließtext | Standardanmutung und Kontrastproblem zugleich | bewusste Entscheidung für Grundhelligkeit, Kontrast im Kontext prüfen |
@@ -199,6 +201,7 @@ Der Pruefsatz dazu: **Waere ich bei einem anderen Auftrag derselben Gattung an d
 |---|---|---|
 | Bestandsbild mit Team im hellen Büro, abstraktes 3D-Objekt, schwebende Formen | austauschbar und erkennbar generisch | reales Motiv des Betriebs nach [[20-design/imagery-and-ai-editing.md]] |
 | aus Grundformen zusammengesetzte SVG-Illustration | Platzhalteranmutung | echte Illustration, Foto oder nichts |
+| sichtbar KI-erzeugte Fotos von Menschen oder Räumen | der Nutzer nennt sie bei sonst starken Seiten wie Fokus den Schwachpunkt | authentische Fotos des Betriebs; bis dahin ein ehrlicher Platzhalter |
 | Foto unter einer fast deckenden Farbfläche | das ausgelieferte Bild ist unsichtbar | Bild zeigen oder entfernen |
 | Foto, das über einen Verlauf in den Seitengrund ausläuft | der Übergang wirkt weich gemeint und billig gemacht; das Bild verliert seine Kante | harte Sperre S4 |
 | leere `src`-Attribute und Platzhalterkästen | ausgelieferter Fehler | reales oder erzeugtes Bild einsetzen |

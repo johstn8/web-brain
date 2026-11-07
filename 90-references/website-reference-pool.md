@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-11-05
+updated: 2026-11-07
 review_by: 2027-02-27
 depends_on:
   - "[[90-references/reference-research-workflow.md]]"
@@ -28,32 +28,20 @@ Die Kategorien sind Suchhilfen, keine Qualitätsrangliste. Einträge mit einem R
 | [ko:mon](https://www.ko-mon.de/) | Beratung, Organisation | ruhig, editorial | niedrig bis mittel |
 | [jovoco](https://jovoco.io/) | Digitalberatung, B2B | produktnah, modern | mittel |
 | [metagram Solutions](https://metagram-solutions.com/) | Daten, Beratung | reduziert, systemisch | mittel |
-| [ESP Media](https://espmedia.de/) | Medien, Agentur | visuell, projektbezogen | mittel |
-| [Pexon](https://pexon-consulting.de/) | Cloud, Consulting | strukturiert, fachlich | mittel |
+| [ESP Media](https://espmedia.de/) | Medien, Agentur, Creator | stark; vom Nutzer 2026-11-07 gelobt: Scrollanimationen, Kacheln, Creator-Bilder mit Zahlen im Overlay, Team, schräge Handys, Fuß; Vorlage `creator` | mittel |
 | [Scaly](https://scaly.com/) | Software, Beratung | modern, produktnah | mittel |
 | [tunymedia](https://tunymedia.at/) | Agentur, Marketing | expressiv, portfolioartig | mittel bis hoch |
-| [Julius Schaefer](https://julius-schaefer.de/) | Personal Brand, Beratung | persönlich, editorial | niedrig bis mittel |
-| [Sales Culture](https://sales-culture.de/) | Training, Sales | direkt, conversion-orientiert | mittel |
-| [eProc](https://www.eproc.de/) | Beschaffung, B2B | informationsstark, seriös | niedrig bis mittel |
-| [SocialNatives](https://socialnatives.de/) | Social Media, Recruiting | energisch, jung | mittel bis hoch |
-| [Agency Invest](https://agencyinvest.de/) | Agenturberatung | editorial, wertig | mittel |
-| [Modulo Consulting](https://www.modulo-consulting.de/) | Consulting | ruhig, strukturiert | niedrig |
-| [Einstellungserfolg](https://einstellungserfolg.de/) | Recruiting | zugänglich, conversion-orientiert | mittel |
-| [KMC](https://kmc2.de/) | Beratung, B2B | sachlich, kompakt | niedrig |
+| [Sales Culture](https://sales-culture.de/) | Training, Sales | nur Elemente: bewegter Flieger im Auftakt, Text neben Bild am Desktop; Rest und Mobil schwach | mittel |
+| [Agency Invest](https://agencyinvest.de/) | Agenturberatung | nur Element: schwarzer Grund mit überlagerten schwarzen Flächen und Ausblendung; Rest verworfen | mittel |
+| [Modulo Consulting](https://www.modulo-consulting.de/) | Consulting | nur Elemente: Text steigt beim Scrollen aus dem Produkt, eckige Produktkacheln; Rest und Auftakt verworfen | niedrig |
 | [Sacherer Partner](https://sacherer-partner.de/) | Kanzlei, Beratung | seriös, editorial | niedrig |
-| [Logokunst](https://logokunst.com/) | Designservice | visuell, handwerklich | mittel |
-| [Lieblingslead](https://lieblingslead.eu/) | Marketing, Leadgenerierung | freundlich, direkt | mittel |
-| [optiMICE](https://opti-mice.de/) | Events, B2B-Service | organisatorisch, klar | niedrig bis mittel |
-| [Pink Elephant Coach](https://pinkelephantcoach.de/) | Coaching | persönlich, farbig | mittel |
-| [Martina Halek](https://martinahalek.de/) | Personal Brand, Coaching | ruhig, persönlich | niedrig |
-| [Inno One](https://inno-one.de/) | Innovation, Beratung | modern, systemisch | mittel |
-| [Matthias Niggehoff](https://matthiasniggehoff.de/) | Psychologie, Marketing | content-stark, direkt | niedrig bis mittel |
-| [Fokus](https://fokus.so/) | Digitalservice, Studio | reduziert, präzise | mittel |
-| [Consile](https://consile.app/) | Recruiting, SaaS-Service | dunkle Ruhe, fokussiert | mittel |
-| [CanDevsDoSomething](https://candevsdosomething.com/) | Entwicklungsstudio | freundlich, modular | mittel |
+| [optiMICE](https://opti-mice.de/) | Events, B2B-Service | nur Auftakt: Farbflächen mit Bildern und Zahlen; Rest durchschnittlich | niedrig bis mittel |
+| [Martina Halek](https://martinahalek.de/) | Personal Brand, Coaching | nur Auftakt: Profilbild, Element Geschäftswachstum, Knopf; Rest verworfen | niedrig |
+| [Inno One](https://inno-one.de/) | B2B, Software, Beratung | Kerbe, leichte Schrift, Diagramme; Vorlage `kerbe` | mittel |
+| [Fokus](https://fokus.so/planer/) | Digitalservice, Software | stark; Raster im Grund, Bewertungen, Screenshots, eigene Landingpages je Kategorie; KI-Bilder nicht übernehmen; Vorlage `raster` | mittel |
+| [Consile](https://consile.app/) | Produktvorstellung, SaaS | Konzept stark; Orange überall und Verläufe sind KI-typisch und entfallen; Baustein `Produktschritte` | mittel |
 | [Phillip Ohren](https://phillipohren.com/) | Beratung, Portfolio | großzügig, mediengeführt | niedrig bis mittel |
-| [Saad Salman](https://saadsalman.org/) | Fachprofil, Portfolio | weich, neutral, ruhig | niedrig |
-| [Thomas Stockham](https://www.tstockham.com/) | Entwickler, Portfolio | präzise, systemisch | mittel |
+| [Saad Salman](https://saadsalman.org/) | Fachprofil, Portfolio | nur Elemente: schwebende Einzelteile, Hover; Ovale über Überschriften und Verlaufsschrift verworfen; Baustein `Schwebend` | niedrig |
 
 ## Gastronomie, Hotellerie, Reisen und Genuss
 
@@ -66,19 +54,17 @@ Vom Nutzer am 2. Oktober 2026 als gut benannt, danach nach dem Raster bewertet. 
 | [MINE Restaurant, Berlin](https://minerestaurant.de/) | 18 | Benchmark | Der Auftakt der Gattung: Video der Gäste im Raum über die volle Höhe, ein Satz mit Haltung und Ort, darunter Zeiten, letzte Bestellung und Adresse als Band, „Tisch reservieren" als einzige starke Aktion in der Kopfzeile. Besteht `check-slop.ts` ohne Sperre. | der Ankündigungsstreifen über der Kopfzeile; die Michelin-Plakette nur, weil sie real ist |
 | [Lagalante, Berlin](https://lagalante-restaurant.de/) | 15 | gut mit Mängeln | Freigestellte Teller auf Weiß als durchgehende Serie, ein Porträt des Kochs in Schwarzweiß, handgezeichnete Wortmarke, asymmetrisch gestreute Bilder in wechselnder Größe. | die Textwand auf Mobil, das blasse Riesenwort „MENU" hinter der Karte, die englische Reservierungsaktion neben deutscher Navigation |
 
-Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
+Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben. Barra und Lilia hat er am 7. November 2026 verworfen.
 
 | Konkrete Website | Raster | Einstufung | Was sie zeigt | Was nicht übernommen wird |
 |---|---:|---|---|---|
 | [Carbone, New York](https://carbonenewyork.com/) | 19 | Benchmark | Kinoreifes Raumfoto im Auftakt; danach wechseln vollbreites Bild, Bild-Text-Paare in beiden Richtungen und dunkle Textflächen, ohne eine Anordnung zu wiederholen | die vielen Standorte und der Newsletter |
-| [Big Mamma Group](https://www.bigmammagroup.com/) | 18 | Benchmark | Video aus der Küche über die volle Höhe, ein einziger Satz darauf, „Book a table" als einzige starke Aktion | die italienische Zeile als Überschrift einer deutschen Website (S6) |
-| [Tulus Lotrek, Berlin](https://www.tuluslotrek.de/) | 17 | Benchmark | Das Team als Auftaktbild, die Karte als ruhiger Text, Fassade als Abschluss | das Buchungsfenster, das den Auftakt verdeckt |
-| [Pageou, München](https://www.pageou.de/) | 16 | Benchmark | Lichtdurchflutetes Raumfoto über die volle Breite, kleine zentrierte Wortmarke, sehr wenig Text | — |
+| [Big Mamma Group](https://www.bigmammagroup.com/) | 18 | Benchmark, Vorlage `trattoria` | Video aus der Küche über die volle Höhe, ein einziger Satz darauf, „Book a table" als einzige starke Aktion; vom Nutzer 2026-11-07 insgesamt stark genannt | die italienische Zeile als Überschrift (S6); die Farbkombination mit Braun wirkt nach dem Nutzer altmodisch und wird nur gewählt, wenn sie zum Betrieb passt |
+| [Tulus Lotrek, Berlin](https://www.tuluslotrek.de/) | 17 | nur Element | Der Nutzer mag nur die Idee des Reservierungsfensters, verbessert als Baustein `Reservierung`; die Seite selbst hat er 2026-11-07 verworfen | alles andere |
+| [Pageou, München](https://www.pageou.de/) | 16 | Benchmark, Vorlage `licht` | Lichtdurchflutetes Raumfoto über die volle Breite, kleine zentrierte Wortmarke, sehr wenig Text; vom Nutzer 2026-11-07 sehr stark, professionell und luxuriös genannt | — |
 | [Cornelia Poletto, Hamburg](https://www.cornelia-poletto.de/) | 16 | Benchmark | Die Köchin als Auftakt, Zitat mit Unterschrift, Teaserblöcke im Wechsel von Bild und Text | die Versal-Dachzeilen in den Teaserblöcken (S1) |
 | [Standard Serious Pizza, Berlin](https://www.standard-berlin.de/) | 16 | Benchmark | Die Wortmarke über die volle Breite ist die Überschrift, freigestellte Pizza und Reportagefoto asymmetrisch daneben | die Dreierfigur „People. Pizza. Culture." |
 | [Padella, London](https://www.padella.co/) | 16 | Benchmark | Ladenfront mit Köchen hinter der Scheibe als Auftakt, handgeschriebene Wortmarke | das Hinweisfenster beim Laden |
-| [Barra, Berlin](https://www.barraberlin.com/) | 15 | gut mit Mängeln | Ein gerahmtes Gerichtfoto, darunter ein Raster aus Detailfotos in einer Serie | die knappe Seite ohne Zeiten im Auftakt |
-| [Lilia, New York](https://www.lilianewyork.com/) | 15 | gut mit Mängeln | Ein einziges Pastafoto über die volle Breite unter der Wortmarke | das Karussell ohne Text |
 | [Zum Hecht, Bahlingen](https://www.zum-hecht.de/) | 6 | **vom Nutzer als Vorbild eingestuft** | Vollflächige Speisefotografie in dunkler Stimmung, Adresse, Telefon und E-Mail direkt im Auftakt | „Herzlich willkommen" als Überschrift und die Karussellpfeile (S7) |
 
 **Abweichung zwischen Raster und Nutzer:** Zum Hecht hatte im Raster 6 Punkte und wurde vom Nutzer trotzdem als Vorbild eingestuft. Nach [[20-design/qualitaetsraster.md#Benchmarkvergleich]] gilt seine Einstufung. Die Lehre: Ein starkes, vollflächiges Speisefoto mit den praktischen Angaben direkt im Auftakt wiegt für ihn schwerer als die Vorlagenmerkmale, die das Raster abzieht. Übernommen wird das Foto und die Lage der Angaben, nicht die Vorlagenmerkmale.
@@ -91,7 +77,6 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 | [Mùn Rooftop Rome](https://munrooftoprome.com/) | Restaurant, Bar, Hotel | dunkel, atmosphärisch, fotografisch | mittel bis hoch |
 | [Amrit Palace](https://amritpalace.com/) | Restaurant, Gastronomie | warm, editorial, genussorientiert | mittel |
 | [Meracinque](https://www.meracinque.com/) | italienische Küche, Food-E-Commerce | farbig, charaktervoll, produktnah | mittel |
-| [EVE BCN](https://evebcn.com/) | Erlebnis, Buchung, Hospitality | visuell, knapp, modular | mittel |
 | [Raus](https://www.raus.life/) | Unterkunft, Reise, Natur | ruhig, fotografisch, naturverbunden | mittel |
 | [111 West 57th](https://111w57.com/) | Luxus, Hospitality, Immobilien | luxuriös, editorial, bilddominant | mittel bis hoch |
 
@@ -99,11 +84,9 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
-| [StepSafer](https://www.stepsafer.de/) | Gesundheitsprodukt, Alltagshilfe | klar, empathisch, erklärend | mittel |
-| [Zahnarzt Wels](https://zahnarzt-wels.at/) | Praxis, lokale Gesundheit | freundlich, vertrauensnah | niedrig |
+| [Zahnarzt Wels](https://zahnarzt-wels.at/) | Praxis, lokale Gesundheit | stark, vor allem die Landingpages: leichte Schrift, Bilder bis an den oberen Rand, Preise vor dem Video, Glas-Hinweis; Vorlage `praxishell` | mittel |
 | [Dr. Quidenus](https://drquidenus.at/) | Arztpraxis | ruhig, seriös | niedrig |
-| [Dentalize](https://dentalize.de/) | Dental, Praxis, Produkt | modern, fachlich | mittel |
-| [Pflegequeen](https://pflegequeen.de/) | Pflege, Recruiting | menschlich, direkt | mittel |
+| [Dentalize](https://dentalize.de/) | Agentur, Praxis, Film | Filmkacheln, zweistimmige Überschriften; Vorlage `kachel` | mittel |
 | [Zahnarztpraxis Uhlenhorst](https://zahnarztpraxis-uhlenhorst.de/) | Zahnarztpraxis | hochwertig, lokal, ruhig | niedrig |
 | [Maxima Therapy](https://maximatherapy.com/) | Therapie, Neurodivergenz | farbig, illustrativ, zugänglich | mittel |
 | [Nudge](https://getnudge.info/) | digitale Gesundheitsbegleitung | warm, illustrativ, produktnah | mittel |
@@ -114,7 +97,6 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
-| [Immobilien Einkauf](https://immobilien-einkauf.de/) | Immobilienservice | direkt, conversion-orientiert | niedrig bis mittel |
 | [Huts](https://huts.com/) | Architektur, Wohnen | natürlich, editorial, großzügig | mittel |
 | [THE1 Amsterdam](https://the1.amsterdam/) | Büroflächen, Architektur | urban, farbig, geschichtsbewusst | mittel bis hoch |
 | [Kononenko Architectural Bureau](https://kononenkogroup.com/) | Architektur, Interior | minimal, zeichnerisch, immersiv | hoch |
@@ -142,9 +124,8 @@ Vom Nutzer am 2. Oktober 2026 aus dem Gattungsvergleich freigegeben:
 
 | Konkrete Website | Passende Einsatzfelder | Grundcharakter | Motion-Potenzial |
 |---|---|---|---|
-| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktdemo, Tool | objektzentriert, interaktiv | hoch |
-| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | Energie, B2B-Angebot | conversion-orientiert, mediengeführt | mittel |
-| [ATS Resume Analyzer](https://pookie-blinders-777.figma.site/) | SaaS, Analyse | klar, produktnah | mittel |
+| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktdemo, Tool | Produktansichten und Knöpfe; Baustein `Produktansicht` | hoch |
+| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | Energie, B2B-Angebot | stark, aber Ovale über Überschriften und Verläufe; Leitbild-Prinzip in B3 | mittel |
 | [Apple](https://www.apple.com/) | Premiumprodukt, Hardware | medienzentriert, präzise | hoch |
 | [Stripe](https://stripe.com/) | Fintech, Plattform | informationsstark, systemisch | hoch |
 | [Linear](https://linear.app/) | Produktivität, SaaS | dunkel, präzise, produktzentriert | hoch |

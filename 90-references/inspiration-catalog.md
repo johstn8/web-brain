@@ -1,7 +1,7 @@
 ---
 type: reference
 status: canonical
-updated: 2026-10-02
+updated: 2026-11-07
 review_by: 2027-02-27
 ---
 
@@ -36,7 +36,7 @@ MotionSites veröffentlicht detaillierte Prompts für Landingpages und Hero-Sekt
 ## Vom Nutzer bewertete Benchmarks
 
 > [!important] Vorrang
-> Diese Referenzen hat der Nutzer ausdrücklich als gut oder als perfekte Messlatte benannt: vier am 6. August 2026, sieben weitere am 8. August 2026, StepSafer am 16. August 2026. Sie haben bei visuellen Entscheidungen Vorrang vor allen übrigen Einträgen dieses Katalogs. Die daraus abgeleiteten Regeln stehen kanonisch in [[20-design/interface-benchmarks.md]].
+> Diese Referenzen hat der Nutzer ausdrücklich als gut benannt: am 6. August 2026 ein Dashboard-Bild und drei Figma-Seiten, am 8. August 2026 sieben Websites. Am 7. November 2026 hat er sie erneut bewertet: Das ATS-Dashboard, StepSafer, CanDevsDoSomething, EVE BCN, ClaudeFolio und Thomas Stockham hat er verworfen, sie stehen hier nicht mehr. Bei den übrigen gilt jetzt nur, was er dabei gelobt hat. Die daraus abgeleiteten Regeln stehen kanonisch in [[20-design/interface-benchmarks.md]].
 
 ### Data Console Dashboard — analysiert, Bildvorlage
 
@@ -50,73 +50,25 @@ Vom Nutzer wegen des weich abgerundeten Charakters und des Zusammenspiels aus Ob
 
 Vom Nutzer wegen des Leitbilds benannt. Eine Solaranbieterseite auf mattschwarzer Grundfläche mit einer einzigen kräftigen Signalfarbe im Neongrün-Bereich, dazu eine abstrakte grüne Wortmarke und großformatige Fotos von Anlage und Montageteam. Auftakt „Powering the Future with Solar Revolution“ mit einem erklärenden Satz und zwei Aktionen, danach vier bis sechs benannte Leistungen mit je einer Zeile, Werteabschnitt, Kennzahlenband, Kundenstimmen und Newsletter. Übertragbar sind das großformatige Leitbild des tatsächlichen Gegenstands, die eine Signalfarbe gegen dunkle Fläche und die knappe Leistungsgruppe. Ausdrücklich nicht übertragbar sind die gesperrten Versalzeilen über den Überschriften wie `COMPREHENSIVE SOLUTIONS` oder `CLIENT TESTIMONIALS`, die nach [[20-design/anti-ai-slop.md#Kicker und Überschriften]] verbotene Kicker sind, sowie die Kennzahlen zu erzeugter Energie, Projektzahl, Zufriedenheit und Jahren Erfahrung und die namentlichen Kundenstimmen, für die kein Beleg vorliegt.[^benchsolar]
 
-### ATS Resume Analyzer Dashboard — analysiert
-
-Vom Nutzer als gefallendes Dashboard benannt. Eine Auswertungsoberfläche für Bewerbungen mit Kennzahlen wie `Total Applications`, `Average Score`, `Avg. Processing Time` und `Excellent Candidates`, einem Vergleich aus `Current Performance` und `Industry Benchmark`, festen Kategoriefarben für Fähigkeitsgruppen, ausgearbeiteten Leerzuständen wie `No Job Profiles Found` mit `Create your first job profile to get started.` sowie echten Einstellungen für Benachrichtigungen, Datenaufbewahrung, Export und Löschung. Übertragbar sind die Einordnung jeder Zahl über eine Vergleichsgröße, feste Kategoriefarben mit Beschriftung und die Ernsthaftigkeit der Leer- und Verwaltungszustände. Zu prüfen bleibt, dass jede angezeigte Funktion serverseitig real durchgesetzt wird.[^benchats]
-
 ### Sieben-Seiten-Set „Modern Neutral Craft" — analysiert am 8. August 2026
 
-Der Nutzer hat am 8. August 2026 sieben live erreichbare Websites als gut in Design und Bedienung benannt, ausdrücklich für **Oberfläche, Bedienung, Animation und Kastengestaltung**, ausdrücklich **nicht** als Maßstab für Rechtstexte, Belege oder Inhaltswahrheit. Die daraus kanonisch abgeleitete Regel steht in [[20-design/interface-benchmarks.md#B5 Modern Neutral Craft Web]].
+Am 8. August 2026 hat der Nutzer sieben Websites für Oberfläche, Bedienung, Animation und Kastengestaltung benannt. Am 7. November 2026 hat er vier davon verworfen: CanDevsDoSomething, EVE BCN, ClaudeFolio und Thomas Stockham. Ihre Werte sind aus dem Brain entfernt. Übrig bleiben drei:
 
-**Prüfstatus:** Ausgeliefertes Markup und die vollständigen CSS-Bündel wurden am 8. August 2026 abgerufen und ausgewertet. Belegt sind damit Tokenwerte, Radien, Rahmen- und Hoverrezepte, Keyframes, Easings, Blur- und Maskenwerte sowie die eingesetzten Bibliotheken. **Nicht** belegt sind Tastaturbedienung, Reduced-Motion-Verhalten und mobiles Verhalten dieser sieben Seiten; sie werden vor einer Übernahme dieser Aspekte nach [[90-references/reference-research-workflow.md]] erneut geprüft.
-
-| Seite | Rolle | Belegte Eigenschaften |
+| Seite | Was der Nutzer am 2026-11-07 gelobt hat | Was er abgelehnt hat |
 |---|---|---|
-| Consile | Produkt-Landing mit Demo | Vollständiger eigener Keyframe-Satz: `hero-letter` mit `translateY(.4em)` und `blur(6px)` gegen null, `fade-in` mit 12 Pixel Versatz, `scale-in` von `.96`, `shimmer` als Flächenwanderung, `accordion-down`/`-up` für FAQ, `fin-panel-in` mit gleichzeitigem Maßstab und Versatz. Dekorative Hintergründe werden per `mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent 80%)` ausgeblendet statt hart beschnitten. Fluide Sektionspolster über `clamp()`. Drawer über Vaul.[^bm5consile] |
-| CanDevsDoSomething | Community-Index | Tokenisierter `--radius` mit abgeleiteter Controlstufe `calc(var(--radius) - 2px)`, durchgehend Hairline `border-zinc-200` mit Dark-Gegenstück `zinc-800`, Kategorietöne ausschließlich als getönte Pille aus Farbe bei 100 hell und 900 bei 30 Prozent Deckung im Dunkelmodus. Linienicons aus Lucide in einer Strichstärke. Horizontal gewischte Reihen mit sichtbarem Bedienhinweis.[^bm5candevs] |
-| Phillip Ohren | Beratungs-Portfolio | Leitmedium je Leistungskarte, Text direkt auf dem Bild, keine Rahmenkaskade, sehr große Sektionsabstände. Bestätigt die Wirkung von Weißraum als einziges Trennmittel.[^bm5ohren] |
-| EVE BCN | Erlebnis-Buchung | Karten mit Bildfläche ohne Rahmen, linksbündige Detailhierarchie aus Dauer, Personenzahl und Preis, Aktion als `View →` in kleiner Stufe. Bestätigt die knappe, gestaffelte Metazeile statt Fließtext.[^bm5eve] |
-| ClaudeFolio | Kuratiertes Verzeichnis | Das dichteste Hover-Vokabular des Sets: `hover:-translate-y-0.5` und `hover:-translate-y-px` auf klickbaren Karten, `transition-[transform,background-color,border-color,color]`, zwei Rahmenstufen `--color-border` und `--color-border-strong`, Hover hebt den Rahmen bis auf die Vordergrundfarbe. Kartenradius `10px`, Pillen `rounded-full`. Warme, sehr dunkle Grundfläche `#1d1a14`.[^bm5claudefolio] |
-| Saad Salman | Fachprofil | Weicher, sehr flacher Hover-Schatten `0 8px 30px rgba(0,0,0,.06)` als einzige Tiefe, `rounded-2xl` für große Flächen, Kopfzeile `bg-background/70` mit `backdrop-blur-sm`, Hover setzt die Rahmenfarbe auf den Akzent.[^bm5saad] |
-| Thomas Stockham | Entwickler-Portfolio | Vollständig ausgelesener Tokensatz: `bg #fafafa`, `surface #fff`, `surface-alt #f5f5f5`, `text #0a0a0a`, `text-secondary #525252`, `text-tertiary #a3a3a3`, `border #e5e5e5`, `border-hover #d4d4d4`, `accent #6366f1`, `accent-subtle #6366f114`. Radien `.25/.375/.5/.75/1/1.5rem`, Tracking `-.025em`, Standarddauer `.15s` mit `cubic-bezier(.4,0,.2,1)`, Ease-out `cubic-bezier(0,0,.2,1)`. `fade-in-up` als `opacity 0 + translateY(12px)` über `.5s ease-out both`. Statuspunkt `pulse-dot` als atmender Ring von 3 auf 6 Pixel bei sehr niedriger Deckung. Mono `JetBrains Mono` für Werte und Tags.[^bm5stockham] |
+| [Consile](https://consile.app/) | Konzept und Aufbau einer Produktvorstellung | die eine Markenfarbe Orange überall, zu wenig Abwechslung, viele Verläufe: „da merkt man die KI" |
+| [Saad Salman](https://saadsalman.org/) | schwebende Einzelelemente, Hover-Effekte | kleine Ovale über Überschriften, Verläufe in Überschriften |
+| [Phillip Ohren](https://phillipohren.com/) | nicht neu bewertet; Leitmedium je Leistung, Text auf dem Bild, großer Weißraum | – |
 
-**Übertragbar und kanonisch übernommen**
-
-- Der benannte Tokensatz einschließlich `border-hover` und `accent-subtle`. Diese zwei Rollen fehlten bisher und sind der Grund, weshalb Hoverzustände im eigenen Build flach wirkten. Kanonisch in [[20-design/color-system.md#Tokenvertrag]].
-- Das Kartenrezept aus Hairline im Ruhezustand und Rahmenaufhellung plus Ein- bis Zwei-Pixel-Lift beim Hover. Kanonisch in [[30-frontend/components-and-ui-states.md#Kartenentscheidung]].
-- Die durchscheinende Kopfzeile mit Blur und deckendem Fallback. Kanonisch in [[30-frontend/components-and-ui-states.md#Kopfzeile und Hauptnavigation]].
-- Die vierstufige Radiusskala und das negative Tracking großer Stufen. Kanonisch in [[20-design/typography-layout-and-spacing.md#Radiusskala und Rahmenbehandlung]].
-- Die Bewegungsrezepte mit konkreten Werten, insbesondere Reveal, Zeichenauftakt mit Blur, Maskenausblendung und Statuspunkt. Kanonisch in [[20-design/motion-and-interaction.md#Kalibrierte Bewegungsbeispiele]].
-
-**Ausdrücklich nicht übernommen**
-
-- Der Verlaufstext aus Indigo, Violett und Pink bei Thomas Stockham wird nicht als generischer Premium-Default übernommen. Eine ähnliche Farbidee bleibt möglich, wenn Marke oder Inhalt sie konkret tragen; siehe [[20-design/color-system.md#Häufige Defaults bewusst entscheiden]].
-- Emojis als Sektionszeichen bei CanDevsDoSomething. Verboten nach [[20-design/anti-ai-slop.md]].
-- Die Verlaufsflächen als Ersatz für fehlende Vorschaubilder bei ClaudeFolio. Ein Platzhalter bleibt ein Befund nach [[20-design/imagery-and-ai-editing.md]], kein Gestaltungsmittel.
-- Alles Rechtliche, alle Kennzahlen, Kundenlisten und Referenzangaben dieser sieben Seiten. Der Nutzer hat sie ausdrücklich vom Benchmarkstatus ausgenommen.
-- Die Kartenraster als Standardantwort für jede Sektion. Das Verbot aus [[20-design/anti-ai-slop.md]] bleibt unberührt; das Set liefert die Detailqualität der Kästen, nicht die Erlaubnis, alles in Kästen zu legen.
-
-### StepSafer — analysiert am 16. August 2026, Copy-Benchmark
-
-Vom Nutzer am 16. August 2026 als sehr gut benannt. Eine deutschsprachige Produktseite für eine Sprachassistenz in der Pflegedokumentation. Für dieses Brain ist sie vor allem ein **Text**-Benchmark, nicht in erster Linie ein visueller.
-
-Belegt und übertragbar ist die Copy-Führung. Die Überschriften sind vollständige Aussagen mit Verb, etwa „Mehr Pflege. Weniger alles andere." oder „Wenn Pflege zur Verwaltung wird, verliert jeder.". Unter jeder Überschrift steht ein erklärender Fließtext von zwei bis vier Sätzen, nicht ein Kurzetikett. Die Satzlängen wechseln bewusst, ein sehr kurzer Satz wie „Ein Satz reicht." steht neben einem beschreibenden Satz aus dem Arbeitsalltag der Zielgruppe. Die Seite beschreibt das Problem in der Sprache der Nutzer, statt Eigenschaften zu behaupten, und sie kommentiert an keiner Stelle ihre eigene Machart. Die Aktionen sind über die ganze Seite hinweg gleich benannt.
-
-Diese Eigenschaften sind in [[10-strategy/website-copy.md]] kanonisch verarbeitet. Nicht übertragbar sind die dortigen Zahlenangaben und Nutzenaussagen; für sie liegt kein Beleg vor, und die Beweisregeln aus [[10-strategy/content-and-conversion.md#Beweis-Hierarchie]] gelten unverändert.[^stepsafer]
+Belegt waren 2026-08-08 Markup und CSS. Gemessene Werte: Consile führt einen Zeichenauftakt mit `translateY(.4em)` und `blur(6px)` gegen null; Saad Salman einen sehr flachen Hover-Schatten `0 8px 30px rgba(0,0,0,.06)`, `rounded-2xl` für große Flächen und eine Kopfzeile mit `backdrop-blur-sm`, deren Rahmen beim Hover den Akzent annimmt. Was davon im Kit steht, führt [[90-references/inspiration-eingang.md#Verarbeitet]].
 
 ### Rocket-Sites-Referenzgruppe — strukturell analysiert am 19. August 2026
 
-Vom Nutzer als professionell und ausdrücklich wegen ihrer stilistischen Bandbreite benannt. Geprüft wurden alle 37 angegebenen Domains. Vier davon hat der Nutzer am 4. November 2026 als ungeeignet verworfen; sie stehen hier nicht mehr. 35 ließen sich über die öffentliche Seitenauslieferung strukturell auswerten; `pinkelephantcoach.de` und `martinahalek.de` wurden wegen eines Crawlerfehlers direkt auf Erreichbarkeit, Titel und Überschriftenstruktur geprüft. Die Analyse belegt Informationsarchitektur, Inhaltstypen, Navigation, Beweisformen und Conversion-Wege. Sie belegt ohne echten Browser-Render keine pixelgenaue visuelle Qualität, Motion, Tastatur- oder Mobilinteraktion.[^rocket-a][^rocket-b][^rocket-c][^rocket-d]
+Vom Nutzer im August 2026 als professionell und wegen ihrer Bandbreite benannt, 37 Domains. Am 4. und 7. November 2026 hat er jede einzeln bewertet und 16 verworfen; sie stehen nicht mehr im Brain. Von den übrigen bleibt je Seite nur, was er gelobt hat: eine ganze Vorlage, wenn er die Seite insgesamt stark fand, sonst die genannten Elemente. Der Stand je Seite steht im [[90-references/website-reference-pool.md]] und in [[90-references/inspiration-eingang.md#Verarbeitet]].[^rocket-a][^rocket-b]
 
-**Beobachtete Bandbreite**
+**Was als Haltung bleibt:** Inhalt, Geschäft, Zielgruppe und Beweisform bestimmen Struktur und Sprache. Keine feste Zahl an Kopfzeilenlinks, keine Pflichtmenge an Bewegung.
 
-- Umfangreiche B2B- und IT-Auftritte wie comito, jovoco, Pexon, eProc und SocialNatives führen viele Leistungen, Unterseiten, Cases, Partner, Wissensinhalte und Kontaktwege. Ihre Professionalität hängt nicht an einer kleinen festen Zahl von Headerlinks, sondern an klarer Gruppierung und progressiver Vertiefung.
-- Fokussierte Seiten wie Pflegequeen, optiMICE, Immobilien Einkauf, Zahnarztpraxis Uhlenhorst und Fokus reduzieren Navigation und lenken auf eine dominante Aktion oder einen sehr schmalen Zweck.
-- Praxis- und lokale Dienstleistungsseiten gewichten Team, Öffnungszeiten, Telefon, Anfahrt, Räume und Leistungen. Agentur- und Beratungsseiten gewichten Cases, Ergebnisse, Arbeitsweise, Medien und wiederholte Gesprächsaktionen. Eventseiten priorisieren Termin, Programm, Ort und Anmeldung.
-- Die Seitentiefe reicht von sehr kurzen Auftritten bis zu langen Conversion-Seiten mit Prozess, FAQ, Testimonials, Videos, Kennzahlen und wiederkehrenden Aktionen. Keine dieser Formen ist allein professioneller.
-- Interaktive Produktmodule und hohe Motion sind kein gemeinsamer Nenner. Reale Bilder, klarer Prozess, konkrete Angebote, sichtbare Ansprechpartner, Referenzen und robuste Kontaktwege können dieselbe Beweisrolle tragen.
-
-**Für das Brain übernommen**
-
-- Purpose-fit statt Einheitsstil: Inhalt, Geschäft, Zielgruppe und Beweisform bestimmen Struktur und visuelle Sprache.
-- Keine globale Navigationszahl. Direkte Ziele, Gruppen, Utility-Ebene, Untermenü und Footer werden projektbezogen entschieden und mit realen Beschriftungen geprüft.
-- Keine Pflichtmenge an Motion und kein obligatorisches interaktives Kernmodul. Motion und Interaktion brauchen eine konkrete Aufgabe.
-- Häufige Muster wie Kicker, Karten, lange Seiten, wiederholte CTAs, Serifenschrift, warme Farben oder starke Schatten werden nach Ausführung und Funktion bewertet, nicht pauschal verboten.
-- Professionalität bleibt bindend: klare Hierarchie, konsistentes System, echte Belege, funktionierende Endpunkte, belastbare Responsive- und Accessibility-Zustände.
-
-**Nicht übernommen**
-
-Die Gruppe ist Inspiration, kein Wahrheitsbeleg für ihre Zahlen, Garantien, Testimonials, Events, rechtlichen Texte oder Drittanbieterflüsse. Sichtbare Dopplungen, veraltete Termine, Rechtschreibfehler und unbelegte Aussagen einzelner Seiten werden nicht zum Muster. Vor einer konkreten visuellen Übernahme wird die aktuelle Referenz nach [[90-references/reference-research-workflow.md]] im Browser erneut geprüft.
+**Was ausdrücklich nicht mehr gilt:** Die Auswertung vom August hielt Kicker, Serifenschrift und warme Farben für „nicht pauschal verboten". Das ist überholt: Dachzeilen sind seit 2026-10-02 harte Sperre, und der Nutzer hat Kicker, Ovale über Überschriften und den warmen Altstil mehrfach als KI-typisch oder altmodisch benannt, siehe [[20-design/anti-ai-slop.md#Harte Sperren]].
 
 ## Gastronomie: Negativbeispiele
 
@@ -315,7 +267,7 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 
 | Zweck | Referenzen |
 |---|---|
-| Produkt-UI, Dashboard, Verwaltung | **Data Console Dashboard**, ATS Resume Analyzer Dashboard, Linear, Vercel |
+| Produkt-UI, Dashboard, Verwaltung | **Data Console Dashboard**, Linear, Vercel |
 | Objekt, Variante, Konfiguration | **180-Grad-Produktbetrachter**, Apple, Framer |
 | Landing Page mit Leitbild | **INIZIO Solar**, Apple, Figma, Framer, Obys |
 | Kernartefakt als Beweis | Linear, Vercel, Railway, Rive, ElevenLabs |
@@ -351,20 +303,9 @@ Der Katalog enthält bewusst beides. Beim Bauen werden beide Seiten gebraucht.
 [^benchdash]: Vom Nutzer am 6. August 2026 als Bild übergebene Dashboard-Aufnahme ohne öffentliche Quell-URL; Beschreibung beruht auf der direkten Bildauswertung.
 [^benchrotate]: https://tutor-timer-28553736.figma.site/
 [^benchsolar]: https://sixth-powder-95605714.figma.site/
-[^benchats]: https://pookie-blinders-777.figma.site/
 
-[^bm5consile]: https://consile.app/
-[^bm5candevs]: https://candevsdosomething.com/
-[^bm5ohren]: https://phillipohren.com/
-[^bm5eve]: https://evebcn.com/
-[^bm5claudefolio]: https://claudefolio.com/
-[^bm5saad]: https://saadsalman.org/
-[^bm5stockham]: https://www.tstockham.com/
-[^stepsafer]: https://www.stepsafer.de/
-[^rocket-a]: [comito](https://www.comito.de/), [Zahnarzt Wels](https://zahnarzt-wels.at/), [car-tex](https://www.car-tex.de/), [ko:mon](https://www.ko-mon.de/), [Dr. Quidenus](https://drquidenus.at/), [jovoco](https://jovoco.io/), [metagram Solutions](https://metagram-solutions.com/)
-[^rocket-b]: [Dentalize](https://dentalize.de/), [ESP Media](https://espmedia.de/), [Pexon](https://pexon-consulting.de/), [Scaly](https://scaly.com/), [tunymedia](https://tunymedia.at/), [Julius Schaefer](https://julius-schaefer.de/), [Sales Culture](https://sales-culture.de/), [eProc](https://www.eproc.de/)
-[^rocket-c]: [SocialNatives](https://socialnatives.de/), [Agency Invest](https://agencyinvest.de/), [Modulo Consulting](https://www.modulo-consulting.de/), [Einstellungserfolg](https://einstellungserfolg.de/), [KMC](https://kmc2.de/), [Sacherer Partner](https://sacherer-partner.de/), [Logokunst](https://logokunst.com/), [Lieblingslead](https://lieblingslead.eu/)
-[^rocket-d]: [Pflegequeen](https://pflegequeen.de/), [optiMICE](https://opti-mice.de/), [Pink Elephant Coach](https://pinkelephantcoach.de/), [Zahnarztpraxis Uhlenhorst](https://zahnarztpraxis-uhlenhorst.de/), [Immobilien Einkauf](https://immobilien-einkauf.de/), [Martina Halek](https://martinahalek.de/), [Spedition Stuckmann](https://spedition-stuckmann.de/), [Inno One](https://inno-one.de/), [Matthias Niggehoff](https://matthiasniggehoff.de/), [Fokus](https://fokus.so/)
+[^rocket-a]: Als Vorlage oder Element verarbeitet: [comito](https://www.comito.de/), [ko:mon](https://www.ko-mon.de/), [jovoco](https://jovoco.io/), [metagram Solutions](https://metagram-solutions.com/), [Scaly](https://scaly.com/), [tunymedia](https://tunymedia.at/), [Dentalize](https://dentalize.de/), [Inno One](https://inno-one.de/), [ESP Media](https://espmedia.de/), [Fokus](https://fokus.so/), [Zahnarzt Wels](https://zahnarzt-wels.at/), [Sales Culture](https://sales-culture.de/), [Agency Invest](https://agencyinvest.de/), [Modulo Consulting](https://www.modulo-consulting.de/), [optiMICE](https://opti-mice.de/), [Martina Halek](https://martinahalek.de/).
+[^rocket-b]: Nur als Bezug eines Presets, nicht neu bewertet: [car-tex](https://www.car-tex.de/), [Dr. Quidenus](https://drquidenus.at/), [Sacherer Partner](https://sacherer-partner.de/), [Zahnarztpraxis Uhlenhorst](https://zahnarztpraxis-uhlenhorst.de/), [Spedition Stuckmann](https://spedition-stuckmann.de/).
 
 [^compute]: https://v0-compute-11.vercel.app/
 [^dataflow]: https://v0-playful-engineering-landing-page.vercel.app/

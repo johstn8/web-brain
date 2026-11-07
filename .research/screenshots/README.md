@@ -40,8 +40,8 @@ Ordner `gastronomie-2026-10-02/`, je Seite `<slug>--desktop.jpg` (Auftakt, 1200 
 | `poletto--*` | [Cornelia Poletto, Hamburg](https://www.cornelia-poletto.de/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben); Dachzeilen in den Teaserblöcken nicht übernehmen |
 | `standard--*` | [Standard Serious Pizza, Berlin](https://www.standard-berlin.de/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
 | `padella--*` | [Padella, London](https://www.padella.co/) | 16 | Benchmark, **im Pool** (vom Nutzer freigegeben) |
-| `barra--*` | [Barra, Berlin](https://www.barraberlin.com/) | 15 | gut mit Mängeln, **im Pool** (vom Nutzer freigegeben) |
-| `lilia--*` | [Lilia, New York](https://www.lilianewyork.com/) | 15 | gut mit Mängeln, **im Pool** (vom Nutzer freigegeben) |
+| `barra--*` | [Barra, Berlin](https://www.barraberlin.com/) | 15 | gut mit Mängeln, am 2026-11-07 vom Nutzer verworfen, nicht mehr im Pool |
+| `lilia--*` | [Lilia, New York](https://www.lilianewyork.com/) | 15 | gut mit Mängeln, am 2026-11-07 vom Nutzer verworfen, nicht mehr im Pool |
 | `viacarota--*` | [Via Carota, New York](https://www.viacarota.com/) | 12 | nicht vorgeschlagen: Auftakt ist ein Siegel ohne Foto |
 | `otto--*` | [Otto, Berlin](https://www.otto-berlin.net/) | 12 | nicht vorgeschlagen: Illustration statt Foto, Buchungsfenster verdeckt den Auftakt |
 | `nobelhart--*` | [Nobelhart & Schmutzig, Berlin](https://www.nobelhartundschmutzig.com/) | 11 | nicht vorgeschlagen: Textkasten über Waldfoto, Sticker als Plaketten |
