@@ -42,6 +42,8 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 
 ## Verarbeitet
 
+Am 2026-11-07 hat der Nutzer 20 weitere Seiten als „Quatsch" verworfen: SocialNatives, Pexon, Julius Schaefer, eProc, Einstellungserfolg, KMC, Logokunst, Lieblingslead, Pink Elephant Coach, Matthias Niggehoff, Pflegequeen, Immobilien Einkauf, Barra, Lilia, CanDevsDoSomething, EVE BCN, ClaudeFolio, Thomas Stockham, das ATS-Dashboard und StepSafer. Sie sind aus Pool, Katalog und Kit entfernt.
+
 | Adresse | Was gefiel | Daraus wurde | Nicht übernommen |
 |---|---|---|---|
 | [Glisse](https://glisse.kelvinzhang.ca/) | Apple-Design, Formen und Glas | `blocks/glas.css`, `GlasFilter.astro`; Werte in [[90-references/apple-fluid-interface.md#Liquid Glass im Web]] | die React-Bibliothek selbst; wir brauchen kein React |
@@ -65,4 +67,19 @@ Auf Zuruf („Eingang verarbeiten") oder zu Beginn der nächsten Stilrecherche w
 | [Padella](https://www.padella.co/) | Scrollgefühl, Speisekarte, drei Bilder mit Hover | Vorlage `tageskarte`; Hover-Verhalten ist nachempfunden, das Original wurde nicht interaktiv gemessen | Lenis, ersetzt durch ein kleines eigenes Skript; handgezeichnete Wortmarke |
 | [Salswee](https://salswee.com/) | ganze Seite | Vorlage `konditorei` | Bezahllogos im Fuß |
 | [Zum Hecht](https://zum-hecht.de/) | professioneller Aufbau, Einbindung der Bilder, Texte; Schwarz austauschbar | Vorlage `gasthaus`, Kopffarbe als `--kopf` | Abschnitt „Termine", vom Nutzer abgelehnt; Karussellpfeile (S7), Einwilligungsleiste |
+| [ESP Media](https://espmedia.de/) | Scrollanimationen, Kacheln, Creator-Bilder mit Zahlen, Team, schräge Handys, Fuß, Bewertung und Partner im Auftakt | Vorlage `creator`, Block `Bildwerte` | kursive Wörter in Überschriften, vom Nutzer abgelehnt; klassischer Verlaufsauftakt |
+| [Fokus](https://fokus.so/planer/) | ganzer Aufbau, Landingpages je Kategorie, Bewertungen, Screenshots, Raster im Grund | Vorlage `raster` | KI-erzeugte Bilder, vom Nutzer abgelehnt; Rabattpille und farbiges Wort in der H1 (S1, S3) |
+| [Zahnarzt Wels](https://zahnarzt-wels.at/) | Kacheln, Zufriedenheit, Team, leichte Schrift, Bilder bis an den Rand, Auszeichnungen und Glasfeld im Auftakt | Vorlage `praxishell` | Rubrik-Pillen über Kacheltiteln (S1) |
+| [Big Mamma Group](https://www.bigmammagroup.com/) | Seite insgesamt, Auftakt, Einbindung der Elemente | Vorlage `trattoria` | Braun als Grundfarbe, vom Nutzer als altmodisch benannt; italienische Überschrift (S6) |
+| [Pageou](https://www.pageou.de/) | ästhetische Bilder, simpel, luxuriös | Vorlage `licht` | – |
+| [Sales Culture](https://sales-culture.de/) | nur: bewegter Flieger im Auftakt, Text neben Bild | Blöcke `auftakt/Pfadflug`, `BildText` | alles andere, vom Nutzer als schwach und mobil schlecht benannt |
+| [Agency Invest](https://agencyinvest.de/) | nur: schwarzer Grund mit überlagerten Flächen und Fade | Block `Schwarzblende` | alles andere |
+| [Modulo Consulting](https://www.modulo-consulting.de/) | nur: Text steigt aus dem Produkt, eckige Produktkacheln | Blöcke `Aufstieg`, `Produktkacheln` | Auftakt und Rest |
+| [optiMICE](https://opti-mice.de/) | nur: Auftakt mit Farbelementen, Bildern und Zahlen | Block `auftakt/Farbbild` | der Rest |
+| [Martina Halek](https://martinahalek.de/) | nur: Profilbild, Element Geschäftswachstum, Knopf | Block `auftakt/Profil` | der Rest |
+| [Tulus Lotrek](https://www.tuluslotrek.de/) | nur: Idee des Reservierungsfensters | Block `Reservierung`, inhaltlich und gestalterisch verbessert | die Seite selbst |
+| [Consile](https://consile.app/) | Konzept und Design einer Produktvorstellung | Block `Produktschritte` | Orange überall, zu wenig Abwechslung, Verläufe |
+| [Saad Salman](https://saadsalman.org/) | schwebende Elemente, Hover | Block `Schwebend` | Ovale über Überschriften, Verläufe in Überschriften |
+| [180 Product Viewer](https://tutor-timer-28553736.figma.site/) | Produktansichten, Knöpfe | Block `Produktansicht`; die Figma-Seite lud 2026-11-07 headless nicht, gebaut nach der Analyse vom August | – |
+| [INIZIO Solar](https://sixth-powder-95605714.figma.site/) | stark | kein neuer Baustein; das Leitbild-Prinzip steht in B3 | Ovale über Überschriften, Verläufe |
 | [RICO, Kempten](https://www.rico-gmbh.de/) | vom Nutzer am 2026-11-04 als Beispiel für einen Stil genannt, der „auch mal sinnvoll sein kann" | Kit-Preset `produkt`: Neo-Grotesk, weißer Grund, hellgraue Kacheln `#f0f2f5` mit 20 px Radius, Aktionen 8 px, keine Schatten, eine kräftige Markenfarbe. Muster „Produkt mit Kennwerten" in [[90-references/derived-design-patterns.md#Produktbeweis]]. Pool-Eintrag unter Hersteller und Technik. | farbige Wörter in Überschriften und Pillen-Dachzeilen (S1, S3), Inter (Sperrliste), Einwilligungsbanner für Werbetracking |

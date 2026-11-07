@@ -63,8 +63,13 @@ Zwei Websites aus demselben Kit sehen deshalb nicht gleich aus: die Blöcke sind
 | `tageskarte` | padella.co | Schwarz und Weiß, Ladenfront, drei Bilder mit Hover-Wechsel, Tageskarte im Rahmen, weiches Scrollen |
 | `konditorei` | salswee.com | Creme und Beige, Stücke ragen über Streifenkanten, Raster von Rand zu Rand, Teller auf Muster, Fuß mit runden Oberkanten |
 | `gasthaus` | zum-hecht.de | schwarze Kopfzeile mit gebrochener Wortmarke, harte Wechsel, Titel mit gerahmter Unterzeile, enge Galerie, Kopffarbe in `--kopf` |
+| `creator` | espmedia.de | gestapelte Bilder im Auftakt, Bilder mit Werten im Glas, dunkle Kampagnenkacheln, steigende Säulen, schräge Handys |
+| `raster` | fokus.so/planer | feines Raster im Grund, Gesichter und Bewertungen im Auftakt, Funktionen mit Bildschirmen, Bewertungskarten, zwei Pakete |
+| `praxishell` | zahnarzt-wels.at | Bild bis an den oberen Rand, leichte Outfit, Auszeichnungen transparent auf dem Auftakt, Glasfeld für Formulare, Bildbänder über die volle Breite |
+| `trattoria` | bigmammagroup.com | Küchenbild mit einem Satz, Standortkarten mit 16 px Radius und Zähler, dunkle Neuigkeiten, Grün statt Braun |
+| `licht` | pageou.de | feste weiße Kopfzeile, Raumbild, dünne Antiqua, Ornament, Bilderdrittel, Papierkarten, Gutschein |
 
-**Bindend ist an einer Vorlage nur, was der Nutzer an ihrem Vorbild gelobt hat.** Der Rest ist Füllung und darf im Auftrag ersetzt werden; die Aufstellung je Vorlage steht in `web-kit/vorlagen/README.md` unter „Was gelobt wurde". Lobt der Nutzer nur einzelne Elemente einer Seite, entsteht keine Vorlage, sondern ein Baustein in `blocks/`, nach [[90-references/inspiration-eingang.md#Verarbeiten]].
+**Bindend ist an einer Vorlage nur, was der Nutzer an ihrem Vorbild gelobt hat.** Der Rest ist Füllung und darf im Auftrag ersetzt werden; die Aufstellung je Vorlage steht in `web-kit/vorlagen/README.md` unter „Was gelobt wurde". Lobt der Nutzer nur einzelne Elemente einer Seite, entsteht keine Vorlage, sondern ein Baustein in `blocks/`, aufgeführt in `web-kit/blocks/README.md` unter „Elemente aus dem Eingang", nach [[90-references/inspiration-eingang.md#Verarbeiten]].
 
 `scripts/vorlage-bauen.sh <name>` baut sie nach `projekte/kit-vorlagen/versions/<name>/dist`, von dort erscheinen sie auf `/dev`. Eine Vorlage wird für den Auftrag kopiert und umgeschrieben: Inhalte aus `content/<website>.json`, Farben und Bilder des Betriebs. Der Aufbau bleibt. Fotos der Vorlagen stehen unter Unsplash-Lizenz und werden ersetzt. Kommt eine neue Website in den [[90-references/inspiration-eingang.md]], entsteht daraus eine neue Vorlage, nicht ein neues Preset.
 

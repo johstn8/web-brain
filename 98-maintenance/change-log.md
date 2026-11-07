@@ -13,6 +13,10 @@ updated: 2026-10-02
 >
 > Eintraege vor dem 2026-08-06 sind historische Herkunftsnachweise. Wo aeltere Eintraege feste Websitezahlen, Auswahlvarianten, Asset-Ausschluesse, starre Navigationsgrenzen, verpflichtend hohe Motion, Pflichtinteraktionen oder pauschale Farb-, Schrift-, Kicker-, Schatten- und Retroverbote nennen, sind sie durch die neueren kanonischen Regeln ausdruecklich ueberholt.
 
+## 2026-11-07 — Nur Gelobtes wird gespeichert
+
+Der Nutzer hat alle übrigen Referenzen bewertet: 20 verworfen, fünf insgesamt stark, zehn nur in Teilen. Daraus wurden fünf Vorlagen (`creator`, `raster`, `praxishell`, `trattoria`, `licht`) und zwölf Blöcke für die gelobten Einzelteile; die Elementseite liegt auf `/dev` unter `kit-vorlagen/elemente`. Neu ist die Regel, dass nur Gelobtes gespeichert wird und Teillob einen Block statt einer Vorlage ergibt, in [[90-references/inspiration-eingang.md#Verarbeiten]]. Jede Vorlage führt jetzt, was gelobt und was Füllung ist.
+
 ## 2026-11-05 — Sechs weitere Vorlagen aus dem Eingang
 
 Der Nutzer hat Dentalize, Inno ONE, Cornelia Poletto, Padella, Salswee und Zum Hecht mit Notizen eingereicht. Jede Seite wurde aufgenommen und als eigene Vorlage nachgebaut: `kachel`, `kerbe`, `gastgeber`, `tageskarte`, `konditorei`, `gasthaus`. Das Kit hat damit zwanzig Vorlagen. Neu in den Slop-Signaturen: ovale Stichwörter, die keine Knöpfe sind. `check-slop.ts` hielt SVG-Logos über Überschriften fälschlich für Dachzeilen.
